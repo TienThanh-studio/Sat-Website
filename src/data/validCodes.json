@@ -1,0 +1,23 @@
+[
+  {
+    "code": "VA-ADMIN-2026",
+    "role": "ADMIN",
+    "usedCount": 0,
+    "maxUses": 100,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "code": "SAT-VIP-8888",
+    "role": "STUDENT",
+    "usedCount": 2,
+    "maxUses": 50,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "code": "IELTS-PASS-99",
+    "role": "STUDENT",
+    "usedCount": 5,
+    "maxUses": 10,
+    "createdAt": "2026-03-01"
+  }
+]

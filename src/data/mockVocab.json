@@ -1,0 +1,26 @@
+[
+  {
+    "id": "v1",
+    "word": "Autonomous",
+    "type": "adjective",
+    "phonetic": "/ɔːˈtɒn.ə.məs/",
+    "meaning": "Tự trị, độc lập, có quyền tự quyết",
+    "example": "In a less constrained environment, they achieved physical and psychological freedom and some measure of autonomy."
+  },
+  {
+    "id": "v2",
+    "word": "Fettered",
+    "type": "adjective/verb",
+    "phonetic": "/ˈfet.əd/",
+    "meaning": "Bị trói buộc, bị gông cùm, hạn chế tự do",
+    "example": "Fettered as women are in European countries by restraints and arbitrary obligations."
+  },
+  {
+    "id": "v3",
+    "word": "Emancipation",
+    "type": "noun",
+    "phonetic": "/iˌmæn.sɪˈpeɪ.ʃən/",
+    "meaning": "Sự giải phóng, sự giải thoát khỏi xiềng xích nô lệ hoặc quy tắc gò bó",
+    "example": "They should hail even a temporary emancipation through travel."
+  }
+]
