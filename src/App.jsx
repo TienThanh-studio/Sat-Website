@@ -7,6 +7,7 @@ import VocabularyPage from './pages/VocabularyPage';
 import DocumentsPage from './pages/DocumentsPage';
 import ExamWorkspacePage from './pages/ExamWorkspacePage';
 import CodeGenerator from './components/admin/CodeGenerator';
+import SettingsPage from './pages/SettingsPage';
 import QuestionManager from './components/admin/QuestionManager';
 import LoginModal from './components/auth/LoginModal';
 import RegisterModal from './components/auth/RegisterModal';
@@ -94,6 +95,9 @@ export default function App() {
               <QuestionManager />
             </div>
           )}
+         {activePage === 'settings' && (
+  <SettingsPage currentUser={currentUser} setCurrentUser={setCurrentUser} />
+)}
         </main>
       </div>
 

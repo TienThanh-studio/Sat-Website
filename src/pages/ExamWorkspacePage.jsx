@@ -3,7 +3,7 @@ import PracticeMode from '../components/exam/PracticeMode';
 import RealExamMode from '../components/exam/RealExamMode';
 import { storageService } from '../services/storageService';
 import { questionService } from '../services/questionService';
-import { Timer, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { Timer, ArrowLeft, CheckCircle2, Underline as UnderlineIcon } from 'lucide-react';
 
 export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   const [questions] = useState(sessionConfig.questions || []);
@@ -53,6 +53,51 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     return () => clearInterval(timer);
   }, [isFinished]);
 
+  // Xử lý gạch chân văn bản được bôi đen
+  const handleUnderlineSelection = () => {
+    const selection = window.getSelection();
+    if (!selection || !selection.rangeCount || selection.isCollapsed) return;
+
+    const range = selection.getRangeAt(0);
+
+    // Kiểm tra nếu text bôi đen nằm trong thẻ đã được gạch chân -> bấm lại để gỡ gạch chân
+    const parentSpan = range.commonAncestorContainer.parentElement;
+    if (parentSpan && parentSpan.classList.contains('user-underlined')) {
+      parentSpan.replaceWith(...parentSpan.childNodes);
+      selection.removeAllRanges();
+      return;
+    }
+
+    const span = document.createElement("span");
+    span.className = "user-underlined underline decoration-2 decoration-amber-500 bg-amber-100/60 rounded px-0.5 cursor-pointer";
+    span.title = "Click đúp để bỏ gạch chân";
+
+    // Double-click vào đoạn đã gạch chân để hủy
+    span.ondblclick = (e) => {
+      e.stopPropagation();
+      span.replaceWith(...span.childNodes);
+    };
+
+    try {
+      range.surroundContents(span);
+      selection.removeAllRanges();
+    } catch (e) {
+      console.warn("Vui lòng chỉ chọn văn bản trong cùng một đoạn văn:", e);
+    }
+  };
+
+  // Hỗ trợ phím tắt Ctrl + U / Cmd + U khi đang làm bài
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        handleUnderlineSelection();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const formatTime = (secs) => {
     const m = Math.floor(secs / 60);
     const s = secs % 60;
@@ -65,7 +110,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
       [qId]: optionKey
     }));
 
-    // Trong chế độ Practice: nếu trả lời đúng câu hiện tại thì lưu ngay vào danh sách câu đúng thật
+    // Trong chế độ Practice: nếu trả lời đúng câu hiện tại thì lưu ngay
     const currentQ = questions.find(q => q.id === qId);
     if (sessionConfig.mode === 'PRACTICE' && currentQ && optionKey === currentQ.correctAnswer) {
       questionService.recordCorrectAnswer(qId);
@@ -83,7 +128,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     setIsFinished(true);
     storageService.clearExamSession();
 
-    // Ghi nhận tất cả các câu đã trả lời đúng trong đề thi thật
+    // Ghi nhận tất cả các câu đã trả lời đúng
     questions.forEach(q => {
       if (answers[q.id] === q.correctAnswer) {
         questionService.recordCorrectAnswer(q.id);
@@ -136,7 +181,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-white">
+    <div className="h-screen flex flex-col bg-white select-text">
       {/* Top Bar */}
       <div className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white z-10 shrink-0">
         <div className="flex items-center gap-3">
@@ -146,9 +191,26 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           <span className="font-bold text-slate-800 text-sm">{sessionConfig.title}</span>
         </div>
 
-        <div className="flex items-center gap-2 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
-          <Timer className="w-4 h-4 text-slate-600" />
-          <span className="font-mono font-bold text-xs text-slate-800">{formatTime(timeLeft)}</span>
+        {/* Cụm công cụ: Nút Gạch chân & Đồng hồ */}
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onMouseDown={(e) => {
+              // Ngăn nút bấm cướp vùng chọn (selection) của chuột
+              e.preventDefault();
+              handleUnderlineSelection();
+            }}
+            title="Bôi đen văn bản và nhấn để gạch chân (Ctrl + U)"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300/80 rounded-lg text-xs font-semibold shadow-sm transition active:scale-95"
+          >
+            <UnderlineIcon className="w-3.5 h-3.5" />
+            <span>Gạch chân</span>
+          </button>
+
+          <div className="flex items-center gap-2 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+            <Timer className="w-4 h-4 text-slate-600" />
+            <span className="font-mono font-bold text-xs text-slate-800">{formatTime(timeLeft)}</span>
+          </div>
         </div>
 
         <button
