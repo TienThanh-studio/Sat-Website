@@ -1,0 +1,708 @@
+[
+  {
+    "id": "inf_21",
+    "topic": "Inference",
+    "difficulty": "Hard",
+    "passage": "The Hubble Space Telescope (HST) is projected to maintain operation until at least 2030, but it has already revolutionized high-resolution imaging of solar-system bodies in visible and ultraviolet (UV) light wavelengths, notwithstanding that only about 6% of the bodies imaged by the HST are within the solar system. NASA researcher Cindy L. Young and colleagues assert that a new space telescope dedicated exclusively to solar-system observations would permit an extensive survey of minor solar-system bodies and long-term UV observation to discern how solar-system bodies change over time. Young and colleagues' recommendation therefore implies that the HST does what?",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "will likely continue to be used primarily to observe objects outside the solar system." },
+      { "key": "B", "text": "will no longer be used to observe solar system objects if the telescope recommended by Young and colleagues is deployed." },
+      { "key": "C", "text": "can be modified to observe the features of solar system objects that are of interest to Young and colleagues." },
+      { "key": "D", "text": "lacks the sensors to observe the wavelengths of light needed to discern how solar system bodies change over time." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu rằng chỉ khoảng 6% mục tiêu quan sát của HST thuộc hệ mặt trời (tức 94% dành cho ngoài hệ mặt trời)[cite: 10]. Việc đề xuất một kính viễn vọng chuyên dụng riêng cho hệ mặt trời ngụ ý rằng HST vẫn sẽ tiếp tục được ưu tiên dùng cho các vật thể nằm ngoài hệ mặt trời[cite: 10]."
+  },
+  {
+    "id": "inf_22",
+    "topic": "Inference",
+    "difficulty": "Hard",
+    "passage": "In 2022, Crystal Reeck and colleagues studied whether the decision-making modes that guide consumers influence their choice between nonenvironmentally friendly standard electricity plans and environmentally friendly green plans that cap electricity usage. Study participants who self-reported using either an Affect Mode or Role Mode—which prioritize choices that have a stronger positive emotional or social impact, respectively—were more likely to select a green plan. Conversely, participants using a Calculation Mode—which aims to minimize both financial cost and personal inconvenience—were more likely to select a standard plan, even when the green option was cheaper. This finding suggests that participants using a Calculation Mode did what?",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "were equally unlikely to factor the financial savings of the green plan into their decision-making as were participants using either the Affect or Role Modes." },
+      { "key": "B", "text": "may have been less strongly motivated to appear socially responsible with their choice of plan than they realized." },
+      { "key": "C", "text": "may have determined that the green plan imposed additional burdens on them that were not sufficiently offset by the potential financial savings." },
+      { "key": "D", "text": "were less likely to believe that the green plan was truly cost-effective than were participants using either the Affect or Role Modes." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Calculation Mode tìm cách giảm thiểu cả chi phí tài chính lẫn 'sự bất tiện cá nhân' (personal inconvenience)[cite: 10]. Khi gói xanh rẻ hơn mà họ vẫn chọn gói tiêu chuẩn, điều đó chứng tỏ việc gói xanh giới hạn mức sử dụng điện (cap electricity usage) gây ra sự bất tiện/gánh nặng lớn hơn số tiền tiết kiệm được[cite: 10]."
+  },
+  {
+    "id": "inf_23",
+    "topic": "Inference",
+    "difficulty": "Hard",
+    "passage": "To address the susceptibility of materials used in components of high-performance machinery, such as aircraft engines, to creep (deformation that is induced by persistent mechanical stress and that often occurs at elevated temperatures), materials researchers have developed silicon carbide (SiC) fibers for producing aerospace composites. Testing the thermomechanical properties of several commercially available SiC fibers, Ramakrishna T. Bhatt et al. found that in comparison with two polymer-derived SiC fibers, a nitrogen-treated SiC fiber exhibited a lower minimum creep rate, a measure of the rate at which a stress-exposed material deforms at a constant temperature and uniaxial load. The finding suggests that what?",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "unlike the two polymer-derived SiC fibers, the nitrogen-treated SiC fiber can substantially inhibit creep, provided that temperatures and loads are consistent." },
+      { "key": "B", "text": "the two polymer-derived SiC fibers likely hold similar potential for reducing the creep resistance of materials exposed to stress and elevated temperatures, thus prolonging the life span of aerospace machinery." },
+      { "key": "C", "text": "composites based on the two polymer-derived SiC fibers have chemical properties that may improve the mechanical and thermal stability of aerospace equipment to a greater extent than do composites based on the nitrogen-treated SiC fiber." },
+      { "key": "D", "text": "aerospace composites containing the nitrogen-treated SiC fiber may have the ability to withstand mechanical stress for a longer period of time than can aerospace composites containing either of the two polymer-derived SiC fibers." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Tốc độ dão (creep rate) càng thấp thì vật liệu biến dạng càng chậm khi chịu ứng suất và nhiệt độ cao[cite: 10]. Vì sợi SiC xử lý bằng nitơ có tốc độ dão thấp hơn hai loại sợi polyme, composite chứa sợi này sẽ chịu được ứng suất cơ học trong thời gian dài hơn[cite: 10]."
+  },
+  {
+    "id": "inf_24",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "German theater practitioner Bertolt Brecht (1898 – 1956) believed that theater should elicit an intellectual rather than an emotional response from audiences, provoking them to consider social and political realities that extend beyond the characters and events depicted onstage. Brecht's influence can be seen in English playwright Caryl Churchill's 1979 play Cloud 9: although the play sometimes invites empathetic reactions, it primarily works to engage audiences in an interrogation of patriarchy and colonialism, which it does by placing audiences at a distance, thereby encouraging them to _____",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "focus on the characters' beliefs about social and political issues as revealed by the characters' actions." },
+      { "key": "B", "text": "reflect on social and political phenomena not directly related to patriarchy and colonialism." },
+      { "key": "C", "text": "recognize pertinent social and political parallels between Germany during Brecht's time and England at the time when Churchill was writing Cloud 9." },
+      { "key": "D", "text": "be dispassionate as they think critically about the social and political questions raised by the play." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Lý thuyết của Brecht chủ trương khơi gợi phản ứng lý trí thay vì cảm xúc (intellectual rather than emotional) và tạo khoảng cách với người xem (placing audiences at a distance)[cite: 10]. Do đó, kỹ thuật này khuyến khích khán giả giữ sự tỉnh táo, không thiên vị cảm tính (dispassionate) để tư duy phản biện về các vấn đề xã hội - chính trị[cite: 10]."
+  },
+  {
+    "id": "inf_25",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "The alpaca was domesticated by Indigenous peoples in the Andes about 7,000 years ago. But which wild species did it descend from, the vicuña or guanaco? A research team led by Ruiwen Fan may have solved the mystery, concluding that the alpaca is the domesticated form of the vicuña but that the modern alpaca gets only 64 percent of its genetic material from its wild ancestor. The rest comes from the domesticated llama. The llama, meanwhile, gets 95.5 percent of its genetic material from its own wild ancestor, the guanaco, and the rest from the alpaca. The llama and alpaca apparently interbred widely for only a handful of generations between 400 and 600 years ago. Assuming that the findings of Fan's team are valid, it can be inferred that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "modern llama populations have a greater degree of genetic diversity, on average, than modern alpaca populations do." },
+      { "key": "B", "text": "the domestication process of the alpaca may have involved some introduction of genetic material from the llama." },
+      { "key": "C", "text": "the period of interbreeding resulted in a greater genetic difference between alpacas and their wild ancestors than between llamas and their wild ancestors." },
+      { "key": "D", "text": "if they were subjected to genetic testing, modern populations of guanacos and vicuñas would likely show traces of ancient interbreeding as well." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Alpaca chỉ còn giữ 64% gen từ tổ tiên hoang dã (vicuña) tức biến đổi 36%, trong khi llama giữ tới 95.5% gen từ tổ tiên hoang dã (guanaco) tức biến đổi chỉ 4.5%[cite: 10]. Thời kỳ lai giống đã khiến alpaca có sự khác biệt di truyền với tổ tiên hoang dã lớn hơn so với llama[cite: 10]."
+  },
+  {
+    "id": "inf_26",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "With the ongoing expansion of e-commerce, consumers are expecting faster and faster delivery of goods, but delivery companies continue to struggle with last-mile logistics (the final step in delivery to consumers) due to challenges such as complex and inefficient delivery routes. Innovations to mitigate these challenges have been emerging—the use of aerial drones, for example—but these innovations tend to engender their own complications (e.g., regulations on the use of drones in residential airspace), leading researchers to conclude that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "consumers' expectations for reduced delivery times may be outstripping what is viable for delivery companies to provide." },
+      { "key": "B", "text": "a better understanding of consumers' expectations for delivery is needed so that companies can better plan for fluctuations in delivery volume." },
+      { "key": "C", "text": "rapid delivery is a leading factor in consumer satisfaction, and therefore delivery companies would benefit from investing resources in reducing delivery times." },
+      { "key": "D", "text": "there may not be sufficient incentive for delivery companies to attempt to solve the problems associated with last-mile logistics." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Người tiêu dùng đòi hỏi giao hàng ngày một nhanh hơn, nhưng các giải pháp giao hàng chặng cuối lại gặp bế tắc và phát sinh rắc rối pháp lý[cite: 10] -> Kỳ vọng rút ngắn thời gian của khách hàng đang vượt quá khả năng đáp ứng thực tế của các công ty giao vận[cite: 10]."
+  },
+  {
+    "id": "inf_27",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "In a 2017 article, historian Jasmine Kilburn-Toppin explains that in early modern London, members of the city's guilds (trade and artisanal associations) were participants in a civic culture in which gift giving both signaled and conferred social status. Research on this phenomenon has tended to focus on philanthropic gifting by London's largest guilds; for her part, Kilburn-Toppin focuses on the gifting of handmade objects and fixtures (such as decorative paneling or plasterwork) within the craft guilds, which were 'composed of highly discerning producers and consumers of material cultures.' Given this characterization, it can reasonably be inferred that the gifting of such objects may have ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "ensured that knowledge of the materials and techniques used by members of the craft guilds stayed within the craft guilds." },
+      { "key": "B", "text": "emphasized ostentatious offerings in the case of the largest guilds and prosaic objects in the case of the craft guilds." },
+      { "key": "C", "text": "functioned as a way for craft guild members to maintain and enhance their professional reputations among their peers." },
+      { "key": "D", "text": "conferred greater social status when the recipient belonged to one of London's largest guilds than when the recipient belonged to a craft guild." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Các phường thợ thủ công gồm những nhà sản xuất và người thưởng thức vật chất có gu thẩm mỹ cao[cite: 10]. Do đó việc tặng các tác phẩm tinh xảo làm bằng tay đóng vai trò khẳng định và nâng cao uy tín nghề nghiệp của nghệ nhân trước các đồng nghiệp trong giới[cite: 10]."
+  },
+  {
+    "id": "inf_28",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "In her 2021 article 'Throwaway History: Towards a Historiography of Ephemera,' scholar Anne Garner discusses John Johnson (1882 – 1956), a devoted collector of items intended to be discarded, including bus tickets and campaign pamphlets. Johnson recognized that scholarly institutions considered his expansive collection of ephemera to be worthless—indeed, it wasn't until 1968, after Johnson's death, that Oxford University's Bodleian Library acquired the collection, having grasped the items' potential value to historians and other researchers. Hence, the example of Johnson serves to ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "demonstrate the difficulties faced by contemporary historians in conducting research at the Bodleian Library without access to ephemera." },
+      { "key": "B", "text": "represent the challenge of incorporating examples of ephemera into the collections of libraries and other scholarly institutions." },
+      { "key": "C", "text": "lend support to arguments by historians and other researchers who continue to assert that ephemera holds no value for scholars." },
+      { "key": "D", "text": "illustrate both the relatively low scholarly regard in which ephemera was once held and the later recognition of ephemera's possible utility." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu chuyện của Johnson cho thấy ban đầu các tài liệu dùng một lần (vé xe buýt, truyền đơn) bị giới học thuật coi là vô giá trị, nhưng về sau thư viện Bodleian đã nhận ra giá trị nghiên cứu lịch sử tiềm năng của chúng[cite: 10]."
+  },
+  {
+    "id": "inf_29",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "The practice of logging (cutting down trees for commercial and other uses) is often thought to be at odds with forest conservation (the work of preserving forests). However, a massive study in forest management and preservation spanning 700,000 hectares in Oregon's Malheur National Forest calls that view into question. So far, results of the study suggest that forest plots that have undergone limited logging (the careful removal of a controlled number of trees) may be more robust than plots that haven't been logged at all. These results, in turn, suggest that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "logging may be useful for maintaining healthy forests, provided it is limited." },
+      { "key": "B", "text": "other forest management strategies are more effective than limited logging." },
+      { "key": "C", "text": "as time passes, it will be difficult to know whether limited logging has any benefits." },
+      { "key": "D", "text": "the best way to support forest health may be to leave large forests entirely untouched." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Khu vực rừng được khai thác gỗ có kiểm soát và giới hạn (limited logging) sinh trưởng khỏe mạnh hơn khu vực để nguyên không can thiệp[cite: 10] -> Việc khai thác gỗ có thể hữu ích cho sức khỏe của rừng nếu được giới hạn hợp lý[cite: 10]."
+  },
+  {
+    "id": "inf_30",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Some businesses believe that when employees are interrupted while doing their work, they experience a decrease in energy and productivity. However, a team led by Harshad Puranik, who studies management, has found that interruptions by colleagues can have a social component that increases employees' sense of belonging, resulting in greater job satisfaction that benefits employees and employers. Therefore, businesses should recognize that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the interpersonal benefits of some interruptions in the workplace may offset the perceived negative effects." },
+      { "key": "B", "text": "in order to maximize productivity, employers should be willing to interrupt employees frequently throughout the day." },
+      { "key": "C", "text": "most employees avoid interrupting colleagues because they don't appreciate being interrupted themselves." },
+      { "key": "D", "text": "in order to cultivate an ideal workplace environment, interruptions of work should be discouraged." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Dù việc bị ngắt lời làm giảm năng suất tức thì, sự kết nối xã hội và cảm giác thuộc về tập thể lại mang lại sự hài lòng với công việc[cite: 10] -> Lợi ích giao tiếp cá nhân từ những lần gián đoạn có thể bù trừ cho những tác động tiêu cực[cite: 10]."
+  },
+  {
+    "id": "inf_31",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Scholars have noted that F. Scott Fitzgerald's writings were likely influenced in part by his marriage to Zelda Fitzgerald, but many don't recognize Zelda as a writer in her own right. Indeed, Zelda authored several works herself, such as the novel Save Me the Waltz and numerous short stories. Thus, those who primarily view Zelda as an inspiration for F. Scott's writings ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "overlook the many other factors that motivated F. Scott to write." },
+      { "key": "B", "text": "risk misrepresenting the full range of Zelda's contributions to literature." },
+      { "key": "C", "text": "may draw inaccurate conclusions about how F. Scott and Zelda viewed each other's works." },
+      { "key": "D", "text": "tend to read the works of F. Scott and Zelda in an overly autobiographical light." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Zelda tự mình sáng tác tiểu thuyết và nhiều truyện ngắn độc lập[cite: 10]. Những người chỉ coi bà như nguồn cảm hứng của chồng đang nhìn nhận phiến diện và có nguy cơ bỏ qua toàn bộ đóng góp văn học thực thụ của chính bà[cite: 10]."
+  },
+  {
+    "id": "inf_32",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Songbirds learn to respond to and imitate their species' songs from an early age. With each generation, small differences are introduced that result in distinct variations—called dialects—among geographically isolated populations of the same species. A research study examined whether twelve-day-old Ficedula hypoleuca (pied flycatcher) nestlings prefer local dialects over the unfamiliar dialects of nonlocal F. hypoleuca populations: the more begging calls the nestlings made in response to a song, the stronger their preference. The researchers found that nestlings produced more begging calls in response to their own dialect than to nonlocal dialects. Since song preference plays a role in songbird mate selection, the finding suggests that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "F. hypoleuca nestlings' preference for their own dialect likely disappears as they mature to promote socialization between different F. hypoleuca populations." },
+      { "key": "B", "text": "F. hypoleuca nestlings who show an early preference for their own dialect are likely to receive more food from their caretakers than nestlings who show no preferences among any F. hypoleuca dialects." },
+      { "key": "C", "text": "F. hypoleuca nestlings' preference for their own dialect likely drives them when they mature to reproduce with other F. hypoleuca from local rather than nonlocal populations." },
+      { "key": "D", "text": "F. hypoleuca nestlings show a preference for both local F. hypoleuca dialects and the songs of other local songbirds over the songs of nonlocal birds of any species." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Chim non từ bé đã thích giọng địa phương của quần thể mình, và sự yêu thích tiếng hót là tiêu chuẩn chọn bạn tình khi trưởng thành[cite: 10] -> Sở thích này khi lớn lên sẽ dẫn đường cho chúng giao phối với các cá thể chim cùng địa phương[cite: 10]."
+  },
+  {
+    "id": "inf_33",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "In a study of the mechanisms underlying associative memory—or the ability to learn and remember connections between inherently unrelated things—neuroscientists Kei Igarashi, Jasmine Chavez, and others presented mice with memory tests. The team discovered that fan cells, a type of cell found in the medial temporal lobe of the brain, are necessary for the acquisition of new associative memories. They also found that fan cell activity requires dopamine, a chemical the brain produces in response to pleasure and rewards. Consequently, receiving a reward should likely help to______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "decrease an individual's capacity to utilize dopamine." },
+      { "key": "B", "text": "increase an individual's capacity to recognize differences between unrelated things." },
+      { "key": "C", "text": "increase an individual's capacity to form associative memories." },
+      { "key": "D", "text": "decrease an individual's capacity to create fan cells." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nhận phần thưởng sinh ra dopamine; dopamine kích hoạt tế bào hình quạt; tế bào này chịu trách nhiệm hình thành trí nhớ liên kết[cite: 10] -> Việc nhận phần thưởng sẽ giúp tăng cường khả năng hình thành các ký ức liên kết[cite: 10]."
+  },
+  {
+    "id": "inf_34",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Although military veterans make up a small proportion of the total population of the United States, they occupy a significantly higher proportion of the jobs in the civilian government. One possible explanation for this disproportionate representation is that military service familiarizes people with certain organizational structures that are also reflected in the civilian government bureaucracy, and this familiarity thus______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "makes civilian government jobs especially appealing to military veterans." },
+      { "key": "B", "text": "alters the typical relationship between military service and subsequent career preference." },
+      { "key": "C", "text": "encourages nonveterans applying for civilian government jobs to consider military service instead." },
+      { "key": "D", "text": "increases the number of civilian government jobs that require some amount of military experience to perform." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Môi trường quân ngũ giúp cựu binh quen thuộc với cơ cấu tổ chức phân cấp, cấu trúc này cũng tương tự trong các cơ quan dân sự nhà nước[cite: 10] -> Sự quen thuộc này khiến công việc chính phủ trở nên đặc biệt hấp dẫn đối với cựu chiến binh[cite: 10]."
+  },
+  {
+    "id": "inf_35",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Herbivorous sauropod dinosaurs could grow more than 100 feet long and weigh up to 80 tons, and some researchers have attributed the evolution of sauropods to such massive sizes to increased plant production resulting from high levels of atmospheric carbon dioxide during the Mesozoic era. However, there is no evidence of significant spikes in carbon dioxide levels coinciding with relevant periods in sauropod evolution, such as when the first large sauropods appeared, when several sauropod lineages underwent further evolution toward gigantism, or when sauropods reached their maximum known sizes, suggesting that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "fluctuations in atmospheric carbon dioxide affected different sauropod lineages differently." },
+      { "key": "B", "text": "the evolution of larger body sizes in sauropods did not depend on increased atmospheric carbon dioxide." },
+      { "key": "C", "text": "atmospheric carbon dioxide was higher when the largest known sauropods lived than it was when the first sauropods appeared." },
+      { "key": "D", "text": "sauropods probably would not have evolved to such immense sizes if atmospheric carbon dioxide had been even slightly higher." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Không hề có bằng chứng về việc nồng độ CO2 tăng vọt trùng khớp với các mốc tiến hóa kích thước khổng lồ của khủng long chân thằn lằn[cite: 10] -> Sự tiến hóa kích thước cơ thể lớn của chúng không phụ thuộc vào việc tăng khí CO2 trong khí quyển[cite: 10]."
+  },
+  {
+    "id": "inf_36",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "The Cretaceous pterosaur Tupandactylus navigans is known for having an anomalously oversized head crest. Until an almost complete fossil skeleton was found in Brazil, paleontologists had been able to study only skull specimens from T. navigans, though it was presumed that, like other pterosaurs, the species's primary form of locomotion was powered flight. Examining the fuller skeleton in 2016, Victor Beccari and his team determined that T. navigans had long hind legs, short wings, and an unusually long neck—characteristics that, combined with the creature's large-crested head, would have made sustained flight difficult and walking upright relatively comfortable. Based on these findings the team suggests that______ T. navigans likely",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "flew for longer distances than did other pterosaur species that had oversized head crests." },
+      { "key": "B", "text": "had longer wings than other pterosaur species considered to have been comfortable walking." },
+      { "key": "C", "text": "had a smaller head than researchers expected based on the earlier T. navigans skull specimens." },
+      { "key": "D", "text": "flew for shorter distances and spent more time walking than researchers previously thought." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Bộ xương hoàn chỉnh cho thấy chân sau dài, cánh ngắn và mào to khiến việc bay liên tục rất khó khăn nhưng đi thẳng lại dễ dàng[cite: 10] -> Loài dực long này bay quãng đường ngắn hơn và dành nhiều thời gian đi bộ hơn so với suy nghĩ trước đây[cite: 10]."
+  },
+  {
+    "id": "inf_37",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Dutch painters in the sixteenth and seventeenth centuries often showed tables filled with large wheels of cheese or carved shards of butter. Some art historians, noting that dairy products were a major component of the Dutch diet, interpret these depictions as reflections of everyday Dutch eating habits. However, a group of researchers recently reviewed hundreds of food-related paintings and found that lemons—which could only be acquired in the Netherlands at great cost, since they had to be imported from warmer climates—feature in Dutch paintings of the period more than three times as frequently as dairy products do, thereby casting doubt on the idea that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "dairy products were a more significant component of the Dutch diet of the period than lemons were." },
+      { "key": "B", "text": "food was a more popular subject among Dutch painters than it was among painters from other countries at the time." },
+      { "key": "C", "text": "depictions of food in Dutch paintings of the period should be taken as realistic representations of Dutch eating habits." },
+      { "key": "D", "text": "Dutch painters of the period may have depicted foods for symbolic reasons rather than to show what Dutch people typically ate." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Quả chanh đắt đỏ và nhập khẩu hiếm hoi lại xuất hiện trong tranh nhiều gấp 3 lần sản phẩm bơ sữa quen thuộc hàng ngày[cite: 10] -> Điều này bác bỏ giả thuyết cho rằng tranh vẽ đồ ăn phản ánh hiện thực thói quen ăn uống đời thường của người Hà Lan[cite: 10]."
+  },
+  {
+    "id": "inf_38",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Colonized by Spain in the 1600s, New Mexico is home to a dialect of Spanish that differs significantly from dialects spoken in Spain's other former colonies in the Americas. Most notably, the New Mexican dialect retains older features of the language that other dialects lost in later centuries. But why would it have done so? New Mexico was so distant from population centers in Spain's other colonies that it attracted few colonists after its initial colonization. Geographical isolation in turn would have limited the exposure of New Mexican colonists to changes occurring to Spanish grammar and vocabulary elsewhere in the empire. Thus, the present-day uniqueness of the New Mexican dialect suggests the extent to which______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "a language can protect itself from being influenced by other languages." },
+      { "key": "B", "text": "the grammar and vocabulary of any given language change from one generation to the next." },
+      { "key": "C", "text": "geographical isolation can influence how a language develops." },
+      { "key": "D", "text": "speakers of one dialect of a language can understand speakers of another dialect of that language." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sự cô lập về mặt địa lý (geographical isolation) ngăn cản người dân tiếp xúc với những thay đổi ngôn ngữ từ bên ngoài, giúp giữ lại các nét cổ ngữ[cite: 10] -> Sự cô lập địa lý có ảnh hưởng mạnh mẽ tới tiến trình phát triển và bảo tồn ngôn ngữ[cite: 10]."
+  },
+  {
+    "id": "inf_39",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Zines are small-scale, self-printed magazines. They have been around since the Black literary zine Fire!! was created in the 1920s. Since then, zines have appealed to creators looking for an inexpensive form of expression to share with a select audience. Zine creators often mix art with social commentary and challenge mainstream culture. At first, the internet appeared to replace the zine, but this old form persists. Today, there are enough zines in the United States to support annual zine festivals. This suggests that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "creators can reach a larger audience by posting online." },
+      { "key": "B", "text": "zines are still a meaningful form of expression." },
+      { "key": "C", "text": "creators can continue to explore new art forms." },
+      { "key": "D", "text": "zines are good sources of mainstream culture." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Mặc dù internet phát triển, tạp chí tự in (zines) vẫn tồn tại bền bỉ và có các lễ hội thường niên[cite: 10] -> Zines vẫn là một hình thức biểu đạt nghệ thuật có ý nghĩa đối với cộng đồng sáng tạo[cite: 10]."
+  },
+  {
+    "id": "inf_40",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Astronomers investigated the Arabia Terra region of Mars because it appears to contain irregularly shaped craters that may have been caused by massive volcanic explosions. In their investigations of Arabia Terra, the researchers found remnants of ash deposits in an amount and thickness that would result from a massive volcanic eruption. However, erosion and past resurfacing events could have modified the surface of the planet. Therefore,______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the current makeup of the Arabia Terra region might not accurately reflect the volcanic activity of Mars's past." },
+      { "key": "B", "text": "eruptions from Mars's volcanoes were likely not as massive as astronomers previously believed." },
+      { "key": "C", "text": "ash was most likely expelled from multiple different volcanoes on Mars's surface." },
+      { "key": "D", "text": "the craters found in the Arabia Terra region were necessarily created by events other than volcanic eruptions." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sự xói mòn và các biến cố tái tạo bề mặt trong quá khứ đã làm biến đổi địa hình Sao Hỏa[cite: 10] -> Cấu tạo bề mặt hiện tại của vùng Arabia Terra có thể không còn phản ánh chính xác hoạt động núi lửa trong quá khứ[cite: 10]."
+  }
+,
+  {
+    "id": "inf_41",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Pigments give paints and dyes their color. Ocher is a mineral-based pigment used to make several colors, including red. Red ocher gets its color from iron oxide. Pigments can also be plant-based; plant-based pigments contain a high level of carbon. In a 2023 study, archaeologists tested the red pigment on decorated beads made by members of the Natufian culture approximately 15,000 years ago. The test showed that the pigment found on several beads contained no iron but had a high level of carbon. This finding led the researchers to conclude that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the Natufian beads examined in the study are the oldest surviving examples of the use of plant-based pigments for decorating beads." },
+      { "key": "B", "text": "the Natufian beadmakers used plant-based pigments rather than ocher to decorate some of the beads examined in the study." },
+      { "key": "C", "text": "the Natufian beadmakers preferred to use plant-based pigments because they are much brighter than mineral-based pigments are." },
+      { "key": "D", "text": "the pigments used by the Natufian beadmakers likely came from plants because ocher was difficult to find." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn nêu sắc tố khoáng (ocher) chứa oxit sắt, còn sắc tố thực vật chứa hàm lượng carbon cao. Hạt cườm Natufian được kiểm tra cho thấy không có sắt mà có hàm lượng carbon cao -> Các nhà khảo cổ kết luận họ đã dùng sắc tố từ thực vật thay vì dùng thổ hoàng (ocher) để trang trí."
+  },
+  {
+    "id": "inf_42",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Parthenogenesis is a form of reproduction in which a female reproduces without mating. She produces an egg containing a single offspring whose DNA, or genetic material, comes entirely from its mother. Among birds, parthenogenesis has been found in a handful of species, including pigeons and turkeys. When scientists at the San Diego Zoo analyzed the DNA of the zoo's California condors (a species of vulture), they discovered that two individuals weren't genetically similar enough to any of the males in the condor enclosure to be their offspring. However, both had hatched from eggs laid by females in the enclosure. Thus, the scientists concluded that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "at least one of those individuals' mothers was born as a result of parthenogenesis." },
+      { "key": "B", "text": "California condors may reproduce through parthenogenesis in zoos but not in the wild." },
+      { "key": "C", "text": "the mothers of the two individuals probably reproduced through parthenogenesis." },
+      { "key": "D", "text": "California condors reproduce through parthenogenesis only if females lack sufficient access to males." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hai cá thể chim kền kền non nở ra từ trứng của chim mẹ trong chuồng nhưng DNA không trùng khớp với bất kỳ con đực nào -> Các nhà khoa học kết luận mẹ của hai cá thể này đã sinh sản vô tính bằng hình thức trinh sinh (parthenogenesis)."
+  },
+  {
+    "id": "inf_43",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "By running computer simulations of the development of our solar system, André Izidoro, Rajdeep Dasgupta, and colleagues concluded that the Sun may have been surrounded by three giant dust rings before the planets started to form. The researchers suggest that the materials in the innermost ring became the four planets closest to the Sun, the materials in the middle ring produced the rest of the planets, and the materials in the outermost ring created the asteroids and other small bodies in the region beyond Neptune. In one simulation, the researchers delayed the initial formation of the middle ring, causing oversized super-Earths to begin developing from the innermost ring. The researchers therefore hypothesize that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the middle ring formed earlier in the solar system's development than the initial simulations suggested." },
+      { "key": "B", "text": "the timing of the initial formation of the middle ring played an important role in determining the eventual size of Earth." },
+      { "key": "C", "text": "if the formation of the outermost ring had occurred earlier in a simulation, all the planets would have become super-Earths." },
+      { "key": "D", "text": "the innermost ring actually formed into all the planets in our solar system, not just the four closest to the Sun." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Khi làm chậm thời điểm hình thành của vành đai giữa trong mô phỏng, các hành tinh vòng trong (trong đó có Trái Đất) đã phát triển thành các 'siêu Trái Đất' khổng lồ bất thường -> Thời điểm hình thành ban đầu của vành đai giữa đóng vai trò quan trọng trong việc định hình kích thước thực tế của Trái Đất."
+  },
+  {
+    "id": "inf_44",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "The Younger Dryas was a period of extreme cooling from 11,700 to 12,900 years ago in the Northern Hemisphere. Some scientists argue that a comet fragment hitting Earth brought about the cooling. Others disagree, partly because there is no known crater from such an impact that dates to the beginning of the period. In 2015, a team led by Kurt Kjær detected a 19-mile-wide crater beneath a glacier in Greenland. The scientists who believe an impact caused the Younger Dryas claim that this discovery supports their view. However, Kjær's team hasn't yet been able to determine the age of the crater. Therefore, the team suggests that ______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the impact that made the crater was connected to the beginning of the Younger Dryas." },
+      { "key": "B", "text": "it can't be determined whether a comet fragment could make a crater as large as 19 miles wide." },
+      { "key": "C", "text": "scientists have ignored the possibility that something other than a comet fragment could have made the crater." },
+      { "key": "D", "text": "the scientists who believe an impact caused the Younger Dryas have made incorrect assumptions about when the period began." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Lý do phản đối trước đây là vì thiếu một miệng hố thiên thạch có niên đại trùng với thời điểm bắt đầu thời kỳ lạnh giá. Dù miệng hố mới được tìm thấy, việc chưa xác định được tuổi của miệng hố khiến chưa thể vội vàng khẳng định tác động thiên thạch này có liên quan tới sự khởi đầu của thời kỳ Younger Dryas."
+  },
+  {
+    "id": "inf_45",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "In documents called judicial opinions, judges explain the reasoning behind their legal rulings, and in those explanations they sometimes cite and discuss historical and contemporary philosophers. Legal scholar and philosopher Anita L. Allen argues that while judges are naturally inclined to mention philosophers whose views align with their own positions, the strongest judicial opinions consider and rebut potential objections; discussing philosophers whose views conflict with judges' views could therefore______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "allow judges to craft judicial opinions without needing to consult philosophical works." },
+      { "key": "B", "text": "help judges improve the arguments they put forward in their judicial opinions." },
+      { "key": "C", "text": "make judicial opinions more comprehensible to readers without legal or philosophical training." },
+      { "key": "D", "text": "bring judicial opinions in line with views that are broadly held among philosophers." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Theo Allen, phán quyết tư pháp đanh thép nhất là phán quyết lường trước và phản bác được các phản biện trái chiều -> Việc thảo luận quan điểm của các triết gia bất đồng chính kiến sẽ giúp thẩm phán củng cố và hoàn thiện lập luận phán quyết của mình sắc bén hơn."
+  },
+  {
+    "id": "inf_46",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Many mosquito repellents contain natural components that work by activating multiple odor receptors on mosquitoes' antennae. As the insects develop resistance, new repellents are needed. Ke Dong and her team found that EBF, a molecular component of a chrysanthemum-flower extract, can repel mosquitoes by activating just one odor receptor—and this receptor, Or31, is present in all mosquito species known to carry diseases. Therefore, the researchers suggest that in developing new repellents, it would be most useful to______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "identify molecular components similar to EBF that target the activation of Or31 receptors." },
+      { "key": "B", "text": "investigate alternative methods for extracting EBF molecules from chrysanthemums." },
+      { "key": "C", "text": "verify the precise locations of Or31 and other odor receptors on mosquitoes' antennae." },
+      { "key": "D", "text": "determine the maximum number of different odor receptors that can be activated by a single molecule." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Hợp chất EBF xua đuổi muỗi hiệu quả chỉ nhờ kích hoạt đúng một thụ thể Or31 (vốn có ở mọi loài muỗi truyền bệnh) -> Hướng phát triển thuốc chống muỗi hữu ích nhất là tìm kiếm các phân tử tương tự EBF nhắm trúng mục tiêu kích hoạt thụ thể Or31."
+  },
+  {
+    "id": "inf_47",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Marine archaeologists have found much of the wooden hull of a sixteenth-century ship in a flooded quarry in southeast England. When it is exposed to air and water, wood rots quickly unless it is protected by sediment that shields it from oxygen. Therefore, the discovered ship was likely______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "covered by a protective sediment layer in the quarry." },
+      { "key": "B", "text": "one of several other ships buried in the same quarry." },
+      { "key": "C", "text": "a confirmation of previous theories about the type of wood that was used in sixteenth-century ships." },
+      { "key": "D", "text": "first constructed much earlier than previously thought." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Gỗ chìm trong nước và không khí sẽ bị mục nát nhanh chóng trừ khi có lớp trầm tích che chắn oxy bảo vệ -> Con tàu gỗ thế kỷ 16 vẫn còn nguyên vẹn phần lớn thân tàu là nhờ nó đã được bao phủ bởi một lớp trầm tích bảo vệ trong mỏ đá ngập nước."
+  },
+  {
+    "id": "inf_48",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Scholars are increasingly exploring the communication and preservation of ecological knowledge through Indigenous songs (e.g., Sakha songs about local ecosystems and those of the Kaluli people about rainforest sounds). In one study, ethnobiologist Dana Lepofsky et al. received insight from Kwaxsistalla Wathl’thla, a song keeper for the Kwakwaka’wakw people in Canada, into songs referencing the people's use of terraced gardens in intertidal zones along the Pacific Northwest coast for the cultivation of clams for consumption. Archaeological evidence of significant increases in clam size and abundance in that area concurrent with the documented past implementation of the method described in the songs supports the conclusion that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the practice used by ancestors of modern Kwakwaka’wakw people not only effectively maintained a food source but also promoted its robustness." },
+      { "key": "B", "text": "non-Indigenous people around the Pacific Northwest coast adopted the practice developed by the Kwakwaka’wakw people after observing its efficacy." },
+      { "key": "C", "text": "there is greater corroboration in the archaeological record of ecological practices described in Kwakwaka’wakw songs than of those described in Sakha and Kaluli songs." },
+      { "key": "D", "text": "although contemporary Kwakwaka’wakw people have a deep understanding of and appreciation for the fishing and farming practices used by their ancestors, they no longer implement those methods." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bằng chứng khảo cổ cho thấy kích thước và số lượng nghêu tăng lên rõ rệt khi người cổ xưa áp dụng phương pháp canh tác theo bài hát truyền thống -> Tập tục này của tổ tiên người Kwakwaka’wakw không chỉ duy trì nguồn lương thực mà còn nâng cao chất lượng và độ dồi dào của nguồn thức ăn đó."
+  },
+  {
+    "id": "inf_49",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Even with the widespread adoption of personal computers, many authors still choose to write and revise their novels by hand and only then transcribe the final version on a computer. It may be tempting to speculate about how a novel written this way would be affected if it had been exclusively typed instead, but each novel is a unique entity resulting from a specific set of circumstances. Therefore,______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "in order to increase their efficiency, authors who currently write their novels largely by hand should instead work only on a computer." },
+      { "key": "B", "text": "authors who do most of their drafting and revising by hand likely have more success than those who work entirely on a computer." },
+      { "key": "C", "text": "novels written by hand take less time to produce, on average, than novels written on a computer do." },
+      { "key": "D", "text": "there is no way to reasonably evaluate how a work would be different if it had been written by other means." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn nhấn mạnh mỗi tác phẩm là một thực thể độc nhất vô nhị sinh ra từ hoàn cảnh cụ thể -> Không có cách nào đánh giá hoặc suy đoán một cách hợp lý xem tác phẩm sẽ thay đổi ra sao nếu nó được viết bằng công cụ khác."
+  },
+  {
+    "id": "inf_50",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "The Haitian Declaration of Independence was issued in 1804, bringing to an end the revolution against colonial France that began in 1791. Written in French, which was not the first language of most Haitians but which was used throughout Europe as the language of international diplomacy, the declaration notes that Haiti will not bring rebellion to other Caribbean nations, promises to respect the sovereignty of its neighbors—widely understood as a reassurance to the United States—and sets up Haiti as an example for future struggles against colonizers (an implicit reference to the many colonies then found in the Americas). So even though the declaration is explicitly addressed to the Haitian people, it's reasonable to conclude that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "aspects of the declaration were modeled on similar documents from other countries." },
+      { "key": "B", "text": "the French government may have been surprised by the declaration." },
+      { "key": "C", "text": "many Haitian people opposed the revolution and the declaration." },
+      { "key": "D", "text": "the declaration actually had several intended audiences." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Bản tuyên ngôn viết bằng tiếng Pháp (ngôn ngữ ngoại giao quốc tế), có các điều khoản trấn an nước Mỹ và gửi thông điệp tới các thuộc địa khác ở châu Mỹ -> Dù trên danh nghĩa gửi tới người dân Haiti, bản tuyên ngôn thực tế nhắm tới nhiều đối tượng độc giả quốc tế khác nhau."
+  },
+  {
+    "id": "inf_51",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Euphorbia esula (leafy spurge) is a Eurasian plant that has become invasive in North America, where it displaces native vegetation and sickens cattle. E. esula can be controlled with chemical herbicides, but that approach can also kill harmless plants nearby. Recent research on introducing engineered DNA into plant species to inhibit their reproduction may offer a path toward exclusively targeting E. esula, consequently______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "making individual E. esula plants more susceptible to existing chemical herbicides." },
+      { "key": "B", "text": "enhancing the ecological benefits of E. esula in North America." },
+      { "key": "C", "text": "enabling cattle to consume E. esula without becoming sick." },
+      { "key": "D", "text": "reducing invasive E. esula numbers without harming other organisms." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Phương pháp công nghệ sinh học nhắm mục tiêu độc quyền vào loài cỏ xâm lấn E. esula thay vì dùng thuốc diệt cỏ hóa học độc hại bừa bãi -> Giúp làm giảm số lượng loài cỏ xâm lấn mà không gây hại tới các sinh vật và thực vật xung quanh."
+  },
+  {
+    "id": "inf_52",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "The Household, Income and Labour Dynamics in Australia Survey (HILDA) examines trends in economic well-being among 25,000 people in Australia unfolding over many years. As is true of most longitudinal studies, this need for years of data collection results in high costs. By contrast, a relatively straightforward fitness study, such as one that is merely trying to identify the percentage of regular exercisers in a city who do weight training, may not need a large budget because______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "longitudinal methods are probably suitable for the fitness study." },
+      { "key": "B", "text": "it would be easy for HILDA researchers to add questions to their economic well-being study." },
+      { "key": "C", "text": "25,000 people is more than enough for HILDA to find trends in economic well-being." },
+      { "key": "D", "text": "the fitness study can be done well without years of data collection." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nghiên cứu kinh tế tốn kém chi phí là do tính chất nghiên cứu dài hạn (longitudinal) phải thu thập dữ liệu qua nhiều năm. Ngược lại, cuộc khảo sát thể hình đơn giản chỉ cần khảo sát tức thời tại một thời điểm mà không cần theo dõi nhiều năm, vì vậy không cần ngân sách lớn."
+  },
+  {
+    "id": "inf_53",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "When the Vinland Map, a map of the world purported to date to the mid-1400s, surfaced in 1957, some scholars believed it demonstrated that European knowledge of the eastern coast of present-day North America predated Christopher Columbus's 1492 arrival. In 2021, a team including conservators Marie-France Lemay and Paula Zyats and materials scientist Anikó Bezur performed an extensive analysis of the map and the ink used. They found that the ink contains titanium dioxide, a compound that was first introduced in ink manufacturing in the early 1900s. Therefore, the team concluded that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "mid-1400s Europeans could not have known about the eastern coast of present-day North America." },
+      { "key": "B", "text": "the Vinland Map could not have been drawn by mid-1400s mapmakers." },
+      { "key": "C", "text": "mapmakers must have used titanium compounds in their ink in the 1400s." },
+      { "key": "D", "text": "there isn't enough information to determine when the ink was created." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Mực vẽ bản đồ chứa hợp chất titan dioxit vốn chỉ được bắt đầu sản xuất vào đầu thế kỷ 20 -> Bản đồ Vinland không thể nào được vẽ bởi các nhà làm bản đồ vào giữa thế kỷ 15."
+  },
+  {
+    "id": "inf_54",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "It's common for jazz musicians and fans to refer to certain songs as having 'swing,' indicating that the songs provoke a strong feeling, like the impulse to tap one's foot or dance. The exact acoustic properties that give a song swing, however, have long been thought to be undefinable. To investigate swing, a team led by physicist Corentin Nelias delayed the downbeats and synchronized the offbeats in jazz piano solos and asked jazz musicians to compare the intensity of swing in each modified piece with the intensity of swing in the original piece. They found that participants were more than seven times likelier to characterize the modified songs as having swing than to characterize the original versions as having swing, suggesting that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "synchronized offbeats tend to give a song swing regardless of whether downbeats are delayed." },
+      { "key": "B", "text": "the acoustic properties that give a song swing are not easy for jazz musicians to manipulate." },
+      { "key": "C", "text": "jazz songs that feature the piano are more likely to have swing than are jazz songs that do not feature the piano." },
+      { "key": "D", "text": "the timing of downbeats and offbeats may play a crucial role in giving a song swing." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Khi các nhà khoa học điều chỉnh độ trễ của phách mạnh (downbeats) và đồng bộ phách nhẹ (offbeats), người nghe nhận thấy cảm giác 'swing' tăng vọt gấp 7 lần -> Thời điểm phát ra của các phách đóng vai trò quyết định trong việc tạo nên chất swing của một bài nhạc."
+  },
+  {
+    "id": "inf_55",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "The Indus River valley civilization flourished in South Asia from 3300 BCE to 1300 BCE. Many examples of the civilization's writing system exist, but researchers haven't yet deciphered it or identified which ancient language it represents. Nevertheless, archaeologists have found historical artifacts, such as clay figures and jewelry, that provide information about the civilization's customs and how its communities were organized. The archaeologists' findings therefore suggest that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "investigating an ancient civilization is easier without knowledge of the civilization's language." },
+      { "key": "B", "text": "knowing an ancient civilization's language isn't necessary in order to learn details about the civilization." },
+      { "key": "C", "text": "archaeological research should focus on finding additional artifacts rather than deciphering ancient languages." },
+      { "key": "D", "text": "examining the civilization's historical artifacts has resolved the debate about this civilization's language." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Dù hệ thống chữ viết chưa được giải mã, các nhà khảo cổ vẫn hiểu được phong tục và cấu trúc xã hội thông qua các hiện vật đất sét và trang sức -> Hiểu biết ngôn ngữ không phải là điều kiện bắt buộc để tìm hiểu chi tiết về một nền văn minh cổ đại."
+  },
+  {
+    "id": "inf_56",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "To investigate the history of plate subduction—when one of Earth's tectonic plates slid beneath another—Sarah M. Aarons and colleagues compared ancient rocks from the Acasta Gneiss Complex in Canada to modern rocks. Using isotope analysis, the researchers found that Acasta rocks dating to about 4.02 billion years ago (bya) most strongly resemble modern rocks formed in a plume setting (an area in which hot rocks from Earth's mantle flow upward into the crust). By contrast, they found that Acasta rocks dating to about 3.75 bya and 3.6 bya have an isotope composition that is similar to that of modern rocks formed in a subduction setting. Aarons's team therefore concluded that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "subduction-like processes began occurring in some locations no later than 3.75 bya." },
+      { "key": "B", "text": "subduction replaced mantle plume formation as the most common geological process by about 4.02 bya." },
+      { "key": "C", "text": "the majority of the rocks in the Acasta Gneiss Complex formed through subduction." },
+      { "key": "D", "text": "the rocks in the Acasta Gneiss Complex are of a more recent origin than scientists previously thought." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Các mẫu đá có niên đại 3.75 và 3.6 tỷ năm trước có cấu tạo đồng vị tương tự đá hình thành do hút chìm mảng kiến tạo -> Hiện tượng hút chìm mảng đã bắt đầu xuất hiện ở một số nơi muộn nhất là từ 3.75 tỷ năm trước."
+  },
+  {
+    "id": "inf_57",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "In 2016 biological anthropologist Heather F. Smith and her team investigated the evolution of the appendix, an intestinal organ that is present in some mammals, including humans, but is generally thought to have no function. Studying 533 mammal species, the team found that the appendix has emerged independently across multiple lineages in separate instances and, significantly, hasn't disappeared after emerging in specific lineages. Moreover, the team determined that species with the organ tend to have higher concentrations of lymphoid tissue, which supports immune responses, in the cecum, the organ the appendix is attached to. Therefore, the team hypothesized that the appendix likely______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "was once present in many nonmammal species but has since disappeared from those lineages." },
+      { "key": "B", "text": "has been preserved in certain mammal species because it benefits their immune systems." },
+      { "key": "C", "text": "will emerge in a greater number of mammal species because it may serve a necessary function in the immune system." },
+      { "key": "D", "text": "produced higher concentrations of lymphoid tissue in mammals in the past than it does currently." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Ruột thừa xuất hiện độc lập qua nhiều nhánh tiến hóa và không bị biến mất, đồng thời các loài có ruột thừa sở hữu mật độ mô bạch huyết hỗ trợ miễn dịch cao hơn -> Ruột thừa được duy trì và bảo tồn ở động vật có vú vì nó mang lại lợi ích cho hệ thống miễn dịch."
+  },
+  {
+    "id": "inf_58",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "The ancient Sumerian civilization formed around 4000 BCE between two large rivers in an area that is now Iraq and Syria. The extremely hot and sunny weather in that area helped crops grow very quickly, but it also made it hard to keep the crops from drying up and dying. So, the Sumerians used water from the rivers in their farming. That method worked so well that they often could harvest even more crops than they needed in a season. As a result, the Sumerians______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "harvested crops only on the hottest days of each season." },
+      { "key": "B", "text": "found ways to shield their crops from the sun." },
+      { "key": "C", "text": "did not begin farming until long after 4000 BCE." },
+      { "key": "D", "text": "were able to store extra crops for later use." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nhờ dẫn nước sông tưới tiêu, mùa màng bội thu đến mức sản lượng vượt quá nhu cầu tiêu thụ trong mùa ('harvest even more crops than they needed') -> Người Sumer cổ đại có thể tích trữ nông sản dư thừa để dùng cho sau này."
+  },
+  {
+    "id": "inf_59",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Red velvet cake has been a favorite dessert of many for years, but the recipe's origins are unclear. A bakery in Dallas, Texas, argued that it created the first recipe for the cake when the bakery opened in the 1860s. The Adams Extract Co., which sells baking products, claims to have created the recipe in the 1930s to help market their red dye. A US hotel and a Canadian department store also publicly stated that the red velvet cake sold in each of their establishments in the 1930s was an original creation, each alleging that it was the recipe author. No clear evidence has emerged to favor one of these claims over the others, however. It thus seems that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "red velvet cake was first baked sometime before the 1860s." },
+      { "key": "B", "text": "we cannot say at present who actually baked the first red velvet cake." },
+      { "key": "C", "text": "none of the supposed inventors of red velvet cake are likely to have invented it." },
+      { "key": "D", "text": "the bakery in Dallas, Texas, probably invented red velvet cake." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Có quá nhiều bên tự nhận là người sáng tạo ra công thức và không có bằng chứng rõ ràng nào ủng hộ một tuyên bố cụ thể -> Ở thời điểm hiện tại, chúng ta không thể khẳng định ai mới là người thực sự làm ra chiếc bánh red velvet đầu tiên."
+  },
+  {
+    "id": "inf_60",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Narwhals are shy whales that live in the remote Arctic Ocean. Some of them have a long tusk, like a unicorn horn, with sensitive nerves. Narwhals are known for this tusk, but many actually don't have one and its purpose is unknown. One group of scientists came up with a possible purpose in 2014. The scientists suggested that the tusk may help narwhals determine when water around them is likely to start freezing and become dangerous for them. Marine biologist Kristin Laidre disagrees with that idea, though. She reasons that if the narwhal's tusk serves such an important purpose, then it's most likely that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "some narwhals would seek a new habitat." },
+      { "key": "B", "text": "fewer marine animals would also have tusks." },
+      { "key": "C", "text": "more narwhals would have a tusk." },
+      { "key": "D", "text": "narwhals would become less shy over time." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Văn bản cho biết có rất nhiều cá voi kỳ lân hoàn toàn không có ngà. Laidre lập luận rằng nếu ngà phục vụ mục đích sinh tồn sống còn như cảnh báo đóng băng nguy hiểm, thì về mặt chọn lọc tự nhiên đáng lẽ số lượng cá voi kỳ lân có ngà phải chiếm số lượng áp đảo hơn nhiều."
+  },
+  {
+    "id": "inf_61",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "In dialects of English spoken in Scotland, the 'r' sound is strongly emphasized when it appears at the end of syllables (as in 'car') or before other consonant sounds (as in 'bird'). English dialects of the Upland South, a region stretching from Oklahoma to western Virginia, place similar emphasis on 'r' at the ends of syllables and before other consonant sounds. Historical records show that the Upland South was colonized largely by people whose ancestors came from Scotland. Thus, linguists have concluded that______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "the English dialects spoken in the Upland South acquired their emphasis on the 'r' sound from dialects spoken in Scotland." },
+      { "key": "B", "text": "emphasis on the 'r' sound will eventually spread from English dialects spoken in the Upland South to dialects spoken elsewhere." },
+      { "key": "C", "text": "the English dialects spoken in Scotland were influenced by dialects spoken in the Upland South." },
+      { "key": "D", "text": "people from Scotland abandoned their emphasis on the 'r' sound after relocating to the Upland South." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Vùng Upland South có đặc trưng phát âm nhấn mạnh âm 'r' y hệt như tại Scotland, và lịch sử ghi nhận cư dân vùng này phần lớn có tổ tiên di cư từ Scotland sang -> Các nhà ngôn ngữ học kết luận phương ngữ Upland South thừa hưởng cách phát âm âm 'r' từ phương ngữ Scotland."
+  },
+  {
+    "id": "inf_62",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "As the name suggests, dramaturges originated in theater, where they continue to serve a variety of functions: conducting historical research for directors, compiling character biographies for actors, and perhaps most importantly, helping writers of plays and musicals to hone the works' stories and characters. Performance scholar Susan Manning observes that many choreographers, like playwrights and musical theater writers, are concerned with storytelling and characterization. In fact, some choreographers describe the dances they create as expressions of narrative through movement; it is therefore unsurprising that__________",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "dramaturges can have a profound impact on the artistic direction of plays and musicals." },
+      { "key": "B", "text": "choreographers developing dances with narrative elements frequently engage dramaturges to assist in refining those elements." },
+      { "key": "C", "text": "dances by choreographers who incorporate narrative elements are more accessible to audiences than dances by choreographers who do not." },
+      { "key": "D", "text": "some directors and actors rely too heavily on dramaturges to complete certain research tasks." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cố vấn kịch bản (dramaturges) chuyên gia trau chuốt cốt truyện và nhân vật, trong khi các biên đạo múa hiện nay cũng rất chú trọng yếu tố kể chuyện bằng vũ đạo -> Hoàn toàn không bất ngờ khi các biên đạo múa thường xuyên thuê cố vấn kịch bản để hỗ trợ hoàn thiện các chi tiết tự sự đó."
+  },
+  {
+    "id": "inf_63",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Several artworks found among the ruins of the ancient Roman city of Pompeii depict a female figure fishing with a cupid nearby. Some scholars have asserted that the figure is the goddess Venus, since she is known to have been linked with cupids in Roman culture, but University of Leicester archaeologist Carla Brain suggests that cupids may have also been associated with fishing generally. The fact that a cupid is shown near the female figure, therefore,_______",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "is not conclusive evidence that the figure is Venus." },
+      { "key": "B", "text": "suggests that Venus was often depicted fishing." },
+      { "key": "C", "text": "eliminates the possibility that the figure is Venus." },
+      { "key": "D", "text": "would be difficult to account for if the figure is not Venus." }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Một số học giả căn cứ vào hình ảnh thần tình yêu (cupid) để khẳng định người phụ nữ là nữ thần Venus, nhưng Brain chỉ ra thần tình yêu còn gắn liền với hoạt động câu cá nói chung -> Sự xuất hiện của thần tình yêu không thể xem là bằng chứng xác thực tuyệt đối để kết luận đó là Venus."
+  },
+  {
+    "id": "inf_64",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Ana Castillo's 1986 novel The Mixquiahuala Letters is a story told entirely through expressive letters from the narrator to her friend—letters that Castillo suggests could be read in several different orders. As they began reading it in class, some students remarked that they found the novel's letter format daunting and its treatment of gender relations old-fashioned. The professor, however, pointed out that the novel is written in modern-sounding language and addresses issues that still matter today, suggesting that The Mixquiahuala Letters________",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "has more to say about gender relations than other novels from the same period." },
+      { "key": "B", "text": "is more relevant to contemporary audiences than it may seem at first." },
+      { "key": "C", "text": "is easier to read than many contemporary novels that focus on friendship." },
+      { "key": "D", "text": "is best understood after multiple readings in different orders." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Học sinh lúc đầu thấy tác phẩm lỗi thời và khó đọc, nhưng giáo sư chỉ ra ngôn từ hiện đại và đề cập đến những vấn đề thời sự ngày nay -> Tác phẩm có tính liên hệ và gắn kết mật thiết với độc giả đương đại hơn nhiều so với ấn tượng ban đầu."
+  },
+  {
+    "id": "inf_65",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Biologist Natacha Bodenhausen and colleagues analyzed the naturally occurring bacterial communities associated with leaves and roots of wild Arabidopsis thaliana, a small flowering plant. The researchers found many of the same bacterial genera in both the plants' leaves and roots. To explain this, the researchers pointed to the general proximity of A. thaliana leaves to the ground and noted that rain splashing off soil could bring soil-based bacteria into contact with the leaves. Alternatively, the researchers noted that wind, which may be a source of bacteria in the aboveground portion of plants, could also bring bacteria to the soil and roots. Either explanation suggests that________",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "bacteria carried by wind are typically less beneficial to A. thaliana than soil-based bacteria are." },
+      { "key": "B", "text": "some bacteria in A. thaliana leaves and roots may share a common source." },
+      { "key": "C", "text": "many bacteria in A. thaliana leaves may have been deposited by means other than rain." },
+      { "key": "D", "text": "A. thaliana leaves and roots are especially vulnerable to harmful bacteria." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cả hai giả thuyết đưa ra (mưa bắn vi khuẩn từ đất lên lá, hoặc gió thổi vi khuẩn từ phần trên mặt đất xuống đất và rễ) đều dẫn tới kết luận rằng vi khuẩn ở lá và rễ của cây có thể cùng chung một nguồn gốc phát tán."
+  },
+  {
+    "id": "inf_66",
+    "topic": "Inference",
+    "difficulty": "Medium",
+    "passage": "Over 600 languages are spoken in New York City in addition to English—one can find Amharic spoken in the neighborhood of Norwood, or Ilocano in Woodside. Most speakers of Chinese languages reside in the neighborhood of Flushing (part of New York City's borough of Queens) and in Chinatown, in the borough of Manhattan. New immigrants from north China, where Mandarin is the primary first language, tend to settle in Queens, while new immigrants from south China, where many people speak Cantonese or Fuzhounese as a first language, tend to settle in Manhattan. It can therefore be suggested that________",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "languages tend to change more rapidly in areas where many languages are spoken than in areas where few languages are spoken." },
+      { "key": "B", "text": "languages spoken by immigrant peoples can differ significantly in vocabulary and pronunciation from those same languages in their country of origin." },
+      { "key": "C", "text": "there is a positive correlation between the physical size of a country and the number of languages spoken in that country." },
+      { "key": "D", "text": "correlations in a country between languages and regions where they are spoken can replicate themselves in a new country to which the original country's citizens emigrate." }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Sự phân bố địa lý ngôn ngữ ở Trung Quốc (tiếng Quan Thoại ở phía Bắc, tiếng Quảng Đông/Phúc Kiến ở phía Nam) đã được tái hiện y hệt khi di cư sang New York (người nói tiếng Quan Thoại ở Queens, người nói tiếng miền Nam ở Manhattan) -> Mối tương quan địa lý - ngôn ngữ ở quê hương có thể tự tái lập tại vùng đất mới."
+  },
+  {
+    "id": "inf_67",
+    "topic": "Inference",
+    "difficulty": "Easy",
+    "passage": "Violins made by Antonio Stradivari and other craftspeople in the sixteenth to eighteenth centuries in Cremona, Italy, produce a sound that is considered superior to that of modern stringed instruments. Some experts have claimed that the type of wood used to create Cremonese violins is responsible for their prized sound, but modern and Cremonese violins are made of the same kinds of wood: maple and spruce. New analysis, however, has revealed unique indications that the wood in the older violins was chemically treated by the makers, leading researchers to suggest that__________",
+    "question": "Which choice most logically completes the text?",
+    "options": [
+      { "key": "A", "text": "Cremonese violins probably were not considered superior to other instruments at the time they were made." },
+      { "key": "B", "text": "the sound quality of Cremonese violins results in part from a method the craftspeople used to alter the wood." },
+      { "key": "C", "text": "if modern violins were made of a wood other than maple or spruce, they likely would sound as good as Cremonese violins." },
+      { "key": "D", "text": "the current process of making violins is the same process that was used centuries ago by Cremonese craftspeople." }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vì hai thời kỳ đều dùng cùng loại gỗ phong và vân sam, nhưng gỗ của đàn xưa được phát hiện đã qua xử lý hóa chất đặc biệt -> Chất lượng âm thanh vượt trội của đàn violin Cremona bắt nguồn một phần từ chính phương pháp xử lý và làm biến đổi gỗ của những nghệ nhân xưa."
+  }
+]

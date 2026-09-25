@@ -1,0 +1,1232 @@
+[
+  {
+    "id": "grm_26",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The human brain is primed to recognize faces—so much so that, due to a perceptual tendency called pareidolia, ______ will even find faces in clouds, wooden doors, pieces of fruit, and other faceless inanimate objects. Researcher Susan Magsamen has focused her work on better understanding this everyday phenomenon.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "she" },
+      { "key": "B", "text": "they" },
+      { "key": "C", "text": "it" },
+      { "key": "D", "text": "those" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Đại từ số ít 'it' thay thế cho danh từ số ít chỉ vật đi trước là 'The human brain' (bộ não con người)."
+  },
+  {
+    "id": "grm_27",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "In Death Valley National Park's Racetrack Playa, a flat, dry lakebed, are 162 rocks—some weighing less than a pound but others almost 700 pounds—that move periodically from place to place, seemingly of their own volition. Racetrack-like trails in the ______ mysterious migration.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "playas sediment mark the rock's" },
+      { "key": "B", "text": "playa's sediment mark the rocks" },
+      { "key": "C", "text": "playa's sediment mark the rocks'" },
+      { "key": "D", "text": "playas' sediment mark the rocks'" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sở hữu cách số ít 'playa's sediment' (trầm tích của hồ cạn playa) và sở hữu cách số nhiều 'the rocks' mysterious migration' (cuộc dịch chuyển bí ẩn của 162 hòn đá)."
+  },
+  {
+    "id": "grm_28",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Oyster mushrooms typically get their nutrients from the damp logs on which they grow, but the fungi are also carnivorous, with the ability to kill and consume microscopic worms known as nematodes. As researcher Yen-Ping Hsueh has shown, the mushrooms release a toxin that is deadly to nematodes that ______ in contact with it.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "has come" },
+      { "key": "B", "text": "comes" },
+      { "key": "C", "text": "is coming" },
+      { "key": "D", "text": "come" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đại từ quan hệ 'that' bổ nghĩa cho danh từ số nhiều 'nematodes', nên động từ chia ở thì hiện tại đơn ngôi số nhiều không thêm s: 'come'."
+  },
+  {
+    "id": "grm_29",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Luci Tapahonso is the inaugural poet laureate of the Navajo Nation. Her book Sáanii Dahataał/The Women Are Singing—a combination of fiction and memoir, poetry and ______ serves as a testament to her versatility as a writer.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "prose;" },
+      { "key": "B", "text": "prose" },
+      { "key": "C", "text": "prose," },
+      { "key": "D", "text": "prose—" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm chú thích mở đầu bằng dấu gạch ngang dài (em dash)—'a combination of fiction and memoir...' thì bắt buộc phải kết thúc bằng một dấu gạch ngang tương ứng trước động từ chính 'serves': 'prose—'."
+  },
+  {
+    "id": "grm_30",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The Proto-Nilotic language, common ancestor of fifty-five African languages with similar linguistic properties, ______ like all protolanguages, hypothetical: there's no direct evidence these ancestral languages actually existed.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "is," },
+      { "key": "B", "text": "are," },
+      { "key": "C", "text": "have been," },
+      { "key": "D", "text": "were," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Chủ ngữ là danh từ số ít 'The Proto-Nilotic language', vị ngữ đi kèm cụm chen ngang ', like all protolanguages,' nên dùng động từ số ít 'is,'."
+  },
+  {
+    "id": "grm_31",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Swedish scientists Eva Engvall and Peter Perlmann developed a method for measuring the concentration of different proteins in a biological sample. Their ______ (enzyme-linked immunosorbent assay), is used to detect and measure proteins that indicate the presence of certain diseases.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "method (called" },
+      { "key": "B", "text": "method-called" },
+      { "key": "C", "text": "method, called" },
+      { "key": "D", "text": "method called" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cụm phân từ bổ nghĩa 'called ELISA' được ngăn cách bằng cặp dấu phẩy: dấu phẩy sau danh từ chính 'method,' kết hợp dấu phẩy sau dấu ngoặc đơn."
+  },
+  {
+    "id": "grm_32",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In knot theory (the mathematical study of curved, closed loops), knots are characterized by their crossing numbers—that is, the number of times the knotted thread crosses over itself. The trefoil knot and the figure-eight knot, each with a crossing number below five, ______ among the simplest possible knots with the fewest number of crossings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "has been" },
+      { "key": "D", "text": "is" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Chủ ngữ ghép gồm hai danh từ nối bằng liên từ 'and' ('The trefoil knot and the figure-eight knot') là chủ ngữ số nhiều, câu diễn tả sự thật khoa học nên động từ là 'are'."
+  },
+  {
+    "id": "grm_33",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Featuring jagged peaks of black ink surrounded by hazy swirls of blue and green paint, Zhang Daqian's 1983 painting Panorama of Mount Lu is inspired by the tradition of qinglü shanshui, a type of Chinese landscape painting ______ by the use of blue and green hues to depict ethereal, otherworldly landscapes.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "has been characterized" },
+      { "key": "B", "text": "will be characterized" },
+      { "key": "C", "text": "characterized" },
+      { "key": "D", "text": "is characterized" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Rút gọn mệnh đề quan hệ dạng bị động (past participle modifier) bổ nghĩa cho 'a type of Chinese landscape painting': 'characterized by...'."
+  },
+  {
+    "id": "grm_34",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In many of her landscape paintings from the 1970s and 1980s, Lebanese American artist Etel Adnan worked to capture the essence of California's fog-shrouded Mount Tamalpais region through abstraction, using splotches of color to represent the area's features. Interestingly, the triangle representing the mountain itself ______ among the few defined figures in her paintings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "have been" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "is" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Chủ ngữ là danh từ số ít 'the triangle' (cụm 'representing the mountain itself' chỉ là ngữ phân từ bổ nghĩa), câu nhận định đặc điểm của tranh nên chia động từ số ít 'is'."
+  },
+  {
+    "id": "grm_35",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In 1930, Japanese American artist Chiura Obata depicted the natural beauty of Yosemite National Park in two memorable woodcuts: Evening at Carl Inn and Lake Basin in the High Sierra. In 2019, ______ exhibited alongside 150 of Obata's other works in a single-artist show at the Smithsonian American Art Museum.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "it was" },
+      { "key": "B", "text": "they were" },
+      { "key": "C", "text": "this was" },
+      { "key": "D", "text": "some were" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thay thế cho hai tác phẩm khắc gỗ (two woodcuts) cần đại từ nhân xưng số nhiều và động từ quá khứ bị động 'they were'."
+  },
+  {
+    "id": "grm_36",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Inventor John Friedman created a prototype of the first flexible straw by inserting a screw into a paper straw and, using dental floss, binding the straw tightly around the ______ When the floss and screw were removed, the resulting corrugations in the paper allowed the straw to bend easily over the edge of a glass.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "screw's thread's." },
+      { "key": "B", "text": "screws' threads." },
+      { "key": "C", "text": "screw's threads." },
+      { "key": "D", "text": "screws threads'." }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sở hữu cách của một chiếc ốc vít là 'screw's', theo sau là danh từ số nhiều không có dấu nháy 'threads' (các đường rãnh ren)."
+  },
+  {
+    "id": "grm_37",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Oglala Lakota poet Layli Long Soldier's star quilt poems offer an unusually open-ended reading experience. With ______ eight panels of text stitched together in the shape of a traditional eight-pointed Lakota star quilt, the poems present viewers with a seemingly infinite number of ways to read them.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "their" },
+      { "key": "B", "text": "it's" },
+      { "key": "C", "text": "they're" },
+      { "key": "D", "text": "its" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Tính từ sở hữu 'their' thay thế cho danh từ số nhiều 'star quilt poems'."
+  },
+  {
+    "id": "grm_38",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "How do scientists determine what foods were eaten by extinct hominins such as Neanderthals? In the past, researchers were limited to studying the marks found on the fossilized teeth of skeletons, but in 2017 a team led by Laura Weyrich of the Australian Centre for Ancient DNA tried something ______ the DNA found in Neanderthals' fossilized dental plaque.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "new: sequencing" },
+      { "key": "B", "text": "new; sequencing" },
+      { "key": "C", "text": "new, sequencing:" },
+      { "key": "D", "text": "new. Sequencing" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Dấu hai chấm (colon) được đặt sau một mệnh đề độc lập hoàn chỉnh để giải thích cụ thể 'điều mới mẻ' (something new) đó là gì: 'new: sequencing the DNA...'."
+  },
+  {
+    "id": "grm_39",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "\"Praise Song for the Day,\" Elizabeth Alexander's 2009 inaugural poem, asserts that \"We cross dirt roads and highways...to see what's on the other side.\" Alexander's use of \"we\" ______ Americans' collective efforts and shared desire to seek new opportunity.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "evokes" },
+      { "key": "B", "text": "are evoking" },
+      { "key": "C", "text": "have evoked" },
+      { "key": "D", "text": "evoke" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Chủ ngữ chính là danh từ số ít 'Alexander's use' (việc sử dụng từ 'we'), nên động từ chia ở ngôi thứ ba số ít là 'evokes'."
+  },
+  {
+    "id": "grm_40",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "By the time Hawaiian king Kamehameha III ______ the throne, the number of longhorn cattle, first introduced to the islands in 1793, had drastically increased, and so too had the need for paniolo (Hawaiian cowboys) to manage the wild herds that then roamed throughout the volcanic terrain.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "ascended" },
+      { "key": "B", "text": "will ascend" },
+      { "key": "C", "text": "ascends" },
+      { "key": "D", "text": "is ascending" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Cấu trúc với 'By the time + S + V(quá khứ đơn), S + had + P2(quá khứ hoàn thành)': mệnh đề đi sau 'By the time' cần động từ quá khứ đơn 'ascended'."
+  },
+  {
+    "id": "grm_41",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Interest in mechanotransduction, the mechanism by which cells sense and convert mechanical stimuli into biochemical signals, is expanding because of innovative work by biomedical scientists—many of whom, like neuroscience and biophysics expert Elba Serrano, ______ this mechanism to better understand how the body's neurological and biomechanical systems interact.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "is studying" },
+    { "key": "B", "text": "has studied" },
+      { "key": "C", "text": "study" },
+      { "key": "D", "text": "studies" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Chủ ngữ trong mệnh đề quan hệ là 'many of whom' (nhiều người trong số các nhà khoa học y sinh) là danh từ số nhiều, nên động từ ở hiện tại đơn là 'study'."
+  },
+  {
+    "id": "grm_42",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "In ancient Greece, an Epicurean was a follower of Epicurus, a philosopher whose beliefs revolved around the pursuit of pleasure. Epicurus defined pleasure as \"the absence of pain in the body and of trouble in the ______ that all life's virtues derived from this absence.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "soul,\" positing" },
+      { "key": "B", "text": "soul\": positing" },
+      { "key": "C", "text": "soul\"; positing" },
+      { "key": "D", "text": "soul.\" Positing" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sử dụng phân từ hiện tại (present participle phrase) 'positing...' đi sau dấu phẩy để bổ nghĩa cho hành động nêu định nghĩa của Epicurus."
+  },
+  {
+    "id": "grm_43",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "The 2022 Nobel Prize in Chemistry was awarded to three pioneers in the field of click chemistry: two-time Nobel laureate Barry Sharpless, who coined the term \"click chemistry\" in 1998; Carolyn Bertozzi, founder of the Bertozzi Group at ______ and Morten Meldal, a professor at the University of Copenhagen in Denmark.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Stanford" },
+      { "key": "B", "text": "Stanford," },
+      { "key": "C", "text": "Stanford:" },
+      { "key": "D", "text": "Stanford;" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Trong cấu trúc liệt kê phức tạp mà bên trong từng phần tử đã có dấu phẩy (như giải thích chức danh/thành tích), các phần tử lớn phải được ngăn cách bằng dấu chấm phẩy (;)."
+  },
+  {
+    "id": "grm_44",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Customers who are satisfied with how a company resolves a service issue may regard that company more positively than they would if no such issue had occurred. This idea is known as the service recovery ______ research suggests that it has important implications for customer loyalty and retention.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "paradox," },
+      { "key": "B", "text": "paradox" },
+      { "key": "C", "text": "paradox, and" },
+      { "key": "D", "text": "paradox and," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nối hai mệnh đề độc lập hoàn chỉnh bằng liên từ kết hợp 'and' đi kèm dấu phẩy phía trước: 'paradox, and research suggests...'."
+  },
+  {
+    "id": "grm_45",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "The Lion Light system, developed by Kenyan inventor Richard Turere, consists of LED lights installed around the perimeter of livestock pastures. Powered with ______ blinking LEDs keep lions away at night, thus protecting the livestock without risking harm to the endangered lions.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "energy collected, by solar panels, during the day" },
+      { "key": "B", "text": "energy collected by solar panels during the day" },
+      { "key": "C", "text": "energy collected by solar panels during the day," },
+      { "key": "D", "text": "energy, collected by solar panels during the day," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Mệnh đề phân từ mở đầu 'Powered with energy collected by solar panels during the day,' đóng vai trò trạng ngữ, cần có dấu phẩy ở cuối để ngăn cách với chủ ngữ chính 'blinking LEDs'."
+  },
+  {
+    "id": "grm_46",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Known for her massive photorealistic paintings of African American figures floating or swimming in pools, Calida Garcia ______ was the logical choice to design the book cover for Ta-Nehisi Coates's The Water Dancer, a novel about an African American man who can travel great distances through water.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Rawles-" },
+      { "key": "B", "text": "Rawles:" },
+      { "key": "C", "text": "Rawles," },
+      { "key": "D", "text": "Rawles" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Chủ ngữ là 'Calida Garcia Rawles', không đặt dấu phẩy hay dấu câu ngăn cách giữa chủ ngữ với động từ chính 'was'."
+  },
+  {
+    "id": "grm_47",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "In February 1919, following the end of the First World War, women from ten countries around the world convened the Inter-Allied Women's Conference in Paris. The conference's goals were ______ ensure women's participation in the proceedings of the Paris Peace Conference, to secure the right of women to serve in the League of Nations, and to advocate for human rights.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "threefold: to" },
+      { "key": "B", "text": "threefold. To" },
+      { "key": "C", "text": "threefold to" },
+      { "key": "D", "text": "threefold; to" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Dấu hai chấm (colon) được dùng sau mệnh đề độc lập 'The conference's goals were threefold:' để mở đầu danh sách liệt kê 3 mục tiêu cụ thể theo sau."
+  },
+  {
+    "id": "grm_48",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The violins handmade in the seventeenth century by Italian craftsman Antonio Stradivari have been celebrated as some of the finest in the world. In close collaboration with musicians, Stradivari introduced changes to the shape of a traditional violin, flattening some of the instrument's curves and making ______ lighter overall.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "those" },
+      { "key": "B", "text": "one" },
+      { "key": "C", "text": "them" },
+      { "key": "D", "text": "it" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đại từ tân ngữ số ít 'it' thay thế cho danh từ số ít 'a traditional violin' (cây đàn vĩ cầm truyền thống)."
+  },
+  {
+    "id": "grm_49",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Horsepower is a unit of measurement used to determine how much power a vehicle produces. The measurement is based on how much and how quickly weight can be ______ one unit of mechanical horsepower is equivalent to the amount of power it takes to lift 550 pounds one foot off the ground in one second.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "moved, for example," },
+      { "key": "B", "text": "moved," },
+      { "key": "C", "text": "moved; for example," },
+      { "key": "D", "text": "moved" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hai mệnh đề độc lập nối với nhau bởi trạng từ liên kết 'for example': cần dùng dấu chấm phẩy trước trạng từ và dấu phẩy sau trạng từ: '; for example,'."
+  },
+  {
+    "id": "grm_50",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Nuhad al-Haddad, known as Fairuz, was one of the most beloved Lebanese singers of the twentieth century. Her broad singing repertoire—which included traditional forms, such as the Arabic qasida and maqam, alongside modern pop and jazz styles—lent Fairuz a timeless, cross-generational appeal, ______ her the moniker \"the soul of Lebanon.\"",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "earned" },
+      { "key": "B", "text": "had earned" },
+      { "key": "C", "text": "earning" },
+      { "key": "D", "text": "earn" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cụm phân từ hiện tại (present participle phrase) 'earning her...' đứng sau dấu phẩy ở cuối câu để chỉ kết quả của mệnh đề chính phía trước."
+  },
+  {
+    "id": "grm_51",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "To humans, it does not appear that the golden orb-weaver spider uses camouflage to capture its ______ the brightly colored arachnid seems to wait conspicuously in the center of its large circular web for insects to approach. Researcher Po Peng of the University of Melbourne has explained that the spider's distinctive coloration may in fact be part of its appeal.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "prey, rather," },
+      { "key": "B", "text": "prey rather," },
+      { "key": "C", "text": "prey, rather;" },
+      { "key": "D", "text": "prey; rather," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nối hai mệnh đề độc lập bằng trạng từ chuyển tiếp 'rather': cần dùng dấu chấm phẩy trước 'rather' và dấu phẩy sau 'rather': 'prey; rather,'."
+  },
+  {
+    "id": "grm_52",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "While constructing the Limyra Bridge, ancient Roman builders relied on temporary wooden beams to support the stone and brick structure. These temporary supports, a construction system known as ______ were removed when the bridge was completed.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "falsework;" },
+      { "key": "B", "text": "falsework" },
+      { "key": "C", "text": "falsework," },
+      { "key": "D", "text": "falsework:" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cụm đồng vị 'a construction system known as falsework' được đặt giữa 2 dấu phẩy để bổ nghĩa cho 'These temporary supports'."
+  },
+  {
+    "id": "grm_53",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "A pioneer in the field of taphonomy (the study of how organic remains become fossils), ______ may be just as prevalent in the fossil record as those of thick-shelled organisms.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "fossils of thin-shelled organisms, Anna Behrensmeyer demonstrated in a 2005 analysis," },
+      { "key": "B", "text": "Anna Behrensmeyer demonstrated in a 2005 analysis that fossils of thin-shelled organisms" },
+      { "key": "C", "text": "it was demonstrated in a 2005 analysis by Anna Behrensmeyer that fossils of thin-shelled organisms" },
+      { "key": "D", "text": "a 2005 analysis—by Anna Behrensmeyer—" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Quy tắc ngữ pháp về bổ ngữ đầu câu (Dangling Modifier): cụm từ mở đầu 'A pioneer in the field of taphonomy...' mô tả một con người, do đó chủ ngữ đứng ngay sau dấu phẩy bắt buộc phải là tên người 'Anna Behrensmeyer'."
+  },
+  {
+    "id": "grm_54",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Because a cycle of lunar phases ______ 29.5 days to complete, it's possible to observe two full moons in a single month, one at the beginning and one at the end.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "are taking" },
+      { "key": "B", "text": "have taken" },
+      { "key": "C", "text": "take" },
+      { "key": "D", "text": "takes" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Chủ ngữ là danh từ số ít 'a cycle' (một chu kỳ), câu diễn tả quy luật tự nhiên nên động từ ở hiện tại đơn số ít là 'takes'."
+  },
+  {
+    "id": "grm_55",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Josephine Paddock and Florence Esté were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to American audiences. Though shocking at the time, an abstract cubist painting exhibited by Marcel Duchamp—one of several works that received scorn from critics—______ the Western art canon more than a century later.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "has entered" },
+      { "key": "B", "text": "have entered" },
+      { "key": "C", "text": "were entering" },
+      { "key": "D", "text": "enter" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Chủ ngữ chính của câu là 'an abstract cubist painting' (danh từ số ít), diễn tả kết quả kéo dài đến hiện tại ('more than a century later') nên dùng hiện tại hoàn thành số ít 'has entered'."
+  },
+  {
+    "id": "grm_56",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In her analysis of Edith Wharton's The House of Mirth (1905), scholar Candace Waid observes that the novel depicts the upper classes of New York society as \"consumed by the appetite of a soulless ______ an apt assessment given that The House of Mirth is set during the Gilded Age, a period marked by rapid industrialization, economic greed, and widening wealth disparities.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "materialism\"; and" },
+      { "key": "B", "text": "materialism\" and" },
+      { "key": "C", "text": "materialism,\"" },
+      { "key": "D", "text": "materialism\"" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Dấu phẩy đặt trước cụm đồng vị đánh giá 'an apt assessment...' để nối liền mạch câu: 'materialism,\"'."
+  },
+  {
+    "id": "grm_57",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "After winning the 1860 presidential election, Abraham Lincoln appointed Edward Bates, Salmon P. Chase, and William H. Seward to his cabinet. Lincoln's decision was surprising, since each of these men had run against him, but historians have praised it, noting that Lincoln ______ his rivals' diverse talents to strengthen his administration.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "has leveraged" },
+      { "key": "B", "text": "is leveraging" },
+      { "key": "C", "text": "will leverage" },
+      { "key": "D", "text": "leveraged" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Hành động Lincoln trọng dụng tài năng đối thủ xảy ra trong bối cảnh lịch sử quá khứ xác định (năm 1860) nên dùng thì quá khứ đơn 'leveraged'."
+  },
+  {
+    "id": "grm_58",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "It can take time for proposed amendments to the US Constitution to become law. For example, the Twenty-Second Amendment, which limits the number of ______ can serve, was first proposed in 1947 but wasn't approved by the required three-fourths majority of state legislatures until 1951.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "terms presidents" },
+      { "key": "B", "text": "term's presidents" },
+      { "key": "C", "text": "term's president's" },
+      { "key": "D", "text": "terms president's" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'the number of terms' (số nhiệm kỳ - danh từ số nhiều) và 'presidents can serve' (các tổng thống có thể phục vụ - danh từ số nhiều làm chủ ngữ cho can serve), cả hai đều không dùng dấu sở hữu cách."
+  },
+  {
+    "id": "grm_59",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The soundtrack to Mira Nair's 1991 film Mississippi Masala expressively captures the clashing of cultures that happens when ______ (a young Indian woman from Uganda and a young African American man from Mississippi) meet. Featured throughout the film are songs from Uganda's Afrigo Band, the Indian composer L. Subramaniam, and the Mississippi blues musician Sam Chatmon.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "it's two protagonists" },
+      { "key": "B", "text": "its two protagonist's" },
+      { "key": "C", "text": "it's two protagonist's" },
+      { "key": "D", "text": "its two protagonists" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Tính từ sở hữu 'its' (của bộ phim) và danh từ số nhiều 'two protagonists' (hai nhân vật chính - làm chủ ngữ cho động từ meet)."
+  },
+  {
+    "id": "grm_60",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Water in the North Atlantic Ocean is pushed eastward by powerful winds, but the rotation of Earth and interference from nearby landmasses together cause ______ to swirl into a massive, churning whirlpool—also called the North Atlantic Gyre—that spins clockwise.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "these" },
+      { "key": "B", "text": "those" },
+      { "key": "C", "text": "them" },
+      { "key": "D", "text": "it" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đại từ tân ngữ số ít 'it' thay thế cho danh từ không đếm được 'Water in the North Atlantic Ocean'."
+  },
+  {
+    "id": "grm_61",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "While light is known as one of the fastest-moving substances, it slows down when passing through some types of matter. One such type of matter is a form of cooled, condensed gas called a Bose-Einstein condensate ______ Dutch physicist Lene Hau famously used a BEC to slow a beam of light to a complete halt.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "(BEC)," },
+      { "key": "B", "text": "(BEC) and" },
+      { "key": "C", "text": "(BEC);" },
+      { "key": "D", "text": "(BEC)" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nối hai mệnh đề độc lập hoàn chỉnh không có liên từ kết hợp bằng dấu chấm phẩy: '(BEC);'."
+  },
+  {
+    "id": "grm_62",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Beatrix Potter is perhaps best known for writing and illustrating children's books such as The Tale of Peter Rabbit (1902), but she also dedicated herself to mycology, the study of ______ more than 350 paintings of the fungal species she observed in nature and submitting her research on spore germination to the Linnean Society of London.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "fungi; producing" },
+      { "key": "B", "text": "fungi. Producing" },
+      { "key": "C", "text": "fungi producing" },
+      { "key": "D", "text": "fungi, producing" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm phân từ chỉ hành động kèm theo 'producing...' và 'submitting...' được ngăn cách với mệnh đề chính bằng dấu phẩy sau danh từ 'fungi,'."
+  },
+  {
+    "id": "grm_63",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Photosynthesis, the mechanism by which plants use sunlight to turn carbon dioxide and water into ______ is fueled in part by an enzyme called Photosystem II that harvests energy-giving electrons from water molecules.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "nutrients" },
+      { "key": "B", "text": "nutrients and" },
+      { "key": "C", "text": "nutrients," },
+      { "key": "D", "text": "nutrients—" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Ngữ đồng vị giải thích mở đầu bằng dấu phẩy 'Photosynthesis, the mechanism...' cần kết thúc bằng dấu phẩy thứ hai sau 'nutrients,' trước khi sang vị ngữ chính 'is fueled'."
+  },
+  {
+    "id": "grm_64",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "After a spate of illnesses as a child, Wilma Rudolph was told she might never walk again. Defying all odds, Rudolph didn't just walk, she ______ the 1960 Summer Olympics in Rome, she won both the 100- and 200-meter dashes and clinched first place for her team in the 4×100-meter relay, becoming the first US woman to win three gold medals in a single Olympics.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "ran-fast-during" },
+      { "key": "B", "text": "ran-fast during" },
+      { "key": "C", "text": "ran-fast, during" },
+      { "key": "D", "text": "ran-fast. During" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu thứ nhất kết thúc trọn vẹn ở 'she ran-fast.'. Bắt đầu câu mới bằng cụm giới từ chỉ thời gian: 'During the 1960 Summer Olympics...'."
+  },
+  {
+    "id": "grm_65",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Professional American football player Fred Cox invented one of the world's most popular toys. In the 1970s, he came up with the idea for the Nerf football, which ______ of the harder and heavier regulation football.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "were a smaller, foam version" },
+      { "key": "B", "text": "are smaller, foam versions" },
+      { "key": "C", "text": "were smaller, foam versions" },
+      { "key": "D", "text": "is a smaller, foam version" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đại từ quan hệ 'which' thay cho danh từ số ít 'the Nerf football' và theo sau là bổ ngữ số ít 'a smaller, foam version', nên động từ chia là 'is'."
+  },
+  {
+    "id": "grm_66",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "In January 1776, Thomas Paine published Common Sense, an appeal for freedom from the British monarchy that famously helped ignite the desire for independence among the American colonists. After the colonies achieved their independence, Paine moved to Paris, where the provocative ______ would contribute to another revolution—the French Revolution.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "authors political writings" },
+      { "key": "B", "text": "author's political writings" },
+      { "key": "C", "text": "author's political writing's" },
+      { "key": "D", "text": "authors' political writings'" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sở hữu cách của tác giả là 'author's' và danh từ số nhiều 'political writings' (các bài viết chính trị)."
+  },
+  {
+    "id": "grm_67",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "French philosopher René Descartes doubted whether he could prove his own existence. Eventually, he found proof in his famous phrase \"I think, therefore I am.\" The ______ complexity: only those who exist would be able to ponder their existence.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "phrases' simplicity masks its" },
+      { "key": "B", "text": "phrases simplicity masks their" },
+      { "key": "C", "text": "phrase's simplicity masks their" },
+      { "key": "D", "text": "phrase's simplicity masks its" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Sở hữu cách của câu nói là 'phrase's simplicity' (sự đơn giản của câu nói) và tính từ sở hữu số ít 'masks its complexity' (che giấu đi sự phức tạp của nó)."
+  },
+  {
+    "id": "grm_68",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In a 2023 study, researchers documented a fascinating behavior in the aquatic plant Elodea densa. When exposed to low levels of light, the plant's ______ the cellular organs that generate energy from light—reshuffled to form a tightly packed, glass-like surface ideal for collecting more light.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "chloroplasts" },
+      { "key": "B", "text": "chloroplasts;" },
+      { "key": "C", "text": "chloroplasts," },
+      { "key": "D", "text": "chloroplasts—" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm chen ngang giải thích ở sau kết thúc bằng dấu gạch ngang (em dash)—'from light—', vì vậy nó phải mở đầu bằng dấu gạch ngang tương ứng: 'chloroplasts—'."
+  },
+  {
+    "id": "grm_69",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "A study led by scientist Rebecca Kirby at the University of Wisconsin-Madison found that black bears that eat human food before hibernation have increased levels of a rare carbon isotope, ______ due to the higher 13C levels in corn and cane sugar. Bears with these elevated levels were also found to have much shorter hibernation periods on average.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "carbon-13, (13C)" },
+      { "key": "B", "text": "carbon-13 (13C)" },
+      { "key": "C", "text": "carbon-13, (13C)" },
+      { "key": "D", "text": "carbon-13 (13C)," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Ký hiệu '(13C)' nằm liền kề với 'carbon-13', dấu phẩy ngăn cách được đặt ở sau đóng ngoặc đơn để tiếp tục cụm từ bổ nghĩa: 'carbon-13 (13C),'."
+  },
+  {
+    "id": "grm_70",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Bonnie Buratti of NASA's Jet Propulsion Laboratory ______ data about Saturn's rings collected by the Cassini spacecraft when she made an interesting discovery: the tiny moons embedded between and within Saturn's rings are shaped by the buildup of ring material on the moons' surfaces.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "studies" },
+      { "key": "B", "text": "has been studying" },
+      { "key": "C", "text": "will study" },
+      { "key": "D", "text": "was studying" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Hành động đang diễn ra trong quá khứ thì một hành động khác xen vào ('when she made an interesting discovery'): dùng thì quá khứ tiếp diễn 'was studying'."
+  },
+  {
+    "id": "grm_71",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "On April 5, 1977, Kitty Cone and 150 other disability rights activists entered a San Francisco federal building. After pleading for years-to no effect-for the passage of key antidiscrimination legislation, ______ until their demands were addressed. Finally, on April 28, the legislation was signed.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "pressure on lawmakers increased when the activists staged a sit-in protest" },
+      { "key": "B", "text": "a sit-in protest staged by the activists increased pressure on lawmakers" },
+      { "key": "C", "text": "lawmakers came under increased pressure when the activists staged a sit-in protest" },
+      { "key": "D", "text": "the activists increased pressure on lawmakers by staging a sit-in protest" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Lỗi bổ ngữ sai vị trí (Dangling Modifier): cụm từ mở đầu 'After pleading for years...' miêu tả hành động cầu xin của những nhà hoạt động, nên chủ ngữ đứng ngay sau dấu phẩy phải là 'the activists'."
+  },
+  {
+    "id": "grm_72",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "The Mission 66 initiative, which was approved by Congress in 1956, represented a major investment in the infrastructure of overburdened national ______ it prioritized physical improvements to the parks' roads, utilities, employee housing, and visitor facilities while also establishing educational programming for the public.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "parks and" },
+      { "key": "B", "text": "parks" },
+      { "key": "C", "text": "parks; " },
+      { "key": "D", "text": "parks," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nối hai mệnh đề độc lập không có từ nối bằng dấu chấm phẩy: 'parks; it prioritized...'."
+  },
+  {
+    "id": "grm_73",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Between 322 and 184 BCE, the Maurya Empire established a complex economic system that, through trade and centralized ______ funded major infrastructure projects throughout the Indian subcontinent. This included the building of many roads, canals, and hospitals.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "taxation:" },
+      { "key": "B", "text": "taxation," },
+      { "key": "C", "text": "taxation—" },
+      { "key": "D", "text": "taxation" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cụm chen ngang 'through trade and centralized taxation' mở đầu bằng dấu phẩy ', through' thì phải đóng bằng dấu phẩy: 'taxation,' trước khi nối tới động từ 'funded'."
+  },
+  {
+    "id": "grm_74",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The Mesoamerican city of Teotihuacan featured a uniquely egalitarian urban housing infrastructure. Built between the first and seventh centuries CE, Teotihuacan housed its residents (as many as 200,000, by some ______ in a complex of comfortable apartments of comparable size.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "estimates)" },
+      { "key": "B", "text": "estimates)," },
+      { "key": "C", "text": "estimates—" },
+      { "key": "D", "text": "estimates" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Cụm từ nằm trong ngoặc đơn '(as many as 200,000, by some estimates)' đóng ngoặc đơn lại trực tiếp nối tiếp với cụm giới từ 'in a complex...' không dùng thêm dấu phẩy."
+  },
+  {
+    "id": "grm_75",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "As British scientist Peter Whibberley has observed, \"the Earth is not a very good timekeeper.\" Earth's slightly irregular rotation rate means that measurements of time must be periodically adjusted. Specifically, an extra \"leap second\" (the 86,401st second of the day) is ______ time based on the planet's rotation lags a full nine-tenths of a second behind time kept by precise atomic clocks.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "added, whenever" },
+      { "key": "B", "text": "added; whenever" },
+      { "key": "C", "text": "added. Whenever" },
+      { "key": "D", "text": "added whenever" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'whenever' là liên từ phụ thuộc đứng ở giữa câu nối mệnh đề thời gian, không dùng dấu phẩy trước 'whenever': 'added whenever time based on...'."
+  },
+  {
+    "id": "grm_76",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Julia Alvarez's 1994 novel In the Time of the Butterflies, a fictionalized account of the lives of the Mirabal ______ can serve as a starting point for those wanting to explore how the rule of dictator Rafael Trujillo has been represented in Dominican American literature.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "sisters, and" },
+      { "key": "B", "text": "sisters and" },
+      { "key": "C", "text": "sisters," },
+      { "key": "D", "text": "sisters" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Ngữ đồng vị mở đầu bằng dấu phẩy ', a fictionalized account...' cần dấu phẩy đóng sau 'sisters,' trước động từ 'can serve'."
+  },
+  {
+    "id": "grm_77",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Solarpunk is an art movement that imagines renewable energy-powered technology infused complementarily into nature. In Paolo Bacigalupi's solarpunk short story \"Efficiency,\" an artificial intelligence that absorbs sustainable energies, redistributing them through intricate networks of weights and generators, ______ Chicago's energy grid.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "have been powering" },
+      { "key": "B", "text": "power" },
+      { "key": "C", "text": "powers" },
+      { "key": "D", "text": "are powering" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Chủ ngữ là danh từ số ít 'an artificial intelligence' (toàn bộ đoạn ở giữa chỉ là mệnh đề quan hệ và ngữ phân từ bổ nghĩa), động từ chia ở hiện tại đơn số ít là 'powers'."
+  },
+  {
+    "id": "grm_78",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Classical composer Florence Price's 1927 move to Chicago marked a turning point in her career. It was there that Price premiered her First Symphony—a piece that was praised for blending traditional Romantic motifs with aspects of Black folk music—and ______ supportive relationships with other Black artists.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "developing" },
+      { "key": "B", "text": "developed" },
+      { "key": "C", "text": "to develop" },
+      { "key": "D", "text": "having developed" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cấu trúc song hành với liên từ 'and': động từ 'premiered' ở quá khứ đơn song hành với 'developed'."
+  },
+  {
+    "id": "grm_79",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Po'Pay was a Tewa leader from Ohkay Owingeh, a pueblo located about twenty-five miles north of present-day Santa Fe, New Mexico. He was instrumental in organizing the Pueblo Revolt of ______ as a result of his leadership, the Spanish colonizers were expelled from the region for a time.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "1680" },
+      { "key": "B", "text": "1680 and" },
+      { "key": "C", "text": "1680," },
+      { "key": "D", "text": "1680, and" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nối hai mệnh đề độc lập bằng dấu phẩy và liên từ 'and': '1680, and as a result...'."
+  },
+  {
+    "id": "grm_80",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Every last second of the space shuttle mission STS-79, which lasted ten days and three hours, ______ carefully monitored by a team of experts.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "have been" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "were" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Every last second' là chủ ngữ số ít, sự kiện diễn ra trong quá khứ nên dùng bị động số ít 'was carefully monitored'."
+  },
+  {
+    "id": "grm_81",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Gathering accurate data on water flow in the United States is challenging because of the country's millions of miles of ______ the volume and speed of water at any given location can vary drastically over time.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "waterways and the fact that," },
+      { "key": "B", "text": "waterways, and the fact that," },
+      { "key": "C", "text": "waterways, and, the fact that" },
+      { "key": "D", "text": "waterways and the fact that" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm danh từ 'the country's millions of miles of waterways' và 'the fact that...' đi sau giới từ 'because of' được nối liền mạch bằng 'and', không có dấu phẩy ngắt quãng giữa 'that' và mệnh đề sau."
+  },
+  {
+    "id": "grm_82",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In 2008, two years after the death of science fiction writer Octavia Butler, the Huntington Library in ______ received a collection of more than 8,000 items, including Butler's private notes, research materials, manuscripts, photos, and drawings. Today, the Octavia E. Butler Collection is one of the most researched archives at the library.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "California," },
+      { "key": "B", "text": "California:" },
+      { "key": "C", "text": "California-" },
+      { "key": "D", "text": "California" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Chủ ngữ là 'the Huntington Library in California', không đặt dấu phẩy hay dấu câu ngăn cách giữa cụm chủ ngữ và động từ chính 'received'."
+  },
+  {
+    "id": "grm_83",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In the 1950s, a man named Joseph McVicker was struggling to keep his business afloat when his sister-in-law Kay Zufall advised him to repurpose the company's product, a nontoxic, clay-like substance for removing soot from wallpaper, as a modeling putty for kids. In addition, Zufall ______ selling the product under a child-friendly name: Play-Doh.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "suggested" },
+      { "key": "B", "text": "suggests" },
+      { "key": "C", "text": "had suggested" },
+      { "key": "D", "text": "was suggesting" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Diễn tả chuỗi sự kiện lịch sử xảy ra trong quá khứ (vào những năm 1950): dùng thì quá khứ đơn 'suggested'."
+  },
+  {
+    "id": "grm_84",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Archaeologists have estimated that the pre-Columbian Native American city of Cahokia, located across the Mississippi River from modern-day St. Louis, Missouri, had as many as 20,000 inhabitants in the year 1150 ______ it one of the largest cities in North America at the time.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "CE making" },
+      { "key": "B", "text": "CE. Making" },
+      { "key": "C", "text": "CE, making" },
+      { "key": "D", "text": "CE; making" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Dùng dấu phẩy và phân từ hiện tại ', making it...' để chỉ kết quả của mệnh đề phía trước."
+  },
+  {
+    "id": "grm_85",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "In 1966, Emmett Ashford became the first African American to umpire a Major League Baseball game. His energetic gestures announcing when a player had struck out and his habit of barreling after a hit ball to see if it would land out of ______ transform the traditionally solemn umpire role into a dynamic one.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "bounds helped" },
+      { "key": "B", "text": "bounds, helping" },
+      { "key": "C", "text": "bounds that helped" },
+      { "key": "D", "text": "bounds to help" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Chủ ngữ ghép gồm 'His energetic gestures... and his habit...' cần một động từ chính đã chia thì cho câu là 'helped'."
+  },
+  {
+    "id": "grm_86",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "Based on genetic evidence, archaeologists have generally agreed that reindeer domestication began in the eleventh century CE. However, since uncovering fragments of a 2,000-year-old reindeer training harness in northern Siberia, ______ may have begun much earlier.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "researcher Robert Losey has argued that domestication" },
+      { "key": "B", "text": "researcher Robert Losey’s argument is that domestication" },
+      { "key": "C", "text": "domestication, researcher Robert Losey has argued," },
+      { "key": "D", "text": "the argument researcher Robert Losey has made is that domestication" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bổ ngữ chỉ hành động mở đầu 'since uncovering fragments...' (hành động khai quật) bắt buộc phải do người thực hiện, do đó chủ ngữ đứng ngay sau dấu phẩy phải là 'researcher Robert Losey'."
+  },
+  {
+    "id": "grm_87",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Eli Eisenberg, a genetics expert at Tel Aviv University in Israel, recently discovered that ______ have a special genetic ability called RNA editing that confers evolutionary advantages.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "cephalopods, ocean dwellers that include the squid, the octopus, and the cuttlefish" },
+      { "key": "B", "text": "cephalopods—ocean dwellers—that include the squid, the octopus, and the cuttlefish," },
+      { "key": "C", "text": "cephalopods, ocean dwellers that include: the squid, the octopus, and the cuttlefish," },
+      { "key": "D", "text": "cephalopods—ocean dwellers that include the squid, the octopus, and the cuttlefish—" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm chen ngang giải thích '—ocean dwellers that include...—' được bao bọc bởi cặp dấu gạch ngang (em dashes) đối xứng trước khi nối tới động từ 'have'."
+  },
+  {
+    "id": "grm_88",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Detroit natives Timothy Paule and Nicole Lindsey have combined their two passions, Detroit and beekeeping, to improve the health of their city's flowers and other vegetation. In 2017, the couple converted a vacant lot in the city into an ______ in the years that followed they acquired nine additional lots and established more than 35 hives.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "apiary," },
+      { "key": "B", "text": "apiary, and" },
+      { "key": "C", "text": "apiary and" },
+      { "key": "D", "text": "apiary" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Nối hai mệnh đề độc lập bằng dấu phẩy và liên từ kết hợp 'and': 'apiary, and in the years that followed...'."
+  },
+  {
+    "id": "grm_89",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Tortoises can be found in many works of literature. For example, in Tom Stoppard's 1993 play Arcadia, there is a tortoise that ______ by two names (Plautus and Lightning) and appears in both of the play's parallel timelines. As a character, the tortoise symbolizes the connection between the past and present.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "goes" },
+      { "key": "B", "text": "will have gone" },
+      { "key": "C", "text": "went" },
+      { "key": "D", "text": "had gone" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Nguyên tắc hiện tại văn học (literary present tense): khi phân tích chi tiết trong tác phẩm văn học kịch bản dùng thì hiện tại đơn, song hành với 'appears': 'goes'."
+  },
+  {
+    "id": "grm_90",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "The city of Pompeii, which was buried in ash following the eruption of Mount Vesuvius in 79 CE, continues to be studied by archaeologists. Unfortunately, as ______ attest, archaeological excavations have disrupted ash deposits at the site, causing valuable information about the eruption to be lost.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "researchers, Roberto Scandone and Christopher Kilburn," },
+      { "key": "B", "text": "researchers, Roberto Scandone and Christopher Kilburn" },
+      { "key": "C", "text": "researchers Roberto Scandone and Christopher Kilburn" },
+      { "key": "D", "text": "researchers Roberto Scandone, and Christopher Kilburn" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Tên riêng hạn định đi ngay sau danh từ chung 'researchers' không dùng bất kỳ dấu phẩy nào để ngăn cách: 'researchers Roberto Scandone and Christopher Kilburn attest'."
+  },
+  {
+    "id": "grm_91",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "Wanting to celebrate the 100th anniversary of the Alaska Purchase, ______ up with a motto that best captured the state’s unique character. The commission selected “North to the Future,” submitted by Juneau journalist Richard Peter, as its winning entry.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "a contest sponsored by the Alaska Centennial Commission would award $300 to an individual who came" },
+      { "key": "B", "text": "an award of $300 would go to an individual in a contest sponsored by the Alaska Centennial Commission for coming" },
+      { "key": "C", "text": "$300 would be awarded to an individual by the Alaska Centennial Commission in a contest for coming" },
+      { "key": "D", "text": "the Alaska Centennial Commission sponsored a contest that would award $300 to an individual who came" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Chủ thể có mong muốn kỷ niệm 'Wanting to celebrate...' là cơ quan ủy ban 'the Alaska Centennial Commission', vì vậy chủ ngữ sau dấu phẩy phải là cơ quan này."
+  },
+  {
+    "id": "grm_92",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Santa Clara Pueblo artist Roxanne Swentzell's sculpture Mud Woman Rolls On consists of five human figures made of clay and plant fiber and arranged in descending size; each figure holds the smaller one in front of it. The arrangement of the figures, according to ______ represents her idea that \"we all come from the Earth, generation after generation.\"",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Swentzell" },
+      { "key": "B", "text": "Swentzell," },
+      { "key": "C", "text": "Swentzell:" },
+      { "key": "D", "text": "Swentzell—" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cụm chen ngang ', according to Swentzell,' cần dấu phẩy đóng ở sau trước khi tiếp tục đến vị ngữ 'represents'."
+  },
+  {
+    "id": "grm_93",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Nine months before Rosa Parks made history by refusing to comply with the segregated seating policy on a Montgomery, Alabama, bus, a fifteen-year-old Montgomery girl named Claudette Colvin was arrested for the same ______ to some historians, Colvin's arrest led to Parks's action and eventually to the desegregation of Montgomery's bus system.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "offense. According" },
+      { "key": "B", "text": "offense, according" },
+      { "key": "C", "text": "offense according" },
+      { "key": "D", "text": "offense and according" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mệnh đề thứ nhất kết thúc trọn vẹn ở danh từ 'offense'. Bắt đầu câu độc lập mới bằng dấu chấm: 'offense. According to some historians,...'."
+  },
+  {
+    "id": "grm_94",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "The first computerized spreadsheet, Dan Bricklin's VisiCalc, improved financial recordkeeping not only by providing users with an easy means of adjusting data in spreadsheets but also by automatically updating all calculations that were dependent on these ______ to VisiCalc's release, changing a paper spreadsheet often required redoing the entire sheet by hand, a process that could take days.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "adjustments prior" },
+      { "key": "B", "text": "adjustments, prior" },
+      { "key": "C", "text": "adjustments. Prior" },
+      { "key": "D", "text": "adjustments and prior" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Tách 2 câu độc lập bằng dấu chấm: câu trước kết thúc ở 'these adjustments.', câu sau bắt đầu bằng 'Prior to VisiCalc's release,...'."
+  },
+  {
+    "id": "grm_95",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "It is generally true that technological change is a linear process, in which once-useful technologies are replaced by new and better ______ the reawakening of interest in the steam engine (from advocates of carbon-neutral rail travel) reminds us that ostensibly obsolete technologies may be brought back into service to address society's changing needs.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "ones, even so;" },
+      { "key": "B", "text": "ones even so," },
+      { "key": "C", "text": "ones; even so," },
+      { "key": "D", "text": "ones, even so," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nối 2 mệnh đề độc lập bằng trạng từ liên kết 'even so': dùng dấu chấm phẩy phía trước và dấu phẩy phía sau: 'ones; even so,'."
+  },
+  {
+    "id": "grm_96",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In 2017, artists Isabel and Ruben Toledo redesigned the costumes and sets for The Miami City Ballet's production of The ______ to reviewers, the Toledos' designs helped infuse the production with elements of Miami's Latin American culture.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Nutcracker according," },
+      { "key": "B", "text": "Nutcracker, according" },
+      { "key": "C", "text": "Nutcracker according" },
+      { "key": "D", "text": "Nutcracker. According" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Tác phẩm kịch kết thúc tên gọi ở 'The Nutcracker.'. Câu tiếp theo bắt đầu bằng cụm giới từ 'According to reviewers,...'."
+  },
+  {
+    "id": "grm_97",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "African American Percy Julian was a scientist and entrepreneur whose work helped people around the world to see. Named in 1999 as one of the greatest achievements by a US chemist in the past hundred years, ______ led to the first mass-produced treatment for glaucoma.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Julian synthesized the alkaloid physostigmine in 1935; it" },
+      { "key": "B", "text": "in 1935 Julian synthesized the alkaloid physostigmine, which" },
+      { "key": "C", "text": "Julian’s 1935 synthesis of the alkaloid physostigmine" },
+      { "key": "D", "text": "the alkaloid physostigmine was synthesized by Julian in 1935 and" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cụm mở đầu 'Named in 1999 as one of the greatest achievements...' (được gọi tên là một trong những thành tựu vĩ đại nhất) miêu tả công trình nghiên cứu, do đó chủ ngữ sau dấu phẩy phải là 'Julian’s 1935 synthesis of the alkaloid physostigmine'."
+  },
+  {
+    "id": "grm_98",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Seneca sculptor Marie Watt's blanket art comes in a range of shapes and sizes. In 2004, Watt sewed strips of blankets together to craft a 10-by-13-inch ______ in 2014, she arranged folded blankets into two large stacks and then cast them in bronze, creating two curving 18-foot-tall blue-bronze pillars.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "sampler later," },
+      { "key": "B", "text": "sampler;" },
+      { "key": "C", "text": "sampler," },
+      { "key": "D", "text": "sampler, later," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Nối hai mệnh đề độc lập đối xứng về mặt thời gian (năm 2004 và năm 2014) bằng dấu chấm phẩy: 'sampler; in 2014,...'."
+  },
+  {
+    "id": "grm_99",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "By analyzing the level of radioactive decay within a fossil specimen, scientists can establish the age of that fossil with a high degree of precision. When radioactive elements aren't present, scientists turn to ______ analysis of Earth's sediment layers (strata) to estimate how old a fossil is based on the age of the strata in which the fossil is found.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "stratigraphy—the" },
+      { "key": "B", "text": "stratigraphy (the" },
+      { "key": "C", "text": "stratigraphy: the" },
+      { "key": "D", "text": "stratigraphy, the" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Dấu phẩy dùng để mở đầu cụm danh từ đồng vị giải thích nghĩa cho thuật ngữ địa tầng học: 'stratigraphy, the analysis of Earth's sediment layers...'."
+  },
+  {
+    "id": "grm_100",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "A study showed that a solar park caused nearby land to cool, though the ecological impact of this temperature decrease isn't yet known. Before the park's construction, the surface temperature 30 meters outside of the park boundary was 0.1°C cooler than that of a control ______ construction, the temperature 30 meters outside of the boundary was 1.7°C cooler than that of the control area.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "area after" },
+      { "key": "B", "text": "area after," },
+      { "key": "C", "text": "area. After" },
+      { "key": "D", "text": "area, after" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Tách hai câu độc lập đối lập thời điểm (trước và sau khi xây dựng): câu đầu kết thúc ở 'control area.', câu tiếp theo bắt đầu bằng 'After construction,...'."
+  },
+  {
+    "id": "grm_101",
+    "topic": "Grammar",
+    "difficulty": "Hard",
+    "passage": "Far from being modern inventions, ______ more than 5,000 years ago.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Sumerians in ancient Mesopotamia used drinking straws" },
+      { "key": "B", "text": "drinking straws were used by Sumerians in ancient Mesopotamia" },
+      { "key": "C", "text": "the use of drinking straws by Sumerians in ancient Mesopotamia happened" },
+      { "key": "D", "text": "ancient Mesopotamia was home to Sumerians who used drinking straws" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Cụm mở đầu 'Far from being modern inventions...' miêu tả phát minh đồ vật (ống hút), vì vậy chủ ngữ đứng ngay sau dấu phẩy phải là 'drinking straws'."
+  },
+  {
+    "id": "grm_102",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Humans were long thought to have begun occupying the Peruvian settlement of Machu Picchu between 1440 and 1450 CE. However, a team led by anthropologist Dr. Richard Burger used accelerator mass spectrometry to uncover evidence that it was occupied ______ 1420 CE, according to Burger, humans were likely inhabiting the area.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "earlier. In" },
+      { "key": "B", "text": "earlier, in" },
+      { "key": "C", "text": "earlier, which in" },
+      { "key": "D", "text": "earlier in" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mệnh đề hoàn chỉnh thứ nhất kết thúc ở 'was occupied earlier.'. Câu mới bắt đầu bằng mốc thời gian: 'In 1420 CE, according to Burger,...'."
+  },
+  {
+    "id": "grm_103",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "Cheng Dang and her colleagues at the University of Washington recently ran simulations to determine the extent to which individual snow ______ affect the amount of light reflecting off a snowy surface.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "grain's physical properties'" },
+      { "key": "B", "text": "grains' physical properties" },
+      { "key": "C", "text": "grains' physical property's" },
+      { "key": "D", "text": "grains physical properties" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sở hữu cách số nhiều 'snow grains'' (của các hạt tuyết) và danh từ số nhiều 'physical properties' (các đặc tính vật lý - làm chủ ngữ cho động từ affect)."
+  },
+  {
+    "id": "grm_104",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Increasing the heat on an uncovered boiling pot of water does not increase the temperature of the water. What increases is the rate at which the water turns to ______ a pressure cooker pot, though an airtight seal traps the vapor in the pot, creating pressure that allows the temperature of the water to increase past its boiling point.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "vapor. With" },
+      { "key": "B", "text": "vapor with" },
+      { "key": "C", "text": "vapor, with" },
+      { "key": "D", "text": "vapor and with" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu thứ nhất kết thúc trọn vẹn ở 'turns to vapor.'. Câu mới bắt đầu bằng cụm giới từ so sánh: 'With a pressure cooker pot,...'."
+  },
+  {
+    "id": "grm_105",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "Materials scientist Marie-Agathe Charpagne and her colleagues believed they could improve on the multicomponent alloy NiCoCr, an equal-proportions mixture of nickel (Ni), cobalt (Co), and chromium (Cr), by replacing chromium with ruthenium ______ the alloy that resulted, NiCoRu, turned out to be an unsuitable replacement for NiCoCr.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "(Ru)" },
+      { "key": "B", "text": "(Ru) but" },
+      { "key": "C", "text": "(Ru)," },
+      { "key": "D", "text": "(Ru), but" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nối 2 mệnh đề độc lập tương phản bằng dấu phẩy và liên từ 'but': '(Ru), but the alloy that resulted...'."
+  },
+  {
+    "id": "grm_106",
+    "topic": "Grammar",
+    "difficulty": "Medium",
+    "passage": "The forty-seven geothermal springs of Arkansas’ Hot Springs National Park are sourced via a process known as natural groundwater recharge, in which rainwater percolates downward through the earth—in this case, the porous rocks of the hills around Hot ______ collect in a subterranean basin.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "Springs to" },
+      { "key": "B", "text": "Springs: to" },
+      { "key": "C", "text": "Springs—to" },
+      { "key": "D", "text": "Springs, to" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cụm chen ngang giải thích mở đầu bằng dấu gạch ngang 'earth—in this case...' cần đóng lại bằng dấu gạch ngang tương ứng: 'Springs—to collect...'."
+  },
+  {
+    "id": "grm_107",
+    "topic": "Grammar",
+    "difficulty": "Easy",
+    "passage": "In 2010, archaeologist Noel Hidalgo Tan was visiting the twelfth-century temple of Angkor Wat in Cambodia when he noticed markings of red paint on the temple ______ the help of digital imaging techniques, he discovered the markings to be part of an elaborate mural containing over 200 paintings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      { "key": "A", "text": "walls, with" },
+      { "key": "B", "text": "walls with" },
+      { "key": "C", "text": "walls so with" },
+      { "key": "D", "text": "walls. With" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu thứ nhất kết thúc trọn vẹn ở 'temple walls.'. Câu mới bắt đầu bằng 'With the help of digital imaging techniques,...'."
+  }
+]

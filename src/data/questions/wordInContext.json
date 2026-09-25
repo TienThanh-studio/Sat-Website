@@ -1,0 +1,2345 @@
+[
+  {
+    "id": "wic_01",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Dance choreographer Jawole Willa Jo Zollar aims to give people the opportunity to be _______ her creative process. For example, live performances of her dance HairStories, which debuted in 2001, featured videos of people across the United States talking about their hair and audience members sharing pictures of their interesting hairstyles.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "nervous about" },
+      { "key": "B", "text": "completed by" },
+      { "key": "C", "text": "delayed by" },
+      { "key": "D", "text": "involved in" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm 'involved in' (tham gia vào / can dự vào) phù hợp với ngữ cảnh: các buổi biểu diễn có video quay người dân nói chuyện và khán giả chia sẻ ảnh kiểu tóc của họ, thể hiện việc lôi cuốn mọi người cùng tham gia vào quá trình sáng tạo."
+  },
+  {
+    "id": "wic_02",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Cat and Plum Blossoms is an important work of Nihonga, or classical Japanese painting. Unlike Kuroda Seiki, who adopted traditional European methods such as painting with oil on canvas, Hishida Shunsō _______ traditional Japanese approaches. For instance, Hishida produced Cat and Plum Blossoms by applying color pigments to a silk scroll.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "distrusted" },
+      { "key": "B", "text": "embraced" },
+      { "key": "C", "text": "released" },
+      { "key": "D", "text": "overlooked" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'embraced' (nhiệt tình đón nhận / áp dụng). Đối lập với Kuroda chọn phong cách sơn dầu châu Âu, Hishida Shunsō lại đón nhận và trung thành với lối vẽ truyền thống của Nhật Bản (vẽ màu bột trên cuộn lụa)."
+  },
+  {
+    "id": "wic_03",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is from Yann Martel's 2001 novel Life of Pi. The narrator's family owned a zoo when he was a child. It was a huge zoo, spread over numberless acres, big enough to require a train to explore it, though it seemed to get smaller as I grew older, train included.\n©2001 by Yann Martel",
+    "question": "As used in the text, what does the word \"spread\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Hidden" },
+      { "key": "B", "text": "Discussed" },
+      { "key": "C", "text": "Extended" },
+      { "key": "D", "text": "Coated" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Từ 'spread' ở đây miêu tả diện tích sở thú trải rộng trên vô số mẫu đất, đồng nghĩa với 'Extended' (trải dài / mở rộng)."
+  },
+  {
+    "id": "wic_04",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Charles \"Teenie\" Harris was a photographer for the Pittsburgh Courier from 1936 to 1975. During his career he took over 70,000 photographs documenting everyday life in Pittsburgh's Black communities. The Carnegie Museum of Art maintains thousands of his photographs, carefully _______ them so that audiences can continue to view them well into the future.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "replacing" },
+      { "key": "B", "text": "inventing" },
+      { "key": "C", "text": "preserving" },
+      { "key": "D", "text": "counting" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'preserving' (bảo tồn / gìn giữ). Bảo tàng lưu giữ cẩn thận các bức ảnh để khán giả tương lai vẫn có thể tiếp tục chiêm ngưỡng."
+  },
+  {
+    "id": "wic_05",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Biological Jane Edgeloe and colleagues have located what is believed to be the largest individual plant in the world in the Shark Bay area of Australia. The plant is a type of seagrass called Posidonia australis, and it _______ approximately 200 square kilometers.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "acknowledges" },
+      { "key": "B", "text": "produces" },
+      { "key": "C", "text": "spans" },
+      { "key": "D", "text": "advances" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'spans' (trải rộng / bao phủ). Dùng để chỉ phạm vi không gian địa lý khoảng 200 km vuông của loài cỏ biển này."
+  },
+  {
+    "id": "wic_06",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Following the principles of community-based participatory research, tribal nations and research institutions are equal partners in health studies conducted on reservations. A collaboration between the Crow Tribe and Montana State University _______ this model: tribal citizens worked alongside scientists to design the methodology and continue to assist in data collection.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "circumvents" },
+      { "key": "B", "text": "eclipses" },
+      { "key": "C", "text": "fabricates" },
+      { "key": "D", "text": "exemplifies" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'exemplifies' (là ví dụ điển hình minh họa). Sự hợp tác giữa bộ tộc Crow và Đại học bang Montana là minh chứng tiêu biểu cho mô hình nghiên cứu bình đẳng này."
+  },
+  {
+    "id": "wic_07",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The equipment from the Apollo Moon landings (1969-1972), such as radiation detectors and temperature probes, remains there to this day, but the data from these missions were mostly inaccessible until a recent data-transfer project made them _______. This project has allowed researcher Seiichi Nagihara to make use of the information in investigating temperature changes on the Moon.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "predictable" },
+      { "key": "B", "text": "complicated" },
+      { "key": "C", "text": "representative" },
+      { "key": "D", "text": "available" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'available' (có sẵn / có thể tiếp cận được). Đối lập với trạng thái trước đây là 'mostly inaccessible' (hầu như không thể truy cập được)."
+  },
+  {
+    "id": "wic_08",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Visual artist Gabriela Aleman states that the bold colors of comics, pop art, and Latinx culture have always fascinated her. This passion for the rich history and colors of her Latinx community translates into the _______ artworks she produces.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "vivid" },
+      { "key": "B", "text": "unknown" },
+      { "key": "C", "text": "definite" },
+      { "key": "D", "text": "reserved" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'vivid' (sống động / rực rỡ sắc màu). Niềm đam mê với màu sắc đậm và rực rỡ ('bold colors') được thể hiện trong các tác phẩm sống động mà cô tạo ra."
+  },
+  {
+    "id": "wic_09",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In recommending Bao Phi's collection Sông I Sing, a librarian noted that pieces by the spoken-word poet don't lose their _______ nature when printed: the language has the same pleasant musical quality on the page as it does when performed by Phi.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "scholarly" },
+      { "key": "B", "text": "melodic" },
+      { "key": "C", "text": "jarring" },
+      { "key": "D", "text": "personal" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'melodic' (du dương / giàu nhạc tính). Câu sau giải thích ngôn từ trong thơ có tính chất âm nhạc êm dịu ('pleasant musical quality')."
+  },
+  {
+    "id": "wic_10",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The Appalachian Trail is a hiking path in the eastern United States. Much of the 2,000 mile trail passes through wilderness areas. In order to _______ those areas, the United States Congress passed the National Trails System Act in 1968, ensuring that the trail would not be sold or commercially developed.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "borrow" },
+      { "key": "B", "text": "postpone" },
+      { "key": "C", "text": "protect" },
+      { "key": "D", "text": "decorate" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'protect' (bảo vệ). Đạo luật được thông qua nhằm bảo vệ khu vực hoang dã khỏi việc bị bán hay phát triển thương mại."
+  },
+  {
+    "id": "wic_11",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is adapted from John Matheus's 1925 short story \"Fog.\" The fog extended its tentacles over city and river, gradually obliterating traces of familiar landscapes. At five-thirty the old Panhandle bridge, supported by massive sandstone pillars, stalwart, as when erected fifty years before to serve a generation now passed behind the portals of life, had become a spectral outline against the sky.",
+    "question": "As used in the text, what does the word \"supported\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Held up" },
+      { "key": "B", "text": "Encouraged" },
+      { "key": "C", "text": "Improved on" },
+      { "key": "D", "text": "Defended" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'supported' trong ngữ cảnh chiếc cầu được nâng đỡ bởi các trụ đá sa thạch đồng nghĩa với 'Held up' (chống đỡ / nâng đỡ)."
+  },
+  {
+    "id": "wic_12",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is from Jhumpa Lahiri's 2003 novel The Namesake. Gogol, a child, is at a beach in Massachusetts with his father. On the beach Gogol collects rocks, digs tunnels in the sand. He and his father wander barefoot, their pant legs rolled halfway up their calves.\n©2003 by Jhumpa Lahiri",
+    "question": "As used in the text, what does the word \"collects\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Increases" },
+      { "key": "B", "text": "Makes" },
+      { "key": "C", "text": "Ignores" },
+      { "key": "D", "text": "Gathers" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'collects' (nhặt / thu thập đá trên bãi biển) đồng nghĩa với 'Gathers' (gom góp / thu nhặt)."
+  },
+  {
+    "id": "wic_13",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Osage Nation citizen Randy Tinker-Smith produced and directed the ballet Wahzhazhe, which vividly chronicles Osage history and culture. Telling Osage stories through ballet is _______ choice because two of the foremost ballet dancers of the twentieth century were Osage: sisters Maria and Marjorie Tallchief.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "a germane" },
+      { "key": "B", "text": "a determined" },
+      { "key": "C", "text": "an haphazard" },
+      { "key": "D", "text": "an unpredictable" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'a germane' (thích hợp / có liên quan mật thiết). Kể chuyện bộ tộc Osage qua ba lê là lựa chọn rất thích hợp và có ý nghĩa vì hai vũ công ba lê hàng đầu thế kỷ 20 chính là người Osage."
+  },
+  {
+    "id": "wic_14",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "According to statistician Nassim Nicholas Taleb, the best way to predict the amount of time a nonperishable entity (such as a building or a technology) will continue to exist is to examine how long it has survived so far. In this view, an item's age is the strongest _______ how much longer it will last.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "uncertainty about" },
+      { "key": "B", "text": "indicator of" },
+      { "key": "C", "text": "motivation for" },
+      { "key": "D", "text": "criticism of" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'indicator of' (chỉ số / dấu hiệu dự báo). Tuổi thọ hiện tại của một vật thể là dấu hiệu dự báo mạnh mẽ nhất cho việc nó còn tồn tại được bao lâu nữa."
+  },
+  {
+    "id": "wic_15",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "In the mid-nineteenth century, some abolitionist newspapers _______ westward migration in the United States; by printing a letter that described the easy fortunes and high salaries miners could make in California during the Gold Rush, Frederick Douglass's newspaper North Star was one such publication that inspired readers to relocate.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "stimulated" },
+      { "key": "B", "text": "assigned" },
+      { "key": "C", "text": "opposed" },
+      { "key": "D", "text": "disregarded" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'stimulated' (kích thích / thúc đẩy). Bằng việc đăng thư ca ngợi cơ hội đổi đời, tờ báo đã truyền cảm hứng và thúc đẩy làn sóng di cư về phía Tây."
+  },
+  {
+    "id": "wic_16",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is adapted from Mary Seacole's 1857 autobiography Wonderful Adventures of Mrs. Seacole in Many Lands. That journey across the Isthmus [of Panama], insignificant in distance as it was, was by no means an easy one. It seemed as if nature had determined to throw every conceivable obstacle in the way of those who should seek to join the two great oceans of the world.",
+    "question": "As used in the text, what does the word \"conceivable\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Obvious" },
+      { "key": "B", "text": "Imaginable" },
+      { "key": "C", "text": "Straightforward" },
+      { "key": "D", "text": "Uninterrupted" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'conceivable' (mọi trở ngại có thể hình dung/nghĩ ra được) đồng nghĩa với 'Imaginable'."
+  },
+  {
+    "id": "wic_17",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "US traffic signals didn't always contain the familiar three lights (red, yellow, and green). Traffic lights _______ only red and green lights until the three-light traffic signal was developed in the 1920s.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "avoided" },
+      { "key": "B", "text": "featured" },
+      { "key": "C", "text": "appreciated" },
+      { "key": "D", "text": "disregarded" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'featured' (có đặc điểm / bao gồm). Trước thập niên 1920, đèn giao thông chỉ có hai màu đỏ và xanh."
+  },
+  {
+    "id": "wic_18",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The National Heritage Fellowship was created to publicly _______ exceptional folk and traditional artists in the United States. In 2015, the fellowship was given to the circus aerialist (mid-air acrobat) Dolly Jacobs to celebrate her lifetime contributions to the arts.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "startle" },
+      { "key": "B", "text": "recognize" },
+      { "key": "C", "text": "familiarize" },
+      { "key": "D", "text": "convey" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'recognize' (ghi nhận / vinh danh). Học bổng này được lập ra để vinh danh công khai những nghệ sĩ dân gian xuất chúng."
+  },
+  {
+    "id": "wic_19",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Scientists previously thought that all electric eels belong to a single species, but a team of researchers led by zoologist C. David de Santana proved this idea wrong by _______ that there are in fact three distinct species of electric eels.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "pretending" },
+      { "key": "B", "text": "complaining" },
+      { "key": "C", "text": "requiring" },
+      { "key": "D", "text": "demonstrating" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'demonstrating' (chứng minh / chỉ ra). Các nhà nghiên cứu chứng minh quan niệm cũ là sai bằng việc chỉ ra thực tế có 3 loài lươn điện khác nhau."
+  },
+  {
+    "id": "wic_20",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is adapted from Mohsin Hamid's 2017 novel Exit West. Saeed lives with his mother and father. On cloudless nights after a daytime rain, Saeed's father would sometimes bring out the telescope, and the family would sip green tea on their balcony, enjoying a breeze, and take turns to look up at objects whose light, often, had been emitted before any of these three viewers had been born—light from other centuries, only now reaching Earth.\n©2017 by Mohsin Hamid",
+    "question": "As used in the text, what does the word \"reaching\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Arriving at" },
+      { "key": "B", "text": "Consulting with" },
+      { "key": "C", "text": "Running to" },
+      { "key": "D", "text": "Clinging to" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'reaching Earth' (ánh sáng từ các thế kỷ trước giờ mới tới được Trái Đất) đồng nghĩa với 'Arriving at' (đến nơi / cập bến)."
+  },
+  {
+    "id": "wic_21",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The Cambrian explosion gets its name from the sudden appearance and rapid diversification of animal remains in the fossil record about 541 million years ago, during the Cambrian period. Some scientists argue that this _______ change in the fossil record might be because of a shift in many organisms to body types that were more likely to be preserved.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "catastrophic" },
+      { "key": "B", "text": "elusive" },
+      { "key": "C", "text": "abrupt" },
+      { "key": "D", "text": "imminent" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'abrupt' (đột ngột / bất ngờ). Đồng nghĩa với cụm 'sudden appearance' (sự xuất hiện đột ngột) đã nêu ở câu trước."
+  },
+  {
+    "id": "wic_22",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "British painter Peter Edwards has a _______ painting portraits of notable figures from a variety of different fields. These characteristic works include his esteemed portraits of poet Wendy Cope and soccer player and coach Ryan Giggs.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "complaint about" },
+      { "key": "B", "text": "reputation for" },
+      { "key": "C", "text": "question about" },
+      { "key": "D", "text": "requirement for" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'reputation for' (nổi tiếng về / có tiếng tăm về). Họa sĩ nổi tiếng với việc vẽ chân dung các nhân vật lừng danh."
+  },
+  {
+    "id": "wic_23",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is from Booth Tarkington's 1921 novel Alice Adams. Mrs. Adams had always been fond of vases, she said, and every year her husband's Christmas present to her was a vase of one sort or another—whatever the clerk showed him, marked at about twelve or fourteen dollars.",
+    "question": "As used in the text, what does the word \"marked\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Staged" },
+      { "key": "B", "text": "Priced" },
+      { "key": "C", "text": "Stained" },
+      { "key": "D", "text": "Watched" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'marked at about twelve or fourteen dollars' (được dán giá khoảng 12 hoặc 14 đô la) đồng nghĩa với 'Priced' (định giá / niêm yết giá)."
+  },
+  {
+    "id": "wic_24",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "As a young photographer in the 1950s, William Klein _______ the conventions of photography by creating images that were high contrast and included blurred and distorted elements—features generally seen as flaws. So unorthodox was Klein's work that he had difficulty finding a publisher for his now-iconic 1956 photo book Life is Good & Good for You in New York.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "reviewed" },
+      { "key": "B", "text": "defied" },
+      { "key": "C", "text": "respected" },
+      { "key": "D", "text": "prevented" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'defied' (bất chấp / phá vỡ quy ước). Klein đã thách thức các chuẩn mực thông thường ('unorthodox') bằng cách đưa vào những yếu tố mờ nhòe vốn bị coi là lỗi."
+  },
+  {
+    "id": "wic_25",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The following text is adapted from Nathaniel Hawthorne's 1837 story \"Dr. Heidegger's Experiment.\" The main character, a physician, is experimenting with rehydrating a dried flower.\nAt first [the rose] lay lightly on the surface of the fluid, appearing to imbibe none of its moisture. Soon, however, a singular change began to be visible. The crushed and dried petals stirred and assumed a deepening tinge of crimson, as if the flower were reviving from a deathlike slumber.",
+    "question": "As used in the text, what does the phrase \"a singular\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "A lonely" },
+      { "key": "B", "text": "A disagreeable" },
+      { "key": "C", "text": "An acceptable" },
+      { "key": "D", "text": "An extraordinary" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'a singular change' (sự biến chuyển kỳ lạ / phi thường khi bông hoa héo úa như sống lại) đồng nghĩa với 'An extraordinary' (phi thường / kỳ diệu)."
+  }
+,
+  {
+    "id": "wic_26",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Drivers who strongly believe that the toll they must pay to use the Lewis and Clark Bridge, which spans the Ohio River to connect Indiana and Kentucky, is currently too high are unlikely to be _______ a proposal to increase the toll. Advocates for a higher toll are likely to have more success if they instead direct their arguments toward a more persuadable segment of the population.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "receptive to" },
+      { "key": "B", "text": "apprised of" },
+      { "key": "C", "text": "incensed by" },
+      { "key": "D", "text": "cited in" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'receptive to' (cởi mở đón nhận / tiếp thu). Những tài xế đang thấy mức phí hiện tại quá cao thì khó lòng mà cởi mở đón nhận đề xuất tăng phí."
+  },
+  {
+    "id": "wic_27",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "According to a team of neuroeconomists from the University of Zurich, ease of decision making may be linked to communication between two brain regions, the prefrontal cortex and the parietal cortex. Individuals tend to be more decisive if the information flow between the regions is intensified, whereas they make choices more slowly when information flow is _______.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "reduced" },
+      { "key": "B", "text": "evaluated" },
+      { "key": "C", "text": "determined" },
+      { "key": "D", "text": "acquired" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'reduced' (bị giảm bớt). Ngược nghĩa với 'intensified' (được tăng cường mạnh mẽ) ở vế trước."
+  },
+  {
+    "id": "wic_28",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "At the turn of the twentieth century, Black residents of Richmond, Virginia, had few formal options for banking and other financial services. To _______ this situation, Maggie Lena Walker chartered the St. Luke Penny Savings Bank in 1903. The bank went on to provide home loans and savings opportunities to thousands of Black families over the following decades.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "prolong" },
+      { "key": "B", "text": "rectify" },
+      { "key": "C", "text": "retain" },
+      { "key": "D", "text": "highlight" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'rectify' (khắc phục / chấn chỉnh). Để khắc phục tình trạng thiếu hụt dịch vụ ngân hàng cho người da đen, bà đã thành lập ngân hàng tiết kiệm."
+  },
+  {
+    "id": "wic_29",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "During a 2014 archaeological dig in Spain, Vicente Lull and his team uncovered the skeleton of a woman from El Algar, an Early Bronze Age society, buried with valuable objects signaling a high position of power. This finding may persuade researchers who have argued that Bronze Age societies were ruled by men to _______ that women may have also held leadership roles.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "waive" },
+      { "key": "B", "text": "concede" },
+      { "key": "C", "text": "refute" },
+      { "key": "D", "text": "require" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'concede' (thừa nhận). Bằng chứng ngôi mộ người phụ nữ quyền lực buộc các nhà nghiên cứu vốn nghĩ chỉ nam giới thống trị phải thừa nhận rằng phụ nữ cũng từng nắm quyền lãnh đạo."
+  },
+  {
+    "id": "wic_30",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The following text is adapted from Nathaniel Hawthorne's 1844 short story \"Drowne's Wooden Image.\" Drowne, a young man, is carving a wooden figure to decorate the front of a ship.\nDay by day, the work assumed greater precision, and settled its irregular and misty outline into distincter grace and beauty. The general design was now obvious to the common eye.",
+    "question": "As used in the text, what does the word \"assumed\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Acquired" },
+      { "key": "B", "text": "Acknowledged" },
+      { "key": "C", "text": "Imitated" },
+      { "key": "D", "text": "Speculated" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'assumed greater precision' (bức tượng dần đạt được / có được độ chính xác cao hơn) đồng nghĩa với 'Acquired' (tiếp nhận / có được phẩm chất)."
+  },
+  {
+    "id": "wic_31",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Recent measurements of the mass of the W boson (a subatomic particle) were notable not only for the mere fact that the particle's mass differed from expectations but for the _______ of that difference: the measured mass of the W boson was seven standard deviations higher than predicted by the standard model of particle physics.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "cause" },
+      { "key": "B", "text": "existence" },
+      { "key": "C", "text": "implication" },
+      { "key": "D", "text": "scale" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'scale' (quy mô / mức độ). Vế sau chỉ rõ độ lệch lên tới tận 'bảy độ lệch chuẩn' (seven standard deviations), nhấn mạnh mức độ/quy mô to lớn của sự chênh lệch."
+  },
+  {
+    "id": "wic_32",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "People sometimes dismiss a claim if it comes from a source they regard as self-interested, but from a strictly logical perspective, the source of a claim is _______: it has no direct bearing on whether the claim is true.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "indistinct" },
+      { "key": "B", "text": "irrelevant" },
+      { "key": "C", "text": "indisputable" },
+      { "key": "D", "text": "implicit" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'irrelevant' (không liên quan / không quan trọng). Câu sau giải thích rõ nguồn phát ngôn không có mối liên hệ trực tiếp nào ('no direct bearing') tới tính đúng sai của khẳng định."
+  },
+  {
+    "id": "wic_33",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Although science fiction was dominated mostly by white male authors when Octavia Butler, a Black woman, began writing, she did not view the genre as _______: Butler broke into the field with the publication of several short stories and her 1976 novel Patternmaster, and she later became the first science fiction writer to win a prestigious MacArthur Fellowship.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "legitimate" },
+      { "key": "B", "text": "impenetrable" },
+      { "key": "C", "text": "compelling" },
+      { "key": "D", "text": "indecipherable" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'impenetrable' (không thể thâm nhập / bất khả xâm phạm). Dù thể loại này do nam giới da trắng thống trị, bà không coi đó là pháo đài bất khả thâm nhập mà đã đột phá ('broke into the field') thành công."
+  },
+  {
+    "id": "wic_34",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Cuttlefish appear to be surprisingly _______ at exercising self-control: in a 2021 study conducted by behavioral ecologist Alexandra Schnell, these cephalopods routinely demonstrated restraint by delaying gratification, waiting for a favorite treat instead of instantly devouring a readily available meal.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "awkward" },
+      { "key": "B", "text": "imaginative" },
+      { "key": "C", "text": "manageable" },
+      { "key": "D", "text": "competent" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'competent at' (thành thạo / có năng lực tốt). Mực nang thể hiện năng lực tự kiềm chế tốt khi biết kiên nhẫn chờ món ăn ưa thích thay vì ăn ngay món có sẵn."
+  },
+  {
+    "id": "wic_35",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The work of molecular biophysicist Enrique M. De La Cruz is known for _______ traditional boundaries between academic disciplines. The university laboratory that De La Cruz runs includes engineers, biologists, chemists, and physicists, and the research the lab produces makes use of insights and techniques from all those fields.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "epitomizing" },
+      { "key": "B", "text": "transcending" },
+      { "key": "C", "text": "anticipating" },
+      { "key": "D", "text": "reinforcing" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'transcending' (vượt qua / phá vỡ giới hạn). Phòng lab của ông quy tụ các kỹ sư, nhà sinh học, hóa học và vật lý, cho thấy công trình của ông vượt lên trên các ranh giới ngành truyền thống."
+  },
+  {
+    "id": "wic_36",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The fossil remains of the individual known as Oase 1, discovered in Romania in 2002, can help paleoanthropologists not only _______ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally, revealing important details about the time in which Oase 1 lived.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "exploit" },
+      { "key": "B", "text": "discern" },
+      { "key": "C", "text": "prioritize" },
+      { "key": "D", "text": "yield" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'discern' (nhận biết / làm rõ). Hóa thạch giúp các nhà cổ nhân chủng học nhận biết và phân biệt rõ các bước trong quá trình tiến hóa."
+  },
+  {
+    "id": "wic_37",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Stars form in cloudlike swirls of gas and dust that cannot be touched, but astrophysicist Nia Imara believes these formations need not remain completely _______ to researchers: she uses simulation data and sophisticated 3D printers to produce interactive models of these stellar nurseries.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "repeatable" },
+      { "key": "B", "text": "explicable" },
+      { "key": "C", "text": "regrettable" },
+      { "key": "D", "text": "intangible" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'intangible' (vô hình / không thể chạm tới). Đối lập với mệnh đề đầu 'cannot be touched', việc in 3D tạo ra mô hình tương tác giúp chúng không còn hoàn toàn vô hình đối với người nghiên cứu."
+  },
+  {
+    "id": "wic_38",
+    "topic": "Word in context",
+    "difficulty": "Hard",
+    "passage": "In Nature Poem (2017), Kumeyaay poet Tommy Pico portrays his _______ the natural world by honoring the centrality of nature within his tribe's traditional beliefs while simultaneously expressing his distaste for being in wilderness settings himself.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "responsiveness to" },
+      { "key": "B", "text": "ambivalence toward" },
+      { "key": "C", "text": "renunciation of" },
+      { "key": "D", "text": "mastery over" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'ambivalence toward' (thái độ mâu thuẫn hai chiều). Nhà thơ vừa tôn vinh thiên nhiên theo tín ngưỡng bộ tộc, nhưng đồng thời bản thân lại thấy khó chịu khi phải sống ở chốn hoang dã."
+  },
+  {
+    "id": "wic_39",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The following text is from F. Scott Fitzgerald's 1925 novel The Great Gatsby.\n[Jay Gatsby] was balancing himself on the dashboard of his car with that resourcefulness of movement that is so peculiarly American—that comes, I suppose, with the absence of lifting work in youth and, even more, with the formless grace of our nervous, sporadic games. This quality was continually breaking through his punctilious manner in the shape of restlessness.",
+    "question": "As used in the text, what does the word \"quality\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Standard" },
+      { "key": "B", "text": "Prestige" },
+      { "key": "C", "text": "Characteristic" },
+      { "key": "D", "text": "Accomplishment" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'This quality' đề cập đến nét cử động nhanh nhẹn đặc trưng của người Mỹ đã miêu tả ở câu trước, đồng nghĩa với 'Characteristic' (đặc tính / nét đặc trưng)."
+  },
+  {
+    "id": "wic_40",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The following text is adapted from Upton Sinclair's 1906 novel The Jungle. Marija is helping to manage her sister's wedding.\nIt was [Marija's] task to see that all things went in due form, and after the best home traditions; and, flying wildly hither and thither, bowling every one out of the way, and scolding and exhorting all day with her tremendous voice, Marija was too eager to see that others conformed to the proprieties to consider them herself.",
+    "question": "As used in the text, what does the word \"consider\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Take into account and follow" },
+      { "key": "B", "text": "Admire steadily and praise" },
+      { "key": "C", "text": "Come to a decision about" },
+      { "key": "D", "text": "Have an opinion on" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'consider them herself' (Marija quá mải mê bắt người khác tuân thủ các phép tắc chuẩn mực đến mức chính cô cũng chẳng bận tâm để ý tuân theo chúng) đồng nghĩa với 'Take into account and follow'."
+  },
+  {
+    "id": "wic_41",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "To develop a method for measuring snow depth with laser beams, NASA physicist Yongxiang Hu relied on _______: identifying broad similarities between two seemingly different phenomena, Hu used information about how ants move inside colonies to calculate how the particles of light that make up laser beams travel through snow.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "a collaboration" },
+      { "key": "B", "text": "an accessory" },
+      { "key": "C", "text": "a contradiction" },
+      { "key": "D", "text": "an analogy" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'an analogy' (sự tương đồng / phép loại suy). Câu sau giải thích việc tìm ra những điểm tương đồng giữa hai hiện tượng hoàn toàn khác nhau (đàn kiến di chuyển và hạt ánh sáng xuyên qua tuyết)."
+  },
+  {
+    "id": "wic_42",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The way in which individual elements are balanced within a photographic image tends to affect how viewers perceive it: symmetry tends to give the elements equal importance, asymmetry emphasizes differences, and radial balance (organizing the elements around a central point) emphasizes the center over the periphery. What a photograph conveys is therefore largely _______ how it is balanced.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "inhibited by" },
+      { "key": "B", "text": "contingent on" },
+      { "key": "C", "text": "obligated to" },
+      { "key": "D", "text": "reserved for" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'contingent on' (phụ thuộc vào). Ý nghĩa truyền tải của bức ảnh phụ thuộc phần lớn vào cách thức sắp xếp và cân bằng các yếu tố bên trong nó."
+  },
+  {
+    "id": "wic_43",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Economist Jingting Fan argues that the effects of international trade may display spatial variation at sub-national levels. For instance, imported goods may reduce expenses for a country's average consumer, but for consumers living far from ports, high intranational transport costs could _______ the price advantages associated with imports.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "nullify" },
+      { "key": "B", "text": "denigrate" },
+      { "key": "C", "text": "underestimate" },
+      { "key": "D", "text": "misconstrue" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'nullify' (triệt tiêu / làm vô hiệu hóa). Chi phí vận chuyển nội địa quá đắt đỏ có thể triệt tiêu hoàn toàn lợi thế giá rẻ của hàng hóa nhập khẩu."
+  },
+  {
+    "id": "wic_44",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "A journalist and well-respected art critic of nineteenth-century Britain, Lady Elizabeth Rigby Eastlake did not hesitate to publish reviews that went against popular opinion. One of her most divisive works was an essay questioning the idea of photography as an emerging medium for fine art: in the essay, Eastlake _______ that the value of photographs was informational rather than creative.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "exposed" },
+      { "key": "B", "text": "asserted" },
+      { "key": "C", "text": "discovered" },
+      { "key": "D", "text": "doubted" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'asserted' (khẳng định / quả quyết). Trong bài luận của mình, bà khẳng định rằng giá trị của nhiếp ảnh mang tính thông tin hơn là tính sáng tạo nghệ thuật."
+  },
+  {
+    "id": "wic_45",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The Illustrated History of San Mateo County, published in 1878, features several illustrations by Grafton Tyler Brown showing the California county's farms, residences, and businesses. It was _______ for a business to be featured, since being included suggested that a business was an important part of the community.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "risky" },
+      { "key": "B", "text": "misleading" },
+      { "key": "C", "text": "advantageous" },
+      { "key": "D", "text": "unremarkable" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'advantageous' (có lợi / thuận lợi). Việc được xuất hiện trong cuốn sách lịch sử là điều rất có lợi cho doanh nghiệp vì nó chứng minh doanh nghiệp có vị thế quan trọng trong cộng đồng."
+  },
+  {
+    "id": "wic_46",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Eighteenth-century historian Edward Gibbon thought the only character defect of the Roman emperor Marcus Aurelius was his mild temperament: though the emperor was widely considered virtuous, his overly permissive nature led him to _______ the vices of those who surrounded him.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "indulge" },
+      { "key": "B", "text": "despise" },
+      { "key": "C", "text": "moderate" },
+      { "key": "D", "text": "criticize" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'indulge' (nuông chiều / dung túng). Bản tính quá dễ dãi ('overly permissive') khiến hoàng đế dung túng cho những thói hư tật xấu của cận thần xung quanh."
+  },
+  {
+    "id": "wic_47",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Stephen Hannock's luminous landscape paintings are appealing to viewers but have elicited little commentary from contemporary critics, a phenomenon that may be due to the very fact that the paintings seem so _______: Many critics focus their attention on art that is cryptic or overtly challenging.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "innovative" },
+      { "key": "B", "text": "subversive" },
+      { "key": "C", "text": "profound" },
+      { "key": "D", "text": "accessible" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'accessible' (dễ cảm nhận / gần gũi). Đối lập với nghệ thuật bí hiểm hoặc thách đố ('cryptic or overtly challenging'), tranh của ông quá dễ hiểu và dễ tiếp cận nên ít được giới phê bình mổ xẻ."
+  },
+  {
+    "id": "wic_48",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Bicycle sharing systems allow users to rent a bicycle at one location within a city and return it to any other designated location in that city, which can cause serious problems of bicycle supply and user demand within the city's system. Tohru Ikeguchi uses open-source data and statistical modeling to identify when a high number of users making one-way trips is likely to leave some locations within the system _______ bicycles and other areas with insufficient supply.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "susceptible to" },
+      { "key": "B", "text": "contingent on" },
+      { "key": "C", "text": "saturated with" },
+      { "key": "D", "text": "depleted of" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'saturated with' (quá tải / tràn ngập). Đối lập với 'insufficient supply' (thiếu xe) ở vế sau, một số trạm sẽ rơi vào tình trạng bị thừa ứ đọng quá nhiều xe."
+  },
+  {
+    "id": "wic_49",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In the Indigenous intercropping system known as the Three Sisters, maize, squash, and beans form an _______ web of relations: maize provides the structure on which the bean vines grow; the squash vines cover the soil, discouraging competition from weeds; and the beans aid their two \"sisters\" by enriching the soil with essential nitrogen.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "indecipherable" },
+      { "key": "B", "text": "ornamental" },
+      { "key": "C", "text": "obscure" },
+      { "key": "D", "text": "intricate" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'intricate' (chằng chịt / phức tạp tinh vi). Ba loại cây nương tựa lẫn nhau tạo nên một mạng lưới quan hệ hỗ trợ tinh vi, gắn kết chặt chẽ."
+  },
+  {
+    "id": "wic_50",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Disproving the common misconception of Native art as _______, the painters whose work appears in the collection at the National Museum of the American Indian employ a range of styles. There are artists working in the traditional arts of their specific tribal communities, artists working in European modernist or American abstract expressionist art traditions, and artists blending various traditions into something wholly new.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "uncontroversial" },
+      { "key": "B", "text": "individualistic" },
+      { "key": "C", "text": "theoretical" },
+      { "key": "D", "text": "homogeneous" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'homogeneous' (đơn điệu / đồng nhất một màu). Bác bỏ quan niệm sai lầm rằng nghệ thuật bản địa là một màu, triển lãm cho thấy một dải phong cách phong phú đa dạng ('a range of styles')."
+  },
+  {
+    "id": "wic_51",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The recently observed gamma ray burst GRB 230307A lasted for 200 seconds, _______ for a burst generated by the merger of neutron stars. Bursts caused by neutron mergers typically last fewer than 2 seconds.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "a coincidence" },
+      { "key": "B", "text": "a reprieve" },
+      { "key": "C", "text": "an incident" },
+      { "key": "D", "text": "an oddity" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'an oddity' (điều kỳ lạ / dị thường). Các vụ nổ sáp nhập sao neutron thông thường chỉ kéo dài dưới 2 giây, do đó vụ nổ kéo dài tận 200 giây là một hiện tượng vô cùng khác thường."
+  },
+  {
+    "id": "wic_52",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The discoverers of the minor planet 1227 Geranium named it after the plant genus that includes cranesbills. Most of the recently discovered minor planets, however, are given only an identification number, largely due to there being over 500,000 such bodies known at present, which makes the already challenging task of finding a unique name for each nearly _______.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "insurmountable" },
+      { "key": "B", "text": "feasible" },
+      { "key": "C", "text": "substantial" },
+      { "key": "D", "text": "unnecessary" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'insurmountable' (không thể vượt qua / bất khả thi). Việc có hơn 500.000 tiểu hành tinh khiến nhiệm vụ đặt tên riêng độc nhất cho từng thiên thể trở nên gần như bất khả thi."
+  },
+  {
+    "id": "wic_53",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In 2008 a complete set of ancient pessoi (glass game pieces) was uncovered from beneath a paving stone in modern-day Israel. Due to their small size, pessoi were easily misplaced, making a whole set a rare find. This has led some experts to suggest that the set may have been buried intentionally; however, without clear evidence, archaeologists are left to _______ what happened.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "speculate about" },
+      { "key": "B", "text": "dismiss" },
+      { "key": "C", "text": "expand on" },
+      { "key": "D", "text": "catalog" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'speculate about' (suy đoán / phỏng đoán). Vì không có bằng chứng rõ ràng ('without clear evidence'), các nhà khảo cổ chỉ có thể đưa ra suy đoán về những gì đã xảy ra."
+  },
+  {
+    "id": "wic_54",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The percentage of US forest land that a 2023 federal report identified as being either mature or old growth exceeds other recent estimates. Given how little _______ there is among scientists regarding the scope of these categories, this discrepancy shouldn't be surprising: forest researchers regularly dispute one another's classifications.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "deliberation" },
+      { "key": "B", "text": "vigilance" },
+      { "key": "C", "text": "interest" },
+      { "key": "D", "text": "consensus" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'consensus' (sự đồng thuận / nhất trí). Câu sau nêu rõ các nhà nghiên cứu thường xuyên tranh cãi về các phân loại của nhau ('dispute one another's classifications'), chứng tỏ giữa họ có rất ít sự đồng thuận."
+  },
+  {
+    "id": "wic_55",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Some researchers believe that the genes that enable groundhogs and certain other mammals to hibernate through the winter by slowing their breathing and heart rates and lowering their body temperature may be _______ in humans: present yet having essentially no effect on our bodily processes.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "decisive" },
+      { "key": "B", "text": "lacking" },
+      { "key": "C", "text": "variable" },
+      { "key": "D", "text": "dormant" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'dormant' (ngủ yên / bất hoạt). Định nghĩa ở sau dấu hai chấm giải thích rõ: tồn tại nhưng không phát huy tác dụng ('present yet having essentially no effect')."
+  },
+  {
+    "id": "wic_56",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Handedness, a preferential use of either the right or left hand, typically is easy to observe in humans. Because this trait is present but less _______ in many other animals, animal-behavior researchers often employ tasks specially designed to reveal individual animals' preferences for a certain hand or paw.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "recognizable" },
+      { "key": "B", "text": "intriguing" },
+      { "key": "C", "text": "significant" },
+      { "key": "D", "text": "useful" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'recognizable' (dễ nhận biết). Đối lập với việc 'easy to observe' (dễ quan sát) ở người, đặc điểm thuận tay/chân ở các loài động vật khác khó nhận biết hơn nhiều."
+  },
+  {
+    "id": "wic_57",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The following text is adapted from Zora Neale Hurston's 1921 short story \"John Redding Goes to Sea.\" John wants to travel far beyond the village where he lives near his mother, Matty.\n[John] had on several occasions attempted to reconcile his mother to the notion, but found it a difficult task. Matty always took refuge in self-pity and tears. Her son's desires were incomprehensible to her, that was all.",
+    "question": "As used in the text, what does the phrase \"reconcile his mother to\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Get his mother to accept" },
+      { "key": "B", "text": "Get his mother to apologize for" },
+      { "key": "C", "text": "Get his mother to match" },
+      { "key": "D", "text": "Get his mother to reunite with" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'reconcile someone to an idea' (thuyết phục ai đó chấp nhận một ý tưởng/sự thật) đồng nghĩa với 'Get his mother to accept'."
+  },
+  {
+    "id": "wic_58",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Like the 1945 play it reimagines—Federico García Lorca's The House of Bernarda Alba—Marcus Gardley's 2014 play The House That Will Not Stand prominently features women. In both plays, the all-female cast _______ an array of female characters, including a strong mother and several daughters dealing with individual struggles.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "engulfs" },
+      { "key": "B", "text": "encourages" },
+      { "key": "C", "text": "comprises" },
+      { "key": "D", "text": "provokes" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'comprises' (bao gồm / gồm có). Dàn diễn viên toàn nữ bao gồm nhiều tuyến nhân vật nữ khác nhau."
+  },
+  {
+    "id": "wic_59",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The following text is adapted from Karel Čapek's 1920 play R.U.R. (Rossum's Universal Robots), translated by Paul Selver and Nigel Playfair in 1923. Fabry and Busman are telling Miss Glory why their company manufactures robots.\nFABRY: One Robot can replace two and a half workmen. The human machine, Miss Glory, was terribly imperfect. It had to be removed sooner or later.\nBUSMAN: It was too expensive.\nFABRY: It was not effective. It no longer answers the requirements of modern engineering. Nature has no idea of keeping pace with modern labor.",
+    "question": "As used in the text, what does the word \"answers\" most nearly mean?",
+    "options": [
+      { "key": "A", "text": "Explains" },
+      { "key": "B", "text": "Rebuts" },
+      { "key": "C", "text": "Defends" },
+      { "key": "D", "text": "Fulfills" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'answers the requirements' (đáp ứng / thỏa mãn các yêu cầu của kỹ thuật hiện đại) đồng nghĩa với 'Fulfills'."
+  },
+  {
+    "id": "wic_60",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Business researcher Melanie Brucks and colleagues found that remote video conference meetings may be less conducive to brainstorming than in-person meetings are. The researchers suspect that video meeting participants are focused on staring at the speaker on the screen and don't allow their eyes or mind to wander as much, which may ultimately _______ creativity.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "recommend" },
+      { "key": "B", "text": "criticize" },
+      { "key": "C", "text": "impede" },
+      { "key": "D", "text": "construct" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'impede' (cản trở / kìm hãm). Việc không để tâm trí bay bổng khi họp trực tuyến rốt cuộc có thể kìm hãm khả năng sáng tạo."
+  }
+,
+  {
+    "id": "wic_61",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Set in a world where science fiction tropes exist as everyday realities, Charles Yu's 2010 novel How to Live Safely in a Science Fictional Universe traces a time traveler's quest to find his father. Because the journey at the novel's center is so _______, with the protagonist ricocheting chaotically across time, the reader often wonders whether the pair will ever be reunited.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "haphazard" },
+      { "key": "B", "text": "premeditated" },
+      { "key": "C", "text": "inspirational" },
+      { "key": "D", "text": "fruitless" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'haphazard' (tùy tiện / hỗn loạn / không có trật tự). Cụm 'ricocheting chaotically across time' (va đập hỗn loạn xuyên thời gian) làm rõ tính chất vô định, bừa bãi của cuộc hành trình."
+  },
+  {
+    "id": "wic_62",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Mineralogical differences are detectable in samples collected from two locations on the near-Earth asteroid Ryugu, but such differences may not indicate substantial compositional variations in the asteroid. Cosmochemist Kazuhide Nagashima and colleagues note that at the small scale of the samples, the distribution of minerals is unlikely to be _______.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "neglected" },
+      { "key": "B", "text": "redundant" },
+      { "key": "C", "text": "ongoing" },
+      { "key": "D", "text": "uniform" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'uniform' (đồng nhất / phân bổ đều). Ở quy mô mẫu vật siêu nhỏ, sự phân bổ khoáng chất khó lòng đồng đều tuyệt đối trên toàn bộ tiểu hành tinh."
+  },
+  {
+    "id": "wic_63",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Interruptions in the supply chain for microchips used in personal electronics have challenged an economist's assertion that retailers can expect robust growth in sales of those devices in the coming months. The delays are unlikely to _______ her projection entirely but will almost certainly extend its time frame.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "dispute" },
+      { "key": "B", "text": "withdraw" },
+      { "key": "C", "text": "underscore" },
+      { "key": "D", "text": "invalidate" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'invalidate' (làm vô hiệu / bác bỏ tính đúng đắn). Việc gián đoạn nguồn cung không làm mất đi giá trị dự báo tăng trưởng hoàn toàn mà chỉ kéo dài khung thời gian thực hiện."
+  },
+  {
+    "id": "wic_64",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In addition to being an accomplished psychologist himself, Francis Cecil Sumner was a _______ increasing the opportunity for Black students to study psychology, helping to found the psychology department at Howard University, a historically Black university, in 1930.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "proponent of" },
+      { "key": "B", "text": "supplement to" },
+      { "key": "C", "text": "beneficiary of" },
+      { "key": "D", "text": "distraction for" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'proponent of' (người ủng hộ / người khởi xướng). Ông là người nhiệt tình thúc đẩy và mở rộng cơ hội học ngành tâm lý học cho sinh viên da đen."
+  },
+  {
+    "id": "wic_65",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Economists often assert that countries looking to increase their reliance on solar energy should expand their capacity for storage; having an ample reserve of stored energy can mitigate the effects of _______ solar energy collection caused by unpredictable shifts in cloud cover and haze.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "developments of" },
+      { "key": "B", "text": "fluctuations in" },
+      { "key": "C", "text": "calibrations with" },
+      { "key": "D", "text": "incentives for" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'fluctuations in' (sự dao động / chập chờn thất thường). Đám mây và sương mù thay đổi khó lường tạo ra sự biến động lên xuống trong sản lượng thu nạp năng lượng mặt trời."
+  },
+  {
+    "id": "wic_66",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "In a 2019 study, Jeremy Gunawardena and colleagues found that the single-celled protozoan Stentor roeseli not only uses strategies to escape irritating stimuli but also switches strategies when one fails. This evidence of protozoans sophisticatedly \"changing their minds\" demonstrates that single-celled organisms may not be limited to _______ behaviors.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "aggressive" },
+      { "key": "B", "text": "rudimentary" },
+      { "key": "C", "text": "evolving" },
+      { "key": "D", "text": "advantageous" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'rudimentary' (thô sơ / sơ khai). Việc sinh vật đơn bào biết đổi chiến thuật tinh vi chứng minh hành vi của chúng không chỉ đóng khung ở mức phản xạ thô sơ."
+  },
+  {
+    "id": "wic_67",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Ecologist Exequiel Ezcurra and colleagues found that the inhabitants of the Mexica empire used natural landmarks to track time with a high degree of _______. By observing the sun's position in relation to various points on the mountains surrounding the Basin of Mexico, the Mexica were able to precisely identify the dates when significant events such as solstices occurred.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "precariousness" },
+      { "key": "B", "text": "exactitude" },
+      { "key": "C", "text": "resilience" },
+      { "key": "D", "text": "inconspicuousness" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'exactitude' (sự chính xác tuyệt đối). Đồng nghĩa với từ 'precisely identify' (xác định chuẩn xác ngày diễn ra các hiện tượng như hạ chí, đông chí) ở câu tiếp theo."
+  },
+  {
+    "id": "wic_68",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Novelist N. K. Jemisin declines to _______ the conventions of the science fiction genre in which she writes, and she has suggested that her readers appreciate her work precisely because of this willingness to thwart expectations and avoid formulaic plots and themes.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "question" },
+      { "key": "B", "text": "react to" },
+      { "key": "C", "text": "perceive" },
+      { "key": "D", "text": "conform to" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'conform to' (tuân theo / rập khuôn theo). Tác giả từ chối gò bó theo các quy ước truyền thống của thể loại khoa học viễn tưởng, tránh cốt truyện sáo mòn."
+  },
+  {
+    "id": "wic_69",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Rydra Wong, the protagonist of Samuel R. Delany's 1966 novel Babel-17, is a poet, an occupation which, in Delany's work, is not _______: nearly a dozen of the characters that populate his novels are poets or writers.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "infallible" },
+      { "key": "B", "text": "atypical" },
+      { "key": "C", "text": "lucrative" },
+      { "key": "D", "text": "tedious" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'not atypical' (không hề hiếm gặp / rất quen thuộc). Câu sau nêu rõ có gần cả chục nhân vật trong các tiểu thuyết của ông làm nghề thi sĩ hoặc nhà văn."
+  },
+  {
+    "id": "wic_70",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "In editor Lisa Yaszek's introduction to her anthology The Future Is Female! More Classic Science Fiction Stories by Women, Yaszek identifies an increasing sense of _______ feminist mode of writing in the 1970s, in contrast to many woman-authored science fiction stories of the 1920s to 1960s whose politics were less deliberately signaled.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "a prudently" },
+      { "key": "B", "text": "an overtly" },
+      { "key": "C", "text": "a cordially" },
+      { "key": "D", "text": "an inadvertently" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'an overtly' (công khai / rõ ràng). Tương phản đối lập với các tác phẩm giai đoạn 1920-1960 khi màu sắc chính trị ít được thể hiện chủ đích ('less deliberately signaled')."
+  },
+  {
+    "id": "wic_71",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "For a 2020 exhibition, photographer and neurobiologist Okunola Jeyifous _______ a series of new images based on a series of alphabet posters from the 1970s known as the \"Black ABCs,\" which featured Black children from Chicago. Jeyifous photographed the now-adult models and layered the photos over magnified images of the models' cells, resulting in what he called \"micro and macro portraiture.\"",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "validated" },
+      { "key": "B", "text": "created" },
+      { "key": "C", "text": "challenged" },
+      { "key": "D", "text": "restored" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'created' (sáng tạo / tạo ra). Nhiếp ảnh gia đã sáng tạo nên một loạt tác phẩm hình ảnh nghệ thuật mới cho triển lãm năm 2020."
+  },
+  {
+    "id": "wic_72",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In 1776, the United States sent Benjamin Franklin to France to try to win the country's support in the United States' fight for independence from Great Britain. Franklin was very popular in France. This _______ surely helped him to convince France to assist the United States.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "thoughtfulness" },
+      { "key": "B", "text": "esteem" },
+      { "key": "C", "text": "controversy" },
+      { "key": "D", "text": "sincerity" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'esteem' (sự kính trọng / mến mộ). Thay thế cho trạng thái 'very popular' (rất được yêu mến) của Franklin tại nước Pháp."
+  },
+  {
+    "id": "wic_73",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Birds sing to communicate over potentially great distances. For this reason, many researchers believe that birds in densely vegetated habitats generally sing at lower frequencies than birds living in comparatively sparse habitats, since dense vegetation tends to _______ the distance that high-frequency sounds can travel.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "exceed" },
+      { "key": "B", "text": "diminish" },
+      { "key": "C", "text": "encompass" },
+      { "key": "D", "text": "conceal" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'diminish' (thu hẹp / làm giảm). Thảm thực vật rậm rạp có xu hướng làm giảm khoảng cách truyền đi của sóng âm tần số cao."
+  },
+  {
+    "id": "wic_74",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Domesticated thousands of years ago by Indigenous people in South America, cacao, the plant from which chocolate is made, deviates structurally from the wild plant it is descended from. Maize (corn), another crop domesticated by Indigenous Americans, shows so little resemblance to any wild plant that genetic research was necessary to _______ teosinte grass as its ancestor.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "acquire" },
+      { "key": "B", "text": "develop" },
+      { "key": "C", "text": "attract" },
+      { "key": "D", "text": "confirm" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'confirm' (xác nhận / khẳng định). Cây ngô khác xa tổ tiên hoang dã đến mức cần phải có nghiên cứu di truyền để xác nhận cỏ teosinte chính là tổ tiên của nó."
+  },
+  {
+    "id": "wic_75",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Diego Velázquez was the leading artist in the court of King Philip IV of Spain during the seventeenth century, but his influence was hardly _______ Spain: realist and impressionist painters around the world employed his techniques and echoed elements of his style.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "derived from" },
+      { "key": "B", "text": "recognized in" },
+      { "key": "C", "text": "confined to" },
+      { "key": "D", "text": "repressed by" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'confined to' (giới hạn trong phạm vi). Tầm ảnh hưởng của ông không hề bị giới hạn ở riêng Tây Ban Nha mà lan rộng ra toàn thế giới."
+  },
+  {
+    "id": "wic_76",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The artisans of the Igun Eronmwon guild in Benin City, Nigeria, typically _______ the bronze- and brass-casting techniques that have been passed down through their families since the thirteenth century, but they don't strictly observe every tradition; for example, guild members now use air-conditioning motors instead of handheld bellows to help heat their forges.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": [
+      { "key": "A", "text": "experiment with" },
+      { "key": "B", "text": "adhere to" },
+      { "key": "C", "text": "improve on" },
+      { "key": "D", "text": "grapple with" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'adhere to' (tuân thủ / gắn bó với). Các nghệ nhân thường tuân thủ kỹ thuật đúc đồng truyền thống lưu truyền từ thế kỷ 13, dù không phải lúc nào cũng tuân thủ cứng nhắc mọi chi tiết."
+  },
+  {
+    "id": "wic_77",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Although some might see the idea that our brains are just a bunch of molecules, grown in all the usual ways, as a bleak renunciation of all that is special about humanity, to me it is an exciting modern take on an old idea, that there is a bond that unifies all living things. Through advances in molecular biology and neuroscience, we can now understand better than ever just how deeply we share our biological make-up—physical and mental—with all the creatures with which we share our planet.",
+    "question": "In the paragraph above, \"take\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "scene" },
+      { "key": "B", "text": "share" },
+      { "key": "C", "text": "outlook" },
+      { "key": "D", "text": "reaction" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'take on an old idea' (góc nhìn / cách tiếp cận / quan điểm mới về một ý tưởng cũ) đồng nghĩa với 'outlook' (quan điểm / góc nhìn)."
+  },
+  {
+    "id": "wic_78",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In August, some friends and I were sitting around a nighttime campfire. Our six-person camping group included one young lawyer. The rest of us were saying that it is wrong for lawyers to defend clients they know to be guilty. The lawyer found this claim offensive. Everyone is entitled to the best possible defense, she argued.",
+    "question": "In the paragraph above, the word \"claim\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "requirement" },
+      { "key": "B", "text": "assertion" },
+      { "key": "C", "text": "entitlement" },
+      { "key": "D", "text": "demand" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'claim' (lời khẳng định / tuyên bố rằng luật sư sai trái khi bào chữa cho người có tội) đồng nghĩa với 'assertion' (sự khẳng định / quả quyết)."
+  },
+  {
+    "id": "wic_79",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Today's war on privacy is intimately related to the recent dramatic advances in technology. Many people today say that in order to enjoy the benefits of modern society, we must necessarily relinquish some degree of privacy. If we want the convenience of paying for a meal by credit card, then we must accept the routine collection of our purchases in a large database over which we have no control.",
+    "question": "In the paragraph above, \"degree\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "credential" },
+      { "key": "B", "text": "sequence" },
+      { "key": "C", "text": "standing" },
+      { "key": "D", "text": "measure" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'some degree of privacy' (từ bỏ một mức độ / chừng mực riêng tư nhất định) đồng nghĩa với 'measure' (mức độ / chừng mực)."
+  },
+  {
+    "id": "wic_80",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Databasification, however, does have a dark side: increasing government access to private collections of information. Some privacy activists cite this cooperation as a reason to regulate private databases, which makes as much sense as preventing companies from manufacturing binoculars simply because police can use them for unlawful surveillance. The more sensible approach is to restrict the power of the police to snoop in the first place.",
+    "question": "In the paragraph above, \"dark\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "mysterious" },
+      { "key": "B", "text": "concealed" },
+      { "key": "C", "text": "morbid" },
+      { "key": "D", "text": "ominous" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'dark side' (mặt tối / khía cạnh đáng lo ngại, tiềm ẩn rủi ro tiêu cực) đồng nghĩa với 'ominous' (báo điềm gở / đáng lo ngại)."
+  },
+  {
+    "id": "wic_81",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Many people interpret recent discoveries in behavioral genetics to mean that genes determine whether an individual will have a gift for dance, take risks, or be aggressive, thereby raising questions about how much control we have over our own actions. For some, the idea that they may not be entirely at fault for their less desirable qualities is liberating, conferring a scientifically backed reprieve from guilt and self-doubt. Others feel doomed by their genes, which seem less changeable than the traditional culprit for personal failings, a lack of discipline. And many find it simply depressing to think that their [genes determine their fate].",
+    "question": "In the paragraph above, \"traditional\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "obsolete" },
+      { "key": "B", "text": "authoritative" },
+      { "key": "C", "text": "conservative" },
+      { "key": "D", "text": "customary" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'traditional culprit' (thủ phạm quen thuộc / nguyên nhân thông thường hay bị quy kết) đồng nghĩa với 'customary' (thông thường / theo thói quen truyền thống)."
+  },
+  {
+    "id": "wic_82",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "It takes only a glance at our nails, our knuckles, our palms to know Uhmma succeeded. Joon and I both possess Uhmma's lean fingers, but without the hard, yellowed calluses formed by years of physical labor. Our hands turn pages of books, press fingertips to keyboard buttons, hold pencils and pens. They are lithe and tender. The hands of dreams come true.",
+    "question": "In the paragraph above, \"tender\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "affectionate" },
+      { "key": "B", "text": "immature" },
+      { "key": "C", "text": "raw" },
+      { "key": "D", "text": "soft" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'tender hands' (đôi bàn tay mềm mại, không có những vết chai sạn cứng thô do lao động chân tay) đồng nghĩa với 'soft' (mềm mại)."
+  },
+  {
+    "id": "wic_83",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Like most Americans out-of-doors, I was a child of Thoreau. But the ways of seeing nature I'd inherited from him, and the whole tradition of nature writing he inspired, seemed not to fit my experiences as a gardener. In confronting the local groundhogs, or deciding whether I was obliged to mow my lawn, or how liberal I could afford to be with respect to weeds, I was deep in nature, surely, but my feelings about it, although strong, were something other than romantic, or worshipful.",
+    "question": "In the paragraph above, \"deep in\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "troubled by" },
+      { "key": "B", "text": "immersed in" },
+      { "key": "C", "text": "wise about" },
+      { "key": "D", "text": "trapped in" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'deep in nature' (hòa mình hoàn toàn vào thiên nhiên thông qua công việc làm vườn thực tế) đồng nghĩa với 'immersed in' (chìm đắm / gắn chặt vào)."
+  },
+  {
+    "id": "wic_84",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Like manned space flight in 1961, hydrogen power is proven but primitive, a technology ripe for acceleration and then deployment. For that, thank the Apollo program itself, which spurred the development of early fuel cells.",
+    "question": "In the paragraph above, \"ripe\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "mature" },
+      { "key": "B", "text": "ready" },
+      { "key": "C", "text": "fortunate" },
+      { "key": "D", "text": "spoiled" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'ripe for acceleration' (công nghệ đã sẵn sàng đến thời điểm để tăng tốc và triển khai diện rộng) đồng nghĩa với 'ready' (sẵn sàng)."
+  },
+  {
+    "id": "wic_85",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Similarly, hydrogen can be produced from coal; once all the emissions of that process are taken into account, it's debatable whether fuel-cell cars yield any environmental benefit at all.",
+    "question": "In the paragraph above, \"yield\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "reward" },
+      { "key": "B", "text": "submit" },
+      { "key": "C", "text": "concede" },
+      { "key": "D", "text": "produce" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'yield benefit' (mang lại / sinh ra lợi ích môi trường) đồng nghĩa với 'produce' (tạo ra / mang lại)."
+  },
+  {
+    "id": "wic_86",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "A hint of the possible function of Machu Picchu came to me while hiking there with a friend who is a botanist. We had approached via a trail perched high in the saddle of the mountain dividing the Machu Picchu side of the mountain from a dry inland valley. Standing in this gateway one sees two worlds: the brown and lifeless valley and the lush emerald-green valley watered by the thick fogs of the Urubamba River.",
+    "question": "In the paragraph above, \"watered\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "cleansed" },
+      { "key": "B", "text": "diluted" },
+      { "key": "C", "text": "accreted" },
+      { "key": "D", "text": "moistened" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'watered by the thick fogs' (thung lũng xanh tươi tốt được làm ẩm / cấp nước bởi màn sương dày đặc từ sông) đồng nghĩa với 'moistened' (được làm ẩm)."
+  },
+  {
+    "id": "wic_87",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The mountainside is laid out in strips of vegetation and microzones. The place is a scientist's dream—the perfect location for all kinds of controlled experiments. Viewed in that context, the small terraces took on new meaning as experimental patches at a range of altitudes and built at so many different angles, facing the morning sun, the evening sun, constant sun or no sun.",
+    "question": "In the paragraph above, \"patches\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "materials" },
+      { "key": "B", "text": "scraps" },
+      { "key": "C", "text": "decorations" },
+      { "key": "D", "text": "plots" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'experimental patches' (những mảnh đất / ô đất ruộng bậc thang nhỏ dùng để làm thí nghiệm) đồng nghĩa với 'plots' (thửa đất / mảnh đất canh tác)."
+  },
+  {
+    "id": "wic_88",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "It is no coincidence that Emily Brontë has inspired two detective novels. Her remains are so skeletal that the body seems to have gone missing altogether. The personal documents that exist are few and far between: four short \"diary papers\" spaced out over a period of ten and a half years; three formal, unrevealing notes to her sister's friend Ellen Nussey; a handful of French essays written at school in Brussels; the odd drawing; a fragment of an account book; the occasional other trace.",
+    "question": "In the paragraph above, \"odd\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "eccentric" },
+      { "key": "B", "text": "unequal" },
+      { "key": "C", "text": "infrequent" },
+      { "key": "D", "text": "uneven" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'the odd drawing' (một vài bức vẽ hiếm hoi / rải rác, nằm trong chuỗi liệt kê các tư liệu ít ỏi) đồng nghĩa với 'infrequent' (hiếm khi / thỉnh thoảng mới có)."
+  },
+  {
+    "id": "wic_89",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "With so little to go on, Emily's biographers have had serious literary sleuthing to do. But research has yielded little in the way of hard evidence. Ever since it was revealed that the author of a work as striking as Wuthering Heights was the retiring daughter of a provincial parson, readers have regarded this fact as some sort of unnatural aberration. Lack of biographical data has made that enigmatic novel seem all the more obscure, and the combination of the two has left Emily ripe for mystification.",
+    "question": "In the paragraph above, \"serious\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "dangerous" },
+      { "key": "B", "text": "overwhelming" },
+      { "key": "C", "text": "pensive" },
+      { "key": "D", "text": "considerable" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'serious literary sleuthing' (cuộc điều tra tìm kiếm văn học hết sức quy mô và đáng kể) đồng nghĩa với 'considerable' (đáng kể / to lớn)."
+  },
+  {
+    "id": "wic_90",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "As interpreter, Charlotte does indeed stand between posterity and Emily, beckoning us with one hand and waving us away with the other. Since Charlotte is almost the only source of biographical information, there is no option but to listen to what she says. But she is a slippery authority whose comments tell us more about her own attitude toward her sister than about the inner workings of Emily's mind. They betray ambivalent feelings: protectiveness tipping over into an urge to dominate, admiration tinged with condescension.",
+    "question": "In the paragraph above, \"slippery\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "malicious" },
+      { "key": "B", "text": "unreliable" },
+      { "key": "C", "text": "clumsy" },
+      { "key": "D", "text": "precarious" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'slippery authority' (một nguồn thông tin không đáng tin cậy vì mang nặng cảm xúc chủ quan phức tạp) đồng nghĩa với 'unreliable' (không đáng tin)."
+  },
+  {
+    "id": "wic_91",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "\"Perhaps you could take over the song instruction,\" he suggested, though he doubted that Professor Mo could sing. \"We could coordinate other parts of the curriculum, as well. I could assign the practice session as part of their homework. Make it required.\" Duncan tried to broach these ideas as delicately as he could.",
+    "question": "In the paragraph above, \"broach\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "pierce" },
+      { "key": "B", "text": "shape" },
+      { "key": "C", "text": "veer" },
+      { "key": "D", "text": "bring up" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'broach these ideas' (khéo léo đề cập / gợi mở các ý tưởng này ra để thảo luận) đồng nghĩa với 'bring up' (đưa ra / nêu vấn đề)."
+  },
+  {
+    "id": "wic_92",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The man then demonstrated other powers. He made the hands of my watch turn back two hours and the date go forward two days by stroking a coin placed over its face, explaining afterward that he derives power from metal. He had a little trouble trying to break my car key. However, he placed it against a metal radiator, and after a few seconds said, \"It's starting to go.\" The key snapped in two.",
+    "question": "In the paragraph above, \"derives\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "obtains" },
+      { "key": "B", "text": "infers" },
+      { "key": "C", "text": "traces" },
+      { "key": "D", "text": "originates" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'derives power from metal' (thu nhận / lấy được năng lực từ kim loại) đồng nghĩa với 'obtains' (thu được / nhận được)."
+  },
+  {
+    "id": "wic_93",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Part of the problem may well stem from the long-standing tendency of European or Euro-American thinkers to regard Native Americans as fundamentally and profoundly different, motivated more often by mysticism than by ambition, charged more by unfathomable visions than by intelligence or introspection.",
+    "question": "In the paragraph above, the word \"charged\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "Commanded" },
+      { "key": "B", "text": "Indicated" },
+      { "key": "C", "text": "Replenished" },
+      { "key": "D", "text": "inspired" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'charged more by unfathomable visions' (được truyền cảm hứng / thúc đẩy bởi những ảo ảnh khó lường) đồng nghĩa với 'inspired' (được truyền cảm hứng)."
+  },
+  {
+    "id": "wic_94",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Jerry was deceitful, but at the time I did not think he was imaginative enough to do any damage. And yet his was not the conventional double life that most White people led in Africa. Jerry had certain ambitions: ambition makes more liars than egotism does. But Jerry was so careful, his lies such modest calculations, that he was always believed.",
+    "question": "In the paragraph above, \"modest\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "self-conscious" },
+      { "key": "B", "text": "secretive" },
+      { "key": "C", "text": "decent" },
+      { "key": "D", "text": "moderate" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'modest calculations' (những tính toán dối trá ở mức độ vừa phải, chừng mực, không nói quá đà để người khác dễ tin) đồng nghĩa với 'moderate' (chừng mực / vừa phải)."
+  },
+  {
+    "id": "wic_95",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "This would have made more sense if the Hodgkinsons were bored, dried-up people who needed to feast on any new stranger, but they were not; they were in the world and leading stimulating lives and I finally had to come to the anxious conclusion that they simply liked me.",
+    "question": "In the paragraph above, \"anxious\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "meticulous" },
+      { "key": "B", "text": "impatient" },
+      { "key": "C", "text": "uneasy" },
+      { "key": "D", "text": "frightened" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'anxious conclusion' (kết luận khiến bản thân cảm thấy băn khoăn, không an tâm / khó xử) đồng nghĩa với 'uneasy' (băn khoăn / áy náy)."
+  }
+,
+  {
+    "id": "wic_96",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Inequality in the working world made it exceedingly difficult for a middle-class woman to support herself on her own. Let alone support dependents. Thus, at a time when occupation was becoming a core element in masculine identity, any position for middle-class women other than in relation to men was considered anomalous.",
+    "question": "In the paragraph above, \"occupation\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "military conquest" },
+      { "key": "B", "text": "pleasant diversion" },
+      { "key": "C", "text": "vocation" },
+      { "key": "D", "text": "settlement" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Từ 'occupation' trong bối cảnh thị trường lao động và việc làm ('working world') đồng nghĩa với 'vocation' (nghề nghiệp / công việc)."
+  },
+  {
+    "id": "wic_97",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Several different families had rented the house over the past several years, none of them, apparently, interested in preventing or even forestalling its decline. Of course, to be fair, Miles had to admit that the decline had begun under the Robys' own stewardship on what had once been a tidy, well kept street theirs and the Mints place next door were first houses to prefigure the deterioration of the whole neighborhood.",
+    "question": "In the paragraph above, \"fair\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "allowable" },
+      { "key": "B", "text": "adequate" },
+      { "key": "C", "text": "just" },
+      { "key": "D", "text": "likely" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'to be fair' (nói một cách công bằng / khách quan) đồng nghĩa với 'just' (công bằng / hợp lẽ phải)."
+  },
+  {
+    "id": "wic_98",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "If CO2 levels increase as foretold, the rise in average global temperature, when it hits full force no later than the middle of the coming century, could be between three degrees and nine degrees Fahrenheit. The increase in temperature will be relatively small at the equator, grow larger toward the higher latitudes, and peak at the poles. If CO2 in the atmosphere triples or quadruples, the warming could soar much higher, to temperatures far beyond the range of human experience.",
+    "question": "In the paragraph above, \"range\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "territory" },
+      { "key": "B", "text": "scope" },
+      { "key": "C", "text": "capacity" },
+      { "key": "D", "text": "distance" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'range of human experience' (vượt ra ngoài phạm vi / giới hạn trải nghiệm của con người) đồng nghĩa với 'scope' (phạm vi / quy mô)."
+  },
+  {
+    "id": "wic_99",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "For generations, archaeologists have dug up the tomb and treasures of the pharaohs all over Egypt. Archaeologist Mark Lehrer has focused, instead, on where and how the thousands of laborers who actually built the pyramids lived attempting to decipher the complex economic system that sustained them over the 80 or so years they labored on this monumental task. Lehrer believes that more than 20,000 workers lived in a \"lost\" city on the Giza plain in Egypt.",
+    "question": "In the paragraph above, \"lost\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "unsuccessful" },
+      { "key": "B", "text": "vanished" },
+      { "key": "C", "text": "just beyond reach" },
+      { "key": "D", "text": "no longer owned" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'a \"lost\" city' (một thành phố cổ đã biến mất / bị chôn vùi trong lịch sử) đồng nghĩa với 'vanished' (biến mất / tiêu tan)."
+  },
+  {
+    "id": "wic_100",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Occasionally, you will hear some scientific pundit proclaim there is no evidence for parapsychological phenomena, therefore parapsychology is a pseudoscience with no subject matter to study. That is patent nonsense. For over two thousand years people have been reporting a class of human experiences—the kind commonly called psychic—and for almost as long, scholars and scientists have been trying to understand them.",
+    "question": "In the paragraph above, \"patent\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "proprietary" },
+      { "key": "B", "text": "unobstructed" },
+      { "key": "C", "text": "privileged" },
+      { "key": "D", "text": "obvious" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'patent nonsense' (điều hoàn toàn vô lý / điều nhảm nhí hiển nhiên) đồng nghĩa với 'obvious' (rõ ràng / hiển nhiên)."
+  },
+  {
+    "id": "wic_101",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "He thought he was sophisticated and cosmopolitan; she reduced him to a country provincial. But Hemingway outlived Stein by fifteen years and so had the last word in this quarrel. In A Moveable Feast he wrote, \"I cannot remember Gertrude Stein ever speaking well of any writer who had not written favorably about her work or done something to advance her career except for Ronald Firbank and, later, Scott Fitzgerald.\"",
+    "question": "In the paragraph above, \"advance\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "ascend" },
+      { "key": "B", "text": "further" },
+      { "key": "C", "text": "propose" },
+      { "key": "D", "text": "exceed" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'advance her career' (thúc đẩy / phát triển sự nghiệp của bà) đồng nghĩa với ngoại động từ 'further' (thúc đẩy / nâng đỡ)."
+  },
+  {
+    "id": "wic_102",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Any African American scholars engaged in the field of Black studies must view the work from inside their community rather than from an \"objective\", outside position. Black studies (and to some degree women's studies) began from an understanding of the necessity of connecting the people doing the research and the people who were the subjects of the inquiry—to have the academic concepts informed by the individuals whose very lives spoke to that about which we scholars intellectualize. However, in the struggle to be seen as \"legitimate\" academic disciplines, many of these programs have retreated from the community base that was their initial core and support.",
+    "question": "In the paragraph above, \"legitimate\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "reputable" },
+      { "key": "B", "text": "lawful" },
+      { "key": "C", "text": "entitled" },
+      { "key": "D", "text": "logical" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'legitimate academic disciplines' (các ngành học chính thống, được công nhận và có uy tín trong giới học thuật) đồng nghĩa với 'reputable' (có danh tiếng / đáng kính)."
+  },
+  {
+    "id": "wic_103",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "She taught me the importance of preserving the historical record of the community as the people within it understood it and thus grounded me in a far different research tradition than the one I encountered in my academic training. The manner in which I practice the historical craft is far different from my mother's, but the fact that I do it and the assumptions that guide me are firmly grounded in her historical practice. She preserved in her mind and in her conversations with me a history and a way of historical understanding that I now attempt to preserve in my writing and in my classroom.",
+    "question": "In the paragraph above, \"grounded\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "insulated" },
+      { "key": "B", "text": "justified" },
+      { "key": "C", "text": "rooted" },
+      { "key": "D", "text": "stranded" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'grounded in' (bắt nguồn sâu xa / cắm rễ vào nền tảng thực tiễn) đồng nghĩa với 'rooted' (bắt nguồn / bắt rễ từ)."
+  },
+  {
+    "id": "wic_104",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Uncle Tom's Cabin is a catalogue of violence. This is explained by the nature of Stowe's subject matter, her laudable determination to flinch at nothing in presenting the complete picture; an explanation that falters only if we pause to ask whether or not her picture is indeed complete; and what constriction or failure of perception forced her to so depend on the description of brutality—unmotivated senseless—and to leave unanswered the only important question; what was it, after all, that moved people to such deeds?",
+    "question": "In the paragraph above, \"moved\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "relocated" },
+      { "key": "B", "text": "proposed" },
+      { "key": "C", "text": "drove" },
+      { "key": "D", "text": "progressed" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'moved people to such deeds' (điều gì đã thôi thúc / thúc đẩy con người thực hiện những hành vi tàn bạo như thế) đồng nghĩa với 'drove' (thôi thúc / đẩy đưa)."
+  },
+  {
+    "id": "wic_105",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "\"For the literary critic,\" writes J. W. Ward, summing up the dilemma posed by Uncle Tom's Cabin, \"the problem is how a book so seemingly artless, so lacking in apparent literary talent, was not only an immediate success but has endured.\" Indeed, the modernist literary aesthetic cannot account for the unprecedented and persistent popularity of a book like Uncle Tom's Cabin, for this novel operates according to principles quite other than those that have been responsible for determining the currently sanctified American literary classics.",
+    "question": "In the paragraph above, \"posed\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "questioned" },
+      { "key": "B", "text": "presented" },
+      { "key": "C", "text": "puzzled" },
+      { "key": "D", "text": "positioned" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'the dilemma posed by' (tình thế tiến thoái lưỡng nan được đặt ra / đưa ra bởi cuốn sách) đồng nghĩa với 'presented' (được đưa ra / trình diện)."
+  },
+  {
+    "id": "wic_106",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "On the way out, students would nod at his father, occasionally—usually the younger ones—stop and ask a question about their work. Older boys sat on the steps to argue, and they didn't rise, as David didn't for his teachers, as his father passed. They said good night in Yiddish or, not pausing in their conversations at all, simply raised their chins at his father; a bare acknowledgment in which David saw condescension, traces of contempt. It galled him that they knew his father in all his weaknesses—his dreamy-mindedness, his affection for puns, his penchant for flying off the handle and his killing remorse afterward—they knew all these things as well as his own son did. He registered what he believed was the complacent derision in their faces, and recognized much the same in himself, which made him even angrier. He knew his father just that well, and of course he loved him. Did they? Did they love him, these pale boys with their green suits, smugly arguing laws nobody but they cared about anyway?",
+    "question": "In the paragraph above, \"killing\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "fatal" },
+      { "key": "B", "text": "cancelling" },
+      { "key": "C", "text": "excruciating" },
+      { "key": "D", "text": "ultimate" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'killing remorse' (nỗi hối hận giằng xé dữ dội / đau đớn cùng cực của người cha sau khi nổi cáu) đồng nghĩa với 'excruciating' (dữ dội / đau đớn tột cùng)."
+  },
+  {
+    "id": "wic_107",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "When we walk around the city on an ordinary day, our ears will register music at almost every turn—bass lines pumping from passing cars, bits of hip-hop seeping out of the headphones of teenagers on the subway, a lawyer's cell phone tweeting Beethoven's \"Ode to Joy\"—but almost none of it will be the immediate result of physical work by human hands or voices.",
+    "question": "In the paragraph above, \"immediate\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "prompt" },
+      { "key": "B", "text": "direct" },
+      { "key": "C", "text": "near" },
+      { "key": "D", "text": "instantaneous" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'immediate result of physical work' (kết quả trực tiếp sinh ra từ lao động cơ bắp của con người) đồng nghĩa với 'direct' (trực tiếp)."
+  },
+  {
+    "id": "wic_108",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In many respects green consumerism marks a turning point, for it is bringing Earth consciousness into the limelight.",
+    "question": "In the paragraph above, \"marks\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "signals" },
+      { "key": "B", "text": "records" },
+      { "key": "C", "text": "traces" },
+      { "key": "D", "text": "observes" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'marks a turning point' (báo hiệu / đánh dấu một bước ngoặt chuyển biến quan trọng) đồng nghĩa với 'signals' (báo hiệu / phát tín hiệu)."
+  },
+  {
+    "id": "wic_109",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "From the moment I walked into the Grapple d'Oro, sometime during the summer of 1968, it became one of my favorite hangouts. It was then a very typical, very modest Roman trattoria, with paper tablecloths and bare walls, but the atmosphere was friendly and the food simple but superb.",
+    "question": "In the paragraph above, \"modest\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "bashful" },
+      { "key": "B", "text": "proper" },
+      { "key": "C", "text": "reasonable" },
+      { "key": "D", "text": "unpretentious" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'modest trattoria' (quán ăn nhỏ khiêm tốn, giản dị, khăn trải bàn bằng giấy và tường trơn) đồng nghĩa với 'unpretentious' (mộc mạc / không phô trương)."
+  },
+  {
+    "id": "wic_110",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Science must always be challenged because that is the way that progress is made, but the challenge must use scientifically sound experiments and robust analysis.",
+    "question": "In the paragraph above, \"sound\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "severe" },
+      { "key": "B", "text": "wise" },
+      { "key": "C", "text": "firm" },
+      { "key": "D", "text": "valid" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'scientifically sound experiments' (các thí nghiệm hợp lệ, có cơ sở khoa học vững chắc và tin cậy) đồng nghĩa với 'valid' (hợp lý / có cơ sở vững vàng)."
+  },
+  {
+    "id": "wic_111",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Writers blessed with talent to spare go through this process unconsciously, in some cases oblivious to it. Especially when they're young, as long as they have a certain level of talent it's not so difficult for them to write a novel.",
+    "question": "In the paragraph above, \"level\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "rank" },
+      { "key": "B", "text": "equality" },
+      { "key": "C", "text": "height" },
+      { "key": "D", "text": "degree" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'a certain level of talent' (một mức độ / hàm lượng tài năng nhất định) đồng nghĩa với 'degree' (mức độ / chừng mực)."
+  },
+  {
+    "id": "wic_112",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The remaining majority of writers who can't reach such heights (including me, of course) have to supplement what's missing from their store of talent through whatever means they can.",
+    "question": "In the paragraph above, \"store\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "supply" },
+      { "key": "B", "text": "value" },
+      { "key": "C", "text": "abundance" },
+      { "key": "D", "text": "source" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'store of talent' (kho vốn / nguồn cung tài năng sẵn có của một người) đồng nghĩa với 'supply' (nguồn cung / lượng tích lũy)."
+  },
+  {
+    "id": "wic_113",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Mama was a great cook. She also loved to talk on the phone, and during the next weeks, I strained to overhear any mention of Carroll Byrd. I got plenty of material. But since Mama generally stayed home and was the recipient rather than the purveyor of news, it was sometimes hard for me to figure out what had actually happened.",
+    "question": "In the paragraph above, \"material\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "substance" },
+      { "key": "B", "text": "information" },
+      { "key": "C", "text": "suitable candidate" },
+      { "key": "D", "text": "admissible evidence" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'got plenty of material' (thu thập được rất nhiều thông tin nghe lỏm qua điện thoại) đồng nghĩa với 'information' (thông tin / tin tức)."
+  },
+  {
+    "id": "wic_114",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The vision most of us have of migration is of movements on a large scale, of birds arriving at their wintering grounds, of spawning salmon moving upstream, or of wildebeest, zebra, and gazelle trekking over the plains of East Africa.",
+    "question": "In the paragraph above, \"vision\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "eyesight" },
+      { "key": "B", "text": "conception" },
+      { "key": "C", "text": "revelation" },
+      { "key": "D", "text": "anticipation" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'The vision most of us have' (hình dung / khái niệm / hình ảnh trong tâm trí mà hầu hết chúng ta nghĩ về) đồng nghĩa với 'conception' (quan niệm / khái niệm)."
+  },
+  {
+    "id": "wic_115",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Herodotus himself does not expect us to believe everything we read. He sometimes interrupts the ongoing account in his first-person voice as the narrator; precisely to remind us not to treat the ongoing narrative as definitively true.",
+    "question": "In the paragraph above, \"treat\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "regard" },
+      { "key": "B", "text": "remedy" },
+      { "key": "C", "text": "pay for" },
+      { "key": "D", "text": "comment on" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'treat the ongoing narrative as definitively true' (coi / nhìn nhận câu chuyện kể là sự thật tuyệt đối) đồng nghĩa với 'regard' (coi như / nhìn nhận)."
+  },
+  {
+    "id": "wic_116",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Scholars skeptical of Herodotus emphasize that as modern readers we must remain aware of the cast gulf that separates our one sense of what it means to preserve the past from those that prevailed in the mid-fifth century B.C.E. Modern students of oral history, drawing on the comparative study of other oral cultures, claim that three generations is the outside limit to be placed on the accurate oral transmission of past events.",
+    "question": "In the paragraph above, \"outside\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "extraneous" },
+      { "key": "B", "text": "negligible" },
+      { "key": "C", "text": "maximum" },
+      { "key": "D", "text": "secluded" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'outside limit' (giới hạn tối đa / kịch trần cho việc truyền khẩu chính xác là 3 thế hệ) đồng nghĩa với 'maximum' (tối đa)."
+  },
+  {
+    "id": "wic_117",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "It galled him that they knew his father in all his weaknesses—his dreamy-mindedness, his affection for puns, his penchant for flying off the handle and his killing remorse afterward—they knew all these things as well as his own son did. He registered what he believed was the complacent derision in their faces, and recognized much the same in himself, which made him even angrier. He knew his father just that well, and of course he loved him. Did they? Did they love him, these pale boys with their green suits, smugly arguing laws nobody but they cared about anyway?",
+    "question": "In the paragraph above, \"registered\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "endorsed" },
+      { "key": "B", "text": "expressed" },
+      { "key": "C", "text": "achieved" },
+      { "key": "D", "text": "noted" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'registered the derision in their faces' (cậu nhận thấy / ghi nhận được vẻ chế giễu tự đắc trên nét mặt họ) đồng nghĩa với 'noted' (nhận thấy / ghi nhận)."
+  },
+  {
+    "id": "wic_118",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "When British anthropologist Edward Evans Pritchard offered this observation on the daily life of the seminomadic Nuer people of southern Sudan in the mid-1930s, he seemed to be lamenting the dear price his own culture had paid for pulling time out of nature.",
+    "question": "In the paragraph above, \"dear\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "beloved" },
+      { "key": "B", "text": "high" },
+      { "key": "C", "text": "scarce" },
+      { "key": "D", "text": "worthy" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'dear price' (cái giá đắt đỏ / cái giá rất cao mà nền văn minh phải trả) đồng nghĩa với 'high' (cao / đắt đỏ)."
+  },
+  {
+    "id": "wic_119",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "By the time I arrived home my father had told them about the singing lessons, and they sang out loud as I came in through the door. My mother in her full heavy voice shared a popular song routine with my sister Geraldine, laughing and breathless as the words went wrong as they ducked the top notes. I could have helped them out but I didn't. I was amused and uneasy with the plainness of their voices, and ashamed of myself for that. Yet I was too nervous to join in and that shamed me, too. I pretended I didn't know the words. And I pretended to enjoy their tone and rewarded it with applause as they bowed, hot-",
+    "question": "In the paragraph above, \"plainness\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "unpretentiousness" },
+      { "key": "B", "text": "inelegance" },
+      { "key": "C", "text": "clarity" },
+      { "key": "D", "text": "purity" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'plainness of their voices' (sự thô mộc, thiếu điêu luyện / thiếu tinh tế trong giọng hát của mẹ và chị khi hát sai nốt) đồng nghĩa với 'inelegance' (thiếu tao nhã / vụng về)."
+  },
+  {
+    "id": "wic_120",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "For centuries, however, the native peoples of the Americas had successfully farmed the forest through a simple, yet appropriate, technology. To clear a field, they killed the trees by a process of girdling or barking which cut off a crucial part of the tree without extensive chopping and sawing.",
+    "question": "In the paragraph above, \"simple\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "innocent" },
+      { "key": "B", "text": "superficial" },
+      { "key": "C", "text": "unaffected" },
+      { "key": "D", "text": "uncomplicated" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'simple technology' (kỹ thuật canh tác đơn giản, không cần cưa chặt phức tạp) đồng nghĩa với 'uncomplicated' (không phức tạp / giản đơn)."
+  },
+  {
+    "id": "wic_121",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "James Forten's relationship with Philadelphia's White business community remains elusive to the twenty-first-century researcher. Well-to-do Quaker Susanna Emlen described Forten, in a letter to an English friend in 1809, as \"a person of good character and considerable property... On his marriage a few years ago it was said a number of the most respectable merchants in Philadelphia called to congratulate him and drink punch with him.\" Merchant Abraham Ritter describes Forten as \"popular as a man of trade\" and \"well received by the gentleman\" of the outside White community.",
+    "question": "In the paragraph above, \"trade\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "craft" },
+      { "key": "B", "text": "qualification" },
+      { "key": "C", "text": "exchange" },
+      { "key": "D", "text": "commerce" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'a man of trade' (người buôn bán / doanh nhân thương mại) đồng nghĩa với 'commerce' (thương mại / kinh doanh)."
+  },
+  {
+    "id": "wic_122",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "His business interests were many, and it was as a businessman that he would often define himself. When he wrote to his friend abolitionist William Lloyd Garrison, he alluded again and again to his need to attend to \"business.\" \"Business prevents more at this time\" and \"You know I am a man of business, and have not always time at my disposal.\" Perhaps these were polite excuses but, when all was said and done, James Forten was \"a man of business.\"",
+    "question": "In the paragraph above, \"attend to\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "wait upon" },
+      { "key": "B", "text": "go along with" },
+      { "key": "C", "text": "look after" },
+      { "key": "D", "text": "be ready for" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'attend to business' (chăm sóc / giải quyết / trông nom công việc làm ăn) đồng nghĩa với 'look after' (chăm lo / quán xuyến)."
+  },
+  {
+    "id": "wic_123",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Our eyes are built to seek out complete figures. If I am shown a triangle missing the midsections of its sides, I will complete it in my mind. We instinctively repair the fragments into wholes and search for continuous contours and closed curves.",
+    "question": "In the paragraph above, \"figures\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "personages" },
+      { "key": "B", "text": "diagrams" },
+      { "key": "C", "text": "forms" },
+      { "key": "D", "text": "symbols" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'complete figures' (các hình khối / hình dạng hình học hoàn chỉnh như hình tam giác) đồng nghĩa với 'forms' (hình dạng / thể khối)."
+  },
+  {
+    "id": "wic_124",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Because the Southern Hemisphere was first mapped during the fervor of Enlightenment rationalism, it has constellations named after scientific instruments. There is the Telescope, the Air Pump, and the Microscope—very unlikely objects to imagine floating in the sky, and decidedly unromantic. Few of them fit the stars very well, but the point of constellations is to make a comprehensible unity out of an underlying chaos, and it takes only one or two stars to anchor a fantasy as odd as a microscope to the heavenly vault.",
+    "question": "In the paragraph above, \"point\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "purpose" },
+      { "key": "B", "text": "tip" },
+      { "key": "C", "text": "location" },
+      { "key": "D", "text": "theme" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'the point of constellations' (mục đích / ý nghĩa của việc đặt tên chòm sao là để tạo ra trật tự dễ hiểu) đồng nghĩa với 'purpose' (mục đích)."
+  },
+  {
+    "id": "wic_125",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Where park meets nonpark in Africa, the distinction between wilderness and land for human use collapses. For many Europeans and Americans, wilderness lies \"out there distinct from daily life and readily identifiable\". In Africa, however, it is often impossible to say with certainty where the wilderness begins. Does the region patrolled by park rangers in the Serengeti Plain—otherwise uninhabited bush—qualify as wilderness?",
+    "question": "In the paragraph above, \"collapses\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "folds up" },
+      { "key": "B", "text": "loses monetary value" },
+      { "key": "C", "text": "becomes meaningless" },
+      { "key": "D", "text": "becomes exhausted" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'distinction collapses' (ranh giới phân biệt không còn tác dụng / trở nên vô nghĩa khi con người và tự nhiên đan xen) đồng nghĩa với 'becomes meaningless' (trở nên vô nghĩa)."
+  },
+  {
+    "id": "wic_126",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "Where park meets nonpark in Africa, the distinction between wilderness and land for human use collapses. For many Europeans and Americans, wilderness lies \"out there distinct from daily life and readily identifiable.\" In Africa, however, it is often impossible to say with certainty where the wilderness begins. Does the region patrolled by park rangers in the Serengeti Plain—otherwise uninhabited bush—qualify as wilderness? By some definition, yes, but the Maasai and other local peoples like the Wata or Wadindiga use the area and feel quite at home there. The most commonplace Western notion of wilderness does not hold in Africa, because human and animal [lives are intertwined].",
+    "question": "In the paragraph above, \"hold\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "continue" },
+      { "key": "B", "text": "pause" },
+      { "key": "C", "text": "contain" },
+      { "key": "D", "text": "apply" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'notion does not hold' (quan niệm phương Tây không còn đúng / không áp dụng được tại châu Phi) đồng nghĩa với 'apply' (áp dụng / có hiệu lực)."
+  },
+  {
+    "id": "wic_127",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "A certain irony attends the publication of any new book on word usage: the people most interested are the ones who least need it. Offering counsel on the finer points of English is generally a matter of preaching to the choir, the choir being that small group of people who actually care about things like ergative verbs.",
+    "question": "In the paragraph above, \"attends\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "heeds" },
+      { "key": "B", "text": "accompanies" },
+      { "key": "C", "text": "goes to" },
+      { "key": "D", "text": "looks after" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'irony attends the publication' (sự trớ trêu luôn đi kèm theo / song hành với việc xuất bản) đồng nghĩa với 'accompanies' (đi cùng / đồng hành)."
+  },
+  {
+    "id": "wic_128",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Wikipedia's view of history is not only more anecdotal and colorful than professional history, it is also like much popular history—more fact oriented. This can be seen in the obsession with list making. The profile of President Franklin D. Roosevelt leads you not just to a roll of all presidents but also to a list of every secretary of the interior, every key event that happened on April 12 (when Roosevelt died), and every major birth in 1882 (when he was born).",
+    "question": "In the paragraph above, \"roll\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "document" },
+      { "key": "B", "text": "quantity" },
+      { "key": "C", "text": "scroll" },
+      { "key": "D", "text": "catalog" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'a roll of all presidents' (bản danh sách / bảng danh mục liệt kê toàn bộ các đời tổng thống) đồng nghĩa với 'catalog' (danh mục / danh sách liệt kê)."
+  },
+  {
+    "id": "wic_129",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "But what do such figures really tell us? Reading at Risk is an example of the style of statistical thinking dominant in our time. It's far from sure that statistics are very helpful in capturing so idiosyncratic an act as reading, except in a bulky and coarse way.",
+    "question": "In the paragraph above, \"coarse\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "boorish" },
+      { "key": "B", "text": "offensive" },
+      { "key": "C", "text": "imprecise" },
+      { "key": "D", "text": "grainy" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'coarse way' (thống kê số liệu chỉ nắm bắt được hành vi đọc một cách cồng kềnh và đại khái, thiếu tinh tế chính xác) đồng nghĩa với 'imprecise' (thiếu chính xác / đại khái)."
+  },
+  {
+    "id": "wic_130",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "In Maine, most men and women who harvest lobsters believe that their industry is healthy, perhaps even too healthy. They worry not about a population collapse but about recent lobster catches that would lead to sharp declines in prices. Even the lobstermen who admit that catches could decline do not see anything wrong with that.",
+    "question": "In the paragraph above, \"sharp\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "acute" },
+      { "key": "B", "text": "shrewd" },
+      { "key": "C", "text": "caustic" },
+      { "key": "D", "text": "piercing" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'sharp declines' (sự sụt giảm giá cả một cách đột ngột và nghiêm trọng) đồng nghĩa với 'acute' (nghiêm trọng / sâu sắc)."
+  },
+  {
+    "id": "wic_131",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "For a long time, I assumed I possessed a deficient sense of humor; now I'm not so sure. Humor, at its base, is contrast: the unexpected intruding shockingly into the thrum of the mundane. We don't expect humor; humor is thrust upon us.",
+    "question": "In the paragraph above, \"base\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "pedestal" },
+      { "key": "B", "text": "ingredient" },
+      { "key": "C", "text": "foundation" },
+      { "key": "D", "text": "site" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Humor, at its base' (bản chất cốt lõi / nền tảng cơ bản của sự hài hước) đồng nghĩa với 'foundation' (nền tảng / cơ sở)."
+  },
+  {
+    "id": "wic_132",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "As we now find ourselves at a cultural watershed—as the quantity of information we receive continually increases and as the fundamental process of transmitting information is shifting from page to screen—it may be time to ask how modifications in our way of reading may impinge upon our mental life. For how we receive information bears vitally on the ways we experience and interpret reality.",
+    "question": "In the paragraph above, \"bears ... on\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "presses down" },
+      { "key": "B", "text": "pushes against" },
+      { "key": "C", "text": "pertains to" },
+      { "key": "D", "text": "carries forward" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'bears on' (có liên quan mật thiết / ảnh hưởng trực tiếp tới) đồng nghĩa với 'pertains to' (gắn liền / liên quan tới)."
+  },
+  {
+    "id": "wic_133",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Her wish to make art that was both substantial and strong was such that, despite her love of the limitless array of colors that could arise with the mixing of paint, she thought sometimes that what she really wanted to do was sculpture: something that would slash against the landscape, loom up and create shelter, and cast shadows in the grass.",
+    "question": "In the paragraph above, \"cast\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "assign" },
+      { "key": "B", "text": "eject" },
+      { "key": "C", "text": "put forth" },
+      { "key": "D", "text": "cause to move" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'cast shadows' (tỏa bóng / chiếu bóng đổ xuống bãi cỏ) đồng nghĩa với 'put forth' (tỏa ra / phát ra)."
+  },
+  {
+    "id": "wic_134",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Fear of technology's unforeseen consequences courses through debates and conversations about genetically engineered plants, especially in countries with strong environmental movements.",
+    "question": "In the paragraph above, \"courses\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "pursues" },
+      { "key": "B", "text": "lectures" },
+      { "key": "C", "text": "runs" },
+      { "key": "D", "text": "examines" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'fear courses through debates' (nỗi sợ hãi len lỏi / chảy tràn qua các cuộc tranh luận) đồng nghĩa với 'runs' (chạy / lan tỏa)."
+  },
+  {
+    "id": "wic_135",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "\"We are rapidly losing the natural world to multinational corporations and governments complicit in their myopic, manic scheme,\" she wrote in 1998, explaining her decision to uproot the genetically modified plants. She called on her fellow citizens to \"act for democracy, for diversity, and to restore a land lush with fields, free of genetic pollution, and free of genetic contamination.\"",
+    "question": "In the paragraph above, \"free of\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "unaffected by" },
+      { "key": "B", "text": "cheated of" },
+      { "key": "C", "text": "open to" },
+      { "key": "D", "text": "liberated by" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'free of pollution' (sạch bóng ô nhiễm / không bị ảnh hưởng, không bị tác động bởi ô nhiễm biến đổi gen) đồng nghĩa với 'unaffected by' (không bị tác động bởi)."
+  },
+  {
+    "id": "wic_136",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The protest groups have raised some important issues about GM crops, but their excessive zeal has diminished their trustworthiness. The most unfortunate collateral damage resulting from this destructive debate has been the loss of perspective on what the appropriate scrutiny of biotechnology should involve.",
+    "question": "In the paragraph above, \"raised\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "nurtured" },
+      { "key": "B", "text": "broached" },
+      { "key": "C", "text": "increased" },
+      { "key": "D", "text": "collected" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'raised some important issues' (nêu lên / khơi mào đưa ra các vấn đề quan trọng) đồng nghĩa với 'broached' (đề cập / nêu ra vấn đề)."
+  },
+  {
+    "id": "wic_137",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Mama said, \"In my day, girls in the family were not given sweets, nuts, good things to eat. If something special had been bought in the market, like sweets or nuts, it was given to the boys in the family. But ours was not such an orthodox home that our mother and aunts did not slip us something on the sly.\" She laughed, remembering that—sweets, sly.",
+    "question": "In the paragraph above, \"slip\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "fall" },
+      { "key": "B", "text": "pass" },
+      { "key": "C", "text": "slink" },
+      { "key": "D", "text": "elude" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'slip us something on the sly' (lén lút chuyền / đưa cho chúng tôi ít đồ ăn ngon) đồng nghĩa với 'pass' (chuyền qua / đưa cho)."
+  },
+  {
+    "id": "wic_138",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "But the philosopher had not buckled before unpopularity and the condemnation of the state. Socrates had not retracted his thoughts because others had complained. Moreover, his confidence had sprung from a more profound source than hotheadedness or bull-like courage. It had been grounded in philosophy that supplied him with convictions in which he had been able to have rational, as opposed to hysterical, confidence when faced with disapproval. Such independence of mind was both a revelation and an incitement. It promised a counterweight to a supine tendency to follow socially sanctioned practices and ideas. In Socrates' life and death lay an invitation to intelligent skepticism.",
+    "question": "In the paragraph above, \"sanctioned\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "restricted" },
+      { "key": "B", "text": "protected" },
+      { "key": "C", "text": "approved" },
+      { "key": "D", "text": "penalized" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'socially sanctioned practices' (những tập tục và quan niệm được xã hội chấp thuận / chuẩn thuận) đồng nghĩa với 'approved' (được tán thành / thừa nhận)."
+  },
+  {
+    "id": "wic_139",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Imagining the unseeable is hard, because imagining means having an image in your mind. And how can you have a mental image of something you have never seen? Like perception itself, the models of science are embedded inextricably in the current worldview we call culture. Imagine (if you can) what the planetary model of the atom would have looked like, its satellite electrons orbiting its sunlike nucleus, if people had still thought the Earth was flat. It would have been literally unthinkable. Unable to suppose what the universe is really like, we rely on our rather limited but comfortably familiar models.",
+    "question": "In the paragraph above, \"suppose\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "pretend" },
+      { "key": "B", "text": "imply" },
+      { "key": "C", "text": "believe" },
+      { "key": "D", "text": "conceive" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Unable to suppose what the universe is really like' (không thể mường tượng / hình dung nổi vũ trụ thực sự ra sao) đồng nghĩa với 'conceive' (hình dung / mường tượng)."
+  },
+  {
+    "id": "wic_140",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Modern researchers have invented ways to peer into the Earth just as if they were digging into it or slicing the planet in two. They have devised methods of mimicking the Earth's extremes of pressure and temperature. Using powerful precision vises and controlled explosions, they can now re-create the conditions of the Earth's interior in their laboratories. And with these sophisticated tools, geophysicists are tracking the forces that shape our planet.",
+    "question": "In the paragraph above, \"controlled\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "regulated" },
+      { "key": "B", "text": "verified" },
+      { "key": "C", "text": "conducted" },
+      { "key": "D", "text": "dominated" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'controlled explosions' (những vụ nổ có điều tiết / được kiểm soát chặt chẽ trong phòng thí nghiệm) đồng nghĩa với 'regulated' (được điều tiết / có kiểm soát)."
+  },
+  {
+    "id": "wic_141",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "No, the romance and beauty were all gone from the river. All the value its features had for me now was the amount of usefulness they could furnish toward compassing the safe piloting of a steamboat. Since those days, I have pitied doctors from my heart. What does the lovely flush in a beautiful cheek mean to doctors but a \"break\" that ripples above some deadly disease? Are not all visible charms shown thick with what are to them the signs and symbols of hidden decay?",
+    "question": "In the paragraph above, \"break\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "an escape from confinement" },
+      { "key": "B", "text": "a planned interruption" },
+      { "key": "C", "text": "a telling irregularity" },
+      { "key": "D", "text": "an open rupture" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'a \"break\" that ripples above some deadly disease' (một dấu hiệu bất thường mang tính cảnh báo lộ ra trên bề mặt của căn bệnh chết người) đồng nghĩa với 'a telling irregularity' (sự bất thường mang tính biểu lộ)."
+  },
+  {
+    "id": "wic_142",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "However, I am not a scholar in the field of Latino literature, but rather a writer of books written in English whose main subjects and settings often reflect the author's emigrant background and issues pertaining to her ethnicity.",
+    "question": "In the paragraph above, \"field\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "unbroken expanse" },
+      { "key": "B", "text": "background knowledge" },
+      { "key": "C", "text": "academic specialty" },
+      { "key": "D", "text": "battleground" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'field of Latino literature' (lĩnh vực / chuyên ngành văn học La-tinh) đồng nghĩa với 'academic specialty' (chuyên ngành học thuật)."
+  },
+  {
+    "id": "wic_143",
+    "topic": "Word in context",
+    "difficulty": "Medium",
+    "passage": "The novelist Reynolds Price, reflecting on his past, wished that his parents had taken more photographs and recorded more of what happened in order to help him overcome creeping uncertainties about the reliability of his own memories. \"I think I recall the look and tone of many of those moments of laughter, pain, and bitter longing,\" muses Price, adding parenthetically that \"the confidence that I do recall them, with a good deal of truthfulness, lies near the foot of my hold on sanity and on the work I do.\" But, Price continues, \"an elementary understanding of the shaping force of memory requires me to grant that I may in fact be anything from fuzzy to lying to badly wrong on every such instance of what I think of as vital recall.\"",
+    "question": "In the paragraph above, \"vital\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "fundamental" },
+      { "key": "B", "text": "life-sustaining" },
+      { "key": "C", "text": "spirited" },
+      { "key": "D", "text": "irreplaceable" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'vital recall' (những ký ức mang tính nền tảng cốt yếu, giữ cho tâm trí tỉnh táo và định hình ngòi bút) đồng nghĩa với 'fundamental' (cốt lõi / căn bản)."
+  },
+  {
+    "id": "wic_144",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "As long as Hurston remains susceptible to what are essentially political judgments, her literary fortunes will continue to fluctuate with the temper of the times. Criticism that restricts itself to ideology misses the basic reason the writer is worth reading in the first place.",
+    "question": "In the paragraph above, \"temper\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "composure" },
+      { "key": "B", "text": "resiliency" },
+      { "key": "C", "text": "anger" },
+      { "key": "D", "text": "mood" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'temper of the times' (xu hướng tâm trạng / không khí tinh thần của thời đại) đồng nghĩa với 'mood' (tâm trạng / xu thế)."
+  },
+  {
+    "id": "wic_145",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The Chinese, for instance, denote the numbers 1, 2, and 3 using one, two, and three horizontal bars—yet they employ a radically different symbol for number 4. Even our own Arabic digits, although they seem arbitrary, derive from the same principle. Our digit 1 is a single bar, and our digits 2 and 3 actually derive from two or three horizontal bars that became tied together when they were deformed by being handwritten.",
+    "question": "In the paragraph above, \"tied\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "joined" },
+      { "key": "B", "text": "secured" },
+      { "key": "C", "text": "constrained" },
+      { "key": "D", "text": "devoted" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'tied together' (các nét gạch ngang được gắn nối liền vào nhau khi viết tay nhanh) đồng nghĩa với 'joined' (nối liền / gắn kết)."
+  },
+  {
+    "id": "wic_146",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "At a dinner party some time ago, a smooth and hypersatisfied young man boasted to me that he had just completed a round-the-world sightseeing tour in 79 days. In one jet-streamed breath, he scuttled from St. Peter's Basilica, Rome, via the Egyptian pyramids, to a Cambodian jungle temple. \"That's the way to travel,\" he said. \"You see everything important.\" When I suggested that the way to see important things was to walk, he almost dropped his club soda.",
+    "question": "In the paragraph above, \"smooth\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "crafty" },
+      { "key": "B", "text": "velvety" },
+      { "key": "C", "text": "gentle" },
+      { "key": "D", "text": "suave" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'smooth young man' (chàng trai bảnh bao, khéo léo, tự mãn về bản thân) đồng nghĩa với 'suave' (lịch thiệp giả tạo / khéo mồm khéo miệng)."
+  },
+  {
+    "id": "wic_147",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Even so, artificial intelligence experts are brilliant at confounding any specific distinction between humans and computers that a layperson raises.",
+    "question": "In the paragraph above, \"raises\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "cultivates" },
+      { "key": "B", "text": "increases" },
+      { "key": "C", "text": "brings up for consideration" },
+      { "key": "D", "text": "places in a higher position" }
+    ],
+    "correctAnswer": "C",
+    "explanation": "'raises a distinction' (đưa ra sự phân biệt để tranh luận / xem xét) đồng nghĩa với 'brings up for consideration' (đưa ra cân nhắc / xem xét)."
+  },
+  {
+    "id": "wic_148",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "And yet I am being unfair to Spanish and also, therefore, to English. Languages do not expand only through conquest: they also grow by offering a safe haven to those who come to them in danger, those who, like my own parents, were forced to flee their native land. I was born in Spanish, literally imagined into being in that [language].",
+    "question": "In the paragraph above, \"expand\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "spread" },
+      { "key": "B", "text": "inflate" },
+      { "key": "C", "text": "unfold" },
+      { "key": "D", "text": "express in detail" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'languages expand' (ngôn ngữ lan rộng / mở rộng độ phủ thông qua sự di cư) đồng nghĩa với 'spread' (lan rộng)."
+  },
+  {
+    "id": "wic_149",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "There she could exercise her genius for understanding people of different cultures, her courage, and her sense of honor. As one of her Danish admirers said, \"She knows everything about the sublimation of loss, about suffering as the nourishment of genius, about pain's resonance and harmony in a work of art.\"",
+    "question": "In the paragraph above, \"exercise\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "rehearse" },
+      { "key": "B", "text": "train" },
+      { "key": "C", "text": "repeat" },
+      { "key": "D", "text": "use" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'exercise her genius' (vận dụng / phát huy tài năng thiên bẩm của mình) đồng nghĩa với 'use' (sử dụng / phát huy)."
+  },
+  {
+    "id": "wic_150",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Not long after I moved with my family to a small town in New Hampshire, I came upon a path that vanished into a wood on the edge of town. A sign announced that this was no ordinary footpath but the celebrated Appalachian Trail. Running more than 2,100 miles along America's eastern seaboard, the AT is the granddaddy of all hikes.",
+    "question": "In the paragraph above, \"Running\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "functioning" },
+      { "key": "B", "text": "fleeing" },
+      { "key": "C", "text": "hastening" },
+      { "key": "D", "text": "extending" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Running more than 2,100 miles' (con đường mòn trải dài hơn 2.100 dặm dọc theo bờ biển) đồng nghĩa với 'extending' (trải dài)."
+  },
+  {
+    "id": "wic_151",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "There is nothing difficult in going into such places. All you need is the right equipment, a reasonable competence in using it, a tolerable degree of physical fitness, and a clear understanding of your own limitations. Beyond that, all you have to do is overcome the fear of the unknown.",
+    "question": "In the paragraph above, \"clear\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "serene" },
+      { "key": "B", "text": "transparent" },
+      { "key": "C", "text": "innocent" },
+      { "key": "D", "text": "keen" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'clear understanding' (sự thấu hiểu sâu sắc, sáng suốt và nhạy bén về giới hạn bản thân) đồng nghĩa với 'keen' (sắc bén / sâu sắc)."
+  },
+  {
+    "id": "wic_152",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Perhaps the most universal characteristic of animal signals is their adherence to a basic rule of pitch. High-pitched tones (a dog's whine) convey appeasement, fear, and an overall nonthreatening state. Deep, rough sounds (a dog's growl!) convey aggression, hostility, threat.",
+    "question": "In the paragraph above, \"rough\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "harsh" },
+      { "key": "B", "text": "unfinished" },
+      { "key": "C", "text": "irregular" },
+      { "key": "D", "text": "uneven" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'rough sounds (a dog's growl!)' (âm thanh gầm gừ trầm đục, dữ dội và gay gắt) đồng nghĩa với 'harsh' (chát chúa / gay gắt)."
+  },
+  {
+    "id": "wic_153",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Griffin suggests that animal communication is a window on the conscious minds of animals that \"it seems likely that animals often experience something similar to the message they communicate.\" But if the messages are not messages at all, and if indeed they are unconscious products of natural selection, then Griffin's argument is cast in a very different light.",
+    "question": "In the paragraph above, \"cast\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "discarded" },
+      { "key": "B", "text": "presented" },
+      { "key": "C", "text": "molded" },
+      { "key": "D", "text": "directed" }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'cast in a different light' (lập luận được trình bày / nhìn nhận dưới một góc độ hoàn toàn khác) đồng nghĩa với 'presented' (được trình bày / thể hiện)."
+  },
+  {
+    "id": "wic_154",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "The cornerstone of the blockbuster movie is the \"high concept\" a standard Hollywood term referring to a simple idea that can be easily communicated. High-concept films are designed to give audiences familiar points of reference with other movies (hence, the plethora of Hollywood sequels: five for Rocky, three for Jaws, three for Die Hard), rather than promoting new or innovative story lines. All of this suggests that Hollywood is a slave to trends.",
+    "question": "In the paragraph above, \"cornerstone\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "fundamental element" },
+      { "key": "B", "text": "sharp digression" },
+      { "key": "C", "text": "turning point" },
+      { "key": "D", "text": "secret essence" }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'cornerstone' (đá tảng / nền móng / yếu tố cơ bản cốt lõi nhất của các bộ phim bom tấn) đồng nghĩa với 'fundamental element' (yếu tố cốt lõi)."
+  },
+  {
+    "id": "wic_155",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "From this experience Fleming learned abundantly what Ernest Hemingway took from his French auto-trip with fellow writer F. Scott Fitzgerald: \"Never go on trips with anyone you do not love.\"",
+    "question": "In the paragraph above, \"took\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "snatched" },
+      { "key": "B", "text": "withstood" },
+      { "key": "C", "text": "required" },
+      { "key": "D", "text": "gleaned" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'what Hemingway took from his trip' (bài học / kinh nghiệm mà Hemingway đúc rút / thu lượm được sau chuyến đi) đồng nghĩa với 'gleaned' (thu thập / đúc rút)."
+  },
+  {
+    "id": "wic_156",
+    "topic": "Word in context",
+    "difficulty": "Easy",
+    "passage": "Later LuLing had Ruth try her hand at the same character, the whole time stuffing Chinese logic into her resistant brain, \"Hold your wrist this way, firm but still loose, like a young willow branch—ai-ya, not collapsed like something lying on the road. Draw the stroke with grace, like a bird landing on a branch. Do it like this, light first, then temple. See? Together, it means news from the gods. See how this knowledge always comes from above? See how Chinese words make sense?\"",
+    "question": "In the paragraph above, \"stuffing\" most nearly means?",
+    "options": [
+      { "key": "A", "text": "dunking" },
+      { "key": "B", "text": "gorging" },
+      { "key": "C", "text": "condensing" },
+      { "key": "D", "text": "cramming" }
+    ],
+    "correctAnswer": "D",
+    "explanation": "'stuffing logic into her brain' (nhồi nhét kiến thức / tư duy vào một bộ não đang kháng cự) đồng nghĩa với 'cramming' (nhồi nhét / học vẹt cấp tốc)."
+  }
+]

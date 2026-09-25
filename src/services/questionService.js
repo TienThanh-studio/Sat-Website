@@ -1,11 +1,8 @@
-import initialQuestions from '../data/mockQuestions.json';
+import initialQuestions from '../data/mockQuestions.js';
 import { storageService } from './storageService';
 
-/**
- * questionService.js
- * Quản lý kho câu hỏi, thuật toán sinh đề ma trận ngẫu nhiên, lưu lịch sử trả lời.
- */
 export const questionService = {
+  // Lấy toàn bộ câu hỏi gồm dữ liệu gốc + câu hỏi Admin tự tạo thêm
   getAllQuestions() {
     const custom = storageService.get(storageService.KEYS.CUSTOM_QUESTIONS, []);
     return [...initialQuestions, ...custom];
@@ -28,50 +25,55 @@ export const questionService = {
     storageService.set(storageService.KEYS.CUSTOM_QUESTIONS, updated);
   },
 
-  // Thuật toán sinh đề ngẫu nhiên theo ma trận
+  // Thuật toán lọc đề ma trận chuẩn xác
   generateMatrixExam({ topic, topics = [], difficulty, count = 10 }) {
     let pool = this.getAllQuestions();
 
-    // Lọc theo chủ đề
     if (topics && topics.length > 0) {
-      pool = pool.filter(q => topics.includes(q.topic));
+      pool = pool.filter(q => topics.some(t => t.toLowerCase() === (q.topic || '').toLowerCase()));
     } else if (topic && topic !== 'All') {
-      pool = pool.filter(q => q.topic.toLowerCase() === topic.toLowerCase());
+      pool = pool.filter(q => (q.topic || '').toLowerCase() === topic.toLowerCase());
     }
 
-    // Lọc theo độ khó
     if (difficulty && difficulty !== 'All') {
-      pool = pool.filter(q => q.difficulty.toLowerCase() === difficulty.toLowerCase());
+      pool = pool.filter(q => (q.difficulty || '').toLowerCase() === difficulty.toLowerCase());
     }
 
-    // Xáo trộn ngẫu nhiên (Fisher-Yates Shuffle)
+    // Nếu không tìm thấy câu đúng yêu cầu, fallback lấy câu ngẫu nhiên trong pool
+    if (pool.length === 0) {
+      pool = this.getAllQuestions();
+    }
+
     const shuffled = [...pool].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, Math.min(count, shuffled.length));
   },
 
-  // Thống kê tiến độ theo Topic
+  // Tính số câu hỏi thật và số câu làm đúng thật từ localStorage
   getTopicStats() {
     const all = this.getAllQuestions();
     const statsMap = {};
+    const correctHistory = storageService.get('exam_correct_questions_set', {});
 
     all.forEach(q => {
-      if (!statsMap[q.topic]) {
-        statsMap[q.topic] = { total: 0, correct: 0 };
+      const topicName = q.topic || 'General';
+      if (!statsMap[topicName]) {
+        statsMap[topicName] = { total: 0, correct: 0 };
       }
-      statsMap[q.topic].total += 1;
-    });
-
-    // Lấy thông tin người dùng đã làm đúng từ storage
-    const userAnswers = storageService.get('exam_user_answers_history', {});
-    Object.keys(userAnswers).forEach(qId => {
-      const targetQ = all.find(q => q.id === qId);
-      if (targetQ && userAnswers[qId] === targetQ.correctAnswer) {
-        if (statsMap[targetQ.topic]) {
-          statsMap[targetQ.topic].correct += 1;
-        }
+      statsMap[topicName].total += 1;
+      
+      // Nếu câu này người dùng đã từng làm đúng
+      if (correctHistory[q.id] === true) {
+        statsMap[topicName].correct += 1;
       }
     });
 
     return statsMap;
+  },
+
+  // Lưu một câu hỏi là đã làm đúng (gọi khi bấm Check hoặc nộp bài)
+  recordCorrectAnswer(questionId) {
+    const correctHistory = storageService.get('exam_correct_questions_set', {});
+    correctHistory[questionId] = true;
+    storageService.set('exam_correct_questions_set', correctHistory);
   }
 };

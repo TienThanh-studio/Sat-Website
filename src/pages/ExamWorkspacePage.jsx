@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import PracticeMode from '../components/exam/PracticeMode';
 import RealExamMode from '../components/exam/RealExamMode';
 import { storageService } from '../services/storageService';
-import { Timer, ArrowLeft, CheckCircle2, Bookmark } from 'lucide-react';
+import { questionService } from '../services/questionService';
+import { Timer, ArrowLeft, CheckCircle2 } from 'lucide-react';
 
 export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   const [questions] = useState(sessionConfig.questions || []);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [markedQuestions, setMarkedQuestions] = useState({});
-  const [timeLeft, setTimeLeft] = useState(sessionConfig.duration || 1800); // 30 phút
+  const [timeLeft, setTimeLeft] = useState(sessionConfig.duration || 1800);
   const [isFinished, setIsFinished] = useState(false);
 
-  // Phục hồi session nếu đã lưu từ trước (F5 không mất)
+  // Khôi phục session cũ nếu reload F5
   useEffect(() => {
     const saved = storageService.getExamSession();
     if (saved && saved.sessionId === sessionConfig.sessionId) {
@@ -23,7 +24,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     }
   }, [sessionConfig.sessionId]);
 
-  // Auto-Save State mỗi khi học viên chọn đáp án hoặc tick cờ
+  // Tự động lưu tiến trình làm bài
   useEffect(() => {
     if (!isFinished && questions.length > 0) {
       storageService.saveExamSession({
@@ -36,7 +37,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     }
   }, [answers, markedQuestions, timeLeft, currentIndex, isFinished, sessionConfig.sessionId, questions.length]);
 
-  // Đồng hồ đếm ngược
+  // Đếm ngược thời gian
   useEffect(() => {
     if (isFinished) return;
     const timer = setInterval(() => {
@@ -63,6 +64,12 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
       ...prev,
       [qId]: optionKey
     }));
+
+    // Trong chế độ Practice: nếu trả lời đúng câu hiện tại thì lưu ngay vào danh sách câu đúng thật
+    const currentQ = questions.find(q => q.id === qId);
+    if (sessionConfig.mode === 'PRACTICE' && currentQ && optionKey === currentQ.correctAnswer) {
+      questionService.recordCorrectAnswer(qId);
+    }
   };
 
   const handleToggleMark = (qId) => {
@@ -76,12 +83,14 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     setIsFinished(true);
     storageService.clearExamSession();
 
-    // Lưu vào lịch sử câu trả lời
-    const history = storageService.get('exam_user_answers_history', {});
-    storageService.set('exam_user_answers_history', { ...history, ...answers });
+    // Ghi nhận tất cả các câu đã trả lời đúng trong đề thi thật
+    questions.forEach(q => {
+      if (answers[q.id] === q.correctAnswer) {
+        questionService.recordCorrectAnswer(q.id);
+      }
+    });
   };
 
-  // MÀN HÌNH KẾT QUẢ SAU KHI NỘP BÀI THI THẬT
   if (isFinished) {
     let correctCount = 0;
     questions.forEach(q => {
@@ -95,7 +104,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             <CheckCircle2 className="w-8 h-8" />
           </div>
           <h2 className="text-xl font-bold text-slate-900 mb-1">Hoàn thành bài thi!</h2>
-          <p className="text-xs text-slate-500 mb-6">Kết quả làm bài đã được ghi nhận vào bảng tiến độ cá nhân.</p>
+          <p className="text-xs text-slate-500 mb-6">Kết quả làm bài đã được ghi nhận vào tiến độ của bạn.</p>
 
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -115,6 +124,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           </div>
 
           <button
+            type="button"
             onClick={onExit}
             className="w-full py-3 bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs rounded-xl shadow transition"
           >
@@ -127,22 +137,22 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
 
   return (
     <div className="h-screen flex flex-col bg-white">
-      {/* Thanh Header của phòng thi (ảnh 3) */}
+      {/* Top Bar */}
       <div className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white z-10 shrink-0">
         <div className="flex items-center gap-3">
-          <button onClick={onExit} className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-500 transition">
+          <button type="button" onClick={onExit} className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-500 transition">
             <ArrowLeft className="w-4 h-4" />
           </button>
           <span className="font-bold text-slate-800 text-sm">{sessionConfig.title}</span>
         </div>
 
-        {/* Đồng hồ đếm ngược */}
         <div className="flex items-center gap-2 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
           <Timer className="w-4 h-4 text-slate-600" />
           <span className="font-mono font-bold text-xs text-slate-800">{formatTime(timeLeft)}</span>
         </div>
 
         <button
+          type="button"
           onClick={onExit}
           className="text-xs font-semibold text-slate-500 hover:text-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition"
         >
@@ -150,7 +160,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
         </button>
       </div>
 
-      {/* Thể hiện chế độ làm bài tương ứng */}
       {sessionConfig.mode === 'PRACTICE' ? (
         <PracticeMode
           question={questions[currentIndex]}

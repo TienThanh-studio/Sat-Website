@@ -10,21 +10,34 @@ export default function QuestionBankPage({ onStartSession }) {
   const [status, setStatus] = useState('All');
   const [isMatrixOpen, setIsMatrixOpen] = useState(false);
 
-  // Lấy thống kê số câu đúng thực tế từ questionService
+  // Lấy thống kê số câu hỏi và số câu làm đúng thực tế từ questionService
+  const allQuestions = questionService.getAllQuestions();
   const stats = questionService.getTopicStats();
 
-  const topicsList = [
-    { name: 'Word in Context', total: 170, correct: stats['Word in Context']?.correct || 30 },
-    { name: 'Main Idea', total: 35, correct: stats['Main Idea']?.correct || 0 },
-    { name: 'Text Structure', total: 37, correct: stats['Text Structure']?.correct || 0 },
-    { name: 'Command of Evidence', total: 44, correct: stats['Command of Evidence']?.correct || 1 },
-    { name: 'Inference', total: 58, correct: stats['Inference']?.correct || 0 },
-    { name: 'Cross Text', total: 19, correct: stats['Cross Text']?.correct || 0 },
-    { name: 'Grammar', total: 294, correct: stats['Grammar']?.correct || 95 },
-    { name: 'Transition', total: 102, correct: stats['Transition']?.correct || 0 },
-    { name: 'Rhetorical Synthesis', total: 42, correct: stats['Rhetorical Synthesis']?.correct || 0 },
-    { name: 'Details', total: 33, correct: stats['Details']?.correct || 0 },
+  // Danh mục các Topic chính trong đề thi
+  const standardTopics = [
+    'Details',
+    'Cross Text',
+    'Inference',
+    'Grammar',
+    'Transition',
+    'Command of evidence',
+    'Word in context',
+    'Vocabulary'
   ];
+
+  // Tính tổng số lượng và số câu đúng cho từng Topic theo dữ liệu thật
+  const topicsList = standardTopics.map(name => {
+    // Tìm key tương ứng không phân biệt hoa thường
+    const matchedKey = Object.keys(stats).find(k => k.toLowerCase() === name.toLowerCase());
+    return {
+      name,
+      total: matchedKey ? stats[matchedKey].total : 0,
+      correct: matchedKey ? stats[matchedKey].correct : 0
+    };
+  });
+
+  const totalAllQuestions = allQuestions.length;
 
   const handleStartExam = (matrixConfig) => {
     const questions = questionService.generateMatrixExam(matrixConfig);
@@ -39,7 +52,7 @@ export default function QuestionBankPage({ onStartSession }) {
     const questions = questionService.generateMatrixExam({
       topic: topicName,
       difficulty: difficulty !== 'All' ? difficulty : undefined,
-      count: 10
+      count: 20
     });
     onStartSession({
       questions,
@@ -65,11 +78,11 @@ export default function QuestionBankPage({ onStartSession }) {
         }}
       />
 
-      {/* Grid chứa Category Cards */}
+      {/* Grid danh mục câu hỏi */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <CategoryCard
           title="Question Bank Phase 2"
-          totalCount={1413}
+          totalCount={totalAllQuestions}
           topics={topicsList}
           onOpenMatrix={() => setIsMatrixOpen(true)}
           onSelectTopic={handleSelectSingleTopic}

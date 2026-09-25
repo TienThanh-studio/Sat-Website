@@ -1,0 +1,1925 @@
+[
+  {
+    "id": "trans_01",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1942, the 1,500-mile Alaska Highway was constructed in under nine months, largely due to the skilled work of nearly 4,000 African American soldiers from US Army engineering regiments. The soldiers' contribution was overlooked for decades. _______ in 2017, lawmakers declared October 25 a day of recognition—\"Alaska Highway Day\"—for the troops who helped build this critical roadway.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Lastly," },
+      { "key": "B", "text": "Then," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Từ nối 'Then,' (Sau đó) diễn tả mốc thời gian nối tiếp theo dòng sự kiện: sau nhiều thập kỷ bị lãng quên thì đến năm 2017 đóng góp của họ đã được công nhận."
+  },
+  {
+    "id": "trans_02",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Samuel Coleridge-Taylor was a prominent classical music composer from England who toured the US three times in the early 1900s. The child of a West African father and an English mother, Coleridge-Taylor emphasized his mixed-race ancestry. For example, he referred to himself as Anglo-African. _______ he incorporated the sounds of traditional African music into his classical music compositions.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In addition," },
+      { "key": "B", "text": "Actually," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Regardless," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu trước nêu một minh chứng cho việc ông nhấn mạnh gốc gác chủng tộc của mình (tự gọi là Anglo-African). Câu sau bổ sung thêm một hành động khác thể hiện điều đó (kết hợp âm nhạc truyền thống châu Phi) -> Dùng 'In addition,' (Ngoài ra / Hơn nữa)."
+  },
+  {
+    "id": "trans_03",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1968, US Congressman John Conyers introduced a bill to establish a national holiday in honor of Dr. Martin Luther King Jr. The bill didn't make it to a vote, but Conyers was determined. He teamed up with Shirley Chisholm, the first Black woman to be elected to Congress, and they resubmitted the bill every session for the next fifteen years. _______ in 1983, the bill passed.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Instead," },
+      { "key": "B", "text": "Likewise," },
+      { "key": "C", "text": "Finally," },
+      { "key": "D", "text": "Additionally," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sau chuỗi ngày bền bỉ đệ trình lại dự luật suốt 15 năm liên tục, kết quả sau cùng đã đạt được vào năm 1983 -> Dùng từ nối kết quả thời gian 'Finally,' (Cuối cùng)."
+  },
+  {
+    "id": "trans_04",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "It has long been thought that humans first crossed a land bridge into the Americas approximately 13,000 years ago. _______ based on radiocarbon dating of samples uncovered in Mexico, a research team recently suggested that humans may have arrived more than 30,000 years ago—much earlier than previously thought.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "Similarly," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "In conclusion," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hai câu có mối quan hệ tương phản đối lập: quan niệm lâu năm cho rằng là 13.000 năm trước, nhưng bằng chứng mới cho thấy là hơn 30.000 năm trước -> Dùng 'However,' (Tuy nhiên)."
+  },
+  {
+    "id": "trans_05",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Researchers believe that pieces of hull found off Oregon's coast are from a Spanish cargo ship that was lost in 1697. Stories passed down among the area's Confederated Tribes of Siletz Indians support this belief. _______ Siletz stories describe how blocks of beeswax, an item the ship had been carrying, began washing ashore after the ship was lost.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For this reason," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Likewise," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Câu sau đưa ra một chi tiết cụ thể trong các câu chuyện dân gian của bộ tộc Siletz (kể về các khối sáp ong trôi dạt) để làm ví dụ minh họa cho nhận định ở câu trước -> Dùng 'For example,'."
+  },
+  {
+    "id": "trans_06",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Geoscientists have long considered Hawaii's Mauna Loa volcano to be Earth's largest shield volcano by volume, measuring approximately 74,000 cubic kilometers. _______ according to a 2020 study by local geoscientist Michael Garcia, Hawaii's Pūhāhonu shield volcano is significantly larger, boasting a volume of about 148,000 cubic kilometers.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Secondly," },
+      { "key": "B", "text": "Consequently," },
+      { "key": "C", "text": "Moreover," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu đầu nêu quan niệm truyền thống (núi lửa Mauna Loa lớn nhất), câu sau đưa ra số liệu nghiên cứu mới khẳng định núi lửa Pūhāhonu lớn hơn gấp đôi -> Quan hệ tương phản đối lập: 'However,'."
+  },
+  {
+    "id": "trans_07",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Before the 1847 introduction of the US postage stamp, the cost of postage was usually paid by the recipient of a letter rather than the sender, and recipients were not always able or willing to pay promptly. _______ collecting this fee could be slow and arduous, and heaps of unpaid-for, undeliverable mail piled up in post offices.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Regardless," },
+      { "key": "B", "text": "On the contrary," },
+      { "key": "C", "text": "Consequently," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Việc người nhận không thể hoặc không sẵn sàng trả phí bưu chính đã dẫn đến hệ quả là quá trình thu phí bị đình trệ và thư từ tồn đọng chất đống -> Quan hệ nhân quả: 'Consequently,' (Hệ quả là / Do đó)."
+  },
+  {
+    "id": "trans_08",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "A potter choosing which type of clay to use for a piece considers two key factors: the desired look of the piece and its intended use. _______ earthenware clay is often used for decorative pieces because of its rustic look. This type of clay is not often used in industrial settings, though, because it is less durable than other clays.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "Regardless," },
+      { "key": "C", "text": "In conclusion," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Trường hợp đất sét nung (earthenware clay) được chọn làm đồ trang trí vì vẻ mộc mạc chính là một ví dụ minh họa cụ thể cho nguyên tắc chọn đất sét đã nêu -> Dùng 'For example,'."
+  },
+  {
+    "id": "trans_09",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In Gothic architecture, flying buttresses are large arches that help support a building's exterior walls. Before the Gothic era, cathedrals' heavy ceilings had to be supported by thick, short walls, but the invention of flying buttresses eliminated this need. _______ Gothic cathedrals could be built with thinner, higher walls.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "For instance," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "As a result," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nhờ phát minh trụ chống vòm kiểu Gothic loại bỏ được nhu cầu phải xây tường dày, kết quả là các nhà thờ có thể xây tường mỏng hơn và cao hơn -> Dùng 'As a result,' (Kết quả là)."
+  },
+  {
+    "id": "trans_10",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Tyrian purple was a highly prized dye among the Phoenicians (an ancient civilization located in present-day Lebanon). The Phoenicians were famous for using this natural dye to color their clothes a distinctive purple. _______ the name \"Phoenicia\" itself, some historians claim, may have originally meant \"land of purple.\"",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In fact," },
+      { "key": "B", "text": "Regardless," },
+      { "key": "C", "text": "Lastly," },
+      { "key": "D", "text": "On the contrary," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Từ nối 'In fact,' (Trên thực tế / Thậm chí) được dùng để bổ sung một thông tin làm nổi bật thêm mức độ nổi tiếng của thuốc nhuộm này: chính cái tên của đất nước họ có thể mang nghĩa là 'vùng đất của màu tím'."
+  },
+  {
+    "id": "trans_11",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Celebrated Tewa potter Maria Martinez (1887–1980) made her signature all-black ceramic vessels using a heating technique called reduction firing. This technique involves smothering the flame surrounding the clay vessel. _______ the vessel takes on a shiny, black hue.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "On the contrary," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "Previously," },
+      { "key": "D", "text": "As a result," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Hành động dập ngọn lửa xung quanh bình đất sét dẫn đến kết quả bình gốm đổi sang màu đen bóng -> Quan hệ nguyên nhân - kết quả: 'As a result,'."
+  },
+  {
+    "id": "trans_12",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Etched into Peru's Nazca Desert are line drawings so large that they can only be fully seen from high above. Archaeologists have known of the lines since the 1920s, when a researcher spotted some from a nearby foothill, and they have been studying the markings ever since. _______ archaeologists' efforts are aided by drones that capture high-resolution aerial photographs of the lines.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Currently," },
+      { "key": "B", "text": "In comparison," },
+      { "key": "C", "text": "Still," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Đối lập mốc thời gian từ những năm 1920 với thời điểm hiện nay khi các nhà khoa học sử dụng thiết bị bay không người lái (drone) hiện đại -> Dùng 'Currently,' (Hiện tại / Ngày nay)."
+  },
+  {
+    "id": "trans_13",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Most conifers (trees belonging to the phylum Coniferophyta) are evergreen. That is, they keep their green leaves or needles year-round. However, not all conifer species are evergreen. Larch trees, _______ lose their needles every fall.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "for instance," },
+      { "key": "B", "text": "nevertheless," },
+      { "key": "C", "text": "meanwhile," },
+      { "key": "D", "text": "in addition," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Cây thông rụng lá (Larch trees) là ví dụ chứng minh cho việc không phải cây lá kim nào cũng thường xanh quanh năm mà rụng lá vào mùa thu -> Dùng 'for instance,' (chẳng hạn như)."
+  },
+  {
+    "id": "trans_14",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Small, flat structures called spatulae are found at the tips of the hairs on a spider's leg. These spatulae temporarily bond with the atoms of whatever they touch. _______ spiders are able to cling to and climb almost any surface.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For instance," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "As a result," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nhờ các cấu trúc nhỏ liên kết tạm thời với nguyên tử trên bề mặt mà kết quả là nhện có thể bám dính và leo trèo được trên mọi bề mặt -> Dùng 'As a result,'."
+  },
+  {
+    "id": "trans_15",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Few New Yorkers have heard Thelma Pollard's name. _______ many have seen her work in the famous Broadway musical The Phantom of the Opera. As the musical's longtime makeup supervisor, Pollard put the iconic makeup on the face of the Phantom himself.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "Therefore," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Mối quan hệ tương phản rõ rệt: Rất ít người biết tên bà (few have heard), nhưng nhiều người đã xem tác phẩm của bà (many have seen) -> Dùng 'However,'."
+  },
+  {
+    "id": "trans_16",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Famous for its four-degree tilt, the leaning Garisenda Tower is a popular attraction in Bologna's city center. However, measurements taken in 2023 showed that the tower was rotating in a concerning way. _______ city officials closed the area around the tower so experts could explore solutions to stabilize the historical twelfth-century structure.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "As a result," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "In comparison," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vì các số đo cho thấy tháp xoay chuyển một cách đáng báo động, dẫn đến kết quả chính quyền thành phố phải phong tỏa khu vực xung quanh -> Dùng 'As a result,'."
+  },
+  {
+    "id": "trans_17",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "When Chinese director Chloé Zhao accepted the Oscar in 2021 for her film Nomadland, she made Academy Award history. _______ only one other woman, Kathryn Bigelow of the United States, had been named best director at the Oscars, making Zhao the second woman and the first Asian woman to win the award.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "Previously," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Likewise," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Câu sau đề cập đến thời gian trước sự kiện năm 2021 của Triệu Đình: trước đó ('Previously,'), mới chỉ có duy nhất một người phụ nữ khác từng đoạt giải Oscar đạo diễn."
+  },
+  {
+    "id": "trans_18",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "When sculptor Frédéric Auguste Bartholdi was designing the Statue of Liberty, he sought the advice of engineer Gustave Eiffel. Eiffel suggested that he make the statue's arm thick and position it straight above the figure's head. _______ Bartholdi decided to slim the arm and tilt it out at an angle.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Additionally," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "Thus," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bartholdi không làm theo đề xuất làm cánh tay dày và thẳng đứng của Eiffel, mà thay vào đó ('Instead,'), ông quyết định làm cánh tay thon gọn và nghiêng một góc."
+  },
+  {
+    "id": "trans_19",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The 435 state districts in the US House of Representatives are designed to be roughly equal in population. These districts average around 760,000 people in size. However, only about 730,000 people live in the state of Alaska. _______ Alaska has just one House district, encompassing the entire state.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "Finally," },
+      { "key": "D", "text": "For instance," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Do toàn bộ dân số bang Alaska chỉ tương đương quy mô của một khu vực bầu cử, kết quả là cả bang chỉ có một khu vực đại biểu duy nhất -> Quan hệ nhân quả: 'As a result,'."
+  },
+  {
+    "id": "trans_20",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "As a young historian in the 1950s, Alixa Naff began interviewing fellow Arab American immigrants about their experiences straddling two cultures. Over the next few decades, Naff conducted more than 450 such interviews, also known as oral histories. _______ she collected photographs and other artifacts that represented her subjects' experiences.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "On the contrary," },
+      { "key": "C", "text": "In addition," },
+      { "key": "D", "text": "Today," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Bên cạnh việc thực hiện hơn 450 cuộc phỏng vấn truyền miệng, bà còn thu thập thêm các bức ảnh và kỷ vật -> Từ nối bổ sung ý: 'In addition,' (Ngoài ra)."
+  },
+  {
+    "id": "trans_21",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Neuroscientist Karen Konkoly wanted to determine whether individuals can understand and respond to questions during REM sleep. She first taught volunteers eye movements they would use to respond to basic math problems while asleep (a single left-right eye movement indicated the number one). _______ she attached electrodes to the volunteers' faces to record their eye movements during sleep.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Specifically," },
+      { "key": "B", "text": "Next," },
+      { "key": "C", "text": "For instance," },
+      { "key": "D", "text": "In sum," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Trình tự các bước tiến hành thí nghiệm: Bước đầu tiên là dạy cử động mắt ('She first taught...'), bước tiếp theo là gắn các điện cực ('Next, she attached...')."
+  },
+  {
+    "id": "trans_22",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Paleontologists once thought that early apes lived in tropical forests, but recent research suggests that they may have actually lived in savannas. Tropical forests are humid and have many trees spaced close together. _______ savannas are drier, and their trees are spaced further apart.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For instance," },
+      { "key": "B", "text": "In comparison," },
+      { "key": "C", "text": "Firstly," },
+      { "key": "D", "text": "In conclusion," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "So sánh hai môi trường sinh thái đối chiếu: rừng nhiệt đới ẩm ướt nhiều cây san sát, trong khi savan thì khô cằn và cây cối thưa thớt -> Dùng 'In comparison,' (Khi so sánh / Ngược lại)."
+  },
+  {
+    "id": "trans_23",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In June, female loggerhead sea turtles will swim back to the sandy beaches where they were born to lay eggs of their own. First, the turtle will dig her nest in the sand. _______ she will lay up to 100 eggs in the nest. Finally, she will cover it all with sand, before returning to the ocean.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "By contrast," },
+      { "key": "B", "text": "Similarly," },
+      { "key": "C", "text": "Next," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Trình tự hành động theo thời gian: 'First,...' (Đầu tiên) -> 'Next,...' (Tiếp theo) -> 'Finally,...' (Cuối cùng)."
+  },
+  {
+    "id": "trans_24",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "When following musical scores, professional opera singers like soprano Ana María Martínez take vocal directions from descriptive notations, typically in Italian, that appear alongside the musical notes. _______ these descriptive terms might guide the performer to sing giocoso (playfully) or lento (at a slow tempo).",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "On the other hand," },
+      { "key": "B", "text": "All the same," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "In the second place," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Các thuật ngữ mô tả cụ thể bằng tiếng Ý như 'giocoso' hay 'lento' được nêu ra như những ví dụ minh họa trực tiếp cho 'descriptive notations' -> Dùng 'For example,'."
+  },
+  {
+    "id": "trans_25",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "After appropriate permissions are granted, a typical archaeological dig begins with a surveyor making a detailed grid of the excavation site. Then, the site is carefully dug, and any artifacts found are recorded and mapped onto the site grid. _______ the artifacts are removed, cataloged, and analyzed in a laboratory.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For instance," },
+      { "key": "B", "text": "On the contrary," },
+      { "key": "C", "text": "Earlier," },
+      { "key": "D", "text": "Finally," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Bước kết thúc cuối cùng của một chu trình khai quật khảo cổ sau khi đo đạc và đào bới là chuyển hiện vật về phòng thí nghiệm phân loại -> Dùng 'Finally,' (Cuối cùng)."
+  }
+,
+  {
+    "id": "trans_26",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Marcel Duchamp intended his 1917 so-called ready-made sculpture Fountain to challenge then-prevailing conceptions about the nature of art. _______ Duchamp's Fountain did just that, raising the question of whether displaying any object in an art gallery could be said to transform the object—even, as Duchamp's sculpture was, a urinal—into a legitimate work of art.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "Indeed," },
+      { "key": "C", "text": "Instead," },
+      { "key": "D", "text": "In addition," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Từ nối 'Indeed,' (Thật vậy / Quả thực) được dùng để nhấn mạnh và xác nhận rằng tác phẩm của Duchamp trên thực tế đã làm đúng như ý định ban đầu của ông."
+  },
+  {
+    "id": "trans_27",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "On March 3, 1991, Switzerland's government lowered the minimum voting age for its citizens from 20 to 18 years old. _______ many people in Switzerland gained a new opportunity to participate in their country's political process.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Nevertheless," },
+      { "key": "B", "text": "As a result," },
+      { "key": "C", "text": "By contrast," },
+      { "key": "D", "text": "Similarly," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hạ độ tuổi bầu cử từ 20 xuống 18 dẫn đến kết quả là nhiều thanh niên có thêm cơ hội tham gia vào đời sống chính trị -> Mối quan hệ nguyên nhân - kết quả: 'As a result,'."
+  },
+  {
+    "id": "trans_28",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "The envelope-shaped paper bags common in the US 150 years ago were impractical for carrying goods. _______ because they were the only paper bags that could be mass-produced, these bags dominated the market. That all changed in the 1870s, when industrial designer Margaret Knight patented a machine to make flat-bottomed, foldable paper bags.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "For instance," },
+      { "key": "C", "text": "Thus," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Quan hệ tương phản đối lập: Dù túi giấy kiểu phong bì rất bất tiện khi đựng đồ ('impractical'), tuy nhiên ('However,') chúng vẫn thống trị thị trường vì là loại duy nhất sản xuất hàng loạt được lúc bấy giờ."
+  },
+  {
+    "id": "trans_29",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Although novels and poems are considered distinct literary forms, many authors have created hybrid works that incorporate elements of both. Bernardine Evaristo's The Emperor's Babe, _______ is a verse novel, a book-length narrative complete with characters and a plot but conveyed in short, crisp lines of poetry rather than prose.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "by contrast," },
+      { "key": "B", "text": "consequently," },
+      { "key": "C", "text": "secondly," },
+      { "key": "D", "text": "for example," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Tác phẩm The Emperor's Babe là một ví dụ minh họa điển hình cho thể loại tác phẩm lai kết hợp giữa tiểu thuyết và thơ -> Dùng 'for example,'."
+  },
+  {
+    "id": "trans_30",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In studying whether jellyfish sleep, researchers Michael Abrams, Claire Bedbrook, and Ravi Nath attempted to answer three questions. _______ is there a period each day when the pulse rates of jellyfish decline? Second, do jellyfish respond more slowly to stimuli during that period? Finally, if prevented from sleeping, are jellyfish adversely affected?",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "First," },
+      { "key": "C", "text": "Additionally," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Liệt kê chuỗi câu hỏi nghiên cứu: 'First,...' (Thứ nhất) -> 'Second,...' (Thứ hai) -> 'Finally,...' (Cuối cùng)."
+  },
+  {
+    "id": "trans_31",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Every chemical compound has a spectroscopic fingerprint, a pattern of reflected light unique to that compound. _______ upon analyzing the light reflected by the bright regions on the surface of the dwarf planet Ceres, Maria Cristina De Sanctis of Rome's National Institute of Astrophysics was able to determine that the regions contain large amounts of the compound sodium carbonate.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Regardless," },
+      { "key": "B", "text": "Meanwhile," },
+      { "key": "C", "text": "Thus," },
+      { "key": "D", "text": "In comparison," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Mỗi hợp chất có quang phổ riêng biệt, do đó ('Thus,') nhà khoa học dựa vào việc phân tích ánh sáng phản xạ để xác định bề mặt hành tinh lùn Ceres chứa natri cacbonat."
+  },
+  {
+    "id": "trans_32",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The ancient Spartans were known for their bitingly concise—or laconic—wit, a quality they maintained even in the face of great peril. _______ when Philip II of Macedon threatened Laconia (the region of Greece containing Sparta), he said, \"If I invade Laconia, I shall turn you out.\" The Spartans replied with a single word: \"If.\"",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Rather," },
+      { "key": "B", "text": "In other words," },
+      { "key": "C", "text": "That said," },
+      { "key": "D", "text": "For instance," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu chuyện đối đáp vỏn vẹn một từ 'If' (Nếu) với vua Philip II là minh chứng cụ thể cho sự ngắn gọn sắc sảo của người Sparta -> Dùng 'For instance,' (Ví dụ như)."
+  },
+  {
+    "id": "trans_33",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 2014, Nestor Gomez won his first-ever storytelling competition, relating a tale about his life as a Guatemalan immigrant living in Chicago. _______ in 2017, Gomez created the show 80 Minutes Around the World as a platform for others to share stories about their immigration experiences.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Instead," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "Later," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Diễn tiến trình tự thời gian từ năm 2014 đến năm 2017 -> Dùng 'Later,' (Về sau / Sau đó)."
+  },
+  {
+    "id": "trans_34",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 2018, Kurt Luther and Vikram Mohanty created the web-based tool Civil War Photo Sleuth (CWPS). A user uploading an unknown Civil War soldier's photograph to CWPS first tags the photo with all known information. _______ CWPS's facial-recognition software analyzes twenty-seven different physical features and looks for matches to tagged images already in the database.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Then," },
+      { "key": "B", "text": "In fact," },
+      { "key": "C", "text": "Likewise," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bước đầu tiên là người dùng gắn nhãn thông tin ('first tags...'), sau đó ('Then,') phần mềm nhận diện khuôn mặt sẽ phân tích và so khớp ảnh."
+  },
+  {
+    "id": "trans_35",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Arkansas aviator Louise Thaden was already a record breaker when she won the inaugural National Women's Air Derby, a race from California to Ohio, in August of 1929. _______ in December of 1928, Thaden had set an aviation record when she reached an altitude of 20,269 feet in a Travel Air biplane.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Earlier," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "Next," },
+      { "key": "D", "text": "As a result," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu trước nói về sự kiện tháng 8 năm 1929, câu sau nhắc tới thành tích diễn ra trước đó vào tháng 12 năm 1928 -> Dùng 'Earlier,' (Trước đó)."
+  },
+  {
+    "id": "trans_36",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Many butterfly species have bold, brightly colored wings. _______ some butterfly species have wings that are almost completely colorless and transparent. Glasswing butterflies, for example, have see-through wings that make them nearly invisible.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "Previously," },
+      { "key": "C", "text": "In other words," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đối lập tương phản giữa hai nhóm bướm: nhiều loài có cánh màu sắc rực rỡ, nhưng một số loài lại có cánh trong suốt không màu -> Dùng 'However,' (Tuy nhiên)."
+  },
+  {
+    "id": "trans_37",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "With darkness falling, a mother elephant loses sight of her calf and wants to make sure it is safe. _______ she releases an infrasonic call for the calf to hear. Infrasonic sound is below the range of human hearing, but many animals can hear these sounds from several miles away.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "For this reason," },
+      { "key": "C", "text": "Nowadays," },
+      { "key": "D", "text": "Similarly," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vì trời tối không nhìn thấy con và muốn bảo đảm voi con an toàn, vì lý do đó ('For this reason,'), voi mẹ phát ra tiếng kêu hạ âm để voi con nghe thấy."
+  },
+  {
+    "id": "trans_38",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The number of dark spots that appear on the Sun, known as sunspots, can vary greatly. For example, there were about 180 sunspots in November 2001. _______ there were only about 2 sunspots in December 2008.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "Similarly," },
+      { "key": "C", "text": "Therefore," },
+      { "key": "D", "text": "By comparison," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đặt cạnh nhau để so sánh hai thời điểm đối chiếu (khoảng 180 vết đen năm 2001 so với chỉ khoảng 2 vết đen năm 2008) -> Dùng 'By comparison,' (Khi so sánh / Ngược lại)."
+  },
+  {
+    "id": "trans_39",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In most deer species, males grow antlers, and females don't. _______ reindeer are different. They are the only deer species in which the females grow antlers, too.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "Next," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Thus," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Đa số các loài hươu chỉ con đực mới mọc sừng, tuy nhiên tuần lộc là ngoại lệ khi cả con cái cũng mọc sừng -> Quan hệ đối lập: 'However,'."
+  },
+  {
+    "id": "trans_40",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Chimamanda Ngozi Adichie's 2013 novel Americanah chronicles the divergent experiences of Ifemelu and Obinze, a young Nigerian couple, after high school. Ifemelu moves to the United States to attend a prestigious university. _______ Obinze travels to London, hoping to start a career there. However, frustrated with the lack of opportunities, he soon returns to Nigeria.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Meanwhile," },
+      { "key": "B", "text": "Nevertheless," },
+      { "key": "C", "text": "Secondly," },
+      { "key": "D", "text": "In fact," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Hai tuyến diễn biến diễn ra song song cùng thời điểm: trong khi Ifemelu sang Mỹ du học, thì cùng lúc đó ('Meanwhile,'), Obinze lại đến London tìm kiếm cơ hội."
+  },
+  {
+    "id": "trans_41",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Preston Singletary is a Tlingit glass artist who often collaborates with other artists. _______ he has worked with Tewa pottery artist Jody Naranjo several times. Together, Singletary and Naranjo have created pottery-inspired glass pieces such as Sunset Stampede and Kiva Steps.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In conclusion," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "In comparison," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Việc hợp tác nhiều lần với nghệ nhân gốm Jody Naranjo là ví dụ minh chứng cho nhận định ở câu trước rằng ông thường xuyên cộng tác với các nghệ sĩ khác -> Dùng 'For example,'."
+  },
+  {
+    "id": "trans_42",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "To guarantee the validity of experimental results, scientists rely on precise, unchanging standards of measurement. _______ metrologists (scientists who study measurement) developed the SI, or International System of Units. The SI's units of measurement are based on unchanging values in nature, such as the mass of an electron or the speed of light.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In contrast," },
+      { "key": "B", "text": "Regardless," },
+      { "key": "C", "text": "In addition," },
+      { "key": "D", "text": "For this reason," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Vì cần các tiêu chuẩn đo lường chuẩn xác và bất biến, vì lý do đó ('For this reason,'), các nhà đo lường học đã xây dựng nên Hệ đơn vị quốc tế SI."
+  },
+  {
+    "id": "trans_43",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The Alaska Native Language Archive (ANLA) is known for its impressive audio collection. _______ the ANLA has more than 5,000 audio recordings of Native Alaskan languages dating as far back as 1943.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In fact," },
+      { "key": "B", "text": "After," },
+      { "key": "C", "text": "Regardless," },
+      { "key": "D", "text": "Instead," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu sau đưa ra con số thực tế ấn tượng (hơn 5.000 bản ghi âm từ năm 1943) để nhấn mạnh và chứng thực cho nhận định ở câu trước -> Dùng 'In fact,' (Trên thực tế)."
+  },
+  {
+    "id": "trans_44",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In the 1850s, William Still was instrumental in helping nearly 1,000 people escape from slavery, earning him the moniker \"the Father of the Underground Railroad.\" _______ despite the fame of his contributions during his lifetime, Still is discussed far less today than other prominent Black abolitionists from his era, such as Frederick Douglass and Harriet Tubman.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "Specifically," },
+      { "key": "D", "text": "Similarly," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Quan hệ tương phản đối lập: Dù đóng góp của ông lúc sinh thời rất vang dội, tuy nhiên ('However,') ngày nay ông lại ít được nhắc đến hơn so với các nhân vật cùng thời."
+  },
+  {
+    "id": "trans_45",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "When using sumac for dyeing cloth, textile artists first soak it in water to release its color. Then, they add the cloth to the dyebath and simmer it for hours, perhaps even days. _______ they will remove the cloth, at which point it will have turned a vibrant red color.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Nevertheless," },
+      { "key": "B", "text": "Likewise," },
+      { "key": "C", "text": "Eventually," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Trình tự quy trình nhuộm vải: Ngâm nước trước tiên ('first soak...'), tiếp theo là đun sôi hàng giờ ('Then, they add...'), cuối cùng ('Eventually,') họ vớt vải ra khi màu nhuộm đã ngấm."
+  },
+  {
+    "id": "trans_46",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In order to create the Global Positioning System (GPS), scientists had to develop an accurate mathematical model of Earth's shape that accounted for various forces, such as tides. _______ it was mathematician Gladys West who wrote the computer program that could perform these necessary calculations.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Ultimately," },
+      { "key": "B", "text": "In other words," },
+      { "key": "C", "text": "Secondly," },
+      { "key": "D", "text": "In addition," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Từ nối 'Ultimately,' (Rút cục / Xét đến cùng) nêu bật kết quả quyết định: chính nhà toán học Gladys West là người đã hiện thực hóa mô hình phức tạp đó bằng chương trình máy tính."
+  },
+  {
+    "id": "trans_47",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Guard cells are specialized cells that are part of a plant's pores. These cells help regulate the amount of carbon dioxide a plant takes in. _______ they help regulate a plant's water loss.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Additionally," },
+      { "key": "B", "text": "Previously," },
+      { "key": "C", "text": "In conclusion," },
+      { "key": "D", "text": "Instead," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bổ sung chức năng thứ hai của tế bào khí khổng (vừa điều hòa khí CO2, thêm vào đó còn điều hòa lượng nước thoát ra) -> Dùng 'Additionally,' (Thêm vào đó)."
+  },
+  {
+    "id": "trans_48",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In the search for extraterrestrial life, astrobiologists Stuart Bartlett and Michael L. Wong propose that scientists avoid using the term \"life.\" _______ researchers should use another word: \"lyfe.\" This new term, they argue, could be used to draw distinctions between the known characteristics of life on Earth and the potentially differing characteristics of lyfe on other planets.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Previously," },
+      { "key": "B", "text": "Regardless," },
+      { "key": "C", "text": "There," },
+      { "key": "D", "text": "Instead," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu trước khuyên tránh dùng từ 'life', thay vào đó ('Instead,'), các nhà nghiên cứu đề xuất dùng thuật ngữ mới 'lyfe'."
+  },
+  {
+    "id": "trans_49",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Practical movie effects, such as the use of actual locations in a film, provide a more realistic visual experience than computer-generated imagery (CGI) does, but giving audiences the \"real thing\" can be prohibitively expensive. _______ many filmmakers use a blended approach, employing practical effects whenever possible and CGI elements as necessary to control costs.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "For this reason," },
+      { "key": "C", "text": "Furthermore," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vì hiệu ứng thực tế quá đắt đỏ, chính vì lý do đó ('For this reason,'), nhiều nhà làm phim chọn giải pháp kết hợp cả hiệu ứng thực lẫn kỹ xảo đồ họa máy tính."
+  },
+  {
+    "id": "trans_50",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The French directors Colas Koola and Vivien Mermet-Guyenet (known as Koola and Viv) founded the video game studio BlueTwelve. They also love cats. _______ they created an award-winning cat video game, Stray (2021), that lets the player explore a dystopian city from the perspective of a clever orange house cat.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Intermittently," },
+      { "key": "B", "text": "On the other hand," },
+      { "key": "C", "text": "In fact," },
+      { "key": "D", "text": "Nevertheless," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Từ nối 'In fact,' (Thực tế là) được dùng để kết nối và nhấn mạnh tình yêu mèo của họ đã dẫn tới việc tạo ra tựa game đoạt giải Stray."
+  },
+  {
+    "id": "trans_51",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Historians agree that the jazz pianist Jelly Roll Morton was exaggerating when he claimed to have invented jazz music. No one can deny, _______ that Morton's innovative compositions and remarkable improvisational skills helped shape jazz as a genre during its early years.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "therefore," },
+      { "key": "B", "text": "in the second place," },
+      { "key": "C", "text": "in other words," },
+      { "key": "D", "text": "though," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Trạng từ 'though,' (dù vậy / tuy nhiên) đặt giữa hai dấu phẩy thể hiện sự nhượng bộ tương phản: dù ông nói quá về việc phát minh ra jazz, tuy nhiên không ai có thể phủ nhận những đóng góp to lớn của ông."
+  },
+  {
+    "id": "trans_52",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Organisms have evolved a number of surprising adaptations to ensure their survival in adverse conditions. _______ Tadpole shrimp (Triops longicaudatus) embryos can pause development for over ten years during extended periods of drought.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in contrast," },
+      { "key": "B", "text": "for example," },
+      { "key": "C", "text": "meanwhile," },
+      { "key": "D", "text": "consequently," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Khả năng tạm ngừng phát triển phôi suốt 10 năm của loài tôm nòng nọc là một ví dụ minh họa cụ thể cho sự thích nghi sinh tồn đáng kinh ngạc -> Dùng 'for example,'."
+  },
+  {
+    "id": "trans_53",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Niger ratified the Outer Space Treaty, an international agreement with over 100 signing nations that acts as the foundation for the laws of space, on February 1, 1967. Jordan, _______ has yet to officially ratify the treaty; it only signed it.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in contrast," },
+      { "key": "B", "text": "specifically," },
+      { "key": "C", "text": "for example," },
+      { "key": "D", "text": "similarly," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "So sánh đối lập giữa hai quốc gia: Niger đã chính thức phê chuẩn hiệp ước, trái lại ('in contrast,'), Jordan mới chỉ ký chứ chưa phê chuẩn."
+  },
+  {
+    "id": "trans_54",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "By 1936, Spanish Romani dancer Carmen Amaya was known all over Spain for her powerful style of flamenco dancing. However, in July of that year, the outbreak of the Spanish Civil War made it difficult for her to perform in her home country. _______ Amaya left Spain to perform abroad, dancing for audiences across North and South America.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In comparison," },
+      { "key": "B", "text": "As a result," },
+      { "key": "C", "text": "First of all," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Do nội chiến nổ ra khiến việc biểu diễn trong nước gặp khó khăn, kết quả là ('As a result,'), bà phải rời Tây Ban Nha để biểu diễn ở nước ngoài."
+  },
+  {
+    "id": "trans_55",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "\"O2 Arena,\" an award-winning science fiction story by Nigerian author Oghenechovwe Donald Ekpeki, takes place in an alternate version of Nigeria where breathable air is a rare commodity that is owned and sold by companies. _______ people must purchase it with currency called O2 credits.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "In any case," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Earlier," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Vì không khí sạch là hàng hóa thuộc quyền sở hữu của các tập đoàn, hệ quả là người dân bắt buộc phải mua nó bằng đơn vị tiền tệ riêng -> Dùng 'As a result,'."
+  },
+  {
+    "id": "trans_56",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "As biologist Terrie Williams has documented, deep dives present a challenge for seals and other marine mammals. A seal must exert enough energy to propel itself hundreds of meters downward, while keeping its heart rate low enough that it doesn't run out of oxygen while underwater. _______ a seal moves its flippers as little as possible on a deep dive, gliding to conserve energy.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In the first place," },
+      { "key": "B", "text": "On the other hand," },
+      { "key": "C", "text": "For this reason," },
+      { "key": "D", "text": "In comparison," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Vì hải cẩu cần bảo tồn oxy và duy trì nhịp tim thấp khi lặn sâu, vì lý do đó ('For this reason,'), chúng hạn chế cử động chân chèo và tận dụng lực lướt trong nước."
+  },
+  {
+    "id": "trans_57",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "To explore how blinking affects social interactions, Dutch researchers observed interactions between human speakers and \"listeners\" (animated human faces on a screen). The researchers found that when the listeners blinked slowly, the speakers tended to talk for less time. _______ quicker blinks were associated with longer talking times.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "Specifically," },
+      { "key": "C", "text": "Firstly," },
+      { "key": "D", "text": "By contrast," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "So sánh hai trạng thái trái ngược nhau: chớp mắt chậm khiến người nói nói ít đi, ngược lại ('By contrast,'), chớp mắt nhanh khiến người nói nói nhiều hơn."
+  },
+  {
+    "id": "trans_58",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1949, Frank Zamboni developed an ice rink resurfacing machine. As Zamboni's machine moved along the rink's surface, it first scraped off the top layer of ice. _______ it sprayed water into the deep grooves left behind by customers' skates. Lastly, it smoothed over the newly formed ice.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "Next," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "In contrast," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Trình tự thao tác của cỗ máy theo thời gian: 'it first scraped...' (đầu tiên) -> 'Next, it sprayed...' (tiếp theo) -> 'Lastly, it smoothed...' (cuối cùng)."
+  },
+  {
+    "id": "trans_59",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "There are three basic steps you should follow when planning a scientific inquiry. First, thoroughly research the question you wish to answer. _______ come up with a prediction (also called a hypothesis) about the answer to your question. Third, develop an experiment that can test the accuracy of your hypothesis.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Therefore," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "Second," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Liệt kê ba bước thực hiện nghiên cứu khoa học: 'First,...' (Bước một) -> 'Second,...' (Bước hai) -> 'Third,...' (Bước ba)."
+  },
+  {
+    "id": "trans_60",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Ballet dancer Misty Copeland has accomplished a lot. She has appeared on Broadway, toured with Prince, and even served on the President's Council on Sports, Fitness & Nutrition. _______ according to Copeland, nothing in her career matches the honor of being the first African American woman named principal dancer at the prestigious American Ballet Theatre.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Thus," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "Second of all," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Đối lập tương phản: Dù cô đã gặt hái rất nhiều thành tích đáng nể, tuy nhiên ('However,') theo cô không có vinh dự nào sánh bằng việc trở thành nữ vũ công chính người Mỹ gốc Phi đầu tiên tại Nhà hát Ba lê Mỹ."
+  }
+,
+  {
+    "id": "trans_61",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The liquid metals in Earth's core circulate constantly, and this circulation generates electrical currents that flow between Earth's North and South magnetic poles. These electrical currents, _______ create a barrier around Earth that protects us from radiation and charged particles coming from space.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in turn," },
+      { "key": "B", "text": "likewise," },
+      { "key": "C", "text": "nevertheless," },
+      { "key": "D", "text": "in reality," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Từ nối 'in turn,' (đến lượt nó / tiếp theo đó) diễn tả chuỗi phản ứng dây chuyền: dòng kim loại lỏng tạo ra dòng điện, và các dòng điện này đến lượt nó lại tạo ra một lá chắn bảo vệ Trái Đất."
+  },
+  {
+    "id": "trans_62",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1885, Chinese-born California resident Mary Tape became a hero of the Asian American civil rights movement. In January of that year, she won an antidiscrimination case in the California Supreme Court. _______ in April, she wrote an open letter criticizing her local board of education for discrimination. Both actions are remembered today as historic stands against racism.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Later," },
+      { "key": "B", "text": "For instance," },
+      { "key": "C", "text": "In other words," },
+      { "key": "D", "text": "Rather," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Trình tự thời gian trong cùng năm 1885: hành động đầu tiên diễn ra vào tháng 1 ('In January...'), sau đó vào tháng 4 ('Later, in April,...'), bà đã viết một bức thư ngỏ."
+  },
+  {
+    "id": "trans_63",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Before it unveiled a massive new gallery in 2009, the Art Institute of Chicago was only able to display about 5% of its art collection. _______ the museum is able to display close to 30% of its collection.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Additionally," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Today," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Đối lập thời gian giữa quá khứ trước năm 2009 (chỉ trưng bày được 5%) với hiện tại (trưng bày được gần 30%) -> Dùng 'Today,' (Ngày nay / Hiện tại)."
+  },
+  {
+    "id": "trans_64",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "During a 2021 launch, Rocket Labs' Electron rocket experienced an unexpected failure: its second-stage booster shut down suddenly after ignition. _______ instead of downplaying the incident, Rocket Labs' CEO publicly acknowledged what happened and apologized for the loss of the rocket's payload, which had consisted of two satellites.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Afterward," },
+      { "key": "B", "text": "Additionally," },
+      { "key": "C", "text": "Indeed," },
+      { "key": "D", "text": "Similarly," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Từ nối 'Afterward,' (Sau đó / Sau sự việc đó) dùng để diễn tả hành động xử lý tiếp theo của vị CEO ngay sau khi sự cố phóng tên lửa xảy ra."
+  },
+  {
+    "id": "trans_65",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1891, dancer and choreographer Loie Fuller first performed her celebrated Serpentine Dance, artfully twirling her long, flowing skirt to create striking visual effects. _______ in 1896, cinema pioneers Auguste and Louis Lumière made a groundbreaking short film of Fuller's dance.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "In conclusion," },
+      { "key": "C", "text": "Later," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Diễn biến tiếp nối theo dòng thời gian từ năm 1891 đến năm 1896 -> Dùng 'Later,' (Sau đó / Về sau)."
+  },
+  {
+    "id": "trans_66",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Following the Mata Ortiz pottery technique, Mexican sculptor Juan Quezada Celado starts by creating the base of the pot with a slab of clay. _______ he builds the pot walls by layering coils of clay around the perimeter of the base. Celado then smooths out the pot's walls with a hacksaw blade. At last, the pot is ready to be painted.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "By contrast," },
+      { "key": "D", "text": "Next," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Trình tự quy trình làm gốm: Đầu tiên là tạo đáy ('starts by...'), bước tiếp theo ('Next,') là đắp thành nồi bằng các vòng đất sét."
+  },
+  {
+    "id": "trans_67",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Phytoplankton play a crucial role in the ocean's uptake of carbon from the atmosphere. When alive, these tiny marine organisms absorb atmospheric carbon via photosynthesis. _______ after they die, the phytoplankton sink to the seafloor, where the carbon in their cells gets stored in sediment, preventing it from cycling back into the atmosphere.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Specifically," },
+      { "key": "B", "text": "By contrast," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Then," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Trình tự thời gian và chu trình sinh học: Khi còn sống ('When alive,...'), sau đó khi chúng chết đi ('Then, after they die,...')."
+  },
+  {
+    "id": "trans_68",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Riley Black—the author of critically acclaimed books such as My Beloved Brontosaurus (2013)—is best known for writing about dinosaurs, but she has also conducted hands-on fieldwork. _______ her fieldwork has included paleontological digs in Utah, Montana, and Wyoming, and her dinosaur fossil discoveries can be seen at places such as the Carnegie Museum of Natural History.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Regardless," },
+      { "key": "B", "text": "Subsequently," },
+      { "key": "C", "text": "Specifically," },
+      { "key": "D", "text": "Conversely," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Câu sau làm rõ cụ thể các địa điểm và hoạt động khai quật thực địa (Utah, Montana, Wyoming) mà câu trước đã đề cập chung chung ('fieldwork') -> Dùng 'Specifically,' (Cụ thể là)."
+  },
+  {
+    "id": "trans_69",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Spanish surrealist Óscar Domínguez, like many of his contemporaries, wanted to incorporate elements of chance and randomness in his artistic process. _______ he employed techniques that produced random, unpredictable results, such as decalcomania, which involved pressing a blank canvas onto a paint-covered surface to generate abstract patterns.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "With this in mind," },
+      { "key": "B", "text": "On the contrary," },
+      { "key": "C", "text": "In conclusion," },
+      { "key": "D", "text": "Regardless," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Từ nối 'With this in mind,' (Với ý định/mục tiêu đó trong đầu) giải thích lý do nghệ sĩ áp dụng kỹ thuật decalcomania nhằm đạt được mục đích đưa yếu tố ngẫu nhiên vào tranh đã nêu ở câu trước."
+  },
+  {
+    "id": "trans_70",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "A blend of gabardine and wool, the material for Elvis Presley's Gold Vine jumpsuit was flexible enough to allow the singer to perform his signature dance moves. _______ the added weight of the suit's swirling vines made of gold rhinestones likely limited Elvis's mobility to some degree.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For this reason," },
+      { "key": "B", "text": "Firstly," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Quan hệ tương phản đối lập: Vải bộ đồ đủ co giãn linh hoạt để ông nhảy múa, tuy nhiên ('However,') trọng lượng từ các họa tiết đính đá kim cương giả lại hạn chế độ linh hoạt của ông."
+  },
+  {
+    "id": "trans_71",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Laetitia Ky's hair is her art. Inspired by hairstyles from various African tribes, the Ivorian artist uses wire and thread to sculpt her hair into all kinds of shapes. _______ she once made her hair into the shape of the continent of Africa—including the island of Madagascar!",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Soon," },
+      { "key": "B", "text": "Elsewhere," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "However," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Việc cô từng tạo hình mái tóc thành hình lục địa châu Phi là một ví dụ minh họa cụ thể cho câu trước rằng cô có thể uốn tóc thành đủ loại hình dạng độc đáo -> Dùng 'For example,'."
+  },
+  {
+    "id": "trans_72",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Scientists were able to isolate a relatively pure sample of selenium in 1817, the same year they first discovered the element's existence. _______ the isolation process took longer for molybdenum, which was isolated in its pure form three years after scientists first discovered it.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "By contrast," },
+      { "key": "B", "text": "Thus," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "For instance," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "So sánh tương phản giữa hai nguyên tố: selen được cô lập ngay trong năm phát hiện, ngược lại ('By contrast,'), molipđen mất tới ba năm sau mới được cô lập ở dạng tinh khiết."
+  },
+  {
+    "id": "trans_73",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Most of the planets that have been discovered outside our solar system orbit G-type stars, like our Sun. In 2014, researchers identified a planet orbiting KELT-9, a B-type star more than twice as massive and nearly twice as hot as the Sun. Called KELT-9b, it is one of the hottest planets ever discovered.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "likewise," },
+      { "key": "B", "text": "however," },
+      { "key": "C", "text": "therefore," },
+      { "key": "D", "text": "for example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Đa phần ngoại hành tinh quay quanh sao loại G giống Mặt Trời, tuy nhiên ('however,') năm 2014 các nhà khoa học đã tìm thấy một hành tinh quay quanh sao loại B nóng hơn nhiều -> Quan hệ tương phản."
+  },
+  {
+    "id": "trans_74",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The Babylonian king Hammurabi achieved much during his forty-year reign. He conquered all of Mesopotamia and built Babylon into one of the most powerful cities of the ancient world. Today, he is _______ mainly remembered for a code of laws inscribed on a seven-foot-tall block of stone: the Code of Hammurabi.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "therefore," },
+      { "key": "B", "text": "likewise," },
+      { "key": "C", "text": "however," },
+      { "key": "D", "text": "for instance," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Tương phản đối lập: Lúc sinh thời ông lập rất nhiều chiến công quân sự hiển hách, tuy nhiên ('however,') ngày nay ông lại chủ yếu được nhớ đến nhờ bộ luật cổ khắc trên bia đá."
+  },
+  {
+    "id": "trans_75",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The Inca of South America used intricately knotted string devices called quipus to record countable information, like population data and payments. _______ they may have used quipus to record more complex information, like stories and myths, according to researchers.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "In other words," },
+      { "key": "C", "text": "In addition," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Bổ sung công dụng thứ hai của dây thắt nút quipus: ngoài việc ghi chép số liệu đếm được, thêm vào đó ('In addition,'), chúng còn có thể ghi lại các câu chuyện thần thoại phức tạp."
+  },
+  {
+    "id": "trans_76",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Some members of the US Supreme Court have resisted calls to televise the court's oral arguments, concerned that the participants would be tempted to perform for the cameras (and thus lower the quality of the discourse). _______ the justices worry that most viewers would not even watch the full deliberations, only short clips that could be misinterpreted and mischaracterized.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "Additionally," },
+      { "key": "C", "text": "In comparison," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bổ sung thêm mối lo ngại thứ hai của các thẩm phán bên cạnh nỗi lo diễn trước máy quay -> Dùng từ nối bổ sung 'Additionally,' (Thêm vào đó / Ngoài ra)."
+  },
+  {
+    "id": "trans_77",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In the 1880s, inventor Lewis Latimer improved upon Thomas Edison's design for the electric light bulb. _______ Latimer made the light bulb more durable by placing cardboard around its carbon filament. With this innovation, Latimer became the first Black inventor to contribute to the electrification of the world.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Soon," },
+      { "key": "B", "text": "Regardless," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Specifically," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu sau giải thích cụ thể cách Latimer đã cải tiến bóng đèn (bọc bìa cứng quanh sợi dây tóc carbon) -> Dùng 'Specifically,' (Cụ thể là)."
+  },
+  {
+    "id": "trans_78",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Award-winning travel writer Linda Watanabe McFerrin considers the background research she conducts on destinations featured in her travel books to be its own reward. _______ McFerrin admits to finding the research phase of her work just as fascinating and engaging as exploring a location in person.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "By contrast," },
+      { "key": "B", "text": "Likewise," },
+      { "key": "C", "text": "Besides," },
+      { "key": "D", "text": "In fact," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Từ nối 'In fact,' (Trên thực tế) được dùng để làm sâu sắc thêm nhận định ở câu trước: thực tế bà thấy giai đoạn nghiên cứu cũng hấp dẫn không kém gì việc tự mình khám phá thực địa."
+  },
+  {
+    "id": "trans_79",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1873, Spanish scientist Santiago Ramón y Cajal observed that brain fibers have distinct boundaries with clear end points, a finding that went against earlier assumptions about the brain. _______ scientists had assumed that the brain was a continuous web of fused fibers, not a vast network of distinct, individual cells.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "Previously," },
+      { "key": "C", "text": "As a result," },
+      { "key": "D", "text": "Likewise," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Câu sau giải thích rõ quan niệm trước thời điểm năm 1873: trước đó ('Previously,'), giới khoa học từng cho rằng não là một mạng lưới các sợi dính liền nhau."
+  },
+  {
+    "id": "trans_80",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "For years, biologists have experimented with using grime-eating bacteria rather than harsh chemicals to clean artworks, and results have been impressive overall. _______ these bacterial strains—which can metabolize centuries' worth of oil, glue, dirt, and other surface impurities without creating harmful byproducts—have proven more effective than traditional chemical cleaning methods.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "In many cases," },
+      { "key": "C", "text": "As a result," },
+      { "key": "D", "text": "Additionally," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'In many cases,' (Trong nhiều trường hợp) nêu rõ phạm vi và mức độ hiệu quả vượt trội của các chủng vi khuẩn ăn bụi bẩn so với phương pháp hóa học."
+  },
+  {
+    "id": "trans_81",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Alexander Lawrence Posey (1873–1908) varied his focus and tone depending on the genre in which he was writing. In his poetry, he used heartfelt language to evoke the beauty and peacefulness of his natural surroundings; in his journalism, _______ he employed humor and satire to comment on political issues affecting his Muskogee Creek community.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "that is," },
+      { "key": "B", "text": "granted," },
+      { "key": "C", "text": "similarly," },
+      { "key": "D", "text": "by contrast," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "So sánh đối lập giữa hai thể loại: trong thơ thì dùng ngôn từ tha thiết ca ngợi thiên nhiên, ngược lại trong báo chí ('by contrast,'), ông lại dùng giọng điệu hài hước và châm biếm."
+  },
+  {
+    "id": "trans_82",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Okot p'Bitek's poem Song of Lawino (1966) explores postcolonial Ugandan life through the eyes of a woman living in a rural village. With its vibrant imagery, bitingly satiric tone, and dexterous use of traditional Acholi song and phraseology, the poem inspired a generation of East African writers. _______ those who adopted its style are often referred to as Okot School poets.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Nevertheless," },
+      { "key": "B", "text": "Fittingly," },
+      { "key": "C", "text": "By comparison," },
+      { "key": "D", "text": "Instead," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Từ nối 'Fittingly,' (Một cách xác đáng / Thật phù hợp) thể hiện tính hợp lý khi những người học theo phong cách thơ của Okot p'Bitek được gọi là các nhà thơ trường phái Okot."
+  },
+  {
+    "id": "trans_83",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Because an achiral molecule is symmetrical, flipping it yields a structurally identical molecule. _______ a flipped chiral molecule can be compared to a glove that has been turned inside out: it produces a structurally inverted molecule rather than an identical one.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in other words," },
+      { "key": "B", "text": "by contrast," },
+      { "key": "C", "text": "for example," },
+      { "key": "D", "text": "similarly," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "So sánh tương phản giữa phân tử không bất đối xứng (achiral - lật lại vẫn giống hệt) với phân tử bất đối xứng (chiral - lật lại bị đảo ngược cấu trúc) -> Dùng 'by contrast,'."
+  },
+  {
+    "id": "trans_84",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "In his painting At the Cycle-Race Track, Jean Metzinger aims to depict a bike race in four-dimensional space. Of course, Metzinger's painting doesn't technically represent a fourth dimension; humans can only see in three dimensions. _______ by depicting the race through multiple, simultaneous perspectives, Metzinger offers a fascinating glimpse at what this other universe might look like.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Moreover," },
+      { "key": "B", "text": "That said," },
+      { "key": "C", "text": "In other words," },
+      { "key": "D", "text": "For example," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'That said,' (Dù vậy / Tuy nói là thế) được dùng sau câu nhượng bộ (bức tranh không thực sự biểu diễn chiều không gian thứ tư) để nhấn mạnh giá trị thị giác mà bức tranh mang lại."
+  },
+  {
+    "id": "trans_85",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Jhumpa Lahiri's story collection Interpreter of Maladies features multiple stories about romantic relationships. In \"This Blessed House,\" newlyweds argue over whether to replace items left by the previous owners of their new home. _______ in \"A Temporary Matter,\" a husband and wife attempt to rekindle their relationship during a four-night blackout.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Granted," },
+      { "key": "B", "text": "For example," },
+      { "key": "C", "text": "Likewise," },
+      { "key": "D", "text": "Hence," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Liệt kê hai truyện ngắn tương tự nhau về chủ đề tình cảm hôn nhân: truyện đầu kể về cặp vợ chồng mới cưới, tương tự như vậy ('Likewise,'), truyện thứ hai cũng kể về một cặp vợ chồng cố hàn gắn tình cảm."
+  },
+  {
+    "id": "trans_86",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Before California's 1911 election to approve a proposition granting women the right to vote, activists across the state sold tea to promote the cause of suffrage. In San Francisco, the Woman's Suffrage Party sold Equality Tea at local fairs. _______ in Los Angeles, activist Nancy Tuttle Craig, who ran one of California's largest grocery store firms, distributed Votes for Women Tea.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "To conclude," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hai hành động tương đồng ở hai thành phố: ở San Francisco bán trà Bình Đẳng, tương tự như vậy ('Similarly,'), ở Los Angeles cũng phân phối trà Đòi Quyền Bầu Cử Cho Phụ Nữ."
+  },
+  {
+    "id": "trans_87",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 2019, researcher Patricia Jurado Gonzalez and food historian Nawal Nasrallah prepared a stew from a 4,000-year-old recipe found on a Mesopotamian clay tablet. When they tasted the dish, known as pašrūtum (\"unwinding\"), they found that it had a mild taste and inspired a sense of calm. _______ the researchers, knowing that dishes were sometimes named after their intended effects, theorized that the dish's name, \"unwinding,\" referred to its function: to help ancient diners relax.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Therefore," },
+      { "key": "B", "text": "Alternately," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Likewise," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Vì khi nếm món hầm họ cảm nhận được sự thư thái dịu nhẹ, do đó ('Therefore,'), các nhà nghiên cứu đưa ra giả thuyết rằng cái tên 'thư giãn' chính là để chỉ công dụng giúp thực khách thả lỏng."
+  },
+  {
+    "id": "trans_88",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "In her 2012 analysis of tree rings from Japan's Yaku Island, cosmic ray physicist Fusa Miyake noted an anomalous carbon-14 spike dating to 774–775 CE, indicating that a massive burst of radiation reached Earth during that time. _______ this unprecedented radiocarbon surge was dubbed a \"Miyake event\" in honor of its discoverer.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Fittingly," },
+      { "key": "B", "text": "Similarly," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Fittingly,' (Thật thích hợp / Thật xứng đáng) diễn tả việc sự kiện bức xạ này được đặt tên là 'sự kiện Miyake' nhằm vinh danh chính người phụ nữ đã phát hiện ra nó."
+  },
+  {
+    "id": "trans_89",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Scientists long debated the origins of chondrules, tiny glass beads that formed in meteors billions of years ago. For decades, different theories were proposed, from lightning strikes to powerful rock collisions, but none had sufficient evidentiary support. _______ scientists found strong evidence that chondrules were formed by shock waves in nearby nebulae.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For example," },
+      { "key": "B", "text": "Therefore," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "Finally," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Sau nhiều thập kỷ tranh cãi và đưa ra các giả thuyết không có bằng chứng, cuối cùng ('Finally,'), các nhà khoa học đã tìm ra bằng chứng xác thực."
+  },
+  {
+    "id": "trans_90",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Voting members of the 2002 Latin Grammys were impressed by Banda Cuisillos's album Puras Rancheras Con Cuisillos and its contribution to the banda genre, a form of regional Mexican music featuring large ensembles of wind instruments and drums that first developed in southern and central Mexico in the mid-nineteenth century. _______ they awarded the group the Best Banda Album award.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In contrast," },
+      { "key": "B", "text": "Meanwhile," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Accordingly," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Vì các thành viên bỏ phiếu rất ấn tượng với album, do đó / phù hợp với điều đó ('Accordingly,'), họ đã trao cho nhóm giải Album Banda Xuất sắc nhất."
+  },
+  {
+    "id": "trans_91",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In the early 1970s, Albert Popa took up graffiti art, spraying his work onto what was at the time an unconventional surface: concrete. _______ Albert's son David has chosen an unusual canvas for his new art project, Fractured. In this remarkable work, the artist draws charcoal faces onto fragmented ice floes in Finland, creating the visual effect of a face slowly fracturing.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "However," },
+      { "key": "B", "text": "Indeed," },
+      { "key": "C", "text": "Second," },
+      { "key": "D", "text": "Likewise," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Mối quan hệ tương đồng: người cha Albert chọn vẽ lên bề mặt bê tông khác thường, tương tự như vậy ('Likewise,'), người con trai David cũng chọn một chất liệu độc lạ là các tảng băng trôi."
+  },
+  {
+    "id": "trans_92",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The Coastal Virginia Offshore Wind project is anticipated to generate 2.6 gigawatts of energy, enough to power almost one million homes. As its name indicates, the project—currently in development—consists of wind turbines located off the Virginia coast. _______ the project plan calls for 176 large turbines to be placed at a site 27 miles east of Virginia Beach.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "To be exact," },
+      { "key": "B", "text": "In conclusion," },
+      { "key": "C", "text": "As a result," },
+      { "key": "D", "text": "In contrast," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu sau đưa ra các thông số định lượng chính xác (176 turbine, cách 27 dặm về phía đông) để chi tiết hóa câu trước -> Dùng 'To be exact,' (Chính xác là)."
+  },
+  {
+    "id": "trans_93",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 1933, the Twentieth Amendment to the US Constitution was ratified. The amendment mandates that presidential inaugurations be held on January 20, approximately ten weeks after the November election. _______ this amendment requires newly elected US senators and representatives to be sworn into their respective offices on January 3.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Instead," },
+      { "key": "B", "text": "For instance," },
+      { "key": "C", "text": "Specifically," },
+      { "key": "D", "text": "In addition," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Bổ sung điều khoản thứ hai của Tu chính án số 20: bên cạnh quy định ngày nhậm chức tổng thống, thêm vào đó ('In addition,'), tu chính án còn quy định ngày tuyên thệ của các nghị sĩ quốc hội."
+  },
+  {
+    "id": "trans_94",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "My interest in old public libraries has led me to seek them out whenever I visit a new part of the United States. _______ I could visit every state in the US and still not find the oldest public library in the Western Hemisphere. That library, the Biblioteca Palafoxiana, is located in Puebla, Mexico.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "As a result," },
+      { "key": "B", "text": "Nevertheless," },
+      { "key": "C", "text": "Earlier," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Quan hệ nhượng bộ/tương phản: Dù tôi luôn tìm kiếm thư viện cổ mỗi khi đi khắp nước Mỹ, tuy nhiên ('Nevertheless,'), tôi có đi hết các bang cũng không tìm thấy thư viện cổ nhất bán cầu Tây vì nó nằm ở Mexico."
+  },
+  {
+    "id": "trans_95",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "With their distinctive cone shapes and steeply sloping sides, the volcanoes Hverfjall (Iceland) and Toliman (Guatemala) may look similar from afar. _______ Tehnuka Ilanko and other volcanologists can tell by how each was formed that Hverfjall is a cinder cone volcano, while Toliman is a composite volcano.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "for example," },
+      { "key": "B", "text": "in addition," },
+      { "key": "C", "text": "therefore," },
+      { "key": "D", "text": "though," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Từ 'though,' (dù vậy / tuy nhiên) đặt giữa hai dấu phẩy thể hiện sự đối lập: nhìn từ xa chúng trông giống nhau, tuy nhiên qua cách hình thành các nhà núi lửa học nhận biết chúng là hai loại núi lửa hoàn toàn khác nhau."
+  }
+,
+  {
+    "id": "trans_96",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The more diverse and wide ranging an animal's behaviors, the larger and more energy demanding the animal's brain tends to be. _______ from an evolutionary perspective, animals that perform only basic actions should allocate fewer resources to growing and maintaining brain tissue. The specialized subtypes of ants within colonies provide an opportunity to explore this hypothesis.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Subsequently," },
+      { "key": "B", "text": "Besides," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Thus," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu trước nêu quy luật hành vi càng đa dạng thì não càng lớn và tốn năng lượng. Hệ quả rút ra mang tính nguyên nhân - kết quả là: vì vậy ('Thus,'), theo góc độ tiến hóa, những động vật chỉ thực hiện hành vi cơ bản sẽ dành ít tài nguyên hơn để phát triển mô não."
+  },
+  {
+    "id": "trans_97",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Earth's auroras—colorful displays of light seen above the northern and southern poles—result, broadly speaking, from the Sun's activity. _______ the Sun releases charged particles that are captured by Earth's magnetic field and channeled toward the poles. These particles then collide with atoms in the atmosphere, causing the atoms to emit auroral light.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Specifically," },
+      { "key": "B", "text": "Similarly," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Hence," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu trước nhận định khái quát ('broadly speaking') về hoạt động của Mặt Trời. Câu sau đi vào miêu tả cơ chế vật lý chi tiết từng bước -> Dùng 'Specifically,' (Cụ thể là)."
+  },
+  {
+    "id": "trans_98",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Establishing Coordinated Universal Time (UTC) is no easy task. Each month, readings of a single second from atomic clocks around the world are taken and sent to the International Bureau of Weights and Measures (BIPM) in France. _______ BIPM metrologists perform the meticulous work of assembling these minutely disparate readings into a globally shared time standard.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "There," },
+      { "key": "B", "text": "In particular," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "Conversely," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Câu trước đề cập đến địa điểm: Viện Cân đo Quốc tế (BIPM) tại Pháp. Trạng từ chỉ nơi chốn 'There,' (Tại đó) dùng để tiếp nối hành động các chuyên gia đo lường làm việc tại trụ sở này."
+  },
+  {
+    "id": "trans_99",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "When, in 2017, Cambridge University students Lucy Moss and Toby Marlow decided they wanted to develop a musical together, one of their goals was for their female actor friends to have good parts to play. _______ they created the show Six, a retelling of the history of King Henry VIII's wives in which each of the six queens has a starring role.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "In summary," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "To that end," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm 'To that end,' (Nhằm mục đích đó / Để thực hiện mục tiêu đó) liên kết hành động sáng tác vở nhạc kịch Six với mục tiêu tạo đất diễn tốt cho các bạn diễn viên nữ của họ ở câu trước."
+  },
+  {
+    "id": "trans_100",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Biographer Michael Gorra notes that the novelist Henry James \"lived in a world of second thoughts,\" frequently tinkering with his novels and stories after their initial publication. However, the differences between the 1881 first edition and the 1908 edition of his novel A Portrait of a Lady are extreme, even by James's standards; _______ some critics regard the two editions as two different novels altogether.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "by contrast," },
+      { "key": "B", "text": "in fact," },
+      { "key": "C", "text": "nevertheless," },
+      { "key": "D", "text": "in other words," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'in fact,' (thậm chí / trên thực tế) được dùng để nhấn mạnh sự khác biệt quá lớn giữa hai bản in: lớn đến mức trên thực tế một số nhà phê bình xem chúng như hai cuốn tiểu thuyết hoàn toàn riêng biệt."
+  },
+  {
+    "id": "trans_101",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In his 1925 book The Morphology of Landscape, US geographer Carl Sauer challenged prevailing views about how natural landscapes influence human cultures. _______ Sauer argued that instead of being shaped entirely by their natural surroundings, cultures play an active role in their own development by virtue of their interactions with the environment.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "Finally," },
+      { "key": "C", "text": "Therefore," },
+      { "key": "D", "text": "Specifically," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu trước nêu việc ông thách thức các quan điểm phổ biến lúc bấy giờ. Câu sau diễn giải cụ thể ('Specifically,') luận điểm phản biện chi tiết của ông là gì."
+  },
+  {
+    "id": "trans_102",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Observing that a fire in a closed container soon went out, leading eighteenth-century scientists did not conclude that fresh air (specifically, oxygen) is necessary for combustion; instead, many theorized that the container's air had become saturated with a substance called phlogiston. _______ when Joseph Priestley first isolated oxygen gas in 1774, he termed it \"dephlogisticated air.\"",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "For this reason," },
+      { "key": "C", "text": "Alternatively," },
+      { "key": "D", "text": "Nevertheless," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vì các nhà khoa học thời đó tin vào thuyết chất cháy phlogiston, chính vì lý do đó ('For this reason,'), khi Priestley cô lập được khí oxy năm 1774, ông đã đặt tên cho nó là 'không khí bị khử phlogiston'."
+  },
+  {
+    "id": "trans_103",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "With his room-sized installation Unicorn/My Private Sky, Norwegian artist Børre Sæthre succeeds in creating a whimsical yet perplexing experience. _______ when visitors set foot inside the fantastically blue room and encounter the life-sized stuffed unicorn preening at the far end of it, they are both dazzled and confused—as if stepping into a strange and enchanting new world.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Second," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "Indeed," },
+      { "key": "D", "text": "Nevertheless," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Từ nối 'Indeed,' (Thật vậy / Quả đúng như thế) dùng để xác nhận và minh họa trải nghiệm vừa choáng ngợp vừa bối rối của khách tham quan đúng như nhận định ở câu trước."
+  },
+  {
+    "id": "trans_104",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "When, in the 1800s, geologists first realized that much of Earth had once been covered by great sheets of ice, some theorized that the phenomenon was cyclical, occurring at regular intervals. Each Ice Age is so destructive, though, that it largely erases the geological evidence of its predecessor. _______ geologists were unable to confirm the theory of cyclical Ice Ages until the 1960s.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Hence," },
+      { "key": "B", "text": "Moreover," },
+      { "key": "C", "text": "Nevertheless," },
+      { "key": "D", "text": "Next," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Vì mỗi kỷ Băng hà đều phá hủy và xóa sạch dấu vết địa chất của thời kỳ trước nó, vì vậy / do đó ('Hence,'), mãi đến tận thập niên 1960 các nhà địa chất mới có thể xác nhận giả thuyết này."
+  },
+  {
+    "id": "trans_105",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Originally coined by economist Joan Robinson to refer to markets with multiple sellers of a product but only one buyer, the term \"monopsony\" can also refer to markets where demand for labor is limited. In a product monopsony, the single buyer can force sellers to lower their prices. _______ in a labor monopsony, employers can force workers to accept lower wages.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Earlier," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "Similarly," },
+      { "key": "D", "text": "In particular," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "So sánh hai trường hợp tương đồng: trong độc quyền mua sản phẩm, người mua ép người bán hạ giá; tương tự như thế ('Similarly,'), trong độc quyền mua lao động, người sử dụng lao động ép công nhân nhận lương thấp."
+  },
+  {
+    "id": "trans_106",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "According to Duverger's law, countries with single-ballot majoritarian elections for single-member districts tend to polarize into two-party systems, wherein dueling political parties consistently dominate the political system. _______ countries with proportional-representation electoral systems tend to support multi-partyism, under which power gets distributed among many political parties.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Subsequently," },
+      { "key": "B", "text": "Conversely," },
+      { "key": "C", "text": "For instance," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "So sánh đối lập giữa hai thể thức bầu cử: thể thức đa số một thành viên tạo ra hệ thống lưỡng đảng; ngược lại ('Conversely,'), thể thức đại diện theo tỷ lệ tạo ra hệ thống đa đảng."
+  },
+  {
+    "id": "trans_107",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The chemical trimethylamine N-oxide not only gives fish their fishy smell but also protects them from crushing hydrostatic pressure in deep waters. Trimethylamine N-oxide strengthens the bonds between water molecules in a fish's body. _______ these water molecules maintain their linked structure at extreme depths, thus preventing pressure-related damage.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Nevertheless," },
+      { "key": "B", "text": "As a result," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "For instance," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hóa chất này củng cố liên kết giữa các phân tử nước trong cơ thể cá, kết quả là ('As a result,'), cấu trúc liên kết được duy trì ở độ sâu lớn giúp ngăn chặn tổn thương do áp suất."
+  },
+  {
+    "id": "trans_108",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "One poll taken after the first 1960 presidential debate suggested that John Kennedy lost badly: only 21 percent of those who listened on the radio rated him the winner. _______ the debate was ultimately considered a victory for the telegenic young senator, who rated higher than his opponent, Vice President Richard Nixon, among those watching on the new medium of television.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In other words," },
+      { "key": "B", "text": "Therefore," },
+      { "key": "C", "text": "Likewise," },
+      { "key": "D", "text": "Nevertheless," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Quan hệ tương phản đối lập: Dù người nghe qua đài phát thanh đánh giá Kennedy thua đậm, tuy nhiên ('Nevertheless,'), buổi tranh biện xét về tổng thể vẫn được coi là thắng lợi lớn cho ông nhờ hiệu ứng truyền hình."
+  },
+  {
+    "id": "trans_109",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "A firefly uses specialized muscles to draw oxygen into its lower abdomen through narrow tubes, triggering a chemical reaction whereby the oxygen combines with chemicals in the firefly's abdomen to produce a glow. _______ when the firefly stops drawing in oxygen, the reaction—and the glow—cease.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For instance," },
+      { "key": "B", "text": "By contrast," },
+      { "key": "C", "text": "Specifically," },
+      { "key": "D", "text": "In conclusion," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "So sánh hai trạng thái đối lập của đom đóm: khi hít oxy vào thì phản ứng phát sáng diễn ra, ngược lại ('By contrast,'), khi ngừng hít oxy thì ánh sáng tắt ngấm."
+  },
+  {
+    "id": "trans_110",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "With her room-sized installation The Interstitium, Iranian American artist Laleh Mehran succeeded in creating a space that felt, as intended, both \"familiar and distant.\" _______ with a video screen placed at the far end of the coal slag-encrusted room, her installation was reminiscent of a typical movie theater—albeit one found in a subterranean coal mine.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Next," },
+      { "key": "B", "text": "Nevertheless," },
+      { "key": "C", "text": "Indeed," },
+      { "key": "D", "text": "Instead," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Từ nối 'Indeed,' (Thật vậy) dùng để khẳng định không gian nghệ thuật quả thực vừa quen thuộc (như rạp chiếu phim) vừa xa lạ khác biệt (như hầm mỏ dưới lòng đất)."
+  },
+  {
+    "id": "trans_111",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Roughly once an hour, a torrent of boiling water shoots up 100 feet or more from Yellowstone's Old Faithful geyser before plunging back to the surface—a cycle seemingly inhospitable to life. _______ as microbiologist Eric Boyd attests, \"the geyser is...almost like a cradle for biodiversity,\" home to numerous bacteria species that thrive in its sulfurous waters.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Thus," },
+      { "key": "B", "text": "Specifically," },
+      { "key": "C", "text": "Still," },
+      { "key": "D", "text": "In other words," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Quan hệ tương phản nhượng bộ: Nước sôi sục tưởng chừng không loài nào sống nổi, dẫu vậy ('Still,'), mạch nước phun này lại là cái nôi đa dạng sinh học của nhiều loài vi khuẩn."
+  },
+  {
+    "id": "trans_112",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "In 1974, Mexican chemist Mario Molina and US chemist F. Sherwood Rowland discovered that chemicals called CFCs were harmful to the ozone layer. Their research was extremely influential in the fight against CFCs. _______ it laid the foundation for a 1987 treaty that phased out the use of CFCs across the globe.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Regardless," },
+      { "key": "B", "text": "Specifically," },
+      { "key": "C", "text": "However," },
+      { "key": "D", "text": "Earlier," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Câu trước nói nghiên cứu của họ có sức ảnh hưởng cực lớn. Câu sau nêu dẫn chứng cụ thể ('Specifically,'): nó đặt nền móng cho hiệp ước toàn cầu loại bỏ chất CFC vào năm 1987."
+  },
+  {
+    "id": "trans_113",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "A 2022 study by researchers Hala Altamimi and Qiaozhen Liu investigated the relationship between nonprofit arts organizations' spending and performance. _______ the researchers examined the correlation between how much 22,328 US arts nonprofits spent on overhead—operational costs such as equipment and fundraising—and how many people attended their events (a measure of overall success).",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Thus," },
+      { "key": "B", "text": "In addition," },
+      { "key": "C", "text": "By comparison," },
+      { "key": "D", "text": "Specifically," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu sau làm rõ phương pháp nghiên cứu cụ thể ('Specifically,') trên 22.328 tổ chức phi lợi nhuận cho đề tài đã nêu ở câu trước."
+  },
+  {
+    "id": "trans_114",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Researchers Helena Mihaljević-Brandt, Lucía Santamaría, and Marco Tullney report that while mathematicians may have traditionally worked alone, evidence points to a shift in the opposite direction. _______ mathematicians are choosing to collaborate with their peers—a trend illustrated by a rise in the number of mathematics publications credited to multiple authors.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Similarly," },
+      { "key": "B", "text": "For this reason," },
+      { "key": "C", "text": "Furthermore," },
+      { "key": "D", "text": "Increasingly," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Từ nối 'Increasingly,' (Ngày càng / Có xu hướng gia tăng) diễn tả sự chuyển dịch ngày một phổ biến của giới toán học hướng tới việc làm việc nhóm và đồng tác giả."
+  },
+  {
+    "id": "trans_115",
+    "topic": "Transition",
+    "difficulty": "Medium",
+    "passage": "Jeffrey Gibson's sculptural object KNOW YOUR MAGIC, BABY, an Everlast-brand exercise bag embroidered with multicolored beads and a fringe associated with the dances of the Ojibwe people, stitches together—literally and figuratively—recognizable symbols from both Native and non-Native cultures. _______ Gibson's piece also blurs the distinction between contemporary art and traditional crafts.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Conversely," },
+      { "key": "B", "text": "In so doing," },
+      { "key": "C", "text": "For instance," },
+      { "key": "D", "text": "In particular," }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'In so doing,' (Khi làm như vậy) chỉ hành động kết hợp các biểu tượng văn hóa ở câu trước đồng thời cũng làm mờ ranh giới giữa nghệ thuật đương đại và thủ công truyền thống."
+  },
+  {
+    "id": "trans_116",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Although those who migrated to California in 1849 dreamed of finding gold nuggets in streambeds, the state's richest deposits were buried deeply in rock, beyond the reach of individual prospectors. _______ by 1852, many had given up their fortune-hunting dreams and gone to work for one of the large companies capable of managing California's complex mining operations.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Furthermore," },
+      { "key": "B", "text": "Still," },
+      { "key": "C", "text": "Consequently," },
+      { "key": "D", "text": "Next," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Vì các mỏ vàng nằm sâu trong lòng đá ngoài tầm với của cá nhân, kết quả là / do đó ('Consequently,'), nhiều người phải từ bỏ giấc mơ đào vàng tự do để đi làm thuê cho các công ty lớn."
+  },
+  {
+    "id": "trans_117",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "The Coastal Futures Conservatory in Virginia is known for creating aural representations of ecological data. One such effort combines underwater audio recorded in seagrass beds with data that track rising carbon levels in the seagrass. As carbon levels increase, the audio is correspondingly distorted; _______ listeners can \"hear\" the changes in the carbon levels.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "furthermore," },
+      { "key": "B", "text": "by comparison," },
+      { "key": "C", "text": "for instance," },
+      { "key": "D", "text": "thus," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Âm thanh bị biến dạng tương ứng với mức tăng carbon, do đó / nhờ vậy ('thus,'), thính giả có thể 'nghe' được sự thay đổi nồng độ carbon."
+  },
+  {
+    "id": "trans_118",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Working together with the Navajo Nation Department of Water Resources, Dr. Lani Tsinnajinnie analyzed data about snowpack levels in the Chuska Mountains. She found that the snowpack (the amount of snow on the ground) was deepest in early March at lower elevations. _______ at higher elevations, the snowpack was deepest in mid-March.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in other words," },
+      { "key": "B", "text": "for instance," },
+      { "key": "C", "text": "on the other hand," },
+      { "key": "D", "text": "in summary," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "So sánh đối lập giữa hai độ cao: ở vùng thấp tuyết dày nhất vào đầu tháng 3, mặt khác ('on the other hand,'), ở vùng cao tuyết lại dày nhất vào giữa tháng 3."
+  },
+  {
+    "id": "trans_119",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Archaeologist Sue Brunning explains why the seventh-century ship burial site at Sutton Hoo in England was likely the tomb of a king. First, the gold artifacts inside the ship suggest that the person buried with them was a wealthy and respected leader. _______ the massive effort required to bury the ship would likely only have been undertaken for a king.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Instead," },
+      { "key": "B", "text": "Still," },
+      { "key": "C", "text": "Specifically," },
+      { "key": "D", "text": "Second," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Liệt kê hai luận cứ chứng minh: 'First,...' (Thứ nhất) -> 'Second,...' (Thứ hai)."
+  },
+  {
+    "id": "trans_120",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In a 2022 analysis of 200 terms, researchers found a broad pattern of valence-dependent mutation for which negative words saw a faster rate of cognate replacement—_______ the rate at which a word will be replaced over time with a noncognate form. Adjectives (e.g., \"afraid\") saw the largest effect; nouns (e.g., \"attack\"), meanwhile, saw the smallest.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "for example," },
+      { "key": "B", "text": "likewise," },
+      { "key": "C", "text": "in addition," },
+      { "key": "D", "text": "that is," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cụm 'that is,' (tức là) được đặt sau dấu gạch ngang để giải thích định nghĩa chính xác của thuật ngữ 'cognate replacement rate'."
+  },
+  {
+    "id": "trans_121",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In the early 1900s, Jovita Idár fought injustice on both sides of the Mexico-United States border. As a reporter for the Texas newspaper La Crónica, she voiced support for the Mexican people's revolt against authoritarian rule. _______ she founded the League of Mexican Women, a group that advocated for the rights of Mexican Americans.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Additionally," },
+      { "key": "B", "text": "In conclusion," },
+      { "key": "C", "text": "For example," },
+      { "key": "D", "text": "Rather," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bổ sung hành động đấu tranh thứ hai của bà: bên cạnh việc viết báo ủng hộ nhân dân Mexico, ngoài ra ('Additionally,'), bà còn thành lập Hội Phụ nữ Mexico để bảo vệ quyền lợi người Mỹ gốc Mexico."
+  },
+  {
+    "id": "trans_122",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In November 1934, Amrita Sher-Gil was living in what must have seemed like the ideal city for a young artist: Paris. She was studying firsthand the color-saturated style of France's modernist masters and beginning to make a name for herself as a painter. _______ Sher-Gil longed to return to her childhood home of India; only there, she believed, could her art truly flourish.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Still," },
+      { "key": "B", "text": "Therefore," },
+      { "key": "C", "text": "Indeed," },
+      { "key": "D", "text": "Furthermore," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Quan hệ nhượng bộ tương phản: Dù Paris là môi trường lý tưởng và sự nghiệp đang lên, dẫu vậy ('Still,'), bà vẫn khao khát trở về quê nhà Ấn Độ."
+  },
+  {
+    "id": "trans_123",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Mary Ellen Pleasant, a successful entrepreneur during the gold rush era, earned the moniker \"Mother of Human Rights in California\" after successfully challenging discrimination in the state. _______ in 1866, she sued a streetcar company for denying her and other Black riders service, a suit she eventually won when the California Supreme Court declared it illegal for carriers to exclude passengers based on race.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "For this reason," },
+      { "key": "B", "text": "Then," },
+      { "key": "C", "text": "In addition," },
+      { "key": "D", "text": "Specifically," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu sau đưa ra vụ kiện cụ thể vào năm 1866 để làm rõ chi tiết cho nhận định chung chung về việc bà chống nạn phân biệt đối xử ở câu trước -> Dùng 'Specifically,' (Cụ thể là)."
+  },
+  {
+    "id": "trans_124",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "In 2021, a model developed by astrophysicist Catherine Zucker and her research team revealed that the same supernovas responsible for the creation and ongoing expansion of the Local Bubble—a 14-million-year-old cavity in the Milky Way—are likely responsible for the formation of new stars. _______ this model detailed how the bubble's expansion trapped interstellar clouds of gas and dust that became stars upon their eventual collapse.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Hence," },
+      { "key": "B", "text": "However," },
+      { "key": "C", "text": "Admittedly," },
+      { "key": "D", "text": "Specifically," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Câu sau giải thích chi tiết cơ chế mô hình toán học đã mô phỏng cách các đám mây khí bụi sụp đổ tạo thành sao ra sao -> Dùng 'Specifically,'."
+  },
+  {
+    "id": "trans_125",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "Following the American Revolutionary War, North American foodways underwent a radical transformation, fueled in large part by spiking consumer demand for certain grains. The cultivation, trade, and transportation of maize and wheat, _______ reconfigured the continent's existing regional foodways into a globally oriented food system.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in particular," },
+      { "key": "B", "text": "alternatively," },
+      { "key": "C", "text": "by comparison," },
+      { "key": "D", "text": "second of all," }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Ngô và lúa mì là hai ví dụ nổi bật, đặc biệt nhất cho nhóm ngũ cốc ('certain grains') đã được đề cập ở câu trước -> Dùng 'in particular,' (đặc biệt là)."
+  },
+  {
+    "id": "trans_126",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "\"Wishcycling\"—putting nonrecyclable items into recycling bins under the mistaken belief that those items can be recycled—ultimately does more harm than good. Nonrecyclable items, such as greasy pizza boxes, can contaminate recyclable materials, rendering entire batches unusable. _______ nonrecyclable products can damage recycling plants' machinery.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "Fittingly," },
+      { "key": "B", "text": "On the contrary," },
+      { "key": "C", "text": "Moreover," },
+      { "key": "D", "text": "Nevertheless," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Bổ sung tác hại thứ hai của việc bỏ rác không tái chế vào thùng tái chế: bên cạnh làm bẩn cả lô vật liệu, hơn nữa ('Moreover,'), chúng còn phá hỏng máy móc của nhà máy tái chế."
+  },
+  {
+    "id": "trans_127",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "At two weeks old, the time their critical socialization period begins, wolves can smell but cannot yet see or hear. Domesticated dogs, _______ can see, hear, and smell by the end of two weeks. This relative lack of sensory input may help explain why wolves behave so differently around humans than dogs do: from a very young age, wolves are more wary and less exploratory.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "in other words," },
+      { "key": "B", "text": "for instance," },
+      { "key": "C", "text": "by contrast," },
+      { "key": "D", "text": "accordingly," }
+    ],
+    "correctAnswer": "C",
+    "explanation": "So sánh đối lập giữa chó sói và chó nhà khi được 2 tuần tuổi: sói chỉ ngửi được chứ chưa nhìn hay nghe thấy, ngược lại ('by contrast,'), chó nhà đã phát triển cả thị giác, thính giác lẫn khứu giác."
+  },
+  {
+    "id": "trans_128",
+    "topic": "Transition",
+    "difficulty": "Easy",
+    "passage": "To discover which fruit varieties were grown in Italy's Umbria region before the introduction of industrial farming, botanist Isabella Dalla Ragione often turns to centuries-old lists of cooking ingredients. _______ she analyzes Renaissance paintings of Umbria, as they can provide accurate representations of fruits that were grown there long ago.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": [
+      { "key": "A", "text": "In sum," },
+      { "key": "B", "text": "Instead," },
+      { "key": "C", "text": "Thus," },
+      { "key": "D", "text": "Additionally," }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Bổ sung nguồn tài liệu thứ hai mà nhà thực vật học sử dụng: bên cạnh các danh sách nguyên liệu nấu ăn cổ xưa, thêm vào đó ('Additionally,'), bà còn phân tích các bức tranh thời Phục Hưng."
+  }
+]
