@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { 
   Timer, ArrowLeft, CheckCircle2, XCircle, Flag, 
   Underline as UnderlineIcon, Grid, Eye, 
-  ChevronLeft, ChevronRight, Strikethrough
+  ChevronLeft, ChevronRight, Strikethrough,
+  Calculator, BookOpen
 } from 'lucide-react';
 import { storageService } from '../services/storageService';
 import { questionService } from '../services/questionService';
+import MathRenderer from '../components/common/MathRenderer';
+import DesmosModal from '../components/exam/DesmosModal';
+import ReferenceModal from '../components/exam/ReferenceModal';
 
-// Hàm helper bóc tách text an toàn, không bao giờ để lọt Object vào JSX child
 const renderSafeText = (val) => {
   if (val === null || val === undefined) return '';
   if (typeof val === 'string' || typeof val === 'number') return String(val);
@@ -32,6 +35,10 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   const [isFinished, setIsFinished] = useState(false);
   const [showMatrix, setShowMatrix] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
+
+  // States của Desmos và Reference
+  const [showDesmos, setShowDesmos] = useState(false);
+  const [showReference, setShowReference] = useState(false);
 
   // Phục hồi session cũ nếu F5
   useEffect(() => {
@@ -70,7 +77,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Chuẩn hóa toàn bộ options thành danh sách [{ key: 'A', text: '...' }]
+  // Chuẩn hóa options
   const normalizeOptions = (options) => {
     if (!options) return [];
     const defaultLetters = ['A', 'B', 'C', 'D'];
@@ -91,7 +98,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     }
 
     if (typeof options === 'object') {
-      return Object.entries(options).map(([k, val], idx) => {
+      return Object.entries(options).map(([k, val]) => {
         if (typeof val === 'object' && val !== null) {
           return {
             key: renderSafeText(val.key || k),
@@ -105,7 +112,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     return [];
   };
 
-  // Tính năng gạch chân chữ (Underline)
+  // Tính năng gạch chân
   const handleUnderlineSelection = () => {
     const selection = window.getSelection();
     if (!selection || !selection.rangeCount || selection.isCollapsed) return;
@@ -131,7 +138,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
       range.surroundContents(span);
       selection.removeAllRanges();
     } catch (e) {
-      console.warn("Chỉ chọn văn bản trong một đoạn văn bản!", e);
+      console.warn("Chỉ chọn văn bản trong một đoạn:", e);
     }
   };
 
@@ -214,7 +221,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   const currentEliminated = (currentQ && eliminatedOptions[currentQ.id]) || [];
   const normalizedOptionsList = normalizeOptions(currentQ?.options);
 
-  // Màn hình kết quả sau khi nộp bài
   if (isFinished && !isReviewMode) {
     return (
       <div className="h-screen bg-slate-50 flex items-center justify-center p-6 select-none">
@@ -285,8 +291,30 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           </div>
         </div>
 
-        {/* Công cụ: Gạch chân, Đồng hồ, Lưới câu hỏi */}
+        {/* Cụm công cụ trung tâm: Máy tính Desmos, Bảng Reference, Gạch chân, Đồng hồ */}
         <div className="flex items-center gap-2.5">
+          {/* Nút bật Máy tính Desmos */}
+          <button
+            type="button"
+            onClick={() => setShowDesmos(true)}
+            title="Mở máy tính vẽ đồ thị Desmos"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold shadow-xs transition active:scale-95"
+          >
+            <Calculator className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Desmos</span>
+          </button>
+
+          {/* Nút bật Reference Sheet */}
+          <button
+            type="button"
+            onClick={() => setShowReference(true)}
+            title="Mở bảng công thức hình học chuẩn College Board"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold shadow-xs transition active:scale-95"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Reference</span>
+          </button>
+
           {!isReviewMode && (
             <button
               type="button"
@@ -295,7 +323,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                 handleUnderlineSelection();
               }}
               title="Bôi đen văn bản và nhấn để gạch chân (Ctrl + U)"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-xs font-semibold shadow-sm transition active:scale-95"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-xs font-semibold shadow-xs transition active:scale-95"
             >
               <UnderlineIcon className="w-3.5 h-3.5" />
               <span>Gạch chân</span>
@@ -349,7 +377,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
               Passage / Câu hỏi {currentIndex + 1}
             </div>
             <div className="whitespace-pre-line select-text">
-              {renderSafeText(currentQ?.prompt || currentQ?.passage || "Nội dung câu hỏi đang được cập nhật...")}
+              <MathRenderer text={renderSafeText(currentQ?.prompt || currentQ?.passage || "Nội dung câu hỏi đang được cập nhật...")} />
             </div>
           </div>
         </div>
@@ -359,7 +387,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           <div className="max-w-xl mx-auto w-full space-y-5">
             <div className="flex items-start justify-between gap-4">
               <h3 className="font-bold text-slate-900 text-sm leading-snug">
-                {renderSafeText(currentQ?.question) || "Which choice completes the text with the most logical and precise word or phrase?"}
+                <MathRenderer text={renderSafeText(currentQ?.question) || "Which choice completes the text with the most logical and precise word or phrase?"} />
               </h3>
               {!isReviewMode && (
                 <button
@@ -377,7 +405,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
               )}
             </div>
 
-            {/* Render 4 phương án an toàn qua renderSafeText */}
+            {/* Render 4 phương án an toàn qua MathRenderer */}
             <div className="space-y-2.5">
               {normalizedOptionsList.map(({ key, text }) => {
                 const isSelected = answers[currentQ?.id] === key;
@@ -412,7 +440,9 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                       }`}>
                         {renderSafeText(key)}
                       </span>
-                      <span className="text-sm select-none">{renderSafeText(text)}</span>
+                      <span className="text-sm select-none">
+                        <MathRenderer text={renderSafeText(text)} />
+                      </span>
                     </div>
 
                     {!isReviewMode && (
@@ -452,9 +482,9 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                   <CheckCircle2 className="w-4 h-4 text-indigo-600" />
                   <span>Giải thích chi tiết:</span>
                 </div>
-                <p className="text-xs text-indigo-950 leading-relaxed">
-                  {renderSafeText(currentQ?.explanation) || `Đáp án đúng là (${renderSafeText(currentQ?.correctAnswer)}).`}
-                </p>
+                <div className="text-xs text-indigo-950 leading-relaxed">
+                  <MathRenderer text={renderSafeText(currentQ?.explanation) || `Đáp án đúng là (${renderSafeText(currentQ?.correctAnswer)}).`} />
+                </div>
               </div>
             )}
           </div>
@@ -483,6 +513,18 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           </div>
         </div>
       </div>
+
+      {/* MODAL MÁY TÍNH DESMOS */}
+      <DesmosModal
+        isOpen={showDesmos}
+        onClose={() => setShowDesmos(false)}
+      />
+
+      {/* MODAL BẢNG CÔNG THỨC REFERENCE */}
+      <ReferenceModal
+        isOpen={showReference}
+        onClose={() => setShowReference(false)}
+      />
 
       {/* Modal Matrix chuyển nhanh câu hỏi */}
       {showMatrix && (
