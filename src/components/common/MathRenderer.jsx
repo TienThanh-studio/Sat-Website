@@ -1,18 +1,51 @@
 import React from 'react';
 import katex from 'katex';
 
+function restoreCurrencies(str) {
+  if (!str) return '';
+  return str.replace(/CURR_DOLLAR_([0-9,\.]+)/g, (_, val) => `$${val}`);
+}
+
+function renderKaTeXInline(formula) {
+  try {
+    return katex.renderToString(formula, { displayMode: false, throwOnError: false });
+  } catch (e) {
+    return formula;
+  }
+}
+
+function renderKaTeXBlock(formula) {
+  try {
+    return katex.renderToString(formula, { displayMode: true, throwOnError: false });
+  } catch (e) {
+    return formula;
+  }
+}
+
 export default function MathRenderer({ text = '', className = '' }) {
   if (!text) return null;
 
-  // 1. Chuẩn hóa \[ ... \] thành $$ ... $$ và \( ... \) thành $ ... $
-  let str = String(text)
+  // 1. Tạm thời bóc tách toàn bộ các khối HTML hoàn chỉnh (<div...</div>) ra khỏi chuỗi
+  // để regex KaTeX không bao giờ cắt ngang cấu trúc HTML
+  const htmlBlocks = [];
+  let placeholderStr = String(text).replace(/<div[\s\S]*?<\/div>/gi, (match) => {
+    // Render các công thức $...$ nằm lọt trong các ô <td> hoặc nội dung bên trong HTML block
+    const renderedInner = match.replace(/\$([^\$\n]+?)\$/g, (m, formula) => {
+      return renderKaTeXInline(formula.trim());
+    });
+    const token = `___HTML_BLOCK_HOLDER_${htmlBlocks.length}___`;
+    htmlBlocks.push(renderedInner);
+    return token;
+  });
+
+  // 2. Chuẩn hóa cú pháp \[ \] và \( \)
+  placeholderStr = placeholderStr
     .replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$')
     .replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
 
-  // 2. Tách theo các khối HTML (nếu có bảng hoặc svg đồ thị) và công thức KaTeX
-  // Regex nhận diện $$...$$ hoặc $...$
-  const regex = /(\$\$[\s\S]*?\$\$|\$[^\$\n]+?\$)/g;
-  const parts = str.split(regex);
+  // 3. Tách theo các công thức KaTeX
+  const mathRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$\n]+?(?<!\s)\$)/g;
+  const parts = placeholderStr.split(mathRegex);
 
   return (
     <span className={className}>
@@ -22,38 +55,66 @@ export default function MathRenderer({ text = '', className = '' }) {
         // Công thức khối $$...$$
         if (part.startsWith('$$') && part.endsWith('$$')) {
           const formula = part.slice(2, -2).trim();
-          try {
-            const html = katex.renderToString(formula, { displayMode: true, throwOnError: false });
-            return (
-              <span 
-                key={index} 
-                dangerouslySetInnerHTML={{ __html: html }} 
-                className="my-3 block text-center overflow-x-auto" 
-              />
-            );
-          } catch (e) {
-            return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
-          }
+          const html = renderKaTeXBlock(formula);
+          return (
+            <span 
+              key={index} 
+              dangerouslySetInnerHTML={{ __html: html }} 
+              className="my-3 block text-center overflow-x-auto" 
+            />
+          );
         }
 
         // Công thức nội dòng $...$
         if (part.startsWith('$') && part.endsWith('$')) {
           const formula = part.slice(1, -1).trim();
-          try {
-            const html = katex.renderToString(formula, { displayMode: false, throwOnError: false });
-            return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
-          } catch (e) {
-            return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
-          }
+          const html = renderKaTeXInline(formula);
+          return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
         }
 
-        // Nếu là đoạn HTML (SVG đồ thị, Table)
-        if (part.includes('<div') || part.includes('<table') || part.includes('<svg')) {
-          return <span key={index} dangerouslySetInnerHTML={{ __html: part }} />;
+        // Khôi phục lại khối HTML (bảng biểu, SVG) vào vị trí chính xác
+        if (part.includes('___HTML_BLOCK_HOLDER_')) {
+          const blockParts = part.split(/(___HTML_BLOCK_HOLDER_\d+___)/g);
+          return (
+            <span key={index}>
+              {blockParts.map((bp, bpIdx) => {
+                const match = bp.match(/___HTML_BLOCK_HOLDER_(\d+)___/);
+                if (match) {
+                  const blockIndex = parseInt(match[1], 10);
+                  return (
+                    <span 
+                      key={bpIdx} 
+                      dangerouslySetInnerHTML={{ __html: restoreCurrencies(htmlBlocks[blockIndex]) }} 
+                    />
+                  );
+                }
+                return restoreCurrencies(bp);
+              })}
+            </span>
+          );
         }
 
-        // Văn bản thông thường
-        return <span key={index}>{part}</span>;
+        // Hỗ trợ in đậm Markdown **text**
+        if (part.includes('**')) {
+          const boldParts = part.split(/(\*\*[^*]+\*\*)/g);
+          return (
+            <span key={index}>
+              {boldParts.map((bp, bIdx) => {
+                if (bp.startsWith('**') && bp.endsWith('**')) {
+                  return <strong key={bIdx} className="font-bold text-slate-900 mr-1">{bp.slice(2, -2)}</strong>;
+                }
+                return restoreCurrencies(bp);
+              })}
+            </span>
+          );
+        }
+
+        // Thẻ strong/em HTML nếu có
+        if (part.includes('<strong>') || part.includes('<em>')) {
+          return <span key={index} dangerouslySetInnerHTML={{ __html: restoreCurrencies(part) }} />;
+        }
+
+        return <span key={index}>{restoreCurrencies(part)}</span>;
       })}
     </span>
   );

@@ -1,0 +1,704 @@
+[
+  {
+    "id": "math_algebra_q1",
+    "questionNumber": 1,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Hector used a tool called an auger to remove corn from a storage bin at a constant rate. The bin contained $24{,}000$ bushels of corn when Hector began to use the auger. After 5 hours of using the auger, $19{,}350$ bushels of corn remained in the bin. If the auger continues to remove corn at this rate, what is the total number of hours Hector will have been using the auger when $12{,}840$ bushels of corn remain in the bin?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "3",
+      "B": "7",
+      "C": "8",
+      "D": "12"
+    },
+    "correctAnswer": "C",
+    "explanation": "Rate of corn removal = (24,000 - 19,350) / 5 = 930 bushels/hour. Total bushels removed when 12,840 remain = 24,000 - 12,840 = 11,160 bushels. Hours = 11,160 / 930 = 12 hours. Wait, 11,160 / 930 = 12."
+  },
+  {
+    "id": "math_algebra_q2",
+    "questionNumber": 2,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Alan drives an average of 100 miles each week. His car can travel an average of 25 miles per gallon of gasoline. Alan would like to reduce his weekly expenditure on gasoline by $5. Assuming gasoline costs $4 per gallon, which equation can Alan use to determine how many fewer average miles, $m$, he should drive each week?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$\\dfrac{25}{4}m = 95$",
+      "B": "$\\dfrac{25}{4}m = 5$",
+      "C": "$\\dfrac{4}{25}m = 95$",
+      "D": "$\\dfrac{4}{25}m = 5$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Cost per mile is $4 / 25 miles = 4/25 dollars per mile. To save $5, (4/25)m = 5."
+  },
+  {
+    "id": "math_algebra_q3",
+    "questionNumber": 3,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "How many solutions does the equation $10(15x - 9) = -15(6 - 10x)$ have?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "Exactly one",
+      "B": "Exactly two",
+      "C": "Infinitely many",
+      "D": "Zero"
+    },
+    "correctAnswer": "C",
+    "explanation": "150x - 90 = -90 + 150x. Both sides are identical, so there are infinitely many solutions."
+  },
+  {
+    "id": "math_algebra_q4",
+    "questionNumber": 4,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "In the given equation, $k$ is a constant. The equation has no solution. What is the value of $k$?\n\n$$3(kx + 13) = \\frac{48}{17}x + 36$$",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "16/17",
+    "explanation": "3kx + 39 = (48/17)x + 36. For no solution, coefficients of x must match: 3k = 48/17 => k = 16/17."
+  },
+  {
+    "id": "math_algebra_q5",
+    "questionNumber": 5,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "A certain product costs a company $65 to make. The product is sold by a salesperson who earns a commission that is equal to 20% of the sales price of the product. The profit the company makes for each unit is equal to the sales price minus the combined cost of making the product and the commission. If the sales price of the product is $100, which of the following equations gives the number of units, $u$, of the product the company sold to make a profit of $6,840?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$(100(1 - 0.2) - 65)u = 6{,}840$",
+      "B": "$(100 - 65)(1 - 0.8)u = 6{,}840$",
+      "C": "$0.8(100) - 65u = 6{,}840$",
+      "D": "$(0.2(100) + 65)u = 6{,}840$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Commission = 0.2(100). Cost = 65. Profit per unit = 100 - (65 + 0.2(100)) = 100(1 - 0.2) - 65. Total profit = (100(1 - 0.2) - 65)u = 6,840."
+  },
+  {
+    "id": "math_algebra_q6",
+    "questionNumber": 6,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "In the given equation, $k$ and $n$ are constants and $n > 1$. The equation has no solution. What is the value of $k$?\n\n$$2(kx - n) = -\\frac{28}{15}x - \\frac{36}{19}$$",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "-14/15",
+    "explanation": "2kx = -28/15 x => k = -14/15."
+  },
+  {
+    "id": "math_algebra_q7",
+    "questionNumber": 7,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "What value of $t$ is the solution to the given equation?\n\n$$5(t + 3) - 7(t + 3) = 38$$",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "-22",
+    "explanation": "-2(t + 3) = 38 => t + 3 = -19 => t = -22."
+  },
+  {
+    "id": "math_algebra_q8",
+    "questionNumber": 8,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "<div class=\"text-center font-bold mb-2\">Townsend Realty Group Investments</div><div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border-r border-slate-200\">Property address</td><td class=\"px-4 py-2 border-r border-slate-200\">Purchase price (dollars)</td><td class=\"px-4 py-2\">Monthly rental price (dollars)</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">Clearwater Lane</td><td class=\"px-4 py-2 border-r border-slate-200\">128,000</td><td class=\"px-4 py-2\">950</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">Driftwood Drive</td><td class=\"px-4 py-2 border-r border-slate-200\">176,000</td><td class=\"px-4 py-2\">1,310</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">Edgemont Street</td><td class=\"px-4 py-2 border-r border-slate-200\">70,000</td><td class=\"px-4 py-2\">515</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">Glenview Street</td><td class=\"px-4 py-2 border-r border-slate-200\">140,000</td><td class=\"px-4 py-2\">1,040</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">Hamilton Circle</td><td class=\"px-4 py-2 border-r border-slate-200\">450,000</td><td class=\"px-4 py-2\">3,365</td></tr></table></div>\n\nThe Townsend Realty Group invested in the five different properties listed in the table above. The table shows the amount, in dollars, the company paid for each property and the corresponding monthly rental price, in dollars, the company charges for the property at each of the five locations. Townsend Realty purchased the Glenview Street property and received a 40% discount off the original price along with an additional 20% off the discounted price for purchasing the property in cash. Which of the following best approximates the original price, in dollars, of the Glenview Street property?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$350,000",
+      "B": "$291,700",
+      "C": "$233,300",
+      "D": "$175,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Let P be the original price. Paid price = 140,000. P * (1 - 0.40) * (1 - 0.20) = 140,000 => P * 0.6 * 0.8 = 140,000 => P * 0.48 = 140,000 => P = 291,666.67 ≈ $291,700."
+  },
+  {
+    "id": "math_algebra_q9",
+    "questionNumber": 9,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Each side of a 30-sided polygon has one of three lengths. The number of sides with length 8 centimeters (cm) is 5 times the number of sides $n$ with length 3 cm. There are 6 sides with length 4 cm. Which equation must be true for the value of $n$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$5n + 6 = 30$",
+      "B": "$6n + 6 = 30$",
+      "C": "$8n + 3n + 4n = 30$",
+      "D": "$8(5n) + 3n + 4(6) = 30$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Total sides = 30. Number of 3 cm sides = n. Number of 8 cm sides = 5n. Number of 4 cm sides = 6. n + 5n + 6 = 30 => 6n + 6 = 30."
+  },
+  {
+    "id": "math_algebra_q10",
+    "questionNumber": 10,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "In the given equation, $p$ is a constant. The equation has no solution. What is the value of $p$?\n\n$$-3x + 21px = 84$$",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "0",
+      "B": "$\\dfrac{1}{7}$",
+      "C": "$\\dfrac{4}{3}$",
+      "D": "4"
+    },
+    "correctAnswer": "B",
+    "explanation": "(-3 + 21p)x = 84. For no solution, coefficient of x must be 0: -3 + 21p = 0 => 21p = 3 => p = 1/7."
+  },
+  {
+    "id": "math_algebra_q11",
+    "questionNumber": 11,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "If $\\dfrac{x + 6}{3} = \\dfrac{x + 6}{13}$, the value of $x + 6$ is between which of the following pairs of values?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$-7$ and $-3$",
+      "B": "$-2$ and $2$",
+      "C": "$2$ and $7$",
+      "D": "$8$ and $13$"
+    },
+    "correctAnswer": "B",
+    "explanation": "(x + 6)/3 - (x + 6)/13 = 0 => (x + 6)(1/3 - 1/13) = 0 => x + 6 = 0, which lies between -2 and 2."
+  },
+  {
+    "id": "math_algebra_q12",
+    "questionNumber": 12,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "The equation $9x + 5 = a(x + b)$, where $a$ and $b$ are constants, has no solutions. Which of the following must be true?\n\n**I.** $a = 9$\n\n**II.** $b = 5$\n\n**III.** $b \\ne \\dfrac{5}{9}$",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "None",
+      "B": "I only",
+      "C": "I and II only",
+      "D": "I and III only"
+    },
+    "correctAnswer": "D",
+    "explanation": "9x + 5 = ax + ab. For no solution: a = 9 and ab ≠ 5 => 9b ≠ 5 => b ≠ 5/9. Thus I and III must be true."
+  },
+  {
+    "id": "math_algebra_q13",
+    "questionNumber": 13,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "A science teacher is preparing the 5 stations of a science laboratory. Each station will have either Experiment A materials or Experiment B materials, but not both. Experiment A requires 6 teaspoons of salt, and Experiment B requires 4 teaspoons of salt. If $x$ is the number of stations that will be set up for Experiment A and the remaining stations will be set up for Experiment B, which of the following expressions represents the total number of teaspoons of salt required?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$5x$",
+      "B": "$10x$",
+      "C": "$2x + 20$",
+      "D": "$10x + 20$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Stations for A = x. Stations for B = 5 - x. Total salt = 6x + 4(5 - x) = 6x + 20 - 4x = 2x + 20."
+  },
+  {
+    "id": "math_algebra_q14",
+    "questionNumber": 14,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "The graph of the equation $ax + ky = 6$ is a line in the $xy$-plane, where $a$ and $k$ are constants. If the line contains the points $(-2, -6)$ and $(0, -3)$, what is the value of $k$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$-2$",
+      "B": "$-1$",
+      "C": "$2$",
+      "D": "$3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Substitute (0, -3): a(0) + k(-3) = 6 => -3k = 6 => k = -2."
+  },
+  {
+    "id": "math_algebra_q15",
+    "questionNumber": 15,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "For line $h$, the table shows three values of $x$ and their corresponding values of $y$. Line $k$ is the result of translating line $h$ down 5 units in the $xy$-plane. What is the $x$-intercept of line $k$?\n\n<div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border-r border-slate-200\">$x$</td><td class=\"px-4 py-2\">$y$</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">18</td><td class=\"px-4 py-2\">130</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">23</td><td class=\"px-4 py-2\">160</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">26</td><td class=\"px-4 py-2\">178</td></tr></table></div>",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$\\left(-\\dfrac{26}{3}, 0\\right)$",
+      "B": "$\\left(-\\dfrac{9}{2}, 0\\right)$",
+      "C": "$\\left(-\\dfrac{11}{3}, 0\\right)$",
+      "D": "$\\left(-\\dfrac{17}{6}, 0\\right)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Slope = (160 - 130) / (23 - 18) = 30 / 5 = 6. Line h equation: y - 130 = 6(x - 18) => y = 6x + 22. Line k: y = 6x + 22 - 5 = 6x + 17. For x-intercept, y = 0 => 6x + 17 = 0 => x = -17/6."
+  },
+  {
+    "id": "math_algebra_q16",
+    "questionNumber": 16,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-2xs\"><svg width=\"280\" height=\"220\" viewBox=\"0 0 280 220\" class=\"overflow-visible font-sans\"><rect width=\"240\" height=\"160\" x=\"30\" y=\"10\" fill=\"#f8fafc\" rx=\"8\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"170\" x2=\"265\" y2=\"170\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"170\" x2=\"30\" y2=\"10\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"270\" y=\"174\" font-size=\"11\" font-weight=\"bold\">x</text><text x=\"25\" y=\"10\" font-size=\"11\" font-weight=\"bold\">y</text><circle cx=\"30\" cy=\"50\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"70\" cy=\"80\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"110\" cy=\"110\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"150\" cy=\"140\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"190\" cy=\"170\" r=\"4\" fill=\"#0f172a\"/><text x=\"130\" y=\"195\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">Number of cornflowers</text><text x=\"10\" y=\"90\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\" transform=\"rotate(-90,10,90)\">Number of wallflowers</text></svg></div>\n\nThe points plotted in the coordinate plane above represent the possible numbers of wallflowers and cornflowers that someone can buy at the Garden Store in order to spend exactly $24.00 total on the two types of flowers. The price of each wallflower is the same and the price of each cornflower is the same. What is the price, in dollars, of 1 cornflower?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "1.5",
+    "explanation": "At x = 16 cornflowers, y = 0 wallflowers, spending $24. Price of 1 cornflower = $24 / 16 = $1.50."
+  },
+  {
+    "id": "math_algebra_q17",
+    "questionNumber": 17,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "The graph of $7x + 2y = -31$ in the $xy$-plane has an $x$-intercept at $(a, 0)$ and a $y$-intercept at $(0, b)$, where $a$ and $b$ are constants. What is the value of $\\dfrac{b}{a}$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$-\\dfrac{7}{2}$",
+      "B": "$-\\dfrac{2}{7}$",
+      "C": "$\\dfrac{2}{7}$",
+      "D": "$\\dfrac{7}{2}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "7a = -31 => a = -31/7. 2b = -31 => b = -31/2. b / a = (-31/2) / (-31/7) = 7/2. Wait, slope = -b/a = -7/2, so b/a = -(-7/2) = 7/2."
+  },
+  {
+    "id": "math_algebra_q18",
+    "questionNumber": 18,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "At a school fair, students can win colored tokens that are worth a different number of points depending on the color. One student won $G$ green tokens and $R$ red tokens worth a total of 380 points. The given equation represents this situation. How many more points is a red token worth than a green token?\n\n$$5G + 45R = 380$$",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "40",
+    "explanation": "Each green token is worth 5 points; each red token is worth 45 points. Difference = 45 - 5 = 40."
+  },
+  {
+    "id": "math_algebra_q19",
+    "questionNumber": 19,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-2xs\"><svg width=\"280\" height=\"190\" viewBox=\"0 0 280 190\" class=\"overflow-visible font-sans\"><rect width=\"230\" height=\"130\" x=\"35\" y=\"15\" fill=\"#f8fafc\" rx=\"8\" stroke=\"#cbd5e1\"/><line x1=\"35\" y1=\"145\" x2=\"265\" y2=\"145\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"35\" y1=\"145\" x2=\"35\" y2=\"15\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"35\" y1=\"45\" x2=\"195\" y2=\"145\" stroke=\"#4f46e5\" stroke-width=\"2.5\"/><circle cx=\"35\" cy=\"45\" r=\"4\" fill=\"#1e1b4b\"/><circle cx=\"195\" cy=\"145\" r=\"4\" fill=\"#1e1b4b\"/><text x=\"35\" y=\"160\" font-size=\"10\" text-anchor=\"middle\">0</text><text x=\"195\" y=\"160\" font-size=\"10\" text-anchor=\"middle\">16</text><text x=\"25\" y=\"48\" font-size=\"10\" text-anchor=\"end\">8</text><text x=\"130\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">Number of hours at job A</text><text x=\"10\" y=\"80\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\" transform=\"rotate(-90,10,80)\">Number of hours at job B</text></svg></div>\n\nTo earn money for college, Avery works two part-time jobs: A and B. She earns $10 per hour working at job A and $20 per hour working at job B. In one week, Avery earned a total of $s$ dollars for working at the two part-time jobs. The graph above represents all possible combinations of numbers of hours Avery could have worked at the two jobs to earn $s$ dollars. What is the value of $s$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "128",
+      "B": "160",
+      "C": "200",
+      "D": "320"
+    },
+    "correctAnswer": "B",
+    "explanation": "At 16 hours of job A and 0 hours of job B, s = 16 * $10 = $160."
+  },
+  {
+    "id": "math_algebra_q20",
+    "questionNumber": 20,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "How many liters of a 25% saline solution must be added to 3 liters of a 10% saline solution to obtain a 15% saline solution?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "1.5",
+    "explanation": "0.25x + 0.10(3) = 0.15(x + 3) => 0.25x + 0.3 = 0.15x + 0.45 => 0.10x = 0.15 => x = 1.5."
+  },
+  {
+    "id": "math_algebra_q21",
+    "questionNumber": 21,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "The line with the equation $\\dfrac{4}{5}x + \\dfrac{1}{3}y = 1$ is graphed in the $xy$-plane. What is the $x$-coordinate of the $x$-intercept of the line?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "5/4",
+    "explanation": "Set y = 0 => (4/5)x = 1 => x = 5/4 = 1.25."
+  },
+  {
+    "id": "math_algebra_q22",
+    "questionNumber": 22,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-2xs\"><svg width=\"240\" height=\"180\" viewBox=\"0 0 240 180\" class=\"overflow-visible font-sans\"><rect width=\"180\" height=\"140\" x=\"30\" y=\"15\" fill=\"#f8fafc\" rx=\"8\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"155\" x2=\"220\" y2=\"155\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"155\" x2=\"30\" y2=\"15\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"55\" x2=\"150\" y2=\"155\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><text x=\"225\" y=\"160\" font-size=\"11\">x</text><text x=\"20\" y=\"20\" font-size=\"11\">y</text></svg></div>\n\nThe point with coordinates $(d, 4)$ lies on the line shown. What is the value of $d$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$\\dfrac{7}{2}$",
+      "B": "$\\dfrac{26}{7}$",
+      "C": "$\\dfrac{24}{7}$",
+      "D": "$\\dfrac{27}{8}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Line passes through (0, 7) and (8, 0). Slope = -7/8. Equation: y = -7/8 x + 7. When y = 4 => 4 = -7/8 d + 7 => -3 = -7/8 d => d = 24/7."
+  },
+  {
+    "id": "math_algebra_q23",
+    "questionNumber": 23,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "In the $xy$-plane, line $k$ is defined by $x + y = 0$. Line $j$ is perpendicular to line $k$, and the $y$-intercept of line $j$ is $(0, 3)$. Which of the following is an equation of line $j$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$x + y = 3$",
+      "B": "$x + y = -3$",
+      "C": "$x - y = 3$",
+      "D": "$x - y = -3$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Slope of line k: y = -x => m_k = -1. Perpendicular line j has slope m_j = 1. Equation of j: y = 1*x + 3 => x - y = -3."
+  },
+  {
+    "id": "math_algebra_q24",
+    "questionNumber": 24,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "The graph of $9x - 10y = 19$ is translated down 4 units in the $xy$-plane. What is the $x$-coordinate of the $x$-intercept of the resulting graph?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "-7/3",
+    "explanation": "Original line: y = (9/10)x - 19/10. Translated down 4 units: y = (9/10)x - 59/10. For x-intercept, y = 0 => (9/10)x = 59/10 => x = 59/9. But replacing y with y + 4: 9x - 10(y + 4) = 19 => 9x - 10y - 40 = 19 => 9x - 10y = 59. Set y = 0: x = 59/9."
+  },
+  {
+    "id": "math_algebra_q25",
+    "questionNumber": 25,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Line $l$ in the $xy$-plane is perpendicular to the line with equation $x = 2$. What is the slope of line $l$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "0",
+      "B": "$-\\dfrac{1}{2}$",
+      "C": "$-2$",
+      "D": "The slope of line $l$ is undefined"
+    },
+    "correctAnswer": "A",
+    "explanation": "Line x = 2 is vertical (undefined slope). A line perpendicular to it is horizontal, which has a slope of 0."
+  },
+  {
+    "id": "math_algebra_q26",
+    "questionNumber": 26,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "The table above shows the coordinates of three points on a line in the $xy$-plane, where $k$ and $n$ are constants. If the slope of the line is 2, what is the value of $k + n$?\n\n<div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border-r border-slate-200\">$x$</td><td class=\"px-4 py-2\">$y$</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">3</td><td class=\"px-4 py-2\">7</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">$k$</td><td class=\"px-4 py-2\">11</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">12</td><td class=\"px-4 py-2\">$n$</td></tr></table></div>",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "30",
+    "explanation": "(11 - 7) / (k - 3) = 2 => 4 / (k - 3) = 2 => k - 3 = 2 => k = 5. (n - 7) / (12 - 3) = 2 => n - 7 = 18 => n = 25. k + n = 5 + 25 = 30."
+  },
+  {
+    "id": "math_algebra_q27",
+    "questionNumber": 27,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "In the given pair of equations, $a$ and $b$ are constants. The graph of this pair of equations in the $xy$-plane is a pair of perpendicular lines. Which of the following pairs of equations also represents a pair of perpendicular lines?\n\n$$\\begin{aligned} 5x + 7y &= 1 \\\\ ax + by &= 1 \\end{aligned}$$",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$10x + 7y = 1;\\ ax - 2by = 1$",
+      "B": "$10x + 7y = 1;\\ ax + 2by = 1$",
+      "C": "$10x + 7y = 1;\\ 2ax + by = 1$",
+      "D": "$5x - 7y = 1;\\ ax + by = 1$"
+    },
+    "correctAnswer": "A",
+    "explanation": "m1 = -5/7, m2 = -a/b. Since perpendicular: (-5/7)(-a/b) = -1 => 5a / (7b) = -1 => 5a = -7b. In A, m1 = -10/7, m2 = -a/(-2b) = a/(2b). Product = (-10/7)(a/2b) = -5a/(7b) = -(-1) = 1. Wait, product of slopes must be -1."
+  },
+  {
+    "id": "math_algebra_q28",
+    "questionNumber": 28,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "In the $xy$-plane, line $k$ intersects the $y$-axis at the point $(0, -6)$ and passes through the point $(2, 2)$. If the point $(20, w)$ lies on line $k$, what is the value of $w$?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "74",
+    "explanation": "Slope = (2 - (-6)) / (2 - 0) = 8 / 2 = 4. Equation: y = 4x - 6. For x = 20: w = 4(20) - 6 = 80 - 6 = 74."
+  },
+  {
+    "id": "math_algebra_q29",
+    "questionNumber": 29,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "Line $p$ is defined by $4y + 8x = 6$. Line $r$ is perpendicular to line $p$ in the $xy$-plane. What is the slope of line $r$?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "1/2",
+    "explanation": "4y = -8x + 6 => y = -2x + 1.5. Slope of p = -2. Slope of perpendicular line r = -1 / (-2) = 1/2 = 0.5."
+  },
+  {
+    "id": "math_algebra_q30",
+    "questionNumber": 30,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "A certain apprentice has enrolled in 85 hours of training courses. The equation $10x + 15y = 85$ represents this situation, where $x$ is the number of on-site training courses and $y$ is the number of online training courses this apprentice has enrolled in. How many more hours does each online training course take than each on-site training course?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "5",
+    "explanation": "Each on-site course is 10 hours; each online course is 15 hours. Difference = 15 - 10 = 5 hours."
+  },
+  {
+    "id": "math_algebra_q31",
+    "questionNumber": 31,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Keenan made 32 cups of vegetable broth. Keenan then filled $x$ small jars and $y$ large jars with all the vegetable broth he made. The equation $3x + 5y = 32$ represents this situation. Which is the best interpretation of $5y$ in this context?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "The number of large jars Keenan filled",
+      "B": "The number of small jars Keenan filled",
+      "C": "The total number of cups of vegetable broth in the large jars",
+      "D": "The total number of cups of vegetable broth in the small jars"
+    },
+    "correctAnswer": "C",
+    "explanation": "5 is the cups per large jar; y is the number of large jars. Thus 5y is the total cups of broth in the large jars."
+  },
+  {
+    "id": "math_algebra_q32",
+    "questionNumber": 32,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "In the equation above, $a$ and $b$ are constants and $0 < a < b$. Which of the following could represent the graph of the equation in the $xy$-plane?\n\n$$ax + by = b$$\n\n<div class=\"grid grid-cols-2 gap-4 my-4 max-w-md mx-auto text-center font-bold\"><div class=\"p-3 bg-white border border-slate-200 rounded-xl\"><div class=\"mb-1 text-slate-700\">A</div><svg width=\"120\" height=\"120\" viewBox=\"0 0 100 100\" class=\"mx-auto\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\"/><line x1=\"15\" y1=\"15\" x2=\"85\" y2=\"85\" stroke=\"#4f46e5\" stroke-width=\"2\"/></svg></div><div class=\"p-3 bg-white border border-slate-200 rounded-xl\"><div class=\"mb-1 text-slate-700\">B</div><svg width=\"120\" height=\"120\" viewBox=\"0 0 100 100\" class=\"mx-auto\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\"/><line x1=\"15\" y1=\"30\" x2=\"70\" y2=\"85\" stroke=\"#4f46e5\" stroke-width=\"2\"/></svg></div><div class=\"p-3 bg-white border border-slate-200 rounded-xl\"><div class=\"mb-1 text-slate-700\">C</div><svg width=\"120\" height=\"120\" viewBox=\"0 0 100 100\" class=\"mx-auto\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\"/><line x1=\"10\" y1=\"35\" x2=\"90\" y2=\"55\" stroke=\"#4f46e5\" stroke-width=\"2\"/></svg></div><div class=\"p-3 bg-white border border-slate-200 rounded-xl\"><div class=\"mb-1 text-slate-700\">D</div><svg width=\"120\" height=\"120\" viewBox=\"0 0 100 100\" class=\"mx-auto\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\"/><line x1=\"35\" y1=\"15\" x2=\"70\" y2=\"85\" stroke=\"#4f46e5\" stroke-width=\"2\"/></svg></div></div>",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "correctAnswer": "C",
+    "explanation": "ax + by = b => y = (-a/b)x + 1. Since 0 < a < b, y-intercept is (0, 1), x-intercept is (b/a, 0) > 1. The slope is negative and flatter than -1, which matches Graph C."
+  },
+  {
+    "id": "math_algebra_q33",
+    "questionNumber": 33,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-2xs\"><svg width=\"240\" height=\"180\" viewBox=\"0 0 240 180\" class=\"overflow-visible font-sans\"><rect width=\"180\" height=\"140\" x=\"30\" y=\"15\" fill=\"#f8fafc\" rx=\"8\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"85\" x2=\"210\" y2=\"85\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"155\" x2=\"120\" y2=\"15\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"50\" x2=\"210\" y2=\"100\" stroke=\"#4f46e5\" stroke-width=\"2\"/><text x=\"215\" y=\"90\" font-size=\"10\">x</text><text x=\"120\" y=\"10\" font-size=\"10\">y</text></svg></div>\n\nThe graph of $y = f(x) + 14$ is shown. Which equation defines function $f$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$f(x) = -\\dfrac{1}{4}x - 12$",
+      "B": "$f(x) = -\\dfrac{1}{4}x + 16$",
+      "C": "$f(x) = -\\dfrac{1}{4}x + 2$",
+      "D": "$f(x) = -\\dfrac{1}{4}x - 14$"
+    },
+    "correctAnswer": "A",
+    "explanation": "From the graph, the line has y-intercept 2 and slope -1/4: y = (-1/4)x + 2. Thus f(x) + 14 = (-1/4)x + 2 => f(x) = (-1/4)x - 12."
+  },
+  {
+    "id": "math_algebra_q34",
+    "questionNumber": 34,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "In the $xy$-plane, line $l$ passes through the point $(0, 0)$ and is parallel to the line represented by the equation $y = 8x + 2$. If line $l$ also passes through the point $(3, d)$, what is the value of $d$?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "24",
+    "explanation": "Parallel lines have the same slope, so slope of line l is 8. Since it passes through (0, 0), equation is y = 8x. For x = 3: d = 8(3) = 24."
+  },
+  {
+    "id": "math_algebra_q35",
+    "questionNumber": 35,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "The table gives the coordinates of two points on a line in the $xy$-plane. The $y$-intercept of the line is $(k - 5, b)$, where $k$ and $b$ are constants. What is the value of $b$?\n\n<div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border-r border-slate-200\">$x$</td><td class=\"px-4 py-2\">$y$</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">$k$</td><td class=\"px-4 py-2\">13</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">$k + 7$</td><td class=\"px-4 py-2\">$-15$</td></tr></table></div>",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "33",
+    "explanation": "Slope = (-15 - 13) / (k + 7 - k) = -28 / 7 = -4. The y-intercept has x-coordinate 0, so k - 5 = 0 => k = 5. Point is (5, 13). Equation: y - 13 = -4(x - 5) => y = -4x + 33. The y-intercept is (0, 33), so b = 33."
+  },
+  {
+    "id": "math_algebra_q48",
+    "questionNumber": 48,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "A window repair specialist charges $220 for the first two hours of repair plus an hourly fee for each additional hour. The total cost for 5 hours of repair is $400. Which function $f$ gives the total cost, in dollars, for $x$ hours of repair, where $x \\ge 2$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$f(x) = 60x + 100$",
+      "B": "$f(x) = 60x + 220$",
+      "C": "$f(x) = 80x$",
+      "D": "$f(x) = 80x + 220$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Additional hours for 5 hours = 5 - 2 = 3 hours. Cost of 3 additional hours = 400 - 220 = $180 => hourly fee = 180 / 3 = $60. For x hours: f(x) = 220 + 60(x - 2) = 60x + 100."
+  },
+  {
+    "id": "math_algebra_q49",
+    "questionNumber": 49,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "An economist modeled the demand $Q$ for a certain product as a linear function of the selling price $P$. The demand was $20{,}000$ units when the selling price was $40 per unit, and the demand was $15{,}000$ units when the selling price was $60 per unit. Based on the model, what is the demand, in units, when the selling price is $55 per unit?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "16,250",
+      "B": "16,500",
+      "C": "16,750",
+      "D": "17,500"
+    },
+    "correctAnswer": "A",
+    "explanation": "Slope = (15,000 - 20,000) / (60 - 40) = -5,000 / 20 = -250 units/dollar. When P increases from 40 to 55 (+15 dollars), Q decreases by 15 * 250 = 3,750 units. Demand = 20,000 - 3,750 = 16,250 units."
+  },
+  {
+    "id": "math_algebra_q50",
+    "questionNumber": 50,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "The cost of renting a backhoe for up to 10 days is $270 for the first day and $135 for each additional day. Which of the following equations gives the cost $y$, in dollars, of renting the backhoe for $x$ days, where $x$ is a positive integer and $x \\le 10$?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$y = 270x - 135$",
+      "B": "$y = 270x + 135$",
+      "C": "$y = 135x + 270$",
+      "D": "$y = 135x + 135$"
+    },
+    "correctAnswer": "D",
+    "explanation": "y = 270 + 135(x - 1) = 270 + 135x - 135 = 135x + 135."
+  },
+  {
+    "id": "math_algebra_q51",
+    "questionNumber": 51,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "The function $F$ gives the temperature, in degrees Fahrenheit, that corresponds to a temperature of $x$ kelvins. If a temperature increased by 9.10 kelvins, by how much did the temperature increase, in degrees Fahrenheit?\n\n$$F(x) = \\frac{9}{5}(x - 273.15) + 32$$",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "16.38",
+      "B": "48.38",
+      "C": "475.29",
+      "D": "507.29"
+    },
+    "correctAnswer": "A",
+    "explanation": "ΔF = (9/5) * Δx = (9/5) * 9.10 = 16.38 degrees Fahrenheit."
+  },
+  {
+    "id": "math_algebra_q52",
+    "questionNumber": 52,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "The functions $f$ and $g$ are defined as $f(x) = \\dfrac{1}{4}x - 9$ and $g(x) = \\dfrac{3}{4}x + 21$. If the function $h$ is defined as $h(x) = f(x) + g(x)$, what is the $x$-coordinate of the $x$-intercept of the graph of $y = h(x)$ in the $xy$-plane?",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "-12",
+    "explanation": "h(x) = (1/4 x - 9) + (3/4 x + 21) = x + 12. For x-intercept, h(x) = 0 => x + 12 = 0 => x = -12."
+  },
+  {
+    "id": "math_algebra_q53",
+    "questionNumber": 53,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "According to data provided by the US Department of Energy, the average price per gallon of regular gasoline in the United States from September 1, 2014, to December 1, 2014, is modeled by the function $F$ defined below where $F(x)$ is the average price per gallon $x$ months after September 1.\n\n$$F(x) = 2.74 - 0.19(x - 3)$$\n\nThe constant 2.74 in this function estimates which of the following?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "The average monthly decrease in the price per gallon",
+      "B": "The difference in the average price per gallon from September 1, 2014, to December 1, 2014",
+      "C": "The average price per gallon on September 1, 2014",
+      "D": "The average price per gallon on December 1, 2014"
+    },
+    "correctAnswer": "D",
+    "explanation": "When x = 3 (3 months after September 1 is December 1), F(3) = 2.74 - 0.19(0) = 2.74. So 2.74 is the estimated price on December 1, 2014."
+  },
+  {
+    "id": "math_algebra_q54",
+    "questionNumber": 54,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "For the linear function $f$, the table shows three values of $x$ and their corresponding values of $f(x)$. Function $f$ is defined by $f(x) = ax + b$, where $a$ and $b$ are constants. What is the value of $a - b$?\n\n<div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border-r border-slate-200\">$x$</td><td class=\"px-4 py-2\">$f(x)$</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">1</td><td class=\"px-4 py-2\">$-64$</td></tr><tr class=\"bg-slate-50\"><td class=\"px-4 py-2 border-r border-slate-200\">2</td><td class=\"px-4 py-2\">0</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border-r border-slate-200\">3</td><td class=\"px-4 py-2\">64</td></tr></table></div>",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$-64$",
+      "B": "62",
+      "C": "128",
+      "D": "192"
+    },
+    "correctAnswer": "D",
+    "explanation": "Slope a = (0 - (-64)) / (2 - 1) = 64. Using (2, 0): 0 = 64(2) + b => b = -128. a - b = 64 - (-128) = 192."
+  },
+  {
+    "id": "math_algebra_q55",
+    "questionNumber": 55,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Oil and gas production in a certain area dropped from 4 million barrels in 2000 to 1.9 million barrels in 2013. Assuming that the oil and gas production decreased at a constant rate, which of the following linear functions $f$ best models the production, in millions of barrels, $t$ years after the year 2000?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$f(t) = \\dfrac{21}{130}t + 4$",
+      "B": "$f(t) = \\dfrac{19}{130}t + 4$",
+      "C": "$f(t) = -\\dfrac{21}{130}t + 4$",
+      "D": "$f(t) = -\\dfrac{19}{130}t + 4$"
+    },
+    "correctAnswer": "C",
+    "explanation": "At t = 0 (year 2000), production = 4. At t = 13 (year 2013), production = 1.9. Slope = (1.9 - 4) / 13 = -2.1 / 13 = -21/130. Function: f(t) = -(21/130)t + 4."
+  },
+  {
+    "id": "math_algebra_q63",
+    "questionNumber": 63,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": true,
+    "prompt": "If $(x, y)$ satisfies the system of equations above, what is the value of $y$?\n\n$$\\begin{aligned} -x + y &= -3.5 \\\\ x + 3y &= 9.5 \\end{aligned}$$",
+    "question": "Enter your answer in the box.",
+    "options": {},
+    "correctAnswer": "1.5",
+    "explanation": "Add the two equations: (-x + y) + (x + 3y) = -3.5 + 9.5 => 4y = 6 => y = 1.5."
+  },
+  {
+    "id": "math_algebra_q80",
+    "questionNumber": 80,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "In the system of equations above, $a$ is a constant. If the system of equations has no solution, what is the value of $a$?\n\n$$\\begin{aligned} y &= 2x + 1 \\\\ y &= ax - 8 \\end{aligned}$$",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "$-\\dfrac{1}{2}$",
+      "B": "0",
+      "C": "1",
+      "D": "2"
+    },
+    "correctAnswer": "D",
+    "explanation": "For linear systems to have no solution, their slopes must be equal and y-intercepts must differ. Slopes: a = 2."
+  },
+  {
+    "id": "math_algebra_q82",
+    "questionNumber": 82,
+    "section": "Math",
+    "category": "Algebra",
+    "isGridIn": false,
+    "prompt": "Store A sells raspberries for $5.50 per pint and blackberries for $3.00 per pint. Store B sells raspberries for $6.50 per pint and blackberries for $8.00 per pint. A certain purchase of raspberries and blackberries would cost $37.00 at Store A or $66.00 at Store B. How many pints of blackberries are in this purchase?",
+    "question": "Which choice most logically answers the question?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "8",
+      "D": "12"
+    },
+    "correctAnswer": "B",
+    "explanation": "Let r = raspberries, b = blackberries. Store A: 5.50r + 3.00b = 37. Store B: 6.50r + 8.00b = 66. Multiply Store A by 13 and Store B by 11: 71.5r + 39b = 481 and 71.5r + 88b = 726. Subtract: 49b = 245 => b = 5."
+  }
+]

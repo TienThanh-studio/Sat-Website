@@ -11,17 +11,20 @@ import { parseLatexDocument } from '../../services/latexParser';
 export default function QuestionManager() {
   const [activeTab, setActiveTab] = useState('latex');
 
+  // Quản lý mã mời
   const [codes, setCodes] = useState([]);
   const [newCodeName, setNewCodeName] = useState('');
   const [newCodeRole, setNewCodeRole] = useState('STUDENT');
   const [copiedCode, setCopiedCode] = useState(null);
 
+  // Quản lý tài liệu
   const [documents, setDocuments] = useState([]);
   const [docTitle, setDocTitle] = useState('');
   const [docSize, setDocSize] = useState('2.5 MB');
   const [docUrl, setDocUrl] = useState('');
   const [docSuccess, setDocSuccess] = useState(false);
 
+  // Quản lý upload LaTeX Math
   const [latexInput, setLatexInput] = useState('');
   const [mathCategory, setMathCategory] = useState('Algebra');
   const [parsedPreview, setParsedPreview] = useState([]);
@@ -108,13 +111,17 @@ export default function QuestionManager() {
     localStorage.setItem('admin_documents', JSON.stringify(updated));
   };
 
+  // PHÂN TÍCH LATEX AN TOÀN 100% QUA HELPER MODULE
   const handleParseLatex = () => {
-    const questions = parseLatexDocument(latexInput, mathCategory);
-    if (questions.length === 0) {
-      alert("Không tìm thấy câu hỏi dạng \\question{số}! Vui lòng kiểm tra lại file LaTeX.");
+    if (!latexInput.trim()) return;
+    const results = parseLatexDocument(latexInput, mathCategory);
+
+    if (results.length === 0) {
+      alert("Không tìm thấy câu hỏi \\question{số} hợp lệ trong mã nguồn!");
       return;
     }
-    setParsedPreview(questions);
+
+    setParsedPreview(results);
   };
 
   const handleSaveMathQuestions = () => {
@@ -157,10 +164,10 @@ export default function QuestionManager() {
         <div>
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
             <ShieldCheck className="w-6 h-6 text-amber-600" />
-            <span>Khu vực Quản trị Hệ thống</span>
+            <span>Khu vực Quản trị Đề & Hệ thống</span>
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Quản lý mã mời, tài liệu PDF và upload câu hỏi Math trực tiếp từ Overleaf.
+            Quản lý mã mời, tài liệu PDF và công cụ upload đề Math chuẩn LaTeX.
           </p>
         </div>
 
@@ -198,7 +205,7 @@ export default function QuestionManager() {
         </div>
       </div>
 
-      {/* TAB UPLOAD ĐỀ MATH (LATEX) */}
+      {/* ================= TAB 1: UPLOAD ĐỀ MATH (LATEX) ================= */}
       {activeTab === 'latex' && (
         <div className="space-y-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
@@ -224,12 +231,12 @@ export default function QuestionManager() {
                 </select>
 
                 {existingMathCount > 0 && (
-                  <div className="flex items-center gap-1.5">
+                  <>
                     <button
                       type="button"
                       onClick={handleExportJson}
                       className="flex items-center gap-1 text-xs text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg font-semibold border border-indigo-200 transition"
-                      title="Tải về file math.json để lưu cố định vào src/data/questions"
+                      title="Xuất file math.json để lưu cố định vào src/data/questions"
                     >
                       <Download className="w-3.5 h-3.5" />
                       Xuất math.json
@@ -241,7 +248,7 @@ export default function QuestionManager() {
                     >
                       Xóa tất cả
                     </button>
-                  </div>
+                  </>
                 )}
               </div>
             </div>
@@ -263,12 +270,12 @@ export default function QuestionManager() {
 
             <div className="flex justify-between items-center">
               <span className="text-[11px] text-slate-400">
-                Tự động nhận diện: TikZ sang SVG, Tabular sang bảng, Phân số sang KaTeX
+                Tự động nhận diện TikZ, phân số lồng nhau, bảng Tabular và câu tự điền số.
               </span>
               <button
                 type="button"
                 onClick={handleParseLatex}
-                className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm active:scale-95"
+                className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer"
               >
                 <Play className="w-3.5 h-3.5" />
                 <span>Phân tích câu hỏi (Parse LaTeX)</span>
@@ -276,18 +283,18 @@ export default function QuestionManager() {
             </div>
           </div>
 
-          {/* VÙNG XEM TRƯỚC */}
+          {/* VÙNG XEM TRƯỚC BỘ ĐỀ */}
           {parsedPreview.length > 0 && (
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
                   <Calculator className="w-4 h-4 text-emerald-600" />
-                  Đã nhận diện chuẩn: {parsedPreview.length} câu hỏi
+                  Đã nhận diện chuẩn xác: {parsedPreview.length} câu hỏi
                 </h4>
                 <button
                   type="button"
                   onClick={handleSaveMathQuestions}
-                  className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm active:scale-95"
+                  className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer"
                 >
                   <CheckCircle2 className="w-4 h-4" />
                   Lưu tất cả vào Ngân hàng Math
@@ -302,7 +309,7 @@ export default function QuestionManager() {
                       <span className={`font-mono font-bold px-2 py-0.5 rounded border text-[11px] ${
                         q.isGridIn ? 'bg-amber-50 text-amber-800 border-amber-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                       }`}>
-                        {q.isGridIn ? 'Câu tự điền số (Student-Produced Response)' : 'Trắc nghiệm 4 lựa chọn'}
+                        {q.isGridIn ? 'Câu tự điền số (Student-Produced Response)' : `Trắc nghiệm 4 lựa chọn`}
                       </span>
                     </div>
 
@@ -332,7 +339,7 @@ export default function QuestionManager() {
         </div>
       )}
 
-      {/* TAB MÃ MỜI */}
+      {/* ================= TAB 2: MÃ MỜI ================= */}
       {activeTab === 'codes' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
@@ -351,7 +358,7 @@ export default function QuestionManager() {
                   className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-amber-500 uppercase"
                 />
               </div>
-              <button type="submit" className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl transition">
+              <button type="submit" className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl transition cursor-pointer">
                 Tạo mã
               </button>
             </form>
@@ -364,10 +371,10 @@ export default function QuestionManager() {
                   <div key={idx} className="p-4 flex items-center justify-between hover:bg-slate-50">
                     <span className="font-mono font-bold text-sm text-slate-800">{codeVal}</span>
                     <div className="flex items-center gap-1.5">
-                      <button type="button" onClick={() => handleCopy(codeVal)} className="p-2 hover:bg-slate-200 rounded-lg">
+                      <button onClick={() => handleCopy(codeVal)} className="p-2 hover:bg-slate-200 rounded-lg cursor-pointer">
                         {copiedCode === codeVal ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
                       </button>
-                      <button type="button" onClick={() => handleDeleteCode(codeVal)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg">
+                      <button onClick={() => handleDeleteCode(codeVal)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg cursor-pointer">
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>
@@ -379,7 +386,7 @@ export default function QuestionManager() {
         </div>
       )}
 
-      {/* TAB KHO TÀI LIỆU */}
+      {/* ================= TAB 3: KHO TÀI LIỆU ================= */}
       {activeTab === 'docs' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
@@ -403,12 +410,12 @@ export default function QuestionManager() {
               />
               <input
                 type="text"
-                placeholder="Link Google Drive tải file"
+                placeholder="Link tải file PDF"
                 value={docUrl}
                 onChange={(e) => setDocUrl(e.target.value)}
                 className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs"
               />
-              <button type="submit" className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition">
+              <button type="submit" className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition cursor-pointer">
                 Đăng lên kho tài liệu
               </button>
             </form>
@@ -418,7 +425,7 @@ export default function QuestionManager() {
               {documents.map((doc) => (
                 <div key={doc.id} className="p-4 flex items-center justify-between hover:bg-slate-50">
                   <span className="text-xs font-bold text-slate-800">{doc.title}</span>
-                  <button type="button" onClick={() => handleDeleteDoc(doc.id)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg">
+                  <button onClick={() => handleDeleteDoc(doc.id)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg cursor-pointer">
                     <Trash2 className="w-4 h-4" />
                   </button>
                 </div>
