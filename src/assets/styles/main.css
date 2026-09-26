@@ -23,3 +23,18 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Hiệu ứng xoay 3D Flip Card chuẩn */
+.perspective-\[1200px\] {
+  perspective: 1200px;
+}
+.transform-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

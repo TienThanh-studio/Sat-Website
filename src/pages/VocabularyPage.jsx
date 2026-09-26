@@ -1,287 +1,317 @@
-import React, { useState, useEffect } from 'react';
-import initialVocab from '../data/mockVocab.json';
-import { storageService } from '../services/storageService';
-import { Volume2, RotateCcw, Check, Sparkles, Filter, ChevronLeft, ChevronRight, Layers, List } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { 
+  Volume2, RotateCw, ChevronLeft, ChevronRight, 
+  Search, Shuffle, BookMarked, Sparkles, Check, ArrowRight
+} from 'lucide-react';
+import rawVocabList from '../data/mockVocab.json';
 
 export default function VocabularyPage() {
-  const [vocabList] = useState(initialVocab || []);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedRank, setSelectedRank] = useState('ALL'); // 'ALL', 'High', 'Medium', 'Low'
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [viewMode, setViewMode] = useState('flashcard'); // 'flashcard' hoặc 'list'
-  const [filterLevel, setFilterLevel] = useState('All');
   const [masteredWords, setMasteredWords] = useState(() => {
-    return storageService.get('sat_vocab_mastered', {});
+    try {
+      return JSON.parse(localStorage.getItem('sat_mastered_vocab') || '[]');
+    } catch {
+      return [];
+    }
   });
 
-  // Lọc từ theo Level
-  const filteredWords = vocabList.filter(item => {
-    if (filterLevel === 'All') return true;
-    if (filterLevel === 'Mastered') return masteredWords[item.word];
-    if (filterLevel === 'Learning') return !masteredWords[item.word];
-    return item.level === filterLevel;
-  });
+  // Lọc từ theo tìm kiếm và tần suất
+  const filteredWords = useMemo(() => {
+    return (rawVocabList || []).filter(item => {
+      const matchSearch = item.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          (item.definition_vi && item.definition_vi.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                          (item.definition_en && item.definition_en.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchRank = selectedRank === 'ALL' || item.frequency_rank === selectedRank;
+      return matchSearch && matchRank;
+    });
+  }, [searchTerm, selectedRank]);
 
-  const currentWord = filteredWords[currentIndex] || filteredWords[0];
+  const currentWord = filteredWords[currentIndex] || filteredWords[0] || null;
 
-  // Phát âm tiếng Anh bằng SpeechSynthesis có sẵn của trình duyệt
-  const speakWord = (word, e) => {
-    if (e) e.stopPropagation();
+  // Phát âm chuẩn US bằng Web Speech API
+  const handlePronounce = (e, text) => {
+    e.stopPropagation();
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(word);
+      const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
-      utterance.rate = 0.9;
+      utterance.rate = 0.85;
       window.speechSynthesis.speak(utterance);
     }
   };
 
-  const toggleMastered = (word, e) => {
-    if (e) e.stopPropagation();
-    const updated = { ...masteredWords, [word]: !masteredWords[word] };
-    setMasteredWords(updated);
-    storageService.set('sat_vocab_mastered', updated);
-  };
-
   const handleNext = () => {
     setIsFlipped(false);
-    setCurrentIndex(i => (i + 1) % filteredWords.length);
+    setCurrentIndex(prev => (prev + 1) % filteredWords.length);
   };
 
   const handlePrev = () => {
     setIsFlipped(false);
-    setCurrentIndex(i => (i - 1 + filteredWords.length) % filteredWords.length);
+    setCurrentIndex(prev => (prev - 1 + filteredWords.length) % filteredWords.length);
   };
 
+  // Đánh dấu Thuộc hoặc Không chắc
+  const handleMarkConfidence = (isKnown) => {
+    if (!currentWord) return;
+    let updated;
+    if (isKnown) {
+      updated = Array.from(new Set([...masteredWords, currentWord.id]));
+    } else {
+      updated = masteredWords.filter(id => id !== currentWord.id);
+    }
+    setMasteredWords(updated);
+    localStorage.setItem('sat_mastered_vocab', JSON.stringify(updated));
+    handleNext();
+  };
+
+  // Tách từ đồng nghĩa thành mảng tag
+  const synonymsList = useMemo(() => {
+    if (!currentWord?.synonyms) return [];
+    return currentWord.synonyms.split(',').map(s => s.trim()).filter(Boolean);
+  }, [currentWord]);
+
+  // Tạo ví dụ minh họa ngữ cảnh SAT thực tế nếu chưa có sẵn
+  const exampleSentence = useMemo(() => {
+    if (!currentWord) return '';
+    if (currentWord.example) return currentWord.example;
+    return `The researcher's analysis was designed to ${currentWord.word} previous findings, which is why the committee accepted the hypothesis.`;
+  }, [currentWord]);
+
+  const progressPercent = filteredWords.length > 0 
+    ? Math.round(((currentIndex + 1) / filteredWords.length) * 100) 
+    : 0;
+
   return (
-    <div className="p-8 max-w-6xl mx-auto">
-      {/* Header & Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <Sparkles className="w-5 h-5 text-amber-500" />
-            <h1 className="text-2xl font-black text-slate-900 tracking-tight">SAT High-Frequency Vocabulary</h1>
-          </div>
-          <p className="text-xs text-slate-500">Luyện tập thẻ nhớ từ vựng SAT tần suất cao với âm thanh và ngữ cảnh thực tế.</p>
-        </div>
+    <div className="min-h-screen bg-slate-50/70 p-6 md:p-10 font-sans select-none">
+      <div className="max-w-4xl mx-auto space-y-6">
 
-        {/* View Switcher & Filters */}
-        <div className="flex items-center gap-3">
-          <div className="bg-slate-100 p-1 rounded-xl flex items-center gap-1 border border-slate-200">
-            <button
-              type="button"
-              onClick={() => setViewMode('flashcard')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-                viewMode === 'flashcard' ? 'bg-white text-brand-800 shadow-sm' : 'text-slate-500'
-              }`}
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span>Flashcard</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setViewMode('list')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-                viewMode === 'list' ? 'bg-white text-brand-800 shadow-sm' : 'text-slate-500'
-              }`}
-            >
-              <List className="w-3.5 h-3.5" />
-              <span>Danh sách</span>
-            </button>
+        {/* TOP BAR / HEADER */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200">
+          <div className="flex items-center gap-2">
+            <span className="font-extrabold text-slate-800 text-sm tracking-wide flex items-center gap-1.5">
+              <BookMarked className="w-4 h-4 text-indigo-600" />
+              Flashcard
+            </span>
+            <span className="text-xs text-slate-400 font-medium">• SAT WIC Elite (500 Words)</span>
           </div>
 
-          <select
-            value={filterLevel}
-            onChange={(e) => {
-              setFilterLevel(e.target.value);
-              setCurrentIndex(0);
-              setIsFlipped(false);
-            }}
-            className="text-xs font-semibold bg-white border border-slate-200 rounded-xl px-3 py-2 text-slate-700 outline-none focus:border-brand-800"
-          >
-            <option value="All">Tất cả ({vocabList.length})</option>
-            <option value="Learning">Đang học ({vocabList.length - Object.values(masteredWords).filter(Boolean).length})</option>
-            <option value="Mastered">Đã thuộc ({Object.values(masteredWords).filter(Boolean).length})</option>
-            <option value="Hard">Cấp độ Hard</option>
-            <option value="Medium">Cấp độ Medium</option>
-          </select>
-        </div>
-      </div>
+          {/* THANH LỌC TẦN SUẤT & TÌM KIẾM */}
+          <div className="flex items-center gap-2.5">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                placeholder="Tìm từ vựng..."
+                value={searchTerm}
+                onChange={(e) => { setSearchTerm(e.target.value); setCurrentIndex(0); }}
+                className="pl-8 pr-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs outline-none focus:ring-2 focus:ring-indigo-500 w-44 shadow-2xs"
+              />
+            </div>
 
-      {filteredWords.length === 0 ? (
-        <div className="bg-white p-12 rounded-2xl border border-slate-200 text-center text-slate-500 font-medium">
-          Không có từ vựng nào trong mục đã chọn.
-        </div>
-      ) : viewMode === 'flashcard' ? (
-        /* CHẾ ĐỘ 1: FLASHCARD LẬT 3D */
-        <div className="max-w-xl mx-auto flex flex-col items-center">
-          <div className="w-full flex items-center justify-between text-xs text-slate-500 mb-3 font-semibold px-2">
-            <span>Thẻ {currentIndex + 1} / {filteredWords.length}</span>
-            <span className="text-[11px] text-slate-400">Bấm vào thẻ để lật mặt sau</span>
-          </div>
-
-          {/* Khối Card tương tác lật 3D */}
-          <div
-            onClick={() => setIsFlipped(!isFlipped)}
-            className="w-full h-80 cursor-pointer perspective"
-            style={{ perspective: '1000px' }}
-          >
-            <div
-              className={`w-full h-full relative duration-500 rounded-3xl border border-slate-200 shadow-xl transition-transform ${
-                isFlipped ? '[transform:rotateY(180deg)]' : ''
-              }`}
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              {/* MẶT TRƯỚC (FRONT) */}
-              <div
-                className="absolute inset-0 bg-white rounded-3xl p-8 flex flex-col justify-between [backface-visibility:hidden]"
+            <div className="flex bg-slate-100 p-1 rounded-xl">
+              <button
+                onClick={() => { setSelectedRank('ALL'); setCurrentIndex(0); }}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition cursor-pointer ${
+                  selectedRank === 'ALL' ? 'bg-white text-slate-900 shadow-2xs' : 'text-slate-500 hover:text-slate-800'
+                }`}
               >
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                    {currentWord.partOfSpeech || 'Word'}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={(e) => toggleMastered(currentWord.word, e)}
-                    className={`flex items-center gap-1 text-[11px] font-bold px-3 py-1 rounded-full border transition ${
-                      masteredWords[currentWord.word]
-                        ? 'bg-emerald-50 text-emerald-600 border-emerald-300'
-                        : 'bg-slate-50 text-slate-400 border-slate-200 hover:text-slate-600'
-                    }`}
-                  >
-                    <Check className="w-3.5 h-3.5" />
-                    <span>{masteredWords[currentWord.word] ? 'Đã thuộc' : 'Chưa thuộc'}</span>
-                  </button>
-                </div>
+                Tất cả
+              </button>
+              <button
+                onClick={() => { setSelectedRank('High'); setCurrentIndex(0); }}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition cursor-pointer ${
+                  selectedRank === 'High' ? 'bg-rose-600 text-white shadow-2xs' : 'text-slate-500 hover:text-rose-600'
+                }`}
+              >
+                Cao
+              </button>
+            </div>
+          </div>
+        </div>
 
-                <div className="text-center my-auto">
-                  <h2 className="text-4xl font-black text-slate-900 mb-2 tracking-tight">{currentWord.word}</h2>
-                  <div className="flex items-center justify-center gap-2 text-slate-500 text-xs font-mono">
-                    <span>{currentWord.phonetic || '/.../'}</span>
+        {/* THÔNG TIN THẺ HIỆN TẠI */}
+        <div className="flex items-center justify-between text-xs font-semibold text-slate-400 px-2">
+          <span className="bg-slate-100 px-3 py-1 rounded-full text-slate-600 font-mono text-[11px]">
+            Phiên học: Thẻ {currentIndex + 1} / {filteredWords.length}
+          </span>
+          <span className="text-slate-500">
+            Đã thuộc: <strong className="text-emerald-600">{masteredWords.length}</strong> / {filteredWords.length}
+          </span>
+        </div>
+
+        {/* KHUNG THẺ 3D FLIP CONTAINER */}
+        {currentWord && (
+          <div className="relative w-full h-[430px] perspective-[1200px]">
+            
+            {/* THẺ XOAY TRỤC Y */}
+            <div
+              onClick={() => setIsFlipped(!isFlipped)}
+              className={`relative w-full h-full transition-transform duration-500 transform-3d cursor-pointer ${
+                isFlipped ? 'rotate-y-180' : ''
+              }`}
+            >
+              
+              {/* ================= MẶT TRƯỚC (FRONT) ================= */}
+              <div 
+                className="absolute inset-0 w-full h-full bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-center items-center p-8 backface-hidden"
+              >
+                <div className="text-center space-y-4">
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-serif">
+                    {currentWord.word}
+                  </h2>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-indigo-600 transition">
+                    <RotateCw className="w-3.5 h-3.5 animate-spin-slow" />
+                    <span>Nhấn để xem nghĩa</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ================= MẶT SAU (BACK) ================= */}
+              <div 
+                className="absolute inset-0 w-full h-full bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-between p-7 md:p-9 rotate-y-180 backface-hidden overflow-y-auto"
+              >
+                <div className="space-y-4">
+                  
+                  {/* Phiên âm + Loa phát âm */}
+                  <div className="flex items-center gap-2 text-slate-400 font-mono text-xs">
+                    <span>{currentWord.phonetic}</span>
                     <button
                       type="button"
-                      onClick={(e) => speakWord(currentWord.word, e)}
-                      className="p-1 hover:bg-slate-100 rounded-full text-brand-800 transition"
+                      onClick={(e) => handlePronounce(e, currentWord.word)}
+                      className="p-1 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg text-slate-400 transition"
                       title="Nghe phát âm"
                     >
                       <Volume2 className="w-4 h-4" />
                     </button>
                   </div>
+
+                  {/* Định nghĩa Tiếng Việt & Tiếng Anh */}
+                  <div className="space-y-1.5">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-900 leading-snug">
+                      {currentWord.definition_vi}
+                    </h3>
+                    <p className="text-xs text-slate-500 font-serif leading-relaxed">
+                      {currentWord.definition_en}
+                    </p>
+                  </div>
+
+                  {/* Cụm từ đồng nghĩa */}
+                  {synonymsList.length > 0 && (
+                    <div className="space-y-1.5 pt-1">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                        ĐỒNG NGHĨA
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {synonymsList.map((syn, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-slate-50 border border-slate-200 text-slate-700 rounded-xl text-xs font-medium"
+                          >
+                            {syn}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Ví dụ trong ngữ cảnh SAT */}
+                  <div className="bg-indigo-50/50 border border-indigo-100/80 rounded-2xl p-4 space-y-1.5">
+                    <span className="text-[10px] font-bold text-indigo-700 uppercase tracking-wider block">
+                      VÍ DỤ TRONG NGỮ CẢNH
+                    </span>
+                    <p className="text-xs text-slate-700 font-serif leading-relaxed">
+                      {exampleSentence.split(new RegExp(`(${currentWord.word})`, 'gi')).map((part, i) => 
+                        part.toLowerCase() === currentWord.word.toLowerCase() ? (
+                          <strong key={i} className="font-bold text-indigo-700 bg-indigo-100/70 px-1 py-0.5 rounded-xs">
+                            {part}
+                          </strong>
+                        ) : part
+                      )}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="text-center text-slate-400 text-xs flex items-center justify-center gap-1.5">
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Nhấn để xem nghĩa và ví dụ</span>
+                <div className="pt-2 text-center">
+                  <span className="text-[10px] text-slate-300 italic">Nhấn vào thẻ để lật lại mặt trước</span>
                 </div>
               </div>
 
-              {/* MẶT SAU (BACK) */}
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-brand-900 to-slate-900 text-white rounded-3xl p-8 flex flex-col justify-between [backface-visibility:hidden] [transform:rotateY(180deg)]"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
-                    <span className="text-lg font-black tracking-wide text-amber-400">{currentWord.word}</span>
-                    <span className="text-xs text-slate-400 font-mono italic">{currentWord.partOfSpeech}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 leading-snug">{currentWord.meaning}</h3>
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-xs leading-relaxed text-slate-300 italic">
-                    "{currentWord.example || 'Example sentence is being updated.'}"
-                  </div>
-                </div>
-
-                {currentWord.synonyms && currentWord.synonyms.length > 0 && (
-                  <div className="text-xs text-slate-400 pt-3 border-t border-white/10">
-                    <span className="text-white/60 font-semibold mr-2">Đồng nghĩa:</span>
-                    <span className="text-amber-200">{currentWord.synonyms.join(', ')}</span>
-                  </div>
-                )}
-              </div>
             </div>
-          </div>
 
-          {/* Thanh điều hướng Trước/Sau */}
-          <div className="flex items-center gap-4 mt-6">
+            {/* HAI NÚT MŨI TÊN ĐIỀU HƯỚNG TRỰC TIẾP Ở HAI BÊN THẺ */}
             <button
               type="button"
-              onClick={handlePrev}
-              className="p-3 bg-white hover:bg-slate-50 border border-slate-200 rounded-2xl text-slate-700 shadow-sm transition"
+              onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+              className="absolute left-[-20px] md:left-[-24px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 shadow-md rounded-full flex items-center justify-center text-slate-600 hover:text-slate-900 hover:scale-105 transition active:scale-95 cursor-pointer z-10"
+              title="Từ trước"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               type="button"
-              onClick={(e) => toggleMastered(currentWord.word, e)}
-              className={`px-6 py-3 rounded-2xl text-xs font-bold border flex items-center gap-2 shadow-sm transition ${
-                masteredWords[currentWord.word]
-                  ? 'bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-600'
-                  : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'
-              }`}
-            >
-              <Check className="w-4 h-4" />
-              <span>{masteredWords[currentWord.word] ? 'Đã thành thạo từ này' : 'Đánh dấu đã thuộc'}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={handleNext}
-              className="p-3 bg-brand-800 hover:bg-brand-900 text-white rounded-2xl shadow-sm transition"
+              onClick={(e) => { e.stopPropagation(); handleNext(); }}
+              className="absolute right-[-20px] md:right-[-24px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 shadow-md rounded-full flex items-center justify-center text-slate-600 hover:text-slate-900 hover:scale-105 transition active:scale-95 cursor-pointer z-10"
+              title="Từ kế tiếp"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
-        </div>
-      ) : (
-        /* CHẾ ĐỘ 2: DANH SÁCH BẢNG GRID TỔNG HỢP */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredWords.map((item, idx) => {
-            const isMastered = !!masteredWords[item.word];
-            return (
-              <div
-                key={idx}
-                className="bg-white p-5 rounded-2xl border border-slate-200 hover:border-slate-300 shadow-sm transition flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="font-black text-lg text-slate-900">{item.word}</span>
-                      <button
-                        type="button"
-                        onClick={() => speakWord(item.word)}
-                        className="text-brand-800 hover:text-brand-900"
-                      >
-                        <Volume2 className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                    <span className="text-[10px] uppercase font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">
-                      {item.partOfSpeech || 'Word'}
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold text-slate-800 mb-2">{item.meaning}</p>
-                  <p className="text-xs text-slate-500 italic bg-slate-50/60 p-2.5 rounded-lg border border-slate-100">
-                    "{item.example}"
-                  </p>
-                </div>
+        )}
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-slate-400">{item.phonetic}</span>
-                  <button
-                    type="button"
-                    onClick={(e) => toggleMastered(item.word, e)}
-                    className={`text-[11px] font-bold px-2.5 py-1 rounded-lg border transition ${
-                      isMastered
-                        ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
-                        : 'text-slate-400 border-slate-200 hover:text-slate-700'
-                    }`}
-                  >
-                    {isMastered ? '✓ Đã thuộc' : '+ Đánh dấu'}
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+        {/* HAI NÚT ĐÁNH GIÁ TRÍ NHỚ (KHÔNG CHẮC / THUỘC) */}
+        <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto pt-2">
+          <button
+            type="button"
+            onClick={() => handleMarkConfidence(false)}
+            className="py-3 px-4 bg-white border border-slate-200 hover:border-slate-300 rounded-2xl flex flex-col items-center justify-center shadow-xs transition hover:bg-slate-50 active:scale-95 cursor-pointer"
+          >
+            <span className="font-bold text-slate-800 text-sm">Không chắc</span>
+            <span className="text-[11px] text-slate-400 mt-0.5">Ôn lại sau 1 ngày</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleMarkConfidence(true)}
+            className="py-3 px-4 bg-white border border-emerald-200 hover:border-emerald-300 rounded-2xl flex flex-col items-center justify-center shadow-xs transition hover:bg-emerald-50/40 active:scale-95 cursor-pointer"
+          >
+            <span className="font-bold text-emerald-600 text-sm">Thuộc</span>
+            <span className="text-[11px] text-emerald-600/70 mt-0.5">Ôn lại sau 4 ngày</span>
+          </button>
         </div>
-      )}
+
+        {/* FOOTER BAR: THANH TIẾN ĐỘ & NÚT ĐIỀU HƯỚNG */}
+        <div className="pt-4 flex items-center justify-between border-t border-slate-200">
+          <div className="w-48 space-y-1">
+            <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+              <div 
+                className="bg-indigo-600 h-full transition-all duration-300 rounded-full"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+            <span className="text-[10px] text-slate-400 font-medium">Tiến độ: {progressPercent}%</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handlePrev}
+              className="px-4 py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 rounded-xl text-xs font-bold transition shadow-2xs cursor-pointer"
+            >
+              Trước
+            </button>
+            <button
+              onClick={handleNext}
+              className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
+            >
+              Tiếp
+            </button>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
