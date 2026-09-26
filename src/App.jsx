@@ -1,68 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import Sidebar from './components/layout/Sidebar';
 import Header from './components/layout/Header';
+import Sidebar from './components/layout/Sidebar';
 import DashboardPage from './pages/DashboardPage';
-import QuestionBankPage from './pages/QuestionBankPage';
 import VocabularyPage from './pages/VocabularyPage';
+import QuestionBankPage from './pages/QuestionBankPage';
 import DocumentsPage from './pages/DocumentsPage';
-import ExamWorkspacePage from './pages/ExamWorkspacePage';
-import CodeGenerator from './components/admin/CodeGenerator';
 import SettingsPage from './pages/SettingsPage';
+import ExamWorkspacePage from './pages/ExamWorkspacePage';
 import QuestionManager from './components/admin/QuestionManager';
 import LoginModal from './components/auth/LoginModal';
 import RegisterModal from './components/auth/RegisterModal';
 import { authService } from './services/authService';
-import { storageService } from './services/storageService';
 
 export default function App() {
+  const [activePage, setActivePage] = useState('dashboard');
   const [currentUser, setCurrentUser] = useState(null);
-  const [activePage, setActivePage] = useState('question-bank'); // Khởi đầu tại trang Question Bank
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-  const [activeSession, setActiveSession] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [activeExamSession, setActiveExamSession] = useState(null);
 
-  // Khởi tạo người dùng
   useEffect(() => {
-    const user = authService.getCurrentUser();
-    setCurrentUser(user);
-
-    // Kiểm tra xem có phiên thi dở dang không
-    const savedSession = storageService.getExamSession();
-    if (savedSession) {
-      setActiveSession(savedSession);
+    const user = authService.getCurrentUser() || JSON.parse(localStorage.getItem('sat_user') || 'null');
+    if (user) {
+      setCurrentUser(user);
+    } else {
+      const defaultUser = {
+        name: 'Học viên SAT',
+        email: 'nguyenan20062000@gmail.com',
+        avatar: '',
+        bio: 'Mục tiêu Digital SAT 1500+'
+      };
+      setCurrentUser(defaultUser);
+      localStorage.setItem('sat_user', JSON.stringify(defaultUser));
     }
   }, []);
 
   const handleLogout = () => {
     authService.logout();
+    localStorage.removeItem('sat_user');
     setCurrentUser(null);
+    setActivePage('dashboard');
   };
 
-  const handleStartExamSession = (config) => {
-    const newSession = {
-      ...config,
-      sessionId: 'session_' + Date.now(),
-      duration: config.mode === 'REAL_EXAM' ? 1800 : 3600 // 30p hoặc 60p
-    };
-    setActiveSession(newSession);
+  const handleStartExam = (sessionConfig) => {
+    setActiveExamSession(sessionConfig);
   };
 
-  // NẾU ĐANG TRONG PHÒNG THI / LUYỆN TẬP: Chiếm trọn màn hình không sidebar
-  if (activeSession) {
+  const handleExitExam = () => {
+    setActiveExamSession(null);
+  };
+
+  // Màn hình làm bài thi độc lập (Full screen)
+  if (activeExamSession) {
     return (
       <ExamWorkspacePage
-        sessionConfig={activeSession}
-        onExit={() => {
-          storageService.clearExamSession();
-          setActiveSession(null);
-        }}
+        sessionConfig={activeExamSession}
+        onExit={handleExitExam}
       />
     );
   }
 
   return (
-    <div className="flex h-screen bg-slate-50 font-sans overflow-hidden">
-      {/* Sidebar cố định bên trái */}
+    <div className="flex h-screen bg-slate-50 overflow-hidden font-sans">
+      {/* Sidebar cố định */}
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
@@ -70,48 +70,142 @@ export default function App() {
         onLogout={handleLogout}
       />
 
-      {/* Main Content Area */}
+      {/* Vùng nội dung chính */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        {/* Header trên cùng */}
         <Header
           currentUser={currentUser}
-          onOpenLogin={() => setIsLoginOpen(true)}
-          onOpenRegister={() => setIsRegisterOpen(true)}
+          onOpenLogin={() => setShowLoginModal(true)}
+          onOpenRegister={() => setShowRegisterModal(true)}
         />
 
-        {/* Nội dung Page động */}
         <main className="flex-1 overflow-y-auto">
           {activePage === 'dashboard' && (
-            <DashboardPage onNavigateToQuestionBank={() => setActivePage('question-bank')} />
+            <DashboardPage
+              setActivePage={setActivePage}
+              onStartSession={handleStartExam}
+            />
           )}
+
+          {activePage === 'mistakes' && (
+  <div className="p-8 max-w-5xl mx-auto space-y-6">
+    <div className="flex items-center justify-between">
+      <div>
+        <h2 className="text-xl font-bold text-slate-900">Sổ tay câu sai (Error Notebook)</h2>
+        <p className="text-xs text-slate-500 mt-1">Tổng hợp tự động tất cả các câu bạn đã trả lời chưa chính xác trong các lần thi.</p>
+      </div>
+      <button
+        onClick={() => {
+          localStorage.removeItem('sat_mistakes');
+          window.location.reload();
+        }}
+        className="px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold rounded-xl border border-rose-200 transition"
+      >
+        Xóa lịch sử câu sai
+      </button>
+    </div>
+
+    {(() => {
+      const mistakes = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
+      if (mistakes.length === 0) {
+        return (
+          <div className="p-12 text-center bg-white rounded-2xl border border-dashed border-slate-300">
+            <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
+            <p className="text-sm font-bold text-slate-700">Tuyệt vời! Bạn không có câu sai nào cần ôn tập.</p>
+          </div>
+        );
+      }
+      return (
+        <div className="space-y-4">
+          <div className="flex justify-end">
+            <button
+              onClick={() => handleStartExam({
+                sessionId: 'practice-mistakes-' + Date.now(),
+                title: 'Luyện lại câu sai trong sổ tay',
+                questions: mistakes,
+                duration: mistakes.length * 90
+              })}
+              className="px-5 py-2.5 bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs rounded-xl shadow transition"
+            >
+              Luyện lại toàn bộ {mistakes.length} câu sai này ngay
+            </button>
+          </div>
+
+          <div className="space-y-3">
+            {mistakes.map((q, idx) => (
+              <div key={q.id || idx} className="p-5 bg-white rounded-2xl border border-slate-200 shadow-xs space-y-3">
+                <div className="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                  <span>Câu {idx + 1} • {q.category || 'Reading & Writing'}</span>
+                  <span className="text-rose-500 font-bold">Bạn đã chọn: ({q.userAnswer})</span>
+                </div>
+                <p className="text-sm text-slate-800 font-serif whitespace-pre-line">{q.prompt || q.passage}</p>
+                <p className="text-xs font-bold text-slate-900">{q.question}</p>
+                <div className="p-3 bg-emerald-50 text-emerald-900 text-xs rounded-xl border border-emerald-200 font-medium">
+                  Đáp án chuẩn: <span className="font-bold font-mono">({q.correctAnswer})</span> - {q.options ? q.options[q.correctAnswer] : ''}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })()}
+  </div>
+)}
+
+          {activePage === 'vocab' && (
+            <VocabularyPage />
+          )}
+
           {activePage === 'question-bank' && (
-            <QuestionBankPage onStartSession={handleStartExamSession} />
+            <QuestionBankPage onStartSession={handleStartExam} />
           )}
-          {activePage === 'vocab' && <VocabularyPage />}
-          {activePage === 'documents' && <DocumentsPage />}
+
+          {activePage === 'documents' && (
+            <DocumentsPage />
+          )}
+
+          {activePage === 'settings' && (
+            <SettingsPage
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          )}
+
           {activePage === 'admin-tools' && (
-            <div className="p-8 max-w-5xl mx-auto space-y-6">
-              <CodeGenerator />
+            <div className="p-8 max-w-6xl mx-auto">
               <QuestionManager />
             </div>
           )}
-         {activePage === 'settings' && (
-  <SettingsPage currentUser={currentUser} setCurrentUser={setCurrentUser} />
-)}
         </main>
       </div>
 
-      {/* Modals xác thực */}
-      <LoginModal
-        isOpen={isLoginOpen}
-        onClose={() => setIsLoginOpen(false)}
-        onAuthSuccess={user => setCurrentUser(user)}
-      />
-      <RegisterModal
-        isOpen={isRegisterOpen}
-        onClose={() => setIsRegisterOpen(false)}
-        onAuthSuccess={user => setCurrentUser(user)}
-      />
+      {/* Modals đăng nhập & đăng ký */}
+      {showLoginModal && (
+        <LoginModal
+          onClose={() => setShowLoginModal(false)}
+          onSuccess={(user) => {
+            setCurrentUser(user);
+            setShowLoginModal(false);
+          }}
+          onSwitchToRegister={() => {
+            setShowLoginModal(false);
+            setShowRegisterModal(true);
+          }}
+        />
+      )}
+
+      {showRegisterModal && (
+        <RegisterModal
+          onClose={() => setShowRegisterModal(false)}
+          onSuccess={(user) => {
+            setCurrentUser(user);
+            setShowRegisterModal(false);
+          }}
+          onSwitchToLogin={() => {
+            setShowRegisterModal(false);
+            setShowLoginModal(true);
+          }}
+        />
+      )}
     </div>
   );
 }

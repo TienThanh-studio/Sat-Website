@@ -1,9 +1,8 @@
-// src/pages/DocumentsPage.jsx
 import React, { useState } from 'react';
 import { FileText, Download } from 'lucide-react';
 
 export default function DocumentsPage() {
-  const [docs, setDocs] = useState(() => {
+  const [docs] = useState(() => {
     return JSON.parse(localStorage.getItem('admin_documents') || '[]');
   });
 

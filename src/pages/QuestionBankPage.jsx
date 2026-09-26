@@ -94,7 +94,7 @@ export default function QuestionBankPage({ onStartSession }) {
         isOpen={isMatrixOpen}
         onClose={() => setIsMatrixOpen(false)}
         topicsList={topicsList}
-        onStartExam={handleStartExam}
+        onStartSession={handleStartExam}
       />
     </div>
   );

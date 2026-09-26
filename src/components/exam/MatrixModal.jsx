@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Sparkles, SlidersHorizontal } from 'lucide-react';
 
-export default function MatrixModal({ isOpen, onClose, topicsList, onStartExam }) {
+export default function MatrixModal({ isOpen, onClose, topicsList, onStartSession }) {
   const [selectedTopics, setSelectedTopics] = useState(topicsList.map(t => t.name));
   const [questionCount, setQuestionCount] = useState(10);
   const [difficulty, setDifficulty] = useState('All');
@@ -20,7 +20,7 @@ export default function MatrixModal({ isOpen, onClose, topicsList, onStartExam }
   };
 
   const handleStart = () => {
-    onStartExam({
+    onStartSession({
       topics: selectedTopics,
       count: questionCount,
       difficulty,
