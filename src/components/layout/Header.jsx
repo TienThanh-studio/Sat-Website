@@ -1,78 +1,67 @@
 import React from 'react';
-import { Bell, User, ShieldCheck } from 'lucide-react';
+import { Bell, ExternalLink } from 'lucide-react';
 
 export default function Header({ currentUser, onOpenLogin, onOpenRegister }) {
+  const user = currentUser || JSON.parse(localStorage.getItem('sat_user') || '{}');
+  const displayName = user.name || 'nguyenan20062000';
+  const displayEmail = user.email || 'nguyenan20062000@gmail.com';
+  const avatar = user.avatar;
+
   return (
-    <header className="h-16 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-20">
-      {/* Lời chào & Social Chips */}
-      <div className="flex items-center gap-5">
-        <div className="flex items-center gap-2">
-          <h1 className="text-lg font-bold text-slate-900">Welcome back</h1>
-          <span className="text-xl">👋</span>
-        </div>
-        <div className="hidden md:flex items-center gap-2 text-xs font-semibold">
-          <span className="text-slate-400 uppercase tracking-wider text-[11px]">Join Community</span>
-          <a 
-            href="https://facebook.com" 
-            target="_blank" 
-            rel="noreferrer"
-            className="px-3 py-1 bg-brand-800 hover:bg-brand-900 text-white rounded-full transition shadow-sm"
-          >
-            Facebook
-          </a>
-          <a 
-            href="https://threads.net" 
-            target="_blank" 
-            rel="noreferrer"
-            className="px-3 py-1 bg-brand-800 hover:bg-brand-900 text-white rounded-full transition shadow-sm"
-          >
-            Threads
-          </a>
-        </div>
+    <header className="h-16 border-b border-slate-200 bg-white px-8 flex items-center justify-between shrink-0">
+      <div className="flex items-center gap-2">
+        <span className="text-base font-bold text-slate-800">Welcome back</span>
+        <span className="text-lg">👋</span>
       </div>
 
-      {/* Profile & Notifications */}
       <div className="flex items-center gap-4">
-        {currentUser ? (
-          <div className="flex items-center gap-3">
-            <button className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition">
-              <Bell className="w-5 h-5" />
-            </button>
-            <div className="flex items-center gap-2.5 pl-2 border-l border-slate-200">
-              <div className="w-9 h-9 rounded-full bg-amber-100 border-2 border-amber-300 flex items-center justify-center text-amber-800 font-bold overflow-hidden shadow-sm">
-                <span className="text-sm">{currentUser.name.charAt(0)}</span>
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-bold text-slate-800 flex items-center gap-1">
-                  {currentUser.name}
-                  {currentUser.role === 'ADMIN' && (
-                    <span className="bg-amber-100 text-amber-800 text-[9px] px-1.5 py-0.5 rounded font-bold">
-                      ADMIN
-                    </span>
-                  )}
-                </div>
-                <div className="text-[11px] text-slate-400 truncate max-w-[150px]">
-                  {currentUser.email}
-                </div>
-              </div>
-            </div>
+        {/* Cộng đồng */}
+        <div className="hidden sm:flex items-center gap-2 border-r border-slate-200 pr-4">
+          <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">JOIN COMMUNITY</span>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noreferrer"
+            className="px-2.5 py-1 bg-red-800 text-white rounded-md text-[11px] font-semibold hover:bg-red-900 transition flex items-center gap-1"
+          >
+            <span>Facebook</span>
+          </a>
+          <a
+            href="https://threads.net"
+            target="_blank"
+            rel="noreferrer"
+            className="px-2.5 py-1 bg-neutral-900 text-white rounded-md text-[11px] font-semibold hover:bg-neutral-800 transition flex items-center gap-1"
+          >
+            <span>Threads</span>
+          </a>
+        </div>
+
+        {/* Thông báo */}
+        <button
+          type="button"
+          className="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition"
+        >
+          <Bell className="w-4 h-4" />
+        </button>
+
+        {/* Thông tin tài khoản */}
+        <div className="flex items-center gap-3 pl-2">
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200 bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs shrink-0 shadow-xs">
+            {avatar ? (
+              <img src={avatar} alt="Avatar" className="w-full h-full object-cover" />
+            ) : (
+              displayName.charAt(0).toUpperCase()
+            )}
           </div>
-        ) : (
-          <div className="flex items-center gap-2">
-            <button
-              onClick={onOpenLogin}
-              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-slate-900 rounded-xl hover:bg-slate-100 transition"
-            >
-              Đăng nhập
-            </button>
-            <button
-              onClick={onOpenRegister}
-              className="px-4 py-2 text-sm font-semibold text-white bg-brand-800 hover:bg-brand-900 rounded-xl transition shadow-sm"
-            >
-              Đăng ký bằng mã mời
-            </button>
+          <div className="hidden md:block text-left">
+            <span className="block text-xs font-bold text-slate-800 leading-tight">
+              {displayName}
+            </span>
+            <span className="block text-[10px] text-slate-400 font-medium leading-tight">
+              {displayEmail}
+            </span>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

@@ -1,32 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Timer, ArrowLeft, CheckCircle2, XCircle, Flag, 
-  Underline as UnderlineIcon, Grid, BookX, Eye, RotateCcw, 
+  Underline as UnderlineIcon, Grid, Eye, 
   ChevronLeft, ChevronRight, Strikethrough
 } from 'lucide-react';
 import { storageService } from '../services/storageService';
 import { questionService } from '../services/questionService';
+
+// Hàm helper bóc tách text an toàn, không bao giờ để lọt Object vào JSX child
+const renderSafeText = (val) => {
+  if (val === null || val === undefined) return '';
+  if (typeof val === 'string' || typeof val === 'number') return String(val);
+  if (typeof val === 'object') {
+    if (typeof val.text === 'string') return val.text;
+    if (typeof val.value === 'string') return val.value;
+    if (typeof val.content === 'string') return val.content;
+    if (typeof val.prompt === 'string') return val.prompt;
+    if (typeof val.question === 'string') return val.question;
+    return JSON.stringify(val);
+  }
+  return String(val);
+};
 
 export default function ExamWorkspacePage({ sessionConfig, onExit }) {
   const [questions] = useState(sessionConfig.questions || []);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [markedQuestions, setMarkedQuestions] = useState({});
-  const [eliminatedOptions, setEliminatedOptions] = useState({}); // { [qId]: ['A', 'C'] }
+  const [eliminatedOptions, setEliminatedOptions] = useState({});
   const [timeLeft, setTimeLeft] = useState(sessionConfig.duration || 1800);
   const [isFinished, setIsFinished] = useState(false);
   const [showMatrix, setShowMatrix] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
-  const [reviewFilter, setReviewFilter] = useState('ALL'); // 'ALL' | 'INCORRECT'
 
   // Phục hồi session cũ nếu F5
   useEffect(() => {
-    const saved = storageService?.getExamSession ? storageService.getExamSession() : null;
-    if (saved && saved.sessionId === sessionConfig.sessionId) {
-      setAnswers(saved.answers || {});
-      setMarkedQuestions(saved.markedQuestions || {});
-      setTimeLeft(saved.timeLeft || 1800);
-      setCurrentIndex(saved.currentIndex || 0);
+    try {
+      const saved = storageService?.getExamSession ? storageService.getExamSession() : null;
+      if (saved && saved.sessionId === sessionConfig.sessionId) {
+        setAnswers(saved.answers || {});
+        setMarkedQuestions(saved.markedQuestions || {});
+        setTimeLeft(saved.timeLeft || 1800);
+        setCurrentIndex(saved.currentIndex || 0);
+      }
+    } catch (e) {
+      console.warn("Lỗi load session:", e);
     }
   }, [sessionConfig.sessionId]);
 
@@ -50,6 +68,41 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     const m = Math.floor(secs / 60);
     const s = secs % 60;
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  };
+
+  // Chuẩn hóa toàn bộ options thành danh sách [{ key: 'A', text: '...' }]
+  const normalizeOptions = (options) => {
+    if (!options) return [];
+    const defaultLetters = ['A', 'B', 'C', 'D'];
+
+    if (Array.isArray(options)) {
+      return options.map((opt, idx) => {
+        if (typeof opt === 'string' || typeof opt === 'number') {
+          return { key: defaultLetters[idx] || String(idx), text: String(opt) };
+        }
+        if (typeof opt === 'object' && opt !== null) {
+          return {
+            key: renderSafeText(opt.key || opt.label || defaultLetters[idx]),
+            text: renderSafeText(opt.text || opt.value || opt.content || opt)
+          };
+        }
+        return { key: String(idx), text: renderSafeText(opt) };
+      });
+    }
+
+    if (typeof options === 'object') {
+      return Object.entries(options).map(([k, val], idx) => {
+        if (typeof val === 'object' && val !== null) {
+          return {
+            key: renderSafeText(val.key || k),
+            text: renderSafeText(val.text || val.value || val.content || val)
+          };
+        }
+        return { key: k, text: renderSafeText(val) };
+      });
+    }
+
+    return [];
   };
 
   // Tính năng gạch chân chữ (Underline)
@@ -94,7 +147,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Chọn đáp án
   const handleSelectAnswer = (key) => {
     if (isReviewMode) return;
     const currentQ = questions[currentIndex];
@@ -102,7 +154,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     setAnswers(prev => ({ ...prev, [currentQ.id]: key }));
   };
 
-  // Gạch bỏ phương án (Option Eliminator)
   const handleToggleEliminate = (e, key) => {
     e.stopPropagation();
     if (isReviewMode) return;
@@ -123,14 +174,18 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
     setMarkedQuestions(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
   };
 
-  // Nộp bài & Tự động lưu Sổ tay câu sai (Error Log)
   const handleSubmitExam = () => {
     setIsFinished(true);
     if (storageService?.clearExamSession) storageService.clearExamSession();
 
-    const existingMistakes = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
-    const newMistakes = [];
+    let existingMistakes = [];
+    try {
+      existingMistakes = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
+    } catch (e) {
+      existingMistakes = [];
+    }
 
+    const newMistakes = [];
     questions.forEach(q => {
       const userAnswer = answers[q.id];
       if (userAnswer === q.correctAnswer) {
@@ -144,14 +199,12 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
       }
     });
 
-    // Cập nhật Sổ tay câu sai (tránh trùng lặp ID)
     const mistakeMap = new Map();
     existingMistakes.forEach(item => mistakeMap.set(item.id, item));
     newMistakes.forEach(item => mistakeMap.set(item.id, item));
     localStorage.setItem('sat_mistakes', JSON.stringify(Array.from(mistakeMap.values())));
   };
 
-  // Tính kết quả
   let correctCount = 0;
   questions.forEach(q => {
     if (answers[q.id] === q.correctAnswer) correctCount++;
@@ -159,8 +212,9 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
 
   const currentQ = questions[currentIndex];
   const currentEliminated = (currentQ && eliminatedOptions[currentQ.id]) || [];
+  const normalizedOptionsList = normalizeOptions(currentQ?.options);
 
-  // Màn hình tóm tắt sau nộp bài
+  // Màn hình kết quả sau khi nộp bài
   if (isFinished && !isReviewMode) {
     return (
       <div className="h-screen bg-slate-50 flex items-center justify-center p-6 select-none">
@@ -178,7 +232,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             </div>
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
               <span className="text-[11px] text-slate-400 font-semibold block">Độ chính xác</span>
-              <span className="text-xl font-black text-brand-800">
+              <span className="text-xl font-black text-indigo-700">
                 {questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0}%
               </span>
             </div>
@@ -222,7 +276,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             <ArrowLeft className="w-4 h-4" />
           </button>
           <div>
-            <span className="font-bold text-slate-800 text-sm">{sessionConfig.title || 'Digital SAT Exam'}</span>
+            <span className="font-bold text-slate-800 text-sm">{renderSafeText(sessionConfig.title) || 'Digital SAT Exam'}</span>
             {isReviewMode && (
               <span className="ml-2.5 px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded-md">
                 CHẾ ĐỘ XEM LẠI BÀI THI
@@ -231,7 +285,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           </div>
         </div>
 
-        {/* Thanh công cụ trung tâm: Gạch chân & Đồng hồ & Lưới câu hỏi */}
+        {/* Công cụ: Gạch chân, Đồng hồ, Lưới câu hỏi */}
         <div className="flex items-center gap-2.5">
           {!isReviewMode && (
             <button
@@ -255,7 +309,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             </div>
           )}
 
-          {/* Nút bật Lưới điều hướng câu hỏi */}
           <button
             type="button"
             onClick={() => setShowMatrix(!showMatrix)}
@@ -266,7 +319,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
           </button>
         </div>
 
-        {/* Nút Nộp bài / Thoát review */}
         <div>
           {isReviewMode ? (
             <button
@@ -280,7 +332,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             <button
               type="button"
               onClick={handleSubmitExam}
-              className="text-xs font-bold text-white bg-brand-800 hover:bg-brand-900 px-4 py-2 rounded-xl transition shadow-sm"
+              className="text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-xl transition shadow-sm"
             >
               Nộp bài thi
             </button>
@@ -288,27 +340,26 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
         </div>
       </div>
 
-      {/* Nội dung làm bài chính (Chia 2 cột chuẩn SAT) */}
+      {/* Nội dung bài thi 2 cột */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Cột trái: Đoạn văn (Passage) */}
+        {/* Đoạn văn (Passage) */}
         <div className="w-1/2 p-8 overflow-y-auto border-r border-slate-200 leading-relaxed text-slate-800 font-serif text-[15px]">
           <div className="max-w-xl mx-auto space-y-4">
             <div className="text-xs font-sans font-bold text-slate-400 uppercase tracking-wider">
               Passage / Câu hỏi {currentIndex + 1}
             </div>
             <div className="whitespace-pre-line select-text">
-              {currentQ?.prompt || currentQ?.passage || "Nội dung câu hỏi đang được tải..."}
+              {renderSafeText(currentQ?.prompt || currentQ?.passage || "Nội dung câu hỏi đang được cập nhật...")}
             </div>
           </div>
         </div>
 
-        {/* Cột phải: Câu hỏi & 4 Phương án */}
+        {/* Câu hỏi & Lựa chọn */}
         <div className="w-1/2 p-8 overflow-y-auto bg-slate-50/60 flex flex-col justify-between">
           <div className="max-w-xl mx-auto w-full space-y-5">
-            {/* Header câu hỏi & Nút gắn cờ (Flag) */}
             <div className="flex items-start justify-between gap-4">
               <h3 className="font-bold text-slate-900 text-sm leading-snug">
-                {currentQ?.question || "Which choice completes the text with the most logical and precise word or phrase?"}
+                {renderSafeText(currentQ?.question) || "Which choice completes the text with the most logical and precise word or phrase?"}
               </h3>
               {!isReviewMode && (
                 <button
@@ -321,21 +372,20 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                   }`}
                 >
                   <Flag className="w-3.5 h-3.5" />
-                  <span>{markedQuestions[currentQ?.id] ? 'Đã gờ cờ' : 'Gắn cờ'}</span>
+                  <span>{markedQuestions[currentQ?.id] ? 'Đã gắn cờ' : 'Gắn cờ'}</span>
                 </button>
               )}
             </div>
 
-            {/* Danh sách 4 phương án lựa chọn (A, B, C, D) */}
+            {/* Render 4 phương án an toàn qua renderSafeText */}
             <div className="space-y-2.5">
-              {currentQ?.options && Object.entries(currentQ.options).map(([key, value]) => {
-                const isSelected = answers[currentQ.id] === key;
-                const isCorrect = currentQ.correctAnswer === key;
+              {normalizedOptionsList.map(({ key, text }) => {
+                const isSelected = answers[currentQ?.id] === key;
+                const isCorrect = currentQ?.correctAnswer === key;
                 const isEliminated = currentEliminated.includes(key);
 
                 let cardStyle = "border-slate-200 bg-white hover:border-slate-300 text-slate-800";
                 
-                // Trạng thái Xem lại (Review Mode)
                 if (isReviewMode) {
                   if (isCorrect) {
                     cardStyle = "border-emerald-500 bg-emerald-50 text-emerald-900 font-semibold ring-1 ring-emerald-500";
@@ -345,7 +395,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                     cardStyle = "border-slate-200 bg-white opacity-60";
                   }
                 } else if (isSelected) {
-                  cardStyle = "border-brand-800 bg-brand-50 text-brand-900 ring-2 ring-brand-800 font-medium";
+                  cardStyle = "border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-2 ring-indigo-600 font-medium";
                 } else if (isEliminated) {
                   cardStyle = "border-slate-200 bg-slate-100 text-slate-400 line-through opacity-60";
                 }
@@ -358,14 +408,13 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                   >
                     <div className="flex items-center gap-3">
                       <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
-                        isSelected ? 'bg-brand-800 text-white' : 'bg-slate-100 text-slate-600'
+                        isSelected ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'
                       }`}>
-                        {key}
+                        {renderSafeText(key)}
                       </span>
-                      <span className="text-sm select-none">{value}</span>
+                      <span className="text-sm select-none">{renderSafeText(text)}</span>
                     </div>
 
-                    {/* Nút Gạch bỏ đáp án (Option Eliminator) */}
                     {!isReviewMode && (
                       <button
                         type="button"
@@ -381,7 +430,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                       </button>
                     )}
 
-                    {/* Huy hiệu đúng/sai khi xem lại */}
                     {isReviewMode && isCorrect && (
                       <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
                         <CheckCircle2 className="w-4 h-4" /> Đáp án đúng
@@ -397,21 +445,21 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
               })}
             </div>
 
-            {/* Khối lời giải thích chi tiết trong chế độ Xem lại */}
+            {/* Giải thích chi tiết trong Review Mode */}
             {isReviewMode && (
-              <div className="p-4 bg-indigo-50/70 border border-indigo-200 rounded-xl space-y-2 mt-4 animate-fadeIn">
+              <div className="p-4 bg-indigo-50/70 border border-indigo-200 rounded-xl space-y-2 mt-4">
                 <div className="text-xs font-bold text-indigo-900 uppercase tracking-wider flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-indigo-600" />
                   <span>Giải thích chi tiết:</span>
                 </div>
                 <p className="text-xs text-indigo-950 leading-relaxed">
-                  {currentQ?.explanation || `Đáp án đúng là (${currentQ?.correctAnswer}). Các phương án khác không phù hợp về mặt logic hoặc ngữ cảnh câu văn.`}
+                  {renderSafeText(currentQ?.explanation) || `Đáp án đúng là (${renderSafeText(currentQ?.correctAnswer)}).`}
                 </p>
               </div>
             )}
           </div>
 
-          {/* Thanh chuyển câu Next / Back dưới chân */}
+          {/* Nút Previous / Next */}
           <div className="max-w-xl mx-auto w-full pt-6 flex items-center justify-between border-t border-slate-200">
             <button
               type="button"
@@ -427,7 +475,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
               type="button"
               disabled={currentIndex === questions.length - 1}
               onClick={() => setCurrentIndex(i => Math.min(questions.length - 1, i + 1))}
-              className="flex items-center gap-1 px-4 py-2 bg-brand-800 text-white rounded-xl text-xs font-bold hover:bg-brand-900 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-sm"
+              className="flex items-center gap-1 px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-bold hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-sm"
             >
               Câu kế tiếp
               <ChevronRight className="w-4 h-4" />
@@ -436,7 +484,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
         </div>
       </div>
 
-      {/* MODAL LƯỚI CÂU HỎI (Question Navigation Matrix) */}
+      {/* Modal Matrix chuyển nhanh câu hỏi */}
       {showMatrix && (
         <div 
           onClick={() => setShowMatrix(false)}
@@ -449,7 +497,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <h3 className="font-bold text-slate-900 text-sm">Danh sách câu hỏi</h3>
               <div className="flex items-center gap-3 text-[11px] text-slate-500 font-medium">
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-brand-800 rounded-full" /> Đã làm</span>
+                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-slate-900 rounded-full" /> Đã làm</span>
                 <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 border border-slate-300 rounded-full" /> Chưa làm</span>
                 <span className="flex items-center gap-1"><Flag className="w-3 h-3 text-rose-500" /> Gắn cờ</span>
               </div>
@@ -461,14 +509,14 @@ export default function ExamWorkspacePage({ sessionConfig, onExit }) {
                 const isMarked = !!markedQuestions[q.id];
                 const isCurrent = currentIndex === idx;
 
-                let btnClass = "border-slate-200 bg-white text-slate-700 hover:border-brand-800";
+                let btnClass = "border-slate-200 bg-white text-slate-700 hover:border-slate-800";
                 if (isReviewMode) {
                   const isCorrect = answers[q.id] === q.correctAnswer;
                   btnClass = isCorrect ? "bg-emerald-500 text-white border-emerald-600" : "bg-rose-500 text-white border-rose-600";
                 } else if (isCurrent) {
-                  btnClass = "border-brand-800 ring-2 ring-brand-800 bg-brand-50 text-brand-900 font-bold";
+                  btnClass = "border-indigo-600 ring-2 ring-indigo-600 bg-indigo-50 text-indigo-900 font-bold";
                 } else if (isAnswered) {
-                  btnClass = "bg-brand-800 text-white border-brand-800";
+                  btnClass = "bg-slate-900 text-white border-slate-900";
                 }
 
                 return (

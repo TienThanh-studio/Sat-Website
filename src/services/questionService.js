@@ -1,79 +1,119 @@
-import initialQuestions from '../data/mockQuestions.js';
-import { storageService } from './storageService';
+import wordInContext from '../data/questions/wordInContext.json';
+import transition from '../data/questions/transition.json';
+import grammar from '../data/questions/grammar.json';
+import inference from '../data/questions/inference.json';
+import commandOfEvidence from '../data/questions/commandOfEvidence.json';
+import details from '../data/questions/details.json';
+import crossText from '../data/questions/crossText.json';
+import vocabulary from '../data/questions/vocabulary.json';
 
-export const questionService = {
-  // Lấy toàn bộ câu hỏi gồm dữ liệu gốc + câu hỏi Admin tự tạo thêm
-  getAllQuestions() {
-    const custom = storageService.get(storageService.KEYS.CUSTOM_QUESTIONS, []);
-    return [...initialQuestions, ...custom];
+const CATEGORY_MAP = {
+  'word-in-context': {
+    id: 'word-in-context',
+    label: 'Words in Context',
+    category: 'Craft and Structure',
+    data: Array.isArray(wordInContext) ? wordInContext : []
   },
-
-  addQuestion(questionData) {
-    const custom = storageService.get(storageService.KEYS.CUSTOM_QUESTIONS, []);
-    const newQ = {
-      ...questionData,
-      id: 'q_custom_' + Date.now()
-    };
-    custom.push(newQ);
-    storageService.set(storageService.KEYS.CUSTOM_QUESTIONS, custom);
-    return newQ;
+  'text-structure': {
+    id: 'text-structure',
+    label: 'Text Structure and Purpose',
+    category: 'Craft and Structure',
+    data: Array.isArray(details) ? details : []
   },
-
-  deleteQuestion(id) {
-    const custom = storageService.get(storageService.KEYS.CUSTOM_QUESTIONS, []);
-    const updated = custom.filter(q => q.id !== id);
-    storageService.set(storageService.KEYS.CUSTOM_QUESTIONS, updated);
+  'cross-text': {
+    id: 'cross-text',
+    label: 'Cross-Text Connections',
+    category: 'Craft and Structure',
+    data: Array.isArray(crossText) ? crossText : []
   },
-
-  // Thuật toán lọc đề ma trận chuẩn xác
-  generateMatrixExam({ topic, topics = [], difficulty, count = 10 }) {
-    let pool = this.getAllQuestions();
-
-    if (topics && topics.length > 0) {
-      pool = pool.filter(q => topics.some(t => t.toLowerCase() === (q.topic || '').toLowerCase()));
-    } else if (topic && topic !== 'All') {
-      pool = pool.filter(q => (q.topic || '').toLowerCase() === topic.toLowerCase());
-    }
-
-    if (difficulty && difficulty !== 'All') {
-      pool = pool.filter(q => (q.difficulty || '').toLowerCase() === difficulty.toLowerCase());
-    }
-
-    // Nếu không tìm thấy câu đúng yêu cầu, fallback lấy câu ngẫu nhiên trong pool
-    if (pool.length === 0) {
-      pool = this.getAllQuestions();
-    }
-
-    const shuffled = [...pool].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, Math.min(count, shuffled.length));
+  'central-ideas': {
+    id: 'central-ideas',
+    label: 'Central Ideas and Details',
+    category: 'Information and Ideas',
+    data: Array.isArray(details) ? details : []
   },
-
-  // Tính số câu hỏi thật và số câu làm đúng thật từ localStorage
-  getTopicStats() {
-    const all = this.getAllQuestions();
-    const statsMap = {};
-    const correctHistory = storageService.get('exam_correct_questions_set', {});
-
-    all.forEach(q => {
-      const topicName = q.topic || 'General';
-      if (!statsMap[topicName]) {
-        statsMap[topicName] = { total: 0, correct: 0 };
-      }
-      statsMap[topicName].total += 1;
-      
-      // Nếu câu này người dùng đã từng làm đúng
-      if (correctHistory[q.id] === true) {
-        statsMap[topicName].correct += 1;
-      }
-    });
-
-    return statsMap;
+  'command-of-evidence': {
+    id: 'command-of-evidence',
+    label: 'Command of Evidence',
+    category: 'Information and Ideas',
+    data: Array.isArray(commandOfEvidence) ? commandOfEvidence : []
   },
-
-  // Lưu một câu hỏi là đã làm đúng (gọi khi bấm Check hoặc nộp bài)
-  recordCorrectAnswer(questionId) {
-    const correctHistory = storageService.get('exam_correct_questions_set', {});
-    correctHistory[questionId] = true;
-    storageService.set('exam_correct_questions_set', correctHistory);
+  'inferences': {
+    id: 'inferences',
+    label: 'Inferences',
+    category: 'Information and Ideas',
+    data: Array.isArray(inference) ? inference : []
+  },
+  'boundaries': {
+    id: 'boundaries',
+    label: 'Boundaries (Grammar)',
+    category: 'Standard English Conventions',
+    data: Array.isArray(grammar) ? grammar : []
+  },
+  'form-structure-sense': {
+    id: 'form-structure-sense',
+    label: 'Form, Structure, and Sense',
+    category: 'Standard English Conventions',
+    data: Array.isArray(grammar) ? grammar : []
+  },
+  'transitions': {
+    id: 'transitions',
+    label: 'Transitions',
+    category: 'Expression of Ideas',
+    data: Array.isArray(transition) ? transition : []
+  },
+  'rhetorical-synthesis': {
+    id: 'rhetorical-synthesis',
+    label: 'Rhetorical Synthesis',
+    category: 'Expression of Ideas',
+    data: Array.isArray(vocabulary) ? vocabulary : []
   }
 };
+
+export const questionService = {
+  // Thống kê danh sách dạng bài
+  getCategoryStats: () => {
+    let solvedIds = [];
+    try {
+      solvedIds = JSON.parse(localStorage.getItem('sat_solved_correct') || '[]');
+    } catch (e) {
+      solvedIds = [];
+    }
+
+    return Object.values(CATEGORY_MAP).map(cat => {
+      const total = cat.data.length;
+      const solved = cat.data.filter(q => solvedIds.includes(q.id)).length;
+      return {
+        id: cat.id,
+        label: cat.label,
+        category: cat.category,
+        totalQuestions: total,
+        solvedQuestions: solved,
+        availablePhases: total > 0 ? ['01'] : [],
+        phases: total > 0 ? ['01'] : []
+      };
+    });
+  },
+
+  // Lấy câu hỏi theo id dạng bài
+  getQuestionsByCategory: (categoryId) => {
+    const target = CATEGORY_MAP[categoryId];
+    return target ? target.data : [];
+  },
+
+  // Ghi nhận câu trả lời đúng
+  recordCorrectAnswer: (questionId) => {
+    if (!questionId) return;
+    try {
+      const solved = JSON.parse(localStorage.getItem('sat_solved_correct') || '[]');
+      if (!solved.includes(questionId)) {
+        solved.push(questionId);
+        localStorage.setItem('sat_solved_correct', JSON.stringify(solved));
+      }
+    } catch (e) {
+      console.warn("Không thể lưu tiến độ làm bài:", e);
+    }
+  }
+};
+
+export default questionService;
