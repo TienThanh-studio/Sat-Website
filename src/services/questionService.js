@@ -7,8 +7,8 @@ import inferenceData from '../data/questions/inference.json';
 import transitionData from '../data/questions/transition.json';
 import vocabularyData from '../data/questions/vocabulary.json';
 import algebraQuestions from '../data/questions/algebra.json';
-import verbalHardTest1 from '../data/questions/tests/verbal_hard_test1.json';
-import verbalHardTest2 from '../data/questions/tests/verbal_hard_test2.json';
+import verbalHardTest1 from '../data/questions/verbal_hard_test1.json';
+import verbalHardTest2 from '../data/questions/verbal_hard_test2.json';
 
 // Cấu hình đầy đủ danh mục SAT
 export const DEFAULT_CATEGORIES = [
