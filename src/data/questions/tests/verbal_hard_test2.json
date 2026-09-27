@@ -1,0 +1,407 @@
+[
+  {
+    "id": "vht2_01",
+    "questionNumber": 1,
+    "domain": "Craft and Structure",
+    "prompt": "Prose poetry, a form that combines the continuous text of prose with the condensed language and imagery of poetry—as exemplified in Claudia Rankine's \"Coherence in Consequence\"—is characterized by significant _______ how poets balance these elements. While some prose poems prominently feature conventional poetic devices, such as figures of speech, others embrace a more prosaic aesthetic.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "hesitation in",
+      "B": "insight into",
+      "C": "inquiry into",
+      "D": "latitude in"
+    },
+    "correctAnswer": "D",
+    "explanation": "'Latitude in' nghĩa là sự tự do, linh hoạt trong phạm vi hành động/sáng tạo. Các nhà thơ có sự tự do lớn trong cách dung hoà giữa thơ và văn xuôi."
+  },
+  {
+    "id": "vht2_02",
+    "questionNumber": 2,
+    "domain": "Craft and Structure",
+    "prompt": "The Heege Manuscript (HM) consists of various texts copied by Richard Heege at his home in fifteenth-century England. Most contemporary collections like the HM consist of pieces for polite society like genteel romances and other readings favored by elites; in contrast, the HM reflects a strong _______ toward popular entertainments (such as parody romances) and practicalities (like advice about religion).",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "proclivity",
+      "B": "skepticism",
+      "C": "sagacity",
+      "D": "ambivalence"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Proclivity' (thiên hướng, xu hướng ưa chuộng). Bản chép tay thể hiện sự ưa chuộng mạnh mẽ đối với các hình thức giải trí bình dân."
+  },
+  {
+    "id": "vht2_03",
+    "questionNumber": 3,
+    "domain": "Craft and Structure",
+    "prompt": "Quantitative analysis of vast historical data sets and other tools of abstraction allow historians to examine broad phenomena, but such methods _______ the particularity of individual actors. By focusing on singular individuals and incidents in exhaustive detail, Paul Seaver's Wallington's World and other microhistories aim to show how broader phenomena were experienced at a human level.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "misconstrue",
+      "B": "efface",
+      "C": "preempt",
+      "D": "accentuate"
+    },
+    "correctAnswer": "B",
+    "explanation": "'Efface' nghĩa là làm mờ nhạt hoặc xoá bỏ đi tính chất riêng lẻ của từng cá nhân khi chỉ tập trung vào các bộ dữ liệu trừu tượng khổng lồ."
+  },
+  {
+    "id": "vht2_04",
+    "questionNumber": 4,
+    "domain": "Craft and Structure",
+    "prompt": "The following text is from a 1911 translation of Guy de Maupassant's 1881 short story \"A Family Affair.\" The narrator is describing Monsieur Alfred Caravan, a bureaucrat in the French government. For the last thirty years he had invariably gone the same way to his office every morning, and had met the same men going to business at the same time, and nearly on the same spot. Every morning, after buying his penny paper at the corner of the Faubourg Saint Honoré, he bought two rolls, and then went to his office, like a culprit who is giving himself up to justice, and got to his desk as quickly as possible, always feeling uneasy, as though he were expecting a rebuke for some neglect of duty of which he might have been guilty.",
+    "question": "Taken together, the three underlined portions most clearly serve which function in the text as a whole?",
+    "options": {
+      "A": "They illustrate an unexplained nervous tension that Caravan experiences as he begins each workday.",
+      "B": "They suggest Caravan's dismay about being trapped in a job that has become exceedingly monotonous.",
+      "C": "They reveal that Caravan is unwaveringly precise in his daily routine because of the unreasonable expectations of his employers.",
+      "D": "They convey Caravan's growing apprehensiveness about having failed to complete an important work task for the first time in his long career."
+    },
+    "correctAnswer": "A",
+    "explanation": "Các chi tiết mô tả tâm trạng của Caravan ('như tội phạm ra đầu thú', 'luôn thấy bất an, lo sợ bị quở trách') làm nổi bật sự căng thẳng lo âu vô cớ của ông ta mỗi sáng."
+  },
+  {
+    "id": "vht2_05",
+    "questionNumber": 5,
+    "domain": "Craft and Structure",
+    "prompt": "Puck and other nineteenth- and early twentieth-century US general-interest periodicals included contributions by various individual writers but often strove to display a single, broadly appealing style and perspective. Accordingly, scholars long characterized the genre of mass-media periodicals as having erased the distinctiveness of individual voices in service of commercial aims. More recently, scholars have complicated this picture by showing that Half-Century Magazine and other titles from the period that were marketed to Black women featured a more heterogeneous mix of voices.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "options": {
+      "A": "It notes an enduring tension within commercial publishing that the text later attempts to resolve.",
+      "B": "It presents a broad critique of nineteenth- and early twentieth-century US periodicals that is explained in more detail later in the text.",
+      "C": "It presents a negative view of nineteenth- and early twentieth-century US periodicals that is qualified later in the text.",
+      "D": "It reveals why the publications referenced earlier in the text have historically been neglected by literary scholars."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn gạch dưới đưa ra quan điểm phê phán lâu nay (các tạp chí xoá bỏ giọng văn cá nhân), quan điểm này sau đó được bổ sung làm rõ hơn (qualified) bởi các nghiên cứu gần đây."
+  },
+  {
+    "id": "vht2_06",
+    "questionNumber": 6,
+    "domain": "Information and Ideas",
+    "prompt": "Text 1: Siberian aster (Eurybia sibirica) plants are native to Alaska, where harsh conditions have historically impeded potential invasive species. As the boreal climate has warmed in recent decades, however, honey clover (Melilotus albus) plants have established themselves in Alaska. Previous research conducted in non-boreal ecosystems has documented warming-induced increases in summer temperatures benefiting invasive species more than native species.\n\nText 2: At a site near Fairbanks, Alaska, Christa Mulder and Katie Spellman tracked E. sibirica and M. albus, along with other native and invasive species, over several years. They observed that although average summer temperatures were substantially higher in some years of the study than in others, neither E. sibirica nor M. albus showed any significant variation in summer growth patterns from year to year.",
+    "question": "Which choice best describes the relationship between the two texts?",
+    "options": {
+      "A": "Text 2 presents a finding that casts doubt on the generalizability of the research discussed in Text 1.",
+      "B": "Text 2 explains a study that suggests an alternative explanation for the trend observed in the research discussed in Text 1.",
+      "C": "Text 2 discusses an observation that challenges the validity of the findings described in Text 1.",
+      "D": "Text 2 describes a methodology that helps researchers avoid a problem encountered in the studies discussed in Text 1."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nghiên cứu ở Text 1 được làm ở hệ sinh thái ngoài rừng phương bắc. Kết quả thực tế tại Alaska ở Text 2 cho thấy nhiệt độ không làm tăng trưởng loài xâm lấn, đặt dấu hỏi về khả năng áp dụng rộng rãi (generalizability) của Text 1."
+  },
+  {
+    "id": "vht2_07",
+    "questionNumber": 7,
+    "domain": "Information and Ideas",
+    "prompt": "I have often been utterly astonished, since I came to the north, to find persons who could speak of the singing, among slaves, as evidence of their contentment and happiness. It is impossible to conceive of a greater mistake. Slaves sing most when they are most unhappy. The songs of the slave represent the sorrows of his heart; and he is relieved by them, only as an aching heart is relieved by its tears.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe the musical structure of slave spirituals.",
+      "B": "To correct a misconception by Northerners regarding why enslaved people sang.",
+      "C": "To argue that music has the power to heal deep emotional trauma.",
+      "D": "To express gratitude to the Northerners who listened to and recorded the songs of the enslaved."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn của Frederick Douglass đính chính lại quan niệm sai lầm của người phương Bắc khi cho rằng nô lệ hát vì vui sướng."
+  },
+  {
+    "id": "vht2_08",
+    "questionNumber": 8,
+    "domain": "Information and Ideas",
+    "prompt": "Mauricio Drelichman and Hans-Joachim Voth's research on the fiscal vulnerability of Philip II (who ruled not only Spain but other regions including much of Belgium from 1556 to 1598) builds on other studies of European early modern state finance, including Hoffman and Norberg's work on the relationship between state finance and political development. But Drelichman and Voth's unique contribution is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, which demonstrate that Philip's defaults were caused by short-term liquidity crises, not long-term unsustainable debts.",
+    "question": "What does the text most strongly suggest about the value of Drelichman and Voth's research to their discipline?",
+    "options": {
+      "A": "Drelichman and Voth's research revealed the role of Philip II's debt defaults in exacerbating short-term liquidity crises.",
+      "B": "Drelichman and Voth's research uses newly compiled evidence to eliminate one possible reason Philip II defaulted on his debts and to affirm another.",
+      "C": "Drelichman and Voth's research builds on earlier work about a particular aspect of European early modern state finance by Hoffman and Norberg and corrects errors in that earlier work.",
+      "D": "Drelichman and Voth's research presented a novel body of evidence supporting Hoffman and Norberg's hypothesis regarding why Philip II defaulted on several loans."
+    },
+    "correctAnswer": "B",
+    "explanation": "Họ loại trừ lý do 'nợ kéo dài không bền vững' và khẳng định nguyên nhân là 'khủng hoảng thanh khoản ngắn hạn'."
+  },
+  {
+    "id": "vht2_09",
+    "questionNumber": 9,
+    "domain": "Information and Ideas",
+    "prompt": "How bright is the night sky above your home compared to truly dark wilderness areas? This is the question investigated by citizen scientists participating in the Globe at Night project. Rather than seeing simply \"darkness,\" trained observers recognize that night skies exist on a spectrum of brightness. By counting visible stars within specific constellations or measuring sky glow with specialized meters, participants quantify what was once just a subjective experience. These data help researchers track light pollution trends and their effects on wildlife and human health.",
+    "question": "According to the text, what is one effect of the Globe at Night project for participants?",
+    "options": {
+      "A": "It enables them to quantify what was previously a subjective experience.",
+      "B": "It reveals to them that light pollution isn't limited to major metropolitan areas.",
+      "C": "It allows them to prove that artificial light has no significant effect on wildlife behavior.",
+      "D": "It helps them to acquire a greater appreciation of the beauty of night skies."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu rõ: 'participants quantify what was once just a subjective experience'."
+  },
+  {
+    "id": "vht2_10",
+    "questionNumber": 10,
+    "domain": "Information and Ideas",
+    "prompt": "Scientists are researching ways to recycle photovoltaic (PV) waste—solar cells that have reached the end of their usable life. Of particular interest are perovskite PV cells, which are more efficient than commonly used silicon PV cells but contain highly toxic lead iodide. This compound's low water solubility—0.044 grams per 100 milliliters at room temperature—means that considerable amounts of powdered lead iodide persist after standard recycling treatment with pure water. Lead acetate, however, has a much higher water solubility of 44.31 grams per 100 milliliters, so in an experiment intended to address this issue, researchers infused pure water with sodium acetate, which provides acetate ions that readily bond with lead ions to form lead acetate.",
+    "question": "Based on the text, which choice describes the most reasonable next steps for the researchers to take to evaluate whether their experiment was successful?",
+    "options": {
+      "A": "Select comparable perovskite PV waste samples and treat half with water infused with sodium acetate and half with water infused with lead acetate, then compare the amounts of powdered lead iodide remaining after each treatment.",
+      "B": "Select comparable perovskite PV waste samples and treat half with pure water and the other half with water infused with lead iodide, then compare the amounts of powdered lead iodide remaining after each treatment.",
+      "C": "Select perovskite PV waste samples and otherwise comparable silicon PV waste samples and treat both sets of samples with water infused with sodium acetate, then compare the amounts of powdered lead iodide remaining from each set of samples.",
+      "D": "Select comparable perovskite PV waste samples and treat half with pure water and the other half with water infused with sodium acetate, then compare the amounts of powdered lead iodide remaining after each treatment."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đối chiếu đối chứng chuẩn khoa học: một nửa xử lý bằng nước thường (đối chứng) và một nửa xử lý bằng nước pha sodium acetate (thử nghiệm) rồi so sánh lượng chì còn lại."
+  },
+  {
+    "id": "vht2_11",
+    "questionNumber": 11,
+    "domain": "Information and Ideas",
+    "prompt": "While US public charities, like Kaiser Foundation Hospitals, must file Form 990 yearly with the IRS, private foundations, such as the David and Lucile Packard Foundation, must file a different form, 990-PF. In addition, foundations that engage in certain prohibited activities must also file Form 4720 and pay a penalty tax on the money involved. Private foundations are prohibited from holding excess interests in a business enterprise, \"self-dealing\" (conducting activities that benefit foundation insiders), making taxable expenditures such as grants to noncharitable entities, and failing to cross a required threshold in making charitable distributions from income. Out of the organizations that filed Form 990-PF in the years 2003–2005,",
+    "question": "Which choice most effectively uses data from the graph to complete the assertion?",
+    "options": {
+      "A": "those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures.",
+      "B": "those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason.",
+      "C": "those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.",
+      "D": "those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005."
+    },
+    "correctAnswer": "C",
+    "explanation": "Nhóm vi phạm điều kiện phân bổ từ thiện tối thiểu năm 2003 đóng tỷ lệ phạt tổng cao hơn hẳn năm 2005."
+  },
+  {
+    "id": "vht2_12",
+    "questionNumber": 12,
+    "domain": "Information and Ideas",
+    "prompt": "Describing the adverb as \"a word that distracts,\" novelist Elmore Leonard is one of several authors and literary critics to recommend minimizing the use of adverbs, especially those ending in -ly (e.g., \"grudgingly\"), in works of fiction. To investigate the prevalence of -ly adverbs in novels, Ben Blatt used natural language processing—machine learning technology that reads and interprets text—to calculate the rates at which these words occur in both popular fiction and in novels that commonly appear on lists of notable works of English literature, such as Willa Cather's My Ántonia. Blatt concluded that there is a positive correlation between -ly adverb avoidance and novels' perceived literary merit.",
+    "question": "Which finding, if true, would most clearly be an exception to the pattern Blatt identified?",
+    "options": {
+      "A": "The novels of Virginia Woolf, one of the most celebrated writers of the twentieth century, have an average of 116 -ly adverbs per 10,000 words, while the novels of Jane Austen, one of the most celebrated writers of the nineteenth century, have an average of 128 -ly adverbs per 10,000 words.",
+      "B": "William Faulkner's classic novel The Sound and the Fury has the lowest -ly adverb rate among Faulkner's novels in Blatt's study, while F. Scott Fitzgerald's classic novel The Great Gatsby has the lowest -ly adverb rate among Fitzgerald's novels in Blatt's study.",
+      "C": "D.H. Lawrence's acclaimed novel Women in Love and novels by several genre fiction authors that many critics regard as lacking in artistic quality have a comparable number of -ly adverbs per 10,000 words.",
+      "D": "Whereas award-winning and best-selling novels have on average 114 and 115 -ly adverbs per 10,000 words, respectively, fan fiction novels, which are frequently authored by nonprofessional authors, have on average 154 -ly adverbs per 10,000 words."
+    },
+    "correctAnswer": "C",
+    "explanation": "Tác phẩm kinh điển (Women in Love) lại có tỷ lệ phó từ ngang ngửa với các tiểu thuyết thị trường kém chất lượng, tạo nên trường hợp ngoại lệ cho nhận định của Blatt."
+  },
+  {
+    "id": "vht2_13",
+    "questionNumber": 13,
+    "domain": "Information and Ideas",
+    "prompt": "First published in 1920, Edith Wharton's The Age of Innocence takes place in New York in the 1870s. In one scene, Newland Archer goes to the opera. The narrator portrays Archer's social circle as valuing the familiar more than the new.",
+    "question": "Which quotation from The Age of Innocence most effectively supports the claim?",
+    "options": {
+      "A": "\"It surprised [Newland] that life should be going on in the old way when his own reactions to it had so completely changed.\"",
+      "B": "\"Though there was already talk...of a new Opera House which should compete in costliness and splendour with those of the great European capitals, the world of fashion was still content to reassemble every winter in the shabby red and gold boxes of the sociable old Academy [of Music in New York].\"",
+      "C": "\"Newland Archer, leaning against the wall at the back of the club box [where his seat was], turned his eyes from the stage and scanned the opposite side of the house.\"",
+      "D": "\"But, in the first place, New York was a metropolis, and perfectly aware that in metropolises it was 'not the thing' to arrive early at the opera.\""
+    },
+    "correctAnswer": "B",
+    "explanation": "Trích dẫn B trực tiếp chỉ ra giới thượng lưu vẫn hài lòng tụ họp ở nhà hát cũ ('sociable old Academy') thay vì hào hứng với nhà hát mới sang trọng."
+  },
+  {
+    "id": "vht2_14",
+    "questionNumber": 14,
+    "domain": "Information and Ideas",
+    "prompt": "In economics, the \"sunk cost fallacy\" refers to the tendency of individuals to continue investing in a losing endeavor simply because they have already put significant resources (time, money, or effort) into it. A rational decision-maker, however, would ignore sunk costs and base future investments solely on the projected future return. For example, a business owner suffering from the sunk cost fallacy might _______",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "stop investing in the campaign to prevent any further financial losses.",
+      "B": "refuse to launch a new product because a similar product failed ten years ago.",
+      "C": "continue pouring money into a failing advertising campaign because they have already spent $50,000 on it.",
+      "D": "base their next quarter's budget entirely on the projected profits of their best-selling item."
+    },
+    "correctAnswer": "C",
+    "explanation": "Tiếp tục dồn tiền vào chiến dịch quảng cáo thua lỗ chỉ vì đã lỡ tiêu tốn $50,000 là ví dụ điển hình của ngụy biện chi phí chìm (sunk cost fallacy)."
+  },
+  {
+    "id": "vht2_15",
+    "questionNumber": 15,
+    "domain": "Information and Ideas",
+    "prompt": "For brands of cereal bars sold in the United Kingdom, the mean line length—the number of products sharing a brand name—is 9.7, while for brands of soft drinks, the mean line length is 15.3. Koushyar Rajavi and colleagues examined 203 months of economic data to investigate whether line length mediates the effects of economic expansions and contractions on brand equity (the value, manifesting as a price premium, that a brand has in consumers' minds due to its perceived quality and other associations). They noted that it becomes more difficult for consumers to evaluate brand quality as line length increases and that consumers show high risk aversion during economic downturns. Rajavi and colleagues would thus expect that _______",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "brand-related price premiums for cereal bars will likely show less variation across economic contractions and expansions than such premiums for soft drinks will.",
+      "B": "brand-related price premiums for cereal bars are more likely to be maintained during economic contractions than those for brands of soft drinks are.",
+      "C": "brands of cereal bars are more likely to increase their line lengths during economic contractions than brands of soft drinks are.",
+      "D": "brands of cereal bars will likely have higher brand equity than brands of soft drinks will during economic contractions but not during economic expansions."
+    },
+    "correctAnswer": "B",
+    "explanation": "Cereal bars có line length ngắn hơn (9.7 < 15.3) nên người tiêu dùng dễ đánh giá chất lượng hơn, dẫn đến ít rủi ro hơn và dễ duy trì giá bán chênh lệch trong thời kỳ suy thoái."
+  },
+  {
+    "id": "vht2_16",
+    "questionNumber": 16,
+    "domain": "Standard English Conventions",
+    "prompt": "Crystal Dissolution Mapping (CDM), a geophysical technique that measures the breadth of the etched region that develops on the exterior of feldspar (a commonly occurring mineral), can be used to approximate when ancient craftspeople utilized the fragile material to produce adorned artifacts. The use of CDM requires careful calibration based on a sample's environmental context and _______ thermal fluctuations, fluctuations in humidity, and variations in mineral composition are recognized as factors that influence the progression of the etched region.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "structure, however;",
+      "B": "structure however",
+      "C": "structure; however",
+      "D": "structure, however,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dấu phẩy trước 'however' và dấu chấm phẩy ';' sau nó giúp nối liền cụm danh từ trước và tách biệt mệnh đề độc lập hoàn chỉnh phía sau."
+  },
+  {
+    "id": "vht2_17",
+    "questionNumber": 17,
+    "domain": "Standard English Conventions",
+    "prompt": "The statement \"all tarantulas are venomous\" is scientific because it could be proved false by a single observation to the contrary, according to Karl Popper. Popper's theory _______ that scientific hypotheses must be refutable, termed the criterion of falsifiability, rejects the confirmationist position that uses verifiability as the standard for scientific hypotheses.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "was dictating",
+      "B": "dictated",
+      "C": "dictating",
+      "D": "dictates"
+    },
+    "correctAnswer": "D",
+    "explanation": "Câu khẳng định một chân lý lý thuyết khoa học thường trực, chủ ngữ 'Popper's theory' số ít đi với động từ hiện tại đơn 'dictates'."
+  },
+  {
+    "id": "vht2_18",
+    "questionNumber": 18,
+    "domain": "Standard English Conventions",
+    "prompt": "Between May 10 and May 23 each year, larvae released by the Azure Reef Anemone drift into coastal waters at a velocity of 0.5 kilometers per hour. Relatively few of these larvae are likely to reach the ocean floor _______ since the anemones' discharge of nematocysts into the surrounding water causes the vast majority to succumb before settlement, producing fleeting reef formations in mid-column.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "surface. However,",
+      "B": "surface; however,",
+      "C": "surface, however;",
+      "D": "surface, however,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dấu chấm phẩy '; however,' nối hai mệnh đề độc lập tương phản nhau."
+  },
+  {
+    "id": "vht2_19",
+    "questionNumber": 19,
+    "domain": "Standard English Conventions",
+    "prompt": "Astronomers Annie and Edward Maunder meticulously studied historical records of dark areas on the sun's surface known as sunspots. Their work in the late 1800s led to the identification of a period from 1645 to 1715—now known as the Maunder _______ sunspots were notably scarce, a phenomenon that solar physicists continue to investigate.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "Minimum—when",
+      "B": "Minimum when",
+      "C": "Minimum: when",
+      "D": "Minimum, when"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cặp dấu gạch ngang đối xứng: 'from 1645 to 1715—now known as the Maunder Minimum—when...' dùng để bọc mệnh đề chèn thêm."
+  },
+  {
+    "id": "vht2_20",
+    "questionNumber": 20,
+    "domain": "Standard English Conventions",
+    "prompt": "Recordings of electrical activity in the brain, _______ increased activity in brain areas associated with suppressing motor functions.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "electrograms show that while responding to hypothetical match scenarios, the most highly skilled soccer players have",
+      "B": "hypothetical match scenario responses show that the most highly skilled soccer players captured in electrograms have",
+      "C": "the most highly skilled soccer players responding to hypothetical match scenarios have electrograms that show",
+      "D": "responses to hypothetical match scenarios show that the most highly skilled soccer players have electrograms with"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Recordings of electrical activity in the brain' là ngữ đồng vị bổ nghĩa cho danh từ đứng ngay sau dấu phẩy là 'electrograms'."
+  },
+  {
+    "id": "vht2_21",
+    "questionNumber": 21,
+    "domain": "Standard English Conventions",
+    "prompt": "The methodology of the Farnsworth system is rooted in several central _______ by Belgian cryptographer Amelie Farnsworth, who sought to parallel the immersive coding environment, the system emphasizes practicing encryption from a very young age and teaches novices as young as five to decode simple ciphers such as \"ShiftOne.\"",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "tenets developed",
+      "B": "tenets, developed",
+      "C": "tenets that, developed",
+      "D": "tenets; developed"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dấu chấm phẩy ';' ngăn cách mệnh đề độc lập đầu tiên với mệnh đề độc lập thứ hai có phân từ rút gọn 'developed by...'."
+  },
+  {
+    "id": "vht2_22",
+    "questionNumber": 22,
+    "domain": "Expression of Ideas",
+    "prompt": "The development of the Institute of African Studies (IAS) at the University of Ghana unfolded in three distinct phases: an initial attempt to establish the program in the late 1940s, renewed proposals throughout the 1950s, and a formation and final reorganization in the early 1960s. _______ each phase reflected shifting ideas about what African Studies should include and how it might navigate both colonial legacies and postcolonial ambitions.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "More than a timeline, these stages represent the intellectual debate over the institute's scope and purpose;",
+      "B": "Through the decades, however, this progression was often stalled by funding shortfalls and administrative resistance;",
+      "C": "Indicative of the IAS's evolution, this pattern culminated in government support during the institution's finalization;",
+      "D": "Admittedly, it should be noted that internal disagreements hindered much of the institute's progress;"
+    },
+    "correctAnswer": "A",
+    "explanation": "Câu A mở rộng ý nghĩa của các giai đoạn: không chỉ là dòng thời gian đơn thuần mà phản ánh cuộc tranh luận học thuật sâu sắc."
+  },
+  {
+    "id": "vht2_23",
+    "questionNumber": 23,
+    "domain": "Expression of Ideas",
+    "prompt": "In a 1998 study by Smith et al., the researchers used microhistological (fecal) analysis to determine the ratio of three plant subtypes (graminoids, forbs, and browse) within the diets of North American ungulates. The researchers did not perform this analysis on all such ungulates; _______ they focused exclusively on pronghorns and wild horses in New Mexico.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "regardless,",
+      "B": "for instance,",
+      "C": "however,",
+      "D": "in other words,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Pronghorns và ngựa hoang là ví dụ cụ thể ('for instance') cho nhóm móng guốc mà các nhà nghiên cứu tập trung phân tích."
+  },
+  {
+    "id": "vht2_24",
+    "questionNumber": 24,
+    "domain": "Expression of Ideas",
+    "prompt": "At past Olympics, in contrast to demonstration sports with international appeal, regionally popular sports were exhibited as onetime showcases. _______ while the internationally popular sport of speed skating became a medal event after demonstration, glima, a combat sport popular in Sweden, only appeared at the 1912 Stockholm Olympics.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "Granted,",
+      "B": "However,",
+      "C": "Accordingly,",
+      "D": "Moreover,"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Accordingly' thể hiện tính hệ quả tất yếu: môn mang tính khu vực chỉ biểu diễn một lần rồi dừng, phù hợp với nguyên lý nêu ở câu trước."
+  },
+  {
+    "id": "vht2_25",
+    "questionNumber": 25,
+    "domain": "Expression of Ideas",
+    "prompt": "While researching a topic, a student took the following notes:\n• The dinosaur ant is an insect species.\n• It was believed to be extinct until a living dinosaur ant was identified in Australia in 1977.\n• Mount Diablo buckwheat is a plant species.\n• It was believed to be extinct until a living Mount Diablo buckwheat was identified in the United States in 2005.\n• They are considered Lazarus species.\n• \"Lazarus species\" is a term for living species of organisms that were once believed to be extinct.",
+    "question": "The student wants to specify when the dinosaur ant was identified. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "A living dinosaur ant, once believed to be extinct, was identified in 1977.",
+      "B": "Previously believed to be extinct, a living dinosaur ant was identified in Australia.",
+      "C": "An example of a Lazarus species was found in 2005.",
+      "D": "Identified in the United States, a living Mount Diablo buckwheat was found in 2005."
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục tiêu là nêu rõ thời điểm kiến khủng long được tìm thấy (identified in 1977)."
+  },
+  {
+    "id": "vht2_26",
+    "questionNumber": 26,
+    "domain": "Expression of Ideas",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• A 2024 study analyzed the facial expressions of wolves and domestic dogs.\n• In the study, facial expressions were coded under 46 different facial actions.\n• The \"ears rotator\" facial action is seen in wolves.\n• Dog breeds with erect (wolf-like) ears can produce the \"ears rotator\" facial action.\n• Dog breeds with flopped or semi-flopped (non-wolf-like) ears cannot produce the \"ears rotator\" facial action.",
+    "question": "The student wants to compare dog breeds with wolf-like ears to dog breeds with non-wolf-like ears. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "Like wolves, dog breeds with erect ears can produce the \"ears rotator\" facial action, while those with flopped or semi-flopped ears cannot.",
+      "B": "Non-wolf-like ears are flopped or semi-flopped, but wolf-like ears are different: they are erect and can produce the \"ears rotator\" facial action.",
+      "C": "One difference between dog breeds with wolf-like ears and dog breeds with non-wolf-like breeds is that wolf-like breeds cannot produce the \"ears rotator\" facial action.",
+      "D": "In a 2024 study, dog breeds with non-wolf-like ears were able to produce the same facial movements that wolves could."
+    },
+    "correctAnswer": "A",
+    "explanation": "So sánh trực tiếp và chuẩn xác giữa giống tai dựng (dựng được cơ tai như sói) và giống tai cụp (không làm được)."
+  },
+  {
+    "id": "vht2_27",
+    "questionNumber": 27,
+    "domain": "Expression of Ideas",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Founded in 2011, EMOTIV is a neurotechnology company that develops brain-computer interfaces (BCIs).\n• BCIs interpret and execute brain signals to allow users to control external software or hardware with their thoughts.\n• Founded in 2013, Saluda Medical is a neurotechnology company that develops neuromodulation technologies.\n• Neuromodulation technologies use neural interfaces to stimulate nervous system structures and influence neural activity.\n• Founded in 2009, BrainGate is a neurotechnology company that develops neuroprostheses.\n• Neuroprostheses act as replacement brain functions to restore the user's lost sensory, motor, or neural functions.",
+    "question": "The student wants to contrast the type of neurotechnology EMOTIV develops with the type of neurotechnology Saluda Medical develops. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "Unlike Saluda Medical, which develops neurotechnology, EMOTIV develops BCIs.",
+      "B": "BCIs interpret and execute brain signals to allow users to control external software or hardware with their thoughts, whereas neuromodulation technologies restore sensory, motor, or neural functions.",
+      "C": "BCIs allow users to control external software or hardware with their thoughts, but they don't influence neural activity as neuromodulation technologies do.",
+      "D": "Founded in 2011, EMOTIV develops technology for interpreting and executing brain signals, which, unlike Saluda Medical and BrainGate, is categorized as a neuromodulation technology."
+    },
+    "correctAnswer": "C",
+    "explanation": "Câu C đối chiếu chuẩn xác bản chất: công nghệ của EMOTIV giúp điều khiển phần mềm bằng ý nghĩ, trong khi công nghệ của Saluda Medical kích thích và điều hòa hoạt động nơ-ron thần kinh."
+  }
+]

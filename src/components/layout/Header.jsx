@@ -3,8 +3,8 @@ import { Bell, ExternalLink } from 'lucide-react';
 
 export default function Header({ currentUser, onOpenLogin, onOpenRegister }) {
   const user = currentUser || JSON.parse(localStorage.getItem('sat_user') || '{}');
-  const displayName = user.name || 'nguyenan20062000';
-  const displayEmail = user.email || 'nguyenan20062000@gmail.com';
+  const displayName = user.name || 'Doraemon';
+  const displayEmail = user.email || 'meoconhuhong@gmail.com';
   const avatar = user.avatar;
 
   return (
@@ -19,7 +19,7 @@ export default function Header({ currentUser, onOpenLogin, onOpenRegister }) {
         <div className="hidden sm:flex items-center gap-2 border-r border-slate-200 pr-4">
           <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">JOIN COMMUNITY</span>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/tuiyeuvoban/"
             target="_blank"
             rel="noreferrer"
             className="px-2.5 py-1 bg-red-800 text-white rounded-md text-[11px] font-semibold hover:bg-red-900 transition flex items-center gap-1"
@@ -27,7 +27,7 @@ export default function Header({ currentUser, onOpenLogin, onOpenRegister }) {
             <span>Facebook</span>
           </a>
           <a
-            href="https://threads.net"
+            href="https://www.threads.com/@wdym_tienthanh"
             target="_blank"
             rel="noreferrer"
             className="px-2.5 py-1 bg-neutral-900 text-white rounded-md text-[11px] font-semibold hover:bg-neutral-800 transition flex items-center gap-1"

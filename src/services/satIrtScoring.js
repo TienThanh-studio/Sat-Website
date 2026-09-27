@@ -1,127 +1,89 @@
 /**
- * Mô phỏng chấm điểm Digital SAT thích ứng (2-Stage Adaptive)
- * Dựa trên Item Response Theory (Mô hình 3PL - Three-Parameter Logistic)
+ * satIrtScoring.js
+ * Chấm điểm bài thi thích ứng 2 chặng và quy đổi ra thang điểm Scaled Score 200-800.
  */
+import { normalizeSprAnswer, isAnswerCorrect } from './adaptiveEngine';
 
-const IRT_PARAMS = {
-  easy:   { a: 0.75, b: -1.10, c: 0.22 },
-  medium: { a: 1.05, b:  0.00, c: 0.20 },
-  hard:   { a: 1.35, b:  1.30, c: 0.18 },
-};
-
-const BRANCH_CONFIG = {
-  hard: { minScaled: 200, maxScaled: 800, thetaShift: 0 },
-  easy: { minScaled: 200, maxScaled: 650, thetaShift: -0.15 },
-};
-
-const SCALE_MEAN = 500;
-const SCALE_SD = 100;
-const THETA_MIN = -4;
-const THETA_MAX = 4;
-
-function probCorrect3PL(theta, { a, b, c }) {
-  const z = -a * (theta - b);
-  return c + (1 - c) / (1 + Math.exp(z));
+function roundToNearestTen(value) {
+  return Math.round(value / 10) * 10;
 }
 
-export function estimateTheta(responses, options = {}) {
-  const { maxIterations = 50, tolerance = 1e-4 } = options;
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
 
-  if (!Array.isArray(responses) || responses.length === 0) {
-    return 0;
-  }
+const SCORE_CURVE = [
+  { p: 0.0, s: 200 },
+  { p: 0.1, s: 280 },
+  { p: 0.2, s: 340 },
+  { p: 0.3, s: 390 },
+  { p: 0.4, s: 440 },
+  { p: 0.5, s: 490 },
+  { p: 0.6, s: 540 },
+  { p: 0.7, s: 590 },
+  { p: 0.8, s: 650 },
+  { p: 0.9, s: 720 },
+  { p: 1.0, s: 800 },
+];
 
-  let theta = 0;
-
-  for (let iter = 0; iter < maxIterations; iter++) {
-    let scoreSum = 0;
-    let infoSum = 0;
-
-    for (const r of responses) {
-      const diffKey = (r.difficulty || 'medium').toLowerCase();
-      const params = IRT_PARAMS[diffKey] || IRT_PARAMS.medium;
-      const { a, c } = params;
-      const p = probCorrect3PL(theta, params);
-      const u = r.correct ? 1 : 0;
-
-      const w = (a * (p - c)) / (p * (1 - c));
-      scoreSum += w * (u - p);
-
-      const info = a * a * Math.pow((p - c) / (1 - c), 2) * ((1 - p) / p);
-      infoSum += info;
+function interpolateScore(percentage) {
+  const p = clamp(percentage, 0, 1);
+  for (let i = 0; i < SCORE_CURVE.length - 1; i += 1) {
+    const cur = SCORE_CURVE[i];
+    const next = SCORE_CURVE[i + 1];
+    if (p >= cur.p && p <= next.p) {
+      const ratio = next.p === cur.p ? 0 : (p - cur.p) / (next.p - cur.p);
+      return cur.s + ratio * (next.s - cur.s);
     }
-
-    if (infoSum === 0) break;
-
-    const delta = scoreSum / infoSum;
-    theta += delta;
-
-    if (Math.abs(delta) < tolerance) break;
   }
-
-  return Math.min(THETA_MAX, Math.max(THETA_MIN, theta));
+  return SCORE_CURVE[SCORE_CURVE.length - 1].s;
 }
 
-export function thetaToScaledScore(theta, branch = 'hard') {
-  const branchConfig = BRANCH_CONFIG[branch] || BRANCH_CONFIG.hard;
-  const adjustedTheta = theta + branchConfig.thetaShift;
-
-  const raw = SCALE_MEAN + adjustedTheta * SCALE_SD;
-  const clamped = Math.min(branchConfig.maxScaled, Math.max(branchConfig.minScaled, raw));
-
-  return Math.round(clamped / 10) * 10;
+export function percentageToScaledScore(percentage, branch) {
+  const rawScore = interpolateScore(percentage);
+  const cap = branch === 'hard' ? 800 : 590;
+  const capped = clamp(rawScore, 200, cap);
+  return roundToNearestTen(capped);
 }
 
-export function determineModule2Branch(module1Responses, routingThreshold = 0) {
-  const theta1 = estimateTheta(module1Responses);
-  const branch = theta1 >= routingThreshold ? 'hard' : 'easy';
-  return { branch, theta1 };
+export function gradeItems(questions = [], answers = {}) {
+  let correct = 0;
+  const gradedItems = questions.map((q) => {
+    const userAns = answers[q.id];
+    const ok = isAnswerCorrect(userAns, q);
+    if (ok) correct += 1;
+    return {
+      ...q,
+      userAnswer: userAns || '',
+      isCorrect: ok
+    };
+  });
+  return { correct, total: questions.length, gradedItems };
 }
 
-export function calculateSatSectionScore({
-  module1Responses = [],
-  module2Responses = [],
-  routingThreshold = 0,
-  forcedBranch,
-}) {
-  const { branch: autoBranch, theta1 } = determineModule2Branch(module1Responses, routingThreshold);
-  const branch = forcedBranch || autoBranch;
+export function calculateSatScore({ module1Questions = [], module1Answers = {}, module2Questions = [], module2Answers = {}, branch = 'hard' } = {}) {
+  const safeBranch = branch === 'hard' ? 'hard' : 'easy';
+  const m1 = gradeItems(module1Questions, module1Answers);
+  const m2 = gradeItems(module2Questions, module2Answers);
 
-  const allResponses = [...module1Responses, ...module2Responses];
-  const thetaFinal = estimateTheta(allResponses.length > 0 ? allResponses : module1Responses);
-
-  const scaledScore = thetaToScaledScore(thetaFinal, branch);
-
-  const byDifficulty = { easy: { correct: 0, total: 0 }, medium: { correct: 0, total: 0 }, hard: { correct: 0, total: 0 } };
-  for (const r of allResponses) {
-    const diffKey = (r.difficulty || 'medium').toLowerCase();
-    const key = byDifficulty[diffKey] ? diffKey : 'medium';
-    byDifficulty[key].total += 1;
-    if (r.correct) byDifficulty[key].correct += 1;
-  }
+  const totalCorrect = m1.correct + m2.correct;
+  const totalQuestions = m1.total + m2.total;
+  const accuracyRatio = totalQuestions > 0 ? totalCorrect / totalQuestions : 0;
+  const scaledScore = percentageToScaledScore(accuracyRatio, safeBranch);
+  const allGraded = [...m1.gradedItems, ...m2.gradedItems];
 
   return {
-    branch,
-    theta1: Number(theta1.toFixed(3)),
-    thetaFinal: Number(thetaFinal.toFixed(3)),
     scaledScore,
+    totalCorrect,
+    totalQuestions,
+    accuracy: Number((accuracyRatio * 100).toFixed(1)),
+    branch: safeBranch,
     breakdown: {
-      module1Correct: module1Responses.filter(r => r.correct).length,
-      module1Total: module1Responses.length,
-      module2Correct: module2Responses.filter(r => r.correct).length,
-      module2Total: module2Responses.length,
-      byDifficulty,
+      module1: { correct: m1.correct, total: m1.total },
+      module2: { correct: m2.correct, total: m2.total }
     },
+    gradedItems: allGraded,
   };
 }
 
-export function calculateFullSatScore({ readingWriting, math }) {
-  const rw = calculateSatSectionScore(readingWriting);
-  const m = calculateSatSectionScore(math);
-
-  return {
-    readingWriting: rw,
-    math: m,
-    totalScore: rw.scaledScore + m.scaledScore,
-  };
-}
+export default calculateSatScore;

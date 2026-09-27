@@ -4,8 +4,8 @@ import { X, Lock, Mail } from 'lucide-react';
 import { authService } from '../../services/authService';
 
 export default function LoginModal({ isOpen, onClose, onAuthSuccess }) {
-  const [email, setEmail] = useState('nguyenan20062000@gmail.com');
-  const [password, setPassword] = useState('123456');
+  const [email, setEmail] = useState('meoconhuhong@gmail.com');
+  const [password, setPassword] = useState('Mp12112009@');
 
   if (!isOpen) return null;
 

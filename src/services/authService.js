@@ -17,7 +17,7 @@ export const authService = {
     return storageService.get(storageService.KEYS.CURRENT_USER, {
       id: 'demo-user-01',
       name: 'Phan Tiến Thành',
-      email: 'nguyenan20062000@gmail.com',
+      email: 'meoconhuhong@gmail.com',
       role: 'ADMIN' // Mặc định tài khoản demo quyền ADMIN để test toàn diện
     });
   },

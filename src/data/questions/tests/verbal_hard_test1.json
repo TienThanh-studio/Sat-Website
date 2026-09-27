@@ -1,0 +1,407 @@
+[
+  {
+    "id": "vht1_01",
+    "questionNumber": 1,
+    "domain": "Craft and Structure",
+    "prompt": "Yuen Yuen Ang et al. argue that merely tallying the number of patents filed per year _______ the degree of innovation occurring: truly novel patents—those, like a 2014 patent for a system of satellite-linked deep-sea buoys, that combine previously unaffiliated technological domains—are vastly outnumbered by nonnovel patents (e.g., a 2014 patent for a new type of bottle cork).",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "portends",
+      "B": "maligns",
+      "C": "belies",
+      "D": "thwarts"
+    },
+    "correctAnswer": "C",
+    "explanation": "Từ 'belies' có nghĩa là bóp méo, tạo cảm giác sai lệch (misrepresents). Việc chỉ đếm số lượng bằng sáng chế tạo ra ảo tưởng sai lệch về mức độ sáng tạo thực sự."
+  },
+  {
+    "id": "vht1_02",
+    "questionNumber": 2,
+    "domain": "Craft and Structure",
+    "prompt": "Consumers firmly convinced that the subscription price for accessing the Journal of Quantum Computing Research is already excessively priced will probably remain _______ the proposals for further subscription hikes. Thus, proponents advocating price increases might achieve better outcomes by appealing instead to readers whose positions are more amenable to change.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "invoked by",
+      "B": "cognizant of",
+      "C": "unsympathetic toward",
+      "D": "mollified by"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Unsympathetic toward' thể hiện thái độ phản đối, không đồng tình trước việc tiếp tục tăng giá của những độc giả đã cảm thấy giá quá đắt."
+  },
+  {
+    "id": "vht1_03",
+    "questionNumber": 3,
+    "domain": "Craft and Structure",
+    "prompt": "The _______ of horse populations across Eurasia today reflects the competitive advantages of the highly mobile DOM2 breed that emerged through domestication and selective breeding in the 3rd millennium BCE. DOM2 spread quickly and extensively, completely supplanting other horse breeds in places like El Acequión, Spain, and Hohler Stein bei Schwabthal, Germany, by the end of the 2nd millennium BCE.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "profusion",
+      "B": "homogeneity",
+      "C": "ubiquity",
+      "D": "variability"
+    },
+    "correctAnswer": "B",
+    "explanation": "Vì giống DOM2 thay thế hoàn toàn các giống ngựa khác nên quần thể ngựa ngày nay mang tính 'homogeneity' (tính đồng nhất về mặt di truyền/chủng loại)."
+  },
+  {
+    "id": "vht1_04",
+    "questionNumber": 4,
+    "domain": "Craft and Structure",
+    "prompt": "In a 2019 study, Eleanor McClure and her team highlighted that although parallels between genetic markers in marine organisms sampled from coastal waters and those in deep-sea samples retrieved through remote vehicles encourage interpreting these coastal organisms as _______ the biology of deeper oceanic ecosystems, conclusions about deep-sea biodiversity should not rest exclusively upon coastal samples.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "corollary of",
+      "B": "appendages to",
+      "C": "surrogates for",
+      "D": "anomalies within"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Surrogates for' nghĩa là vật/mẫu thay thế (stand-ins). Việc sinh vật ven biển có đặc điểm di truyền giống sinh vật biển sâu khiến người ta dễ xem chúng như mẫu đại diện thay thế."
+  },
+  {
+    "id": "vht1_05",
+    "questionNumber": 5,
+    "domain": "Craft and Structure",
+    "prompt": "The following text is adapted from Matthew Arnold's 1869 nonfiction book Culture and Anarchy. The Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behavior of the English abroad, urges that the English ideal is that everyone should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like, the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It argues that what is beautiful is a matter of fact rather than opinion.",
+      "B": "It analyzes the unique sense of taste of the English.",
+      "C": "It indicates that opinions regarding culture shift over time.",
+      "D": "It makes a claim about one of the principal effects of culture."
+    },
+    "correctAnswer": "D",
+    "explanation": "Tác giả chỉ ra vai trò và tác động chính của văn hoá (culture): định hình và hướng con người đến những giá trị thanh lịch, duy mỹ thực sự thay vì để họ hành xử tùy tiện."
+  },
+  {
+    "id": "vht1_06",
+    "questionNumber": 6,
+    "domain": "Information and Ideas",
+    "prompt": "Text 1: Sir Geoffrey Luttrell commissioned the Luttrell Psalter, a celebrated document of religious songs and images of life in medieval England. Not all of Luttrell's actions were admirable, however. Most infamously, he participated in what was essentially a private war against Sempringham Priory, a monastery near his manor, even making off with 500 pounds' worth of monastery property during a violent raid. So Luttrell's reputation should be regarded as questionable at best.\n\nText 2: Some historians claim that an assessment of Luttrell's life must mention both his support of the Luttrell Psalter and his behavior toward his neighbors. But contemporary descriptions of Luttrell's \"raid\" on Sempringham Priory contain what appear to be exaggerated claims characteristic of complaints by those whose property has been legally seized as compensation for money owed, which is likely the case here.",
+    "question": "Based on the texts, how would the author of Text 2 most likely respond to the argument presented in Text 1?",
+    "options": {
+      "A": "By arguing that when considering Luttrell's character, one should take into account that primary sources for his interaction with Sempringham Priory may not be objective",
+      "B": "By pointing out that scholars evaluating Luttrell's behavior should bear in mind that many details in firsthand descriptions of his conflict with Sempringham Priory have been shown to be false",
+      "C": "By suggesting that judging Luttrell's actions regarding Sempringham Priory is difficult because contemporary depictions disagree about important details",
+      "D": "By claiming that a proper analysis of Luttrell's dispute with Sempringham Priory needs to acknowledge that Priory sources concede that Luttrell was owed money"
+    },
+    "correctAnswer": "A",
+    "explanation": "Text 2 cho rằng những lời kể thời bấy giờ mang tính phóng đại từ phía những người bị thu giữ tài sản nợ, do đó nguồn tư liệu gốc không hoàn toàn khách quan."
+  },
+  {
+    "id": "vht1_07",
+    "questionNumber": 7,
+    "domain": "Information and Ideas",
+    "prompt": "Mauricio Drelichman and Hans-Joachim Voth's research into the debt defaults of Philip II (who ruled an empire including Spain and Northern Catalonia from 1556 to 1598) relates to other work on European early modern state finance, including John Brewer's research on taxation and warfare. But Drelichman and Voth's unique contribution to the field is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, demonstrating in turn that Philip's defaults were caused by short-term cash shortages, not long-term unsustainable debts.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Analysis of the earliest available records of a sovereign state's finances can be found not in the work of Brewer but in that of Drelichman and Voth.",
+      "B": "The research by Drelichman and Voth suggests that the logistics of ruling both Spain and Northern Catalonia led to short-term problems with cash that forced Philip II to default on his debts.",
+      "C": "Drelichman and Voth advanced the field of research on European early modern state finance by assembling a novel collection of evidence that gave them insight into Philip II's debt defaults.",
+      "D": "Drelichman and Voth's research on Philip II's debt defaults builds on earlier work by Brewer, adding nuance to the earlier work's findings."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính nhấn mạnh đóng góp mới mẻ của hai nhà nghiên cứu nhờ tái thiết lập bộ hồ sơ tài chính thường niên sớm nhất, qua đó mang lại góc nhìn chính xác về việc vỡ nợ của vua Philip II."
+  },
+  {
+    "id": "vht1_08",
+    "questionNumber": 8,
+    "domain": "Information and Ideas",
+    "prompt": "The following text is from Nathaniel Hawthorne's 1830 short story \"Sir William Phips.\" The knowledge, communicated by the historian and biographer, is analogous to that which we acquire of a country by the map, minute, perhaps, and accurate, and available for all necessary purposes, but cold and naked, and wholly destitute of the mimic charm produced by landscape painting. These defects are partly remediable, and even without an absolute violation of literal truth, although by methods rightfully interdicted to professors of biographical exactness.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Historians do not agree among themselves about the best methods of recording history.",
+      "B": "Paintings may be more beautiful than maps, but maps are more useful than paintings.",
+      "C": "Historians' fidelity to the truth often results in work that is less engaging than it could be.",
+      "D": "Works of pure fiction can reveal more about the world than works that are strictly factual."
+    },
+    "correctAnswer": "C",
+    "explanation": "Hawthorne so sánh ghi chép lịch sử giống bản đồ: chính xác nhưng 'lạnh lùng và thiếu sức lôi cuốn sống động'."
+  },
+  {
+    "id": "vht1_09",
+    "questionNumber": 9,
+    "domain": "Information and Ideas",
+    "prompt": "By examining trait distributions across phylogenetic lineages, evolutionary biologists can determine whether trait similarities result from shared ancestry, leading to consistent presence of the trait among closely related species, or from convergent evolution under similar selective pressures, leading to the independent appearance of the trait in more distantly related species occupying similar ecological niches. Hypothesizing that orbit (eye socket) orientation in the families Canidae and Felidae (both within the order Carnivora) is primarily driven by the latter mechanism, a researcher measured frontation angles—the extent to which species' orbits face downward or upward—in felid and canid species occupying various habitats and preferring different substrates.\n\n<table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center my-3 rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold\"><td>Species</td><td>Family</td><td>Habitat</td><td>Preferred substrate</td><td>Frontation angle (°)</td></tr><tr><td>Vulpes lagopus</td><td>Canidae</td><td>open</td><td>terrestrial</td><td>54.89</td></tr><tr><td>Nyctereutes procyonoides</td><td>Canidae</td><td>closed</td><td>arboreal</td><td>56.51</td></tr><tr><td>Lynx lynx</td><td>Felidae</td><td>closed</td><td>terrestrial</td><td>65.67</td></tr><tr><td>Leptailurus serval</td><td>Felidae</td><td>open</td><td>terrestrial</td><td>65.80</td></tr><tr><td>Leopardus wiedii</td><td>Felidae</td><td>closed</td><td>arboreal</td><td>67.61</td></tr></table>",
+    "question": "Assuming the data in the table are broadly representative, do the data support the researcher's hypothesis as presented in the text?",
+    "options": {
+      "A": "No, because frontation angles are relatively consistent across ecological categories, with values for species inhabiting closed arboreal habitats and species inhabiting open terrestrial habitats ranging from 56.51 to 67.61 and from 54.89 to 65.80, respectively",
+      "B": "Yes, because frontation angles are lower for canid species than for felid species regardless of habitat or preferred substrate, with values for species from the same taxonomic family clustering in a relatively narrow range",
+      "C": "Yes, because frontation angles show a moderately strong relationship with ecological niches, with two out of three species in either family inhabiting closed habitats or preferring terrestrial substrates",
+      "D": "No, because frontation angles cluster by taxonomic family rather than by ecological categories, with similar values measured for species from the same family despite their occupation of different ecological niches"
+    },
+    "correctAnswer": "D",
+    "explanation": "Góc hốc mắt tụ lại theo họ phân loại (Canidae ~54-56°, Felidae ~65-67°) thay vì biến đổi theo môi trường sinh thái, bác bỏ giả thuyết về tiến hoá hội tụ."
+  },
+  {
+    "id": "vht1_10",
+    "questionNumber": 10,
+    "domain": "Information and Ideas",
+    "prompt": "A student is studying igneous rock formations on Elba Island, Italy, and reviews published data on the ratio of strontium isotopes (87Sr/86Sr) in minerals from a specific rock sample. These isotope ratios provide information about the composition of the magma that formed the rock. Ratios below 0.710 suggest more material from the mantle in the magma, while ratios increasing above that number usually indicate greater proportions of material from the continental crust. The minerals in the rock sample record three growth stages: crystal core zones formed first, then rim zones, and finally the surrounding matrix. The student concludes that the rock sample\n\n<table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center my-3 rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold\"><td>Mineral zone</td><td>87Sr/86Sr ratio</td></tr><tr><td>Crystal core</td><td>0.71685</td></tr><tr><td>Crystal rim</td><td>0.71548</td></tr><tr><td>Crystal matrix</td><td>0.71416</td></tr></table>",
+    "question": "Based on the information given, which choice most effectively uses data from the table to complete the student's conclusion?",
+    "options": {
+      "A": "shows evidence of increasing continental crust material in later-forming minerals.",
+      "B": "does not show the expected 87Sr/86Sr ratios across the stages of mineral formation.",
+      "C": "contains 87Sr/86Sr ratios too similar to provide reliable information about magma sources.",
+      "D": "formed from magma with decreasing but persistent crustal influence."
+    },
+    "correctAnswer": "D",
+    "explanation": "Các tỉ lệ đều trên 0.710 (ảnh hưởng từ vỏ lục địa) và giảm dần qua các giai đoạn (từ core 0.71685 xuống rim 0.71548 và matrix 0.71416)."
+  },
+  {
+    "id": "vht1_11",
+    "questionNumber": 11,
+    "domain": "Information and Ideas",
+    "prompt": "The presence of other individuals of the same species has been observed to mitigate stress in highly social mammals. To investigate whether this phenomenon, known as social buffering, also occurs in reptiles, researchers led by Chelsea E. Martin monitored stress responses in wild southern Pacific rattlesnakes (Crotalus helleri) in three experimental treatments: when alone, with a rope, and with a companion C. helleri. The researchers compared the percent change between baseline and peak heart rate in response to a (harmless) disturbance, with higher values indicating higher stress levels.",
+    "question": "Which finding, if true, would most directly support the idea that social buffering occurs among C. helleri?",
+    "options": {
+      "A": "Average peak heart rates were highest among solitary C. helleri, but no differences were observed in average peak heart rates between C. helleri with a companion and C. helleri with a rope.",
+      "B": "Crotalus helleri with a companion displayed a lower average baseline heart rate and lower average peak heart rate than did solitary C. helleri or C. helleri with a rope.",
+      "C": "The average percent change in heart rate was lower among C. helleri with a companion than among solitary C. helleri and C. helleri with a rope.",
+      "D": "Solitary C. helleri had higher average baseline heart rates than did C. helleri in the other treatments, but the average percent change in heart rate was smaller among solitary C. helleri than among C. helleri with a companion."
+    },
+    "correctAnswer": "C",
+    "explanation": "Sự thay đổi nhịp tim trung bình ở nhóm có bạn đồng hành thấp hơn chứng minh sự hiện diện của cá thể cùng loài đã làm giảm mức độ căng thẳng."
+  },
+  {
+    "id": "vht1_12",
+    "questionNumber": 12,
+    "domain": "Information and Ideas",
+    "prompt": "Variously, researchers have closely examined obsidian artifacts to understand ancient social and economic structures, as in Raymond V. Sidrys's 1976 study, or to glean aspects of cultural identity, as in Dennis Ogburn and colleagues' 2009 study. Studies of the Malia archaeological site on the Mediterranean island of Crete have shown that significant changes to building styles—changes consistent with an influx of people from another culture elsewhere in the Mediterranean—occurred from the Middle Bronze Age to the Late Bronze Age. In a 2022 study, however, Tristan Carter and Vassilis Kilikoglou found that obsidian-object production methods at Malia stayed remarkably consistent during this architectural transition, which they interpret as indicative of local cultural continuity in the Middle and Late Bronze Ages.",
+    "question": "Which finding, if true, would most directly weaken Carter and Kilikoglou's argument?",
+    "options": {
+      "A": "The obsidian used to produce objects at Malia was transported to Crete from the same source elsewhere in the Mediterranean throughout the Middle and Late Bronze Ages.",
+      "B": "The methods used to produce obsidian objects at Malia during the Middle and Late Bronze Ages were also used by some other Mediterranean cultures in the period.",
+      "C": "The obsidian-object production method that was most common among other Mediterranean cultures during the Middle and Late Bronze Ages was more efficient than the method used at Malia.",
+      "D": "Changes to buildings like those that occurred at Malia have not been linked to changes in obsidian-object production methods in other Mediterranean cultures during the Middle and Late Bronze Ages."
+    },
+    "correctAnswer": "B",
+    "explanation": "Nếu các nền văn hoá khác ở Địa Trung Hải cũng dùng chung phương pháp chế tác đá vỏ chai này, thì sự bất biến của phương pháp không chứng minh được tính tiếp nối của văn hoá bản địa riêng biệt."
+  },
+  {
+    "id": "vht1_13",
+    "questionNumber": 13,
+    "domain": "Information and Ideas",
+    "prompt": "According to conventional wisdom, positive visualization—the act of developing a mental picture of one's future success—can enhance people's ability to achieve their goals. Detractors of the conventional view of positive visualization cite studies that show no discernible impact in individuals' perception of the success of positive visualization and task achievement. Psychologists Heather Barry Kappes and Gabriele Oettingen conducted a study that looked at the effect that visualization practices had on participants' perception of their ability to accomplish tasks and actual tasks accomplished. Participants were divided into two groups: the members of the experimental group were told to actively visualize attaining their goals for the week ahead, while the members of the control group were given no specific strategy for accomplishing their goals.",
+    "question": "Which finding from Kappes and Oettingen's study, if true, would most directly weaken the claim made by detractors of the conventional view of positive visualization?",
+    "options": {
+      "A": "The members of the experimental group had more specific plans to accomplish their goals than did those in the control group, and members of the experimental group achieved a greater number of goals at the end of the week.",
+      "B": "Participants who were in the experimental group and control group reported similar levels of confidence in their ability to accomplish their goals by the end of the week and showed negligible differences in goals achieved.",
+      "C": "Even though the participants in the control group were told they could select any strategy they wanted for achieving their goals, the vast majority of them elected to use positive visualization and reported confidence in its effectiveness to achieve a greater number of goals.",
+      "D": "Participants who were in the control group completed a lesser number of their goals compared to the participants who were in the experimental group, and those in the experimental group anticipated a benefit from visualization."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nhóm thử nghiệm (có thực hành hình dung tích cực) hoàn thành được nhiều mục tiêu hơn nhóm đối chứng, trực tiếp phản bác lại quan điểm của những người chỉ trích."
+  },
+  {
+    "id": "vht1_14",
+    "questionNumber": 14,
+    "domain": "Information and Ideas",
+    "prompt": "Describing adverbs \"as damaging to a writer,\" novelist Graham Greene is one of several authors and literary critics who have recommended minimizing the use of adverbs, especially those ending in -ly (e.g., \"obediently\"), in works of fiction. To investigate the prevalence of -ly adverbs in novels, author and statistician Ben Blatt used natural language processing—machine learning technology that reads and interprets text—to calculate the rates at which these words occur in the novels of Ernest Hemingway, who was awarded the Nobel Prize in Literature in 1954. Blatt concluded that in Hemingway's oeuvre, there is a negative correlation between -ly adverb proliferation and perceived literary merit.",
+    "question": "Which finding, if true, would most directly support Blatt's conclusion?",
+    "options": {
+      "A": "Whereas Hemingway's acclaimed novel The Sun Also Rises has one of the lowest -ly adverb rates among Hemingway's works, F. Scott Fitzgerald's classic novel The Great Gatsby has the lowest -ly adverb rate among Fitzgerald's novels.",
+      "B": "Whereas Hemingway used on average 80 -ly adverbs per 10,000 words in the 10 novels of Hemingway's that Blatt investigated, Toni Morrison, winner of the 1993 Nobel Prize in Literature, used on average 76 -ly adverbs per 10,000 words in her novels.",
+      "C": "In his celebrated novel A Farewell to Arms, Hemingway used 67 -ly adverbs per 10,000 words, whereas 67% of celebrated authors' novels that have fewer than 50 -ly adverbs per 10,000 words have been classified as great by critics.",
+      "D": "In The Sun Also Rises, which is widely recognized as a literary masterpiece, Hemingway used 63 -ly adverbs per 10,000 words, whereas in his less-acclaimed novel True at First Light, Hemingway used 102 -ly adverbs per 10,000 words."
+    },
+    "correctAnswer": "D",
+    "explanation": "So sánh nội bộ trong các tác phẩm của Hemingway: tác phẩm kinh điển có tần suất phó từ thấp hơn nhiều so với tác phẩm ít được ca ngợi hơn."
+  },
+  {
+    "id": "vht1_15",
+    "questionNumber": 15,
+    "domain": "Information and Ideas",
+    "prompt": "The subscription economy has rapidly expanded to include a wide range of products—from books to cloud storage—in part because consumers appreciate the convenience of automatic payments. But as a study by Ben Klopack and team shows, consumers are typically inattentive to automatic payments and remain subscribed to services long after their value has worn off. The study also found that subscribers were much more likely to discontinue a service when they had to make an active renewal decision (for example, when they need to update payment information to remain subscribed) than at other times. The researchers therefore concluded that a regulation requiring all subscribers to complete payments manually would likely _______",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "deter attentive consumers from subscribing in the first place but would have little effect on whether inattentive consumers decide to subscribe.",
+      "B": "decrease subscribers' valuation of the subscription services at a faster rate than if no such regulation were implemented.",
+      "C": "enable dissatisfied subscribers to save more money than they would without such a regulation in place but at the expense of a feature that may have induced them to subscribe initially.",
+      "D": "result in reduced average subscription durations, but the overall experience of the longest-subscribing consumers would improve."
+    },
+    "correctAnswer": "C",
+    "explanation": "Quy định thanh toán thủ công giúp người dùng hủy dịch vụ không còn giá trị (tiết kiệm tiền), nhưng làm mất đi sự tiện lợi tự động ban đầu thu hút họ."
+  },
+  {
+    "id": "vht1_16",
+    "questionNumber": 16,
+    "domain": "Information and Ideas",
+    "prompt": "Interested in how the color of dogs' irises affects human responses to dogs, Akitsugu Konno et al. showed images of 12 dogs' faces to human participants and asked them to rate the dogs' kindness and trustworthiness as well as the likelihood that they would interact with or keep the dogs. The researchers had previously adjusted the images so that each dog was presented in two versions, one with light irises and one with dark irises. They distributed the images such that no participant saw both the light and dark versions of the same dog. Konno et al. found that participants responded more positively to the latter. The study's design allowed the researchers to exclude the possibility that the results _______",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "may have been different if participants had been able to see the dogs' irises in person instead of only seeing images that included the dogs' irises.",
+      "B": "reflected a preference on the part of participants for facial features that happened to coincide with dark irises in the dogs depicted in the images.",
+      "C": "were a function of participants emphasizing the colors of the dogs' irises over the dogs' kindness and trustworthiness when reacting to the images.",
+      "D": "could be explained by participants having preexisting positive feelings about dogs with dark irises or preexisting negative feelings about dogs with light irises."
+    },
+    "correctAnswer": "B",
+    "explanation": "Vì cùng một chú chó được chỉnh sửa cả 2 phiên bản mắt sáng và tối nên các đường nét gương mặt khác hoàn toàn đồng nhất, loại trừ biến thiên ngoại cảnh."
+  },
+  {
+    "id": "vht1_17",
+    "questionNumber": 17,
+    "domain": "Standard English Conventions",
+    "prompt": "Growing as large as three meters in diameter, the leaves of the giant Amazonian waterlily feature a complex network of radiating veins that provide structural _______ in thickness from the center to the edges, these veins allow the leaves to maintain their large size and buoyancy with minimal material, optimizing light capture and photosynthesis.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "support. Decreasing",
+      "B": "support, decreasing",
+      "C": "support, while decreasing",
+      "D": "support decreasing"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cần dấu chấm để tách hai mệnh đề độc lập hoàn chỉnh, tránh lỗi nối câu run-on sentence."
+  },
+  {
+    "id": "vht1_18",
+    "questionNumber": 18,
+    "domain": "Standard English Conventions",
+    "prompt": "Digital data storage devices store information electronically, which should eventually lead to data degradation and loss of digital integrity. However, software algorithms are theorized to evolve alongside the pace of digital degradation, correcting data corruption. Such a corrective process _______ the device's degradation, unlike hardware-based protective measures, provides a technological justification for digital data storage.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "counteracting",
+      "B": "had counteracted",
+      "C": "counteracted",
+      "D": "counteracts"
+    },
+    "correctAnswer": "A",
+    "explanation": "Câu đã có động từ chính là 'provides', do đó vị trí này cần phân từ hiện tại (participle) 'counteracting' để bổ nghĩa cho chủ ngữ 'Such a corrective process'."
+  },
+  {
+    "id": "vht1_19",
+    "questionNumber": 19,
+    "domain": "Standard English Conventions",
+    "prompt": "On Guard is a 1997 photograph by Iranian artist Shirin Neshat. Like many of Neshat's photos, the work features a pair of hands. Clasping a microphone, one hand _______ covered in Persian script, the hands imply an out-of-frame figure on the edge of speaking.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "is bare and the other is",
+      "B": "bare, the other is",
+      "C": "bare and the other",
+      "D": "is bare, the other"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cấu trúc độc lập tuyệt đối (absolute phrase): 'one hand bare, the other covered in Persian script' bổ nghĩa cho câu chính phía sau."
+  },
+  {
+    "id": "vht1_20",
+    "questionNumber": 20,
+    "domain": "Standard English Conventions",
+    "prompt": "The exoplanet Pi Mensae d was discovered using an indirect approach to planetary detection, the radial velocity method. Compared to that of the direct imaging method, _______ the effect these exoplanets have on nearby stars.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "the detection of distant exoplanets, too dim to be observed in the radial velocity method's vast zone of discovery, is based on",
+      "B": "the radial velocity method's zone of discovery is vast, as distant exoplanets too dim to be observed are detected by",
+      "C": "the radial velocity method, with its vast zone of discovery, detects exoplanets that are too dim to be observed by",
+      "D": "distant exoplanets too dim to be observed are detected within the radial velocity method's vast zone of discovery through"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cấu trúc so sánh logic: 'that of the direct imaging method' thay thế cho 'zone of discovery', nên chủ ngữ sau dấu phẩy phải là 'the radial velocity method's zone of discovery'."
+  },
+  {
+    "id": "vht1_21",
+    "questionNumber": 21,
+    "domain": "Standard English Conventions",
+    "prompt": "In the eastern Chinese city of Suzhou, known as a hub for silk manufacturing, a unique tradition of embroidery _______ back over two thousand years—one that includes iconic double-sided stitching with different images on each side—remains popular with modern audiences, preserving the city's cultural heritage.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "dates",
+      "B": "date",
+      "C": "has dated",
+      "D": "dating"
+    },
+    "correctAnswer": "D",
+    "explanation": "Động từ chính của câu là 'remains'. Do đó 'dating back over two thousand years' là cụm phân từ rút gọn bổ nghĩa cho 'embroidery'."
+  },
+  {
+    "id": "vht1_22",
+    "questionNumber": 22,
+    "domain": "Standard English Conventions",
+    "prompt": "Located on the Emscher River in Germany, the city of Dortmund was a member of a powerful mercantile alliance that dominated northern European trade between the 13th and 17th _______ a loose confederation of cities from eleven modern-day countries, it has been described as a precursor to today's European Union.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "centuries: the Hanseatic League,",
+      "B": "centuries—the Hanseatic League;",
+      "C": "centuries; the Hanseatic League,",
+      "D": "centuries, the Hanseatic League,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dấu gạch ngang dài (dash) tách tên liên minh, và dấu chấm phẩy ';' tách 2 mệnh đề độc lập."
+  },
+  {
+    "id": "vht1_23",
+    "questionNumber": 23,
+    "domain": "Expression of Ideas",
+    "prompt": "When designing secure passports for the United Kingdom in the 1920s, Sir Charles Edmonds—a noted security expert—implemented measures to deter forgery, such as embedding fine copper wires and microscopic watermarks into the document's pages. _______ he introduced intricate embossments of ivy leaves, which posed a significant challenge for counterfeiters to imitate.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "Additionally,",
+      "B": "In particular,",
+      "C": "For instance,",
+      "D": "However,"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Additionally' bổ sung thêm một biện pháp phòng chống làm giả nữa mà Charles Edmonds đã áp dụng."
+  },
+  {
+    "id": "vht1_24",
+    "questionNumber": 24,
+    "domain": "Expression of Ideas",
+    "prompt": "The Sultanate of Brunei, a Malay sea power based on the northern coast of Borneo that reached its height around 1600 CE, is considered a thalassocracy—a geopolitical entity whose hegemony resulted from control of the sea rather than of land. Historians classify thalassocracies as distinct from tellurocracies, or land-based powers. _______ the Ottoman Empire (1300s–1900s CE) is known for both land and sea supremacy.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "For example, tellurocracies have long overpowered their rivals:",
+      "B": "Likewise, thalassocracies are sea-based powers:",
+      "C": "In other words, empires are classified according to their source of power:",
+      "D": "Of course, the distinction is not always so neat:"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đế chế Ottoman có ưu thế ở cả biển lẫn đất liền, cho thấy ranh giới phân loại không phải lúc nào cũng rạch ròi tuyệt đối."
+  },
+  {
+    "id": "vht1_25",
+    "questionNumber": 25,
+    "domain": "Expression of Ideas",
+    "prompt": "In her 2017 poem \"The Kiss,\" Sasha Pimentel contemplates Gustav Klimt's 1908 painting The Kiss. Translating the painting's depiction of a couple embracing into vivid figurative phrases—such as \"my feet reach beyond spring\"—Pimentel suggests the fluid interplay of poetry and painting. _______ Pimentel's poem highlights fundamental tensions between these modes of representation.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "In other words,",
+      "B": "At the same time,",
+      "C": "Specifically,",
+      "D": "Therefore,"
+    },
+    "correctAnswer": "B",
+    "explanation": "'At the same time' biểu thị hai khía cạnh cùng song song tồn tại: vừa thể hiện sự giao thoa hòa quyện, vừa nhấn mạnh sự căng thẳng đối lập."
+  },
+  {
+    "id": "vht1_26",
+    "questionNumber": 26,
+    "domain": "Expression of Ideas",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Minor planets are astronomical objects that orbit the Sun but are neither planets nor comets.\n• Astronomer Jane Luu has discovered many minor planets in her career.\n• Alongside colleagues David C. Jewitt, Jun Chen, and Chadwick Trujillo, she discovered the minor planet (20161) 1996 TR66 on October 8, 1996.\n• Alongside colleagues David C. Jewitt and Chadwick Trujillo, she discovered the minor planet (385201) 1999 RN215 on September 7, 1999.",
+    "question": "Which choice most effectively uses information from the given sentences to emphasize the discovery of (20161) 1996 TR66 to an audience already familiar with Jane Luu?",
+    "options": {
+      "A": "Astronomer Jane Luu helped discover not only the minor planet (20161) 1996 TR66 on October 8, 1996, but also (385201) 1999 RN215 on September 7, 1999.",
+      "B": "First there was the discovery of (20161) 1996 TR66 on October 8, 1996, and then on September 7, 1999, Jane Luu discovered yet another minor planet with the help of her colleagues David C. Jewitt and Chadwick Trujillo.",
+      "C": "Jane Luu is an astronomer famous for her discovery of many minor planets in our solar system, including (20161) 1996 TR66.",
+      "D": "On October 8, 1996, Jane Luu and her colleagues David C. Jewitt, Jun Chen, and Chadwick Trujillo made the exciting discovery of the minor planet (20161) 1996 TR66."
+    },
+    "correctAnswer": "D",
+    "explanation": "Câu D nhấn mạnh trọng tâm vào sự kiện khám phá hành tinh nhỏ (20161) 1996 TR66 mà không cần giới thiệu lại Jane Luu là ai."
+  },
+  {
+    "id": "vht1_27",
+    "questionNumber": 27,
+    "domain": "Expression of Ideas",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Melissa Cody is a Diné (Navajo) textile artist known for blending traditional Diné designs (stripes, zigzags, and diamond patterns) with nontraditional elements.\n• Cody's work incorporates arrangements of shapes or text inspired by video game graphics and pop culture references.\n• Cody: \"I'm a child of '80s video game culture...I grew up with this world of pixelization.\"\n• Cody: \"The things we consider tradition now weren't considered tradition when they first came about.\"\n• Her tapestry Only Love Can Break Your Heart features pop song lyrics in a blocky digital font over a jagged diamond pattern.\n• Her tapestry Walking Off No Water Mesa features rectangular panes revealing a stylized landscape patterned by contrasting colored diamonds.",
+    "question": "The student wants to connect a quotation to a particular nontraditional design element in Cody's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "Cody's tapestry Only Love Can Break Your Heart features a jagged diamond pattern, a traditional design element that \"we consider tradition now.\"",
+      "B": "The pop song lyrics in a blocky digital font in Only Love Can Break Your Heart reflect Cody's childhood familiarity with blocky video game graphics—what she calls \"this world of pixelization.\"",
+      "C": "According to Cody, some elements of Walking Off No Water Mesa, such as contrasting colored diamonds, \"weren't considered tradition when they first came about.\"",
+      "D": "Cody's background as \"a child of '80s video game culture\" factored into her decision to blend traditional and nontraditional design elements in Walking Off No Water Mesa."
+    },
+    "correctAnswer": "B",
+    "explanation": "Liên kết trực tiếp yếu tố phi truyền thống (lời bài hát phông chữ điện tử pixel) với câu trích dẫn của tác giả ('this world of pixelization')."
+  }
+]

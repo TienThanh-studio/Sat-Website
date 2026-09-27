@@ -1,162 +1,200 @@
-import React, { useState, useEffect } from 'react';
-import { Camera, Save, User, Mail, FileText, CheckCircle2 } from 'lucide-react';
+import wordsInContextData from '../data/questions/wordInContext.json';
+import commandOfEvidenceData from '../data/questions/commandOfEvidence.json';
+import crossTextData from '../data/questions/crossText.json';
+import detailsData from '../data/questions/details.json';
+import grammarData from '../data/questions/grammar.json';
+import inferenceData from '../data/questions/inference.json';
+import transitionData from '../data/questions/transition.json';
+import vocabularyData from '../data/questions/vocabulary.json';
+import algebraQuestions from '../data/questions/algebra.json';
 
-export default function SettingsPage({ currentUser, setCurrentUser }) {
-  const [profile, setProfile] = useState({
-    name: '',
-    email: '',
-    bio: '',
-    avatar: ''
-  });
-  const [savedSuccess, setSavedSuccess] = useState(false);
+// Import 2 đề thi nâng cao (hỗ trợ cả khi nằm trực tiếp trong questions hoặc trong folder tests)
+let verbalHardTest1 = [];
+let verbalHardTest2 = [];
 
-  useEffect(() => {
-    const user = currentUser || JSON.parse(localStorage.getItem('sat_user') || '{}');
-    setProfile({
-      name: user.name || 'Học viên SAT',
-      email: user.email || 'nguyenan20062000@gmail.com',
-      bio: user.bio || 'Mục tiêu Digital SAT 1500+ (Reading & Writing 750+)',
-      avatar: user.avatar || ''
-    });
-  }, [currentUser]);
-
-  // Xử lý chọn ảnh từ máy tính
-  const handleAvatarChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 2 * 1024 * 1024) {
-        alert('Vui lòng chọn ảnh dung lượng dưới 2MB');
-        return;
-      }
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfile(prev => ({ ...prev, avatar: reader.result }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  // Lưu thông tin người dùng
-  const handleSave = (e) => {
-    e.preventDefault();
-    const updated = {
-      ...(currentUser || {}),
-      name: profile.name,
-      bio: profile.bio,
-      avatar: profile.avatar
-    };
-
-    if (typeof setCurrentUser === 'function') {
-      setCurrentUser(updated);
-    }
-    localStorage.setItem('sat_user', JSON.stringify(updated));
-
-    setSavedSuccess(true);
-    setTimeout(() => setSavedSuccess(false), 3000);
-  };
-
-  return (
-    <div className="p-8 max-w-4xl mx-auto space-y-6">
-      <div>
-        <h2 className="text-xl font-bold text-slate-900">Cài đặt tài khoản</h2>
-        <p className="text-xs text-slate-500 mt-1">Quản lý thông tin cá nhân, ảnh đại diện và mục tiêu ôn luyện của bạn.</p>
-      </div>
-
-      {savedSuccess && (
-        <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs rounded-xl flex items-center gap-2 font-medium">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-          <span>Thông tin hồ sơ đã được lưu thành công!</span>
-        </div>
-      )}
-
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <form onSubmit={handleSave} className="space-y-6">
-          {/* Avatar Section */}
-          <div className="flex items-center gap-5 pb-6 border-b border-slate-100">
-            <div className="relative group">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-slate-200 bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-2xl shadow-sm">
-                {profile.avatar ? (
-                  <img src={profile.avatar} alt="Avatar" className="w-full h-full object-cover" />
-                ) : (
-                  profile.name ? profile.name[0].toUpperCase() : 'U'
-                )}
-              </div>
-              <label 
-                htmlFor="avatar-upload"
-                className="absolute inset-0 bg-black/40 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 cursor-pointer transition"
-                title="Thay đổi ảnh"
-              >
-                <Camera className="w-5 h-5" />
-              </label>
-              <input
-                id="avatar-upload"
-                type="file"
-                accept="image/*"
-                onChange={handleAvatarChange}
-                className="hidden"
-              />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-slate-800">Ảnh đại diện</h3>
-              <p className="text-xs text-slate-400 mt-0.5">Nhấp vào hình tròn để tải ảnh đại diện từ máy tính.</p>
-            </div>
-          </div>
-
-          {/* Form Fields */}
-          <div className="space-y-4">
-            <div>
-              <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5 mb-1.5">
-                <User className="w-3.5 h-3.5 text-slate-400" />
-                Họ và tên
-              </label>
-              <input
-                type="text"
-                value={profile.name}
-                onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-                required
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-brand-800 focus:outline-none transition"
-              />
-            </div>
-
-            <div>
-              <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5 mb-1.5">
-                <Mail className="w-3.5 h-3.5 text-slate-400" />
-                Email đăng ký (Cố định)
-              </label>
-              <input
-                type="email"
-                disabled
-                value={profile.email}
-                className="w-full px-3.5 py-2.5 bg-slate-100 border border-slate-200 text-slate-400 rounded-xl text-sm cursor-not-allowed"
-              />
-            </div>
-
-            <div>
-              <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5 mb-1.5">
-                <FileText className="w-3.5 h-3.5 text-slate-400" />
-                Tiểu sử / Mục tiêu ôn thi
-              </label>
-              <textarea
-                rows="4"
-                value={profile.bio}
-                placeholder="Nhập đôi nét giới thiệu về bạn hoặc mục tiêu điểm số..."
-                onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-brand-800 focus:outline-none transition resize-none"
-              />
-            </div>
-          </div>
-
-          <div className="pt-2 flex justify-end">
-            <button
-              type="submit"
-              className="flex items-center gap-2 px-5 py-2.5 bg-brand-800 hover:bg-brand-900 text-white rounded-xl text-xs font-bold shadow transition active:scale-95"
-            >
-              <Save className="w-4 h-4" />
-              <span>Lưu thay đổi</span>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+try {
+  verbalHardTest1 = require('../data/questions/verbal_hard_test1.json');
+} catch {
+  try {
+    verbalHardTest1 = require('../data/questions/tests/verbal_hard_test1.json');
+  } catch {
+    verbalHardTest1 = [];
+  }
 }
+
+try {
+  verbalHardTest2 = require('../data/questions/verbal_hard_test2.json');
+} catch {
+  try {
+    verbalHardTest2 = require('../data/questions/tests/verbal_hard_test2.json');
+  } catch {
+    verbalHardTest2 = [];
+  }
+}
+
+// Cấu hình đầy đủ danh mục SAT (Đề thi tuyển chọn + Reading & Writing + Math)
+export const DEFAULT_CATEGORIES = [
+  // --- MỤC ĐỀ THI TUYỂN CHỌN / NÂNG CAO (27 CÂU) ---
+  {
+    id: 'curated-hard-verbal-01',
+    title: 'Phase 2.40 - Verbal Test 01 (Hard)',
+    domain: 'Curated Full Test',
+    section: 'Full Test',
+    description: 'Đề thi Verbal nâng cao sưu tầm tuyển chọn gồm 27 câu hỏi phân hóa cao chuẩn College Board.',
+    questions: verbalHardTest1 || []
+  },
+  {
+    id: 'curated-hard-verbal-02',
+    title: 'Phase 2.40 - Final Verbal Test 02 (Hard)',
+    domain: 'Curated Full Test',
+    section: 'Full Test',
+    description: 'Đề thi Verbal chung cuộc nâng cao 27 câu với các bài đọc học thuật phức tạp và bẫy suy luận.',
+    questions: verbalHardTest2 || []
+  },
+
+  // --- READING & WRITING THEO CHUYÊN ĐỀ ---
+  {
+    id: 'words-in-context',
+    title: 'Words in Context',
+    domain: 'Craft and Structure',
+    section: 'Reading & Writing',
+    description: 'Xác định nghĩa của từ và cụm từ dựa theo ngữ cảnh văn bản.',
+    questions: wordsInContextData || []
+  },
+  {
+    id: 'text-structure',
+    title: 'Text Structure and Purpose',
+    domain: 'Craft and Structure',
+    section: 'Reading & Writing',
+    description: 'Phân tích mục đích hùng biện và cấu trúc liên kết của đoạn trích.',
+    questions: []
+  },
+  {
+    id: 'cross-text',
+    title: 'Cross-Text Connections',
+    domain: 'Craft and Structure',
+    section: 'Reading & Writing',
+    description: 'So sánh, đối chiếu quan điểm giữa hai đoạn văn ngắn.',
+    questions: crossTextData || []
+  },
+  {
+    id: 'central-ideas',
+    title: 'Central Ideas and Details',
+    domain: 'Information and Ideas',
+    section: 'Reading & Writing',
+    description: 'Tìm ý chính và định vị chi tiết then chốt trong văn bản.',
+    questions: detailsData || []
+  },
+  {
+    id: 'command-of-evidence',
+    title: 'Command of Evidence',
+    domain: 'Information and Ideas',
+    section: 'Reading & Writing',
+    description: 'Đánh giá bằng chứng văn bản và dữ liệu bảng biểu/đồ thị.',
+    questions: commandOfEvidenceData || []
+  },
+  {
+    id: 'inferences',
+    title: 'Inferences',
+    domain: 'Information and Ideas',
+    section: 'Reading & Writing',
+    description: 'Đưa ra kết luận suy luận hợp lý nhất từ các dữ kiện cho trước.',
+    questions: inferenceData || []
+  },
+  {
+    id: 'boundaries',
+    title: 'Form, Structure, and Sense',
+    domain: 'Standard English Conventions',
+    section: 'Reading & Writing',
+    description: 'Quy tắc ngữ pháp, dấu câu và cấu trúc câu tiếng Anh tiêu chuẩn.',
+    questions: grammarData || []
+  },
+  {
+    id: 'transitions',
+    title: 'Transitions',
+    domain: 'Expression of Ideas',
+    section: 'Reading & Writing',
+    description: 'Lựa chọn từ nối và liên từ logic giữa các mệnh đề.',
+    questions: transitionData || []
+  },
+
+  // --- MATH ---
+  {
+    id: 'algebra',
+    title: 'Algebra (Đại số tuyến tính)',
+    domain: 'Heart of Algebra',
+    section: 'Math',
+    description: 'Phương trình tuyến tính, hệ phương trình, bất đẳng thức và đồ thị đường thẳng.',
+    questions: algebraQuestions || []
+  },
+  {
+    id: 'advanced-math',
+    title: 'Advanced Math (Hàm số & Đa thức)',
+    domain: 'Passport to Advanced Math',
+    section: 'Math',
+    description: 'Phương trình bậc hai, đa thức, biểu thức hữu tỉ và hàm phi tuyến.',
+    questions: []
+  },
+  {
+    id: 'problem-solving',
+    title: 'Problem Solving & Data Analysis',
+    domain: 'Problem Solving and Data Analysis',
+    section: 'Math',
+    description: 'Tỷ lệ, phần trăm, phân tích dữ liệu thống kê và xác suất.',
+    questions: []
+  },
+  {
+    id: 'geometry',
+    title: 'Geometry & Trigonometry',
+    domain: 'Additional Topics in Math',
+    section: 'Math',
+    description: 'Hình học phẳng, lượng giác, đường tròn và hình học không gian.',
+    questions: []
+  }
+];
+
+export const questionService = {
+  // Lấy toàn bộ danh mục kèm số lượng câu hỏi thực tế
+  getCategories: () => {
+    return DEFAULT_CATEGORIES.map(cat => {
+      const qList = [...(cat.questions || [])];
+      return {
+        ...cat,
+        questionCount: qList.length,
+        questions: qList
+      };
+    });
+  },
+
+  // Lấy danh sách câu hỏi Math
+  getAllMathQuestions: () => {
+    return [...algebraQuestions];
+  },
+
+  // Lấy danh sách đề thi tuyển chọn nâng cao (Full Test)
+  getCuratedHardTests: () => {
+    return DEFAULT_CATEGORIES.filter(c => c.section === 'Full Test');
+  },
+
+  // Lấy câu hỏi theo ID danh mục
+  getQuestionsByCategory: (categoryId) => {
+    const categories = questionService.getCategories();
+    const target = categories.find(c => c.id === categoryId);
+    return target ? target.questions : [];
+  },
+
+  // Thống kê nhanh số lượng câu theo từng Category
+  getCategoryStats: () => {
+    const categories = questionService.getCategories();
+    return categories.map(cat => ({
+      id: cat.id,
+      title: cat.title,
+      domain: cat.domain,
+      section: cat.section,
+      total: cat.questionCount,
+      completed: 0
+    }));
+  }
+};
+
+export default questionService;

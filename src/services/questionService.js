@@ -7,10 +7,30 @@ import inferenceData from '../data/questions/inference.json';
 import transitionData from '../data/questions/transition.json';
 import vocabularyData from '../data/questions/vocabulary.json';
 import algebraQuestions from '../data/questions/algebra.json';
+import verbalHardTest1 from '../data/questions/tests/verbal_hard_test1.json';
+import verbalHardTest2 from '../data/questions/tests/verbal_hard_test2.json';
 
-// Cấu hình đầy đủ danh mục SAT (Reading & Writing + Math)
+// Cấu hình đầy đủ danh mục SAT
 export const DEFAULT_CATEGORIES = [
-  // --- READING & WRITING ---
+  // --- MỤC ĐỀ THI TUYỂN CHỌN / NÂNG CAO (27 CÂU) ---
+  {
+    id: 'curated-hard-verbal-01',
+    title: 'Phase 2.40 - Verbal Test 01 (Hard)',
+    domain: 'Curated Full Test',
+    section: 'Full Test',
+    description: 'Đề thi Verbal nâng cao sưu tầm tuyển chọn gồm 27 câu hỏi phân hóa cao chuẩn College Board.',
+    questions: verbalHardTest1 || []
+  },
+  {
+    id: 'curated-hard-verbal-02',
+    title: 'Phase 2.40 - Final Verbal Test 02 (Hard)',
+    domain: 'Curated Full Test',
+    section: 'Full Test',
+    description: 'Đề thi Verbal chung cuộc nâng cao 27 câu với các bài đọc học thuật phức tạp và bẫy suy luận.',
+    questions: verbalHardTest2 || []
+  },
+
+  // --- READING & WRITING THEO CHUYÊN ĐỀ ---
   {
     id: 'words-in-context',
     title: 'Words in Context',
@@ -112,7 +132,6 @@ export const DEFAULT_CATEGORIES = [
 ];
 
 export const questionService = {
-  // Lấy toàn bộ danh mục chuẩn (không gộp trùng lặp câu hỏi từ cache)
   getCategories: () => {
     return DEFAULT_CATEGORIES.map(cat => {
       const qList = [...(cat.questions || [])];
@@ -124,19 +143,20 @@ export const questionService = {
     });
   },
 
-  // Lấy danh sách câu hỏi Math
   getAllMathQuestions: () => {
     return [...algebraQuestions];
   },
 
-  // Lấy câu hỏi theo ID danh mục
+  getCuratedHardTests: () => {
+    return DEFAULT_CATEGORIES.filter(c => c.section === 'Full Test');
+  },
+
   getQuestionsByCategory: (categoryId) => {
     const categories = questionService.getCategories();
     const target = categories.find(c => c.id === categoryId);
     return target ? target.questions : [];
   },
 
-  // Thống kê nhanh
   getCategoryStats: () => {
     const categories = questionService.getCategories();
     return categories.map(cat => ({
