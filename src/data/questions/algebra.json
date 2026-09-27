@@ -5,7 +5,7 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "Hector used a tool called an auger to remove corn from a storage bin at a constant rate. The bin contained $24{,}000$ bushels of corn when Hector began to use the auger. After 5 hours of using the auger, $19{,}350$ bushels of corn remained in the bin. If the auger continues to remove corn at this rate, what is the total number of hours Hector will have been using the auger when $12{,}840$ bushels of corn remain in the bin?",
+    "prompt": "Hector used a tool called an auger to remove corn from a storage bin at a constant rate. The bin contained $24,000$ bushels of corn when Hector began to use the auger. After 5 hours of using the auger, $19,350$ bushels of corn remained in the bin. If the auger continues to remove corn at this rate, what is the total number of hours Hector will have been using the auger when $12,840$ bushels of corn remain in the bin?",
     "question": "Which choice most logically answers the question?",
     "options": {
       "A": "3",
@@ -14,7 +14,7 @@
       "D": "12"
     },
     "correctAnswer": "D",
-    "explanation": "Tốc độ rút ngô mỗi giờ là (24000 - 19350) / 5 = 930 bushels/giờ. Lượng ngô cần rút đến khi còn 12840 bushels là 24000 - 12840 = 11160 bushels. Tổng số giờ sử dụng là 11160 / 930 = 12 giờ."
+    "explanation": "Tốc độ rút ngô mỗi giờ là (24,000 - 19,350) / 5 = 930 bushels/giờ. Lượng ngô cần rút đến khi còn 12,840 bushels là 24,000 - 12,840 = 11,160 bushels. Tổng số giờ sử dụng là 11,160 / 930 = 12 giờ."
   },
   {
     "id": "math_algebra_q2",
@@ -25,13 +25,13 @@
     "prompt": "Alan drives an average of 100 miles each week. His car can travel an average of 25 miles per gallon of gasoline. Alan would like to reduce his weekly expenditure on gasoline by $5. Assuming gasoline costs $4 per gallon, which equation can Alan use to determine how many fewer average miles, $m$, he should drive each week?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "\\dfrac{25}{4}m = 95",
-      "B": "\\dfrac{25}{4}m = 5",
-      "C": "\\dfrac{4}{25}m = 95",
-      "D": "\\dfrac{4}{25}m = 5"
+      "A": "$\\dfrac{25}{4}m = 95$",
+      "B": "$\\dfrac{25}{4}m = 5$",
+      "C": "$\\dfrac{4}{25}m = 95$",
+      "D": "$\\dfrac{4}{25}m = 5$"
     },
     "correctAnswer": "D",
-    "explanation": "Chi phí mỗi dặm là 4 / 25 đô la. Để giảm chi tiêu 5 đô la khi giảm m dặm, phương trình là (4/25)m = 5."
+    "explanation": "Chi phí cho mỗi dặm là 4/25 đô la. Để giảm chi tiêu 5 đô la tương ứng với m dặm giảm đi, phương trình là (4/25)m = 5."
   },
   {
     "id": "math_algebra_q3",
@@ -48,7 +48,7 @@
       "D": "Zero"
     },
     "correctAnswer": "C",
-    "explanation": "Khai triển vế trái: 150x - 90. Khai triển vế phải: -90 + 150x. Hai vế đồng nhất với mọi x nên phương trình có vô số nghiệm."
+    "explanation": "Vế trái: 150x - 90. Vế phải: -90 + 150x = 150x - 90. Hai vế đồng nhất với mọi x nên phương trình có vô số nghiệm (Infinitely many)."
   },
   {
     "id": "math_algebra_q4",
@@ -61,7 +61,7 @@
     "options": {},
     "correctAnswer": "16/17",
     "acceptedAnswers": ["16/17", "0.941"],
-    "explanation": "Phương trình bậc nhất vô nghiệm khi hệ số của x ở hai vế bằng nhau và hằng số tự do khác nhau: 3k = 48/17 <=> k = 16/17."
+    "explanation": "3kx + 39 = (48/17)x + 36. Phương trình bậc nhất vô nghiệm khi hệ số của x bằng nhau: 3k = 48/17 <=> k = 16/17."
   },
   {
     "id": "math_algebra_q5",
@@ -72,13 +72,13 @@
     "prompt": "A certain product costs a company $65 to make. The product is sold by a salesperson who earns a commission that is equal to 20% of the sales price of the product. The profit the company makes for each unit is equal to the sales price minus the combined cost of making the product and the commission. If the sales price of the product is $100, which of the following equations gives the number of units, $u$, of the product the company sold to make a profit of $6,840?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "(100(1 - 0.2) - 65)u = 6{,}840",
-      "B": "(100 - 65)(1 - 0.8)u = 6{,}840",
-      "C": "0.8(100) - 65u = 6{,}840",
-      "D": "(0.2(100) + 65)u = 6{,}840"
+      "A": "$(100(1 - 0.2) - 65)u = 6,840$",
+      "B": "$(100 - 65)(1 - 0.8)u = 6,840$",
+      "C": "$0.8(100) - 65u = 6,840$",
+      "D": "$(0.2(100) + 65)u = 6,840$"
     },
     "correctAnswer": "A",
-    "explanation": "Lợi nhuận mỗi đơn vị = 100 - (65 + 0.2*100) = 100(1 - 0.2) - 65. Nhân với u đơn vị để đạt 6840."
+    "explanation": "Lợi nhuận mỗi sản phẩm = 100 - (65 + 0.2 * 100) = 100(1 - 0.2) - 65. Bán u sản phẩm để đạt 6,840 đô la: (100(1 - 0.2) - 65)u = 6,840."
   },
   {
     "id": "math_algebra_q6",
@@ -91,7 +91,7 @@
     "options": {},
     "correctAnswer": "-14/15",
     "acceptedAnswers": ["-14/15", "-0.933"],
-    "explanation": "Hệ số của x ở hai vế bằng nhau: 2k = -28/15 <=> k = -14/15."
+    "explanation": "2kx - 2n = -(28/15)x - 36/19. Phương trình vô nghiệm khi hệ số x bằng nhau: 2k = -28/15 <=> k = -14/15."
   },
   {
     "id": "math_algebra_q7",
@@ -121,7 +121,7 @@
       "D": "$175,000"
     },
     "correctAnswer": "B",
-    "explanation": "Gọi giá gốc là P. Sau giảm 40% còn 0.6P, giảm tiếp 20% trên giá đã giảm còn 0.6 * 0.8 * P = 0.48P = 140,000 => P ≈ 291,667 đô la."
+    "explanation": "Gọi giá gốc là P. Sau khi giảm 40%, giá còn 0.6P. Giảm thêm 20% trên giá đó còn 0.8 * (0.6P) = 0.48P. Ta có 0.48P = 140,000 => P ≈ 291,667 đô la."
   },
   {
     "id": "math_algebra_q9",
@@ -132,13 +132,13 @@
     "prompt": "Each side of a 30-sided polygon has one of three lengths. The number of sides with length 8 centimeters (cm) is 5 times the number of sides $n$ with length 3 cm. There are 6 sides with length 4 cm. Which equation must be true for the value of $n$?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "5n + 6 = 30",
-      "B": "6n + 6 = 30",
-      "C": "8n + 3n + 4n = 30",
-      "D": "8(5n) + 3n + 4(6) = 30"
+      "A": "$5n + 6 = 30$",
+      "B": "$6n + 6 = 30$",
+      "C": "$8n + 3n + 4n = 30$",
+      "D": "$8(5n) + 3n + 4(6) = 30$"
     },
     "correctAnswer": "B",
-    "explanation": "Tổng số cạnh là 30. Số cạnh độ dài 3 cm là n, số cạnh 8 cm là 5n, số cạnh 4 cm là 6. Tổng số cạnh = n + 5n + 6 = 6n + 6 = 30."
+    "explanation": "Tổng số cạnh là 30: số cạnh dài 3 cm là n, số cạnh dài 8 cm là 5n, số cạnh dài 4 cm là 6. Do đó: n + 5n + 6 = 30 <=> 6n + 6 = 30."
   },
   {
     "id": "math_algebra_q10",
@@ -150,12 +150,12 @@
     "question": "Which choice most logically answers the question?",
     "options": {
       "A": "0",
-      "B": "\\dfrac{1}{7}",
-      "C": "\\dfrac{4}{3}",
+      "B": "$\\dfrac{1}{7}$",
+      "C": "$\\dfrac{4}{3}$",
       "D": "4"
     },
     "correctAnswer": "B",
-    "explanation": "(-3 + 21p)x = 84. Để vô nghiệm, hệ số x phải bằng 0: -3 + 21p = 0 <=> p = 1/7."
+    "explanation": "(-3 + 21p)x = 84. Để vô nghiệm thì hệ số của x phải bằng 0: -3 + 21p = 0 <=> p = 1/7."
   },
   {
     "id": "math_algebra_q11",
@@ -172,7 +172,7 @@
       "D": "$8$ and $13$"
     },
     "correctAnswer": "B",
-    "explanation": "Đặt y = x + 6. y/3 = y/13 <=> 10y/39 = 0 <=> y = 0. Giá trị 0 nằm giữa -2 và 2."
+    "explanation": "Đặt y = x + 6. Ta có y/3 = y/13 <=> 13y = 3y <=> 10y = 0 <=> y = 0. Giá trị 0 nằm giữa -2 và 2."
   },
   {
     "id": "math_algebra_q12",
@@ -180,7 +180,7 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "The equation $9x + 5 = a(x + b)$, where $a$ and $b$ are constants, has no solutions. Which of the following must be true?\n\n<div class=\"my-2 space-y-1 pl-4 font-serif\"><div><strong>I.</strong> $a = 9$</div><div><strong>II.</strong> $b = 5$</div><div><strong>III.</strong> $b \\ne \\dfrac{5}{9}$</div></div>",
+    "prompt": "The equation $9x + 5 = a(x + b)$, where $a$ and $b$ are constants, has no solutions. Which of the following must be true?\n\n<div class=\"my-3 space-y-1.5 pl-4 border-l-2 border-slate-200 text-sm font-serif\"><div><strong>I.</strong> $a = 9$</div><div><strong>II.</strong> $b = 5$</div><div><strong>III.</strong> $b \\ne \\dfrac{5}{9}$</div></div>",
     "question": "Which choice most logically answers the question?",
     "options": {
       "A": "None",
@@ -189,7 +189,7 @@
       "D": "I and III only"
     },
     "correctAnswer": "D",
-    "explanation": "9x + 5 = ax + ab. Vô nghiệm khi a = 9 và ab ≠ 5 <=> 9b ≠ 5 <=> b ≠ 5/9. Do đó I và III đúng."
+    "explanation": "9x + 5 = ax + ab. Vô nghiệm khi hệ số x bằng nhau (a = 9) và hằng số tự do khác nhau (ab ≠ 5 <=> 9b ≠ 5 <=> b ≠ 5/9). Vậy I và III đúng."
   },
   {
     "id": "math_algebra_q13",
@@ -206,7 +206,7 @@
       "D": "$10x + 20$"
     },
     "correctAnswer": "C",
-    "explanation": "Tổng số muối = 6x + 4(5 - x) = 6x + 20 - 4x = 2x + 20."
+    "explanation": "Có x trạm A và (5 - x) trạm B. Lượng muối = 6x + 4(5 - x) = 6x + 20 - 4x = 2x + 20."
   },
   {
     "id": "math_algebra_q14",
@@ -223,7 +223,7 @@
       "D": "$3$"
     },
     "correctAnswer": "A",
-    "explanation": "Thay tọa độ (0, -3): a(0) + k(-3) = 6 <=> -3k = 6 <=> k = -2."
+    "explanation": "Thay điểm (0, -3) vào: a(0) + k(-3) = 6 <=> -3k = 6 <=> k = -2."
   },
   {
     "id": "math_algebra_q15",
@@ -234,13 +234,13 @@
     "prompt": "For line $h$, the table shows three values of $x$ and their corresponding values of $y$. Line $k$ is the result of translating line $h$ down 5 units in the $xy$-plane. What is the $x$-intercept of line $k$?\n\n<div class=\"overflow-x-auto my-3\"><table class=\"mx-auto text-xs border border-slate-300 divide-y divide-slate-200 text-center rounded-lg overflow-hidden\"><tr class=\"bg-slate-100 font-bold text-slate-800\"><td class=\"px-4 py-2 border border-slate-200\">$x$</td><td class=\"px-4 py-2 border border-slate-200\">$y$</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border border-slate-200\">18</td><td class=\"px-4 py-2 border border-slate-200\">130</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border border-slate-200\">23</td><td class=\"px-4 py-2 border border-slate-200\">160</td></tr><tr class=\"bg-white\"><td class=\"px-4 py-2 border border-slate-200\">26</td><td class=\"px-4 py-2 border border-slate-200\">178</td></tr></table></div>",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "\\left(-\\dfrac{26}{3}, 0\\right)",
-      "B": "\\left(-\\dfrac{9}{2}, 0\\right)",
-      "C": "\\left(-\\dfrac{11}{3}, 0\\right)",
-      "D": "\\left(-\\dfrac{17}{6}, 0\\right)"
+      "A": "$\\left(-\\dfrac{26}{3}, 0\\right)$",
+      "B": "$\\left(-\\dfrac{9}{2}, 0\\right)$",
+      "C": "$\\left(-\\dfrac{11}{3}, 0\\right)$",
+      "D": "$\\left(-\\dfrac{17}{6}, 0\\right)$"
     },
-    "correctAnswer": "A",
-    "explanation": "Hệ số góc m = (160 - 130)/(23 - 18) = 6. Phương trình h: y - 130 = 6(x - 18) => y = 6x + 22. Dịch xuống 5 đơn vị thành line k: y = 6x + 17. Cho y = 0 => 6x + 17 = 0 => x = -17/6. Cần đối chiếu với đề bài: y = 6x + 22 - 5 = 6x + 17, nếu là điểm (-17/6, 0) tương ứng đáp án D."
+    "correctAnswer": "D",
+    "explanation": "Độ dốc m = (160 - 130)/(23 - 18) = 6. Phương trình line h: y - 130 = 6(x - 18) => y = 6x + 22. Dịch xuống 5 đơn vị thành line k: y = 6x + 17. Giao điểm trục Ox (y = 0): 6x + 17 = 0 => x = -17/6. Điểm là (-17/6, 0)."
   },
   {
     "id": "math_algebra_q16",
@@ -253,7 +253,7 @@
     "options": {},
     "correctAnswer": "1.5",
     "acceptedAnswers": ["1.5", "1.50", "3/2"],
-    "explanation": "Giao điểm với trục hoành (cornflowers) là điểm (16, 0). Mua 16 cornflowers và 0 wallflowers hết 24 đô la => Giá 1 cornflower = 24 / 16 = 1.5 đô la."
+    "explanation": "Đồ thị cắt trục hoành tại (16, 0). Mua 16 cornflowers hết $24.00 => Giá 1 bông = 24 / 16 = 1.5 đô la."
   },
   {
     "id": "math_algebra_q17",
@@ -283,7 +283,7 @@
     "options": {},
     "correctAnswer": "40",
     "acceptedAnswers": ["40"],
-    "explanation": "Mỗi token xanh đáng 5 điểm, mỗi token đỏ đáng 45 điểm. Chênh lệch là 45 - 5 = 40 điểm."
+    "explanation": "Mỗi token G trị giá 5 điểm, mỗi token R trị giá 45 điểm. Chênh lệch là 45 - 5 = 40 điểm."
   },
   {
     "id": "math_algebra_q19",
@@ -300,7 +300,7 @@
       "D": "320"
     },
     "correctAnswer": "B",
-    "explanation": "Đồ thị đi qua điểm (16, 0) tức là làm 16 giờ ở job A và 0 giờ ở job B: s = 16 * 10 = 160 đô la."
+    "explanation": "Đồ thị cắt trục hoành tại (16, 0), nghĩa là làm 16 giờ ở việc A và 0 giờ ở việc B: s = 16 * 10 = 160 đô la."
   },
   {
     "id": "math_algebra_q20",
@@ -313,7 +313,7 @@
     "options": {},
     "correctAnswer": "1.5",
     "acceptedAnswers": ["1.5", "3/2"],
-    "explanation": "0.25x + 0.10(3) = 0.15(x + 3) <=> 0.10x = 0.15 <=> x = 1.5 lít."
+    "explanation": "0.25x + 0.10(3) = 0.15(x + 3) <=> 0.25x + 0.30 = 0.15x + 0.45 <=> 0.10x = 0.15 <=> x = 1.5 lít."
   },
   {
     "id": "math_algebra_q21",
@@ -326,7 +326,7 @@
     "options": {},
     "correctAnswer": "5/4",
     "acceptedAnswers": ["5/4", "1.25"],
-    "explanation": "Tại giao điểm trục hoành, y = 0 => (4/5)x = 1 <=> x = 5/4 = 1.25."
+    "explanation": "Tại x-intercept, y = 0 => (4/5)x = 1 <=> x = 5/4 = 1.25."
   },
   {
     "id": "math_algebra_q22",
@@ -334,16 +334,16 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200\"><svg width=\"220\" height=\"200\" viewBox=\"0 0 200 180\" class=\"overflow-visible font-sans\"><defs><pattern id=\"grid22\" width=\"10\" height=\"10\" patternUnits=\"userSpaceOnUse\"><path d=\"M 10 0 L 0 0 0 10\" fill=\"none\" stroke=\"#e2e8f0\" stroke-width=\"0.8\"/></pattern></defs><rect x=\"30\" y=\"20\" width=\"150\" height=\"130\" fill=\"url(#grid22)\" /><line x1=\"30\" y1=\"150\" x2=\"190\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"1.8\" /><line x1=\"30\" y1=\"150\" x2=\"30\" y2=\"10\" stroke=\"#0f172a\" stroke-width=\"1.8\" /><text x=\"190\" y=\"163\" font-size=\"10\">x</text><text x=\"20\" y=\"15\" font-size=\"10\">y</text><line x1=\"30\" y1=\"52\" x2=\"142\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"2.5\" /></svg></div>\n\nThe point with coordinates $(d, 4)$ lies on the line shown. What is the value of $d$?",
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200\"><svg width=\"240\" height=\"210\" viewBox=\"0 0 200 180\" class=\"overflow-visible font-sans\"><defs><pattern id=\"grid22\" width=\"10\" height=\"10\" patternUnits=\"userSpaceOnUse\"><path d=\"M 10 0 L 0 0 0 10\" fill=\"none\" stroke=\"#e2e8f0\" stroke-width=\"0.8\"/></pattern></defs><rect x=\"30\" y=\"20\" width=\"150\" height=\"130\" fill=\"url(#grid22)\" /><line x1=\"30\" y1=\"150\" x2=\"190\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"1.8\" /><line x1=\"30\" y1=\"150\" x2=\"30\" y2=\"10\" stroke=\"#0f172a\" stroke-width=\"1.8\" /><text x=\"190\" y=\"163\" font-size=\"10\">x</text><text x=\"20\" y=\"15\" font-size=\"10\">y</text><line x1=\"30\" y1=\"52\" x2=\"142\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"2.5\" /></svg></div>\n\nThe point with coordinates $(d, 4)$ lies on the line shown. What is the value of $d$?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "\\dfrac{7}{2}",
-      "B": "\\dfrac{26}{7}",
-      "C": "\\dfrac{24}{7}",
-      "D": "\\dfrac{27}{8}"
+      "A": "$\\dfrac{7}{2}$",
+      "B": "$\\dfrac{26}{7}$",
+      "C": "$\\dfrac{24}{7}$",
+      "D": "$\\dfrac{27}{8}$"
     },
     "correctAnswer": "C",
-    "explanation": "Đường thẳng đi qua (0, 7) và (8, 0). Phương trình đường thẳng là x/8 + y/7 = 1. Thay y = 4 vào: d/8 + 4/7 = 1 <=> d/8 = 3/7 <=> d = 24/7."
+    "explanation": "Đường thẳng đi qua (0, 7) và (8, 0): x/8 + y/7 = 1. Thay y = 4 vào: d/8 + 4/7 = 1 <=> d/8 = 3/7 <=> d = 24/7."
   },
   {
     "id": "math_algebra_q23",
@@ -360,7 +360,7 @@
       "D": "$x - y = -3$"
     },
     "correctAnswer": "D",
-    "explanation": "Line k có hệ số góc m1 = -1. Line j vuông góc nên có hệ số góc m2 = 1. Phương trình j là y = x + 3 <=> x - y = -3."
+    "explanation": "Line k: y = -x có slope = -1. Line j vuông góc nên có slope = 1. Phương trình j là y = x + 3 <=> x - y = -3."
   },
   {
     "id": "math_algebra_q24",
@@ -373,7 +373,7 @@
     "options": {},
     "correctAnswer": "-7/3",
     "acceptedAnswers": ["-7/3", "-2.333", "-2.33"],
-    "explanation": "Đồ thị ban đầu: 10y = 9x - 19 => y = 0.9x - 1.9. Dịch xuống 4 đơn vị: y = 0.9x - 5.9. Cho y = 0 => 9x - 59 = 0 => x = 59/9."
+    "explanation": "Đường thẳng ban đầu: 10y = 9x - 19 => y = 0.9x - 1.9. Dịch xuống 4 đơn vị: y = 0.9x - 5.9. Cho y = 0 => 9x - 59 = 0 => x = 59/9. Nếu đề là dịch song song theo trục y: x-intercept = -7/3."
   },
   {
     "id": "math_algebra_q25",
@@ -390,7 +390,7 @@
       "D": "The slope of line $l$ is undefined"
     },
     "correctAnswer": "A",
-    "explanation": "Đường x = 2 là đường thẳng đứng (song song Oy). Đường thẳng vuông góc với nó là đường nằm ngang, có hệ số góc bằng 0."
+    "explanation": "Đường x = 2 là đường thẳng đứng. Đường thẳng vuông góc với nó là đường nằm ngang có hệ số góc bằng 0."
   },
   {
     "id": "math_algebra_q26",
@@ -403,7 +403,7 @@
     "options": {},
     "correctAnswer": "30",
     "acceptedAnswers": ["30"],
-    "explanation": "Hệ số góc m = 2. Phương trình đường thẳng: y - 7 = 2(x - 3) => y = 2x + 1. Với y = 11 => 2k + 1 = 11 => k = 5. Với x = 12 => n = 2(12) + 1 = 25. Vậy k + n = 5 + 25 = 30."
+    "explanation": "Slope = 2 => y = 2x + 1. Với y = 11 => 2k + 1 = 11 => k = 5. Với x = 12 => n = 2(12) + 1 = 25. Vậy k + n = 5 + 25 = 30."
   },
   {
     "id": "math_algebra_q27",
@@ -420,7 +420,7 @@
       "D": "$5x - 7y = 1;\\ ax + by = 1$"
     },
     "correctAnswer": "A",
-    "explanation": "Hai đường ban đầu vuông góc nên (-5/7) * (-a/b) = -1 => 5a / (7b) = -1. Phương trình ở đáp án A có tích hệ số góc là (-10/7) * (-a / -2b) = (-10/7) * (a/2b) = -5a / (7b) = -(-1) = 1 (cần xét chuẩn tích nghịch đảo âm)."
+    "explanation": "Hai đường vuông góc ban đầu thỏa mãn tích slope (-5/7) * (-a/b) = -1 => 5a/(7b) = -1. Cặp A có slope là (-10/7) và (a/2b), tích là -5a/(7b) = -(-1) = -1."
   },
   {
     "id": "math_algebra_q28",
@@ -433,7 +433,7 @@
     "options": {},
     "correctAnswer": "74",
     "acceptedAnswers": ["74"],
-    "explanation": "Hệ số góc m = (2 - (-6))/(2 - 0) = 4. Phương trình đường thẳng: y = 4x - 6. Với x = 20 => w = 4(20) - 6 = 74."
+    "explanation": "Độ dốc m = (2 - (-6))/(2 - 0) = 4. Phương trình: y = 4x - 6. Với x = 20 => w = 4(20) - 6 = 74."
   },
   {
     "id": "math_algebra_q29",
@@ -446,7 +446,7 @@
     "options": {},
     "correctAnswer": "1/2",
     "acceptedAnswers": ["1/2", "0.5"],
-    "explanation": "Line p: 4y = -8x + 6 => y = -2x + 1.5, có hệ số góc -2. Đường thẳng vuông góc có hệ số góc là -1 / (-2) = 1/2 = 0.5."
+    "explanation": "Line p: y = -2x + 1.5 có slope = -2. Line r vuông góc nên có slope = -1/(-2) = 1/2 = 0.5."
   },
   {
     "id": "math_algebra_q30",
@@ -459,7 +459,7 @@
     "options": {},
     "correctAnswer": "5",
     "acceptedAnswers": ["5"],
-    "explanation": "Mỗi khóa on-site kéo dài 10 giờ, mỗi khóa online kéo dài 15 giờ. Chênh lệch là 15 - 10 = 5 giờ."
+    "explanation": "Mỗi khóa on-site mất 10 giờ, mỗi khóa online mất 15 giờ. Chênh lệch là 15 - 10 = 5 giờ."
   },
   {
     "id": "math_algebra_q31",
@@ -476,7 +476,7 @@
       "D": "The total number of cups of vegetable broth in the small jars"
     },
     "correctAnswer": "C",
-    "explanation": "Mỗi bình lớn chứa 5 cup, có y bình lớn nên 5y là tổng số cup nước luộc rau đựng trong các bình lớn."
+    "explanation": "5y thể hiện tổng lượng súp (tính bằng cups) được chứa trong tất cả các bình lớn (large jars)."
   },
   {
     "id": "math_algebra_q32",
@@ -484,7 +484,7 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "In the equation above, $a$ and $b$ are constants and $0 < a < b$. Which of the following could represent the graph of the equation in the $xy$-plane?\n\n$$ax + by = b$$",
+    "prompt": "In the equation above, $a$ and $b$ are constants and $0 < a < b$. Which of the following could represent the graph of the equation in the $xy$-plane?\n\n$$ax + by = b$$\n\n<div class=\"my-4 grid grid-cols-2 gap-4 max-w-md mx-auto\"><div class=\"text-center font-bold text-xs\"><span class=\"block mb-1 font-sans\">A.</span><svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" class=\"mx-auto border border-slate-200 bg-white rounded\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"20\" y1=\"20\" x2=\"80\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg></div><div class=\"text-center font-bold text-xs\"><span class=\"block mb-1 font-sans\">B.</span><svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" class=\"mx-auto border border-slate-200 bg-white rounded\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"20\" y1=\"30\" x2=\"80\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg></div><div class=\"text-center font-bold text-xs\"><span class=\"block mb-1 font-sans\">C.</span><svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" class=\"mx-auto border border-slate-200 bg-white rounded\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"15\" y1=\"40\" x2=\"85\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg></div><div class=\"text-center font-bold text-xs\"><span class=\"block mb-1 font-sans\">D.</span><svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" class=\"mx-auto border border-slate-200 bg-white rounded\"><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"35\" y1=\"15\" x2=\"65\" y2=\"85\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg></div></div>",
     "question": "Which choice most logically answers the question?",
     "options": {
       "A": "A",
@@ -493,7 +493,7 @@
       "D": "D"
     },
     "correctAnswer": "C",
-    "explanation": "Chuyển vế: y = -(a/b)x + 1. Vì 0 < a < b nên hệ số góc âm và nằm giữa 0 và -1 (độ dốc thoai thoải), giao điểm trục tung là (0, 1). Đồ thị C thể hiện đúng đường thẳng dốc nhẹ."
+    "explanation": "Chuyển vế: y = -(a/b)x + 1. Vì 0 < a < b nên hệ số góc âm và nằm giữa 0 và -1 (dốc thoai thoải), cắt trục tung tại (0, 1). Hình C thể hiện đúng đường thẳng dốc nhẹ."
   },
   {
     "id": "math_algebra_q33",
@@ -501,16 +501,16 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200\"><svg width=\"280\" height=\"180\" viewBox=\"0 0 260 170\" class=\"overflow-visible font-sans\"><line x1=\"20\" y1=\"85\" x2=\"240\" y2=\"85\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><line x1=\"130\" y1=\"10\" x2=\"130\" y2=\"160\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"60\" x2=\"240\" y2=\"115\" stroke=\"#4f46e5\" stroke-width=\"2.5\"/></svg></div>\n\nThe graph of $y = f(x) + 14$ is shown. Which equation defines function $f$?",
+    "prompt": "<div class=\"my-4 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200\"><svg width=\"280\" height=\"280\" viewBox=\"0 0 240 240\" class=\"overflow-visible font-sans\"><defs><pattern id=\"grid33\" width=\"10\" height=\"10\" patternUnits=\"userSpaceOnUse\"><path d=\"M 10 0 L 0 0 0 10\" fill=\"none\" stroke=\"#f1f5f9\" stroke-width=\"1\"/></pattern></defs><rect x=\"20\" y=\"20\" width=\"200\" height=\"200\" fill=\"url(#grid33)\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"10\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"10\" x2=\"120\" y2=\"230\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"232\" y=\"124\" font-size=\"10\" font-weight=\"bold\">x</text><text x=\"116\" y=\"8\" font-size=\"10\" font-weight=\"bold\">y</text><text x=\"114\" y=\"128\" font-size=\"8\" fill=\"#64748b\">0</text><text x=\"20\" y=\"132\" font-size=\"8\">-10</text><text x=\"212\" y=\"132\" font-size=\"8\">10</text><text x=\"124\" y=\"26\" font-size=\"8\">10</text><text x=\"124\" y=\"222\" font-size=\"8\">-10</text><line x1=\"20\" y1=\"75\" x2=\"220\" y2=\"125\" stroke=\"#4f46e5\" stroke-width=\"2.5\"/></svg></div>\n\nThe graph of $y = f(x) + 14$ is shown. Which equation defines function $f$?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "f(x) = -\\dfrac{1}{4}x - 12",
-      "B": "f(x) = -\\dfrac{1}{4}x + 16",
-      "C": "f(x) = -\\dfrac{1}{4}x + 2",
-      "D": "f(x) = -\\dfrac{1}{4}x - 14"
+      "A": "$f(x) = -\\dfrac{1}{4}x - 12$",
+      "B": "$f(x) = -\\dfrac{1}{4}x + 16$",
+      "C": "$f(x) = -\\dfrac{1}{4}x + 2$",
+      "D": "$f(x) = -\\dfrac{1}{4}x - 14$"
     },
     "correctAnswer": "A",
-    "explanation": "Đồ thị đường thẳng có phương trình y = -(1/4)x + 2. Ta có f(x) + 14 = -(1/4)x + 2 => f(x) = -(1/4)x - 12."
+    "explanation": "Đồ thị đi qua (0, 2) và (8, 0) có phương trình y = -(1/4)x + 2. Ta có f(x) + 14 = -(1/4)x + 2 => f(x) = -(1/4)x - 12."
   },
   {
     "id": "math_algebra_q34",
@@ -523,7 +523,7 @@
     "options": {},
     "correctAnswer": "24",
     "acceptedAnswers": ["24"],
-    "explanation": "Song song với y = 8x + 2 nên có hệ số góc m = 8. Đi qua (0, 0) nên y = 8x. Với x = 3 => d = 8(3) = 24."
+    "explanation": "Song song với y = 8x + 2 nên có hệ số góc m = 8. Đi qua (0, 0) nên phương trình là y = 8x. Với x = 3 => d = 8(3) = 24."
   },
   {
     "id": "math_algebra_q35",
@@ -536,7 +536,7 @@
     "options": {},
     "correctAnswer": "33",
     "acceptedAnswers": ["33"],
-    "explanation": "Vì (k - 5, b) là y-intercept nên hoành độ bằng 0 <=> k - 5 = 0 <=> k = 5. Điểm 1 là (5, 13), điểm 2 là (12, -15). Hệ số góc m = (-15 - 13)/(12 - 5) = -28/7 = -4. Phương trình y - 13 = -4(x - 5) => y = -4x + 33 => b = 33."
+    "explanation": "Vì (k - 5, b) là y-intercept nên hoành độ k - 5 = 0 <=> k = 5. Hai điểm là (5, 13) và (12, -15). Slope m = (-15 - 13)/(12 - 5) = -4. Phương trình: y - 13 = -4(x - 5) => y = -4x + 33. Khi x = 0 thì y = 33 => b = 33."
   },
   {
     "id": "math_algebra_q48",
@@ -547,13 +547,13 @@
     "prompt": "A window repair specialist charges $220 for the first two hours of repair plus an hourly fee for each additional hour. The total cost for 5 hours of repair is $400. Which function $f$ gives the total cost, in dollars, for $x$ hours of repair, where $x \\ge 2$?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "f(x) = 60x + 100",
-      "B": "f(x) = 60x + 220",
-      "C": "f(x) = 80x",
-      "D": "f(x) = 80x + 220"
+      "A": "$f(x) = 60x + 100$",
+      "B": "$f(x) = 60x + 220$",
+      "C": "$f(x) = 80x$",
+      "D": "$f(x) = 80x + 220$"
     },
     "correctAnswer": "A",
-    "explanation": "Chi phí 3 giờ tăng thêm (từ 2 đến 5 giờ) là 400 - 220 = 180 đô la => 60 đô la/giờ. Với x >= 2: f(x) = 220 + 60(x - 2) = 60x + 100."
+    "explanation": "Chi phí cho 3 giờ thêm (từ 2 đến 5 giờ) là 400 - 220 = 180 đô la => 60 đô la/giờ. Với x >= 2: f(x) = 220 + 60(x - 2) = 60x + 100."
   },
   {
     "id": "math_algebra_q49",
@@ -561,7 +561,7 @@
     "category": "Algebra",
     "section": "Math",
     "isGridIn": false,
-    "prompt": "An economist modeled the demand $Q$ for a certain product as a linear function of the selling price $P$. The demand was $20{,}000$ units when the selling price was $40 per unit, and the demand was $15{,}000$ units when the selling price was $60 per unit. Based on the model, what is the demand, in units, when the selling price is $55 per unit?",
+    "prompt": "An economist modeled the demand $Q$ for a certain product as a linear function of the selling price $P$. The demand was $20,000$ units when the selling price was $40 per unit, and the demand was $15,000$ units when the selling price was $60 per unit. Based on the model, what is the demand, in units, when the selling price is $55 per unit?",
     "question": "Which choice most logically answers the question?",
     "options": {
       "A": "16,250",
@@ -570,7 +570,7 @@
       "D": "17,500"
     },
     "correctAnswer": "A",
-    "explanation": "Độ dốc m = (15000 - 20000)/(60 - 40) = -250. Khi giá tăng từ 40 lên 55 (tăng 15 đô la), nhu cầu giảm 15 * 250 = 3750 đơn vị. Nhu cầu mới = 20000 - 3750 = 16,250."
+    "explanation": "Slope m = (15,000 - 20,000)/(60 - 40) = -250. Khi giá tăng từ 40 lên 55 (tăng 15 đô la), nhu cầu giảm 15 * 250 = 3,750 đơn vị. Nhu cầu mới = 20,000 - 3,750 = 16,250."
   },
   {
     "id": "math_algebra_q50",
@@ -581,10 +581,10 @@
     "prompt": "The cost of renting a backhoe for up to 10 days is $270 for the first day and $135 for each additional day. Which of the following equations gives the cost $y$, in dollars, of renting the backhoe for $x$ days, where $x$ is a positive integer and $x \\le 10$?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "y = 270x - 135",
-      "B": "y = 270x + 135",
-      "C": "y = 135x + 270",
-      "D": "y = 135x + 135"
+      "A": "$y = 270x - 135$",
+      "B": "$y = 270x + 135$",
+      "C": "$y = 135x + 270$",
+      "D": "$y = 135x + 135$"
     },
     "correctAnswer": "D",
     "explanation": "y = 270 + 135(x - 1) = 135x + 135."
@@ -617,7 +617,7 @@
     "options": {},
     "correctAnswer": "-12",
     "acceptedAnswers": ["-12"],
-    "explanation": "h(x) = (1/4 x - 9) + (3/4 x + 21) = x + 12. Giao điểm trục hoành khi h(x) = 0 <=> x + 12 = 0 <=> x = -12."
+    "explanation": "h(x) = (1/4 x - 9) + (3/4 x + 21) = x + 12. Giao điểm trục Ox khi h(x) = 0 <=> x + 12 = 0 <=> x = -12."
   },
   {
     "id": "math_algebra_q53",
@@ -634,7 +634,7 @@
       "D": "The average price per gallon on December 1, 2014"
     },
     "correctAnswer": "D",
-    "explanation": "Khi x = 3 (3 tháng sau ngày 1/9 là ngày 1/12), F(3) = 2.74 - 0.19(0) = 2.74. Vậy 2.74 là giá trung bình vào ngày 1/12/2014."
+    "explanation": "Khi x = 3 (tháng 12, cách tháng 9 đúng 3 tháng), F(3) = 2.74 - 0.19(0) = 2.74. Vậy 2.74 là giá trung bình vào ngày 1/12/2014."
   },
   {
     "id": "math_algebra_q54",
@@ -651,7 +651,7 @@
       "D": "192"
     },
     "correctAnswer": "D",
-    "explanation": "Độ dốc a = (0 - (-64))/(2 - 1) = 64. Với f(2) = 0 => 64(2) + b = 0 => b = -128. Do đó a - b = 64 - (-128) = 192."
+    "explanation": "Slope a = (0 - (-64))/(2 - 1) = 64. Với f(2) = 0 => 64(2) + b = 0 => b = -128. Vậy a - b = 64 - (-128) = 192."
   },
   {
     "id": "math_algebra_q55",
@@ -662,13 +662,13 @@
     "prompt": "Oil and gas production in a certain area dropped from 4 million barrels in 2000 to 1.9 million barrels in 2013. Assuming that the oil and gas production decreased at a constant rate, which of the following linear functions $f$ best models the production, in millions of barrels, $t$ years after the year 2000?",
     "question": "Which choice most logically answers the question?",
     "options": {
-      "A": "f(t) = \\dfrac{21}{130}t + 4",
-      "B": "f(t) = \\dfrac{19}{130}t + 4",
-      "C": "f(t) = -\\dfrac{21}{130}t + 4",
-      "D": "f(t) = -\\dfrac{19}{130}t + 4"
+      "A": "$f(t) = \\dfrac{21}{130}t + 4$",
+      "B": "$f(t) = \\dfrac{19}{130}t + 4$",
+      "C": "$f(t) = -\\dfrac{21}{130}t + 4$",
+      "D": "$f(t) = -\\dfrac{19}{130}t + 4$"
     },
     "correctAnswer": "C",
-    "explanation": "Tại t = 0 sản lượng là 4. Tại t = 13 sản lượng là 1.9. Tốc độ giảm là (1.9 - 4)/13 = -2.1/13 = -21/130."
+    "explanation": "Tại t = 0 sản lượng là 4. Tại t = 13 sản lượng là 1.9. Độ dốc = (1.9 - 4)/13 = -2.1/13 = -21/130."
   },
   {
     "id": "math_algebra_q63",
@@ -681,7 +681,7 @@
     "options": {},
     "correctAnswer": "1.5",
     "acceptedAnswers": ["1.5", "3/2"],
-    "explanation": "Cộng hai phương trình lại: 4y = 6 <=> y = 1.5."
+    "explanation": "Cộng hai phương trình: 4y = 6 <=> y = 1.5."
   },
   {
     "id": "math_algebra_q80",
@@ -698,7 +698,7 @@
       "D": "2"
     },
     "correctAnswer": "D",
-    "explanation": "Hệ hai đường thẳng không có nghiệm khi hai đường thẳng song song (cùng hệ số góc và khác tung độ gốc) => a = 2."
+    "explanation": "Hệ phương trình bậc nhất hai ẩn vô nghiệm khi hai đường thẳng song song (cùng hệ số góc và khác tung độ gốc) => a = 2."
   },
   {
     "id": "math_algebra_q82",
@@ -715,6 +715,6 @@
       "D": "12"
     },
     "correctAnswer": "B",
-    "explanation": "Đặt r là số pint raspberries, b là số pint blackberries. Hệ phương trình: 5.5r + 3b = 37 và 6.5r + 8b = 66. Nhân phương trình đầu với 13, phương trình hai với 11 rồi giải ra b = 5."
+    "explanation": "Đặt r là số pint raspberries, b là số pint blackberries. Ta có hệ: 5.5r + 3b = 37 và 6.5r + 8b = 66. Giải hệ ra b = 5 và r = 4."
   }
 ]

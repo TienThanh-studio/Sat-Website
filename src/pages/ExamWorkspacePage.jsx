@@ -1,252 +1,146 @@
-import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
-  X, Bookmark, ChevronRight, Calculator, BookOpen, 
-  RotateCcw, Highlighter, Eye, EyeOff, LogOut, Award, CheckCircle2
+  Eye, EyeOff, Calculator, BookOpen, LogOut, 
+  ChevronRight, Bookmark, CheckCircle2, XCircle, HelpCircle
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
 import ReferenceModal from '../components/exam/ReferenceModal';
 import MatrixModal from '../components/exam/MatrixModal';
-import { calculateSatSectionScore } from '../services/satIrtScoring';
+import questionService from '../services/questionService';
 
-// Component Timer độc lập chống re-render toàn trang và chống Stale Closure
-const Timer = memo(function Timer({ duration, isSubmitted, showTimer, onExpire }) {
-  const safeDuration = Number(duration) > 0 ? Number(duration) : 1800;
-  const [timeLeft, setTimeLeft] = useState(safeDuration);
-  const onExpireRef = useRef(onExpire);
+// Bọc công thức trong $ nếu có ký hiệu LaTeX mà chưa có delimiter
+function ensureMathDelimiters(str) {
+  if (!str) return '';
+  const text = String(str).trim();
+  if (text.includes('\\') && !text.startsWith('$')) {
+    return `$${text}$`;
+  }
+  return text;
+}
 
-  useEffect(() => {
-    onExpireRef.current = onExpire;
-  });
+export default function ExamWorkspacePage(props) {
+  // Tương thích linh hoạt với cả 2 cách gọi props
+  const sessionConfig = props.sessionConfig || props.config || {};
+  const onExit = props.onExit || props.onBack || (() => window.history.back());
 
-  useEffect(() => {
-    setTimeLeft(safeDuration);
-  }, [safeDuration]);
+  // Lấy danh sách câu hỏi: từ props hoặc trực tiếp từ questionService nếu rỗng
+  const questions = useMemo(() => {
+    if (sessionConfig?.questions && sessionConfig.questions.length > 0) {
+      return sessionConfig.questions;
+    }
+    if (props.questions && props.questions.length > 0) {
+      return props.questions;
+    }
+    // Fallback: lấy từ ngân hàng algebra nếu không có câu hỏi nào được truyền vào
+    return questionService.getQuestionsByCategory('algebra') || [];
+  }, [sessionConfig, props.questions]);
 
-  useEffect(() => {
-    if (isSubmitted) return;
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          onExpireRef.current?.();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [isSubmitted]);
-
-  const formatTimer = (secs) => {
-    const m = Math.floor(secs / 60);
-    const s = secs % 60;
-    return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
-  };
-
-  return (
-    <span className="font-mono font-bold text-lg text-slate-800 tracking-wider">
-      {showTimer ? formatTimer(timeLeft) : '--:--'}
-    </span>
-  );
-});
-
-export default function ExamWorkspacePage({ 
-  sessionConfig, 
-  onExit = () => {}
-}) {
-  const questions = Array.isArray(sessionConfig?.questions) ? sessionConfig.questions : [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [marked, setMarked] = useState({});
-  const [eliminatedOptions, setEliminatedOptions] = useState({});
-  const [isEliminateMode, setIsEliminateMode] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [showTimer, setShowTimer] = useState(true);
-  const [scoreResult, setScoreResult] = useState(null);
+  const [markedQuestions, setMarks] = useState(new Set());
+  const [eliminatedOptions, setEliminations] = useState({});
+  const [isEliminatorMode, setIsEliminatorMode] = useState(false);
+  const [checkedQuestions, setCheckedQuestions] = useState({});
 
   // Modals
-  const [showMatrix, setShowMatrix] = useState(false);
-  const [showDesmos, setShowDesmos] = useState(false);
-  const [showReference, setShowReference] = useState(false);
+  const [isDesmosOpen, setDesmosOpen] = useState(false);
+  const [isReferenceOpen, setReferenceOpen] = useState(false);
+  const [isMatrixOpen, setMatrixOpen] = useState(false);
 
-  // Floating Highlight Tooltip
-  const [floatingPos, setFloatingPos] = useState(null);
+  // Timer
+  const [isTimerVisible, setIsTimerVisible] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(() => Number(sessionConfig?.duration) || 2100);
 
-  // Ref cuộn trang cột trái (đề bài)
-  const passageRef = useRef(null);
+  const currentQ = questions[currentIndex] || {};
+  const currentQId = currentQ.id || `q_${currentIndex}`;
 
-  const currentQ = questions[currentIndex] || null;
+  const isMathSection = true; // Luôn bật tính năng Math cho Algebra
 
-  // Nhận diện bài thi Math để ẩn/hiện công cụ Calculator và Reference Sheet
-  const isMathSection = Boolean(
-    sessionConfig?.section?.toLowerCase()?.includes('math') ||
-    sessionConfig?.category?.toLowerCase()?.includes('algebra') ||
-    sessionConfig?.title?.toLowerCase()?.includes('algebra') ||
-    currentQ?.section?.toLowerCase()?.includes('math') ||
-    currentQ?.category?.toLowerCase()?.includes('algebra')
-  );
-
-  // Kẹp an toàn currentIndex khi độ dài questions thay đổi
   useEffect(() => {
-    if (questions.length === 0) return;
-    setCurrentIndex(i => Math.min(Math.max(0, i), questions.length - 1));
-  }, [questions.length]);
+    const timer = setInterval(() => {
+      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
-  // Xóa tooltip, selection và cuộn về đầu trang khi chuyển câu
-  useEffect(() => {
-    setFloatingPos(null);
-    if (window.getSelection) {
-      window.getSelection().removeAllRanges();
-    }
-    if (passageRef.current) {
-      passageRef.current.scrollTop = 0;
-    }
-  }, [currentIndex]);
+  const formatTime = (seconds) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${s < 10 ? '0' : ''}${s}`;
+  };
 
-  // Bắt sự kiện bôi đen để hiện tooltip Highlight
-  useEffect(() => {
-    const handleMouseUp = () => {
-      const selection = window.getSelection();
-      if (!selection || selection.isCollapsed || !selection.rangeCount) {
-        setFloatingPos(null);
-        return;
-      }
-
-      const text = selection.toString().trim();
-      if (!text) {
-        setFloatingPos(null);
-        return;
-      }
-
-      const range = selection.getRangeAt(0);
-      const rect = range.getBoundingClientRect();
-
-      setFloatingPos({
-        top: rect.top + window.scrollY - 38,
-        left: rect.left + window.scrollX + rect.width / 2
+  const handleSelectOption = (key) => {
+    if (isEliminatorMode) {
+      setEliminations(prev => {
+        const qElims = new Set(prev[currentQId] || []);
+        if (qElims.has(key)) qElims.delete(key);
+        else qElims.add(key);
+        return { ...prev, [currentQId]: qElims };
       });
-    };
-
-    const handleMouseDown = (e) => {
-      if (!e.target.closest('#floating-highlight-btn')) {
-        setFloatingPos(null);
-      }
-    };
-
-    document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
-
-  // Xử lý Highlight màu xanh pastel nhạt
-  const applyHighlight = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const selection = window.getSelection();
-    if (!selection || !selection.rangeCount || selection.isCollapsed) return;
-
-    const range = selection.getRangeAt(0);
-    const span = document.createElement('span');
-    span.className = 'bg-sky-100/90 text-sky-950 px-1 py-0.5 rounded cursor-pointer transition hover:bg-sky-200/90 border-b border-sky-300/60';
-    span.title = 'Nhấp đúp chuột để xóa highlight';
-
-    span.ondblclick = () => {
-      span.replaceWith(...span.childNodes);
-    };
-
-    try {
-      range.surroundContents(span);
-      selection.removeAllRanges();
-      setFloatingPos(null);
-    } catch {
-      setFloatingPos(null);
+      return;
     }
-  }, []);
 
-  const handleSelectOption = useCallback((key) => {
-    setAnswers(prev => {
-      if (isSubmitted || isEliminateMode || !currentQ) return prev;
-      return { ...prev, [currentQ.id]: key };
+    setAnswers(prev => ({
+      ...prev,
+      [currentQId]: key
+    }));
+  };
+
+  const toggleMark = () => {
+    setMarks(prev => {
+      const next = new Set(prev);
+      if (next.has(currentQId)) next.delete(currentQId);
+      else next.add(currentQId);
+      return next;
     });
-  }, [isSubmitted, isEliminateMode, currentQ]);
+  };
 
-  const handleToggleEliminate = useCallback((e, key) => {
-    e.stopPropagation();
-    if (isSubmitted || !currentQ) return;
-    setEliminatedOptions(prev => {
-      const qElims = prev[currentQ.id] || [];
-      const updated = qElims.includes(key) 
-        ? qElims.filter(k => k !== key) 
-        : [...qElims, key];
-      return { ...prev, [currentQ.id]: updated };
-    });
-  }, [isSubmitted, currentQ]);
+  const handleCheckCurrentAnswer = () => {
+    setCheckedQuestions(prev => ({
+      ...prev,
+      [currentQId]: true
+    }));
+  };
 
-  const handleToggleMark = useCallback(() => {
-    if (!currentQ) return;
-    setMarked(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
+  const isChecked = !!checkedQuestions[currentQId];
+  const userAns = answers[currentQId];
+
+  const isCurrentCorrect = useMemo(() => {
+    if (!userAns) return false;
+    const cleanUser = String(userAns).trim().toLowerCase();
+    if (currentQ.isGridIn) {
+      const valid = (currentQ.acceptedAnswers || [currentQ.correctAnswer]).map(a => String(a).trim().toLowerCase());
+      return valid.includes(cleanUser);
+    }
+    return cleanUser === String(currentQ.correctAnswer).trim().toLowerCase();
+  }, [userAns, currentQ]);
+
+  // Chuẩn hóa Options thành mảng [{ key: 'A', text: '...' }]
+  const renderableOptions = useMemo(() => {
+    if (!currentQ.options) return [];
+    if (Array.isArray(currentQ.options)) {
+      return currentQ.options.map((opt, i) => ({
+        key: opt.key || opt.label || String.fromCharCode(65 + i),
+        text: typeof opt === 'string' ? opt : (opt.text || opt.value || '')
+      }));
+    }
+    return Object.entries(currentQ.options).map(([key, value]) => ({
+      key,
+      text: typeof value === 'string' ? value : (value?.text || '')
+    }));
   }, [currentQ]);
 
-  // Nộp bài thi: Tính điểm IRT thực tế và lưu câu sai vào sổ tay
-  const handleSubmitExam = useCallback(() => {
-    setIsSubmitted(prevSubmitted => {
-      if (prevSubmitted) return prevSubmitted;
-
-      const mistakeList = [];
-      const responses = questions.map(q => {
-        const userAns = answers[q.id];
-        const isCorrect = userAns === q.correctAnswer;
-        if (!isCorrect) {
-          mistakeList.push({
-            ...q,
-            userAnswer: userAns || 'Chưa trả lời',
-            date: new Date().toLocaleDateString()
-          });
-        }
-        return {
-          difficulty: q.difficulty || (q.questionNumber > 18 ? 'hard' : q.questionNumber > 8 ? 'medium' : 'easy'),
-          correct: isCorrect
-        };
-      });
-
-      // Chấm điểm bằng thuật toán IRT (3PL Model)
-      const irtScore = calculateSatSectionScore({
-        module1Responses: responses,
-        module2Responses: [],
-        forcedBranch: 'hard'
-      });
-      setScoreResult(irtScore);
-
-      try {
-        const existing = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
-        const combined = [...mistakeList, ...existing.filter(e => !mistakeList.some(m => m.id === e.id))];
-        localStorage.setItem('sat_mistakes', JSON.stringify(combined));
-      } catch (err) {
-        console.error('Không thể lưu sat_mistakes vào localStorage:', err);
-      }
-
-      return true;
-    });
-  }, [questions, answers]);
-
-  const goToIndex = useCallback((idx) => {
-    setCurrentIndex(() => {
-      if (questions.length === 0) return 0;
-      return Math.max(0, Math.min(questions.length - 1, idx));
-    });
-  }, [questions.length]);
-
-  if (!currentQ) {
+  if (!questions || questions.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 font-sans">
-        <div className="text-center p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <p className="text-slate-600 font-bold mb-4">Không tìm thấy câu hỏi trong bài thi.</p>
-          <button onClick={onExit} className="px-5 py-2 bg-slate-900 text-white rounded-xl text-xs font-bold cursor-pointer">
+      <div className="flex h-screen items-center justify-center bg-slate-50">
+        <div className="text-center p-8 bg-white rounded-2xl shadow-sm border border-slate-200">
+          <p className="text-slate-600 font-medium">Không tìm thấy câu hỏi nào trong danh mục này.</p>
+          <button 
+            type="button"
+            onClick={onExit} 
+            className="mt-4 px-5 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-bold"
+          >
             Quay lại
           </button>
         </div>
@@ -254,307 +148,279 @@ export default function ExamWorkspacePage({
     );
   }
 
-  const qElims = eliminatedOptions[currentQ.id] || [];
-
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-between font-sans select-text">
-      
-      {/* NÚT HIGHLIGHT NỔI */}
-      {floatingPos && (
-        <button
-          id="floating-highlight-btn"
-          onMouseDown={applyHighlight}
-          style={{ 
-            top: `${floatingPos.top}px`, 
-            left: `${floatingPos.left}px`,
-            transform: 'translateX(-50%)'
-          }}
-          className="fixed z-50 flex items-center gap-1.5 px-3 py-1 bg-sky-700 hover:bg-sky-800 text-white rounded-full shadow-lg text-xs font-semibold cursor-pointer transition active:scale-95 animate-fadeIn"
-        >
-          <Highlighter className="w-3.5 h-3.5 text-sky-200" />
-          <span>Highlight</span>
-        </button>
-      )}
-
-      {/* TOP BAR CHUẨN BLUEBOOK */}
-      <header className="h-16 border-b border-slate-200 px-6 flex items-center justify-between bg-white shrink-0 z-20">
-        <div className="space-y-0.5">
-          <h1 className="font-bold text-slate-900 text-sm tracking-tight">
-            {sessionConfig?.title || 'Digital SAT Practice'}
+    <div className="flex flex-col h-screen bg-slate-50 text-slate-800 select-none">
+      {/* TOP HEADER */}
+      <header className="h-14 border-b border-slate-200 bg-white px-6 flex items-center justify-between shrink-0 z-10">
+        <div>
+          <h1 className="font-bold text-sm text-slate-900">
+            {sessionConfig?.title || 'Luyện tập: Algebra (Đại số tuyến tính)'}
           </h1>
-          <p className="text-[11px] text-slate-400 font-medium">
-            {isMathSection ? 'Math Section' : 'Reading & Writing'} • {sessionConfig?.category || 'Official Practice'}
+          <p className="text-[11px] text-slate-400">
+            Math Section • Câu {currentIndex + 1}/{questions.length}
           </p>
         </div>
 
-        {/* TIMER ĐỘC LẬP */}
-        <div className="flex flex-col items-center">
-          <Timer
-            duration={sessionConfig?.duration}
-            isSubmitted={isSubmitted}
-            showTimer={showTimer}
-            onExpire={handleSubmitExam}
-          />
-          <button
+        {/* TIMER */}
+        <div className="flex items-center gap-2">
+          {isTimerVisible && (
+            <span className="font-mono text-base font-bold text-slate-700">
+              {formatTime(timeLeft)}
+            </span>
+          )}
+          <button 
             type="button"
-            onClick={() => setShowTimer(prev => !prev)}
-            className="flex items-center gap-1 text-[11px] font-semibold text-slate-500 hover:text-slate-800 transition px-2 py-0.5 rounded-md hover:bg-slate-100 cursor-pointer"
+            onClick={() => setIsTimerVisible(!isTimerVisible)}
+            className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-700 px-2 py-1 rounded cursor-pointer"
           >
-            {showTimer ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
-            <span>{showTimer ? 'Hide' : 'Show'}</span>
+            {isTimerVisible ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+            <span>{isTimerVisible ? 'Hide' : 'Show'}</span>
           </button>
         </div>
 
-        {/* CỤM NÚT CÔNG CỤ */}
-        <div className="flex items-center gap-5">
-          <button
-            type="button"
-            onClick={() => {
-              const selection = window.getSelection();
-              if (selection && !selection.isCollapsed) {
-                applyHighlight({ preventDefault: () => {}, stopPropagation: () => {} });
-              } else {
-                alert('Hãy bôi đen một đoạn văn bản trong đề thi để highlight.');
-              }
-            }}
-            className="flex flex-col items-center group text-slate-600 hover:text-sky-700 transition cursor-pointer"
-            title="Đánh dấu đoạn văn bản"
-          >
-            <Highlighter className="w-4 h-4 mb-0.5 group-hover:scale-110 transition" />
-            <span className="text-[11px] font-medium">Highlight</span>
-          </button>
-
+        {/* TOOLS */}
+        <div className="flex items-center gap-2">
           {isMathSection && (
-            <button
-              type="button"
-              onClick={() => setShowDesmos(true)}
-              className="flex flex-col items-center group text-slate-600 hover:text-indigo-600 transition cursor-pointer"
-              title="Máy tính đồ thị Desmos"
-            >
-              <Calculator className="w-4 h-4 mb-0.5 group-hover:scale-110 transition" />
-              <span className="text-[11px] font-medium">Calculator</span>
-            </button>
+            <>
+              <button 
+                type="button"
+                onClick={() => setDesmosOpen(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-100 rounded-lg transition cursor-pointer"
+              >
+                <Calculator className="w-4 h-4 text-indigo-600" />
+                Calculator
+              </button>
+              <button 
+                type="button"
+                onClick={() => setReferenceOpen(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-100 rounded-lg transition cursor-pointer"
+              >
+                <BookOpen className="w-4 h-4 text-emerald-600" />
+                Reference
+              </button>
+            </>
           )}
 
-          {isMathSection && (
-            <button
-              type="button"
-              onClick={() => setShowReference(true)}
-              className="flex flex-col items-center group text-slate-600 hover:text-indigo-600 transition cursor-pointer"
-              title="Bảng công thức hình học"
-            >
-              <BookOpen className="w-4 h-4 mb-0.5 group-hover:scale-110 transition" />
-              <span className="text-[11px] font-medium">Reference</span>
-            </button>
-          )}
-
-          <button
+          <button 
             type="button"
             onClick={onExit}
-            className="flex flex-col items-center group text-slate-600 hover:text-rose-600 transition cursor-pointer"
-            title="Lưu tiến trình và thoát bài thi"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-50 rounded-lg transition ml-2 cursor-pointer"
           >
-            <LogOut className="w-4 h-4 mb-0.5 group-hover:scale-110 transition" />
-            <span className="text-[11px] font-medium">Save & Exit</span>
+            <LogOut className="w-4 h-4" />
+            Save & Exit
           </button>
         </div>
       </header>
 
-      {/* KHU VỰC LÀM BÀI 2 CỘT */}
-      <main className="flex-1 w-full max-w-[1550px] mx-auto px-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-8 overflow-hidden">
+      {/* WORKSPACE BODY */}
+      <main className="flex-1 flex overflow-hidden">
         {/* CỘT TRÁI: ĐỀ BÀI */}
-        <div ref={passageRef} className="h-full flex flex-col overflow-y-auto pr-4 border-r border-slate-200/80">
-          <div className="text-[14px] text-slate-800 leading-[1.8] font-serif selection:bg-sky-200">
-            <MathRenderer text={currentQ.prompt || currentQ.passage || ''} />
+        <div className="w-1/2 p-8 overflow-y-auto border-r border-slate-200 bg-white">
+          <div className="max-w-xl mx-auto space-y-4 text-slate-800 text-[15px] leading-relaxed">
+            <MathRenderer text={currentQ.prompt} />
           </div>
         </div>
 
-        {/* CỘT PHẢI: CÂU HỎI & ĐÁP ÁN */}
-        <div className="h-full flex flex-col justify-between overflow-y-auto pl-2 space-y-6">
-          <div className="space-y-5">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+        {/* CỘT PHẢI: PHƯƠNG ÁN CHỌN */}
+        <div className="w-1/2 p-8 overflow-y-auto bg-slate-50 flex flex-col justify-between">
+          <div className="max-w-xl mx-auto w-full space-y-5">
+            {/* Header câu hỏi */}
+            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
               <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-slate-900 text-white rounded-md flex items-center justify-center font-bold text-xs">
-                  {currentIndex + 1}
-                </div>
-
-                <button
+                <span className="w-7 h-7 rounded-md bg-slate-900 text-white font-bold text-xs flex items-center justify-center">
+                  {currentQ.questionNumber || currentIndex + 1}
+                </span>
+                <button 
                   type="button"
-                  onClick={handleToggleMark}
-                  className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer"
+                  onClick={toggleMark}
+                  className={`flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded transition cursor-pointer ${
+                    markedQuestions.has(currentQId) 
+                      ? 'text-amber-700 bg-amber-100' 
+                      : 'text-slate-500 hover:bg-slate-200'
+                  }`}
                 >
-                  <Bookmark className={`w-3.5 h-3.5 ${marked[currentQ.id] ? 'text-amber-500 fill-amber-500' : 'text-slate-400'}`} />
-                  <span>Mark for review</span>
+                  <Bookmark className={`w-3.5 h-3.5 ${markedQuestions.has(currentQId) ? 'fill-amber-600 text-amber-600' : ''}`} />
+                  Mark for review
                 </button>
               </div>
 
-              <button
-                type="button"
-                onClick={() => setIsEliminateMode(prev => !prev)}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-bold transition cursor-pointer border ${
-                  isEliminateMode 
-                    ? 'bg-rose-50 border-rose-300 text-rose-700' 
-                    : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
-                title="Bật/Tắt gạch đáp án"
-              >
-                <span className="line-through">ABC</span>
-              </button>
+              {!currentQ.isGridIn && (
+                <button 
+                  type="button"
+                  onClick={() => setIsEliminatorMode(!isEliminatorMode)}
+                  className={`px-2.5 py-1 text-xs font-bold rounded tracking-wider transition cursor-pointer ${
+                    isEliminatorMode 
+                      ? 'bg-indigo-600 text-white shadow-xs' 
+                      : 'text-slate-500 hover:bg-slate-200 border border-slate-300'
+                  }`}
+                >
+                  ABC
+                </button>
+              )}
             </div>
 
-            <div className="text-xs font-bold text-slate-900 font-serif leading-relaxed">
-              <MathRenderer text={currentQ.question || ''} />
+            {/* Dòng câu hỏi */}
+            <div className="font-semibold text-slate-900 text-[14px]">
+              <MathRenderer text={currentQ.question} />
             </div>
 
+            {/* DANH SÁCH LỰA CHỌN */}
             {currentQ.isGridIn ? (
-              <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
-                <label className="block text-xs font-bold text-slate-700">Điền câu trả lời của bạn:</label>
-                <input
-                  type="text"
-                  disabled={isSubmitted}
-                  value={answers[currentQ.id] || ''}
-                  onChange={(e) => setAnswers(prev => ({ ...prev, [currentQ.id]: e.target.value }))}
-                  placeholder="Nhập số hoặc phân số (ví dụ: 1.5 hoặc 16/17)"
-                  className="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl font-mono text-sm font-bold focus:ring-2 focus:ring-sky-500 outline-none"
+              <div className="mt-4">
+                <label className="block text-xs font-medium text-slate-600 mb-2">Nhập kết quả số của bạn:</label>
+                <input 
+                  type="text" 
+                  value={userAns || ''}
+                  onChange={(e) => setAnswers({ ...answers, [currentQId]: e.target.value })}
+                  placeholder="Ví dụ: 1.5 hoặc 3/2"
+                  className="w-full max-w-xs px-4 py-2.5 border border-slate-300 rounded-xl bg-white focus:outline-hidden focus:ring-2 focus:ring-indigo-500 font-mono text-base"
                 />
               </div>
             ) : (
-              <div className="space-y-2.5">
-                {currentQ.options && Object.entries(currentQ.options).map(([key, val]) => {
-                  const isSelected = answers[currentQ.id] === key;
-                  const isElim = qElims.includes(key);
+              <div className="space-y-3">
+                {renderableOptions.map(({ key, text }) => {
+                  const isSelected = userAns === key;
+                  const isEliminated = eliminatedOptions[currentQId]?.has(key);
+                  const isCorrectChoice = key === currentQ.correctAnswer;
+
+                  let borderClass = 'border-slate-300 hover:border-slate-400 bg-white';
+                  if (isSelected) borderClass = 'border-indigo-600 bg-indigo-50/50 ring-1 ring-indigo-600';
+
+                  if (isChecked) {
+                    if (isCorrectChoice) {
+                      borderClass = 'border-emerald-500 bg-emerald-50/90 ring-1 ring-emerald-500 text-emerald-950 font-medium';
+                    } else if (isSelected && !isCorrectChoice) {
+                      borderClass = 'border-rose-400 bg-rose-50/90 ring-1 ring-rose-400 text-rose-950';
+                    }
+                  }
 
                   return (
-                    <div
+                    <div 
                       key={key}
                       onClick={() => handleSelectOption(key)}
-                      className={`group p-3.5 rounded-xl border flex items-center justify-between cursor-pointer transition ${
-                        isElim 
-                          ? 'opacity-35 bg-slate-100 border-slate-200 line-through' 
-                          : isSelected 
-                            ? 'bg-sky-50/70 border-sky-600 ring-1 ring-sky-600 shadow-2xs' 
-                            : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50/60'
+                      className={`flex items-center justify-between p-3.5 border rounded-xl cursor-pointer transition select-none ${borderClass} ${
+                        isEliminated ? 'opacity-40 line-through' : ''
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <span className={`w-5 h-5 rounded-full border text-xs font-bold flex items-center justify-center transition ${
-                          isSelected 
-                            ? 'border-sky-600 bg-sky-600 text-white' 
-                            : 'border-slate-300 bg-white text-slate-600 group-hover:border-slate-400'
+                        <span className={`w-6 h-6 rounded-full border text-xs font-bold flex items-center justify-center shrink-0 ${
+                          isSelected ? 'bg-indigo-600 text-white border-indigo-600' : 'border-slate-400 text-slate-700 bg-white'
                         }`}>
                           {key}
                         </span>
-                        <div className="text-xs text-slate-800 font-serif">
-                          <MathRenderer text={val} />
+                        <div className="text-[14px] text-slate-800">
+                          <MathRenderer text={ensureMathDelimiters(text)} />
                         </div>
                       </div>
 
-                      <button
-                        type="button"
-                        onClick={(e) => handleToggleEliminate(e, key)}
-                        className="text-slate-300 hover:text-rose-600 p-1 rounded transition text-xs font-bold"
-                        title="Loại trừ đáp án này"
-                      >
-                        {isElim ? <RotateCcw className="w-3.5 h-3.5 text-slate-500" /> : <X className="w-3.5 h-3.5" />}
-                      </button>
+                      {isChecked && isCorrectChoice && (
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 ml-2" />
+                      )}
+                      {isChecked && isSelected && !isCorrectChoice && (
+                        <XCircle className="w-5 h-5 text-rose-500 shrink-0 ml-2" />
+                      )}
                     </div>
                   );
                 })}
               </div>
             )}
-          </div>
 
-          {/* BẢNG KẾT QUẢ VÀ ĐIỂM IRT SAU KHI NỘP */}
-          {isSubmitted && (
-            <div className="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
-              {scoreResult && (
-                <div className="p-3 bg-indigo-50 border border-indigo-200 rounded-xl flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-indigo-600" />
-                    <div>
-                      <span className="text-xs font-bold text-indigo-900 block">Điểm SAT IRT ước tính</span>
-                      <span className="text-[10px] text-indigo-600 font-medium">Năng lực theta: {scoreResult.thetaFinal}</span>
-                    </div>
-                  </div>
-                  <span className="text-2xl font-black text-indigo-700">{scoreResult.scaledScore} / 800</span>
+            {/* BẢNG LỜI GIẢI SAU KHI CHECK */}
+            {isChecked && (
+              <div className={`p-4 rounded-xl border mt-4 text-xs space-y-2 ${
+                isCurrentCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-rose-50 border-rose-200 text-rose-900'
+              }`}>
+                <div className="flex items-center gap-2 font-bold text-sm">
+                  {isCurrentCorrect ? (
+                    <>
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      <span>Chính xác!</span>
+                    </>
+                  ) : (
+                    <>
+                      <XCircle className="w-4 h-4 text-rose-600" />
+                      <span>Chưa chính xác (Đáp án chuẩn: {currentQ.correctAnswer})</span>
+                    </>
+                  )}
                 </div>
-              )}
-
-              <div className="text-xs space-y-1">
-                <span className="font-bold text-emerald-800 flex items-center gap-1">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  Đáp án chính xác: ({currentQ.correctAnswer})
-                </span>
                 {currentQ.explanation && (
-                  <p className="text-slate-600 pt-1 font-serif leading-relaxed">{currentQ.explanation}</p>
+                  <div className="text-slate-700 leading-relaxed pt-2 border-t border-slate-200/60 font-sans">
+                    <strong>Giải thích chi tiết: </strong>
+                    <MathRenderer text={currentQ.explanation} />
+                  </div>
                 )}
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </main>
 
-      {/* FOOTER BAR */}
-      <footer className="h-16 border-t border-slate-200 px-6 flex items-center justify-between bg-white shrink-0">
-        <button
+      {/* FOOTER */}
+      <footer className="h-16 border-t border-slate-200 bg-white px-8 flex items-center justify-between shrink-0">
+        <button 
           type="button"
-          onClick={() => setShowMatrix(true)}
-          className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer"
+          onClick={() => setMatrixOpen(true)}
+          className="text-xs font-semibold text-slate-700 hover:text-slate-900 flex items-center gap-1.5 cursor-pointer"
         >
           <span>Question {currentIndex + 1} of {questions.length}</span>
-          <ChevronRight className="w-4 h-4" />
+          <ChevronRight className="w-3.5 h-3.5 rotate-90" />
         </button>
 
         <div className="flex items-center gap-3">
-          <button
+          {/* NÚT KIỂM TRA ĐÁP ÁN */}
+          <button 
+            type="button"
+            onClick={handleCheckCurrentAnswer}
+            disabled={!userAns}
+            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+              userAns 
+                ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs cursor-pointer' 
+                : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
+            }`}
+          >
+            <HelpCircle className="w-4 h-4" />
+            Check
+          </button>
+
+          <button 
             type="button"
             disabled={currentIndex === 0}
-            onClick={() => goToIndex(currentIndex - 1)}
-            className="px-5 py-2 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 disabled:opacity-30 hover:bg-slate-50 transition cursor-pointer"
+            onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
+            className="px-4 py-2 border border-slate-300 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-40 cursor-pointer"
           >
             Back
           </button>
-          
-          {currentIndex < questions.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => goToIndex(currentIndex + 1)}
-              className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition cursor-pointer shadow-xs"
-            >
-              Next
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={handleSubmitExam}
-              className="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold shadow-xs transition cursor-pointer"
-            >
-              Submit
-            </button>
-          )}
+
+          <button 
+            type="button"
+            onClick={() => {
+              if (currentIndex < questions.length - 1) {
+                setCurrentIndex(prev => prev + 1);
+              }
+            }}
+            className="px-5 py-2 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition cursor-pointer"
+          >
+            {currentIndex === questions.length - 1 ? 'Finish' : 'Next'}
+          </button>
         </div>
       </footer>
 
       {/* MODALS */}
-      <MatrixModal
-        isOpen={showMatrix}
-        onClose={() => setShowMatrix(false)}
-        questions={questions}
-        currentIndex={currentIndex}
-        onSelectIndex={goToIndex}
-        answers={answers}
-        marked={marked}
-      />
-
-      <DesmosModal
-        isOpen={showDesmos}
-        onClose={() => setShowDesmos(false)}
-      />
-
-      <ReferenceModal
-        isOpen={showReference}
-        onClose={() => setShowReference(false)}
-      />
+      {isDesmosOpen && <DesmosModal onClose={() => setDesmosOpen(false)} />}
+      {isReferenceOpen && <ReferenceModal onClose={() => setReferenceOpen(false)} />}
+      {isMatrixOpen && (
+        <MatrixModal 
+          questions={questions}
+          currentIndex={currentIndex}
+          answers={answers}
+          markedQuestions={markedQuestions}
+          onSelect={(idx) => {
+            setCurrentIndex(idx);
+            setMatrixOpen(false);
+          }}
+          onClose={() => setMatrixOpen(false)}
+        />
+      )}
     </div>
   );
 }

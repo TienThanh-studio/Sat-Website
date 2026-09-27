@@ -6,7 +6,7 @@ import grammarData from '../data/questions/grammar.json';
 import inferenceData from '../data/questions/inference.json';
 import transitionData from '../data/questions/transition.json';
 import vocabularyData from '../data/questions/vocabulary.json';
-import algebraData from '../data/questions/algebra.json';
+import algebraQuestions from '../data/questions/algebra.json';
 
 // Cấu hình đầy đủ danh mục SAT (Reading & Writing + Math)
 export const DEFAULT_CATEGORIES = [
@@ -83,7 +83,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Heart of Algebra',
     section: 'Math',
     description: 'Phương trình tuyến tính, hệ phương trình, bất đẳng thức và đồ thị đường thẳng.',
-    questions: algebraData || []
+    questions: algebraQuestions || []
   },
   {
     id: 'advanced-math',
@@ -112,28 +112,21 @@ export const DEFAULT_CATEGORIES = [
 ];
 
 export const questionService = {
-  // Lấy toàn bộ danh mục kèm số lượng câu hỏi thực tế (bao gồm cả câu upload vào localStorage)
+  // Lấy toàn bộ danh mục chuẩn (không gộp trùng lặp câu hỏi từ cache)
   getCategories: () => {
-    const uploadedMath = JSON.parse(localStorage.getItem('sat_math_questions') || '[]');
-    
     return DEFAULT_CATEGORIES.map(cat => {
-      let qList = [...(cat.questions || [])];
-      
-      // Nếu là Math, gộp thêm các câu đã upload qua LaTeX Parser nếu có
-      if (cat.section === 'Math') {
-        const extra = uploadedMath.filter(q => 
-          q.category?.toLowerCase() === cat.title?.toLowerCase() ||
-          q.category?.toLowerCase() === cat.id?.toLowerCase()
-        );
-        qList = [...qList, ...extra];
-      }
-
+      const qList = [...(cat.questions || [])];
       return {
         ...cat,
         questionCount: qList.length,
         questions: qList
       };
     });
+  },
+
+  // Lấy danh sách câu hỏi Math
+  getAllMathQuestions: () => {
+    return [...algebraQuestions];
   },
 
   // Lấy câu hỏi theo ID danh mục
