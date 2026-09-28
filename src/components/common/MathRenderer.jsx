@@ -7,32 +7,40 @@ function restoreCurrencies(str) {
   return str.replace(/CURR_DOLLAR_([0-9,\.]+)/g, (_, val) => `$${val}`);
 }
 
-// BỘ XỬ LÝ GỘP DẤU TIẾNG VIỆT CHUẨN XÁC 100%
+// BỘ LÀM SẠCH VÀ GỘP DẤU TIẾNG VIỆT TOÀN DIỆN
 function cleanVietnameseText(str) {
   if (!str) return '';
 
   let text = String(str);
 
-  // 1. Thay thế các dấu rời rạc gõ sai (Acute accent, grave, circumflex standalone)
-  // Biến 'ấ´', 'ế´' hay 'ấ ´' thành chữ chuẩn
-  text = text
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[´\u0301\u02CA\u00B4]([a-zA-ZÀ-ỹ])/g, '$1$2')
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[`\u0300\u02CB]([a-zA-ZÀ-ỹ])/g, '$1$2')
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[\^\u0302]([a-zA-ZÀ-ỹ])/g, '$1$2')
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[~\u0303]([a-zA-ZÀ-ỹ])/g, '$1$2')
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[ˀ\u0309]([a-zA-ZÀ-ỹ])/g, '$1$2')
-    .replace(/([a-zA-ZÀ-ỹ])[\s]*[\.\u0323]([a-zA-ZÀ-ỹ])/g, '$1$2');
+  // 1. Chuẩn hóa NFD trước để phân rã, sau đó đưa về NFC chuẩn dựng sẵn
+  try {
+    text = text.normalize('NFC');
+  } catch (e) {
+    // fallback nếu môi trường cũ
+  }
 
-  // Xóa dấu thanh đứng đơn lẻ ngay sau nguyên âm tiếng Việt
-  text = text.replace(/([a-zA-ZÀ-ỹ])[´\u0301\u02CA\u00B4`\u0300\u02CB\^~]/g, '$1');
+  // 2. Xóa triệt để các ký tự dấu thanh rời rạc (Spacing Diacritical Modifiers) 
+  // bao gồm: ´ (U+00B4, U+02CA), ` (U+0060, U+02CB), ^ (U+005E, U+02C6), ~ (U+007E, U+02DC)
+  // khi chúng đứng kẹp giữa hoặc sau các chữ cái tiếng Việt
+  text = text.replace(/([a-zA-ZÀ-ỹ])\s*[´\u00B4\u02CA\u0301]\s*([a-zA-ZÀ-ỹ])/g, '$1$2');
+  text = text.replace(/([a-zA-ZÀ-ỹ])\s*[`\u0060\u02CB\u0300]\s*([a-zA-ZÀ-ỹ])/g, '$1$2');
+  text = text.replace(/([a-zA-ZÀ-ỹ])\s*[\^\u005E\u02C6\u0302]\s*([a-zA-ZÀ-ỹ])/g, '$1$2');
+  text = text.replace(/([a-zA-ZÀ-ỹ])\s*[~\u007E\u02DC\u0303]\s*([a-zA-ZÀ-ỹ])/g, '$1$2');
 
-  // 2. Chuẩn hóa triệt để Unicode về chuẩn Dựng sẵn (NFC)
+  // Xóa các dấu rời rạc đứng ngay sau nguyên âm tiếng Việt đã có dấu (ví dụ: số´ -> số, chấ´ -> chất)
+  text = text.replace(/([áàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ])\s*[´\u00B4\u02CA\u0301`\u0060\u02CB\u0300\^\u005E\u02C6\u0302~]/g, '$1');
+
+  // Xóa dấu thanh độc lập đứng lẻ giữa các từ
+  text = text.replace(/\s+[´\u00B4\u02CA`\u0060\u02CB\^~]\s+/g, ' ');
+
+  // 3. Chuẩn hóa lại NFC lần cuối để đảm bảo chữ liền mạch
   text = text.normalize('NFC');
 
-  // 3. Tự động xuống dòng và định dạng phần trích dẫn bản quyền (ví dụ: ©2001 by...)
+  // 4. Xử lý phần trích dẫn bản quyền SAT (©2001 by...)
   text = text.replace(/(\.|\?|\!)\s*(©\s*\d{4}[^\n\r]*)/gi, '$1\n\n<span class="block mt-3 pt-2 border-t border-slate-200/60 text-xs text-slate-500 italic font-sans">$2</span>');
 
-  // 4. Chuẩn hóa dấu gạch ngang dài SAT Em-dash
+  // 5. Chuẩn hóa dấu gạch ngang dài SAT Em-dash
   text = text.replace(/\s*---\s*/g, ' — ').replace(/\s*--\s*/g, ' — ');
 
   return text;
@@ -57,12 +65,11 @@ function renderKaTeXBlock(formula) {
 export default function MathRenderer({ text = '', className = '' }) {
   if (!text) return null;
 
-  // Tiền xử lý gộp dấu tiếng Việt
   let processedStr = cleanVietnameseText(String(text));
 
-  // 1. Tách các thẻ HTML ra trước để không bị regex KaTeX chia cắt
+  // 1. Tách các khối HTML
   const htmlBlocks = [];
-  let placeholderStr = processedStr.replace(/<(div|span|table)[\s\S]*?<\/\1>/gi, (match) => {
+  let placeholderStr = processedStr.replace(/<(div|span|table|mark)[\s\S]*?<\/\1>/gi, (match) => {
     const renderedInner = match.replace(/\$([^\$\n]+?)\$/g, (_, formula) => {
       return renderKaTeXInline(formula.trim());
     });
@@ -105,7 +112,7 @@ export default function MathRenderer({ text = '', className = '' }) {
           return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
         }
 
-        // Khối HTML đã bóc tách
+        // Khối HTML
         if (part.includes('___HTML_BLOCK_HOLDER_')) {
           const blockParts = part.split(/(___HTML_BLOCK_HOLDER_\d+___)/g);
           return (
@@ -127,7 +134,7 @@ export default function MathRenderer({ text = '', className = '' }) {
           );
         }
 
-        // Markdown in đậm **text**
+        // In đậm Markdown **text**
         if (part.includes('**')) {
           const boldParts = part.split(/(\*\*[^*]+\*\*)/g);
           return (
@@ -142,7 +149,7 @@ export default function MathRenderer({ text = '', className = '' }) {
           );
         }
 
-        // Giữ khoảng xuống dòng tự nhiên
+        // Xuống dòng tự nhiên
         if (part.includes('\n\n')) {
           const paragraphs = part.split('\n\n');
           return (

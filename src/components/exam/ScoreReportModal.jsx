@@ -1,4 +1,5 @@
 // src/components/exam/ScoreReportModal.jsx
+import PacingAnalysisCard from './PacingAnalysisCard';
 import React, { useMemo, useState, useCallback } from 'react';
 import {
   X,
@@ -434,6 +435,15 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
               </div>
             )}
           </section>
+
+          {/* PHÂN TÍCH NHỊP ĐỘ LÀM BÀI & BẪY THỜI GIAN */}
+<section>
+  <PacingAnalysisCard 
+    questionTimes={data.questionTimes || {}} 
+    questions={questions} 
+    section={data.section || 'Reading & Writing'} 
+  />
+</section>
 
           {/* Review matrix */}
           <section>

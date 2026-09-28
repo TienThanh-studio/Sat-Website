@@ -1,0 +1,488 @@
+[
+  {
+    "id": "sat11_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Ezra Pound's poetry can be hard to ______: it is dense, experimental, and so full of references and allusions that many readers have a difficult time even identifying the poems' subjects.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "comprehend",
+      "B": "dislike",
+      "C": "interrupt",
+      "D": "overlook"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it most logically completes the text's discussion of Ezra Pound's poetry. In this context, 'comprehend' means to understand or grasp the meaning of something. The text describes Pound's poetry as 'dense' and 'experimental,' noting that many readers have difficulty even identifying what the poems are about."
+  },
+  {
+    "id": "sat11_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The unique subak water management system used to irrigate the rice paddy fields of the Indonesian island of Bali has rich cultural, philosophical, and historical significance dating back to the ninth century. The many elements of subak—terraces, canals, and water temples—are ______: they are joined together into a single cohesive unit.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "outmoded",
+      "B": "informal",
+      "C": "interconnected",
+      "D": "optional"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it most logically completes the text's discussion of Bali's subak water management system. In this context, 'interconnected' means joined or linked together. The text explicitly explains that the components are 'joined together into a single cohesive unit.'"
+  },
+  {
+    "id": "sat11_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Because Georgi Vladimov's 1975 novel Faithful Ruslan was deemed subversive by the Soviet government, it was ______ in the Soviet Union: copies of the book could circulate only in secret.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "replicated",
+      "B": "critiqued",
+      "C": "imported",
+      "D": "suppressed"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'suppressed' means prevented from being published, circulated, or made public. The text states that the novel was considered subversive and could only circulate in secret."
+  },
+  {
+    "id": "sat11_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Archaeological evidence of silk production in China dates back roughly 5,000 years, but evidence of early silk use outside China has been scarce. Recently, however, researchers identified traces of silk proteins on 4,000-year-old beads found in northern South Asia. This finding has ______ the long-held assumption that silk did not travel beyond China until much later.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "investigated",
+      "B": "misinterpreted",
+      "C": "anticipated",
+      "D": "contradicted"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'contradicted' means challenged or showed to be untrue. Finding 4,000-year-old silk traces outside China directly contradicts the older belief that silk stayed in China until much later."
+  },
+  {
+    "id": "sat11_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Artist Zarina Hashmi's minimalist woodcuts and etchings might at first glance appear ______—some feature little more than geometric lines and stark shapes—but in fact the work is a complex, dynamic meditation on home, displacement, and borders that demands serious attention.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "unassuming",
+      "B": "shrewd",
+      "C": "incongruous",
+      "D": "pretentious"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'unassuming' means modest, simple, or not demanding attention. This directly contrasts with the text's conclusion that the work is actually 'complex, dynamic' and 'demands serious attention.'"
+  },
+  {
+    "id": "sat11_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Akwaeke Emezi's 2019 novel Pet. Jam is a teenager who lives with her father, Aloe, and her mother, Bitter, who is a painter.\\n\\nBitter finished the painting in the dark morning of a day—it was well past midnight when Jam heard the studio door creak open. She stared into the velvet black of her room and listened to Bitter's footsteps coming down the stairs, light and tired. Her mother's feet sang a weary rhythm into the floorboards, a language Jam understood without words: creation was complete.\\n\\n©2019 by Akwaeke Emezi",
+    "question": "Which choice best states the function of the underlined phrase ('Her mother's feet sang a weary rhythm into the floorboards') in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It indicates that Jam is more interested in music than in art.",
+      "B": "It adds to the idea that Bitter's footsteps reveal something significant to Jam.",
+      "C": "It indicates that Bitter always sings when working on a painting.",
+      "D": "It suggests that Jam is anxious about the completion of the artwork."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text uses the sensory description of Bitter's footsteps to explain how Jam interprets that her mother has finally finished the painting without needing spoken words."
+  },
+  {
+    "id": "sat11_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Adam is traveling with his great-uncle Richard aboard a steamship. Richard is fascinated by the mechanics of the vessel and spends hours watching the engines work. Noticing his great-uncle's deep interest, Adam suggests that they sleep on the ship rather than finding lodging ashore when they reach port, and he readily adapts to his great-uncle's preferred pace and schedule.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It states the reasons why Adam and his great-uncle Richard decide to take a voyage by steamship.",
+      "B": "It showcases how Adam's flexibility and consideration strengthen his relationship with his great-uncle Richard.",
+      "C": "It argues that steamship travel was more popular and convenient than other modes of transportation.",
+      "D": "It explains the technological advancements in ship engines during the twentieth century."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the passage focuses on Adam's attentive and considerate behavior toward his great-uncle Richard, accommodating his interests to foster a strong bond between them."
+  },
+  {
+    "id": "sat11_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Public art installations often provoke strong public debate. Some critics contend that norm-defying, unconventional public art pieces that are not effectively integrated into their physical and social surroundings are viewed far more unfavorably by passersby than similarly provocative art displayed in traditional museums.",
+    "question": "Which choice best summarizes the critics' argument regarding controversial public artworks?",
+    "isGridIn": false,
+    "options": {
+      "A": "Unconventional artworks are disliked solely because of the specific materials used in their creation.",
+      "B": "Public artwork should only be permitted in civic spaces if it reinforces widely accepted community norms.",
+      "C": "Reactions to provocative public art are influenced significantly by the context and manner in which the work is presented to the public.",
+      "D": "Provocative art is inherently unsuitable for public spaces and should only ever be shown inside galleries."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the critics argue that lack of contextual integration causes passersby to view public art unfavorably compared to when provocative art is encountered within the structured environment of a museum."
+  },
+  {
+    "id": "sat11_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "The play Ollantay has long been thought to originate from the Inca Empire before Spain invaded in the 1500s. Yet the oldest known text of the play is from 1770, and in many places its writing style resembles the writing style of Spanish plays from the 1700s. Thus, Ollantay was probably created in the late 1700s by someone who knew much about the Inca past.",
+    "question": "Which choice best describes the central question addressed in the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "What inspired a Spanish writer in the 1700s to write a play about the Inca Empire.",
+      "B": "Whether Ollantay is an Inca play from the 1500s or was instead created much later, in the 1700s.",
+      "C": "How the Inca author of Ollantay knew so much about plays from Spain.",
+      "D": "Why Inca plays became more popular in the 1700s than they had been when they were first performed in the 1500s."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text compares the traditional belief that Ollantay dates to the pre-invasion 1500s with stylistic evidence suggesting a much later creation date in the 1700s."
+  },
+  {
+    "id": "sat11_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Four fuels and their approximate energy density in megajoules per liter (MJ/L) are evaluated: Gasoline has an energy density of approximately 32 MJ/L, Jet fuel has an energy density of approximately 35 MJ/L, Ethanol has an energy density of approximately 24 MJ/L, and a newly developed bacterial biofuel called POP biofuel achieves 42 MJ/L.",
+    "question": "Based on the researchers' measurements, which fuel stores the highest energy density per liter?",
+    "isGridIn": false,
+    "options": {
+      "A": "Jet fuel",
+      "B": "POP biofuel",
+      "C": "Ethanol",
+      "D": "Gasoline"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because POP biofuel has an energy density of 42 MJ/L, which is higher than gasoline (32 MJ/L), jet fuel (35 MJ/L), and ethanol (24 MJ/L)."
+  },
+  {
+    "id": "sat11_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Urban planning researchers examined street lighting across multiple metropolitan districts to determine its impact on cycling rates. Their results suggest that poor street lighting deters new or inexperienced cyclists from riding in a city but has little measurable effect on experienced cyclists.",
+    "question": "Which finding logically follows from the researchers' results?",
+    "isGridIn": false,
+    "options": {
+      "A": "Increasing street lighting will decrease the total number of new cyclists.",
+      "B": "Experienced cyclists are less likely to ride at night when streets are well-lit.",
+      "C": "Installing additional streetlights could potentially increase the number of new or inexperienced cyclists riding in the city.",
+      "D": "Poor street lighting encourages experienced cyclists to ride more frequently."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because if inadequate lighting deters new and inexperienced riders, addressing that deficiency by increasing streetlights can remove that deterrent and encourage more new riders."
+  },
+  {
+    "id": "sat11_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "The 2022 Nobel Prize in Chemistry was awarded to three pioneers in the field of click chemistry: two-time Nobel laureate Barry Sharpless, who coined the term 'click chemistry' in 1998; Carolyn Bertozzi, founder of the Bertozzi Group at ______ and Morten Meldal, a professor at the University of Copenhagen in Denmark.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Stanford",
+      "B": "Stanford,",
+      "C": "Stanford:",
+      "D": "Stanford;"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the sentence uses semicolons to separate complex list items that already contain internal commas (e.g., 'Barry Sharpless, who coined...; Carolyn Bertozzi, founder of...; and Morten Meldal, a professor...')."
+  },
+  {
+    "id": "sat11_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Customers who are satisfied with how a company resolves a service issue may regard that company more positively than they would if no such issue had occurred. This idea is known as the service recovery ______ research suggests that it has important implications for customer loyalty and retention.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "paradox,",
+      "B": "paradox",
+      "C": "paradox, and",
+      "D": "paradox and,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it uses a comma followed by the coordinating conjunction 'and' to correctly connect two independent clauses."
+  },
+  {
+    "id": "sat11_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "The Lion Light system, developed by Kenyan inventor Richard Turere, consists of LED lights installed around the perimeter of livestock pastures. Powered with ______ blinking LEDs keep lions away at night, thus protecting the livestock without risking harm to the endangered lions.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "energy collected, by solar panels, during the day",
+      "B": "energy collected by solar panels during the day",
+      "C": "energy collected by solar panels during the day,",
+      "D": "energy, collected by solar panels during the day,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the introductory participial phrase 'Powered with energy collected by solar panels during the day,' modifies the subject 'blinking LEDs' and must be set off with a comma."
+  },
+  {
+    "id": "sat11_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Known for her massive photorealistic paintings of African American figures floating or swimming in pools, Calida Garcia ______ was the logical choice to design the book cover for Ta-Nehisi Coates's The Water Dancer, a novel about an African American man who can travel great distances through water.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Rawles-",
+      "B": "Rawles:",
+      "C": "Rawles,",
+      "D": "Rawles"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because no punctuation should separate the subject 'Calida Garcia Rawles' from its main verb 'was'."
+  },
+  {
+    "id": "sat11_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In February 1919, following the end of the First World War, women from ten countries convened the Inter-Allied Women's Conference in Paris. The conference's goals were ______ ensure women's participation in the peace proceedings, to secure the right of women to serve in the League of Nations, and to advocate for human rights.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "threefold: to",
+      "B": "threefold. To",
+      "C": "threefold to",
+      "D": "threefold; to"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because a colon is used after an independent clause ('The conference's goals were threefold') to introduce an explanatory list of three parallel infinitive phrases."
+  },
+  {
+    "id": "sat11_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "The violins handmade in the seventeenth century by Italian craftsman Antonio Stradivari have been celebrated as some of the finest in the world. In close collaboration with musicians, Stradivari introduced changes to the shape of a traditional violin, flattening some of the instrument's curves and making ______ lighter overall.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "those",
+      "B": "one",
+      "C": "them",
+      "D": "it"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the singular pronoun 'it' correctly refers back to the singular noun phrase 'a traditional violin' (or 'the instrument')."
+  },
+  {
+    "id": "sat11_rw1_18",
+    "section": "Reading and Writing",
+    "questionNumber": 18,
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Horsepower is a unit of measurement used to determine how much power a vehicle produces. The measurement is based on how much and how quickly weight can be ______ one unit of mechanical horsepower is equivalent to the amount of power it takes to lift 550 pounds one foot off the ground in one second.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "moved, for example,",
+      "B": "moved,",
+      "C": "moved; for example,",
+      "D": "moved"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because a semicolon correctly separates two independent clauses, followed by the transitional phrase 'for example,' which introduces the second clause."
+  },
+  {
+    "id": "sat11_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Nuhad al-Haddad, known as Fairuz, was one of the most beloved Lebanese singers of the twentieth century. Her broad singing repertoire—which included traditional forms, such as the Arabic qasida and maqam, alongside modern pop and jazz styles—lent Fairuz a timeless, cross-generational appeal, ______ her the moniker 'the soul of Lebanon.'",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "earned",
+      "B": "had earned",
+      "C": "earning",
+      "D": "earn"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the nonfinite present participle 'earning' correctly introduces a participial phrase expressing the result of the preceding independent clause."
+  },
+  {
+    "id": "sat11_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "After appropriate permissions are granted, a typical archaeological dig begins with a surveyor making a detailed grid of the excavation site. Then, the site is carefully dug, and any artifacts found are recorded and mapped onto the site grid. ______ the artifacts are removed, cataloged, and analyzed in a laboratory.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "For instance,",
+      "B": "On the contrary,",
+      "C": "Earlier,",
+      "D": "Finally,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Finally,' signals the concluding chronological step in the sequential archaeological process described (begins -> then -> finally)."
+  },
+  {
+    "id": "sat11_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Marcel Duchamp intended his 1917 so-called ready-made sculpture Fountain to challenge then-prevailing conceptions about the nature of art. ______ Duchamp's Fountain did just that, raising the question of whether displaying any object in an art gallery could be said to transform the object into a legitimate work of art.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Similarly,",
+      "B": "Indeed,",
+      "C": "Instead,",
+      "D": "In addition,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'Indeed,' emphasizes that what Duchamp intended actually occurred in reality, corroborating the preceding assertion."
+  },
+  {
+    "id": "sat11_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "On March 3, 1991, Switzerland's government lowered the minimum voting age for its citizens from 20 to 18 years old. ______ many young people in Switzerland gained a new opportunity to participate in their country's political process.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Nevertheless,",
+      "B": "As a result,",
+      "C": "By contrast,",
+      "D": "Similarly,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because gaining voting opportunities was the direct consequence of the voting age reduction ('As a result,')."
+  },
+  {
+    "id": "sat11_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "The envelope-shaped paper bags common in the US 150 years ago were impractical for carrying goods. ______ because they were the only paper bags that could be mass-produced, these bags dominated the market. That all changed in the 1870s, when Margaret Knight patented a machine to make flat-bottomed bags.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "However,",
+      "B": "For instance,",
+      "C": "Thus,",
+      "D": "In other words,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'However,' introduces a contrast: even though the bags were impractical, they still dominated the market due to production capabilities."
+  },
+  {
+    "id": "sat11_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Although novels and poems are considered distinct literary forms, many authors have created hybrid works that incorporate elements of both. Bernardine Evaristo's The Emperor's Babe, ______ is a verse novel, a book-length narrative complete with characters and a plot but conveyed in short, crisp lines of poetry rather than prose.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "by contrast,",
+      "B": "consequently,",
+      "C": "secondly,",
+      "D": "for example,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because Evaristo's verse novel serves as a concrete instance illustrating the general claim that authors create hybrid works ('for example,')."
+  },
+  {
+    "id": "sat11_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Every chemical compound has a spectroscopic fingerprint, a pattern of reflected light unique to that compound. ______ upon analyzing the light reflected by the bright regions on the surface of the dwarf planet Ceres, researchers were able to determine that the regions contain large amounts of sodium carbonate.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Regardless,",
+      "B": "Meanwhile,",
+      "C": "Thus,",
+      "D": "In comparison,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'Thus,' indicates that the identification of sodium carbonate was a result made possible by the fact that chemical compounds have unique spectral fingerprints."
+  },
+  {
+    "id": "sat11_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "The ancient Spartans were known for their bitingly concise—or laconic—wit, a quality they maintained even in the face of great peril. ______ when Philip II of Macedon threatened Laconia saying, 'If I invade Laconia, I shall turn you out,' the Spartans replied with a single word: 'If.'",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Rather,",
+      "B": "In other words,",
+      "C": "That said,",
+      "D": "For instance,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the historical interaction with Philip of Macedon is a specific example demonstrating the Spartans' laconic wit ('For instance,')."
+  },
+  {
+    "id": "sat11_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Many butterfly species have bold, brightly colored wings. ______ some butterfly species have wings that are almost completely colorless and transparent. Glasswing butterflies, for example, have see-through wings that make them nearly invisible.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Similarly,",
+      "B": "Previously,",
+      "C": "In other words,",
+      "D": "However,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'However,' introduces a stark contrast between butterfly species with brightly colored wings and those with transparent wings."
+  }
+]

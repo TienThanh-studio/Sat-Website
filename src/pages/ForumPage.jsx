@@ -6,16 +6,16 @@ import {
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 
-// Dữ liệu bài viết mẫu ban đầu nếu bộ nhớ trống
+// Dữ liệu ban đầu đã được chuẩn hóa chữ tiếng Việt chuẩn xác
 const INITIAL_POSTS = [
   {
     id: 'post_1',
     authorName: 'Admin Doraemon',
     authorRole: 'ADMIN',
     authorAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Doraemon',
-    category: 'DOCUMENTS', // 'DOCUMENTS' | 'MATH' | 'VERBAL' | 'GENERAL'
+    category: 'DOCUMENTS',
     title: 'Tổng hợp tài liệu Digital SAT Math Master Cheat Sheet 2026 (PDF)',
-    content: 'Quản trị viên gửi các bạn bộ công thức và dạng bài đại số/hình học trọng tâm cho kỳ thi đợt tới. Các bạn click vào link tài liệu đính kèm bên dưới để tải bản PDF chất lượng cao nhé!',
+    content: 'Quản trị viên gửi các bạn bộ công thức và dạng bài đại số / hình học trọng tâm cho kỳ thi đợt tới. Các bạn click vào link tài liệu đính kèm bên dưới để tải bản PDF chất lượng cao nhé!',
     attachmentUrl: 'https://drive.google.com',
     attachmentName: 'SAT_Math_Master_2026.pdf',
     imageUrl: '',
@@ -62,7 +62,15 @@ export default function ForumPage({ currentUser }) {
   const [posts, setPosts] = useState(() => {
     try {
       const saved = localStorage.getItem('sat_forum_posts');
-      return saved ? JSON.parse(saved) : INITIAL_POSTS;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Tự động làm sạch dữ liệu cũ nếu bị dính ký tự `´`
+        return parsed.map(p => ({
+          ...p,
+          content: String(p.content || '').replace(/([a-zA-ZÀ-ỹ])\s*[´\u00B4\u02CA\u0301]/g, '$1')
+        }));
+      }
+      return INITIAL_POSTS;
     } catch {
       return INITIAL_POSTS;
     }
@@ -73,7 +81,6 @@ export default function ForumPage({ currentUser }) {
   const [activeCommentPostId, setActiveCommentPostId] = useState(null);
   const [commentInputs, setCommentInputs] = useState({});
 
-  // Form đăng bài mới
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
   const [newCategory, setNewCategory] = useState('MATH');
@@ -81,12 +88,10 @@ export default function ForumPage({ currentUser }) {
   const [newAttachmentName, setNewAttachmentName] = useState('');
   const [newImageUrl, setNewImageUrl] = useState('');
 
-  // Tự động lưu vào LocalStorage
   useEffect(() => {
     localStorage.setItem('sat_forum_posts', JSON.stringify(posts));
   }, [posts]);
 
-  // Xử lý tạo bài viết
   const handleCreatePost = (e) => {
     e.preventDefault();
     if (!newTitle.trim() || !newContent.trim()) return;
@@ -116,23 +121,15 @@ export default function ForumPage({ currentUser }) {
     setShowCreateModal(false);
   };
 
-  // Thả tim bài viết
   const handleLikePost = (postId) => {
-    setPosts(posts.map(p => {
-      if (p.id === postId) {
-        return { ...p, likes: p.likes + 1 };
-      }
-      return p;
-    }));
+    setPosts(posts.map(p => (p.id === postId ? { ...p, likes: p.likes + 1 } : p)));
   };
 
-  // Xóa bài viết (Chỉ tác giả hoặc Admin)
   const handleDeletePost = (postId) => {
     if (!window.confirm('Bạn có chắc chắn muốn xóa bài thảo luận này?')) return;
     setPosts(posts.filter(p => p.id !== postId));
   };
 
-  // Gửi bình luận
   const handleAddComment = (postId) => {
     const text = (commentInputs[postId] || '').trim();
     if (!text) return;
@@ -159,7 +156,6 @@ export default function ForumPage({ currentUser }) {
     setCommentInputs(prev => ({ ...prev, [postId]: '' }));
   };
 
-  // Lọc bài viết
   const filteredPosts = posts.filter(post => {
     if (filterCategory === 'ALL') return true;
     return post.category === filterCategory;
@@ -167,7 +163,7 @@ export default function ForumPage({ currentUser }) {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6 pb-12 font-sans select-none">
-      {/* 1. HEADER DIỄN ĐÀN */}
+      {/* HEADER */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200 shadow-2xs">
         <div>
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
@@ -189,7 +185,7 @@ export default function ForumPage({ currentUser }) {
         </button>
       </div>
 
-      {/* 2. THANH LỌC BÀI VIẾT */}
+      {/* BỘ LỌC */}
       <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-bold">
         <button
           type="button"
@@ -230,7 +226,7 @@ export default function ForumPage({ currentUser }) {
         </button>
       </div>
 
-      {/* 3. DANH SÁCH BÀI ĐĂNG */}
+      {/* DANH SÁCH BÀI VIẾT */}
       <div className="space-y-5">
         {filteredPosts.length === 0 ? (
           <div className="bg-white p-12 text-center rounded-3xl border border-dashed border-slate-300 text-slate-400 text-xs">
@@ -244,7 +240,6 @@ export default function ForumPage({ currentUser }) {
 
             return (
               <div key={post.id} className="bg-white rounded-3xl border border-slate-200 shadow-2xs p-6 space-y-4">
-                {/* Header bài đăng */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <img 
@@ -286,15 +281,13 @@ export default function ForumPage({ currentUser }) {
                   )}
                 </div>
 
-                {/* Tiêu đề & Nội dung bài viết */}
                 <div className="space-y-2">
                   <h3 className="font-extrabold text-base text-slate-900 leading-snug">{post.title}</h3>
-                  <div className="text-sm text-slate-700 leading-relaxed font-serif select-text">
+                  <div className="text-sm text-slate-700 leading-relaxed select-text">
                     <MathRenderer text={post.content} />
                   </div>
                 </div>
 
-                {/* Ảnh đính kèm (nếu có) */}
                 {post.imageUrl && (
                   <div className="rounded-2xl overflow-hidden border border-slate-200 max-h-96 max-w-xl">
                     <img 
@@ -306,7 +299,6 @@ export default function ForumPage({ currentUser }) {
                   </div>
                 )}
 
-                {/* File / Tài liệu đính kèm (nếu có) */}
                 {post.attachmentUrl && (
                   <a
                     href={post.attachmentUrl}
@@ -320,7 +312,6 @@ export default function ForumPage({ currentUser }) {
                   </a>
                 )}
 
-                {/* Tương tác: Like & Bình luận */}
                 <div className="flex items-center gap-4 pt-2 border-t border-slate-100 text-xs text-slate-500 font-semibold">
                   <button
                     type="button"
@@ -341,10 +332,8 @@ export default function ForumPage({ currentUser }) {
                   </button>
                 </div>
 
-                {/* KHU VỰC BÌNH LUẬN */}
                 {isCommentsOpen && (
                   <div className="space-y-3 pt-3 border-t border-slate-100 animate-in fade-in duration-150">
-                    {/* Danh sách bình luận cũ */}
                     {post.comments?.length > 0 && (
                       <div className="space-y-2.5 pl-2">
                         {post.comments.map((cm) => (
@@ -360,7 +349,7 @@ export default function ForumPage({ currentUser }) {
                                 </div>
                                 <span className="text-[10px] text-slate-400">{cm.createdAt}</span>
                               </div>
-                              <div className="text-slate-700 leading-relaxed font-serif">
+                              <div className="text-slate-700 leading-relaxed">
                                 <MathRenderer text={cm.content} />
                               </div>
                             </div>
@@ -369,7 +358,6 @@ export default function ForumPage({ currentUser }) {
                       </div>
                     )}
 
-                    {/* Ô nhập bình luận mới */}
                     <div className="flex items-center gap-2 pt-1">
                       <input
                         type="text"
@@ -396,7 +384,7 @@ export default function ForumPage({ currentUser }) {
         )}
       </div>
 
-      {/* 4. MODAL ĐĂNG BÀI VIẾT / CÂU HỎI MỚI */}
+      {/* MODAL TẠO BÀI ĐĂNG */}
       {showCreateModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4 animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-slate-200 space-y-4">
@@ -455,7 +443,6 @@ export default function ForumPage({ currentUser }) {
                 />
               </div>
 
-              {/* Đính kèm Link Ảnh hoặc Link File PDF / Drive */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 <div>
                   <label className="block text-[11px] font-bold text-slate-600 mb-1 flex items-center gap-1">

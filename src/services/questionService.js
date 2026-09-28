@@ -15,6 +15,9 @@ import algebraQuestions from '../data/questions/algebra.json';
 import verbalHardTest1 from '../data/questions/tests/verbal_hard_test1.json';
 import verbalHardTest2 from '../data/questions/tests/verbal_hard_test2.json';
 
+//Import các đề thi từ Bluebook 
+import satTest11RW1 from '../data/questions/tests/sat_test_11_rw1.json';
+
 // Cấu hình đầy đủ danh mục Digital SAT
 export const DEFAULT_CATEGORIES = [
   // --- MỤC ĐỀ THI TUYỂN CHỌN / NÂNG CAO (27 CÂU) ---
@@ -33,6 +36,16 @@ export const DEFAULT_CATEGORIES = [
     section: 'Full Test',
     description: 'Đề thi Verbal chung cuộc nâng cao 27 câu với các bài đọc học thuật phức tạp và bẫy suy luận.',
     questions: Array.isArray(verbalHardTest2) ? verbalHardTest2 : []
+  },
+
+  // --- Mục đề thi Bluebook SAT Practice Test ---
+  {
+    id: 'official-sat-practice-11-rw1',
+    title: 'Official SAT Practice Test #11 (Reading & Writing)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    description: 'Đề thi chính thức Digital SAT Test #11 chuẩn 27 câu từ College Board kèm giải thích chi tiết.',
+    questions: Array.isArray(satTest11RW1) ? satTest11RW1 : []
   },
 
   // --- READING & WRITING THEO CHUYÊN ĐỀ ---

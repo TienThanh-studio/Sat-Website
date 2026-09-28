@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Calculator, BookOpen, Bookmark, ChevronLeft, ChevronRight, 
   HelpCircle, Eye, EyeOff, CheckCircle2, Highlighter, 
-  Sparkles, RotateCcw, Home, X, Check
+  Sparkles, RotateCcw, Home, X, Check, Clock
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
@@ -10,6 +10,7 @@ import ReferenceModal from '../components/exam/ReferenceModal';
 import MatrixModal from '../components/exam/MatrixModal';
 import ScoreReportModal from '../components/exam/ScoreReportModal';
 import { calculateSatScaledScore, isAnswerCorrect } from '../services/adaptiveEngine';
+import { usePacingTracker } from '../hooks/usePacingTracker';
 
 export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }) {
   const questions = Array.isArray(sessionConfig?.questions) ? sessionConfig.questions : [];
@@ -18,22 +19,12 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   const [answers, setAnswers] = useState({});
   const [bookmarked, setBookmarked] = useState({});
   const [eliminatedOptions, setEliminatedOptions] = useState({});
-  
-  // Trạng thái kiểm tra đáp án tức thì (Check Answer)
   const [checkedQuestions, setCheckedQuestions] = useState({});
 
-  // Đồng hồ & thời gian (Chuẩn hóa thời gian an toàn: nếu không truyền hoặc quá lớn thì gán mặc định 35 phút)
-  const [isTimerHidden, setIsTimerHidden] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(() => {
-    const rawDur = Number(sessionConfig?.duration);
-    if (rawDur && rawDur > 0 && rawDur <= 180) {
-      return rawDur * 60;
-    }
-    // Mặc định: 32 phút nếu thi full, hoặc 1.5 phút/câu nếu luyện tập
-    return Math.min(questions.length * 90 || 32 * 60, 60 * 60);
-  });
-  const [timeSpent, setTimeSpent] = useState(0);
-  
+  // Nhận diện chuẩn xác môn Math hay Verbal
+  const currentQ = questions[currentIndex] || {};
+  const isMathSection = currentQ?.section === 'Math' || sessionConfig?.section === 'Math' || sessionConfig?.category === 'Algebra';
+
   // Modals
   const [isDesmosOpen, setIsDesmosOpen] = useState(false);
   const [isReferenceOpen, setIsReferenceOpen] = useState(false);
@@ -41,14 +32,28 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   const [isReportOpen, setIsReportOpen] = useState(false);
   const [reportData, setReportData] = useState(null);
 
+  // Hook theo dõi nhịp độ từng câu (đặt đúng ở đầu component)
+  const { timeOnCurrentQuestion, isTimeWarning, questionTimes } = usePacingTracker({
+    currentIndex,
+    isExamRunning: !isReportOpen,
+    section: isMathSection ? 'Math' : 'Reading & Writing'
+  });
+
+  // Đồng hồ & thời gian tổng
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const rawDur = Number(sessionConfig?.duration);
+    if (rawDur && rawDur > 0 && rawDur <= 180) {
+      return rawDur * 60;
+    }
+    return Math.min(questions.length * 90 || 32 * 60, 60 * 60);
+  });
+  const [timeSpent, setTimeSpent] = useState(0);
+
   // Tooltip Highlight
   const [highlightPopup, setHighlightPopup] = useState(null);
   const readingColRef = useRef(null);
 
-  const currentQ = questions[currentIndex] || {};
-  const isMathSection = currentQ?.section === 'Math' || sessionConfig?.section === 'Math' || sessionConfig?.category === 'Algebra';
-
-  // Đồng hồ đếm ngược
   useEffect(() => {
     if (timeLeft <= 0) return;
     const timer = setInterval(() => {
@@ -64,17 +69,14 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Chọn phương án
   const handleSelectOption = (key) => {
     setAnswers(prev => ({ ...prev, [currentIndex]: key }));
   };
 
-  // Bookmark câu hỏi
   const toggleBookmark = () => {
     setBookmarked(prev => ({ ...prev, [currentIndex]: !prev[currentIndex] }));
   };
 
-  // Gạch bỏ đáp án
   const toggleEliminate = (key) => {
     setEliminatedOptions(prev => {
       const cur = prev[currentIndex] || [];
@@ -85,7 +87,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     });
   };
 
-  // Chuyển câu hỏi
   const handleJump = (idx) => {
     if (idx >= 0 && idx < questions.length) {
       setCurrentIndex(idx);
@@ -93,15 +94,10 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     }
   };
 
-  // Bấm nút CHECK đáp án
   const handleCheckAnswer = () => {
-    setCheckedQuestions(prev => ({
-      ...prev,
-      [currentIndex]: true
-    }));
+    setCheckedQuestions(prev => ({ ...prev, [currentIndex]: true }));
   };
 
-  // Highlight văn bản
   const handleTextSelection = () => {
     const selection = window.getSelection();
     if (!selection || selection.isCollapsed || !selection.toString().trim()) {
@@ -140,7 +136,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     setHighlightPopup(null);
   };
 
-  // Nộp bài
+  // NỘP BÀI THI & TẠO BÁO CÁO (KHÔNG BỊ TRÙNG LẶP BIẾN)
   const handleFinishExam = () => {
     if (!window.confirm('Bạn có chắc chắn muốn nộp bài và xem báo cáo kết quả?')) {
       return;
@@ -159,7 +155,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         isCorrect: isCorrect,
         domain: q.domain || (isMathSection ? 'Math Domain' : 'Reading & Writing'),
         difficulty: q.difficulty || 'medium',
-        explanation: q.explanation || 'Đáp án chính xác được xác nhận chuẩn theo quy tắc phân tích College Board.'
+        explanation: q.explanation || 'Đáp án chính xác được College Board xác nhận chuẩn theo quy tắc phân tích đề thi.'
       };
     });
 
@@ -205,6 +201,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       st.percentage = st.total > 0 ? Math.round((st.correct / st.total) * 100) : 0;
     });
 
+    // Chỉ khai báo 1 lần duy nhất, gắn đầy đủ questionTimes
     const finalReport = {
       scaledScore: calculatedScore,
       section: sessionConfig?.title || (isMathSection ? 'Math Section' : 'Reading & Writing'),
@@ -212,6 +209,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       totalQuestions: totalCount,
       correctCount: correctCount,
       timeSpent: timeSpent,
+      questionTimes: questionTimes || {},
       domainPerformance: domainStats,
       questions: reviewedQuestions
     };
@@ -234,7 +232,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     );
   }
 
-  // TÌM ĐOẠN ĐỀ BÀI (Hỗ trợ toàn diện mọi biến: passage, prompt, content, text, stimulus)
   const questionPrompt = 
     currentQ?.passage || 
     currentQ?.prompt || 
@@ -244,7 +241,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     (typeof currentQ?.questionText === 'string' ? currentQ.questionText : '') ||
     'Đang tải nội dung câu hỏi...';
 
-  // Chuẩn hóa Options
   const rawOpts = currentQ?.options || {};
   const optionsEntries = Array.isArray(rawOpts)
     ? rawOpts.map((opt, i) => [String.fromCharCode(65 + i), typeof opt === 'object' ? (opt.text || opt.value || '') : opt])
@@ -257,7 +253,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   return (
     <div className="h-screen flex flex-col bg-white select-none overflow-hidden relative">
       
-      {/* TOOLTIP HIGHLIGHT NỔI */}
+      {/* POPUP HIGHLIGHT */}
       {highlightPopup && (
         <div
           style={{ top: `${highlightPopup.top}px`, left: `${highlightPopup.left}px`, transform: 'translateX(-50%)' }}
@@ -281,7 +277,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       <header className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white shrink-0">
         <div>
           <h2 className="font-extrabold text-sm text-slate-800 tracking-tight">
-            {sessionConfig?.title || 'Words in Context'}
+            {sessionConfig?.title || 'Digital SAT Practice'}
           </h2>
           <p className="text-[10px] text-slate-400 font-semibold">
             {isMathSection ? 'Math Section' : 'Reading and Writing'} • Câu {currentIndex + 1}/{questions.length}
@@ -344,16 +340,27 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       <main className="flex-1 overflow-y-auto p-6 md:p-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           
-          {/* CỘT TRÁI: ĐỀ BÀI (RENDER HOÀN TOÀN ĐÚNG ĐOẠN VĂN) */}
+          {/* CỘT TRÁI: ĐỀ BÀI + BADGE CẢNH BÁO NHỊP ĐỘ THỜI GIAN */}
           <div 
             ref={readingColRef}
             onMouseUp={handleTextSelection}
             className="bg-slate-50/70 p-6 md:p-7 rounded-2xl border border-slate-200 space-y-4"
           >
             <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-              <span className="font-mono font-bold text-xs bg-slate-900 text-white px-2.5 py-1 rounded-md">
-                {currentIndex + 1}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="font-mono font-bold text-xs bg-slate-900 text-white px-2.5 py-1 rounded-md">
+                  {currentIndex + 1}
+                </span>
+
+                {/* Badge cảnh báo làm quá lâu */}
+                {isTimeWarning && (
+                  <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-md text-[10px] font-bold animate-pulse">
+                    <Clock className="w-3 h-3 text-amber-600" />
+                    <span>Quá nhịp chuẩn ({timeOnCurrentQuestion}s)</span>
+                  </span>
+                )}
+              </div>
+
               <button
                 type="button"
                 onClick={toggleBookmark}
@@ -371,7 +378,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             </div>
           </div>
 
-          {/* CỘT PHẢI: CÂU HỎI VÀ PHƯƠNG ÁN */}
+          {/* CỘT PHẢI: CÂU HỎI & PHƯƠNG ÁN */}
           <div className="space-y-4">
             <div className="text-xs font-semibold text-slate-700 leading-relaxed">
               {currentQ?.question || (currentQ?.isGridIn ? 'Enter your answer in the box below:' : 'Which choice completes the text with the most logical and precise word or phrase?')}
@@ -385,7 +392,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
                   const isEliminated = (eliminatedOptions[currentIndex] || []).includes(letter);
                   const isCorrectChoice = String(currentQ?.correctAnswer || '').trim().toUpperCase() === letter;
 
-                  // Đổi màu theo trạng thái đã bấm Check
                   let optionStyle = 'border-slate-200 hover:bg-slate-50';
                   if (isSelected) {
                     optionStyle = 'border-indigo-600 bg-indigo-50/60 shadow-xs ring-1 ring-indigo-500';
@@ -456,7 +462,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
               </div>
             )}
 
-            {/* HIỂN THỊ LỜI GIẢI KHI BẤM NÚT CHECK */}
+            {/* LỜI GIẢI KHI BẤM NÚT CHECK */}
             {isCurrentChecked && (
               <div className={`p-4 rounded-2xl border text-xs space-y-2 animate-in fade-in duration-200 ${
                 isCurrentCorrect ? 'bg-emerald-50/70 border-emerald-200 text-emerald-950' : 'bg-rose-50/70 border-rose-200 text-rose-950'
@@ -487,10 +493,10 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         </div>
       </main>
 
-      {/* 3. THANH ĐIỀU HƯỚNG DƯỚI CÙNG & CÓ ĐẦY ĐỦ NÚT CHECK */}
+      {/* 3. FOOTER ĐIỀU HƯỚNG */}
       <footer className="h-16 border-t border-slate-200 px-6 flex items-center justify-between bg-white shrink-0">
         
-        {/* NÚT MỞ MATRIX MODAL */}
+        {/* NÚT MATRIX */}
         <button
           type="button"
           onClick={() => setIsMatrixOpen(true)}
@@ -500,9 +506,8 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
           <span className="text-[10px] text-slate-400">▲</span>
         </button>
 
-        {/* CỤM NÚT BACK / CHECK / NEXT HOẶC FINISH */}
+        {/* NÚT BACK / CHECK / NEXT HOẶC FINISH */}
         <div className="flex items-center gap-2">
-          {/* NÚT BACK */}
           <button
             type="button"
             disabled={currentIndex === 0}
@@ -516,7 +521,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             Back
           </button>
 
-          {/* NÚT CHECK (MÀU VÀNG CAM SÁNG KHI ĐÃ CHỌN ĐÁP ÁN) */}
           <button
             type="button"
             disabled={!hasAnsweredCurrent}
@@ -531,7 +535,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             <span>Check</span>
           </button>
 
-          {/* NÚT NEXT HOẶC NÚT FINISH Ở CÂU CUỐI */}
           {currentIndex === questions.length - 1 ? (
             <button
               type="button"
