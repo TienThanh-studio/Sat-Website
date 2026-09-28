@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
+
+// Layout Components
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
+
+// Pages
 import DashboardPage from './pages/DashboardPage';
 import QuestionBankPage from './pages/QuestionBankPage';
-import VocabularyPage from './pages/VocabularyPage';
 import DocumentsPage from './pages/DocumentsPage';
+import VocabularyPage from './pages/VocabularyPage';
 import SettingsPage from './pages/SettingsPage';
 import ExamWorkspacePage from './pages/ExamWorkspacePage';
+import ForumPage from './pages/ForumPage';
+
+// Admin Component (Quản trị đề & Mã mời)
 import QuestionManager from './components/admin/QuestionManager';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -21,17 +28,25 @@ export default function App() {
         name: 'Doraemon',
         email: 'meoconhuhong@gmail.com',
         role: 'ADMIN',
-        targetScore: '1500+'
+        avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Doraemon',
+        targetScore: '1550+'
       };
     } catch {
       return {
         name: 'Doraemon',
         email: 'meoconhuhong@gmail.com',
         role: 'ADMIN',
-        targetScore: '1500+'
+        avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Doraemon',
+        targetScore: '1550+'
       };
     }
   });
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('sat_user', JSON.stringify(user));
+    }
+  }, [user]);
 
   const handleStartExam = (sessionConfig) => {
     setActiveSession(sessionConfig);
@@ -41,7 +56,7 @@ export default function App() {
     setActiveSession(null);
   };
 
-  // Nếu đang thi thử, hiển thị ExamWorkspacePage
+  // Nếu đang thi thử, hiển thị ExamWorkspacePage toàn màn hình
   if (activeSession) {
     return (
       <ExamWorkspacePage
@@ -52,7 +67,7 @@ export default function App() {
     );
   }
 
-  // Bắt tất cả các ID của mục Quản trị từ Sidebar (bao gồm 'admin-tools', 'admin-panel', 'admin')
+  // Khớp tất cả các mã ID của Quản trị từ Sidebar
   const isAdminTab = 
     activePage === 'admin-tools' || 
     activePage === 'admin-panel' || 
@@ -61,7 +76,7 @@ export default function App() {
 
   return (
     <div className="flex h-screen bg-slate-50 text-slate-800 font-sans overflow-hidden">
-      {/* SIDEBAR: Đồng bộ tất cả tên prop */}
+      {/* 1. SIDEBAR BÊN TRÁI: Đồng bộ cả 2 cặp prop activePage/activeTab */}
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
@@ -71,12 +86,14 @@ export default function App() {
         currentUser={user}
         userRole={user?.role}
         onLogout={() => {
-          localStorage.removeItem('sat_user');
-          window.location.reload();
+          if (window.confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+            localStorage.removeItem('sat_user');
+            window.location.reload();
+          }
         }}
       />
 
-      {/* KHU VỰC NỘI DUNG CHÍNH */}
+      {/* 2. KHU VỰC NỘI DUNG CHÍNH */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Header
           user={user}
@@ -97,7 +114,12 @@ export default function App() {
             />
           )}
 
-          {/* 2. Ngân hàng câu hỏi */}
+          {/* 2. Kho từ vựng */}
+          {(activePage === 'vocabulary' || activePage === 'vocab' || activePage === 'flashcards') && (
+            <VocabularyPage />
+          )}
+
+          {/* 3. Ngân hàng câu hỏi */}
           {(activePage === 'question-bank' || activePage === 'questions') && (
             <QuestionBankPage
               onStartExam={handleStartExam}
@@ -105,37 +127,14 @@ export default function App() {
             />
           )}
 
-          {/* 3. Kho từ vựng */}
-          {(activePage === 'vocabulary' || activePage === 'vocab') && (
-            <VocabularyPage />
-          )}
-
-          {/* 4. Kho tài liệu */}
-          {(activePage === 'documents' || activePage === 'docs') && (
-            <DocumentsPage user={user} />
-          )}
-
-          {/* 5. QUẢN TRỊ ĐỀ & MÃ MỜI (BẬT LÊN NGAY KHI CLICK NÚT TRÊN SIDEBAR) */}
-          {isAdminTab && (
-            <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
-              <QuestionManager />
+          {/* 4. DIỄN ĐÀN HỎI ĐÁP & TÀI LIỆU (ĐÃ TÍCH HỢP HIỂN THỊ TRỰC TIẾP) */}
+          {(activePage === 'forum' || activePage === 'discussion') && (
+            <div className="p-6 md:p-8">
+              <ForumPage currentUser={user} />
             </div>
           )}
 
-          {/* 6. Cài đặt */}
-          {activePage === 'settings' && (
-            <SettingsPage
-              user={user}
-              currentUser={user}
-              setCurrentUser={setUser}
-              onUpdateUser={(updated) => {
-                setUser(updated);
-                localStorage.setItem('sat_user', JSON.stringify(updated));
-              }}
-            />
-          )}
-
-          {/* 7. Sổ tay câu sai */}
+          {/* 5. Sổ tay câu sai */}
           {activePage === 'mistakes' && (
             <div className="p-8 max-w-5xl mx-auto space-y-6">
               <div className="flex items-center justify-between">
@@ -207,6 +206,31 @@ export default function App() {
                 );
               })()}
             </div>
+          )}
+
+          {/* 6. Kho tài liệu */}
+          {(activePage === 'documents' || activePage === 'docs') && (
+            <DocumentsPage user={user} />
+          )}
+
+          {/* 7. Quản trị đề & Mã mời */}
+          {isAdminTab && (
+            <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
+              <QuestionManager />
+            </div>
+          )}
+
+          {/* 8. Cài đặt */}
+          {activePage === 'settings' && (
+            <SettingsPage
+              user={user}
+              currentUser={user}
+              setCurrentUser={setUser}
+              onUpdateUser={(updated) => {
+                setUser(updated);
+                localStorage.setItem('sat_user', JSON.stringify(updated));
+              }}
+            />
           )}
         </main>
       </div>
