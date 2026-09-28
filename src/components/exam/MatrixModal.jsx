@@ -6,24 +6,42 @@ export default function MatrixModal({
   onClose = () => {},
   questions = [],
   currentIndex = 0,
-  onSelectIndex = () => {},
+  onSelectIndex,
+  onSelectQuestion,
+  onSelect,
   answers = {},
-  marked = {}
+  marked = {},
+  bookmarked = {}
 }) {
   if (!isOpen) return null;
 
   const list = Array.isArray(questions) ? questions : [];
 
+  // Bắt tất cả các tên hàm chuyển câu có thể có từ ExamWorkspacePage
+  const handleJump = (idx) => {
+    if (typeof onSelectIndex === 'function') {
+      onSelectIndex(idx);
+    } else if (typeof onSelectQuestion === 'function') {
+      onSelectQuestion(idx);
+    } else if (typeof onSelect === 'function') {
+      onSelect(idx);
+    }
+    // Tự động đóng modal ngay sau khi bấm
+    if (typeof onClose === 'function') {
+      onClose();
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs select-none">
       <div 
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full max-w-xl rounded-2xl border border-slate-200 shadow-2xl p-6 flex flex-col space-y-5 animate-fadeIn"
+        className="bg-white w-full max-w-xl rounded-3xl border border-slate-200 shadow-2xl p-6 flex flex-col space-y-5 animate-in fade-in duration-150"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-slate-100 pb-3">
           <div>
-            <h3 className="font-bold text-slate-900 text-sm">Question Navigation Matrix</h3>
+            <h3 className="font-extrabold text-slate-900 text-sm">Question Navigation Matrix</h3>
             <p className="text-[11px] text-slate-400">Chọn câu hỏi để di chuyển nhanh</p>
           </div>
           <button
@@ -55,45 +73,37 @@ export default function MatrixModal({
           </div>
         </div>
 
-        {/* Lưới câu hỏi */}
+        {/* Lưới các câu hỏi 1, 2, ..., 27 */}
         <div className="grid grid-cols-6 sm:grid-cols-8 gap-2.5 max-h-72 overflow-y-auto pr-1">
-          {list.length === 0 ? (
-            <div className="col-span-full py-6 text-center text-xs text-slate-400">
-              Không có câu hỏi nào trong danh sách.
-            </div>
-          ) : (
-            list.map((q, idx) => {
-              const qId = q?.id ?? idx;
-              const isCurrent = idx === currentIndex;
-              const isAnswered = answers[qId] !== undefined && answers[qId] !== '';
-              const isMarked = Boolean(marked[qId]);
+          {list.map((q, idx) => {
+            const qId = q?.id ?? idx;
+            const isCurrent = idx === currentIndex;
+            const isAnswered = (answers[qId] !== undefined && answers[qId] !== '') || 
+                               (answers[idx] !== undefined && answers[idx] !== '');
+            const isMarked = Boolean(marked[qId] || marked[idx] || bookmarked[idx] || (q && marked[q.id]));
 
-              return (
-                <button
-                  key={qId}
-                  type="button"
-                  onClick={() => {
-                    onSelectIndex(idx);
-                    onClose();
-                  }}
-                  className={`relative h-10 rounded-xl font-bold text-xs flex items-center justify-center transition cursor-pointer ${
-                    isCurrent
-                      ? 'border-2 border-indigo-600 bg-indigo-50 text-indigo-700 shadow-xs'
-                      : isAnswered
-                        ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                        : 'bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  <span>{idx + 1}</span>
-                  {isMarked && (
-                    <span className="absolute -top-1 -right-1">
-                      <Bookmark className="w-3 h-3 text-amber-500 fill-amber-500" />
-                    </span>
-                  )}
-                </button>
-              );
-            })
-          )}
+            return (
+              <button
+                key={qId}
+                type="button"
+                onClick={() => handleJump(idx)}
+                className={`relative h-11 rounded-xl font-bold text-xs flex items-center justify-center transition cursor-pointer ${
+                  isCurrent
+                    ? 'border-2 border-indigo-600 bg-indigo-50 text-indigo-700 shadow-xs'
+                    : isAnswered
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100'
+                }`}
+              >
+                <span>{idx + 1}</span>
+                {isMarked && (
+                  <span className="absolute -top-1 -right-1">
+                    <Bookmark className="w-3 h-3 text-amber-500 fill-amber-500" />
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

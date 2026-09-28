@@ -1,270 +1,530 @@
-import React, { useRef } from 'react';
-import { Download, X, Award, CheckCircle, AlertTriangle, Lightbulb, FileText } from 'lucide-react';
+// src/components/exam/ScoreReportModal.jsx
+import React, { useMemo, useState, useCallback } from 'react';
+import {
+  X,
+  Trophy,
+  Target,
+  Clock,
+  TrendingUp,
+  TrendingDown,
+  CheckCircle2,
+  XCircle,
+  ChevronDown,
+  ChevronUp,
+  BookmarkPlus,
+  RotateCcw,
+  Home,
+  CheckCheck,
+  ListFilter,
+  MinusCircle,
+} from 'lucide-react';
+import MathRenderer from '../common/MathRenderer';
 
-export default function ScoreReportModal({ reportData, onClose }) {
-  const printRef = useRef(null);
+const FILTERS = {
+  ALL: 'all',
+  CORRECT: 'correct',
+  INCORRECT: 'incorrect',
+};
 
-  if (!reportData) return null;
+const DIFFICULTY_LABEL = {
+  easy: 'Dễ',
+  medium: 'Trung bình',
+  hard: 'Khó',
+};
 
-  const {
-    studentName = 'Phan Tiến Thành',
-    testTitle = 'PHASE 1.42 - SAT ĐGNL TEST 01',
-    testDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-    scoreRange = '570-590',
-    totalScore = 580,
-    totalQuestions = 54,
-    correctAnswers = 37,
-    incorrectAnswers = 17,
-    omittedAnswers = 0,
-    topStrengths = [
-      { name: 'Text Structure', rate: '100%' },
-      { name: 'Main Idea', rate: '100%' },
-      { name: 'Transition', rate: '89%' }
-    ],
-    topWeaknesses = [
-      { name: 'Cross Text', rate: '50%' },
-      { name: 'Grammar', rate: '50%' },
-      { name: 'Word In Context', rate: '50%' }
-    ],
-    domainStats = {
-      rw: [
-        { name: 'Information and Ideas', sub: 'Command of Evidence, Inference, Main Idea, Details', pct: '22% của bài, 12 câu', rate: 71 },
-        { name: 'Craft and Structure', sub: 'Word in Context, Text Structure, Cross Text', pct: '31% của bài, 17 câu', rate: 67 },
-        { name: 'Expression of Ideas', sub: 'Transition, Rhetorical Synthesis', pct: '28% của bài, 15 câu', rate: 80 },
-        { name: 'Standard English Conventions', sub: 'Grammar', pct: '19% của bài, 10 câu', rate: 50 },
-      ],
-      math: [
-        { name: 'Algebra', sub: 'Linear equations, inequalities, systems', pct: '35% của bài, 15 câu', rate: 85 },
-        { name: 'Advanced Math', sub: 'Equivalent expressions, nonlinear equations', pct: '35% của bài, 15 câu', rate: 60 },
-        { name: 'Problem-Solving and Data Analysis', sub: 'Ratios, percentages, probability, data', pct: '15% của bài, 8 câu', rate: 75 },
-        { name: 'Geometry and Trigonometry', sub: 'Area, volume, angles, circles, trigonometry', pct: '15% của bài, 6 câu', rate: 66 },
-      ]
-    },
-    feedback = {
-      strengths: [
-        'Bạn đạt kết quả rất tốt ở dạng TEXT STRUCTURE và MAIN IDEA với độ chính xác cao.',
-        'Dạng TRANSITION cũng là thế mạnh với tỷ lệ đúng áp đảo, nắm chắc logic từ nối.',
-        'Thời gian làm bài được phân bố hợp lý, hoàn thành đầy đủ các câu hỏi.'
-      ],
-      weaknesses: [
-        'Dạng WORD IN CONTEXT và GRAMMAR tỉ lệ đúng chưa cao (50%), cần củng cố các cấu trúc câu phức.',
-        'COMMAND OF EVIDENCE cần luyện thêm thao tác đối chiếu dữ liệu đối chứng.'
-      ],
-      advice: [
-        'Dành 15 phút mỗi ngày đọc các đoạn văn học thuật để tăng vốn từ theo ngữ cảnh.',
-        'Ôn tập kỹ các chủ điểm ngữ pháp cốt lõi: thì, phân từ, mệnh đề quan hệ và dấu câu.',
-        'Luyện tập thêm các bài thi dài hơi để duy trì độ tập trung ở Module 2.'
-      ]
-    }
-  } = reportData;
+const DIFFICULTY_STYLE = {
+  easy: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
+  medium: 'bg-amber-50 text-amber-700 border border-amber-200',
+  hard: 'bg-rose-50 text-rose-700 border border-rose-200',
+};
 
-  const handlePrintPdf = () => {
-    window.print();
-  };
+const formatSeconds = (totalSeconds) => {
+  const value = Number(totalSeconds) || 0;
+  const minutes = Math.floor(value / 60);
+  const seconds = Math.round(value % 60);
+  if (minutes <= 0) return `${seconds}s`;
+  return `${minutes} phút ${seconds.toString().padStart(2, '0')}s`;
+};
+
+const normalizeDomainPerformance = (domainPerformance) => {
+  if (!domainPerformance) return [];
+  if (Array.isArray(domainPerformance)) {
+    return domainPerformance.map((item) => ({
+      domain: item.domain || item.name || 'Không xác định',
+      correct: item.correct || 0,
+      total: item.total || 0,
+      percentage:
+        item.percentage ?? (item.total > 0 ? Math.round((item.correct / item.total) * 100) : 0),
+    }));
+  }
+  return Object.entries(domainPerformance).map(([domain, stat]) => ({
+    domain,
+    correct: stat?.correct || 0,
+    total: stat?.total || 0,
+    percentage:
+      stat?.percentage ?? (stat?.total > 0 ? Math.round((stat.correct / stat.total) * 100) : 0),
+  }));
+};
+
+const getBarColor = (percentage) => {
+  if (percentage >= 80) return 'bg-emerald-500';
+  if (percentage >= 50) return 'bg-amber-400';
+  return 'bg-rose-500';
+};
+
+const getBarTextColor = (percentage) => {
+  if (percentage >= 80) return 'text-emerald-700';
+  if (percentage >= 50) return 'text-amber-700';
+  return 'text-rose-700';
+};
+
+function QuestionReviewCard({ question, index }) {
+  const [expanded, setExpanded] = useState(false);
+  const q = question || {};
+  const isCorrect = !!q.isCorrect;
+  const hasAnswer = q.userAnswer !== undefined && q.userAnswer !== null && q.userAnswer !== '';
+  const promptText = q.prompt || '';
+  const questionText = q.question || '';
+  const options = Array.isArray(q.options) 
+    ? q.options 
+    : (q.options && typeof q.options === 'object' ? Object.entries(q.options).map(([k, v]) => ({ key: k, value: v })) : []);
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      {/* Vùng Báo Cáo */}
-      <div className="bg-white rounded-2xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-6 my-auto max-h-[95vh] overflow-y-auto print:max-h-none print:shadow-none print:border-none print:p-0">
-        
-        {/* Nút hành động */}
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3 print:hidden">
-          <div className="flex items-center gap-2 text-indigo-700 font-bold text-sm">
-            <FileText className="w-5 h-5" />
-            <span>Báo cáo phân tích kết quả bài thi</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={handlePrintPdf}
-              className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
-            >
-              <Download className="w-4 h-4" />
-              <span>EXPORT REPORT</span>
-            </button>
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
+    <div className="rounded-xl border border-slate-200 overflow-hidden bg-white shadow-xs">
+      <button
+        type="button"
+        onClick={() => setExpanded((prev) => !prev)}
+        className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left hover:bg-slate-50 transition-colors cursor-pointer"
+      >
+        <div className="flex items-center gap-3 min-w-0">
+          <span
+            className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+              isCorrect
+                ? 'bg-emerald-100 text-emerald-700'
+                : hasAnswer
+                ? 'bg-rose-100 text-rose-700'
+                : 'bg-slate-100 text-slate-500'
+            }`}
+          >
+            {index + 1}
+          </span>
+          <div className="min-w-0">
+            <p className="text-sm font-medium text-slate-800 truncate">
+              {questionText || promptText || `Câu hỏi ${index + 1}`}
+            </p>
+            <div className="flex items-center gap-2 mt-0.5">
+              {q.domain && (
+                <span className="text-xs text-slate-500 truncate">{q.domain}</span>
+              )}
+              {q.difficulty && (
+                <span
+                  className={`text-[11px] px-1.5 py-0.5 rounded-md font-medium ${
+                    DIFFICULTY_STYLE[q.difficulty] || 'bg-slate-100 text-slate-600 border border-slate-200'
+                  }`}
+                >
+                  {DIFFICULTY_LABEL[q.difficulty] || q.difficulty}
+                </span>
+              )}
+            </div>
           </div>
         </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {isCorrect ? (
+            <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+          ) : hasAnswer ? (
+            <XCircle className="w-5 h-5 text-rose-500" />
+          ) : (
+            <MinusCircle className="w-5 h-5 text-slate-400" />
+          )}
+          {expanded ? (
+            <ChevronUp className="w-4 h-4 text-slate-400" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-slate-400" />
+          )}
+        </div>
+      </button>
 
-        {/* NỘI DUNG REPORT (Chuẩn bố cục bản in) */}
-        <div ref={printRef} className="space-y-6 text-slate-800 font-sans">
-          
-          {/* Header Báo Cáo */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-slate-900 pb-4">
-            <div>
-              <span className="text-xs font-black tracking-widest text-indigo-600 uppercase">VAC SAT Suite</span>
-              <h1 className="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight mt-0.5">
-                Your Practice Score Report
-              </h1>
-              <p className="text-xs font-bold text-slate-500 mt-1">{testTitle}</p>
+      {expanded && (
+        <div className="px-4 pb-4 pt-1 border-t border-slate-100 space-y-4">
+          {promptText && (
+            <div className="text-sm text-slate-700 leading-relaxed font-serif">
+              <MathRenderer text={promptText} />
             </div>
-            <div className="text-left sm:text-right">
-              <div className="text-sm font-bold text-slate-800">Thí sinh: <span className="text-indigo-600">{studentName}</span></div>
-              <div className="text-xs text-slate-400 mt-0.5">{testDate}</div>
+          )}
+          {questionText && (
+            <div className="text-sm font-medium text-slate-800">
+              <MathRenderer text={questionText} />
             </div>
-          </div>
+          )}
+          {options.length > 0 && (
+            <div className="space-y-2">
+              {options.map((opt, optIdx) => {
+                const optionValue = typeof opt === 'string' ? opt : opt?.value ?? opt?.label ?? opt?.text ?? '';
+                const optionKey =
+                  typeof opt === 'string' ? opt : opt?.key ?? opt?.id ?? String.fromCharCode(65 + optIdx);
+                const isUserChoice = String(q.userAnswer).trim().toLowerCase() === String(optionKey).trim().toLowerCase();
+                const isCorrectChoice = String(q.correctAnswer).trim().toLowerCase() === String(optionKey).trim().toLowerCase();
+                
+                let optionStyle = 'border-slate-200 bg-white text-slate-700';
+                if (isCorrectChoice) {
+                  optionStyle = 'border-emerald-400 bg-emerald-50 text-emerald-800';
+                }
+                if (isUserChoice && !isCorrectChoice) {
+                  optionStyle = 'border-rose-400 bg-rose-50 text-rose-800';
+                }
 
-          {/* Hàng 1: Tổng Điểm & Top Đúng/Sai */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Total Score Box */}
-            <div className="p-5 bg-gradient-to-br from-indigo-700 via-indigo-600 to-indigo-800 rounded-2xl text-white flex flex-col justify-between shadow-xs">
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-200">TOTAL SCORE</span>
-                <div className="text-4xl sm:text-5xl font-extrabold font-mono tracking-tight mt-2">{scoreRange}</div>
-              </div>
-              <div className="text-[11px] text-indigo-200 font-medium pt-3 border-t border-white/20 mt-3">
-                Score Range: 200–800 (Ước tính theo mô hình IRT)
-              </div>
-            </div>
-
-            {/* 3 Dạng đúng nhiều nhất */}
-            <div className="p-4 bg-emerald-50/60 border border-emerald-200 rounded-2xl flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-bold text-emerald-800 flex items-center gap-1.5 mb-3">
-                  <CheckCircle className="w-4 h-4 text-emerald-600" />
-                  3 DẠNG ĐÚNG NHIỀU NHẤT
-                </span>
-                <div className="space-y-2">
-                  {topStrengths.map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between text-xs">
-                      <span className="text-slate-700 font-medium truncate">{item.name}</span>
-                      <span className="font-bold font-mono text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-200">{item.rate}</span>
+                return (
+                  <div
+                    key={optionKey}
+                    className={`flex items-center justify-between gap-2 px-3 py-2 rounded-lg border text-sm ${optionStyle}`}
+                  >
+                    <span className="flex-1 font-serif">
+                      <strong className="mr-2 font-mono">{optionKey}.</strong>
+                      <MathRenderer text={String(optionValue)} />
+                    </span>
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      {isUserChoice && (
+                        <span className="text-[11px] font-semibold uppercase tracking-wide">
+                          Bạn chọn
+                        </span>
+                      )}
+                      {isCorrectChoice && (
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      )}
+                      {isUserChoice && !isCorrectChoice && (
+                        <XCircle className="w-4 h-4 text-rose-600" />
+                      )}
                     </div>
-                  ))}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+          {!options.length && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div
+                className={`rounded-lg px-3 py-2 border text-sm ${
+                  isCorrect
+                    ? 'border-emerald-400 bg-emerald-50 text-emerald-800'
+                    : hasAnswer
+                    ? 'border-rose-400 bg-rose-50 text-rose-800'
+                    : 'border-slate-200 bg-slate-50 text-slate-500'
+                }`}
+              >
+                <p className="text-[11px] font-semibold uppercase tracking-wide mb-0.5 opacity-70">
+                  Đáp án của bạn
+                </p>
+                <MathRenderer text={hasAnswer ? String(q.userAnswer) : 'Bỏ trống'} />
+              </div>
+              <div className="rounded-lg px-3 py-2 border border-emerald-400 bg-emerald-50 text-emerald-800 text-sm">
+                <p className="text-[11px] font-semibold uppercase tracking-wide mb-0.5 opacity-70">
+                  Đáp án chuẩn
+                </p>
+                <MathRenderer text={String(q.correctAnswer ?? '')} />
+              </div>
+            </div>
+          )}
+          {q.explanation && (
+            <div className="rounded-lg bg-slate-50 border border-slate-200 px-3 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 mb-1">
+                Lời giải chi tiết
+              </p>
+              <div className="text-sm text-slate-700 leading-relaxed font-serif">
+                <MathRenderer text={q.explanation} />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, reportData }) {
+  const [filter, setFilter] = useState(FILTERS.ALL);
+  const [saveNotice, setSaveNotice] = useState('');
+
+  const data = reportData || {};
+  const questions = Array.isArray(data.questions) ? data.questions : [];
+  const scaledScore = Number.isFinite(data.scaledScore) ? data.scaledScore : 0;
+  const totalQuestions = data.totalQuestions || questions.length || 0;
+  const correctCount =
+    data.correctCount ?? questions.filter((q) => q && q.isCorrect).length ?? 0;
+  const accuracyPercent =
+    totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+  const avgTimePerQuestion =
+    totalQuestions > 0 && data.timeSpent ? Math.round(data.timeSpent / totalQuestions) : 0;
+
+  const domainList = useMemo(
+    () => normalizeDomainPerformance(data.domainPerformance),
+    [data.domainPerformance]
+  );
+
+  const filteredQuestions = useMemo(() => {
+    if (filter === FILTERS.CORRECT) {
+      return questions.filter((q) => q && q.isCorrect);
+    }
+    if (filter === FILTERS.INCORRECT) {
+      return questions.filter((q) => q && !q.isCorrect);
+    }
+    return questions;
+  }, [questions, filter]);
+
+  const branchLabel =
+    data.module2Path === 'Easy'
+      ? 'Phân nhánh Module 2: Cơ bản (Easy)'
+      : 'Phân nhánh Module 2: Thử thách (Hard) — Đạt chuẩn điểm cao';
+
+  const branchBadgeStyle =
+    data.module2Path === 'Easy'
+      ? 'bg-amber-50 text-amber-700 border border-amber-200'
+      : 'bg-violet-50 text-violet-700 border border-violet-200';
+
+  const handleSaveMistakes = useCallback(() => {
+    try {
+      const mistakes = questions.filter((q) => q && q.isCorrect === false);
+      if (mistakes.length === 0) {
+        setSaveNotice('Không có câu sai nào để lưu.');
+        setTimeout(() => setSaveNotice(''), 2500);
+        return;
+      }
+      const existingRaw = window.localStorage.getItem('sat_mistakes');
+      const existing = existingRaw ? JSON.parse(existingRaw) : [];
+      const existingArray = Array.isArray(existing) ? existing : [];
+      const existingIds = new Set(existingArray.map((item) => item.id));
+
+      const newEntries = mistakes
+        .filter((q) => !existingIds.has(q.id))
+        .map((q) => ({
+          id: q.id,
+          prompt: q.prompt || '',
+          question: q.question || '',
+          options: q.options || [],
+          userAnswer: q.userAnswer,
+          correctAnswer: q.correctAnswer,
+          domain: q.domain || '',
+          difficulty: q.difficulty || '',
+          explanation: q.explanation || '',
+          section: data.section || '',
+          savedAt: new Date().toISOString(),
+        }));
+
+      const merged = [...existingArray, ...newEntries];
+      window.localStorage.setItem('sat_mistakes', JSON.stringify(merged));
+      setSaveNotice(
+        newEntries.length > 0
+          ? `Đã lưu ${newEntries.length} câu sai vào Sổ tay!`
+          : 'Các câu sai này đã có sẵn trong Sổ tay.'
+      );
+    } catch (err) {
+      setSaveNotice('Không thể lưu vào Sổ tay (lỗi trình duyệt).');
+    } finally {
+      setTimeout(() => setSaveNotice(''), 2800);
+    }
+  }, [questions, data.section]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs select-none">
+      <div className="relative w-full max-w-4xl max-h-[92vh] bg-slate-50 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 bg-white border-b border-slate-200 shrink-0">
+          <div>
+            <h2 className="text-lg font-semibold text-slate-900">Báo cáo kết quả thi</h2>
+            <p className="text-sm text-slate-500">{data.section || 'Digital SAT Practice'}</p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-500 transition-colors cursor-pointer"
+            aria-label="Đóng"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Scrollable content */}
+        <div className="overflow-y-auto flex-1 px-6 py-6 space-y-8">
+          {/* Score Card */}
+          <section className="rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-700 text-white p-6 shadow-lg">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center shrink-0">
+                  <Trophy className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/70">Điểm số quy đổi (Scaled Score)</p>
+                  <p className="text-4xl font-bold tracking-tight">
+                    {scaledScore}
+                    <span className="text-lg font-medium text-white/70"> / 800</span>
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* 3 Dạng sai nhiều nhất */}
-            <div className="p-4 bg-rose-50/60 border border-rose-200 rounded-2xl flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-bold text-rose-800 flex items-center gap-1.5 mb-3">
-                  <AlertTriangle className="w-4 h-4 text-rose-600" />
-                  3 DẠNG SAI NHIỀU NHẤT
-                </span>
-                <div className="space-y-2">
-                  {topWeaknesses.map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between text-xs">
-                      <span className="text-slate-700 font-medium truncate">{item.name}</span>
-                      <span className="font-bold font-mono text-rose-700 bg-white px-2 py-0.5 rounded border border-rose-200">{item.rate}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hàng 2: Knowledge & Skills Breakdown */}
-          <div className="space-y-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-slate-400">KNOWLEDGE AND SKILLS</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Reading and Writing Domains */}
-              <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
-                <span className="text-xs font-bold text-indigo-700 block border-b border-slate-200 pb-1.5">
-                  Reading and Writing
-                </span>
-                <div className="space-y-3">
-                  {domainStats.rw.map((d, i) => (
-                    <div key={i} className="space-y-1">
-                      <div className="flex justify-between items-center text-xs">
-                        <span className="font-semibold text-slate-800">{d.name}</span>
-                        <span className="font-bold font-mono text-slate-700">{d.rate}%</span>
-                      </div>
-                      <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                        <div className="bg-indigo-600 h-full rounded-full" style={{ width: `${d.rate}%` }} />
-                      </div>
-                      <div className="text-[10px] text-slate-400">{d.sub} ({d.pct})</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Math Domains */}
-              <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
-                <span className="text-xs font-bold text-emerald-700 block border-b border-slate-200 pb-1.5">
-                  Math
-                </span>
-                <div className="space-y-3">
-                  {domainStats.math.map((d, i) => (
-                    <div key={i} className="space-y-1">
-                      <div className="flex justify-between items-center text-xs">
-                        <span className="font-semibold text-slate-800">{d.name}</span>
-                        <span className="font-bold font-mono text-slate-700">{d.rate}%</span>
-                      </div>
-                      <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                        <div className="bg-emerald-600 h-full rounded-full" style={{ width: `${d.rate}%` }} />
-                      </div>
-                      <div className="text-[10px] text-slate-400">{d.sub} ({d.pct})</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hàng 3: Questions Overview */}
-          <div className="p-4 bg-slate-900 text-white rounded-2xl flex flex-wrap items-center justify-around gap-4 text-center">
-            <div>
-              <span className="text-[11px] text-slate-400 block font-medium">Total Questions</span>
-              <span className="text-2xl font-black font-mono">{totalQuestions}</span>
-            </div>
-            <div className="h-8 w-px bg-slate-800 hidden sm:block" />
-            <div>
-              <span className="text-[11px] text-emerald-400 block font-medium">Correct Answers</span>
-              <span className="text-2xl font-black font-mono text-emerald-400">{correctAnswers}</span>
-            </div>
-            <div className="h-8 w-px bg-slate-800 hidden sm:block" />
-            <div>
-              <span className="text-[11px] text-rose-400 block font-medium">Incorrect Answers</span>
-              <span className="text-2xl font-black font-mono text-rose-400">{incorrectAnswers}</span>
-            </div>
-            <div className="h-8 w-px bg-slate-800 hidden sm:block" />
-            <div>
-              <span className="text-[11px] text-amber-400 block font-medium">Omitted</span>
-              <span className="text-2xl font-black font-mono text-amber-400">{omittedAnswers}</span>
-            </div>
-          </div>
-
-          {/* Hàng 4: Nhận xét & Lời khuyên */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 bg-emerald-50/40 border border-emerald-100 rounded-2xl space-y-2">
-              <span className="text-xs font-bold text-emerald-800 flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-emerald-600" /> Ưu điểm
+              <span className={`self-start sm:self-auto px-3 py-1.5 rounded-full text-xs font-semibold ${branchBadgeStyle} bg-white/95`}>
+                {branchLabel}
               </span>
-              <ul className="text-[11px] text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
-                {feedback.strengths.map((s, i) => <li key={i}>{s}</li>)}
-              </ul>
             </div>
 
-            <div className="p-4 bg-rose-50/40 border border-rose-100 rounded-2xl space-y-2">
-              <span className="text-xs font-bold text-rose-800 flex items-center gap-1.5">
-                <AlertTriangle className="w-4 h-4 text-rose-600" /> Cần cải thiện
-              </span>
-              <ul className="text-[11px] text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
-                {feedback.weaknesses.map((w, i) => <li key={i}>{w}</li>)}
-              </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
+              <div className="rounded-xl bg-white/10 px-4 py-3">
+                <div className="flex items-center gap-2 text-white/70 text-xs mb-1">
+                  <Target className="w-4 h-4" />
+                  Tỷ lệ làm đúng
+                </div>
+                <p className="text-xl font-semibold">{accuracyPercent}%</p>
+              </div>
+              <div className="rounded-xl bg-white/10 px-4 py-3">
+                <div className="flex items-center gap-2 text-white/70 text-xs mb-1">
+                  <CheckCheck className="w-4 h-4" />
+                  Số câu đúng
+                </div>
+                <p className="text-xl font-semibold">
+                  {correctCount} / {totalQuestions}
+                </p>
+              </div>
+              <div className="rounded-xl bg-white/10 px-4 py-3">
+                <div className="flex items-center gap-2 text-white/70 text-xs mb-1">
+                  <Clock className="w-4 h-4" />
+                  Thời gian TB / câu
+                </div>
+                <p className="text-xl font-semibold">
+                  {avgTimePerQuestion > 0 ? formatSeconds(avgTimePerQuestion) : '—'}
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Domain performance */}
+          <section>
+            <h3 className="text-base font-semibold text-slate-800 mb-3">
+              Phân tích năng lực theo Domain
+            </h3>
+            {domainList.length === 0 ? (
+              <p className="text-sm text-slate-500">Chưa có dữ liệu phân tích theo domain.</p>
+            ) : (
+              <div className="space-y-3">
+                {domainList.map((item) => (
+                  <div
+                    key={item.domain}
+                    className="bg-white rounded-xl border border-slate-200 px-4 py-3 shadow-xs"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-slate-700">{item.domain}</span>
+                      <div className={`flex items-center gap-1.5 text-sm font-semibold ${getBarTextColor(item.percentage)}`}>
+                        {item.percentage >= 70 ? (
+                          <TrendingUp className="w-4 h-4" />
+                        ) : (
+                          <TrendingDown className="w-4 h-4" />
+                        )}
+                        {item.percentage}%
+                        <span className="text-xs font-normal text-slate-400">
+                          ({item.correct}/{item.total})
+                        </span>
+                      </div>
+                    </div>
+                    <div className="w-full h-2.5 rounded-full bg-slate-100 overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${getBarColor(item.percentage)} transition-all`}
+                        style={{ width: `${Math.min(100, Math.max(0, item.percentage))}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+
+          {/* Review matrix */}
+          <section>
+            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+              <h3 className="text-base font-semibold text-slate-800">Ma trận rà soát câu hỏi</h3>
+              <div className="flex items-center gap-1.5 bg-white border border-slate-200 rounded-lg p-1">
+                <button
+                  type="button"
+                  onClick={() => setFilter(FILTERS.ALL)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer ${
+                    filter === FILTERS.ALL
+                      ? 'bg-slate-800 text-white'
+                      : 'text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  <ListFilter className="w-3.5 h-3.5" />
+                  Tất cả ({questions.length})
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setFilter(FILTERS.CORRECT)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer ${
+                    filter === FILTERS.CORRECT
+                      ? 'bg-emerald-600 text-white'
+                      : 'text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  Chỉ câu đúng ({questions.filter((q) => q && q.isCorrect).length})
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setFilter(FILTERS.INCORRECT)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer ${
+                    filter === FILTERS.INCORRECT
+                      ? 'bg-rose-600 text-white'
+                      : 'text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  <XCircle className="w-3.5 h-3.5" />
+                  Chỉ câu sai/Bỏ trống ({questions.filter((q) => q && !q.isCorrect).length})
+                </button>
+              </div>
             </div>
 
-            <div className="p-4 bg-amber-50/40 border border-amber-100 rounded-2xl space-y-2">
-              <span className="text-xs font-bold text-amber-800 flex items-center gap-1.5">
-                <Lightbulb className="w-4 h-4 text-amber-600" /> Lời khuyên
-              </span>
-              <ul className="text-[11px] text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
-                {feedback.advice.map((a, i) => <li key={i}>{a}</li>)}
-              </ul>
-            </div>
-          </div>
+            {filteredQuestions.length === 0 ? (
+              <div className="text-center py-10 text-sm text-slate-400 bg-white rounded-xl border border-dashed border-slate-200">
+                Không có câu hỏi nào khớp với bộ lọc hiện tại.
+              </div>
+            ) : (
+              <div className="space-y-2.5">
+                {filteredQuestions.map((q, idx) => (
+                  <QuestionReviewCard key={q?.id ?? idx} question={q} index={idx} />
+                ))}
+              </div>
+            )}
+          </section>
+        </div>
 
-          {/* Footer bản quyền */}
-          <div className="text-center text-[10px] text-slate-400 border-t border-slate-100 pt-3">
-            This practice score report is provided for personal diagnostic use to help prepare for test day. © 2026 Vietaccepted / SAT Prep Platform.
+        {/* Footer actions */}
+        <div className="shrink-0 border-t border-slate-200 bg-white px-6 py-4">
+          {saveNotice && (
+            <div className="mb-3 text-sm text-center text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-lg py-2 px-3">
+              {saveNotice}
+            </div>
+          )}
+          <div className="flex flex-col sm:flex-row gap-2.5">
+            <button
+              type="button"
+              onClick={handleSaveMistakes}
+              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 text-sm font-medium hover:bg-amber-100 transition-colors cursor-pointer"
+            >
+              <BookmarkPlus className="w-4 h-4" />
+              Lưu tất cả câu sai vào Sổ tay
+            </button>
+            <button
+              type="button"
+              onClick={onRetry}
+              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors sm:ml-auto cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Làm lại bài thi
+            </button>
+            <button
+              type="button"
+              onClick={onHome}
+              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 text-sm font-medium hover:bg-slate-200 transition-colors cursor-pointer"
+            >
+              <Home className="w-4 h-4" />
+              Về trang chủ
+            </button>
           </div>
         </div>
       </div>

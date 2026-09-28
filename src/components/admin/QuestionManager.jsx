@@ -6,25 +6,24 @@ import {
 } from 'lucide-react';
 import defaultCodes from '../../data/validCodes.json';
 import MathRenderer from '../common/MathRenderer';
-import { parseLatexDocument } from '../../services/latexParser';
 
 export default function QuestionManager() {
-  const [activeTab, setActiveTab] = useState('latex');
+  const [activeTab, setActiveTab] = useState('codes'); // 'codes' | 'docs' | 'latex'
 
-  // Quản lý mã mời
+  // ================= STATE MÃ MỜI =================
   const [codes, setCodes] = useState([]);
   const [newCodeName, setNewCodeName] = useState('');
   const [newCodeRole, setNewCodeRole] = useState('STUDENT');
   const [copiedCode, setCopiedCode] = useState(null);
 
-  // Quản lý tài liệu
+  // ================= STATE TÀI LIỆU =================
   const [documents, setDocuments] = useState([]);
   const [docTitle, setDocTitle] = useState('');
   const [docSize, setDocSize] = useState('2.5 MB');
   const [docUrl, setDocUrl] = useState('');
   const [docSuccess, setDocSuccess] = useState(false);
 
-  // Quản lý upload LaTeX Math
+  // ================= STATE LATEX MATH =================
   const [latexInput, setLatexInput] = useState('');
   const [mathCategory, setMathCategory] = useState('Algebra');
   const [parsedPreview, setParsedPreview] = useState([]);
@@ -53,18 +52,26 @@ export default function QuestionManager() {
       const savedMath = JSON.parse(localStorage.getItem('sat_math_questions') || '[]');
       setExistingMathCount(savedMath.length);
     } catch (e) {
-      console.warn("Lỗi load dữ liệu admin:", e);
+      console.warn('Lỗi tải dữ liệu quản trị:', e);
     }
   }, []);
 
+  // --- XỬ LÝ MÃ MỜI ---
   const handleGenerateCode = (e) => {
     e.preventDefault();
     const codeString = newCodeName.trim().toUpperCase() || `SAT-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+    
     if (codes.some(c => (typeof c === 'string' ? c : c.code) === codeString)) {
-      alert('Mã này đã tồn tại!');
+      alert('Mã kích hoạt này đã tồn tại!');
       return;
     }
-    const newEntry = { code: codeString, role: newCodeRole, createdAt: new Date().toLocaleDateString() };
+
+    const newEntry = {
+      code: codeString,
+      role: newCodeRole,
+      createdAt: new Date().toLocaleDateString()
+    };
+
     const updated = [newEntry, ...codes];
     setCodes(updated);
     localStorage.setItem('sat_access_codes', JSON.stringify(updated));
@@ -84,9 +91,11 @@ export default function QuestionManager() {
     setTimeout(() => setCopiedCode(null), 2000);
   };
 
+  // --- XỬ LÝ TÀI LIỆU PDF ---
   const handleAddDocument = (e) => {
     e.preventDefault();
     if (!docTitle.trim()) return;
+
     const newDoc = {
       id: 'doc_' + Date.now(),
       title: docTitle.trim(),
@@ -95,9 +104,11 @@ export default function QuestionManager() {
       url: docUrl.trim() || '#',
       createdAt: new Date().toLocaleDateString()
     };
+
     const updated = [newDoc, ...documents];
     setDocuments(updated);
     localStorage.setItem('admin_documents', JSON.stringify(updated));
+
     setDocTitle('');
     setDocUrl('');
     setDocSuccess(true);
@@ -105,23 +116,79 @@ export default function QuestionManager() {
   };
 
   const handleDeleteDoc = (id) => {
-    if (!window.confirm('Xác nhận xóa tài liệu này khỏi kho?')) return;
+    if (!window.confirm('Xác nhận xóa tài liệu này?')) return;
     const updated = documents.filter(d => d.id !== id);
     setDocuments(updated);
     localStorage.setItem('admin_documents', JSON.stringify(updated));
   };
 
-  // PHÂN TÍCH LATEX AN TOÀN 100% QUA HELPER MODULE
+  // --- XỬ LÝ PARSE LATEX ---
   const handleParseLatex = () => {
     if (!latexInput.trim()) return;
-    const results = parseLatexDocument(latexInput, mathCategory);
 
-    if (results.length === 0) {
-      alert("Không tìm thấy câu hỏi \\question{số} hợp lệ trong mã nguồn!");
+    const questions = [];
+    const blocks = latexInput.split(/\\question\{|\bQuestion\s+\d+:|\\item\s*\[\d+\]/gi).filter(b => b.trim());
+
+    blocks.forEach((block, idx) => {
+      // 1. Tách OptionsFour
+      const optFourMatch = block.match(/\\optionsFour\{([^}]*)\}\{([^}]*)\}\{([^}]*)\}\{([^}]*)\}/i);
+      let options = { A: '', B: '', C: '', D: '' };
+      let isGridIn = false;
+
+      if (optFourMatch) {
+        options = {
+          A: optFourMatch[1].trim(),
+          B: optFourMatch[2].trim(),
+          C: optFourMatch[3].trim(),
+          D: optFourMatch[4].trim()
+        };
+      } else {
+        const choiceMatches = [...block.matchAll(/(?:\\choice|[A-D]\.|\([A-D]\))\s*([^\n\r\\]+)/gi)];
+        if (choiceMatches.length >= 4) {
+          options = {
+            A: choiceMatches[0][1].trim(),
+            B: choiceMatches[1][1].trim(),
+            C: choiceMatches[2][1].trim(),
+            D: choiceMatches[3][1].trim()
+          };
+        } else {
+          isGridIn = true;
+        }
+      }
+
+      // 2. Tách Prompt
+      let prompt = block.split(/\\optionsFour|\\choice|[A-D]\.|\([A-D]\)|\\answer/i)[0];
+      prompt = prompt.replace(/^\d+\}?\s*/, '').trim();
+
+      // 3. Tách đáp án đúng
+      const ansMatch = block.match(/(?:\\answer|Answer:?|Đáp án:?)\s*\{?([A-D0-9./\-]+)\}?/i);
+      const correctAnswer = ansMatch ? ansMatch[1].trim().toUpperCase() : 'A';
+
+      // 4. Tách lời giải
+      const expMatch = block.match(/(?:\\explanation|Explanation:?|Lời giải:?)\s*\{?([\s\S]*?)\}?(?=(?:\\end\{question\}|$))/i);
+      const explanation = expMatch ? expMatch[1].trim() : '';
+
+      if (prompt) {
+        questions.push({
+          id: `math_${mathCategory.toLowerCase().replace(/\s+/g, '_')}_${Date.now()}_${idx + 1}`,
+          category: mathCategory,
+          section: 'Math',
+          prompt: prompt,
+          question: isGridIn ? "Enter your answer in the box below." : "Which choice most logically answers the question?",
+          isGridIn: isGridIn,
+          options: options,
+          correctAnswer: correctAnswer,
+          explanation: explanation
+        });
+      }
+    });
+
+    if (questions.length === 0) {
+      alert("Chưa nhận diện được câu hỏi. Hãy kiểm tra lại định dạng LaTeX!");
       return;
     }
 
-    setParsedPreview(results);
+    setParsedPreview(questions);
   };
 
   const handleSaveMathQuestions = () => {
@@ -134,22 +201,7 @@ export default function QuestionManager() {
     setMathSuccess(true);
     setParsedPreview([]);
     setLatexInput('');
-    setTimeout(() => setMathSuccess(false), 3500);
-  };
-
-  const handleExportJson = () => {
-    const questions = JSON.parse(localStorage.getItem('sat_math_questions') || '[]');
-    if (questions.length === 0) {
-      alert("Chưa có câu hỏi Math nào để xuất file!");
-      return;
-    }
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(questions, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", "math.json");
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
+    setTimeout(() => setMathSuccess(false), 3000);
   };
 
   const handleClearMathQuestions = () => {
@@ -160,6 +212,7 @@ export default function QuestionManager() {
 
   return (
     <div className="space-y-6">
+      {/* HEADER QUẢN TRỊ */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
@@ -167,54 +220,265 @@ export default function QuestionManager() {
             <span>Khu vực Quản trị Đề & Hệ thống</span>
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Quản lý mã mời, tài liệu PDF và công cụ upload đề Math chuẩn LaTeX.
+            Quản lý mã mời bài thi, tải lên tài liệu học tập và upload đề thi toán LaTeX.
           </p>
         </div>
 
+        {/* CÁC TAB CHỨC NĂNG */}
         <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
           <button
             type="button"
+            onClick={() => setActiveTab('codes')}
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer ${
+              activeTab === 'codes' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Key className="w-3.5 h-3.5 text-amber-600" />
+            Mã mời
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('docs')}
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer ${
+              activeTab === 'docs' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <FileUp className="w-3.5 h-3.5 text-indigo-600" />
+            Kho tài liệu
+          </button>
+          <button
+            type="button"
             onClick={() => setActiveTab('latex')}
-            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition ${
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer ${
               activeTab === 'latex' ? 'bg-white text-indigo-700 shadow-xs' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
             <FileCode className="w-3.5 h-3.5 text-indigo-600" />
             Upload Math (LaTeX)
           </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('codes')}
-            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition ${
-              activeTab === 'codes' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <Key className="w-3.5 h-3.5" />
-            Mã mời
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('docs')}
-            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition ${
-              activeTab === 'docs' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <FileUp className="w-3.5 h-3.5" />
-            Kho tài liệu
-          </button>
         </div>
       </div>
 
-      {/* ================= TAB 1: UPLOAD ĐỀ MATH (LATEX) ================= */}
+      {/* ================= TAB 1: MÃ MỜI ================= */}
+      {activeTab === 'codes' && (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+              <Plus className="w-4 h-4 text-amber-600" />
+              Tạo mã mời mới
+            </h3>
+            
+            <form onSubmit={handleGenerateCode} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                  Mã mời (Tùy chọn nhập hoặc để trống tự tạo)
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ví dụ: SAT-PRO-2026"
+                  value={newCodeName}
+                  onChange={(e) => setNewCodeName(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none uppercase"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Quyền truy cập</label>
+                <select
+                  value={newCodeRole}
+                  onChange={(e) => setNewCodeRole(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                >
+                  <option value="STUDENT">Học viên (Truy cập đầy đủ kho đề)</option>
+                  <option value="ADMIN">Quản trị viên (Admin)</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer"
+              >
+                Tạo mã kích hoạt
+              </button>
+            </form>
+          </div>
+
+          <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+              <span className="font-bold text-xs text-slate-700 uppercase tracking-wider">
+                Danh sách mã kích hoạt ({codes.length})
+              </span>
+            </div>
+
+            <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
+              {codes.length === 0 ? (
+                <div className="p-8 text-center text-xs text-slate-400">
+                  Chưa có mã mời nào được tạo.
+                </div>
+              ) : (
+                codes.map((item, idx) => {
+                  const codeVal = typeof item === 'string' ? item : item.code;
+                  const role = typeof item === 'object' ? item.role : 'STUDENT';
+                  const date = typeof item === 'object' ? item.createdAt : 'Hôm nay';
+
+                  return (
+                    <div key={idx} className="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center font-bold text-xs">
+                          #
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono font-bold text-sm text-slate-800">{codeVal}</span>
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                              role === 'ADMIN' ? 'bg-rose-50 text-rose-700' : 'bg-indigo-50 text-indigo-700'
+                            }`}>
+                              {role}
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-slate-400">Ngày tạo: {date}</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => handleCopy(codeVal)}
+                          className="p-2 hover:bg-slate-200 text-slate-600 rounded-lg transition cursor-pointer"
+                          title="Sao chép mã"
+                        >
+                          {copiedCode === codeVal ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteCode(codeVal)}
+                          className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg transition cursor-pointer"
+                          title="Xóa mã"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ================= TAB 2: TÀI LIỆU PDF ================= */}
+      {activeTab === 'docs' && (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+              <FileUp className="w-4 h-4 text-indigo-600" />
+              Đăng tải tài liệu mới
+            </h3>
+
+            {docSuccess && (
+              <div className="p-3 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs rounded-xl font-medium">
+                Tài liệu đã được đăng lên Kho tài liệu thành công!
+              </div>
+            )}
+
+            <form onSubmit={handleAddDocument} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Tên tài liệu PDF</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Ví dụ: SAT Math Formula Sheet 2026"
+                  value={docTitle}
+                  onChange={(e) => setDocTitle(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Kích thước file</label>
+                <input
+                  type="text"
+                  placeholder="Ví dụ: 3.5 MB"
+                  value={docSize}
+                  onChange={(e) => setDocSize(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Link Google Drive / Tải xuống</label>
+                <input
+                  type="text"
+                  placeholder="https://drive.google.com/..."
+                  value={docUrl}
+                  onChange={(e) => setDocUrl(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer"
+              >
+                Đăng tải lên Kho tài liệu
+              </button>
+            </form>
+          </div>
+
+          <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+              <span className="font-bold text-xs text-slate-700 uppercase tracking-wider">
+                Tài liệu đang hiển thị ({documents.length})
+              </span>
+            </div>
+
+            <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
+              {documents.length === 0 ? (
+                <div className="p-8 text-center text-xs text-slate-400">
+                  Chưa có tài liệu nào.
+                </div>
+              ) : (
+                documents.map((doc) => (
+                  <div key={doc.id} className="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-xs">
+                        PDF
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-bold text-slate-800">{doc.title}</h4>
+                        <span className="text-[11px] text-slate-400">
+                          {doc.size} • Đăng ngày {doc.createdAt}
+                        </span>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteDoc(doc.id)}
+                      className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg transition cursor-pointer"
+                      title="Xóa tài liệu"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ================= TAB 3: UPLOAD MATH LATEX ================= */}
       {activeTab === 'latex' && (
         <div className="space-y-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 <FileCode className="w-5 h-5 text-indigo-600" />
-                <h3 className="font-bold text-slate-800 text-sm">Dán mã nguồn Overleaf (.tex)</h3>
+                <h3 className="font-bold text-slate-800 text-sm">Dán mã nguồn câu hỏi LaTeX</h3>
                 <span className="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full font-bold">
-                  Hiện có: {existingMathCount} câu trong ngân hàng
+                  Hiện có: {existingMathCount} câu
                 </span>
               </div>
 
@@ -225,30 +489,19 @@ export default function QuestionManager() {
                   className="text-xs font-bold border border-slate-200 rounded-lg px-3 py-1.5 bg-slate-50 outline-none"
                 >
                   <option value="Algebra">Algebra (Đại số)</option>
-                  <option value="Advanced Math">Advanced Math (Hàm số & Đa thức)</option>
-                  <option value="Problem Solving">Problem Solving & Data Analysis</option>
+                  <option value="Advanced Math">Advanced Math</option>
+                  <option value="Problem Solving">Problem Solving</option>
                   <option value="Geometry">Geometry & Trigonometry</option>
                 </select>
 
                 {existingMathCount > 0 && (
-                  <>
-                    <button
-                      type="button"
-                      onClick={handleExportJson}
-                      className="flex items-center gap-1 text-xs text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg font-semibold border border-indigo-200 transition"
-                      title="Xuất file math.json để lưu cố định vào src/data/questions"
-                    >
-                      <Download className="w-3.5 h-3.5" />
-                      Xuất math.json
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handleClearMathQuestions}
-                      className="text-xs text-rose-600 hover:bg-rose-50 px-2.5 py-1.5 rounded-lg font-semibold border border-rose-200 transition"
-                    >
-                      Xóa tất cả
-                    </button>
-                  </>
+                  <button
+                    type="button"
+                    onClick={handleClearMathQuestions}
+                    className="text-xs text-rose-600 hover:bg-rose-50 px-2.5 py-1.5 rounded-lg font-semibold border border-rose-200 transition cursor-pointer"
+                  >
+                    Xóa tất cả
+                  </button>
                 )}
               </div>
             </div>
@@ -261,16 +514,16 @@ export default function QuestionManager() {
             )}
 
             <textarea
-              rows={11}
+              rows={9}
               value={latexInput}
               onChange={(e) => setLatexInput(e.target.value)}
-              placeholder="Dán toàn bộ mã nguồn file main.tex từ Overleaf vào đây..."
+              placeholder="Dán mã LaTeX câu hỏi vào đây..."
               className="w-full font-mono text-xs p-4 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none leading-relaxed"
             />
 
             <div className="flex justify-between items-center">
               <span className="text-[11px] text-slate-400">
-                Tự động nhận diện TikZ, phân số lồng nhau, bảng Tabular và câu tự điền số.
+                Hỗ trợ công thức nội dòng $...$ và khối $$...$$
               </span>
               <button
                 type="button"
@@ -283,13 +536,13 @@ export default function QuestionManager() {
             </div>
           </div>
 
-          {/* VÙNG XEM TRƯỚC BỘ ĐỀ */}
+          {/* XEM TRƯỚC */}
           {parsedPreview.length > 0 && (
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
                   <Calculator className="w-4 h-4 text-emerald-600" />
-                  Đã nhận diện chuẩn xác: {parsedPreview.length} câu hỏi
+                  Đã nhận diện: {parsedPreview.length} câu hỏi
                 </h4>
                 <button
                   type="button"
@@ -301,15 +554,13 @@ export default function QuestionManager() {
                 </button>
               </div>
 
-              <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
-                {parsedPreview.map((q) => (
-                  <div key={q.id} className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2.5">
+              <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
+                {parsedPreview.map((q, i) => (
+                  <div key={i} className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2.5">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-indigo-700">Câu {q.questionNumber} • {q.category}</span>
-                      <span className={`font-mono font-bold px-2 py-0.5 rounded border text-[11px] ${
-                        q.isGridIn ? 'bg-amber-50 text-amber-800 border-amber-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                      }`}>
-                        {q.isGridIn ? 'Câu tự điền số (Student-Produced Response)' : `Trắc nghiệm 4 lựa chọn`}
+                      <span className="font-bold text-indigo-700">Câu {i + 1} • {q.category}</span>
+                      <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                        Đáp án: {q.correctAnswer}
                       </span>
                     </div>
 
@@ -317,7 +568,7 @@ export default function QuestionManager() {
                       <MathRenderer text={q.prompt} />
                     </div>
 
-                    {!q.isGridIn && q.options && (
+                    {!q.isGridIn && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                         {Object.entries(q.options).map(([k, val]) => (
                           <div key={k} className="p-2.5 bg-white rounded-lg border border-slate-200 text-xs flex items-center gap-2">
@@ -336,102 +587,6 @@ export default function QuestionManager() {
               </div>
             </div>
           )}
-        </div>
-      )}
-
-      {/* ================= TAB 2: MÃ MỜI ================= */}
-      {activeTab === 'codes' && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
-              <Plus className="w-4 h-4 text-amber-600" />
-              Tạo mã mời mới
-            </h3>
-            <form onSubmit={handleGenerateCode} className="space-y-4">
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">Mã mời</label>
-                <input
-                  type="text"
-                  placeholder="Ví dụ: SAT-PRO-2026"
-                  value={newCodeName}
-                  onChange={(e) => setNewCodeName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-amber-500 uppercase"
-                />
-              </div>
-              <button type="submit" className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl transition cursor-pointer">
-                Tạo mã
-              </button>
-            </form>
-          </div>
-          <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
-            <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
-              {codes.map((item, idx) => {
-                const codeVal = typeof item === 'string' ? item : item.code;
-                return (
-                  <div key={idx} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                    <span className="font-mono font-bold text-sm text-slate-800">{codeVal}</span>
-                    <div className="flex items-center gap-1.5">
-                      <button onClick={() => handleCopy(codeVal)} className="p-2 hover:bg-slate-200 rounded-lg cursor-pointer">
-                        {copiedCode === codeVal ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                      </button>
-                      <button onClick={() => handleDeleteCode(codeVal)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg cursor-pointer">
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ================= TAB 3: KHO TÀI LIỆU ================= */}
-      {activeTab === 'docs' && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs h-fit space-y-4">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
-              <FileUp className="w-4 h-4 text-indigo-600" />
-              Đăng tải tài liệu mới
-            </h3>
-            {docSuccess && (
-              <div className="p-3 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs rounded-xl font-medium">
-                Tài liệu đã được đăng tải thành công!
-              </div>
-            )}
-            <form onSubmit={handleAddDocument} className="space-y-4">
-              <input
-                type="text"
-                required
-                placeholder="Tên tài liệu PDF"
-                value={docTitle}
-                onChange={(e) => setDocTitle(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold"
-              />
-              <input
-                type="text"
-                placeholder="Link tải file PDF"
-                value={docUrl}
-                onChange={(e) => setDocUrl(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs"
-              />
-              <button type="submit" className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition cursor-pointer">
-                Đăng lên kho tài liệu
-              </button>
-            </form>
-          </div>
-          <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
-            <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
-              {documents.map((doc) => (
-                <div key={doc.id} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                  <span className="text-xs font-bold text-slate-800">{doc.title}</span>
-                  <button onClick={() => handleDeleteDoc(doc.id)} className="p-2 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-lg cursor-pointer">
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       )}
     </div>

@@ -1,3 +1,4 @@
+// Import các chủ đề Reading & Writing
 import wordsInContextData from '../data/questions/wordInContext.json';
 import commandOfEvidenceData from '../data/questions/commandOfEvidence.json';
 import crossTextData from '../data/questions/crossText.json';
@@ -6,11 +7,15 @@ import grammarData from '../data/questions/grammar.json';
 import inferenceData from '../data/questions/inference.json';
 import transitionData from '../data/questions/transition.json';
 import vocabularyData from '../data/questions/vocabulary.json';
-import algebraQuestions from '../data/questions/algebra.json';
-import verbalHardTest1 from '../data/questions/verbal_hard_test1.json';
-import verbalHardTest2 from '../data/questions/verbal_hard_test2.json';
 
-// Cấu hình đầy đủ danh mục SAT
+// Import câu hỏi Math
+import algebraQuestions from '../data/questions/algebra.json';
+
+// Import 2 đề thi tuyển chọn Verbal Hard (nằm trong thư mục tests)
+import verbalHardTest1 from '../data/questions/tests/verbal_hard_test1.json';
+import verbalHardTest2 from '../data/questions/tests/verbal_hard_test2.json';
+
+// Cấu hình đầy đủ danh mục Digital SAT
 export const DEFAULT_CATEGORIES = [
   // --- MỤC ĐỀ THI TUYỂN CHỌN / NÂNG CAO (27 CÂU) ---
   {
@@ -19,7 +24,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Curated Full Test',
     section: 'Full Test',
     description: 'Đề thi Verbal nâng cao sưu tầm tuyển chọn gồm 27 câu hỏi phân hóa cao chuẩn College Board.',
-    questions: verbalHardTest1 || []
+    questions: Array.isArray(verbalHardTest1) ? verbalHardTest1 : []
   },
   {
     id: 'curated-hard-verbal-02',
@@ -27,7 +32,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Curated Full Test',
     section: 'Full Test',
     description: 'Đề thi Verbal chung cuộc nâng cao 27 câu với các bài đọc học thuật phức tạp và bẫy suy luận.',
-    questions: verbalHardTest2 || []
+    questions: Array.isArray(verbalHardTest2) ? verbalHardTest2 : []
   },
 
   // --- READING & WRITING THEO CHUYÊN ĐỀ ---
@@ -37,7 +42,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Craft and Structure',
     section: 'Reading & Writing',
     description: 'Xác định nghĩa của từ và cụm từ dựa theo ngữ cảnh văn bản.',
-    questions: wordsInContextData || []
+    questions: Array.isArray(wordsInContextData) ? wordsInContextData : []
   },
   {
     id: 'text-structure',
@@ -53,7 +58,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Craft and Structure',
     section: 'Reading & Writing',
     description: 'So sánh, đối chiếu quan điểm giữa hai đoạn văn ngắn.',
-    questions: crossTextData || []
+    questions: Array.isArray(crossTextData) ? crossTextData : []
   },
   {
     id: 'central-ideas',
@@ -61,7 +66,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Information and Ideas',
     section: 'Reading & Writing',
     description: 'Tìm ý chính và định vị chi tiết then chốt trong văn bản.',
-    questions: detailsData || []
+    questions: Array.isArray(detailsData) ? detailsData : []
   },
   {
     id: 'command-of-evidence',
@@ -69,7 +74,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Information and Ideas',
     section: 'Reading & Writing',
     description: 'Đánh giá bằng chứng văn bản và dữ liệu bảng biểu/đồ thị.',
-    questions: commandOfEvidenceData || []
+    questions: Array.isArray(commandOfEvidenceData) ? commandOfEvidenceData : []
   },
   {
     id: 'inferences',
@@ -77,7 +82,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Information and Ideas',
     section: 'Reading & Writing',
     description: 'Đưa ra kết luận suy luận hợp lý nhất từ các dữ kiện cho trước.',
-    questions: inferenceData || []
+    questions: Array.isArray(inferenceData) ? inferenceData : []
   },
   {
     id: 'boundaries',
@@ -85,7 +90,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Standard English Conventions',
     section: 'Reading & Writing',
     description: 'Quy tắc ngữ pháp, dấu câu và cấu trúc câu tiếng Anh tiêu chuẩn.',
-    questions: grammarData || []
+    questions: Array.isArray(grammarData) ? grammarData : []
   },
   {
     id: 'transitions',
@@ -93,7 +98,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Expression of Ideas',
     section: 'Reading & Writing',
     description: 'Lựa chọn từ nối và liên từ logic giữa các mệnh đề.',
-    questions: transitionData || []
+    questions: Array.isArray(transitionData) ? transitionData : []
   },
 
   // --- MATH ---
@@ -103,7 +108,7 @@ export const DEFAULT_CATEGORIES = [
     domain: 'Heart of Algebra',
     section: 'Math',
     description: 'Phương trình tuyến tính, hệ phương trình, bất đẳng thức và đồ thị đường thẳng.',
-    questions: algebraQuestions || []
+    questions: Array.isArray(algebraQuestions) ? algebraQuestions : []
   },
   {
     id: 'advanced-math',
@@ -132,9 +137,20 @@ export const DEFAULT_CATEGORIES = [
 ];
 
 export const questionService = {
+  // Lấy toàn bộ danh mục kèm số lượng câu hỏi thực tế (kết hợp cả câu hỏi lưu trong localStorage)
   getCategories: () => {
+    let extraMath = [];
+    try {
+      extraMath = JSON.parse(localStorage.getItem('sat_math_questions') || '[]');
+    } catch (e) {
+      extraMath = [];
+    }
+
     return DEFAULT_CATEGORIES.map(cat => {
-      const qList = [...(cat.questions || [])];
+      let qList = [...(cat.questions || [])];
+      if (cat.id === 'algebra' && extraMath.length > 0) {
+        qList = [...qList, ...extraMath];
+      }
       return {
         ...cat,
         questionCount: qList.length,
@@ -143,20 +159,30 @@ export const questionService = {
     });
   },
 
+  // Lấy toàn bộ câu hỏi Math
   getAllMathQuestions: () => {
-    return [...algebraQuestions];
+    let extraMath = [];
+    try {
+      extraMath = JSON.parse(localStorage.getItem('sat_math_questions') || '[]');
+    } catch (e) {
+      extraMath = [];
+    }
+    return [...(Array.isArray(algebraQuestions) ? algebraQuestions : []), ...extraMath];
   },
 
+  // Lấy danh sách đề thi tuyển chọn nâng cao (Full Test)
   getCuratedHardTests: () => {
-    return DEFAULT_CATEGORIES.filter(c => c.section === 'Full Test');
+    return questionService.getCategories().filter(c => c.section === 'Full Test');
   },
 
+  // Lấy câu hỏi theo ID danh mục
   getQuestionsByCategory: (categoryId) => {
     const categories = questionService.getCategories();
     const target = categories.find(c => c.id === categoryId);
     return target ? target.questions : [];
   },
 
+  // Thống kê nhanh số lượng câu theo từng Category
   getCategoryStats: () => {
     const categories = questionService.getCategories();
     return categories.map(cat => ({
