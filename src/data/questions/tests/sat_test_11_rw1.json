@@ -69,7 +69,7 @@
       "D": "contradicted"
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because 'contradicted' means challenged or showed to be untrue. Finding 4,000-year-old silk traces outside China directly contradicts the older belief that silk stayed in China until much later."
+    "explanation": "Choice D is the best answer because 'contradicted' means challenged or showed to be untrue. Finding 4,000-year-old silk traces outside China directly challenges the previous belief that silk first spread beyond China in the second century CE."
   },
   {
     "id": "sat11_rw1_05",
@@ -77,7 +77,7 @@
     "section": "Reading and Writing",
     "domain": "Craft and Structure",
     "difficulty": "hard",
-    "prompt": "Artist Zarina Hashmi's minimalist woodcuts and etchings might at first glance appear ______—some feature little more than geometric lines and stark shapes—but in fact the work is a complex, dynamic meditation on home, displacement, and borders that demands serious attention.",
+    "prompt": "Artist Scherezade Garcia's mural Blame It on the Bean: The Power of Coffee might at first glance appear ______—it is located in a coffee shop and depicts women drinking coffee—but in fact the painting is a complex, dynamic meditation on gender and colonialism deserving of serious attention.",
     "question": "Which choice completes the text with the most logical and precise word or phrase?",
     "isGridIn": false,
     "options": {
@@ -87,7 +87,7 @@
       "D": "pretentious"
     },
     "correctAnswer": "A",
-    "explanation": "Choice A is the best answer because 'unassuming' means modest, simple, or not demanding attention. This directly contrasts with the text's conclusion that the work is actually 'complex, dynamic' and 'demands serious attention.'"
+    "explanation": "Choice A is the best answer because 'unassuming' means ordinary, modest, or unremarkable. This contrasts with the text's conclusion that the mural is actually a 'complex, dynamic meditation' deserving of serious attention."
   },
   {
     "id": "sat11_rw1_06",
@@ -96,7 +96,7 @@
     "domain": "Craft and Structure",
     "difficulty": "medium",
     "prompt": "The following text is adapted from Akwaeke Emezi's 2019 novel Pet. Jam is a teenager who lives with her father, Aloe, and her mother, Bitter, who is a painter.\\n\\nBitter finished the painting in the dark morning of a day—it was well past midnight when Jam heard the studio door creak open. She stared into the velvet black of her room and listened to Bitter's footsteps coming down the stairs, light and tired. Her mother's feet sang a weary rhythm into the floorboards, a language Jam understood without words: creation was complete.\\n\\n©2019 by Akwaeke Emezi",
-    "question": "Which choice best states the function of the underlined phrase ('Her mother's feet sang a weary rhythm into the floorboards') in the text as a whole?",
+    "question": "Which choice best states the function of the underlined sentence in the text as a whole?",
     "isGridIn": false,
     "options": {
       "A": "It indicates that Jam is more interested in music than in art.",
@@ -105,7 +105,7 @@
       "D": "It suggests that Jam is anxious about the completion of the artwork."
     },
     "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because the text uses the sensory description of Bitter's footsteps to explain how Jam interprets that her mother has finally finished the painting without needing spoken words."
+    "explanation": "Choice B is the best answer because the text establishes that Jam understands Bitter has completed her painting simply by hearing the rhythm of her footsteps."
   },
   {
     "id": "sat11_rw1_07",
@@ -119,11 +119,11 @@
     "options": {
       "A": "It states the reasons why Adam and his great-uncle Richard decide to take a voyage by steamship.",
       "B": "It showcases how Adam's flexibility and consideration strengthen his relationship with his great-uncle Richard.",
-      "C": "It argues that steamship travel was more popular and convenient than other modes of transportation.",
-      "D": "It explains the technological advancements in ship engines during the twentieth century."
+      "C": "It describes why Adam and his great-uncle Richard are excited about their journey.",
+      "D": "It shows a contrast between initial wariness and later affection between two family members."
     },
     "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because the passage focuses on Adam's attentive and considerate behavior toward his great-uncle Richard, accommodating his interests to foster a strong bond between them."
+    "explanation": "Choice B is the best answer because the passage focuses on Adam's attentive and considerate behavior toward his great-uncle Richard, demonstrating how his accommodation wins the old man's heart."
   },
   {
     "id": "sat11_rw1_08",
@@ -131,35 +131,35 @@
     "section": "Reading and Writing",
     "domain": "Craft and Structure",
     "difficulty": "hard",
-    "prompt": "Public art installations often provoke strong public debate. Some critics contend that norm-defying, unconventional public art pieces that are not effectively integrated into their physical and social surroundings are viewed far more unfavorably by passersby than similarly provocative art displayed in traditional museums.",
-    "question": "Which choice best summarizes the critics' argument regarding controversial public artworks?",
+    "prompt": "In an experiment investigating visual perception during sleep, researchers observed the eye movements of lucid dreamers who signaled when they entered a dream state. They discovered that the way participants' eyes tracked objects in dream states was virtually indistinguishable from how sighted people visually track objects while awake. From this, researchers concluded that dream objects are perceived by the brain as possessing tangible reality rather than existing solely as conceptual products of imagination.",
+    "question": "Which choice best describes how the discussion of waking eye movements functions in the text?",
     "isGridIn": false,
     "options": {
-      "A": "Unconventional artworks are disliked solely because of the specific materials used in their creation.",
-      "B": "Public artwork should only be permitted in civic spaces if it reinforces widely accepted community norms.",
-      "C": "Reactions to provocative public art are influenced significantly by the context and manner in which the work is presented to the public.",
-      "D": "Provocative art is inherently unsuitable for public spaces and should only ever be shown inside galleries."
+      "A": "It provides evidence that undermines the researchers' initial hypothesis.",
+      "B": "It highlights an unexpected finding that led researchers to pivot their methodology.",
+      "C": "It illustrates a real-world application of lucid dreaming techniques.",
+      "D": "It identifies a comparable circumstance that helps justify the researchers' ultimate conclusion."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because the critics argue that lack of contextual integration causes passersby to view public art unfavorably compared to when provocative art is encountered within the structured environment of a museum."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because comparing the eye tracking of lucid dreamers to the tracking of objects during wakefulness provides the key parallel supporting the conclusion that dream objects are perceived similarly to real ones."
   },
   {
     "id": "sat11_rw1_09",
     "questionNumber": 9,
     "section": "Reading and Writing",
-    "domain": "Information and Ideas",
+    "domain": "Craft and Structure",
     "difficulty": "hard",
-    "prompt": "The play Ollantay has long been thought to originate from the Inca Empire before Spain invaded in the 1500s. Yet the oldest known text of the play is from 1770, and in many places its writing style resembles the writing style of Spanish plays from the 1700s. Thus, Ollantay was probably created in the late 1700s by someone who knew much about the Inca past.",
-    "question": "Which choice best describes the central question addressed in the text?",
+    "prompt": "Text 1\\nPublic artworks tend to provoke widespread civic backlash whenever they deviate from conventional aesthetics. Many observers argue that art situated in communal municipal spaces must adhere to widely shared cultural norms to remain viable.\\n\\nText 2\\nCritics contend that norm-defying public artworks face resistance primarily when they are not effectively integrated into their physical and social surroundings. A traditional museum primes visitors to anticipate challenging art, whereas everyday civic spaces rarely provide such contextual framing.",
+    "question": "Based on the texts, how would the critics in Text 2 most likely respond to the claim in Text 1 regarding public backlash?",
     "isGridIn": false,
     "options": {
-      "A": "What inspired a Spanish writer in the 1700s to write a play about the Inca Empire.",
-      "B": "Whether Ollantay is an Inca play from the 1500s or was instead created much later, in the 1700s.",
-      "C": "How the Inca author of Ollantay knew so much about plays from Spain.",
-      "D": "Why Inca plays became more popular in the 1700s than they had been when they were first performed in the 1500s."
+      "A": "By arguing that unconventionality is entirely unrelated to public disagreement over an artwork's merits.",
+      "B": "By advocating for restricting public art to universally appealing, traditional works.",
+      "C": "By denying that community members have any legitimate interest in the aesthetics of public spaces.",
+      "D": "By asserting that negative public reactions to controversial art are heavily influenced by environmental context and presentation rather than the art's content alone."
     },
-    "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because the text compares the traditional belief that Ollantay dates to the pre-invasion 1500s with stylistic evidence suggesting a much later creation date in the 1700s."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the critics in Text 2 emphasize that lack of contextual integration and the absence of museum-like framing are the principal reasons for unfavorable public reactions."
   },
   {
     "id": "sat11_rw1_10",
@@ -167,17 +167,17 @@
     "section": "Reading and Writing",
     "domain": "Information and Ideas",
     "difficulty": "medium",
-    "prompt": "Four fuels and their approximate energy density in megajoules per liter (MJ/L) are evaluated: Gasoline has an energy density of approximately 32 MJ/L, Jet fuel has an energy density of approximately 35 MJ/L, Ethanol has an energy density of approximately 24 MJ/L, and a newly developed bacterial biofuel called POP biofuel achieves 42 MJ/L.",
-    "question": "Based on the researchers' measurements, which fuel stores the highest energy density per liter?",
+    "prompt": "Economist Andrés Hincapié investigated the disparity in entrepreneurship rates between younger and older adults. His findings indicate that the primary barrier for aspiring young entrepreneurs is not capital deficiency or risk aversion, but rather a lack of practical knowledge regarding business registration, tax compliance, and market navigation. Providing accessible, targeted information on these logistical steps substantially closes the participation gap.",
+    "question": "Based on the text, what initiative would Hincapié most likely endorse as an effective way to promote youth entrepreneurship?",
     "isGridIn": false,
     "options": {
-      "A": "Jet fuel",
-      "B": "POP biofuel",
-      "C": "Ethanol",
-      "D": "Gasoline"
+      "A": "Establishing peer networking circles for young adults without business experience.",
+      "B": "Organizing creative brainstorming sessions for novel commercial concepts.",
+      "C": "Offering young adults practical, step-by-step instructional resources on starting a business.",
+      "D": "Placing young adults in unpaid apprenticeships at established corporations."
     },
-    "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because POP biofuel has an energy density of 42 MJ/L, which is higher than gasoline (32 MJ/L), jet fuel (35 MJ/L), and ethanol (24 MJ/L)."
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because Hincapié's research specifically pinpoints that providing practical informational resources directly addresses the knowledge barrier preventing young adults from founding enterprises."
   },
   {
     "id": "sat11_rw1_11",
@@ -185,269 +185,269 @@
     "section": "Reading and Writing",
     "domain": "Information and Ideas",
     "difficulty": "medium",
-    "prompt": "Urban planning researchers examined street lighting across multiple metropolitan districts to determine its impact on cycling rates. Their results suggest that poor street lighting deters new or inexperienced cyclists from riding in a city but has little measurable effect on experienced cyclists.",
-    "question": "Which finding logically follows from the researchers' results?",
+    "prompt": "Although spitting is an uncommon defense mechanism in marine mammals, naturalists documented a wild gray seal spitting water at a predatory white-tailed eagle in southern England. This observation represents the first recorded instance of gray seals exhibiting such projectile behavior, prompting biologists to formulate novel hypotheses regarding interspecies deterrence.",
+    "question": "Which choice best states the main topic of the text?",
     "isGridIn": false,
     "options": {
-      "A": "Increasing street lighting will decrease the total number of new cyclists.",
-      "B": "Experienced cyclists are less likely to ride at night when streets are well-lit.",
-      "C": "Installing additional streetlights could potentially increase the number of new or inexperienced cyclists riding in the city.",
-      "D": "Poor street lighting encourages experienced cyclists to ride more frequently."
+      "A": "The recreational techniques used by bird-watchers in coastal England.",
+      "B": "The observation and implications of a previously unseen behavior in gray seals.",
+      "C": "The territorial dynamics between birds of prey and coastal predators.",
+      "D": "The anatomical differences between seals and avian predators."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because if inadequate lighting deters new and inexperienced riders, addressing that deficiency by increasing streetlights can remove that deterrent and encourage more new riders."
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text focuses specifically on documenting and analyzing a previously unrecorded behavior (spitting water at an eagle) exhibited by a gray seal."
   },
   {
     "id": "sat11_rw1_12",
     "questionNumber": 12,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
-    "difficulty": "easy",
-    "prompt": "The 2022 Nobel Prize in Chemistry was awarded to three pioneers in the field of click chemistry: two-time Nobel laureate Barry Sharpless, who coined the term 'click chemistry' in 1998; Carolyn Bertozzi, founder of the Bertozzi Group at ______ and Morten Meldal, a professor at the University of Copenhagen in Denmark.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "At a formal dinner party, the narrator's acquaintance Schmidt inquired about modern painting. When the narrator's first wife casually remarked that she found contemporary art entirely uncompelling, Schmidt winced, exhaled a theatrical sigh, and abruptly excused himself from the table on the fabricated pretext of an urgent forgotten engagement.",
+    "question": "Which choice best describes what is notable about Schmidt's behavior?",
     "isGridIn": false,
     "options": {
-      "A": "Stanford",
-      "B": "Stanford,",
-      "C": "Stanford:",
-      "D": "Stanford;"
+      "A": "His theatrical distress is unique to interactions with the narrator's family.",
+      "B": "His sudden departure was caused by genuine professional absentmindedness.",
+      "C": "His reaction was the culmination of an ongoing debate regarding a specific painting.",
+      "D": "He conveys his sharp disapproval through dramatic nonverbal reactions and a transparent excuse rather than direct criticism."
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because the sentence uses semicolons to separate complex list items that already contain internal commas (e.g., 'Barry Sharpless, who coined...; Carolyn Bertozzi, founder of...; and Morten Meldal, a professor...')."
+    "explanation": "Choice D is the best answer because Schmidt communicates his displeasure with the wife's comment through physical mannerisms (wincing, sighing) and an obvious fabrication rather than engaging in open dialogue."
   },
   {
     "id": "sat11_rw1_13",
     "questionNumber": 13,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
-    "difficulty": "medium",
-    "prompt": "Customers who are satisfied with how a company resolves a service issue may regard that company more positively than they would if no such issue had occurred. This idea is known as the service recovery ______ research suggests that it has important implications for customer loyalty and retention.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Sir Winston Day's distinguished profile seemed sculpted for a bronze commemorative bust or a postage stamp, exuding effortless gravitas. Yet his actual accomplishments across decades of high diplomatic office remain an enigma; indeed, any substantive achievements recorded after the thirtieth page of his published memoirs might as well have remained classified state secrets, as virtually nobody possessed the stamina to read that far.",
+    "question": "Which choice best summarizes the portrayal of Sir Winston Day?",
     "isGridIn": false,
     "options": {
-      "A": "paradox,",
-      "B": "paradox",
-      "C": "paradox, and",
-      "D": "paradox and,"
+      "A": "He presents an imposing, distinguished facade despite having remarkably few documented accomplishments.",
+      "B": "His long career in public service was characterized by secretive and dishonorable conduct.",
+      "C": "His major political contributions were intentionally suppressed by government censorship.",
+      "D": "He was a modest and exceptionally competent diplomat whose contributions were underappreciated."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because it uses a comma followed by the coordinating conjunction 'and' to correctly connect two independent clauses."
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the passage contrasts Sir Winston's impressive, bust-worthy physical appearance with the humorous reality that his actual achievements in public office were few and unread."
   },
   {
     "id": "sat11_rw1_14",
     "questionNumber": 14,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
-    "difficulty": "medium",
-    "prompt": "The Lion Light system, developed by Kenyan inventor Richard Turere, consists of LED lights installed around the perimeter of livestock pastures. Powered with ______ blinking LEDs keep lions away at night, thus protecting the livestock without risking harm to the endangered lions.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Traditional studies of ocean dynamics have centered on traveling waves, which dissipate when their steepness reaches a recognized breaking threshold. However, McAllister and colleagues analyzed spike waves formed by opposing wave crests intersecting at precise angles. They found that jet stability and localized cavity geometry mitigate steepness constraints, allowing spike waves to attain heights substantially greater than those predicted by traveling-wave models.",
+    "question": "Which choice best states the main idea of the text?",
     "isGridIn": false,
     "options": {
-      "A": "energy collected, by solar panels, during the day",
-      "B": "energy collected by solar panels during the day",
-      "C": "energy collected by solar panels during the day,",
-      "D": "energy, collected by solar panels during the day,"
+      "A": "Jet stability and cavity shape determine the breaking point of horizontal traveling waves.",
+      "B": "Spike waves break prematurely because their steepness exceeds critical thresholds faster than traveling waves.",
+      "C": "Oceanographers previously believed that spike waves could not occur in deep marine waters.",
+      "D": "Spike waves resulting from intersecting wave crests can reach heights significantly greater than traditional traveling-wave limits."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because the introductory participial phrase 'Powered with energy collected by solar panels during the day,' modifies the subject 'blinking LEDs' and must be set off with a comma."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the text highlights that specific structural factors in intersecting waves allow spike waves to surpass the height limitations typical of traveling waves."
   },
   {
     "id": "sat11_rw1_15",
     "questionNumber": 15,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
+    "domain": "Information and Ideas",
     "difficulty": "medium",
-    "prompt": "Known for her massive photorealistic paintings of African American figures floating or swimming in pools, Calida Garcia ______ was the logical choice to design the book cover for Ta-Nehisi Coates's The Water Dancer, a novel about an African American man who can travel great distances through water.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "prompt": "An energy research consortium compared the volumetric energy density of four candidate fuels: Gasoline (36 MJ/L), Jet fuel (34 MJ/L), Ethanol (23 MJ/L), and an engineered bacterial POP biofuel (40 MJ/L). The team concluded that POP biofuel represents the most potent energy-dense alternative per unit volume.",
+    "question": "Which choice accurately reflects the experimental data described in the text?",
     "isGridIn": false,
     "options": {
-      "A": "Rawles-",
-      "B": "Rawles:",
-      "C": "Rawles,",
-      "D": "Rawles"
+      "A": "Jet fuel has a higher volumetric energy density than gasoline.",
+      "B": "POP biofuel exhibits the highest energy density per liter among all evaluated fuels.",
+      "C": "Ethanol possesses a higher energy density than jet fuel.",
+      "D": "Gasoline has an energy density superior to that of POP biofuel."
     },
-    "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because no punctuation should separate the subject 'Calida Garcia Rawles' from its main verb 'was'."
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the recorded energy density of POP biofuel (40 MJ/L) surpasses that of gasoline (36 MJ/L), jet fuel (34 MJ/L), and ethanol (23 MJ/L)."
   },
   {
     "id": "sat11_rw1_16",
     "questionNumber": 16,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
-    "difficulty": "easy",
-    "prompt": "In February 1919, following the end of the First World War, women from ten countries convened the Inter-Allied Women's Conference in Paris. The conference's goals were ______ ensure women's participation in the peace proceedings, to secure the right of women to serve in the League of Nations, and to advocate for human rights.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Historians argue that the early street performances of the theatrical troupe El Teatro Campesino drew direct stylistic inspiration from Mexican carpa theater, which was celebrated for its audience-mediated slapstick comedy and physical parody.",
+    "question": "Which quotation from a historical review would most directly support this claim?",
     "isGridIn": false,
     "options": {
-      "A": "threefold: to",
-      "B": "threefold. To",
-      "C": "threefold to",
-      "D": "threefold; to"
+      "A": "'The actors performed energetic physical sketches, improvising broad visual gags in immediate response to the boos and cheers of the assembled farmworkers.'",
+      "B": "'The troupe utilized humor as a profound sociopolitical tool to educate audiences while offering spiritual inspiration.'",
+      "C": "'Their sparse minimalist staging reflected limited financial resources rather than traditional theatrical conventions.'",
+      "D": "'Performers delivered brief satirical monologues directly to field workers during their midday lunch breaks.'"
     },
     "correctAnswer": "A",
-    "explanation": "Choice A is the best answer because a colon is used after an independent clause ('The conference's goals were threefold') to introduce an explanatory list of three parallel infinitive phrases."
+    "explanation": "Choice A is the best answer because it specifically describes exaggerated physical comedy (slapstick) directly adapted to the cheers and reactions of the audience (audience-mediated)."
   },
   {
     "id": "sat11_rw1_17",
     "questionNumber": 17,
     "section": "Reading and Writing",
-    "domain": "Standard English Conventions",
-    "difficulty": "easy",
-    "prompt": "The violins handmade in the seventeenth century by Italian craftsman Antonio Stradivari have been celebrated as some of the finest in the world. In close collaboration with musicians, Stradivari introduced changes to the shape of a traditional violin, flattening some of the instrument's curves and making ______ lighter overall.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "A study conducted by Vidal-Tortosa and Lovelace revealed that poorly illuminated streets strongly discourage novice and inexperienced cyclists from commuting, whereas experienced cyclists ride consistently regardless of lighting conditions.",
+    "question": "Which finding logically follows from the researchers' conclusion?",
     "isGridIn": false,
     "options": {
-      "A": "those",
-      "B": "one",
-      "C": "them",
-      "D": "it"
+      "A": "Upgrading urban street lighting will decrease the total number of novice cyclists.",
+      "B": "Experienced cyclists will ride significantly more frequently if municipal lighting is increased.",
+      "C": "Novice and experienced cyclists share identical safety thresholds when navigating nocturnal streets.",
+      "D": "Substantially expanding urban street lighting is likely to remove a primary deterrent and increase the number of novice cyclists on the road."
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because the singular pronoun 'it' correctly refers back to the singular noun phrase 'a traditional violin' (or 'the instrument')."
+    "explanation": "Choice D is the best answer because if poor street lighting functions as a deterrent specifically for inexperienced riders, eliminating that deterrent by adding lighting logically fosters greater novice participation."
   },
   {
     "id": "sat11_rw1_18",
-    "section": "Reading and Writing",
     "questionNumber": 18,
-    "domain": "Standard English Conventions",
-    "difficulty": "medium",
-    "prompt": "Horsepower is a unit of measurement used to determine how much power a vehicle produces. The measurement is based on how much and how quickly weight can be ______ one unit of mechanical horsepower is equivalent to the amount of power it takes to lift 550 pounds one foot off the ground in one second.",
-    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Because bumblebees are extensively studied, entomologists frequently extrapolate their population dynamics to represent wild bee species generally. However, biologist Ghisbain emphasizes that bumblebees possess social structures and dietary generalism that confer distinct resilience against environmental disruption, traits absent in the vast majority of solitary, specialized wild bee species.",
+    "question": "Which choice most logically completes the text?",
     "isGridIn": false,
     "options": {
-      "A": "moved, for example,",
-      "B": "moved,",
-      "C": "moved; for example,",
-      "D": "moved"
+      "A": "Bumblebee populations are in fact declining much more precipitously than those of specialized solitary bees.",
+      "B": "Entomologists should completely abandon laboratory research on bumblebee genetics.",
+      "C": "Dietary generalism renders bumblebees more susceptible to climate variability than previously assumed.",
+      "D": "Researchers must exercise caution when utilizing bumblebee data to infer broader extinction trends across wild bee populations."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because a semicolon correctly separates two independent clauses, followed by the transitional phrase 'for example,' which introduces the second clause."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because Ghisbain's observation shows that bumblebees have resilience traits that make them unrepresentative of most wild bees, warranting caution when generalizing."
   },
   {
     "id": "sat11_rw1_19",
     "questionNumber": 19,
     "section": "Reading and Writing",
     "domain": "Standard English Conventions",
-    "difficulty": "medium",
-    "prompt": "Nuhad al-Haddad, known as Fairuz, was one of the most beloved Lebanese singers of the twentieth century. Her broad singing repertoire—which included traditional forms, such as the Arabic qasida and maqam, alongside modern pop and jazz styles—lent Fairuz a timeless, cross-generational appeal, ______ her the moniker 'the soul of Lebanon.'",
+    "difficulty": "easy",
+    "prompt": "Digital literacy training programs instruct students in click restraint, the practice of scanning a search results page before hastily deciding ______",
     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "earned",
-      "B": "had earned",
-      "C": "earning",
-      "D": "earn"
+      "A": "which link should you choose?",
+      "B": "which link you should choose?",
+      "C": "which link should you choose.",
+      "D": "which link you should choose."
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because the nonfinite present participle 'earning' correctly introduces a participial phrase expressing the result of the preceding independent clause."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the sentence concludes with an indirect question embedded within a declarative clause ('deciding which link you should choose.'), requiring standard statement word order and a period."
   },
   {
     "id": "sat11_rw1_20",
     "questionNumber": 20,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
-    "difficulty": "easy",
-    "prompt": "After appropriate permissions are granted, a typical archaeological dig begins with a surveyor making a detailed grid of the excavation site. Then, the site is carefully dug, and any artifacts found are recorded and mapped onto the site grid. ______ the artifacts are removed, cataloged, and analyzed in a laboratory.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "By the time Mexican singer-songwriter Natalia Lafourcade recorded her landmark album De Todas las Flores, she ______ one of the most widely celebrated independent musicians in Latin America.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "For instance,",
-      "B": "On the contrary,",
-      "C": "Earlier,",
-      "D": "Finally,"
+      "A": "will become",
+      "B": "becomes",
+      "C": "will have become",
+      "D": "had become"
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because 'Finally,' signals the concluding chronological step in the sequential archaeological process described (begins -> then -> finally)."
+    "explanation": "Choice D is the best answer because the past perfect verb 'had become' correctly indicates an action completed prior to another past event ('recorded')."
   },
   {
     "id": "sat11_rw1_21",
     "questionNumber": 21,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
+    "domain": "Standard English Conventions",
     "difficulty": "medium",
-    "prompt": "Marcel Duchamp intended his 1917 so-called ready-made sculpture Fountain to challenge then-prevailing conceptions about the nature of art. ______ Duchamp's Fountain did just that, raising the question of whether displaying any object in an art gallery could be said to transform the object into a legitimate work of art.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "prompt": "Endemic to coastal wetlands in eastern Australia, the wallum sedge frog currently ______ subtropical paperbark swamps in northern New South Wales and southeastern Queensland.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "Similarly,",
-      "B": "Indeed,",
-      "C": "Instead,",
-      "D": "In addition,"
+      "A": "includes",
+      "B": "included",
+      "C": "will have included",
+      "D": "had included"
     },
-    "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because 'Indeed,' emphasizes that what Duchamp intended actually occurred in reality, corroborating the preceding assertion."
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the present tense verb 'includes' properly coordinates with the temporal adverb 'currently' to describe an ongoing factual habitat range."
   },
   {
     "id": "sat11_rw1_22",
     "questionNumber": 22,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
-    "difficulty": "easy",
-    "prompt": "On March 3, 1991, Switzerland's government lowered the minimum voting age for its citizens from 20 to 18 years old. ______ many young people in Switzerland gained a new opportunity to participate in their country's political process.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "The US Constitution's Twelfth Amendment, ratified in ______ fundamentally altered presidential elections by requiring electors to cast distinct ballots for president and vice president.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "Nevertheless,",
-      "B": "As a result,",
-      "C": "By contrast,",
-      "D": "Similarly,"
+      "A": "1804—",
+      "B": "1804,",
+      "C": "1804:",
+      "D": "1804"
     },
     "correctAnswer": "B",
-    "explanation": "Choice B is the best answer because gaining voting opportunities was the direct consequence of the voting age reduction ('As a result,')."
+    "explanation": "Choice B is the best answer because the nonessential modifier 'ratified in 1804,' begins with a comma and must close with a comma to separate it from the main verb 'altered'."
   },
   {
     "id": "sat11_rw1_23",
     "questionNumber": 23,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
+    "domain": "Standard English Conventions",
     "difficulty": "medium",
-    "prompt": "The envelope-shaped paper bags common in the US 150 years ago were impractical for carrying goods. ______ because they were the only paper bags that could be mass-produced, these bags dominated the market. That all changed in the 1870s, when Margaret Knight patented a machine to make flat-bottomed bags.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "prompt": "Laden with emojis, alphanumeric fragments, and phonetic puns, ______ often mystify first-time listeners of anime composer Hiroyuki Sawano's soundtracks.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "However,",
-      "B": "For instance,",
-      "C": "Thus,",
-      "D": "In other words,"
+      "A": "the listener",
+      "B": "the track titles",
+      "C": "each score",
+      "D": "the listener's comprehension"
     },
-    "correctAnswer": "A",
-    "explanation": "Choice A is the best answer because 'However,' introduces a contrast: even though the bags were impractical, they still dominated the market due to production capabilities."
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the introductory modifier 'Laden with emojis...' logically describes 'the track titles', avoiding a dangling modifier."
   },
   {
     "id": "sat11_rw1_24",
     "questionNumber": 24,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
+    "domain": "Standard English Conventions",
     "difficulty": "easy",
-    "prompt": "Although novels and poems are considered distinct literary forms, many authors have created hybrid works that incorporate elements of both. Bernardine Evaristo's The Emperor's Babe, ______ is a verse novel, a book-length narrative complete with characters and a plot but conveyed in short, crisp lines of poetry rather than prose.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "prompt": "Yto Barrada's multimedia installations, which often incorporate artisanal textiles and botanical dye samples, ______ the contested political history of Tangier, Morocco.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "by contrast,",
-      "B": "consequently,",
-      "C": "secondly,",
-      "D": "for example,"
+      "A": "explore",
+      "B": "has explored",
+      "C": "explores",
+      "D": "exploring"
     },
-    "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because Evaristo's verse novel serves as a concrete instance illustrating the general claim that authors create hybrid works ('for example,')."
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the plural verb 'explore' correctly agrees in number with the plural subject 'installations'."
   },
   {
     "id": "sat11_rw1_25",
     "questionNumber": 25,
     "section": "Reading and Writing",
-    "domain": "Expression of Ideas",
+    "domain": "Standard English Conventions",
     "difficulty": "medium",
-    "prompt": "Every chemical compound has a spectroscopic fingerprint, a pattern of reflected light unique to that compound. ______ upon analyzing the light reflected by the bright regions on the surface of the dwarf planet Ceres, researchers were able to determine that the regions contain large amounts of sodium carbonate.",
-    "question": "Which choice completes the text with the most logical transition?",
+    "prompt": "Ciliary propulsion—a hydrodynamic mechanism utilized by microscopic ______ exceptional speed and directional agility in aquatic environments.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "isGridIn": false,
     "options": {
-      "A": "Regardless,",
-      "B": "Meanwhile,",
-      "C": "Thus,",
-      "D": "In comparison,"
+      "A": "ciliates, is bestowing",
+      "B": "ciliates is bestowing",
+      "C": "ciliates, has bestowed",
+      "D": "ciliates—bestows"
     },
-    "correctAnswer": "C",
-    "explanation": "Choice C is the best answer because 'Thus,' indicates that the identification of sodium carbonate was a result made possible by the fact that chemical compounds have unique spectral fingerprints."
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because closing the parenthetical phrase with a matching dash ('—bestows') properly connects the subject 'Ciliary propulsion' to its finite verb 'bestows'."
   },
   {
     "id": "sat11_rw1_26",
@@ -455,17 +455,17 @@
     "section": "Reading and Writing",
     "domain": "Expression of Ideas",
     "difficulty": "medium",
-    "prompt": "The ancient Spartans were known for their bitingly concise—or laconic—wit, a quality they maintained even in the face of great peril. ______ when Philip II of Macedon threatened Laconia saying, 'If I invade Laconia, I shall turn you out,' the Spartans replied with a single word: 'If.'",
+    "prompt": "Materials scientists utilized thermal and chemical etching to dramatically expand the natural microchannels in lightweight balsa wood. ______ the widened grooves can be permeated with conductive polymers to create biodegradable circuit components.",
     "question": "Which choice completes the text with the most logical transition?",
     "isGridIn": false,
     "options": {
-      "A": "Rather,",
-      "B": "In other words,",
-      "C": "That said,",
-      "D": "For instance,"
+      "A": "For example,",
+      "B": "Previously,",
+      "C": "In contrast,",
+      "D": "As a result,"
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because the historical interaction with Philip of Macedon is a specific example demonstrating the Spartans' laconic wit ('For instance,')."
+    "explanation": "Choice D is the best answer because 'As a result,' signals that the ability to permeate grooves with polymers is a direct technological consequence of the preceding etching process."
   },
   {
     "id": "sat11_rw1_27",
@@ -473,16 +473,16 @@
     "section": "Reading and Writing",
     "domain": "Expression of Ideas",
     "difficulty": "medium",
-    "prompt": "Many butterfly species have bold, brightly colored wings. ______ some butterfly species have wings that are almost completely colorless and transparent. Glasswing butterflies, for example, have see-through wings that make them nearly invisible.",
+    "prompt": "Arabic-speaking Islamic dynasties governed Al-Andalus on the Iberian Peninsula for nearly eight centuries. ______ thousands of Arabic lexical terms entered the Mozarabic dialects and permanently enriched the lexicon of modern Spanish.",
     "question": "Which choice completes the text with the most logical transition?",
     "isGridIn": false,
     "options": {
-      "A": "Similarly,",
-      "B": "Previously,",
-      "C": "In other words,",
-      "D": "However,"
+      "A": "For example,",
+      "B": "Instead,",
+      "C": "Specifically,",
+      "D": "Consequently,"
     },
     "correctAnswer": "D",
-    "explanation": "Choice D is the best answer because 'However,' introduces a stark contrast between butterfly species with brightly colored wings and those with transparent wings."
+    "explanation": "Choice D is the best answer because 'Consequently,' accurately marks the linguistic influx of Arabic words into Spanish as the direct historical outcome of centuries of governance."
   }
 ]

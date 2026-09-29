@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { 
   MessageSquare, Plus, FileText, Image as ImageIcon, Send, 
-  ThumbsUp, ShieldCheck, User, Filter, Paperclip, CheckCircle, 
+  ThumbsUp, ShieldCheck, User, Paperclip, CheckCircle, 
   ExternalLink, Trash2, MessageCircle
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 
-// Dữ liệu ban đầu đã được chuẩn hóa chữ tiếng Việt chuẩn xác
 const INITIAL_POSTS = [
   {
     id: 'post_1',
@@ -20,6 +19,7 @@ const INITIAL_POSTS = [
     attachmentName: 'SAT_Math_Master_2026.pdf',
     imageUrl: '',
     likes: 18,
+    likedBy: ['admin_initial'],
     createdAt: 'Hôm nay lúc 08:30',
     comments: [
       {
@@ -44,6 +44,7 @@ const INITIAL_POSTS = [
     attachmentName: '',
     imageUrl: '',
     likes: 7,
+    likedBy: [],
     createdAt: 'Hôm qua lúc 19:40',
     comments: [
       {
@@ -59,15 +60,16 @@ const INITIAL_POSTS = [
 ];
 
 export default function ForumPage({ currentUser }) {
+  const currentUserId = currentUser?.email || currentUser?.name || 'anonymous_user';
+
   const [posts, setPosts] = useState(() => {
     try {
       const saved = localStorage.getItem('sat_forum_posts');
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Tự động làm sạch dữ liệu cũ nếu bị dính ký tự `´`
         return parsed.map(p => ({
           ...p,
-          content: String(p.content || '').replace(/([a-zA-ZÀ-ỹ])\s*[´\u00B4\u02CA\u0301]/g, '$1')
+          likedBy: Array.isArray(p.likedBy) ? p.likedBy : []
         }));
       }
       return INITIAL_POSTS;
@@ -92,6 +94,37 @@ export default function ForumPage({ currentUser }) {
     localStorage.setItem('sat_forum_posts', JSON.stringify(posts));
   }, [posts]);
 
+  // LOGIC REACT CHUẨN: Mỗi người chỉ được thích 1 lần, bấm lại là hủy
+  const handleToggleLike = (postId) => {
+    setPosts(prevPosts =>
+      prevPosts.map(post => {
+        if (post.id !== postId) return post;
+
+        const likedBy = Array.isArray(post.likedBy) ? [...post.likedBy] : [];
+        const hasLiked = likedBy.includes(currentUserId);
+
+        let newLikedBy;
+        let newLikes;
+
+        if (hasLiked) {
+          // Bỏ like
+          newLikedBy = likedBy.filter(id => id !== currentUserId);
+          newLikes = Math.max(0, (post.likes || 1) - 1);
+        } else {
+          // Thêm like
+          newLikedBy = [...likedBy, currentUserId];
+          newLikes = (post.likes || 0) + 1;
+        }
+
+        return {
+          ...post,
+          likes: newLikes,
+          likedBy: newLikedBy
+        };
+      })
+    );
+  };
+
   const handleCreatePost = (e) => {
     e.preventDefault();
     if (!newTitle.trim() || !newContent.trim()) return;
@@ -108,6 +141,7 @@ export default function ForumPage({ currentUser }) {
       attachmentName: newAttachmentName.trim() || (newAttachmentUrl ? 'Tài liệu đính kèm' : ''),
       imageUrl: newImageUrl.trim(),
       likes: 0,
+      likedBy: [],
       createdAt: 'Vừa xong',
       comments: []
     };
@@ -119,10 +153,6 @@ export default function ForumPage({ currentUser }) {
     setNewAttachmentName('');
     setNewImageUrl('');
     setShowCreateModal(false);
-  };
-
-  const handleLikePost = (postId) => {
-    setPosts(posts.map(p => (p.id === postId ? { ...p, likes: p.likes + 1 } : p)));
   };
 
   const handleDeletePost = (postId) => {
@@ -185,7 +215,7 @@ export default function ForumPage({ currentUser }) {
         </button>
       </div>
 
-      {/* BỘ LỌC */}
+      {/* FILTER BUTTONS */}
       <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-bold">
         <button
           type="button"
@@ -226,165 +256,166 @@ export default function ForumPage({ currentUser }) {
         </button>
       </div>
 
-      {/* DANH SÁCH BÀI VIẾT */}
+      {/* POST LIST */}
       <div className="space-y-5">
-        {filteredPosts.length === 0 ? (
-          <div className="bg-white p-12 text-center rounded-3xl border border-dashed border-slate-300 text-slate-400 text-xs">
-            Chưa có bài thảo luận nào trong danh mục này. Hãy là người đầu tiên đặt câu hỏi!
-          </div>
-        ) : (
-          filteredPosts.map(post => {
-            const isAdmin = post.authorRole === 'ADMIN';
-            const isAuthorOrAdmin = currentUser?.role === 'ADMIN' || currentUser?.name === post.authorName;
-            const isCommentsOpen = activeCommentPostId === post.id;
+        {filteredPosts.map(post => {
+          const isAdmin = post.authorRole === 'ADMIN';
+          const isAuthorOrAdmin = currentUser?.role === 'ADMIN' || currentUser?.name === post.authorName;
+          const isCommentsOpen = activeCommentPostId === post.id;
+          const isLikedByUser = Array.isArray(post.likedBy) && post.likedBy.includes(currentUserId);
 
-            return (
-              <div key={post.id} className="bg-white rounded-3xl border border-slate-200 shadow-2xs p-6 space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <img 
-                      src={post.authorAvatar} 
-                      alt={post.authorName} 
-                      className="w-10 h-10 rounded-full border border-slate-200 bg-slate-50"
-                    />
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-bold text-sm text-slate-900">{post.authorName}</span>
-                        {isAdmin && (
-                          <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold px-2 py-0.5 rounded-md">
-                            <ShieldCheck className="w-3 h-3 text-amber-600" /> QTV
-                          </span>
-                        )}
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
-                          post.category === 'DOCUMENTS' 
-                            ? 'bg-amber-100/70 text-amber-900' 
-                            : post.category === 'MATH'
-                            ? 'bg-indigo-50 text-indigo-700'
-                            : 'bg-emerald-50 text-emerald-700'
-                        }`}>
-                          {post.category === 'DOCUMENTS' ? 'Tài liệu' : post.category === 'MATH' ? 'Math' : 'Verbal'}
+          return (
+            <div key={post.id} className="bg-white rounded-3xl border border-slate-200 shadow-2xs p-6 space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={post.authorAvatar} 
+                    alt={post.authorName} 
+                    className="w-10 h-10 rounded-full border border-slate-200 bg-slate-50"
+                  />
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold text-sm text-slate-900">{post.authorName}</span>
+                      {isAdmin && (
+                        <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold px-2 py-0.5 rounded-md">
+                          <ShieldCheck className="w-3 h-3 text-amber-600" /> QTV
                         </span>
-                      </div>
-                      <span className="text-[11px] text-slate-400">{post.createdAt}</span>
+                      )}
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                        post.category === 'DOCUMENTS' 
+                          ? 'bg-amber-100/70 text-amber-900' 
+                          : post.category === 'MATH'
+                          ? 'bg-indigo-50 text-indigo-700'
+                          : 'bg-emerald-50 text-emerald-700'
+                      }`}>
+                        {post.category === 'DOCUMENTS' ? 'Tài liệu' : post.category === 'MATH' ? 'Math' : 'Verbal'}
+                      </span>
                     </div>
-                  </div>
-
-                  {isAuthorOrAdmin && (
-                    <button
-                      type="button"
-                      onClick={() => handleDeletePost(post.id)}
-                      className="p-1.5 text-slate-300 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition cursor-pointer"
-                      title="Xóa bài viết"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  )}
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="font-extrabold text-base text-slate-900 leading-snug">{post.title}</h3>
-                  <div className="text-sm text-slate-700 leading-relaxed select-text">
-                    <MathRenderer text={post.content} />
+                    <span className="text-[11px] text-slate-400">{post.createdAt}</span>
                   </div>
                 </div>
 
-                {post.imageUrl && (
-                  <div className="rounded-2xl overflow-hidden border border-slate-200 max-h-96 max-w-xl">
-                    <img 
-                      src={post.imageUrl} 
-                      alt="Ảnh đính kèm" 
-                      className="w-full h-full object-cover"
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
-                  </div>
-                )}
-
-                {post.attachmentUrl && (
-                  <a
-                    href={post.attachmentUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-xl border border-slate-200 text-xs font-semibold transition"
-                  >
-                    <FileText className="w-4 h-4 text-rose-600" />
-                    <span className="truncate max-w-xs">{post.attachmentName || 'Tải file đính kèm'}</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400 ml-1" />
-                  </a>
-                )}
-
-                <div className="flex items-center gap-4 pt-2 border-t border-slate-100 text-xs text-slate-500 font-semibold">
+                {isAuthorOrAdmin && (
                   <button
                     type="button"
-                    onClick={() => handleLikePost(post.id)}
-                    className="flex items-center gap-1.5 hover:text-indigo-600 transition cursor-pointer"
+                    onClick={() => handleDeletePost(post.id)}
+                    className="p-1.5 text-slate-300 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition cursor-pointer"
+                    title="Xóa bài viết"
                   >
-                    <ThumbsUp className="w-4 h-4" />
-                    <span>{post.likes} Hữu ích</span>
+                    <Trash2 className="w-4 h-4" />
                   </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setActiveCommentPostId(isCommentsOpen ? null : post.id)}
-                    className="flex items-center gap-1.5 hover:text-indigo-600 transition cursor-pointer"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>{post.comments?.length || 0} Bình luận</span>
-                  </button>
-                </div>
-
-                {isCommentsOpen && (
-                  <div className="space-y-3 pt-3 border-t border-slate-100 animate-in fade-in duration-150">
-                    {post.comments?.length > 0 && (
-                      <div className="space-y-2.5 pl-2">
-                        {post.comments.map((cm) => (
-                          <div key={cm.id} className="flex items-start gap-2.5 text-xs bg-slate-50 p-3 rounded-2xl border border-slate-100">
-                            <img src={cm.authorAvatar} alt="" className="w-7 h-7 rounded-full shrink-0" />
-                            <div className="space-y-1 flex-1">
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-1.5">
-                                  <span className="font-bold text-slate-800">{cm.authorName}</span>
-                                  {cm.authorRole === 'ADMIN' && (
-                                    <span className="text-[9px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded">QTV</span>
-                                  )}
-                                </div>
-                                <span className="text-[10px] text-slate-400">{cm.createdAt}</span>
-                              </div>
-                              <div className="text-slate-700 leading-relaxed">
-                                <MathRenderer text={cm.content} />
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="flex items-center gap-2 pt-1">
-                      <input
-                        type="text"
-                        placeholder="Viết câu trả lời hoặc thảo luận (hỗ trợ KaTeX $...$)..."
-                        value={commentInputs[post.id] || ''}
-                        onChange={(e) => setCommentInputs({ ...commentInputs, [post.id]: e.target.value })}
-                        onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(post.id); }}
-                        className="flex-1 px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => handleAddComment(post.id)}
-                        className="p-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl transition cursor-pointer"
-                        title="Gửi bình luận"
-                      >
-                        <Send className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
                 )}
               </div>
-            );
-          })
-        )}
+
+              <div className="space-y-2">
+                <h3 className="font-extrabold text-base text-slate-900 leading-snug">{post.title}</h3>
+                <div className="text-sm text-slate-700 leading-relaxed select-text">
+                  <MathRenderer text={post.content} />
+                </div>
+              </div>
+
+              {post.imageUrl && (
+                <div className="rounded-2xl overflow-hidden border border-slate-200 max-h-96 max-w-xl">
+                  <img 
+                    src={post.imageUrl} 
+                    alt="Ảnh đính kèm" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => { e.target.style.display = 'none'; }}
+                  />
+                </div>
+              )}
+
+              {post.attachmentUrl && (
+                <a
+                  href={post.attachmentUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-xl border border-slate-200 text-xs font-semibold transition"
+                >
+                  <FileText className="w-4 h-4 text-rose-600" />
+                  <span className="truncate max-w-xs">{post.attachmentName || 'Tải file đính kèm'}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 ml-1" />
+                </a>
+              )}
+
+              {/* REACT & COMMENT BUTTONS */}
+              <div className="flex items-center gap-4 pt-2 border-t border-slate-100 text-xs font-semibold">
+                <button
+                  type="button"
+                  onClick={() => handleToggleLike(post.id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition cursor-pointer ${
+                    isLikedByUser
+                      ? 'bg-indigo-50 text-indigo-600 font-bold border border-indigo-200'
+                      : 'text-slate-500 hover:text-slate-800 hover:bg-slate-50'
+                  }`}
+                  title={isLikedByUser ? 'Bỏ thích' : 'Thích bài viết'}
+                >
+                  <ThumbsUp className={`w-4 h-4 ${isLikedByUser ? 'fill-indigo-600 text-indigo-600' : ''}`} />
+                  <span>{post.likes} Hữu ích</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveCommentPostId(isCommentsOpen ? null : post.id)}
+                  className="flex items-center gap-1.5 text-slate-500 hover:text-indigo-600 transition cursor-pointer"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>{post.comments?.length || 0} Bình luận</span>
+                </button>
+              </div>
+
+              {/* COMMENT SECTION */}
+              {isCommentsOpen && (
+                <div className="space-y-3 pt-3 border-t border-slate-100 animate-in fade-in duration-150">
+                  {post.comments?.length > 0 && (
+                    <div className="space-y-2.5 pl-2">
+                      {post.comments.map((cm) => (
+                        <div key={cm.id} className="flex items-start gap-2.5 text-xs bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                          <img src={cm.authorAvatar} alt="" className="w-7 h-7 rounded-full shrink-0" />
+                          <div className="space-y-1 flex-1">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-1.5">
+                                <span className="font-bold text-slate-800">{cm.authorName}</span>
+                                {cm.authorRole === 'ADMIN' && (
+                                  <span className="text-[9px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded">QTV</span>
+                                )}
+                              </div>
+                              <span className="text-[10px] text-slate-400">{cm.createdAt}</span>
+                            </div>
+                            <div className="text-slate-700 leading-relaxed">
+                              <MathRenderer text={cm.content} />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-2 pt-1">
+                    <input
+                      type="text"
+                      placeholder="Viết câu trả lời hoặc thảo luận..."
+                      value={commentInputs[post.id] || ''}
+                      onChange={(e) => setCommentInputs({ ...commentInputs, [post.id]: e.target.value })}
+                      onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(post.id); }}
+                      className="flex-1 px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handleAddComment(post.id)}
+                      className="p-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl transition cursor-pointer"
+                    >
+                      <Send className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {/* MODAL TẠO BÀI ĐĂNG */}
+      {/* CREATE POST MODAL */}
       {showCreateModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4 animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-slate-200 space-y-4">

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Calculator, BookOpen, Bookmark, ChevronLeft, ChevronRight, 
   HelpCircle, Eye, EyeOff, CheckCircle2, Highlighter, 
-  Sparkles, RotateCcw, Home, X, Check, Clock
+  Clock, X
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
@@ -21,9 +21,26 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   const [eliminatedOptions, setEliminatedOptions] = useState({});
   const [checkedQuestions, setCheckedQuestions] = useState({});
 
-  // Nhận diện chuẩn xác môn Math hay Verbal
   const currentQ = questions[currentIndex] || {};
   const isMathSection = currentQ?.section === 'Math' || sessionConfig?.section === 'Math' || sessionConfig?.category === 'Algebra';
+  
+  // Xác định chế độ: Real Exam / Full Test / Adaptive Test vs Practice Mode
+  const isExamMode = Boolean(
+    sessionConfig?.isRealExam ||
+    sessionConfig?.isAdaptive ||
+    sessionConfig?.section === 'Full Test' ||
+    sessionConfig?.mode === 'real' ||
+    (sessionConfig?.title && /test|exam|official|module/i.test(sessionConfig.title))
+  );
+
+  // 1. Cấu hình thời gian: Verbal = 32 phút, Math = 35 phút
+  const standardLimitSeconds = isMathSection ? 35 * 60 : 32 * 60;
+  const initialDuration = Number(sessionConfig?.duration) > 0 ? Number(sessionConfig.duration) * 60 : standardLimitSeconds;
+
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(initialDuration); // Dùng cho Exam đếm ngược
+  const [elapsedTime, setElapsedTime] = useState(0);          // Dùng cho Practice đếm tăng
+  const [timeSpent, setTimeSpent] = useState(0);
 
   // Modals
   const [isDesmosOpen, setIsDesmosOpen] = useState(false);
@@ -32,40 +49,41 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   const [isReportOpen, setIsReportOpen] = useState(false);
   const [reportData, setReportData] = useState(null);
 
-  // Hook theo dõi nhịp độ từng câu (đặt đúng ở đầu component)
+  // Hook đo nhịp độ
   const { timeOnCurrentQuestion, isTimeWarning, questionTimes } = usePacingTracker({
     currentIndex,
     isExamRunning: !isReportOpen,
     section: isMathSection ? 'Math' : 'Reading & Writing'
   });
 
-  // Đồng hồ & thời gian tổng
-  const [isTimerHidden, setIsTimerHidden] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(() => {
-    const rawDur = Number(sessionConfig?.duration);
-    if (rawDur && rawDur > 0 && rawDur <= 180) {
-      return rawDur * 60;
-    }
-    return Math.min(questions.length * 90 || 32 * 60, 60 * 60);
-  });
-  const [timeSpent, setTimeSpent] = useState(0);
-
-  // Tooltip Highlight
+  // Highlight tool
   const [highlightPopup, setHighlightPopup] = useState(null);
   const readingColRef = useRef(null);
 
+  // Đồng hồ: Đếm ngược khi thi, đếm tăng khi luyện tập
   useEffect(() => {
-    if (timeLeft <= 0) return;
+    if (isReportOpen) return;
     const timer = setInterval(() => {
-      setTimeLeft(prev => Math.max(0, prev - 1));
       setTimeSpent(prev => prev + 1);
+      if (isExamMode) {
+        setTimeLeft(prev => {
+          if (prev <= 1) {
+            clearInterval(timer);
+            handleFinishExam(true); // Tự động nộp khi hết giờ
+            return 0;
+          }
+          return prev - 1;
+        });
+      } else {
+        setElapsedTime(prev => prev + 1);
+      }
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeLeft]);
+  }, [isExamMode, isReportOpen]);
 
-  const formatTime = (secs) => {
-    const m = Math.floor(secs / 60);
-    const s = secs % 60;
+  const formatClock = (totalSecs) => {
+    const m = Math.floor(totalSecs / 60);
+    const s = totalSecs % 60;
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
@@ -95,6 +113,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   };
 
   const handleCheckAnswer = () => {
+    if (isExamMode) return; // Khóa check khi làm bài thi
     setCheckedQuestions(prev => ({ ...prev, [currentIndex]: true }));
   };
 
@@ -114,7 +133,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
           range: range.cloneRange()
         });
       }
-    } catch (e) {
+    } catch {
       setHighlightPopup(null);
     }
   };
@@ -131,14 +150,13 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       range.surroundContents(span);
       selection.removeAllRanges();
     } catch (e) {
-      console.warn('Vui lòng bôi đen văn bản trong cùng một đoạn:', e);
+      console.warn(e);
     }
     setHighlightPopup(null);
   };
 
-  // NỘP BÀI THI & TẠO BÁO CÁO (KHÔNG BỊ TRÙNG LẶP BIẾN)
-  const handleFinishExam = () => {
-    if (!window.confirm('Bạn có chắc chắn muốn nộp bài và xem báo cáo kết quả?')) {
+  const handleFinishExam = (isAuto = false) => {
+    if (!isAuto && !window.confirm('Bạn có chắc chắn muốn nộp bài và xem phân tích kết quả?')) {
       return;
     }
 
@@ -155,7 +173,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         isCorrect: isCorrect,
         domain: q.domain || (isMathSection ? 'Math Domain' : 'Reading & Writing'),
         difficulty: q.difficulty || 'medium',
-        explanation: q.explanation || 'Đáp án chính xác được College Board xác nhận chuẩn theo quy tắc phân tích đề thi.'
+        explanation: q.explanation || 'Đáp án chính xác được xác nhận theo tiêu chuẩn College Board.'
       };
     });
 
@@ -181,7 +199,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       const scoreRes = calculateSatScaledScore(fakeSessionState);
       calculatedScore = scoreRes?.scaledScore || Math.round((correctCount / totalCount) * 600 + 200);
       calculatedScore = Math.round(calculatedScore / 10) * 10;
-    } catch (err) {
+    } catch {
       calculatedScore = Math.round((correctCount / totalCount) * 600 + 200);
       calculatedScore = Math.round(calculatedScore / 10) * 10;
     }
@@ -201,7 +219,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
       st.percentage = st.total > 0 ? Math.round((st.correct / st.total) * 100) : 0;
     });
 
-    // Chỉ khai báo 1 lần duy nhất, gắn đầy đủ questionTimes
     const finalReport = {
       scaledScore: calculatedScore,
       section: sessionConfig?.title || (isMathSection ? 'Math Section' : 'Reading & Writing'),
@@ -221,7 +238,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
   if (questions.length === 0) {
     return (
       <div className="h-screen flex flex-col items-center justify-center bg-slate-50 gap-4">
-        <p className="text-slate-600 font-semibold text-sm">Không tìm thấy câu hỏi cho đề thi này.</p>
+        <p className="text-slate-600 font-semibold text-sm">Không tìm thấy câu hỏi cho phiên học này.</p>
         <button
           onClick={onExit}
           className="px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-xl cursor-pointer"
@@ -247,13 +264,12 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
     : Object.entries(rawOpts);
 
   const hasAnsweredCurrent = answers[currentIndex] !== undefined && answers[currentIndex] !== '';
-  const isCurrentChecked = checkedQuestions[currentIndex];
+  const isCurrentChecked = !isExamMode && checkedQuestions[currentIndex];
   const isCurrentCorrect = isAnswerCorrect(currentQ, answers[currentIndex]);
 
   return (
     <div className="h-screen flex flex-col bg-white select-none overflow-hidden relative">
-      
-      {/* POPUP HIGHLIGHT */}
+      {/* HIGHLIGHT TOOLTIP */}
       {highlightPopup && (
         <div
           style={{ top: `${highlightPopup.top}px`, left: `${highlightPopup.left}px`, transform: 'translateX(-50%)' }}
@@ -273,23 +289,28 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         </div>
       )}
 
-      {/* 1. TOP BAR CHUẨN BLUEBOOK */}
+      {/* 1. TOP BAR */}
       <header className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white shrink-0">
         <div>
           <h2 className="font-extrabold text-sm text-slate-800 tracking-tight">
-            {sessionConfig?.title || 'Digital SAT Practice'}
+            {sessionConfig?.title || 'Digital SAT Workspace'}
           </h2>
           <p className="text-[10px] text-slate-400 font-semibold">
             {isMathSection ? 'Math Section' : 'Reading and Writing'} • Câu {currentIndex + 1}/{questions.length}
+            {isExamMode ? ' • Chế độ Thi thử' : ' • Chế độ Luyện tập'}
           </p>
         </div>
 
-        {/* ĐỒNG HỒ ĐẾM NGƯỢC */}
+        {/* ĐỒNG HỒ: Đếm ngược khi thi thật, đếm tăng khi luyện tập */}
         <div className="flex items-center gap-2">
           {!isTimerHidden ? (
-            <span className="font-mono text-sm font-black text-slate-900 bg-slate-100 px-3 py-1 rounded-lg">
-              {formatTime(timeLeft)}
-            </span>
+            <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-lg">
+              <Clock className="w-3.5 h-3.5 text-slate-500" />
+              <span className="font-mono text-sm font-black text-slate-900">
+                {isExamMode ? formatClock(timeLeft) : formatClock(elapsedTime)}
+              </span>
+              {!isExamMode && <span className="text-[10px] font-bold text-slate-400">tự do</span>}
+            </div>
           ) : (
             <span className="text-xs text-slate-400 italic">Đã ẩn thời gian</span>
           )}
@@ -303,7 +324,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
           </button>
         </div>
 
-        {/* CÔNG CỤ (CHỈ HIỆN KHI LÀ MATH) */}
+        {/* CÔNG CỤ */}
         <div className="flex items-center gap-2">
           {isMathSection && (
             <>
@@ -336,11 +357,11 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         </div>
       </header>
 
-      {/* 2. KHU VỰC LÀM BÀI */}
+      {/* 2. MAIN WORKSPACE */}
       <main className="flex-1 overflow-y-auto p-6 md:p-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           
-          {/* CỘT TRÁI: ĐỀ BÀI + BADGE CẢNH BÁO NHỊP ĐỘ THỜI GIAN */}
+          {/* CỘT TRÁI: ĐỀ BÀI */}
           <div 
             ref={readingColRef}
             onMouseUp={handleTextSelection}
@@ -351,12 +372,10 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
                 <span className="font-mono font-bold text-xs bg-slate-900 text-white px-2.5 py-1 rounded-md">
                   {currentIndex + 1}
                 </span>
-
-                {/* Badge cảnh báo làm quá lâu */}
                 {isTimeWarning && (
                   <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-md text-[10px] font-bold animate-pulse">
                     <Clock className="w-3 h-3 text-amber-600" />
-                    <span>Quá nhịp chuẩn ({timeOnCurrentQuestion}s)</span>
+                    <span>Làm chậm ({timeOnCurrentQuestion}s)</span>
                   </span>
                 )}
               </div>
@@ -378,7 +397,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             </div>
           </div>
 
-          {/* CỘT PHẢI: CÂU HỎI & PHƯƠNG ÁN */}
+          {/* CỘT PHẢI: CÂU HỎI & ĐÁP ÁN */}
           <div className="space-y-4">
             <div className="text-xs font-semibold text-slate-700 leading-relaxed">
               {currentQ?.question || (currentQ?.isGridIn ? 'Enter your answer in the box below:' : 'Which choice completes the text with the most logical and precise word or phrase?')}
@@ -436,7 +455,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
                           toggleEliminate(letter);
                         }}
                         className="text-[10px] font-bold text-slate-400 hover:text-slate-700 px-1.5 py-0.5 rounded border border-transparent hover:border-slate-200 cursor-pointer"
-                        title="Gạch bỏ đáp án này"
+                        title="Gạch bỏ đáp án"
                       >
                         ABC
                       </button>
@@ -446,7 +465,7 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
               </div>
             )}
 
-            {/* CÂU ĐIỀN SỐ (SPR) */}
+            {/* CÂU ĐIỀN SỐ */}
             {currentQ?.isGridIn && (
               <div className="space-y-3">
                 <input
@@ -456,13 +475,10 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
                   placeholder="Nhập số hoặc phân số (ví dụ: 3/2 hoặc 1.5)..."
                   className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
-                <div className="text-[11px] text-slate-400">
-                  Xem trước: <strong className="font-mono text-slate-700">{answers[currentIndex] || 'Chưa nhập'}</strong>
-                </div>
               </div>
             )}
 
-            {/* LỜI GIẢI KHI BẤM NÚT CHECK */}
+            {/* GIẢI THÍCH (CHỈ HIỆN Ở CHẾ ĐỘ LUYỆN TẬP KHI BẤM CHECK) */}
             {isCurrentChecked && (
               <div className={`p-4 rounded-2xl border text-xs space-y-2 animate-in fade-in duration-200 ${
                 isCurrentCorrect ? 'bg-emerald-50/70 border-emerald-200 text-emerald-950' : 'bg-rose-50/70 border-rose-200 text-rose-950'
@@ -488,15 +504,12 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
                 )}
               </div>
             )}
-
           </div>
         </div>
       </main>
 
-      {/* 3. FOOTER ĐIỀU HƯỚNG */}
+      {/* 3. FOOTER */}
       <footer className="h-16 border-t border-slate-200 px-6 flex items-center justify-between bg-white shrink-0">
-        
-        {/* NÚT MATRIX */}
         <button
           type="button"
           onClick={() => setIsMatrixOpen(true)}
@@ -506,7 +519,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
           <span className="text-[10px] text-slate-400">▲</span>
         </button>
 
-        {/* NÚT BACK / CHECK / NEXT HOẶC FINISH */}
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -521,24 +533,27 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             Back
           </button>
 
-          <button
-            type="button"
-            disabled={!hasAnsweredCurrent}
-            onClick={handleCheckAnswer}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
-              hasAnsweredCurrent
-                ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-400 cursor-not-allowed'
-            }`}
-          >
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Check</span>
-          </button>
+          {/* CHỈ HIỂN THỊ NÚT CHECK TRONG CHẾ ĐỘ LUYỆN TẬP */}
+          {!isExamMode && (
+            <button
+              type="button"
+              disabled={!hasAnsweredCurrent}
+              onClick={handleCheckAnswer}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                hasAnsweredCurrent
+                  ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+              }`}
+            >
+              <HelpCircle className="w-3.5 h-3.5" />
+              <span>Check</span>
+            </button>
+          )}
 
           {currentIndex === questions.length - 1 ? (
             <button
               type="button"
-              onClick={handleFinishExam}
+              onClick={() => handleFinishExam(false)}
               className="px-6 py-2 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer flex items-center gap-1.5"
             >
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -556,7 +571,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         </div>
       </footer>
 
-      {/* MATRIX NAVIGATION MODAL */}
       <MatrixModal
         isOpen={isMatrixOpen}
         onClose={() => setIsMatrixOpen(false)}
@@ -568,7 +582,6 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
         onSelectQuestion={(idx) => handleJump(idx)}
       />
 
-      {/* SCORE REPORT MODAL */}
       {isReportOpen && (
         <ScoreReportModal
           isOpen={isReportOpen}
@@ -578,14 +591,14 @@ export default function ExamWorkspacePage({ sessionConfig, onExit, currentUser }
             setCurrentIndex(0);
             setAnswers({});
             setCheckedQuestions({});
-            setTimeLeft(Math.min(questions.length * 90 || 32 * 60, 60 * 60));
+            setTimeLeft(initialDuration);
+            setElapsedTime(0);
           }}
           onHome={onExit}
           reportData={reportData}
         />
       )}
 
-      {/* MODAL CÔNG CỤ TOÁN */}
       {isMathSection && (
         <>
           <DesmosModal isOpen={isDesmosOpen} onClose={() => setIsDesmosOpen(false)} />

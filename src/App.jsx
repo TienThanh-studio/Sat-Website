@@ -13,13 +13,15 @@ import SettingsPage from './pages/SettingsPage';
 import ExamWorkspacePage from './pages/ExamWorkspacePage';
 import ForumPage from './pages/ForumPage';
 
-// Admin Component (Quản trị đề & Mã mời)
+// Admin & Exam Components
 import QuestionManager from './components/admin/QuestionManager';
-import { CheckCircle2 } from 'lucide-react';
+import AiTutorModal from './components/exam/AiTutorModal';
+import { CheckCircle2, Sparkles } from 'lucide-react';
 
 export default function App() {
   const [activePage, setActivePage] = useState('dashboard');
   const [activeSession, setActiveSession] = useState(null);
+  const [selectedMistakeForAi, setSelectedMistakeForAi] = useState(null);
 
   const [user, setUser] = useState(() => {
     try {
@@ -56,7 +58,6 @@ export default function App() {
     setActiveSession(null);
   };
 
-  // Nếu đang thi thử, hiển thị ExamWorkspacePage toàn màn hình
   if (activeSession) {
     return (
       <ExamWorkspacePage
@@ -67,16 +68,15 @@ export default function App() {
     );
   }
 
-  // Khớp tất cả các mã ID của Quản trị từ Sidebar
-  const isAdminTab = 
-    activePage === 'admin-tools' || 
-    activePage === 'admin-panel' || 
-    activePage === 'admin' || 
+  const isAdminTab =
+    activePage === 'admin-tools' ||
+    activePage === 'admin-panel' ||
+    activePage === 'admin' ||
     activePage === 'admin-questions';
 
   return (
     <div className="flex h-screen bg-slate-50 text-slate-800 font-sans overflow-hidden">
-      {/* 1. SIDEBAR BÊN TRÁI: Đồng bộ cả 2 cặp prop activePage/activeTab */}
+      {/* 1. SIDEBAR */}
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
@@ -93,7 +93,7 @@ export default function App() {
         }}
       />
 
-      {/* 2. KHU VỰC NỘI DUNG CHÍNH */}
+      {/* 2. MAIN CONTENT */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Header
           user={user}
@@ -127,7 +127,7 @@ export default function App() {
             />
           )}
 
-          {/* 4. DIỄN ĐÀN HỎI ĐÁP & TÀI LIỆU (ĐÃ TÍCH HỢP HIỂN THỊ TRỰC TIẾP) */}
+          {/* 4. Diễn đàn hỏi đáp */}
           {(activePage === 'forum' || activePage === 'discussion') && (
             <div className="p-6 md:p-8">
               <ForumPage currentUser={user} />
@@ -177,7 +177,8 @@ export default function App() {
                           id: 'practice-mistakes-' + Date.now(),
                           title: 'Luyện lại câu sai trong sổ tay',
                           questions: mistakes,
-                          duration: mistakes.length * 90
+                          duration: 0,
+                          isRealExam: false
                         })}
                         className="px-5 py-2.5 bg-slate-900 hover:bg-indigo-600 text-white font-bold text-xs rounded-xl shadow-sm transition cursor-pointer"
                       >
@@ -196,8 +197,20 @@ export default function App() {
                             {q.prompt || q.content}
                           </p>
                           {q.question && <p className="text-xs font-bold text-slate-900">{q.question}</p>}
-                          <div className="p-3 bg-emerald-50 text-emerald-900 text-xs rounded-xl border border-emerald-200 font-medium">
-                            Đáp án chuẩn: <span className="font-bold font-mono">({q.correctAnswer})</span>
+                          
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-slate-100">
+                            <div className="p-2.5 bg-emerald-50 text-emerald-900 text-xs rounded-xl border border-emerald-200 font-medium">
+                              Đáp án chuẩn: <span className="font-bold font-mono">({q.correctAnswer})</span>
+                            </div>
+
+                            <button
+                              type="button"
+                              onClick={() => setSelectedMistakeForAi(q)}
+                              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-indigo-50 to-violet-50 hover:from-indigo-100 hover:to-violet-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs font-bold transition shadow-2xs cursor-pointer"
+                            >
+                              <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                              <span>Gia sư AI giải mã bẫy</span>
+                            </button>
                           </div>
                         </div>
                       ))}
@@ -213,7 +226,7 @@ export default function App() {
             <DocumentsPage user={user} />
           )}
 
-          {/* 7. Quản trị đề & Mã mời */}
+          {/* 7. Quản trị đề */}
           {isAdminTab && (
             <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
               <QuestionManager />
@@ -234,6 +247,15 @@ export default function App() {
           )}
         </main>
       </div>
+
+      {/* AI TUTOR MODAL CHO SỔ TAY CÂU SAI */}
+      {selectedMistakeForAi && (
+        <AiTutorModal
+          isOpen={Boolean(selectedMistakeForAi)}
+          onClose={() => setSelectedMistakeForAi(null)}
+          question={selectedMistakeForAi}
+        />
+      )}
     </div>
   );
 }

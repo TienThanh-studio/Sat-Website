@@ -1,5 +1,4 @@
 // src/components/exam/ScoreReportModal.jsx
-import PacingAnalysisCard from './PacingAnalysisCard';
 import React, { useMemo, useState, useCallback } from 'react';
 import {
   X,
@@ -18,8 +17,12 @@ import {
   CheckCheck,
   ListFilter,
   MinusCircle,
+  Bot,
+  Sparkles,
 } from 'lucide-react';
 import MathRenderer from '../common/MathRenderer';
+import PacingAnalysisCard from './PacingAnalysisCard';
+import AiTutorModal from './AiTutorModal';
 
 const FILTERS = {
   ALL: 'all',
@@ -79,15 +82,15 @@ const getBarTextColor = (percentage) => {
   return 'text-rose-700';
 };
 
-function QuestionReviewCard({ question, index }) {
+function QuestionReviewCard({ question, index, onAskAi }) {
   const [expanded, setExpanded] = useState(false);
   const q = question || {};
   const isCorrect = !!q.isCorrect;
   const hasAnswer = q.userAnswer !== undefined && q.userAnswer !== null && q.userAnswer !== '';
   const promptText = q.prompt || '';
   const questionText = q.question || '';
-  const options = Array.isArray(q.options) 
-    ? q.options 
+  const options = Array.isArray(q.options)
+    ? q.options
     : (q.options && typeof q.options === 'object' ? Object.entries(q.options).map(([k, v]) => ({ key: k, value: v })) : []);
 
   return (
@@ -165,7 +168,7 @@ function QuestionReviewCard({ question, index }) {
                   typeof opt === 'string' ? opt : opt?.key ?? opt?.id ?? String.fromCharCode(65 + optIdx);
                 const isUserChoice = String(q.userAnswer).trim().toLowerCase() === String(optionKey).trim().toLowerCase();
                 const isCorrectChoice = String(q.correctAnswer).trim().toLowerCase() === String(optionKey).trim().toLowerCase();
-                
+               
                 let optionStyle = 'border-slate-200 bg-white text-slate-700';
                 if (isCorrectChoice) {
                   optionStyle = 'border-emerald-400 bg-emerald-50 text-emerald-800';
@@ -173,7 +176,6 @@ function QuestionReviewCard({ question, index }) {
                 if (isUserChoice && !isCorrectChoice) {
                   optionStyle = 'border-rose-400 bg-rose-50 text-rose-800';
                 }
-
                 return (
                   <div
                     key={optionKey}
@@ -225,6 +227,7 @@ function QuestionReviewCard({ question, index }) {
               </div>
             </div>
           )}
+
           {q.explanation && (
             <div className="rounded-lg bg-slate-50 border border-slate-200 px-3 py-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 mb-1">
@@ -235,6 +238,18 @@ function QuestionReviewCard({ question, index }) {
               </div>
             </div>
           )}
+
+          {/* NÚT HỎI GIA SƯ AI */}
+          <div className="flex justify-end pt-1">
+            <button
+              type="button"
+              onClick={() => onAskAi(q)}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-gradient-to-r from-indigo-50 to-violet-50 hover:from-indigo-100 hover:to-violet-100 text-indigo-700 border border-indigo-200/80 rounded-xl text-xs font-bold transition shadow-2xs cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Gia sư AI giải mã bẫy</span>
+            </button>
+          </div>
         </div>
       )}
     </div>
@@ -244,6 +259,7 @@ function QuestionReviewCard({ question, index }) {
 export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, reportData }) {
   const [filter, setFilter] = useState(FILTERS.ALL);
   const [saveNotice, setSaveNotice] = useState('');
+  const [selectedAiQuestion, setSelectedAiQuestion] = useState(null);
 
   const data = reportData || {};
   const questions = Array.isArray(data.questions) ? data.questions : [];
@@ -275,7 +291,6 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
     data.module2Path === 'Easy'
       ? 'Phân nhánh Module 2: Cơ bản (Easy)'
       : 'Phân nhánh Module 2: Thử thách (Hard) — Đạt chuẩn điểm cao';
-
   const branchBadgeStyle =
     data.module2Path === 'Easy'
       ? 'bg-amber-50 text-amber-700 border border-amber-200'
@@ -293,7 +308,6 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
       const existing = existingRaw ? JSON.parse(existingRaw) : [];
       const existingArray = Array.isArray(existing) ? existing : [];
       const existingIds = new Set(existingArray.map((item) => item.id));
-
       const newEntries = mistakes
         .filter((q) => !existingIds.has(q.id))
         .map((q) => ({
@@ -309,7 +323,6 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
           section: data.section || '',
           savedAt: new Date().toISOString(),
         }));
-
       const merged = [...existingArray, ...newEntries];
       window.localStorage.setItem('sat_mistakes', JSON.stringify(merged));
       setSaveNotice(
@@ -317,7 +330,7 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
           ? `Đã lưu ${newEntries.length} câu sai vào Sổ tay!`
           : 'Các câu sai này đã có sẵn trong Sổ tay.'
       );
-    } catch (err) {
+    } catch {
       setSaveNotice('Không thể lưu vào Sổ tay (lỗi trình duyệt).');
     } finally {
       setTimeout(() => setSaveNotice(''), 2800);
@@ -366,7 +379,6 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
                 {branchLabel}
               </span>
             </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
               <div className="rounded-xl bg-white/10 px-4 py-3">
                 <div className="flex items-center gap-2 text-white/70 text-xs mb-1">
@@ -436,14 +448,14 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
             )}
           </section>
 
-          {/* PHÂN TÍCH NHỊP ĐỘ LÀM BÀI & BẪY THỜI GIAN */}
-<section>
-  <PacingAnalysisCard 
-    questionTimes={data.questionTimes || {}} 
-    questions={questions} 
-    section={data.section || 'Reading & Writing'} 
-  />
-</section>
+          {/* Pacing Analysis */}
+          <section>
+            <PacingAnalysisCard
+              questionTimes={data.questionTimes || {}}
+              questions={questions}
+              section={data.section || 'Reading & Writing'}
+            />
+          </section>
 
           {/* Review matrix */}
           <section>
@@ -488,7 +500,6 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
                 </button>
               </div>
             </div>
-
             {filteredQuestions.length === 0 ? (
               <div className="text-center py-10 text-sm text-slate-400 bg-white rounded-xl border border-dashed border-slate-200">
                 Không có câu hỏi nào khớp với bộ lọc hiện tại.
@@ -496,7 +507,12 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
             ) : (
               <div className="space-y-2.5">
                 {filteredQuestions.map((q, idx) => (
-                  <QuestionReviewCard key={q?.id ?? idx} question={q} index={idx} />
+                  <QuestionReviewCard
+                    key={q?.id ?? idx}
+                    question={q}
+                    index={idx}
+                    onAskAi={(questionToAsk) => setSelectedAiQuestion(questionToAsk)}
+                  />
                 ))}
               </div>
             )}
@@ -538,6 +554,15 @@ export default function ScoreReportModal({ isOpen, onClose, onRetry, onHome, rep
           </div>
         </div>
       </div>
+
+      {/* AI TUTOR MODAL */}
+      {selectedAiQuestion && (
+        <AiTutorModal
+          isOpen={Boolean(selectedAiQuestion)}
+          onClose={() => setSelectedAiQuestion(null)}
+          question={selectedAiQuestion}
+        />
+      )}
     </div>
   );
 }
