@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat6_rw2_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The works of Chicana artist Ester Hernandez are now ______ in museums both in the United States and abroad, but the murals she contributed to as a member of Las Mujeres Muralistas early in her artistic career were displayed in outdoor public spaces across San Francisco.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "invented",
+      "B": "adjusted",
+      "C": "featured",
+      "D": "recommended"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'featured' means displayed or presented prominently. The text contrasts her early outdoor street murals with her current work being featured in museums globally."
+  },
+  {
+    "id": "sat6_rw2_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Whether Carmen Lomas Garza is creating small paintings and illustrations or large public artworks—such as Baile, a copper cutout of traditional Mexican dance in the San Francisco International Airport—she is ______ direct experience, drawing from memories of her childhood in Texas or details of her current surroundings in California.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "complimented by",
+      "B": "uncertain about",
+      "C": "unbothered by",
+      "D": "inspired by"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'inspired by' means stimulated or guided by. The text explicitly notes that Garza draws creative material directly from memories of her childhood and current life."
+  },
+  {
+    "id": "sat6_rw2_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Animal researcher Amalia P.M. Bastos led a 2021 study about a wild kea parrot that used small stones as tools to preen its feathers. Skeptical colleagues had initially suggested to Bastos that the kea's interactions with the stones might simply be ______ but Bastos and her team showed that the kea was using the stones deliberately.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "intriguing",
+      "B": "obvious",
+      "C": "accidental",
+      "D": "observable"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'accidental' directly contrasts with 'deliberately'. Skeptics suggested the parrot's stone behavior was random or unintentional, but the team proved it was purposeful."
+  },
+  {
+    "id": "sat6_rw2_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "In 1891, design artist William Morris cofounded the Kelmscott Press, which printed editions of books using preindustrial methods. Historians argue that Morris's repudiation of industrialization is ______ the Kelmscott editions' use of handmade materials and intricate ornamentation reminiscent of medieval manuscripts: these meticulously handcrafted elements exemplify the artistry involved.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "insensible to",
+      "B": "manifest in",
+      "C": "scrutinized by",
+      "D": "complicated by"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'manifest in' means clearly revealed or evidenced by. Morris's rejection of modern industrialization was tangibly visible in the press's handcrafted, medieval-inspired aesthetics."
+  },
+  {
+    "id": "sat6_rw2_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Mary Engle Pennington, a chemist who helped advance home refrigeration, undoubtedly made a substantial impact on society, but her place in our historical memory is perhaps more ______ than that of Stephanie Kwolek, who invented the incredibly strong material known as Kevlar, an accomplishment for which she will long be remembered.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "permanent",
+      "B": "tentative",
+      "C": "warranted",
+      "D": "prominent"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'tentative' means uncertain or less secure. While Kwolek's fame is enduring, Pennington's place in cultural and historical memory is more precarious and less firmly established."
+  },
+  {
+    "id": "sat6_rw2_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is from Betty Smith's 1943 novel A Tree Grows in Brooklyn. Francie, a young girl, visits the library often.\n\nFrancie thought that all the books in the world were in that library and she had a plan about reading all the books in the world. She was reading a book a day in alphabetical order and not skipping the dry ones. She remembered that the first author had been Abbott. She had been reading a book a day for a long time now and she was still in the B's. Already she had read about bees and buffaloes, Bermuda vacations and Byzantine architecture. For all her enthusiasm, she had to admit that some of the B's had been hard going. But Francie was a reader.\n\n©1947 by Betty Smith",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To illustrate Francie's enjoyment of an unusual topic",
+      "B": "To explain why Francie prefers reading over other activities",
+      "C": "To portray Francie's determination to meet a goal",
+      "D": "To describe a book that Francie greatly admires"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the text illustrates Francie's steadfast discipline and determination to read every book in alphabetical order, persevering through boring and difficult texts."
+  },
+  {
+    "id": "sat6_rw2_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Researchers have long hypothesized that woolly mammoths were hunted to extinction in North America by humans using spears with grooved tips known as Clovis points. One anthropologist set out to test this hypothesis. Using a mechanical spear-thrower, he launched spears with Clovis points into mounds of clay—substitutes for the animals' large bodies. The projectiles generally penetrated only a few inches into the clay, an amount insufficient to have harmed most woolly mammoths. This led the anthropologist to conclude that hunters using spears with Clovis points likely weren't the principal drivers of the extinction.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To argue for the significance of new findings amid an ongoing debate among researchers",
+      "B": "To discuss the advantages and disadvantages of the method used in an experiment",
+      "C": "To summarize two competing hypotheses and a major finding associated with each one",
+      "D": "To describe an experiment whose results cast doubt on an established hypothesis"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the passage outlines an experiment testing Clovis spear penetration against clay models, which produced results questioning the prevailing overkill hypothesis."
+  },
+  {
+    "id": "sat6_rw2_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The people of medieval Europe have traditionally been seen as uninterested in cleanliness and hygiene, but modern research has shown that this is largely a myth. According to historian Eleanor Janega, most medieval towns in Europe had at least one public bathhouse, which often offered both full-immersion baths and—more affordably—steam baths. While such amenities were available mainly to town dwellers, regular bathing in rivers and streams or daily sponge baths at home were common practices throughout medieval Europe.",
+    "question": "Which choice best describes the function of the underlined portion?",
+    "isGridIn": false,
+    "options": {
+      "A": "It asserts that in medieval Europe steam baths were more popular in rural areas than in urban ones.",
+      "B": "It describes a limitation of earlier historians' studies of medieval European bathing habits.",
+      "C": "It concedes that not all people in medieval Europe had access to public bathhouses.",
+      "D": "It explains why Janega decided to study the popularity of public bathhouses in medieval Europe."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because stating that public bathhouses were 'available mainly to town dwellers' concedes that rural populations lacked institutional bathhouse access, while clarifying that they bathed in other ways."
+  },
+  {
+    "id": "sat6_rw2_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Scholarly accounts of the Chicano movement—a movement that advocated for the social, political, and cultural empowerment of Mexican Americans and reached its zenith in the 1960s and 1970s—tend to focus on the most militant, outspoken figures in the movement, making it seem uniformly radical. Geographer Juan Herrera has shown, however, that if we shift our focus toward the way the movement manifested in comparatively low-profile neighborhood institutions and projects, we see participants espousing an array of political orientations and approaches to community activism.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It presents a trend in scholarship on the Chicano movement that the text claims has been reevaluated by researchers in light of Herrera's work on the movement's participants.",
+      "B": "It identifies an aspect of the Chicano movement that the text implies was overemphasized by scholars due to their own political orientations.",
+      "C": "It describes a common approach to studying the Chicano movement that, according to the text, obscures the ideological diversity of the movement's participants.",
+      "D": "It summarizes the conventional method for analyzing the Chicano movement, which the text suggests creates a misleading impression of the effectiveness of neighborhood institutions and projects."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the opening sentence outlines how focusing exclusively on radical figureheads creates a false sense of uniformity, obscuring the ideological plurality highlighted by Herrera."
+  },
+  {
+    "id": "sat6_rw2_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Elizabeth Asiedu has identified a negative correlation between the share of developing countries' economies derived from natural-resource extraction and those countries' receipts of foreign investment. This may appear counterintuitive—resource extraction requires initial investments (in extractive technology, for instance) at scales best met by multinational corporations—but Asiedu notes that natural-resource industries' boom-bust cycle can destabilize local currencies and increase developing countries' vulnerability to external shocks, creating levels of uncertainty to which foreign investors are typically averse.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Although it may seem surprising that foreign investment declines in developing countries as natural-resource extraction makes up a larger share of those countries' economies, that decline happens because resource extraction requires initial investments too large for foreign investors to supply.",
+      "B": "Although developing countries tend to become less dependent on foreign investment as natural-resource industries make up a larger share of their economies, this change may not occur if the boom-bust cycle of those industries destabilizes local currencies or increases countries' vulnerability to external shocks.",
+      "C": "Although one might expect that foreign investment would increase as natural-resource extraction makes up a larger share of developing countries' economies, the opposite happens because heavy reliance on natural resources can lead to unattractive conditions for investors.",
+      "D": "Although foreign investors tend to avoid initial investments in natural-resource industries in developing countries, foreign investment may increase significantly as those industries stabilize and the risks associated with them decline."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it captures the counterintuitive phenomenon: resource-heavy economies deter foreign investors due to volatility and currency risks."
+  },
+  {
+    "id": "sat6_rw2_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "To understand how temperature change affects microorganism-mediated cycling of soil nutrients in alpine ecosystems, Eva Kaštovská et al. collected plant-soil cores in the Tatra Mountains at elevations around 2,100 meters and transplanted them to elevations of 1,700–1,800 meters, where the mean air temperature was warmer by 2°C. Microorganism-mediated nutrient cycling was accelerated in the transplanted cores; crucially, microorganism community composition was unchanged, allowing Kaštovská et al. to attribute the acceleration to temperature-induced increases in microorganism activity.",
+    "question": "It can most reasonably be inferred from the text that the finding about the microorganism community composition was important for which reason?",
+    "isGridIn": false,
+    "options": {
+      "A": "It provided preliminary evidence that microorganism-mediated nutrient cycling was accelerated in the transplanted cores.",
+      "B": "It suggested that temperature-induced changes in microorganism activity may be occurring at increasingly high elevations.",
+      "C": "It ruled out a potential alternative explanation for the acceleration in microorganism-mediated nutrient cycling.",
+      "D": "It clarified that microorganism activity levels in the plant-soil cores varied depending on which microorganisms comprised the community."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because confirming that the community composition stayed the same ruled out the alternative possibility that the accelerated cycling was caused by a shift to different, faster-metabolizing microbial species."
+  },
+  {
+    "id": "sat6_rw2_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Some astronomers searching for extraterrestrial life have proposed that atmospheric NH3 (ammonia) can serve as a biosignature gas—an indication that a planet harbors life. Jingcheng Huang, Sara Seager, and colleagues evaluated this possibility, finding that on rocky planets, atmospheric NH3 likely couldn't reach detectably high levels in the absence of biological activity. But the team also found that on so-called mini-Neptunes—gas planets smaller than Neptune but with atmospheres similar to Neptune's—atmospheric pressure and temperature can be high enough to produce atmospheric NH3.",
+    "question": "Based on the text, Huang, Seager, and colleagues would most likely agree with which statement about atmospheric NH3?",
+    "isGridIn": false,
+    "options": {
+      "A": "Its presence is more likely to indicate that a planet is a mini-Neptune than that the planet is a rocky planet that could support life.",
+      "B": "Its absence from a planet that's not a mini-Neptune indicates that the planet probably doesn't have life.",
+      "C": "It should be treated as a biosignature gas if detected in the atmosphere of a rocky planet but not if detected in the atmosphere of a mini-Neptune.",
+      "D": "It doesn't reliably reach high enough concentrations in the atmospheres of rocky planets or mini-Neptunes to be treated as a biosignature gas."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the findings show that abiotic atmospheric conditions can generate ammonia on mini-Neptunes, whereas on rocky planets, detectable ammonia requires biological processes."
+  },
+  {
+    "id": "sat6_rw2_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "In 2021, four of the United States national parks that were among the most visited were Grand Canyon National Park, Rocky Mountain National Park, Yellowstone National Park, and Zion National Park. The graph shows the number of visits for recreation to each of these parks during the three-month period with the highest number of visitors. A student notes that among the parks shown in the graph, the park with the highest monthly recreation visits in all three months was ______",
+    "question": "Which choice most effectively uses data from the graph to complete the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Zion National Park.",
+      "B": "Rocky Mountain National Park.",
+      "C": "Yellowstone National Park.",
+      "D": "Grand Canyon National Park."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because Yellowstone National Park consistently recorded the highest visitor counts across June, July, and August in 2021."
+  },
+  {
+    "id": "sat6_rw2_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "\"Lines Written in Early Spring\" is a 1798 poem by William Wordsworth. In the poem, the speaker describes having contradictory feelings while experiencing the sights and sounds of a spring day: ______",
+    "question": "Which quotation from \"Lines Written in Early Spring\" most effectively illustrates the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"Through primrose-tufts, in that sweet bower, / The periwinkle trail'd its wreathes; / And 'tis my faith that every flower / Enjoys the air it breathes.\"",
+      "B": "\"The budding twigs spread out their fan, / To catch the breezy air; / And I must think, do all I can, / That there was pleasure there.\"",
+      "C": "\"The birds around me hopp'd and play'd: / Their thoughts I cannot measure, / But the least motion which they made, / It seem'd a thrill of pleasure.\"",
+      "D": "\"I heard a thousand blended notes, / While in a grove I [sat] reclined, / In that sweet mood when pleasant thoughts / Bring sad thoughts to the mind.\""
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because experiencing 'pleasant thoughts' that paradoxically 'Bring sad thoughts to the mind' directly captures contradictory emotional states."
+  },
+  {
+    "id": "sat6_rw2_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "To test whether a medication is effective, scientists compare outcomes for patients taking it and patients taking a placebo (a medically inactive substance). Patients normally aren't told they're receiving a placebo, but a research team conducted a study to see if there might be a medical benefit to telling them. The team used various measures to evaluate participants, with higher ratings indicating greater well-being in each measure. Compared to the mean ratings after 21 days for participants in the control group, the mean ratings for participants who were aware of taking a placebo ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "ranged from 5.0 to 92.00, indicating that well-being varied widely from participant to participant.",
+      "B": "were lower for two measures, with the rating for only one measure indicating greater well-being for these participants.",
+      "C": "ranged from 3.9 to 46.00, with no rating indicating greater well-being in any measure for these participants.",
+      "D": "were higher for all three measures, indicating greater overall well-being for these participants."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the table shows higher scores across all three dimensions (Global improvement: 5.0 vs 3.9; Severity reduction: 92.00 vs 46.00; Quality of life: 11.4 vs 5.4) for aware patients compared to the control group."
+  },
+  {
+    "id": "sat6_rw2_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "As media consumption has become increasingly multiplatform and socially mediated, active news acquisition has diminished in favor of an attitude known as \"news finds me\" (NFM), in which people passively rely on their social networks and ambient media environments for information about current events. Homero Gil de Zúñiga and Trevor Diehl examined data on a representative group of adults in the United States to determine participants' strength of NFM attitude, political knowledge, and political interest. Although no major election took place sufficiently near the study for Gil de Zúñiga and Diehl to identify causality between NFM and voting behavior, they did posit that NFM may reduce voting probability through an indirect effect.",
+    "question": "Which finding, if true, would most directly support the idea advanced by Gil de Zúñiga and Diehl?",
+    "isGridIn": false,
+    "options": {
+      "A": "NFM attitude tends to increase in strength as major elections approach, and people are significantly more likely to vote in major elections than in minor elections.",
+      "B": "NFM attitude has a strong negative effect on political knowledge and interest, and there is known to be a strong positive correlation between political knowledge and interest and the likelihood of voting.",
+      "C": "Political interest is known to have a strong positive effect on likelihood of voting but shows only a weak positive effect on political knowledge, and NFM attitude shows little correlation with either political knowledge or political interest.",
+      "D": "The likelihood of voting increases as political knowledge increases, and the relationship between NFM attitude and political knowledge tends to strengthen as the size of people's social networks increases."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because an indirect negative pathway operates if NFM degrades knowledge and interest, which are themselves positively tied to voting turnout."
+  },
+  {
+    "id": "sat6_rw2_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The practice of logging (cutting down trees for commercial and other uses) is often thought to be at odds with forest conservation (the work of preserving forests). However, a massive study in forest management and preservation spanning 700,000 hectares in Oregon's Malheur National Forest calls that view into question. So far, results of the study suggest that forest plots that have undergone limited logging (the careful removal of a controlled number of trees) may be more robust than plots that haven't been logged at all. These results, in turn, suggest that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "logging may be useful for maintaining healthy forests, provided it is limited.",
+      "B": "other forest management strategies are more effective than limited logging.",
+      "C": "as time passes, it will be difficult to know whether limited logging has any benefits.",
+      "D": "the best way to support forest health may be to leave large forests entirely untouched."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because findings showing that plots with controlled, limited timber extraction are more robust than unlogged plots imply that limited logging can serve as a beneficial conservation tool."
+  },
+  {
+    "id": "sat6_rw2_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Even with the widespread adoption of personal computers, many authors still choose to write and revise their novels by hand and only then transcribe the final version on a computer. It may be tempting to speculate about how a novel written this way would be affected if it had been exclusively typed instead, but each novel is a unique entity resulting from a specific set of circumstances. Therefore, ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "in order to increase their efficiency, authors who currently write their novels largely by hand should instead work only on a computer.",
+      "B": "authors who do most of their drafting and revising by hand likely have more success than those who work entirely on a computer.",
+      "C": "novels written by hand take less time to produce, on average, than novels written on a computer do.",
+      "D": "there is no way to reasonably evaluate how a work would be different if it had been written by other means."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because if each creative work is an inextricably unique outcome of its specific circumstances, hypothetical alternate-medium counterfactuals cannot be objectively assessed."
+  },
+  {
+    "id": "sat6_rw2_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In forecasting weather events, meteorologists sometimes discuss the role of atmospheric rivers. What are atmospheric rivers, and how ______ Part of the water cycle, atmospheric rivers are narrow channels of moisture moving through the atmosphere. In certain conditions, these \"rivers\" can release some of their moisture as precipitation.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "do they affect our weather.",
+      "B": "they do affect our weather.",
+      "C": "do they affect our weather?",
+      "D": "they do affect our weather?"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the sentence asks a direct question, requiring inverted auxiliary verb syntax ('do they affect...') and a question mark."
+  },
+  {
+    "id": "sat6_rw2_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "One of the few African American global explorers during the turn of the 20th century, ______",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Matthew Henson made several treks across Greenland between 1891 and 1909.",
+      "B": "1891 and 1909 were the years between which Matthew Henson made several treks across Greenland.",
+      "C": "Greenland was where Matthew Henson made several treks between 1891 and 1909.",
+      "D": "several treks across Greenland were made by Matthew Henson between 1891 and 1909."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the opening appositive phrase ('One of the few African American global explorers...') must logically modify 'Matthew Henson'."
+  },
+  {
+    "id": "sat6_rw2_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Woven from recycled yarn and hand tufted using a carpet weaving technique passed down by the artist's Turkish grandmother, ______ so lush and tactilely inviting that you are tempted to reach out and touch them.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "the topological tapestries of Argentine textile artist Alexandra Kehayoglou are",
+      "B": "the Argentine textile artist Alexandra Kehayoglou creates topological tapestries that are",
+      "C": "when she creates her topological tapestries, Argentine textile artist Alexandra Kehayoglou makes them",
+      "D": "Alexandra Kehayoglou is an Argentine textile artist whose topological tapestries are"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the introductory participial modifier ('Woven from recycled yarn...') correctly describes 'the topological tapestries', avoiding a dangling modifier."
+  },
+  {
+    "id": "sat6_rw2_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Physical materials can be classified by how much light passes through them. Clear glass, which is classified as transparent, allows all (or almost all) light to pass ______ wax paper, which is classified as translucent, allows only some light to pass through.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "through,",
+      "B": "through",
+      "C": "through;",
+      "D": "through and"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because a semicolon correctly separates two grammatically independent clauses without a coordinating conjunction."
+  },
+  {
+    "id": "sat6_rw2_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Using natural debris, such as dried ______ such as plastic bags; and more traditional art supplies, such as tree glue, Ghanaian artist Ed Franklin Gavua creates his striking Yiiiiikakaii African masks, which he hopes can help viewers rethink how waste is used in their communities.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "leaves, man-made trash:",
+      "B": "leaves; man-made trash,",
+      "C": "leaves, man-made trash,",
+      "D": "leaves; man-made trash;"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because semicolons are needed to separate items in a complex series that contains internal commas ('such as dried leaves; man-made trash, such as plastic bags; and...')."
+  },
+  {
+    "id": "sat6_rw2_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Latin America is known to have dozens, if not hundreds, of popular dance forms. Only five of these dances are included in international ballroom dance ______ rumba, samba, cha-cha-cha, paso doble, and jive—the last of which is grouped with the other Latin dances despite not having Latin roots.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "competitions, however:",
+      "B": "competitions, however,",
+      "C": "competitions, however;",
+      "D": "competitions; however,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because setting off the transition 'however' with a comma and following it with a colon introduces the illustrative list of five specific dances."
+  },
+  {
+    "id": "sat6_rw2_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "For thousands of years, humans have used domesticated goats (Capra hircus) to clear land of unwanted vegetation. When it comes to their diets, goats are notoriously ______ they will devour all kinds of shrubs and weeds, leaving virtually no part of any plant unconsumed.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "indiscriminate and",
+      "B": "indiscriminate,",
+      "C": "indiscriminate",
+      "D": "indiscriminate:"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because a colon introduces an independent clause that directly explains and elaborates on what makes goats 'indiscriminate' eaters."
+  },
+  {
+    "id": "sat6_rw2_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "A species of Byropsis algae produces toxins to avoid being eaten by predators. However, in some cases, the toxins the organism uses to protect itself from predation actually ______ its attractiveness to predators. The Hawaiian sea slug, for example, not only tolerates Byropsis toxins but actually uses them for protection in the same way the algae does.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "is increasing",
+      "B": "increase",
+      "C": "increases",
+      "D": "has increased"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the plural subject 'toxins' agrees in number with the plural present tense verb 'increase'."
+  },
+  {
+    "id": "sat6_rw2_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "After appropriate permissions are granted, a typical archaeological dig begins with a surveyor making a detailed grid of the excavation site. Then, the site is carefully dug, and any artifacts found are recorded and mapped onto the site grid. ______ the artifacts are removed, cataloged, and analyzed in a laboratory.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "For instance,",
+      "B": "On the contrary,",
+      "C": "Earlier,",
+      "D": "Finally,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Finally,' signals the concluding chronological step in the sequential archaeological process described (begins -> then -> finally)."
+  },
+  {
+    "id": "sat6_rw2_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "The liquid metals in Earth's core circulate constantly, and this circulation generates electrical currents that flow between Earth's North and South magnetic poles. These electrical currents, ______ create a barrier around Earth that protects us from radiation and charged particles coming from space.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "in turn,",
+      "B": "likewise,",
+      "C": "nevertheless,",
+      "D": "in reality,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'in turn,' shows cause-and-effect chaining: core circulation creates electrical currents, which in turn form Earth's protective magnetic shield."
+  },
+  {
+    "id": "sat6_rw2_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Biographer Michael Gorra notes that the novelist Henry James \"lived in a world of second thoughts,\" frequently tinkering with his novels and stories after their initial publication. However, the differences between the 1881 first edition and the 1908 edition of his novel A Portrait of a Lady are extreme, even by James's standards; ______ some critics regard the two editions as two different novels altogether.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "by contrast,",
+      "B": "in fact,",
+      "C": "nevertheless,",
+      "D": "in other words,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'in fact,' adds rhetorical emphasis confirming that the divergence between the editions is so extreme that critics treat them as distinct works."
+  },
+  {
+    "id": "sat6_rw2_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Upon first approaching artist Kurt Wenner's Dies Irae, a colorful scene painted on the surface of a cobblestone street in Mantua, Italy, one might assume a deep hole filled with life-sized, classically styled sculptures had opened up in the street. ______ by expertly applying the principles of perspective, Wenner created merely the illusion of depth.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Additionally,",
+      "B": "On the contrary,",
+      "C": "As a result,",
+      "D": "Next,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'On the contrary,' contrasts the initial impression of a real gaping abyss with the reality that it is a flat optical illusion."
+  },
+  {
+    "id": "sat6_rw2_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Economist Elinor Ostrom's studies of communities around the world have empirically demonstrated that common pool resources, such as grazing lands, can be sustainably managed by the people who use them (rather than through private entities or centralized governments). ______ Ostrom's work is a repudiation of the \"tragedy of the commons,\" the view that individuals will inevitably overexploit a finite shared resource if given unfettered access to it.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "By contrast,",
+      "B": "For example,",
+      "C": "That said,",
+      "D": "As such,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'As such,' indicates that being a direct refutation of the tragedy of the commons follows logically from Ostrom's empirical findings."
+  },
+  {
+    "id": "sat6_rw2_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Some sandstone arches in Utah's Arches National Park have been defaced by tourists' carvings.\n• Park rangers can smooth away some carvings using power grinders.\n• For deep carvings, power grinding is not always feasible because it can greatly alter or damage the rock.\n• Park rangers can use an infilling technique, which involves filling in carvings with ground sandstone and a bonding agent.\n• This technique is minimally invasive.",
+    "question": "The student wants to explain an advantage of the infilling technique. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "To remove carvings from sandstone arches in Utah's Arches National Park, power grinding is not always feasible.",
+      "B": "Filling in carvings with ground sandstone and a bonding agent is less invasive than smoothing them away with a power grinder, which can greatly alter or damage the sandstone arches.",
+      "C": "Park rangers can use a power grinding technique to smooth away carvings or fill them in with ground sandstone and a bonding agent.",
+      "D": "As methods for removing carvings from sandstone, power grinding and infilling differ in their level of invasiveness."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it directly highlights the advantage of infilling (minimally invasive) in contrast to the damage caused by grinding."
+  },
+  {
+    "id": "sat6_rw2_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Las sergas de Esplandián was a novel popular in sixteenth-century Spain.\n• The novel featured a fictional island inhabited solely by Black women and known as California.\n• That same century, Spanish explorers learned of an \"island\" off the west coast of Mexico.\n• They called it California after the island in the novel.\n• The \"island\" was actually the peninsula now known as Baja California (\"Lower California\"), which lies to the south of the US state of California.",
+    "question": "The student wants to emphasize the role a misconception played in the naming of a place. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The novel Las sergas de Esplandián featured a fictional island known as California.",
+      "B": "To the south of the US state of California lies Baja California (\"Lower California\"), originally called California after a fictional place.",
+      "C": "In the sixteenth century, Spanish explorers learned of a peninsula off the west coast of Mexico and called it California.",
+      "D": "Thinking it was an island, Spanish explorers called a peninsula California after an island in a popular novel."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it directly emphasizes the misconception: explorers mistakenly believed the peninsula was an island and named it accordingly."
+  }
+]

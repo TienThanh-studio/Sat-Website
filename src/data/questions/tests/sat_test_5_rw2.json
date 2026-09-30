@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat5_rw2_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is adapted from Elizabeth von Arnim's 1922 novel The Enchanted April. Mrs. Wilkins and her friend Rose are traveling in Italy.\n\n\"I'm going to have one of these gorgeous oranges,\" said Mrs. Wilkins, staying where she was and reaching across to a black bowl piled with them. \"Rose, how can you resist them. Look—have this one. Do have this beauty—\" And she held out a big one.",
+    "question": "As used in the text, what does the phrase \"reaching across to\" most nearly mean?",
+    "isGridIn": false,
+    "options": {
+      "A": "Joining with",
+      "B": "Gaining on",
+      "C": "Stretching toward",
+      "D": "Arriving at"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'reaching across to' in this context means stretching one's arm toward something to grab it while staying in place."
+  },
+  {
+    "id": "sat5_rw2_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "A team of paleontologists has found a rich fossil deposit near Gulgong, Australia. The fossils are so well preserved that the team has been able to ______ detailed information about the life forms that left them behind, such as color patterns and how they interacted with other species.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "occupy",
+      "B": "hoard",
+      "C": "reserve",
+      "D": "obtain"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'obtain' means to acquire or gain. Due to the exceptional preservation of the fossils, researchers were able to obtain detailed biological information."
+  },
+  {
+    "id": "sat5_rw2_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "According to a team of neuroeconomists from the University of Zurich, ease of decision making may be linked to communication between two brain regions, the prefrontal cortex and the parietal cortex. Individuals tend to be more decisive if the information flow between the regions is intensified, whereas they make choices more slowly when information flow is ______",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "reduced",
+      "B": "evaluated",
+      "C": "determined",
+      "D": "acquired"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'reduced' provides a direct contrast to 'intensified'. People make decisions quickly when information flow is intensified, whereas they make choices more slowly when it is reduced."
+  },
+  {
+    "id": "sat5_rw2_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "The War of 1812 has ______ place in historical memory in Britain, partly because it is overshadowed by the much larger concurrent conflict against Napoleonic France and partly because it essentially maintained the geopolitical status quo for Britain: the country neither gained nor lost significant territory or position as a result of its participation in the war.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "a tenuous",
+      "B": "an enduring",
+      "C": "a contentious",
+      "D": "a conspicuous"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'tenuous' means weak, uncertain, or easily overlooked. Being overshadowed by the Napoleonic wars and resulting in no territory changes gave the war a tenuous hold in British historical memory."
+  },
+  {
+    "id": "sat5_rw2_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Claims about the original significance of Minoan bull-leaping rituals—depicted in paintings and sculptures from the second millennium BCE—are difficult to successfully ______ We know so little about the people archaeologists call the Minoans that assertions about what bull-leaping meant to them will almost inevitably rely on significant speculation and guesswork.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "imagine",
+      "B": "summarize",
+      "C": "defend",
+      "D": "adjust"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'defend' means to substantiate or uphold with evidence against scrutiny. Because so little is known about the Minoans, assertions about rituals are hard to defend."
+  },
+  {
+    "id": "sat5_rw2_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Jerome K. Jerome's 1889 novel Three Men in a Boat (To Say Nothing of the Dog). The narrator is traveling by boat with Harris and another friend.\n\n[Harris] told us anecdotes of how he had gone across the [English] Channel when it was so rough that the passengers had to be tied into their [beds], and he and the captain were the only two living souls on board who were not ill. Sometimes it was he and the second mate who were not ill; but it was generally he and one other man. If not he and another man, then it was he by himself.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It indicates the reason for Harris's eagerness to resume traveling.",
+      "B": "It hints at Harris's feeling that during an earlier boat trip, others didn't include him in activities.",
+      "C": "It emphasizes that Harris always boasts about his own constitution when speaking of a previous boat trip.",
+      "D": "It reveals that although Harris claims to prefer solitary activities when traveling, he actually enjoys having company."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the progression of anecdotes humorously emphasizes that in all variations of his story, Harris boasts about his own physical constitution by claiming he was never seasick."
+  },
+  {
+    "id": "sat5_rw2_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Several studies have found negligible electoral consequences for governments that impose fiscal austerity measures, yet some European governments recently suffered electorally due to their austerity programs. Evelyne Huebscher and colleagues attribute this incongruity to governments' tendency—not followed in the recent European cases—to implement austerity programs strategically to avoid electoral costs (e.g., setting spending cuts to take effect only after the next election), which has obscured the inherent political risks of austerity measures in the election data scholars have examined.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It explains a discrepancy between what has been observed in study settings and what has been observed in real-world settings that the text goes on to assert is attributable to the studies not using real-world data.",
+      "B": "It identifies a conflict between research findings and recent events that the text goes on to suggest is a consequence of a complicating factor in the data used to generate those findings.",
+      "C": "It presents a long-standing divergence in research findings that the text goes on to say is due to different groups of researchers using data that derive from different electoral circumstances.",
+      "D": "It describes a recent exception to a general pattern in research findings that the text goes on to explain is a result of researchers underestimating the significance of inconsistencies in the data they've analyzed."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the opening sentence highlights a conflict between past research findings (no electoral harm) and recent European elections (significant electoral harm), which the text subsequently explains by noting a strategic timing factor."
+  },
+  {
+    "id": "sat5_rw2_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Text 1\nGraphic novels are increasingly popular in bookstores and libraries, but they shouldn't be classified as literature. By definition, literature tells a story or conveys meaning through language only; graphic novels tell stories through illustrations and use language only sparingly, in captions and dialogue. Graphic novels are experienced as series of images and not as language, making them more similar to film than to literature.\n\nText 2\nGraphic novels present their stories through both language and images. Without captions and dialogue, readers would be unable to understand what is depicted in the illustrations: the story results from the interaction of text and image. Moreover, Alison Bechdel's Fun Home and many other graphic novels feature text that is as beautifully written as the prose found in many standard novels. Therefore, graphic novels qualify as literary texts.",
+    "question": "Based on the texts, how would the author of Text 2 most likely respond to the overall argument presented in Text 1?",
+    "isGridIn": false,
+    "options": {
+      "A": "By asserting that language plays a more important role in graphic novels than the author of Text 1 recognizes",
+      "B": "By acknowledging that the author of Text 1 has identified a flaw that is common to all graphic novels",
+      "C": "By suggesting that the story lines of certain graphic novels are more difficult to understand than the author of Text 1 claims",
+      "D": "By agreeing with the author of Text 1 that most graphic novels aren't as well crafted as most literary works are"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because Text 1 claims graphic novels use language 'only sparingly', while Text 2 argues that text is essential to understanding the narrative and is often as beautifully written as literary prose."
+  },
+  {
+    "id": "sat5_rw2_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "The following text is adapted from Ann Petry's 1946 novel The Street. Lutie lives in an apartment in Harlem, New York.\n\nThe glow from the sunset was making the street radiant. The street is nice in this light, [Lutie] thought. It was swarming with children who were playing ball and darting back and forth across the sidewalk in complicated games of tag. Girls were skipping double dutch rope, going tirelessly through the exact center of a pair of ropes, jumping first on one foot and then the other.\n\n©1946 by Ann Petry",
+    "question": "Which choice best describes what is happening in the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Lutie is observing the appearance of the street at a particular time of day and the events occurring on it.",
+      "B": "Lutie is annoyed by the noise of children playing games on her street.",
+      "C": "Lutie is puzzled by the rules of certain children's games.",
+      "D": "Lutie is spending time alone in her apartment because she doesn't want to interact with her neighbors."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the passage describes Lutie appreciating the street during sunset and watching the neighborhood children play ball, tag, and jump rope."
+  },
+  {
+    "id": "sat5_rw2_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Since its completion in 2014, Bosco Verticale (Vertical Forest)—a pair of residential towers in Milan, Italy, covered by vegetation—has become a striking symbol of environmental sustainability in architecture. Stefano Boeri intended his design, which features balconies that are home to hundreds of trees, to serve as a model for promoting urban biodiversity. However, the concept has faced skepticism: critics note that although the trees used in Bosco Verticale were specifically cultivated for the project, it's too early to tell if they can thrive in this unusual setting.",
+    "question": "According to the text, why are some critics skeptical of the concept behind Bosco Verticale?",
+    "isGridIn": false,
+    "options": {
+      "A": "Some essential aspects of Bosco Verticale's design are difficult to adapt to locations other than Milan.",
+      "B": "The plant life on Bosco Verticale ended up being less varied than Boeri had envisioned it would be.",
+      "C": "The construction of Bosco Verticale was no less environmentally damaging than the construction of more conventional buildings is.",
+      "D": "It is unclear whether Bosco Verticale can support the plant life included in its design."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the text specifies that critics are skeptical because 'it's too early to tell if they can thrive in this unusual setting,' questioning whether the towers can support the planted trees."
+  },
+  {
+    "id": "sat5_rw2_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Many literary theorists distinguish between fabula, a narrative's content, and syuzhet, a narrative's arrangement and presentation of events. In the film The Godfather Part II, the fabula is the story of the Corleone family, and the syuzhet is the presentation of the story as it alternates between two timelines in 1901 and 1958. But literary theorist Mikhail Bakhtin maintained that fabula and syuzhet are insufficient to completely describe a narrative—he held that systematic categorizations of artistic phenomena discount the subtle way in which meaning is created by interactions between the artist, the work, and the audience.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Literary theorist Mikhail Bakhtin argued that there are important characteristics of narratives that are not fully encompassed by two concepts that other theorists have used to analyze narratives.",
+      "B": "Literary theorist Mikhail Bakhtin claimed that meaning is not inherent in a narrative but is created when an audience encounters a narrative so that narratives are interpreted differently by different people.",
+      "C": "The storytelling methods used in The Godfather Part II may seem unusually complicated, but they can be easily understood when two concepts from literary theory are utilized.",
+      "D": "Narratives that are told out of chronological order are more difficult for audiences to understand than are narratives presented chronologically."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the text focuses on Bakhtin's argument that the standard theoretical dichotomy of fabula and syuzhet fails to capture the dynamic creation of meaning among author, text, and audience."
+  },
+  {
+    "id": "sat5_rw2_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "A student is researching the trends in the topics submitted to a national science fair for high school students. The graph shows the number of submissions by topic that were made each year. Based on the data in the graph, the student claims that there were more medicine and health research topics submitted in 2019 than in any other year.",
+    "question": "Which choice most effectively uses data from the graph to support the underlined claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "In 2016, the number of cellular and molecular biology topic submissions was the same as the number of animal science topic submissions.",
+      "B": "In 2019, there were more physics and space science topic submissions than there were medicine and health topic submissions.",
+      "C": "The lowest number of animal science topic submissions in a year was approximately 95 in 2016.",
+      "D": "The highest number of medicine and health topic submissions during the period shown is approximately 285 in 2019."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because stating that the peak number of medicine and health submissions across the entire 2016–2019 timeframe occurred in 2019 (approximately 285) directly supports the student's claim."
+  },
+  {
+    "id": "sat5_rw2_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Fish whose DNA has been modified to include genetic material from other species are known as transgenic. Some transgenic fish have genes from jellyfish that result in fluorescence (that is, they glow in the dark). Although these fish were initially engineered for research purposes in the 1990s, they were sold as pets in the 2000s and can now be found in the wild in creeks in Brazil. A student in a biology seminar who is writing a paper on these fish asserts that their escape from Brazilian fish farms into the wild may have significant negative long-term ecological effects.",
+    "question": "Which quotation from a researcher would best support the student's assertion?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"In one site in the wild where transgenic fish were observed, females outnumbered males, while in another the numbers of females and males were equivalent.\"",
+      "B": "\"Though some presence of transgenic fish in the wild has been recorded, there are insufficient studies of the impact of those fish on the ecosystems into which they are introduced.\"",
+      "C": "\"The ecosystems into which transgenic fish are known to have been introduced may represent a subset of the ecosystems into which the fish have actually been introduced.\"",
+      "D": "\"Through interbreeding, transgenic fish might introduce the trait of fluorescence into wild fish populations, making those populations more vulnerable to predators.\""
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because introducing glowing traits into wild populations that increase their vulnerability to predators describes a tangible, negative ecological effect."
+  },
+  {
+    "id": "sat5_rw2_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Inés Ibáñez and colleagues studied a forest site in which some sugar maple trees receive periodic fertilization with nitrogen to mimic the broader trend of increasing anthropogenic nitrogen deposition in soil. Ibáñez and colleagues modeled the radial growth of the trees with and without nitrogen fertilization under three different climate scenarios (the current climate, moderate change, and extreme change). Although they found that climate change would negatively affect growth, they concluded that anthropogenic nitrogen deposition could more than offset that effect provided that change is moderate rather than extreme.",
+    "question": "Which choice best describes data from the graph that support Ibáñez and colleagues' conclusion?",
+    "isGridIn": false,
+    "options": {
+      "A": "Growth with nitrogen under the current climate exceeded growth with nitrogen under moderate change, but the latter exceeded growth without nitrogen under extreme change.",
+      "B": "Growth without nitrogen under the current climate exceeded growth without nitrogen under moderate change, but the latter exceeded growth with nitrogen under extreme change.",
+      "C": "Growth with nitrogen under moderate change exceeded growth without nitrogen under moderate change, but the latter exceeded growth without nitrogen under extreme change.",
+      "D": "Growth with nitrogen under moderate change exceeded growth without nitrogen under the current climate, but the latter exceeded growth with nitrogen under extreme change."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because showing that moderate climate growth with nitrogen (~0.18 cm) surpassed current baseline growth without nitrogen (~0.16 cm) demonstrates the offset, while under extreme change nitrogen fails to prevent severe reduction (~0.06 cm)."
+  },
+  {
+    "id": "sat5_rw2_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "\"Poetry\" is a 1919 poem by Marianne Moore. The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing ______",
+    "question": "Which quotation from \"Poetry\" most effectively illustrates the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"nor is it valid / to discriminate against 'business documents and / school-books'; all these phenomena are important.\"",
+      "B": "\"One must make a distinction / however: when dragged into prominence by half poets, the result is not / poetry\"",
+      "C": "\"when [poems] become so derivative as to become unintelligible, the / same thing may be said for all of us—that we / do not admire what / we cannot understand.\"",
+      "D": "\"Reading [poetry], however, with a perfect contempt for it, one discovers that there is in / it after all, a place for the genuine.\""
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because juxtaposing 'perfect contempt' (displeasure) with finding 'a place for the genuine' (merit) directly demonstrates ambivalence."
+  },
+  {
+    "id": "sat5_rw2_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Some climate models for the western United States predict that while total annual precipitation may remain unchanged from the present level, precipitation will become concentrated into fewer but more intense rain and snow events. University of Texas climate scientist Geeta Persad and her colleagues simulated how the amount of water entering aquifers and the amount being used for irrigation purposes would change if this were to occur. Persad and her colleagues concluded that concentration of precipitation into fewer events would result in a higher number of dry days, triggering more irrigation, but that this change in irrigation output is highly sensitive to the baseline concentration of precipitation that currently exists in an area.",
+    "question": "Which choice best describes data from the table that support Persad and her colleagues' conclusion?",
+    "isGridIn": false,
+    "options": {
+      "A": "If baseline precipitation is somewhat concentrated, the amount of water being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater, whereas the amount of water entering aquifers will increase 11.0% if baseline precipitation is evenly distributed.",
+      "B": "If baseline precipitation is somewhat concentrated, water use for irrigation will increase only slightly, whereas it will increase 9.0% for surface water and 7.9% for groundwater if baseline precipitation is evenly distributed.",
+      "C": "If baseline precipitation is somewhat concentrated, the amount of water entering aquifers will increase 4.9%, while the amount being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater.",
+      "D": "If baseline precipitation is somewhat concentrated, water use for irrigation will decline by a small amount, whereas it will increase 11.0% for surface water and 9.0% for groundwater if baseline precipitation is evenly distributed."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the table shows that irrigation demand changes modestly when baseline rain is concentrated (0.4% and 0.9%), but jumps dramatically when baseline rain is evenly distributed (9.0% and 7.9%), proving extreme sensitivity to baseline distribution."
+  },
+  {
+    "id": "sat5_rw2_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "In dialects of English spoken in Scotland, the \"r\" sound is strongly emphasized when it appears at the end of syllables (as in \"car\") or before other consonant sounds (as in \"bird\"). English dialects of the Upland South, a region stretching from Oklahoma to western Virginia, place similar emphasis on \"r\" at the ends of syllables and before other consonant sounds. Historical records show that the Upland South was colonized largely by people whose ancestors came from Scotland. Thus, linguists have concluded that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "the English dialects spoken in the Upland South acquired their emphasis on the \"r\" sound from dialects spoken in Scotland.",
+      "B": "emphasis on the \"r\" sound will eventually spread from English dialects spoken in the Upland South to dialects spoken elsewhere.",
+      "C": "the English dialects spoken in Scotland were influenced by dialects spoken in the Upland South.",
+      "D": "people from Scotland abandoned their emphasis on the \"r\" sound after relocating to the Upland South."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because linking the historical settlement of Scottish colonists to the identical phonetic treatment of postvocalic 'r' leads to the logical conclusion that the Upland South dialect inherited this feature from Scotland."
+  },
+  {
+    "id": "sat5_rw2_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "How did whales, once no bigger than seals, evolve to become the largest animals on Earth? Brazilian biologist Mariana Nery believes the answer might be found in whales' DNA. In January 2023, Nery and her colleagues ______ a study showing changes over time in four whale genes associated with body size.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "published",
+      "B": "publishing",
+      "C": "having published",
+      "D": "to publish"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the sentence requires a finite past tense verb ('published') to act as the main verb for the subject 'Nery and her colleagues'."
+  },
+  {
+    "id": "sat5_rw2_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "A harpsichord may look just like a piano, but the difference between the two instruments is easy to hear. When a harpsichord's keys are pressed, the strings inside the ______ are plucked, not struck.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "instrument:",
+      "B": "instrument",
+      "C": "instrument-",
+      "D": "instrument,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because no punctuation should intervene between the subject ('the strings inside the instrument') and the verb ('are plucked')."
+  },
+  {
+    "id": "sat5_rw2_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "When they were first introduced to western Europe from Byzantium in the eleventh century, table forks were met with much resistance. The Bishop of Ostia, St. Peter Damian, condemned the eating utensils because he considered ______ dangerous and unnecessary luxury items.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "them",
+      "B": "this",
+      "C": "that",
+      "D": "it"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the plural pronoun 'them' correctly agrees with the plural antecedent 'eating utensils'."
+  },
+  {
+    "id": "sat5_rw2_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Julia Alvarez's 1994 novel In the Time of the Butterflies, a fictionalized account of the lives of the Mirabal ______ can serve as a starting point for those wanting to explore how the rule of dictator Rafael Trujillo has been represented in Dominican American literature.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "sisters, and",
+      "B": "sisters and",
+      "C": "sisters,",
+      "D": "sisters"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the nonessential appositive phrase ('a fictionalized account of the lives of the Mirabal sisters') begins with a comma and must close with a comma before the predicate 'can serve'."
+  },
+  {
+    "id": "sat5_rw2_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "On March 23, 2021, a gust of wind wreaked havoc on global trade. Ever Given, an international shipping container vessel, became lodged in Egypt's Suez Canal, a major shipping route between Europe and Asia. The vessel took six days to ______ it's as heavy as two thousand blue whales when fully loaded.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "dislodge in part due to its sheer size,",
+      "B": "dislodge, in part due to its sheer size:",
+      "C": "dislodge, in part due to its sheer size,",
+      "D": "dislodge, in part, due to its sheer size"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because a comma separates the adverbial phrase 'in part due to its sheer size', and a colon introduces the independent clause that explains how heavy the ship is."
+  },
+  {
+    "id": "sat5_rw2_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Fans of the film Moana (2016) may not know that the deep and humorous voice behind the ______ belongs to comedian, actor, and musician Jemaine Clement. The versatile performer has appeared in everything from television commercials to action movies, but voice acting, specifically, has become a notable part of his career.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "character Tamatoa the crab",
+      "B": "character Tamatoa the crab,",
+      "C": "character: Tamatoa the crab,",
+      "D": "character, Tamatoa the crab"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Tamatoa the crab' is a restrictive appositive specifying which character is meant, requiring no surrounding punctuation."
+  },
+  {
+    "id": "sat5_rw2_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In her 1983 book The Managed Heart: Commercialization of Human Feeling, sociologist Arlie Russell Hochschild first explored at length her conception of a \"sociology of emotions\"—the idea that the various cultural and ideological frameworks a person has internalized (class, gender, political affiliation, etc.) ______ each emotional reaction that person has within a situation.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "underlies",
+      "B": "is underlying",
+      "C": "underlie",
+      "D": "has been underlying"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the subject of the clause is the plural noun 'frameworks', which requires the plural verb 'underlie'."
+  },
+  {
+    "id": "sat5_rw2_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "American abstract artist Richard ______ installations to make passersby keenly aware of how one's movements are affected by the physical features of one's environment, assembles large-scale steel plates into sculptures that dominate the outdoor spaces they occupy.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Serra is intending",
+      "B": "Serra, intends",
+      "C": "Serra, intending his",
+      "D": "Serra intends his"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because setting off the participial phrase 'Serra, intending his installations...' with commas allows the main subject 'Richard Serra' to connect smoothly to the finite main verb 'assembles'."
+  },
+  {
+    "id": "sat5_rw2_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In 1949, Frank Zamboni developed an ice rink resurfacing machine. As Zamboni's machine moved along the rink's surface, it first scraped off the top layer of ice. ______ it sprayed water into the deep grooves left behind by customers' skates. Lastly, it smoothed over the newly formed ice.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "For example,",
+      "B": "Next,",
+      "C": "Similarly,",
+      "D": "In contrast,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'Next,' logically connects the sequential stages of the resurfacing operation (first -> next -> lastly)."
+  },
+  {
+    "id": "sat5_rw2_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In 2014, Nestor Gomez won his first-ever storytelling competition, relating a tale about his life as a Guatemalan immigrant living in Chicago. ______ in 2017, Gomez created the show 80 Minutes Around the World as a platform for others to share stories about their immigration experiences.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Instead,",
+      "B": "For example,",
+      "C": "Later,",
+      "D": "In other words,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'Later,' indicates chronological progression from 2014 to 2017."
+  },
+  {
+    "id": "sat5_rw2_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "To guarantee the validity of experimental results, scientists rely on precise, unchanging standards of measurement. ______ metrologists (scientists who study measurement) developed the SI, or International System of Units. The SI's units of measurement are based on unchanging values in nature, such as the mass of an electron or the speed of light.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "In contrast,",
+      "B": "Regardless,",
+      "C": "In addition,",
+      "D": "For this reason,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'For this reason,' explains that the necessity for unchanging standards caused metrologists to develop the SI system."
+  },
+  {
+    "id": "sat5_rw2_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "In retrospect, one of the lessons of the 2003 Human Genome Project is that a gene is affected by many factors, not the least of which is its interactions with the protein products of other genes. ______ rather than just focusing on the human genome, efforts to better understand gene mutations related to disease have begun to consider the human proteome, the complete set of proteins expressed by human genes.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "In other words,",
+      "B": "That said,",
+      "C": "For example,",
+      "D": "Accordingly,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Accordingly,' signals that the shift toward analyzing the proteome was a direct consequence of learning that genes interact with proteins."
+  },
+  {
+    "id": "sat5_rw2_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Iranian scholar Abu Rayhan al-Biruni studied Earth's physical features.\n• He theorized that a large landmass existed west of Europe and east of Asia.\n• Al-Biruni published his landmass theory in 1037 CE.",
+    "question": "The student wants to specify when al-Biruni published his landmass theory. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "In 1037 CE, al-Biruni published his theory that a large landmass existed west of Europe and east of Asia.",
+      "B": "Al-Biruni, who studied Earth's physical features, published a theory about a large landmass.",
+      "C": "Al-Biruni was an Iranian scholar who studied Earth's physical features.",
+      "D": "An Iranian scholar who studied Earth's physical features, al-Biruni theorized that a large landmass existed west of Europe and east of Asia."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it explicitly states when the theory was published: 'In 1037 CE'."
+  },
+  {
+    "id": "sat5_rw2_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• In astronomy, the mass of stars can be described in units called solar masses.\n• One solar mass is roughly equal to the mass of the Sun.\n• The mass of the star Proxima Centauri is 0.122 solar masses.\n• The mass of the star Sirius A is 2.063 solar masses.",
+    "question": "The student wants to emphasize the mass of Sirius A. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The mass of stars, like Proxima Centauri, can be described in units called solar masses.",
+      "B": "In astronomy, the mass of stars can be described in units called solar masses, and one solar mass is roughly equal to the mass of the Sun.",
+      "C": "The Sun is more massive than Proxima Centauri, which has a mass of 0.122 solar masses.",
+      "D": "With a mass of 2.063 solar masses, Sirius A is more massive than the Sun."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it specifically highlights Sirius A's mass (2.063 solar masses) and points out that it exceeds the mass of the Sun."
+  },
+  {
+    "id": "sat5_rw2_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• A lever is a simple machine consisting of a rigid beam and a fulcrum.\n• The fulcrum is the point about which the beam pivots.\n• The input force (effort) is the force applied to the lever.\n• The output force (load) is the force that the lever exerts on another object.\n• In first-class levers, the fulcrum is located between the effort and the load.\n• In second-class levers, the load is located between the effort and the fulcrum.",
+    "question": "The student wants to contrast first-class levers and second-class levers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "In levers, the effort is the force applied to the lever; the load, in contrast, is the force that the lever exerts on another object.",
+      "B": "In first-class and second-class levers, the fulcrum and the load are in different locations.",
+      "C": "First-class levers are simple machines consisting of a rigid beam and a fulcrum, but then again, the same is true of second-class levers.",
+      "D": "In first-class levers, the fulcrum is located between the effort and the load, but in second-class levers, the load is located between the effort and the fulcrum."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it directly contrasts the relative positions of the components in first-class versus second-class levers."
+  },
+  {
+    "id": "sat5_rw2_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Earthquakes start at a point called a \"focus\" and spread out from there as seismic waves.\n• The two types of seismic waves that travel beneath Earth's surface are primary waves (P waves) and secondary waves (S waves).\n• P waves travel more quickly beneath Earth's surface than do S waves.\n• P waves compress and expand the ground, causing it to move backward and forward.\n• S waves cause the ground to move from side to side.",
+    "question": "The student wants to emphasize a similarity between P waves and S waves. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "P waves and S waves both travel beneath Earth's surface, causing the ground to move.",
+      "B": "P waves travel away from an earthquake's starting point at a higher rate of speed than do S waves.",
+      "C": "Spreading out from the focus of an earthquake, P waves move the ground backward and forward.",
+      "D": "Although P waves and S waves start at the same point, they behave very differently."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it specifically highlights a commonality (similarity): both types of waves travel beneath the surface and cause ground motion."
+  }
+]

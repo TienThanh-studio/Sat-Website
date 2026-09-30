@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat6_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Though not closely related, the hedgehog tenrecs of Madagascar share basic ______ true hedgehogs, including protective spines, pointed snouts, and small body size—traits the two groups of mammals independently developed in response to equivalent roles in their respective habitats.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "examples of",
+      "B": "concerns about",
+      "C": "indications of",
+      "D": "similarities with"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because in context, sharing 'similarities with' means having resemblances to. The text explains that hedgehog tenrecs independently developed physical traits resembling those of true hedgehogs due to similar ecological roles."
+  },
+  {
+    "id": "sat6_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "In editor Lisa Yaszek's introduction to her anthology The Future Is Female! More Classic Science Fiction Stories by Women, Yaszek identifies an increasing sense of ______ feminist mode of writing in the 1970s, in contrast to many woman-authored science fiction stories of the 1920s to 1960s whose politics were less deliberately signaled.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "a prudently",
+      "B": "an overtly",
+      "C": "a cordially",
+      "D": "an inadvertently"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'overtly' means openly or without concealment, providing a sharp contrast to the earlier stories whose politics were 'less deliberately signaled'."
+  },
+  {
+    "id": "sat6_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "______ the long-standing trend of overemphasizing teenagers and young adults in research on social media use, scholars have recently begun to expand their focus to include the fastest-growing cohort of social media users: senior citizens.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "Exacerbating",
+      "B": "Redressing",
+      "C": "Epitomizing",
+      "D": "Precluding"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'redressing' means remedying or setting right an imbalance. By expanding research to senior citizens, scholars are correcting the previous overemphasis on younger demographics."
+  },
+  {
+    "id": "sat6_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from James Baldwin's 1956 novel Giovanni's Room. The narrator is riding in a taxi down a street lined with food vendors and shoppers in Paris, France.\n\nThe multitude of Paris seems to be dressed in blue every day but Sunday, when, for the most part, they put on an unbelievably festive black. Here they were now, in blue, disputing, every inch, our passage, with their wagons, handtrucks, their bursting baskets carried at an angle steeply self-confident on the back.\n\n©1956 by James Baldwin",
+    "question": "As used in the text, what does the word \"disputing\" most nearly mean?",
+    "isGridIn": false,
+    "options": {
+      "A": "Arguing about",
+      "B": "Disapproving of",
+      "C": "Asserting possession of",
+      "D": "Providing resistance to"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because as used in the passage, 'disputing' means providing resistance to or impeding progress as the crowded street vendors and shoppers contest every inch of the taxi's path."
+  },
+  {
+    "id": "sat6_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "While recent scholarship has undermined claims that the works of twelfth-century Islamic philosopher Ibn Rushd were ______ other Muslim philosophers of his time, it is indisputable that his location in the Muslim-ruled area of what is now Spain meant that his works were primarily available thousands of miles west of the era's center of Islamic thought.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "controversial among",
+      "B": "antagonistic toward",
+      "C": "imitated by",
+      "D": "inconsequential to"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'inconsequential to' means having no importance or influence. Recent scholarship has undermined the idea that his geographical distance made his writings unimportant to contemporary thinkers."
+  },
+  {
+    "id": "sat6_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "On painter William H. Johnson's return to the United States in 1938 after a decade in Europe, his style underwent an abrupt transformation. Turning away from landscapes painted in an expressionist style—a style that often involves using fluid, distorted shapes and thick, textured brushstrokes to express the artist's subjective experience of reality—Johnson began painting portraits of Black Americans in a bold new way. Evocative of African sculpture and American and Scandinavian folk art, these portraits feature flat, deliberately oversimplified figures in a vibrant but limited color palette.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It elaborates on the previous sentence's statement about a transitional moment in Johnson's artistic career.",
+      "B": "It provides information about Johnson's travels in support of a claim about his artistic influences, which is advanced in the following sentence.",
+      "C": "It recounts a moment in Johnson's personal life that enabled the success of his subsequent career, which is summarized in the following sentence.",
+      "D": "It presents evidence that calls into question the previous sentence's characterization of Johnson's artistic development."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the underlined sentence provides detailed elaboration explaining how Johnson transitioned from his European expressionist landscapes to his new portrait style."
+  },
+  {
+    "id": "sat6_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "When classical pianist Martha Argerich performs, it appears as if the music is coming to her spontaneously. She's highly skilled technically, but because of how freely she plays and her willingness to take risks, she seems relaxed and natural. Her apparent ease, however, is due to a tremendous amount of preparation. Despite Argerich's experience and virtuosity, she never takes for granted that she knows a piece of music. Instead, she approaches the music as if encountering it for the first time and tries to understand it anew.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To provide details about how Argerich identifies which pieces of music she will perform",
+      "B": "To assert that Argerich's performances look effortless because of how she prepares for them",
+      "C": "To discuss the kinds of music Argerich feels most comfortable encountering for the first time",
+      "D": "To describe the unique way that Argerich approaches music she hasn't performed before"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text asserts that Argerich's seemingly effortless and spontaneous stage presence is actually the product of rigorous, meticulous preparation."
+  },
+  {
+    "id": "sat6_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "The following text is adapted from Herman Melville's 1855 novel Israel Potter. Israel is a young man wandering through New England during the late eighteenth century.\n\nHe hired himself out for three months; at the end of that time to receive for his wages two hundred acres of land lying in New Hampshire. [...] His employer proving false to the contract in the matter of the land, and there being no law in the country to force him to fulfil it, Israel—who, however brave-hearted, and even much of a dare-devil upon a pinch, seems nevertheless to have evinced, throughout many parts of his career, a singular patience and mildness—was obliged to look round for other means of livelihood than clearing out a farm for himself in the wilderness.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It implies that Israel treasures a particular characteristic of his personality when that characteristic should usually be regarded as a flaw.",
+      "B": "It suggests that if not for a certain aspect of his character, Israel might not have been as easily thwarted in his ambition to establish a farm.",
+      "C": "It shows why Israel would not have been able to undertake the enormous amount of labor necessary to run a farm even if he had owned the necessary property.",
+      "D": "It explains why, when the situation requires it, Israel is able to undertake courageous acts that others would generally avoid."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because noting Israel's 'singular patience and mildness' explains why he meekly accepted being cheated out of his land rather than forcefully contesting his dishonest employer."
+  },
+  {
+    "id": "sat6_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Text 1\nIn 1954 George Balanchine choreographed a production of The Nutcracker, a ballet by Pyotr Ilyich Tchaikovsky. It has since become a tradition for hundreds of dance companies in North America to stage The Nutcracker each year. But the show is stuck in the past, with an old-fashioned story and references, so it should no longer be produced. Ballet needs to create new traditions if it wants to stay relevant to contemporary audiences.\n\nText 2\nThe Nutcracker is outdated, but it should be kept because it's a holiday favorite and provides substantial income for some dance companies. Although it can be behind the times, there are creative ways to update the show. For example, Debbie Allen successfully modernized the story. Her show Hot Chocolate Nutcracker combines ballet, tap, hip-hop, and other styles, and it has been gaining in popularity since it opened in 2009.",
+    "question": "Based on the texts, how would the author of Text 2 most likely respond to the underlined claim in Text 1?",
+    "isGridIn": false,
+    "options": {
+      "A": "By questioning the idea that the story of The Nutcracker is stuck in the past and by rejecting the suggestion that contemporary audiences would enjoy an updated version",
+      "B": "By agreeing that contemporary audiences have largely stopped going to see performances of The Nutcracker because it's so old-fashioned",
+      "C": "By pointing out that most dance companies could increase their incomes by offering modernized versions of The Nutcracker",
+      "D": "By suggesting that dance companies should consider offering revised versions of The Nutcracker instead of completely rejecting the show"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the author of Text 2 argues that rather than discontinuing the ballet altogether, companies should modernize and adapt it, as Debbie Allen did with her production."
+  },
+  {
+    "id": "sat6_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "To understand how Paleolithic artists navigated dark caves, archaeologist Mª Ángeles Medina-Alcaide and her team tested different lighting methods in a cave in Spain using replicas of artifacts found in European caves with art. They used three different Paleolithic light sources—torches, animal-fat lamps, and fireplaces—determining that each likely had a specific purpose. For instance, the team learned that the animal-fat lamps were less useful than torches while walking because the lamps didn't illuminate the cave floor.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Medina-Alcaide and her team's study demonstrated that fireplaces were essential to the creators of Paleolithic cave art.",
+      "B": "Medina-Alcaide and her team discovered that Paleolithic cave artists in Spain used animal-fat lamps more often than they used torches.",
+      "C": "Medina-Alcaide and her team were reluctant to draw many conclusions from their study because of the difficulty they had replicating light sources based on known artifacts.",
+      "D": "Medina-Alcaide and her team tested Paleolithic light sources and learned some details about how Paleolithic artists traveled within dark caves."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it encapsulates the central focus of the passage: testing simulated Paleolithic lighting tools to deduce how prehistoric artists traveled inside caves."
+  },
+  {
+    "id": "sat6_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Annual Car Production in the United States, 1910–1925\nYear | Number of cars produced | Number of companies producing cars\n1910 | 123,990 | 320\n1915 | 548,139 | 224\n1920 | 1,651,625 | 197\n1925 | 3,185,881 | 80\n\nA student is using the table as part of a social studies class presentation on the US auto industry in the early twentieth century. The student notes that, according to the table, from 1910 to 1925 ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "the number of cars produced increased but the number of companies producing cars decreased.",
+      "B": "both the number of cars produced and the number of companies producing cars remained unchanged.",
+      "C": "the number of cars produced decreased but the number of companies producing cars remained unchanged.",
+      "D": "both the number of cars produced and the number of companies producing cars increased."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the table shows annual car output steadily climbing from 123,990 to 3,185,881 while the number of manufacturing companies fell from 320 to 80."
+  },
+  {
+    "id": "sat6_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "External shopping cues are a type of marketing that uses obvious messaging—a display featuring a new product, for example, or a \"buy one, get one free\" offer—to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.",
+    "question": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"I needed to buy some cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.\"",
+      "B": "\"I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store, even though I looked all over for them.\"",
+      "C": "\"The store sent me a coupon for a new brand of soup, so I came here to find out what kinds of soup that brand offers. I decided to buy a few cans because I had the coupon.\"",
+      "D": "\"This store is larger than one that's closer to where I live, and it carries more products. I came here to buy some things that the other store doesn't always have.\""
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because searching for displaced cleaning supplies led the shopper to discover and spontaneously purchase an unplanned item (a notebook), directly verifying the researchers' thesis."
+  },
+  {
+    "id": "sat6_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The 2021 exhibition This Is the Day at Arkansas's Crystal Bridges Museum of American Art featured works dealing with expressions of faith and spirituality in the Black community. The museum's 2022 exhibition The Dirty South, meanwhile, focused on Black culture in the American South from 1920 to 2020, with a particular focus on the intersections between visual arts and music. Together, these exhibitions don't merely highlight the diversity of the Black experience in the US; they also showcase the diverse media through which artists have depicted and engaged with that experience.",
+    "question": "Which statement about the exhibitions, if true, would most directly support the underlined claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "Between them, This Is the Day and The Dirty South included drawings, paintings, photographs, sculptures, textiles, videos, costumes, and music.",
+      "B": "This Is the Day included works by fewer than two dozen artists, whereas The Dirty South included works by more than 80 artists.",
+      "C": "This Is the Day exclusively included works in the permanent collection of the museum, whereas The Dirty South included works from multiple sources outside the museum.",
+      "D": "Between them, This Is the Day and The Dirty South included works depicting more than 300 years of Black experience in the United States."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because listing an extensive variety of artistic formats (drawings, paintings, textiles, videos, costumes, and music) directly substantiates the claim about 'diverse media'."
+  },
+  {
+    "id": "sat6_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "To investigate potential cognitive benefits of taking leave from work, psychologist Jan Packer and colleagues conducted a six-month study of Australian university staff members who took no leave from work during the study, took 2–4 days of leave, or took 1–5 weeks of leave. Tests of attentiveness were administered to participants three times during the study: at random for the no-leave staff, and for the rest, one week before their leave, one week following their return to work, and one week after the second test administration. After analyzing the results, the researchers concluded that longer leave times might not confer a greater cognitive benefit than shorter leave times do.",
+    "question": "Which choice best describes data from the graph that support the researchers' conclusion?",
+    "isGridIn": false,
+    "options": {
+      "A": "In the second test administration, participants who took 2–4 days of leave had higher average attentiveness scores than did those who took no leave, but in the third test administration, those who took no leave had higher average scores than those who took 1–5 weeks of leave.",
+      "B": "In the first test administration, participants who took 2–4 days of leave had lower average attentiveness scores than did those who took 1–5 weeks of leave and those who took no leave.",
+      "C": "In both the second and third test administrations, participants who took 2–4 days of leave had higher average attentiveness scores than did participants who took 1–5 weeks of leave.",
+      "D": "In the second and third test administrations, participants who took 2–4 days of leave had higher average attentiveness scores than did those who took no leave."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because showing that employees taking shorter leaves (2–4 days) outperformed those on longer leaves (1–5 weeks) on subsequent evaluations supports the conclusion that longer vacations do not provide greater cognitive advantages."
+  },
+  {
+    "id": "sat6_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "It may seem that the optimal strategy for an animal pursuing prey or escaping predators is to move at maximal speed, but the energy expense of exploiting full speed capacity can disfavor such a strategy even in escape contexts, as evidenced by the fact that ______",
+    "question": "Which choice most effectively uses data from the graph to complete the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "most lizard species use about the same percentage of their maximal speed when escaping predation as they do when pursuing prey.",
+      "B": "multiple lizard species move at an average of less than 90% of their maximal speed while escaping predation.",
+      "C": "more lizard species use, on average, 90%–100% of their maximal speed while escaping predation than use any other percentage of their maximal speed.",
+      "D": "at least 4 lizard species use, on average, less than 100% of their maximal speed while pursuing prey."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because pointing out that multiple species average below 90% velocity during predator evasion directly verifies that animals often forgo maximal sprint capacity even when escaping danger."
+  },
+  {
+    "id": "sat6_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Under normal atmospheric pressure at Earth's surface, water molecules form a tetrahedral network stabilized by hydrogen bonds between adjacent molecules. Extreme high pressure, such as can be found in deep ocean waters, destabilizes these bonds and compresses water's structure, allowing water molecules within organisms to permeate proteins and impede crucial biological functions; yet deep-sea organisms known as piezophiles have adapted to extreme pressure. Studies have found a positive correlation between the depths that various piezophiles inhabit and concentrations of a compound called trimethylamine N-oxide (TMAO) in their muscle tissues, which has led a team of researchers to hypothesize that TMAO reduces water's compressibility.",
+    "question": "Which finding, if true, would most directly support the researchers' hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "Water molecules are found to be impervious to TMAO even when the water molecules' tetrahedral configuration has been distorted by high pressure.",
+      "B": "Examination of TMAO's molecular structure shows that TMAO molecules retain their shape even as pressure increases.",
+      "C": "A positive correlation is found between concentrations of TMAO and the rate at which water's molecular structure compresses as pressure increases.",
+      "D": "Analysis of water's molecular structure under high pressure reveals that hydrogen bonds are more stable when TMAO is present than when it is not."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because demonstrating that TMAO stabilizes hydrogen bonds under high pressure directly explains how the compound preserves water's uncompressed tetrahedral network."
+  },
+  {
+    "id": "sat6_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The Cretaceous pterosaur Tupandactylus navigans is known for having an anomalously oversized head crest. Until an almost complete fossil skeleton was found in Brazil, paleontologists had been able to study only skull specimens from T. navigans, though it was presumed that, like other pterosaurs, the species's primary form of locomotion was powered flight. Examining the fuller skeleton in 2016, Victor Beccari and his team determined that T. navigans had long hind legs, short wings, and an unusually long neck—characteristics that, combined with the creature's large-crested head, would have made sustained flight difficult and walking upright relatively comfortable. Based on these findings the team suggests that T. navigans likely ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "flew for longer distances than did other pterosaur species that had oversized head crests.",
+      "B": "had longer wings than other pterosaur species considered to have been comfortable walking.",
+      "C": "had a smaller head than researchers expected based on the earlier T. navigans skull specimens.",
+      "D": "flew for shorter distances and spent more time walking than researchers previously thought."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because anatomical evidence indicating poor flight endurance and adapted terrestrial morphology leads to the conclusion that the pterosaur walked more and flew less than previously assumed."
+  },
+  {
+    "id": "sat6_rw1_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Consumer psychologists have theorized that the likelihood that people who identify as ethical consumers—meaning that they strive to purchase goods and services with positive or neutral social and ecological effects—will purchase a given product positively correlates with their perception of that product's effects. In a recent study of the attitudes of self-identified ethical consumers toward purchasing a specific mobile phone coming to market, researchers found that, on average, study participants in their twenties rated the phone's social and ecological effects much less positively than did participants in other age groups. All other things being equal, if consumer psychologists' theory is correct, this finding suggests that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "the phone is less appealing to ethical consumers in their twenties than other similar phones on the market are.",
+      "B": "ethical consumers in their twenties are less likely to purchase the phone than ethical consumers in other age groups are.",
+      "C": "there is not a meaningful difference in the likelihood of purchasing the phone among ethical consumers in different age groups.",
+      "D": "ethical consumers in their twenties are more likely than ethical consumers in other age groups to consider a phone's social and ecological effects when deciding whether to purchase that phone."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because if purchase likelihood is positively correlated with ethical perception, consumers in their twenties (who rated the phone lowest) must be less likely to buy it than older age cohorts."
+  },
+  {
+    "id": "sat6_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "The Boston Saloon was one of the most popular African American-owned establishments in nineteenth-century Nevada. ______ by businessman William A.G. Brown, the saloon was known to offer elegant accommodations and an inclusive environment.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Created",
+      "B": "Creates",
+      "C": "Creating",
+      "D": "Create"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the past participle 'Created' properly forms an introductory modifying participial phrase describing 'the saloon'."
+  },
+  {
+    "id": "sat6_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Louise Bennett (1919–2006), also known as \"Miss Lou,\" was an influential Jamaican poet and folklorist. Her innovative poems ______ the use of Jamaican Creole (a spoken language) in literature.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "popularized;",
+      "B": "popularized,",
+      "C": "popularized",
+      "D": "popularized:"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because no punctuation should intervene between the transitive verb 'popularized' and its direct object 'the use of Jamaican Creole'."
+  },
+  {
+    "id": "sat6_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "\"He was just the man for such a place, and it was just the place for such a man.\" This line is from Frederick Douglass's autobiography Narrative of the Life of Frederick Douglass (1845). It's an example of antimetabole, a writing technique that ______ emphasis by repeating a statement in a reversed order.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "create",
+      "B": "are creating",
+      "C": "have created",
+      "D": "creates"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the singular antecedent 'a writing technique' requires the singular present verb 'creates'."
+  },
+  {
+    "id": "sat6_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Researchers Amit Kumar and Nicholas Epley investigated how ______ In a series of experiments conducted in 2022, they found that people performing small acts of kindness underestimated the positive effect their actions had on others.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "do people perceive acts of kindness.",
+      "B": "do people perceive acts of kindness?",
+      "C": "people perceive acts of kindness?",
+      "D": "people perceive acts of kindness."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the sentence ends with an indirect embedded question, requiring standard declarative word order ('people perceive...') and a final period."
+  },
+  {
+    "id": "sat6_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In a painting titled \"The Milkmaid\" by Johannes Vermeer, the artist prominently features a bread basket, milk pitcher, and bowl. Such quotidian objects, depicted in exquisite detail by Vermeer, a painter celebrated for his naturalism, ______ the daily minutiae of a seventeenth-century Dutch household.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "was revealing",
+      "B": "has revealed",
+      "C": "reveals",
+      "D": "reveal"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the plural subject 'Such quotidian objects' agrees in number with the plural verb 'reveal'."
+  },
+  {
+    "id": "sat6_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Jamaican British artist Willard Wigan is known for his remarkable ______ so small that they are best viewed through a microscope, Wigan's sculptures are made from tiny natural materials, such as spiderweb strands.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "microsculptures creations",
+      "B": "microsculptures, creations",
+      "C": "microsculptures. Creations",
+      "D": "microsculptures and creations"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because a period is needed to end the first complete sentence ('...remarkable microsculptures.') before beginning the next independent sentence ('Creations so small...')."
+  },
+  {
+    "id": "sat6_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Consider the mechanics of the pinhole camera: light passes through a small hole, resulting in a focused projected image. A ray diagram reveals how this ______ the hole's small size restricts light to a single ray, all light passing through the hole can only arrive at a single destination, eliminating diffraction and ensuring a clear image.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "works because",
+      "B": "works. Because",
+      "C": "works, it's because",
+      "D": "works: it's because"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because a period properly terminates the complete main clause 'A ray diagram reveals how this works.' before introducing the subordinate clause starting with 'Because'."
+  },
+  {
+    "id": "sat6_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In the search for extraterrestrial life, astrobiologists Stuart Bartlett and Michael L. Wong propose that scientists avoid using the term \"life.\" ______ researchers should use another word: \"lyfe.\" This new term, they argue, could be used to draw distinctions between the known characteristics of life on Earth and the potentially differing characteristics of lyfe on other planets.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Previously,",
+      "B": "Regardless,",
+      "C": "There,",
+      "D": "Instead,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Instead,' signals that adopting the alternative term 'lyfe' replaces the avoided traditional term 'life'."
+  },
+  {
+    "id": "sat6_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Before it unveiled a massive new gallery in 2009, the Art Institute of Chicago was only able to display about 5% of its art collection. ______ the museum is able to display close to 30% of its collection.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Additionally,",
+      "B": "For example,",
+      "C": "Nevertheless,",
+      "D": "Today,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Today,' establishes a chronological comparison contrasting the pre-2009 historical situation with the present-day capacity."
+  },
+  {
+    "id": "sat6_rw1_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Working together with the Navajo Nation Department of Water Resources, Dr. Lani Tsinnajinnie analyzed data about snowpack levels in the Chuska Mountains. She found that the snowpack (the amount of snow on the ground) was deepest in early March at lower elevations. ______ the snowpack was deepest in mid-March.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "in other words,",
+      "B": "for instance,",
+      "C": "At higher elevations, on the other hand,",
+      "D": "in summary,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'on the other hand' sets up an explicit contrast between observations at lower altitudes versus those at higher altitudes."
+  },
+  {
+    "id": "sat6_rw1_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "The Inca of South America used intricately knotted string devices called quipus to record countable information, like population data and payments. ______ they may have used quipus to record more complex information, like stories and myths, according to researchers.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "As a result,",
+      "B": "In other words,",
+      "C": "In addition,",
+      "D": "For example,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'In addition,' introduces a complementary, non-quantitative function of quipus beyond simple numerical accounting."
+  },
+  {
+    "id": "sat6_rw1_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "In hindsight, given the ideas about the natural world circulating among British scientists in the 1800s, the theory of natural selection was an obvious next step. It may not have been a coincidence, ______ that Charles Darwin and Alfred Wallace arrived at the concept independently. Indeed, contrary to the popular myth of the lone genius, theirs is not the first paradigm-shifting theory to have emerged from multiple scholars working in parallel.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "however,",
+      "B": "then,",
+      "C": "moreover,",
+      "D": "for example,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'then,' logically infers that simultaneous independent discovery was a natural consequence of the prevailing intellectual climate."
+  },
+  {
+    "id": "sat6_rw1_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• In the 1930s, the Imperial Sugar Cane Institute in India sought to limit the country's dependence on imported sugarcane.\n• The institute enlisted botanist Janaki Ammal to breed a local variety of sugarcane.\n• She crossbred the imported sugarcane species Saccharum officinarum with grasses native to India.\n• She succeeded in creating sugarcane hybrids well suited to India's climate.",
+    "question": "The student wants to emphasize Janaki Ammal's achievement. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "By crossbreeding the imported sugarcane species Saccharum officinarum with grasses native to India, Ammal succeeded in creating sugarcane hybrids well suited to India's climate.",
+      "B": "In the 1930s, the Imperial Sugar Cane Institute, which enlisted Ammal, sought to limit dependence on imported sugarcane.",
+      "C": "Ammal was enlisted by the Imperial Sugar Cane Institute at a time when a local variety of sugarcane needed to be produced.",
+      "D": "As part of efforts to breed a local variety of sugarcane, an imported sugarcane species called Saccharum officinarum was crossbred with grasses native to India."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it directly credits Ammal's breeding breakthrough and the practical success of her hybrid crop."
+  },
+  {
+    "id": "sat6_rw1_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Elizabeth Catlett's sculpture Recognition (1970) shows two African American figures with rounded, indistinct features.\n• The figures reach out to each other in a pose that symbolizes a close, supportive relationship.\n• Her sculpture Students Aspire (1978) shows two African American figures with sharply defined features.\n• The figures hold an equal sign above their heads with one hand and embrace each other with the other hand.\n• This pose symbolizes their support for each other in the pursuit of equality.",
+    "question": "The student wants to emphasize a similarity between the two sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Catlett's Students Aspire depicts two figures supporting each other in the pursuit of equality.",
+      "B": "Recognition and Students Aspire both show African American figures in poses that symbolize supportive relationships.",
+      "C": "Catlett completed Recognition in 1970 and Students Aspire in 1978.",
+      "D": "The figures in Recognition have features that are rounded and indistinct, while the figures in Students Aspire have sharply defined features."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it explicitly highlights a shared attribute: both sculptures feature figures in poses that symbolize supportive relationships."
+  },
+  {
+    "id": "sat6_rw1_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• The ancient Arab dhow was a sailing vessel distinguishable by its triangular sails and stitched hull construction.\n• Dhows were used primarily for trade along the coasts of Arab, South Asian, and East African countries.\n• Contemporary shipbuilders in Oman use a mix of modern and traditional materials to build replicas of ancient dhows.\n• Most of the materials used are traditional.\n• Replica hulls are stitched together using the same traditional coconut palm fiber rope used on the hulls of ancient dhows.",
+    "question": "The student wants to make a generalization about the materials used in dhow replicas. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "A traditional material that was used to stitch together the hulls of ancient dhows, coconut palm fiber rope is still used by shipbuilders.",
+      "B": "The ancient Arab dhow was a sailing vessel used primarily for trade and distinguishable by its triangular sails.",
+      "C": "Although most materials used in dhow replicas are traditional, some modern materials are used.",
+      "D": "Contemporary shipbuilders in Oman build replicas of the dhow, which was an ancient sailing vessel with a stitched hull construction."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it makes a broad, overarching generalization regarding the material composition used in constructing the replicas."
+  }
+]

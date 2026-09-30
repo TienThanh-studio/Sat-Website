@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat7_math2_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A total of 165 people contributed to a charity event as either a donor or a volunteer. 130 people contributed as a donor.",
+    "question": "How many people contributed as a volunteer?",
+    "isGridIn": false,
+    "options": {
+      "A": "35",
+      "B": "130",
+      "C": "165",
+      "D": "330"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Số người tham gia với vai trò tình nguyện viên là: $165 - 130 = 35$ người."
+  },
+  {
+    "id": "sat7_math2_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "There are 250 trees in a park. Of these trees, 6% are birch trees.",
+    "question": "How many birch trees are in the park?",
+    "isGridIn": false,
+    "options": {
+      "A": "6",
+      "B": "15",
+      "C": "75",
+      "D": "244"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Số cây bạch dương trong công viên là: $250 \\times \\frac{6}{100} = 15$ cây."
+  },
+  {
+    "id": "sat7_math2_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "The graph of the quadratic function $y = f(x)$ is shown in the $xy$-plane. The parabola opens upward and reaches its minimum point at $(0, 2)$.",
+    "question": "What is the vertex of the graph?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(0, -2)$",
+      "B": "$(0, -3)$",
+      "C": "$(0, 2)$",
+      "D": "$(0, 3)$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Đỉnh của parabol là điểm cực trị của hàm số bậc hai, trên đồ thị điểm thấp nhất có tọa độ là $(0, 2)$."
+  },
+  {
+    "id": "sat7_math2_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The number of raccoons in a 131-square-mile area is estimated to be 2,358.",
+    "question": "What is the estimated population density, in raccoons per square mile, of this area?",
+    "isGridIn": false,
+    "options": {
+      "A": "18",
+      "B": "131",
+      "C": "149",
+      "D": "2,376"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Mật độ dân số bằng số lượng cá thể chia cho diện tích: $\\frac{2,358}{131} = 18$ con gấu mèo/dặm vuông."
+  },
+  {
+    "id": "sat7_math2_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Consider the data set of three numbers: $$-11, -9, 26$$",
+    "question": "If a number from this data set is selected at random, what is the probability of selecting a positive number?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "$\\frac{1}{3}$",
+      "C": "$\\frac{2}{3}$",
+      "D": "1"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Trong 3 số chỉ có 1 số dương là 26. Xác suất chọn được số dương là $\\frac{1}{3}$."
+  },
+  {
+    "id": "sat7_math2_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f(x) = 45x + 600$ gives the monthly fee $f(x)$, in dollars, a facility charges to keep $x$ crates in storage.",
+    "question": "What is the monthly fee, in dollars, the facility charges to keep 50 crates in storage?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "2850",
+    "explanation": "Đáp án là 2850. Thay $x = 50$ vào hàm số: $f(50) = 45(50) + 600 = 2,250 + 600 = 2,850$ đô la."
+  },
+  {
+    "id": "sat7_math2_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "The function $f$ is defined by: $$f(x) = 5\\left(\\frac{1}{4} - x\\right)^2 + \\frac{11}{4}$$",
+    "question": "What is the value of $f\\left(\\frac{1}{4}\\right)$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "11/4",
+    "explanation": "Đáp án là 11/4 hoặc 2.75. Thay $x = \\frac{1}{4}$ vào hàm số: $f\\left(\\frac{1}{4}\\right) = 5\\left(\\frac{1}{4} - \\frac{1}{4}\\right)^2 + \\frac{11}{4} = 5(0)^2 + \\frac{11}{4} = \\frac{11}{4}$."
+  },
+  {
+    "id": "sat7_math2_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$8x = 6$$",
+    "question": "What is the value of $72x$?",
+    "isGridIn": false,
+    "options": {
+      "A": "3",
+      "B": "15",
+      "C": "54",
+      "D": "57"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Nhận thấy $72x = 9 \\times (8x)$. Nhân cả hai vế với 9: $72x = 9(6) = 54$."
+  },
+  {
+    "id": "sat7_math2_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the polynomial expression: $$23x^3 + 2x^2 + 9x$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$23x(x^2 + 2x + 9)$",
+      "B": "$9x(23x^3 + 2x^2 + 1)$",
+      "C": "$x(23x^2 + 2x + 9)$",
+      "D": "$34(x^3 + x^2 + x)$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Đặt nhân tử chung $x$ ra ngoài: $23x^3 + 2x^2 + 9x = x(23x^2 + 2x + 9)$."
+  },
+  {
+    "id": "sat7_math2_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the expression: $$(9x^3 + 5x + 7) + (6x^3 + 5x^2 - 5)$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$15x^6 + 5x^2 - 5x - 35$",
+      "B": "$15x^3 + 10x^2 + 2$",
+      "C": "$15x^6 + 5x^2 + 5x + 2$",
+      "D": "$15x^3 + 5x^2 + 5x + 2$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Cộng các hạng tử đồng dạng: $(9 + 6)x^3 + 5x^2 + 5x + (7 - 5) = 15x^3 + 5x^2 + 5x + 2$."
+  },
+  {
+    "id": "sat7_math2_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "At a state fair, attendees can win tokens that are worth a different number of points depending on the shape. One attendee won $S$ square tokens and $C$ circle tokens worth a total of 1,120 points. The equation $80S + 90C = 1,120$ represents this situation.",
+    "question": "How many more points is a circle token worth than a square token?",
+    "isGridIn": false,
+    "options": {
+      "A": "950",
+      "B": "90",
+      "C": "80",
+      "D": "10"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Mỗi token hình vuông trị giá 80 điểm, mỗi token hình tròn trị giá 90 điểm. Token hình tròn có giá trị hơn token hình vuông là $90 - 80 = 10$ điểm."
+  },
+  {
+    "id": "sat7_math2_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "In the given scatterplot, a line of best fit for the data is shown. The line passes approximately through the points $(1, 3.3)$ and $(7, 14.5)$.",
+    "question": "Which of the following is closest to the slope of the line of best fit shown?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "$\\frac{1}{2}$",
+      "C": "1",
+      "D": "2"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Hệ số góc xấp xỉ bằng: $m \\approx \\frac{14.5 - 3.3}{7 - 1} = \\frac{11.2}{6} \\approx 1.87$. Giá trị gần nhất trong các lựa chọn là 2."
+  },
+  {
+    "id": "sat7_math2_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "A circle has a radius of 2.1 inches. The area of the circle is $b\\pi$ square inches, where $b$ is a constant.",
+    "question": "What is the value of $b$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "4.41",
+    "explanation": "Đáp án là 4.41. Diện tích hình tròn là $A = \\pi r^2 = \\pi (2.1)^2 = 4.41\\pi$. Do đó $b = 4.41$."
+  },
+  {
+    "id": "sat7_math2_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "In triangle $XYZ$, angle $Y$ is a right angle, point $P$ lies on $\\overline{XZ}$ and point $Q$ lies on $\\overline{YZ}$ such that $\\overline{PQ}$ is parallel to $\\overline{XY}$. The measure of angle $\\angle XZY$ is $63^\\circ$.",
+    "question": "What is the measure, in degrees, of angle $\\angle XPQ$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "153",
+    "explanation": "Đáp án là 153. Vì $PQ \\parallel XY$, tam giác $PQZ$ vuông tại $Q$. Trong tam giác vuông $PQZ$, góc $\\angle ZPQ = 90^\\circ - 63^\\circ = 27^\\circ$. Vì điểm $P$ nằm trên đoạn thẳng $XZ$, hai góc $\\angle XPQ$ và $\\angle ZPQ$ là hai góc kề bù, do đó $\\angle XPQ = 180^\\circ - 27^\\circ = 153^\\circ$."
+  },
+  {
+    "id": "sat7_math2_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "An investment account was opened with an initial value of $890. The value of the account doubled every 10 years.",
+    "question": "Which equation represents the value of the account $M(t)$, in dollars, $t$ years after the account was opened?",
+    "isGridIn": false,
+    "options": {
+      "A": "$M(t) = 890\\left(\\frac{1}{2}\\right)^{t/10}$",
+      "B": "$M(t) = 890\\left(\\frac{1}{10}\\right)^{t/2}$",
+      "C": "$M(t) = 890(2)^{t/10}$",
+      "D": "$M(t) = 890(10)^{t/2}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Số tiền ban đầu là 890 đô la, nhân đôi (cơ số 2) theo chu kỳ mỗi 10 năm ($t/10$ lần nhân đôi), cho phương trình: $M(t) = 890(2)^{t/10}$."
+  },
+  {
+    "id": "sat7_math2_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the system of inequalities:\n$$y < x$$\n$$x < 22$$",
+    "question": "For which of the following tables are all the values of $x$ and their corresponding values of $y$ solutions to the given system of inequalities?",
+    "isGridIn": false,
+    "options": {
+      "A": "x: 19, y: 18; x: 20, y: 19; x: 21, y: 20",
+      "B": "x: 19, y: 20; x: 20, y: 21; x: 21, y: 22",
+      "C": "x: 23, y: 22; x: 24, y: 23; x: 25, y: 24",
+      "D": "x: 23, y: 24; x: 24, y: 25; x: 25, y: 26"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Ở bảng A: các giá trị $x = 19, 20, 21$ đều nhỏ hơn $22$ và các giá trị $y$ tương ứng đều nhỏ hơn $x$ ($18 < 19$, $19 < 20$, $20 < 21$)."
+  },
+  {
+    "id": "sat7_math2_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the expression, where $h > 0$ and $q > 0$: $$\\frac{h^{15}q^7}{h^5q^{21}}$$ ",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{h^{10}}{q^{14}}$",
+      "B": "$\\frac{h^3}{q^3}$",
+      "C": "$h^{10}q^{14}$",
+      "D": "$h^3q^3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Áp dụng quy tắc chia lũy thừa cùng cơ số: $\\frac{h^{15}}{h^5} = h^{15 - 5} = h^{10}$, và $\\frac{q^7}{q^{21}} = \\frac{1}{q^{21 - 7}} = \\frac{1}{q^{14}}$. Kết quả là $\\frac{h^{10}}{q^{14}}$."
+  },
+  {
+    "id": "sat7_math2_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of equations:\n$$3y = 4x + 17$$\n$$-3y = 9x - 23$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $39x$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-18",
+      "B": "-6",
+      "C": "6",
+      "D": "18"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Cộng hai phương trình: $0 = 13x - 6 \\iff 13x = 6$. Nhân cả hai vế với 3: $39x = 3(6) = 18$."
+  },
+  {
+    "id": "sat7_math2_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $h(t) = -16t^2 + b$ estimates an object's height, in feet, above the ground $t$ seconds after being dropped. The function estimates that the object is 3,364 feet above the ground when dropped at $t = 0$.",
+    "question": "Approximately how many seconds after being dropped does the function estimate the object will hit the ground?",
+    "isGridIn": false,
+    "options": {
+      "A": "7.25",
+      "B": "14.50",
+      "C": "105.13",
+      "D": "210.25"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Tại $t = 0$, $h(0) = 3,364 \\implies b = 3,364$. Vật chạm đất khi $h(t) = 0 \\iff -16t^2 + 3,364 = 0 \\iff 16t^2 = 3,364 \\iff t^2 = 210.25 \\iff t = 14.50$ giây."
+  },
+  {
+    "id": "sat7_math2_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the quadratic equation: $$2x^2 - 8x - 7 = 0$$\nOne solution to the given equation can be written as $\\frac{8 - \\sqrt{k}}{4}$, where $k$ is a constant.",
+    "question": "What is the value of $k$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "120",
+    "explanation": "Đáp án là 120. Dùng công thức nghiệm bậc hai: $x = \\frac{-(-8) \\pm \\sqrt{(-8)^2 - 4(2)(-7)}}{2(2)} = \\frac{8 \\pm \\sqrt{64 + 56}}{4} = \\frac{8 \\pm \\sqrt{120}}{4}$. So sánh với dạng đề bài cho ta được $k = 120$."
+  },
+  {
+    "id": "sat7_math2_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "A line intersects two parallel lines, forming four acute angles and four obtuse angles. The measure of one of the acute angles is $(9x - 560)^\\circ$. The sum of the measures of one of the acute angles and three of the obtuse angles is $(-18x + w)^\\circ$.",
+    "question": "What is the value of $w$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "1660",
+    "explanation": "Đáp án là 1660. Góc tù kề bù với góc nhọn nên có số đo là $180 - (9x - 560) = 740 - 9x$. Tổng của 1 góc nhọn và 3 góc tù là: $(9x - 560) + 3(740 - 9x) = 9x - 560 + 2,220 - 27x = -18x + 1,660$. So sánh với $(-18x + w)$ suy ra $w = 1,660$."
+  },
+  {
+    "id": "sat7_math2_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "For the linear function $f$, the table shows three values of $x$ and their corresponding values of $f(x)$: $(-4, 0)$, $\\left(-\\frac{19}{5}, 1\\right)$, $\\left(-\\frac{18}{5}, 2\\right)$. The function $h$ is defined by $h(x) = f(x) - 13$.",
+    "question": "Which equation defines $h$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$h(x) = 5x - 4$",
+      "B": "$h(x) = 5x + 7$",
+      "C": "$h(x) = 5x + 9$",
+      "D": "$h(x) = 5x + 20$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hệ số góc của $f$ là $m = \\frac{1 - 0}{-\\frac{19}{5} - (-4)} = \\frac{1}{\\frac{1}{5}} = 5$. Phương trình $f(x) = 5(x + 4) = 5x + 20$. Khi đó $h(x) = f(x) - 13 = (5x + 20) - 13 = 5x + 7$."
+  },
+  {
+    "id": "sat7_math2_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "The linear function $g$ is defined by $g(x) = b - 15x$, where $b$ is a constant. It is given that $g(c + 7) = \\frac{c}{4}$, where $c$ is a constant.",
+    "question": "Which of the following expressions represents the value of $b$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{15c}{4}$",
+      "B": "$\\frac{19c}{4} + 7$",
+      "C": "$\\frac{61c}{4} + 105$",
+      "D": "$15c + 105$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Thay $x = c + 7$: $g(c + 7) = b - 15(c + 7) = b - 15c - 105$. Theo đề bài: $b - 15c - 105 = \\frac{c}{4} \\iff b = 15c + \\frac{c}{4} + 105 = \\frac{61c}{4} + 105$."
+  },
+  {
+    "id": "sat7_math2_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In triangle $XYZ$, angle $Z$ is a right angle and the length of $\\overline{YZ}$ is 24 units. If $\\tan X = \\frac{12}{35}$.",
+    "question": "What is the perimeter, in units, of triangle $XYZ$?",
+    "isGridIn": false,
+    "options": {
+      "A": "188",
+      "B": "168",
+      "C": "84",
+      "D": "71"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Trong tam giác vuông tại $Z$: $\\tan X = \\frac{YZ}{XZ} = \\frac{12}{35} \\iff \\frac{24}{XZ} = \\frac{12}{35} \\iff XZ = 70$. Cạnh huyền $XY = \\sqrt{24^2 + 70^2} = \\sqrt{576 + 4,900} = \\sqrt{5,476} = 74$. Chu vi tam giác là: $24 + 70 + 74 = 168$."
+  },
+  {
+    "id": "sat7_math2_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In the $xy$-plane, the graph of the equation is a circle: $$x^2 + 14x + y^2 = 6y + 109$$",
+    "question": "What is the length of the circle's radius?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\sqrt{109}$",
+      "B": "$\\sqrt{149}$",
+      "C": "$\\sqrt{167}$",
+      "D": "$\\sqrt{341}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Đưa về phương trình chính tắc bằng cách thêm bớt bình phương: $(x^2 + 14x + 49) + (y^2 - 6y + 9) = 109 + 49 + 9 \\iff (x + 7)^2 + (y - 3)^2 = 167$. Bán kính $r = \\sqrt{167}$."
+  },
+  {
+    "id": "sat7_math2_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "hard",
+    "prompt": "The speed of a vehicle is increasing at a rate of 7.3 meters per second squared. (Use 1 mile = 1,609 meters).",
+    "question": "What is this rate, in miles per minute squared, rounded to the nearest tenth?",
+    "isGridIn": false,
+    "options": {
+      "A": "0.3",
+      "B": "16.3",
+      "C": "195.8",
+      "D": "220.4"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đổi đơn vị: $1\\text{ m} = \\frac{1}{1,609}\\text{ mile}$ và $1\\text{ s}^2 = \\frac{1}{60^2}\\text{ min}^2 = \\frac{1}{3,600}\\text{ min}^2$. Tỷ lệ gia tốc là: $7.3 \\times \\frac{3,600}{1,609} \\approx 16.33 \\approx 16.3\\text{ miles/min}^2$."
+  },
+  {
+    "id": "sat7_math2_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the system of equations:\n$$y = -2.5$$\n$$y = x^2 + 8x + k$$\nIn the given system of equations, $k$ is a positive integer constant. The system has no real solutions.",
+    "question": "What is the least possible value of $k$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "14",
+    "explanation": "Đáp án là 14. Phương trình hoành độ giao điểm: $x^2 + 8x + k = -2.5 \\iff x^2 + 8x + (k + 2.5) = 0$. Hệ vô nghiệm khi $\\Delta' < 0 \\iff 4^2 - 1(k + 2.5) < 0 \\iff 16 - k - 2.5 < 0 \\iff 13.5 < k$. Vì $k$ là số nguyên dương nhỏ nhất nên $k = 14$."
+  }
+]

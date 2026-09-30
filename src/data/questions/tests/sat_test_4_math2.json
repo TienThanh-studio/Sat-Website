@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat4_math2_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The line graph shows the estimated number of chipmunks in a state park on April 1 of each year from 1989 to 1999.",
+    "question": "Based on the line graph, in which year was the estimated number of chipmunks in the state park the greatest?",
+    "isGridIn": false,
+    "options": {
+      "A": "1989",
+      "B": "1994",
+      "C": "1995",
+      "D": "1998"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Số lượng sóc chuột ước tính được thể hiện trên trục tung. Điểm cao nhất trên biểu đồ đường đạt được tại mốc năm 1994."
+  },
+  {
+    "id": "sat4_math2_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A fish swam a distance of 5,104 yards. (1 mile = 1,760 yards)",
+    "question": "How far did the fish swim, in miles?",
+    "isGridIn": false,
+    "options": {
+      "A": "0.3",
+      "B": "2.9",
+      "C": "3,344",
+      "D": "6,864"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đổi từ yards sang miles: $\\frac{5,104}{1,760} = 2.9$ miles."
+  },
+  {
+    "id": "sat4_math2_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the expression: $$12x^3 - 5x^3$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$7x^6$",
+      "B": "$17x^3$",
+      "C": "$7x^3$",
+      "D": "$17x^6$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Trừ hai đơn thức đồng dạng: $12x^3 - 5x^3 = (12 - 5)x^3 = 7x^3$."
+  },
+  {
+    "id": "sat4_math2_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the system of equations:\n$$x + y = 18$$\n$$5y = x$$",
+    "question": "What is the solution $(x, y)$ to the given system of equations?",
+    "isGridIn": false,
+    "options": {
+      "A": "(15, 3)",
+      "B": "(16, 2)",
+      "C": "(17, 1)",
+      "D": "(18, 0)"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Thay $x = 5y$ vào phương trình thứ nhất: $5y + y = 18 \\iff 6y = 18 \\iff y = 3$. Từ đó suy ra $x = 5(3) = 15$. Nghiệm của hệ là $(15, 3)$."
+  },
+  {
+    "id": "sat4_math2_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Consider the point $(8, 2)$ in the $xy$-plane.",
+    "question": "The point $(8, 2)$ is a solution to which of the following systems of inequalities?",
+    "isGridIn": false,
+    "options": {
+      "A": "$x > 0$ and $y > 0$",
+      "B": "$x > 0$ and $y < 0$",
+      "C": "$x < 0$ and $y > 0$",
+      "D": "$x < 0$ and $y < 0$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Điểm $(8, 2)$ có hoành độ $x = 8 > 0$ và tung độ $y = 2 > 0$, do đó nó thuộc góc phần tư thứ nhất, thỏa mãn hệ $x > 0$ và $y > 0$."
+  },
+  {
+    "id": "sat4_math2_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the absolute value equation: $$|x - 5| = 10$$",
+    "question": "What is one possible solution to the given equation?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "15",
+    "explanation": "Đáp án là 15 hoặc -5. Ta có $x - 5 = 10 \\implies x = 15$, hoặc $x - 5 = -10 \\implies x = -5$."
+  },
+  {
+    "id": "sat4_math2_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f(x) = 7x + 1$ gives the total number of people on a company retreat with $x$ managers.",
+    "question": "What is the total number of people on a company retreat with 7 managers?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "50",
+    "explanation": "Đáp án là 50. Thay $x = 7$ vào hàm số: $f(7) = 7(7) + 1 = 49 + 1 = 50$ người."
+  },
+  {
+    "id": "sat4_math2_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the function $h(x) = x^2 - 3$.",
+    "question": "Which table gives three values of $x$ and their corresponding values of $h(x)$ for the given function $h$?",
+    "isGridIn": false,
+    "options": {
+      "A": "x: 1, 2, 3; h(x): 4, 5, 6",
+      "B": "x: 1, 2, 3; h(x): -2, 1, 6",
+      "C": "x: 1, 2, 3; h(x): -1, 1, 3",
+      "D": "x: 1, 2, 3; h(x): -2, 1, 3"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Tính các giá trị: $h(1) = 1^2 - 3 = -2$; $h(2) = 2^2 - 3 = 1$; $h(3) = 3^2 - 3 = 6$."
+  },
+  {
+    "id": "sat4_math2_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "The function $f$ is defined by $f(x) = 270(0.1)^x$.",
+    "question": "What is the value of $f(0)$?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "27",
+      "D": "270"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Ta có $(0.1)^0 = 1$, do đó $f(0) = 270(1) = 270$."
+  },
+  {
+    "id": "sat4_math2_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "To estimate the proportion of a population that has a certain characteristic, a random sample was selected from the population. Based on the sample, it is estimated that the proportion of the population that has the characteristic is 0.49, with an associated margin of error of 0.04.",
+    "question": "Based on this estimate and margin of error, which of the following is the most appropriate conclusion about the proportion of the population that has the characteristic?",
+    "isGridIn": false,
+    "options": {
+      "A": "It is plausible that the proportion is between 0.45 and 0.53.",
+      "B": "It is plausible that the proportion is less than 0.45.",
+      "C": "The proportion is exactly 0.49.",
+      "D": "It is plausible that the proportion is greater than 0.53."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Khoảng tin cậy ước lượng tỷ lệ là: $[0.49 - 0.04, 0.49 + 0.04] = [0.45, 0.53]$."
+  },
+  {
+    "id": "sat4_math2_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "A moving truck can tow a trailer if the combined weight of the trailer and the boxes it contains is no more than 4,600 pounds. The trailer has a weight of 500 pounds and each box weighs 120 pounds.",
+    "question": "What is the maximum number of boxes this truck can tow in the trailer?",
+    "isGridIn": false,
+    "options": {
+      "A": "34",
+      "B": "35",
+      "C": "38",
+      "D": "39"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Thiết lập bất phương trình: $500 + 120b \\le 4600 \\iff 120b \\le 4100 \\iff b \\le 34.17$. Vì số hộp là số nguyên nên số hộp tối đa xe có thể kéo là 34."
+  },
+  {
+    "id": "sat4_math2_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the quadratic equation: $$-4x^2 - 7x = -36$$",
+    "question": "What is the positive solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{7}{4}$",
+      "B": "$\\frac{9}{4}$",
+      "C": "4",
+      "D": "7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Chuyển vế: $4x^2 + 7x - 36 = 0$. Phân tích thành nhân tử: $(4x - 9)(x + 4) = 0 \\implies x = \\frac{9}{4}$ hoặc $x = -4$. Nghiệm dương là $\\frac{9}{4}$."
+  },
+  {
+    "id": "sat4_math2_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The table summarizes the distribution of color and shape for 100 tiles of equal area: 30 Red tiles, 30 Blue tiles, and 40 Yellow tiles (Total: 100 tiles).",
+    "question": "If one of these tiles is selected at random, what is the probability of selecting a red tile? (Express your answer as a decimal or fraction)",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "3/10",
+    "explanation": "Đáp án là 3/10 hoặc 0.3. Xác suất chọn được viên gạch màu đỏ là $\\frac{30}{100} = \\frac{3}{10}$."
+  },
+  {
+    "id": "sat4_math2_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the linear function: $$f(x) = 2x + 3$$\nIn the $xy$-plane, the graph of $y = f(x)$ is parallel to line $j$.",
+    "question": "What is the slope of line $j$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "2",
+    "explanation": "Đáp án là 2. Đồ thị hàm số $y = 2x + 3$ có hệ số góc là 2. Hai đường thẳng song song có hệ số góc bằng nhau nên hệ số góc của đường thẳng $j$ cũng bằng 2."
+  },
+  {
+    "id": "sat4_math2_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "A proposal for a new library was included on an election ballot. A radio show stated that 3 times as many people voted in favor of the proposal as people who voted against it. A social media post reported that 15,000 more people voted in favor of the proposal than voted against it.",
+    "question": "Based on these data, how many people voted against the proposal?",
+    "isGridIn": false,
+    "options": {
+      "A": "7,500",
+      "B": "15,000",
+      "C": "22,500",
+      "D": "45,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Gọi số người bỏ phiếu chống là $x$. Số người bỏ phiếu thuận là $3x$. Chênh lệch là $3x - x = 2x = 15,000 \\implies x = 7,500$."
+  },
+  {
+    "id": "sat4_math2_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "In a geometric figure, parallel lines $m$ and $n$ are intersected by transversal line $t$. Two opposite vertical angles are $x^\\circ$ and $y^\\circ$, with $x = 6k + 13$ and $y = 8k - 29$. Angle $z^\\circ$ is a same-side interior angle with $y^\\circ$.",
+    "question": "What is the value of $z$?",
+    "isGridIn": false,
+    "options": {
+      "A": "3",
+      "B": "21",
+      "C": "41",
+      "D": "139"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Vì $x$ và $y$ là hai góc đối đỉnh nên $6k + 13 = 8k - 29 \\iff 2k = 42 \\iff k = 21$. Suy ra $y = 8(21) - 29 = 139^\\circ$. Vì $y$ và $z$ là hai góc trong cùng phía bù nhau nên $z = 180^\\circ - 139^\\circ = 41$."
+  },
+  {
+    "id": "sat4_math2_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the equation: $$-3x + 21px = 84$$\nIn the given equation, $p$ is a constant. The equation has no solution.",
+    "question": "What is the value of $p$?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "$\\frac{1}{7}$",
+      "C": "$\\frac{4}{3}$",
+      "D": "4"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Viết lại phương trình: $x(21p - 3) = 84$. Phương trình bậc nhất một ẩn vô nghiệm khi và chỉ khi hệ số của $x$ bằng 0 và hệ số tự do khác 0: $21p - 3 = 0 \\iff 21p = 3 \\iff p = \\frac{1}{7}$."
+  },
+  {
+    "id": "sat4_math2_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $f$ is defined by: $$f(x) = (x - 10)(x + 13)$$",
+    "question": "For what value of $x$ does $f(x)$ reach its minimum?",
+    "isGridIn": false,
+    "options": {
+      "A": "-130",
+      "B": "-13",
+      "C": "$-\\frac{23}{2}$",
+      "D": "$-\\frac{3}{2}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Hai điểm cắt trục hoành của parabol là $x = 10$ và $x = -13$. Do parabol đối xứng, đỉnh parabol đạt giá trị nhỏ nhất tại trung điểm: $x = \\frac{10 + (-13)}{2} = -\\frac{3}{2}$."
+  },
+  {
+    "id": "sat4_math2_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $f(x) = \\frac{1}{9}(x - 7)^2 + 3$ gives a metal ball's height above the ground $f(x)$, in inches, $x$ seconds after it started moving on a track, where $0 \\le x \\le 10$.",
+    "question": "Which of the following is the best interpretation of the vertex of the graph of $y = f(x)$ in the $xy$-plane?",
+    "isGridIn": false,
+    "options": {
+      "A": "The metal ball's minimum height was 3 inches above the ground.",
+      "B": "The metal ball's minimum height was 7 inches above the ground.",
+      "C": "The metal ball's height was 3 inches above the ground when it started moving.",
+      "D": "The metal ball's height was 7 inches above the ground when it started moving."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Đỉnh của parabol có tọa độ $(7, 3)$. Vì hệ số $a = \\frac{1}{9} > 0$ nên parabol mở lên, tung độ đỉnh $y = 3$ là độ cao tối thiểu của quả bóng trên mặt đất."
+  },
+  {
+    "id": "sat4_math2_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In triangle $JKL$, $\\cos(K) = \\frac{24}{51}$ and angle $J$ is a right angle.",
+    "question": "What is the value of $\\cos(L)$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "15/17",
+    "explanation": "Đáp án là 15/17 hoặc 0.8824. Rút gọn tỉ số: $\\cos(K) = \\frac{24}{51} = \\frac{8}{17}$. Trong tam giác vuông tại $J$, ta có $JK = 8$, cạnh huyền $KL = 17$. Cạnh đối diện là $JL = \\sqrt{17^2 - 8^2} = \\sqrt{289 - 64} = \\sqrt{225} = 15$. Vậy $\\cos(L) = \\frac{JL}{KL} = \\frac{15}{17}$."
+  },
+  {
+    "id": "sat4_math2_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the quadratic equation: $$-x^2 + bx - 676 = 0$$\nIn the given equation, $b$ is a positive integer. The equation has no real solution.",
+    "question": "What is the greatest possible value of $b$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "51",
+    "explanation": "Đáp án là 51. Phương trình vô nghiệm khi biệt thức $\\Delta < 0 \\iff b^2 - 4(-1)(-676) < 0 \\iff b^2 - 2704 < 0 \\iff b^2 < 2704 \\iff b < 52$. Vì $b$ là số nguyên dương lớn nhất nên $b = 51$."
+  },
+  {
+    "id": "sat4_math2_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "A system of two linear equations in the $xy$-plane has only one intersection point at $(8, 2)$. A third linear equation $x + 4y = -16$ is added to the system.",
+    "question": "How many solutions $(x, y)$ will the resulting system of three equations have?",
+    "isGridIn": false,
+    "options": {
+      "A": "Zero",
+      "B": "Exactly one",
+      "C": "Exactly two",
+      "D": "Infinitely many"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giao điểm duy nhất của 2 đường thẳng ban đầu là $(8, 2)$. Thay $(8, 2)$ vào đường thẳng thứ ba: $8 + 4(2) = 16 \\ne -16$. Điểm này không thỏa mãn phương trình thứ ba, do đó hệ 3 phương trình không có nghiệm chung nào (Zero solutions)."
+  },
+  {
+    "id": "sat4_math2_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $f(x) = 5,470(0.64)^{x/12}$ gives the value, in dollars, of a certain piece of equipment after $x$ months of use. The value of the equipment decreases each year by $p\\%$ of its value the preceding year.",
+    "question": "What is the value of $p$?",
+    "isGridIn": false,
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "36",
+      "D": "64"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Vì $x$ tính bằng tháng, sau 1 năm ($x = 12$ tháng) giá trị thiết bị nhân với hệ số $(0.64)^{12/12} = 0.64$. Tỷ lệ giảm hàng năm là $1 - 0.64 = 0.36 = 36\\%$."
+  },
+  {
+    "id": "sat4_math2_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "The dot plot represents the 15 values in data set A (range from 22 to 26). Data set B is created by adding 56 to each of the values in data set A.",
+    "question": "Which of the following correctly compares the medians and the ranges of data sets A and B?",
+    "isGridIn": false,
+    "options": {
+      "A": "The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A.",
+      "B": "The median of data set B is equal to the median of data set A, and the range of data set B is greater than the range of data set A.",
+      "C": "The median of data set B is greater than the median of data set A, and the range of data set B is equal to the range of data set A.",
+      "D": "The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A."
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Khi cộng một hằng số $c = 56$ vào tất cả các giá trị của một tập dữ liệu, trung vị (median) sẽ tăng thêm 56 đơn vị, trong khi khoảng biến thiên (range = max - min) không đổi."
+  },
+  {
+    "id": "sat4_math2_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "The equation $x^2 + (y - 1)^2 = 49$ represents circle A. Circle B is obtained by shifting circle A down 2 units in the $xy$-plane.",
+    "question": "Which of the following equations represents circle B?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(x - 2)^2 + (y - 1)^2 = 49$",
+      "B": "$x^2 + (y - 3)^2 = 49$",
+      "C": "$(x + 2)^2 + (y - 1)^2 = 49$",
+      "D": "$x^2 + (y + 1)^2 = 49$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Tâm của đường tròn A là $(0, 1)$. Khi dịch chuyển xuống dưới 2 đơn vị, tọa độ tâm mới là $(0, 1 - 2) = (0, -1)$. Phương trình đường tròn B là $(x - 0)^2 + (y - (-1))^2 = 49 \\iff x^2 + (y + 1)^2 = 49$."
+  },
+  {
+    "id": "sat4_math2_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "Two identical rectangular prisms each have a height of 90 centimeters (cm). The base of each prism is a square, and the surface area of each prism is $K\\text{ cm}^2$. If the prisms are glued together along a square base, the resulting prism has a surface area of $\\frac{92}{47}K\\text{ cm}^2$.",
+    "question": "What is the side length, in cm, of each square base?",
+    "isGridIn": false,
+    "options": {
+      "A": "4",
+      "B": "8",
+      "C": "9",
+      "D": "16"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Gọi cạnh đáy hình vuông là $x$. Diện tích toàn phần 1 hình lăng trụ là $K = 2x^2 + 4(90x) = 2x^2 + 360x$. Khi dán hai đáy lại, diện tích mới mất đi 2 mặt đáy: $2K - 2x^2 = \\frac{92}{47}K \\iff 2x^2 = \\frac{2}{47}K \\iff K = 47x^2$. Thay $K$: $2x^2 + 360x = 47x^2 \\iff 45x^2 - 360x = 0 \\iff 45x(x - 8) = 0 \\implies x = 8\\text{ cm}$."
+  },
+  {
+    "id": "sat4_math2_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "210 is $p\\%$ greater than 30.",
+    "question": "What is the value of $p$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "600",
+    "explanation": "Đáp án là 600. Lượng tăng là $210 - 30 = 180$. Tỷ lệ phần trăm lớn hơn là: $p\\% = \\frac{180}{30} \\times 100\\% = 6 \\times 100\\% = 600\\%$."
+  }
+]

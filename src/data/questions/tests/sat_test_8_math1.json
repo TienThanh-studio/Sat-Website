@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat8_math1_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A bus is traveling at a constant speed along a straight portion of road. The equation $d = 30t$ gives the distance $d$, in feet from a road marker, that the bus will be $t$ seconds after passing the marker.",
+    "question": "How many feet from the marker will the bus be 2 seconds after passing the marker?",
+    "isGridIn": false,
+    "options": {
+      "A": "30",
+      "B": "32",
+      "C": "60",
+      "D": "90"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Thay $t = 2$ vào phương trình $d = 30t$: $d = 30(2) = 60$ feet."
+  },
+  {
+    "id": "sat8_math1_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "For a particular machine that produces beads, 29 out of every 100 beads it produces have a defect. A bead produced by the machine will be selected at random.",
+    "question": "What is the probability of selecting a bead that has a defect?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{1}{2,900}$",
+      "B": "$\\frac{1}{29}$",
+      "C": "$\\frac{29}{100}$",
+      "D": "$\\frac{29}{10}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Xác suất chọn ngẫu nhiên một hạt bị lỗi là tỷ số giữa số hạt lỗi và tổng số hạt: $\\frac{29}{100}$."
+  },
+  {
+    "id": "sat8_math1_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A line in the $xy$-plane passes through the points $(-8, 0)$ and $(0, 8)$.",
+    "question": "What is the $y$-intercept of the graph shown?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(-8, 0)$",
+      "B": "$(-6, 0)$",
+      "C": "$(0, 6)$",
+      "D": "$(0, 8)$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Giao điểm của đồ thị với trục tung ($y$-intercept) là điểm có hoành độ $x = 0$, tức là $(0, 8)$."
+  },
+  {
+    "id": "sat8_math1_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the algebraic expression: $$(2x^2 + x - 9) + (x^2 + 6x + 1)$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$2x^2 + 7x + 10$",
+      "B": "$2x^2 + 6x - 8$",
+      "C": "$3x^2 + 7x - 10$",
+      "D": "$3x^2 + 7x - 8$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Cộng các hạng tử đồng dạng: $(2x^2 + x^2) + (x + 6x) + (-9 + 1) = 3x^2 + 7x - 8$."
+  },
+  {
+    "id": "sat8_math1_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "An analyst collected data on the price of a carton of grape tomatoes at 30 locations selected at random in Utah. The mean price of a carton of grape tomatoes in Utah was estimated to be $4.23, with an associated margin of error of $0.08.",
+    "question": "Which of the following is a plausible statement about the mean price of a carton of grape tomatoes for all locations that sell this product in Utah?",
+    "isGridIn": false,
+    "options": {
+      "A": "It is between $4.15 and $4.31.",
+      "B": "It is either less than $4.15 or greater than $4.31.",
+      "C": "It is less than $4.15.",
+      "D": "It is greater than $4.31."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Khoảng giá trị hợp lý được tính bằng giá trị trung bình ước tính cộng/trừ biên độ sai số: $[4.23 - 0.08, 4.23 + 0.08] = [4.15, 4.31]$."
+  },
+  {
+    "id": "sat8_math1_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$2.6 + x = 2.8$$",
+    "question": "What value of $x$ is the solution to the given equation?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "0.2",
+    "explanation": "Đáp án là 0.2 hoặc 1/5. Trừ cả hai vế cho $2.6$: $x = 2.8 - 2.6 = 0.2$."
+  },
+  {
+    "id": "sat8_math1_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Out of 300 seeds that were planted, 80% sprouted.",
+    "question": "How many of these seeds sprouted?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "240",
+    "explanation": "Đáp án là 240. Số hạt đã nảy mầm là: $300 \\times \\frac{80}{100} = 240$ hạt."
+  },
+  {
+    "id": "sat8_math1_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "For the linear function $f(x) = 4x + b$, $b$ is a constant and $f(7) = 28$.",
+    "question": "What is the value of $b$?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "4",
+      "D": "7"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Thay $x = 7$ vào hàm số: $f(7) = 4(7) + b = 28 \\iff 28 + b = 28 \\iff b = 0$."
+  },
+  {
+    "id": "sat8_math1_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "Right triangles $LMN$ and $PQR$ are similar, where $L$ and $M$ correspond to $P$ and $Q$, respectively. Angle $M$ has a measure of $53^\\circ$.",
+    "question": "What is the measure of angle $Q$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$37^\\circ$",
+      "B": "$53^\\circ$",
+      "C": "$127^\\circ$",
+      "D": "$143^\\circ$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hai tam giác đồng dạng thì các góc tương ứng bằng nhau. Do $M$ tương ứng với $Q$, số đo góc $Q$ bằng số đo góc $M$, tức là $53^\\circ$."
+  },
+  {
+    "id": "sat8_math1_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A line in the $xy$-plane passes through the point $(0, 5)$ and is parallel to the graph of $y = 7x + 4$.",
+    "question": "What is the equation of the line?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 5x$",
+      "B": "$y = 7x + 5$",
+      "C": "$y = 7x$",
+      "D": "$y = 5x + 7$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đường thẳng song song với $y = 7x + 4$ có cùng hệ số góc $m = 7$. Đi qua $(0, 5)$ nên tung độ gốc $b = 5$. Phương trình là $y = 7x + 5$."
+  },
+  {
+    "id": "sat8_math1_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The scatterplot shows data points with a negative linear association, with a $y$-intercept around $(0, 10.1)$ and a negative slope.",
+    "question": "Which of the following equations is the most appropriate linear model for the data shown in the scatterplot?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = -1.9x - 10.1$",
+      "B": "$y = -1.9x + 10.1$",
+      "C": "$y = 1.9x - 10.1$",
+      "D": "$y = 1.9x + 10.1$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đồ thị thể hiện xu hướng giảm dần (hệ số góc âm: $-1.9$) và cắt trục tung tại giá trị dương (khoảng $+10.1$)."
+  },
+  {
+    "id": "sat8_math1_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "A model predicts that the population of Bergen was 15,000 in 2005. The model also predicts that each year for the next 5 years, the population $p$ increased by 4% of the previous year's population.",
+    "question": "Which equation best represents this model, where $x$ is the number of years after 2005, for $x \\le 5$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$p = 0.96(15,000)^x$",
+      "B": "$p = 1.04(15,000)^x$",
+      "C": "$p = 15,000(0.96)^x$",
+      "D": "$p = 15,000(1.04)^x$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Dân số ban đầu là $15,000$, tăng $4\\%$ mỗi năm tương ứng với hệ số nhân $1 + 0.04 = 1.04$. Phương trình là: $p = 15,000(1.04)^x$."
+  },
+  {
+    "id": "sat8_math1_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of equations:\n$$2a + 8b = 198$$\n$$2a + 4b = 98$$",
+    "question": "The solution to the given system of equations is $(a, b)$. What is the value of $b$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "25",
+    "explanation": "Đáp án là 25. Trừ phương trình hai cho phương trình một vế theo vế: $(2a - 2a) + (8b - 4b) = 198 - 98 \\iff 4b = 100 \\iff b = 25$."
+  },
+  {
+    "id": "sat8_math1_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The expression $90y^5 - 54y^4$ is equivalent to $ry^4(15y - 9)$, where $r$ is a constant.",
+    "question": "What is the value of $r$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "6",
+    "explanation": "Đáp án là 6. Khai triển vế phải: $ry^4(15y - 9) = 15ry^5 - 9ry^4$. Đồng nhất hệ số với $90y^5 - 54y^4$: $15r = 90 \\iff r = 6$."
+  },
+  {
+    "id": "sat8_math1_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The graph of $y = f(x)$ is shown in the $xy$-plane, where $f(x) = ax^3 + bx^2 + cx + d$ and $a, b, c, d$ are constants. The graph touches or intersects the $x$-axis at exactly three distinct points.",
+    "question": "For how many values of $x$ does $f(x) = 0$?",
+    "isGridIn": false,
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Three",
+      "D": "Four"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Số nghiệm của phương trình $f(x) = 0$ chính là số giao điểm của đồ thị hàm số với trục hoành ($x$-axis). Vì đồ thị cắt trục hoành tại 3 điểm phân biệt nên có 3 giá trị của $x$ thỏa mãn."
+  },
+  {
+    "id": "sat8_math1_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "The area $A$, in square centimeters, of a rectangular cutting board can be represented by the expression $w(w + 9)$, where $w$ is the width, in centimeters, of the cutting board.",
+    "question": "Which expression represents the length, in centimeters, of the cutting board?",
+    "isGridIn": false,
+    "options": {
+      "A": "$w(w + 9)$",
+      "B": "$w$",
+      "C": "9",
+      "D": "$w + 9$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Diện tích hình chữ nhật bằng chiều dài nhân chiều rộng: $A = \\text{dài} \\times w$. Vì diện tích là $w(w + 9)$ và chiều rộng là $w$, chiều dài của thớt phải là $(w + 9)$."
+  },
+  {
+    "id": "sat8_math1_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "The given equation relates the distinct positive numbers $p$, $k$, and $j$: $$p = \\frac{k}{4j + 9}$$",
+    "question": "Which equation correctly expresses $4j + 9$ in terms of $p$ and $k$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$4j + 9 = \\frac{k}{p}$",
+      "B": "$4j + 9 = kp$",
+      "C": "$4j + 9 = k - p$",
+      "D": "$4j + 9 = \\frac{p}{k}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Nhân hai vế với $(4j + 9)$: $p(4j + 9) = k$. Chia cả hai vế cho $p$: $4j + 9 = \\frac{k}{p}$."
+  },
+  {
+    "id": "sat8_math1_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Circle A has a radius of $3n$ and circle B has a radius of $129n$, where $n$ is a positive constant.",
+    "question": "The area of circle B is how many times the area of circle A?",
+    "isGridIn": false,
+    "options": {
+      "A": "43",
+      "B": "86",
+      "C": "129",
+      "D": "1,849"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Tỉ số bán kính giữa đường tròn B và A là $\\frac{129n}{3n} = 43$. Tỉ số diện tích bằng bình phương tỉ số bán kính: $43^2 = 1,849$."
+  },
+  {
+    "id": "sat8_math1_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "The measure of angle $R$ is $\\frac{2\\pi}{3}$ radians. The measure of angle $T$ is $\\frac{5\\pi}{12}$ radians greater than the measure of angle $R$.",
+    "question": "What is the measure of angle $T$, in degrees?",
+    "isGridIn": false,
+    "options": {
+      "A": "75",
+      "B": "120",
+      "C": "195",
+      "D": "390"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Số đo góc $T$ theo radian là: $\\frac{2\\pi}{3} + \\frac{5\\pi}{12} = \\frac{8\\pi}{12} + \\frac{5\\pi}{12} = \\frac{13\\pi}{12}$ rad. Đổi sang độ: $\\frac{13\\pi}{12} \\times \\frac{180^\\circ}{\\pi} = 13 \\times 15^\\circ = 195^\\circ$."
+  },
+  {
+    "id": "sat8_math1_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the quadratic equation: $$y = x^2 - 14x + 22$$",
+    "question": "For what value of $x$ does the value of $y$ reach its minimum?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "7",
+    "explanation": "Đáp án là 7. Tọa độ hoành độ đỉnh đạt giá trị nhỏ nhất của parabol là: $x = -\\frac{b}{2a} = -\\frac{-14}{2(1)} = 7$."
+  },
+  {
+    "id": "sat8_math1_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "A small business owner budgets $2,200 to purchase candles. The owner must purchase a minimum of 200 candles to maintain the discounted pricing. If the owner pays $4.90 per candle for small candles and $11.60 per candle for large candles.",
+    "question": "What is the maximum number of large candles the owner can purchase to stay within the budget and maintain the discounted pricing?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "182",
+    "explanation": "Đáp án là 182. Gọi $s$ và $l$ lần lượt là số nến nhỏ và lớn. Ta có hệ bất phương trình: $s + l \\ge 200 \\implies s \\ge 200 - l$ và $4.90s + 11.60l \\le 2,200$. Thay $s$: $4.90(200 - l) + 11.60l \\le 2,200 \\iff 980 + 6.70l \\le 2,200 \\iff 6.70l \\le 1,220 \\iff l \\le 182.09$. Vì $l$ nguyên nên số nến lớn tối đa là 182."
+  },
+  {
+    "id": "sat8_math1_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of inequalities in the $xy$-plane:\n$$y \\le x + 7$$\n$$y \\ge -2x - 1$$",
+    "question": "Which point $(x, y)$ is a solution to the given system of inequalities in the $xy$-plane?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(-14, 0)$",
+      "B": "$(0, -14)$",
+      "C": "$(0, 14)$",
+      "D": "$(14, 0)$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Thử điểm $(14, 0)$: $0 \\le 14 + 7 = 21$ (đúng), và $0 \\ge -2(14) - 1 = -29$ (đúng)."
+  },
+  {
+    "id": "sat8_math1_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "A frequency table summarizes the weights of 71 tortoises, ranging from 13 to 20 pounds. The median is currently 17 pounds. A weight of 39 pounds is added to the original data set, creating a new data set of 72 tortoises.",
+    "question": "Which statement best compares the mean and median of the new data set to the mean and median of the original data set?",
+    "isGridIn": false,
+    "options": {
+      "A": "The mean of the new data set is greater than the mean of the original data set, and the median of the new data set is greater than the median of the original data set.",
+      "B": "The mean of the new data set is greater than the mean of the original data set, and the medians of the two data sets are equal.",
+      "C": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is less than the median of the original data set.",
+      "D": "The mean of the new data set is less than the mean of the original data set, and the medians of the two data sets are equal."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Giá trị bổ sung 39 lớn hơn tất cả các giá trị ban đầu, kéo giá trị trung bình (mean) tăng lên. Cả phần tử thứ 36 và 37 đều rơi vào nhóm 17 pound, do đó trung vị (median) của tập 72 phần tử vẫn giữ nguyên là 17."
+  },
+  {
+    "id": "sat8_math1_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the equation: $$x - 29 = (x - a)(x - 29)$$\nwhere $a$ is a constant and $a > 30$.",
+    "question": "Which of the following are solutions to the given equation?\nI. $a$\nII. $a + 1$\nIII. 29",
+    "isGridIn": false,
+    "options": {
+      "A": "I and II only",
+      "B": "I and III only",
+      "C": "II and III only",
+      "D": "I, II, and III"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Chuyển vế: $(x - a)(x - 29) - (x - 29) = 0 \\iff (x - 29)(x - a - 1) = 0$. Các nghiệm là $x = 29$ và $x = a + 1$. Do đó II và III là nghiệm."
+  },
+  {
+    "id": "sat8_math1_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "In the $xy$-plane, the graph of the equation $y = -x^2 + 9x - 100$ intersects the horizontal line $y = c$ at exactly one point.",
+    "question": "What is the value of $c$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$-\\frac{481}{4}$",
+      "B": "-100",
+      "C": "$-\\frac{319}{4}$",
+      "D": "$-\\frac{9}{2}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Parabol tiếp xúc với đường thẳng nằm ngang $y = c$ tại đúng đỉnh của nó. Hoành độ đỉnh: $x = -\\frac{9}{2(-1)} = \\frac{9}{2}$. Tung độ đỉnh: $c = -(\\frac{9}{2})^2 + 9(\\frac{9}{2}) - 100 = -\\frac{81}{4} + \\frac{162}{4} - \\frac{400}{4} = -\\frac{319}{4}$."
+  },
+  {
+    "id": "sat8_math1_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The functions $f$ and $g$ are defined by the given equations, where $x \\ge 0$:\nI. $f(x) = 18(1.25)^x + 41$\nII. $g(x) = 9(0.73)^x$",
+    "question": "Which of the following equations displays, as a constant or coefficient, the maximum value of the function it defines, where $x \\ge 0$?",
+    "isGridIn": false,
+    "options": {
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II",
+      "D": "Neither I nor II"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Vì cơ số $1.25 > 1$ nên hàm I đồng biến và không có giá trị lớn nhất trên $[0, \\infty)$. Hàm II có cơ số $0.73 < 1$ nên nghịch biến, giá trị lớn nhất đạt tại $x = 0$: $g(0) = 9(0.73)^0 = 9$, số 9 hiển thị trực tiếp làm hệ số đứng đầu."
+  },
+  {
+    "id": "sat8_math1_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "The perimeter of an equilateral triangle is 852 centimeters. The three vertices of the triangle lie on a circle. The radius of the circle is $w\\sqrt{3}$ centimeters.",
+    "question": "What is the value of $w$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "284/3",
+    "explanation": "Đáp án là 284/3 hoặc 94.67. Cạnh của tam giác đều là $a = \\frac{852}{3} = 284\\text{ cm}$. Bán kính đường tròn ngoại tiếp tam giác đều là: $R = \\frac{a}{\\sqrt{3}} = \\frac{284}{\\sqrt{3}} = \\frac{284\\sqrt{3}}{3} = \\left(\\frac{284}{3}\\right)\\sqrt{3}$. Đồng nhất với $w\\sqrt{3}$ ta được $w = \\frac{284}{3}$."
+  }
+]

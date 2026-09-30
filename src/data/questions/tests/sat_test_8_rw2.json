@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat8_rw2_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Art scholars have noted that some colors seem to be more ______ viewers than others. For example, people tend to find paintings featuring blues and greens more appealing than paintings featuring yellows and oranges.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "confusing for",
+      "B": "attractive to",
+      "C": "corrected by",
+      "D": "similar to"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'attractive to' means appealing to. The text explains that viewers find paintings featuring blues and greens 'more appealing' than those with yellows and oranges, showing that certain colors are more attractive to viewers."
+  },
+  {
+    "id": "sat8_rw2_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Researchers and conservationists stress that biodiversity loss due to invasive species is ______. For example, people can take simple steps such as washing their footwear after travel to avoid introducing potentially invasive organisms into new environments.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "preventable",
+      "B": "undeniable",
+      "C": "common",
+      "D": "concerning"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'preventable' means able to be stopped or avoided. Taking simple measures like washing footwear after traveling stops invasive species from being introduced, showing that this biodiversity loss is preventable."
+  },
+  {
+    "id": "sat8_rw2_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The process of mechanically recycling plastics is often considered ______ because of the environmental impact and the loss of material quality that often occurs. But chemist Takunda Chazovachii has helped develop a cleaner process of chemical recycling that converts superabsorbent polymers from diapers into a desirable reusable adhesive.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "resilient",
+      "B": "inadequate",
+      "C": "dynamic",
+      "D": "satisfactory"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'inadequate' means insufficient or unsatisfactory. The text explains that mechanical recycling degrades material quality and harms the environment, contrasting it with a cleaner, more desirable chemical method."
+  },
+  {
+    "id": "sat8_rw2_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "In the Indigenous intercropping system known as the Three Sisters, maize, squash, and beans form an ______ web of relations: maize provides the structure on which the bean vines grow; the squash vines cover the soil, discouraging competition from weeds; and the beans aid their two \"sisters\" by enriching the soil with essential nitrogen.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "indecipherable",
+      "B": "ornamental",
+      "C": "obscure",
+      "D": "intricate"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'intricate' means complexly detailed or interwoven. The colon introduces an elaborate mutual relationship where each plant benefits the other two in distinct, coordinated ways."
+  },
+  {
+    "id": "sat8_rw2_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Within baleen whale species, some individuals develop an accessory spleen—a seemingly functionless formation of splenetic tissue outside the normal spleen. Given the formation's greater prevalence among whales known to make deeper dives, some researchers hypothesize that its role isn't ______; rather, the accessory spleen may actively support diving mechanisms.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "replicable",
+      "B": "predetermined",
+      "C": "operative",
+      "D": "latent"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'latent' means dormant, inactive, or functionless. The semicolon and 'rather' establish a contrast between a role that is idle or dormant ('latent') and one that 'actively support[s]' physiological diving mechanisms."
+  },
+  {
+    "id": "sat8_rw2_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "In 2007, computer scientist Luis von Ahn was working on converting printed books into a digital format. He found that some words were distorted enough that digital scanners couldn't recognize them, but most humans could easily read them. Based on that finding, von Ahn invented a simple security test to keep automated \"bots\" out of websites. The first version of the reCAPTCHA test asked users to type one known word and one of the many words scanners couldn't recognize. Correct answers proved the users were humans and added data to the book-digitizing project.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To discuss von Ahn's invention of reCAPTCHA",
+      "B": "To explain how digital scanners work",
+      "C": "To call attention to von Ahn's book-digitizing project",
+      "D": "To indicate how popular reCAPTCHA is"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the text chronicles how Luis von Ahn came up with the idea for reCAPTCHA while digitizing books and explains how his security test operates."
+  },
+  {
+    "id": "sat8_rw2_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Gwendolyn Bennett's 1926 poem \"Street Lamps in Early Spring.\"\n\nNight wears a garment\nAll velvet soft, all violet blue...\nAnd over her face she draws a veil\nAs shimmering fine as floating dew...\nAnd here and there\nIn the black of her hair\nThe subtle hands of Night\nMove slowly with their gem-starred light.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It presents alternating descriptions of night in a rural area and in a city.",
+      "B": "It sketches an image of nightfall, then an image of sunrise.",
+      "C": "It makes an extended comparison of night to a human being.",
+      "D": "It portrays how night changes from one season of the year to the next."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the poem personifies Night as a human being wearing garments, drawing a veil over her face, and running subtle hands with gem-starred light through her black hair."
+  },
+  {
+    "id": "sat8_rw2_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Jane Austen's 1814 novel Mansfield Park. The speaker, Tom, is considering staging a play at home with a group of his friends and family.\n\nWe mean nothing but a little amusement among ourselves, just to vary the scene, and exercise our powers in something new. We want no audience, no publicity. We may be trusted, I think, in choosing some play most perfectly unexceptionable; and I can conceive no greater harm or danger to any of us in conversing in the elegant written language of some respectable author than in chattering in words of our own.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To offer Tom's assurance that the play will be inoffensive and involve only a small number of people",
+      "B": "To clarify that the play will not be performed in the manner Tom had originally intended",
+      "C": "To elaborate on the idea that the people around Tom lack the skills to successfully stage a play",
+      "D": "To assert that Tom believes the group performing the play will be able to successfully promote it"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because Tom insists the play will be private ('no audience, no publicity'), unexceptionable (completely inoffensive), and harmless entertainment among themselves."
+  },
+  {
+    "id": "sat8_rw2_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Text 1\nEcologists have long wondered how thousands of microscopic phytoplankton species can live together near ocean surfaces competing for the same resources. According to conventional wisdom, one species should emerge after outcompeting the rest. So why do so many species remain? Ecologists' many efforts to explain this phenomenon still haven't uncovered a satisfactory explanation.\n\nText 2\nEcologist Michael Behrenfeld and colleagues have connected phytoplankton's diversity to their microscopic size. Because these organisms are so tiny, they are spaced relatively far apart from each other in ocean water and, moreover, experience that water as a relatively dense substance. This in turn makes it hard for them to move around and interact with one another. Therefore, says Behrenfeld's team, direct competition among phytoplankton probably happens much less than previously thought.",
+    "question": "Based on the texts, how would Behrenfeld and colleagues (Text 2) most likely respond to the \"conventional wisdom\" discussed in Text 1?",
+    "isGridIn": false,
+    "options": {
+      "A": "By arguing that it is based on a misconception about phytoplankton species competing with one another",
+      "B": "By asserting that it fails to recognize that routine replenishment of ocean nutrients prevents competition between phytoplankton species",
+      "C": "By suggesting that their own findings help clarify how phytoplankton species are able to compete with larger organisms",
+      "D": "By recommending that more ecologists focus their research on how competition among phytoplankton species is increased with water density"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because Text 1's conventional wisdom assumes fierce competition must eliminate all but one species, whereas Behrenfeld's team in Text 2 shows that physical distance and water viscosity prevent direct competition from occurring in the first place."
+  },
+  {
+    "id": "sat8_rw2_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "The following text is adapted from Sylvia Acevedo's 2018 memoir Path to the Stars: My Journey from Girl Scout to Rocket Scientist. The narrator is traveling by car with her family to Mexico City. Mario and Laura are her brother and sister.\n\nMario and I played games to see how many different license plates we could spot, and Laura liked to look for children in the back seats of the cars we passed. We were used to the forty-five-minute drive to El Paso and familiar with the six-hour ride to Chihuahua, but I wondered what the long journey to Mexico City would be like.\n\n©2018 by Sylvia Acevedo",
+    "question": "According to the text, what did the narrator and Mario do while riding in the car?",
+    "isGridIn": false,
+    "options": {
+      "A": "They read books.",
+      "B": "They sang songs.",
+      "C": "They went to sleep.",
+      "D": "They played games."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the passage states: 'Mario and I played games to see how many different license plates we could spot.'"
+  },
+  {
+    "id": "sat8_rw2_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "In the 1700s and 1800s, European composers experimented with volume in their musical works. They did so by increasing the number of musicians playing in the orchestra. For example, in some of his operas, German composer Richard Wagner added more horns, trombones, and tubas to the orchestra. With more instruments playing at the same time, the orchestra could play extremely loudly at key moments in his operas.",
+    "question": "According to the text, how did Richard Wagner achieve moments of extremely high volume in his operas?",
+    "isGridIn": false,
+    "options": {
+      "A": "By moving the performances of his operas from outdoor stages to indoor ones",
+      "B": "By increasing the number of musicians playing horns, trombones, and tubas in the orchestra",
+      "C": "By building a concert hall whose shape would cause sounds to echo",
+      "D": "By insisting that the singers undergo special training to sing for extended periods of time"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text specifies that Wagner 'added more horns, trombones, and tubas to the orchestra' to allow it to play extremely loudly."
+  },
+  {
+    "id": "sat8_rw2_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Poetry in Classical Nahuatl, the language of the Aztec Empire, relies on difrasismo, or a parallel noun construction that conventionally operates as a single metaphor. For example, the common difrasismo in cuauhtli in ocelotl (literally, \"the eagle, the jaguar\") signifies \"warrior.\" The device's function is both formal—providing structure to lines of verse—and ritual: semantic relations among the two nouns and the concept they signify can be tenuous, as in the previous example, such that difrasismos are often only intelligible according to the conceptual associations observed in Aztec ceremonial culture.",
+    "question": "Which statement about the difrasismo in cuauhtli in ocelotl is most strongly supported by the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Its metaphorical significance derives from the semantic equivalence of the two nouns constituting the difrasismo.",
+      "B": "Its unintelligibility may cause its formal function within a line of verse to go unnoticed by present-day readers.",
+      "C": "Its apparent obscurity can be resolved when considered in the proper cultural context.",
+      "D": "Its frequency in Classical Nahuatl poetry confirms its intelligibility to the Aztec audience."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the text notes that while the semantic links between 'eagle, jaguar' and 'warrior' seem tenuous on the surface, difrasismos become intelligible when viewed through the conceptual associations of Aztec ceremonial culture."
+  },
+  {
+    "id": "sat8_rw2_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Eighteenth-century economist Adam Smith is famed for his metaphor of the invisible hand, which he putatively used to illustrate a robust model of how individuals produce aggregate benefits by pursuing their own economic interests. Note \"putatively\": as Gavin Kennedy has shown, Smith deploys this metaphor only once in his economic writings—to make a narrow point about the then-dominant economic theory of mercantilism—and it was largely ignored until some twentieth-century economists eager to secure an intellectual pedigree for their views elevated it to a fully-fledged paradigm.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Although Smith is famed for his metaphor of the invisible hand, the metaphor was largely ignored until economists in the twentieth century came to realize that the metaphor was a robust model that anticipated their own views.",
+      "B": "Some twentieth-century economists gave Smith's metaphor of the invisible hand a significance it does not have in Smith's work, but it is nevertheless a useful model of how individuals produce aggregate benefits by pursuing their own economic interests.",
+      "C": "Smith's metaphor of the invisible hand has been interpreted as a model of how individuals acting in their own interest produce aggregate benefits, but it was intended as a subtle critique of the economic theory of mercantilism.",
+      "D": "The reputation of Smith's metaphor of the invisible hand is not due to the importance of the metaphor in Smith's work but rather to the promotion of the metaphor by some later economists for their own ends."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the author demonstrates that Smith used the metaphor only once for a narrow point, and that its widespread modern fame resulted from twentieth-century economists appropriating it to give historical pedigree to their own paradigms."
+  },
+  {
+    "id": "sat8_rw2_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Approximate Rates of Speech and Information Conveyed for Five Languages\nLanguage | Rate of speech (syllables per second) | Rate of information conveyed (bits per second)\nSerbian | 7.2 | 39.1\nSpanish | 7.7 | 42.0\nVietnamese | 5.3 | 42.5\nThai | 4.7 | 33.8\nHungarian | 5.9 | 34.6\n\nA group of researchers conducted a study to determine how quickly different Eurasian languages are typically spoken (in syllables per second) and how much information they can effectively convey (in bits per second). They found that, although languages vary widely in the speed at which they are spoken, the amount of information languages can effectively convey tends to vary much less. Thus, they claim that two languages with very different spoken rates can nonetheless convey the same amount of information in a given amount of time.",
+    "question": "Which choice best describes data from the table that support the researchers' claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "Among the five languages in the table, Thai and Hungarian have the lowest rates of speech and the lowest rates of information conveyed.",
+      "B": "Vietnamese conveys information at approximately the same rate as Spanish despite being spoken at a slower rate.",
+      "C": "Among the five languages in the table, the language that is spoken the fastest is also the language that conveys information the fastest.",
+      "D": "Serbian and Spanish are spoken at approximately the same rate, but Serbian conveys information faster than Spanish does."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because Vietnamese (5.3 syllables/sec) is spoken considerably slower than Spanish (7.7 syllables/sec), yet both transmit information at essentially identical rates (42.5 vs 42.0 bits/sec)."
+  },
+  {
+    "id": "sat8_rw2_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Estimates of Tyrannosaurid Bite Force\nStudy | Year | Estimation method | Approximate bite force (newtons)\nCost et al. | 2019 | muscular and skeletal modeling | 35,000–63,000\nGignac and Erickson | 2017 | tooth-bone interaction analysis | 8,000–34,000\nMeers | 2002 | body-mass scaling | 183,000–235,000\nBates and Falkingham | 2012 | muscular and skeletal modeling | 35,000–57,000\n\nThe largest tyrannosaurids are thought to have had the strongest bites of any land animals in Earth's history. Determining bite force can be difficult, however, and paleontologists Paul Barrett and Emily Rayfield have suggested that an estimate of dinosaur bite force may be significantly influenced by the methodology used in generating that estimate.",
+    "question": "Which choice best describes data from the table that support Barrett and Rayfield's suggestion?",
+    "isGridIn": false,
+    "options": {
+      "A": "The study by Meers used body-mass scaling and produced the lowest estimated maximum bite force, while the study by Cost et al. used muscular and skeletal modeling and produced the highest estimated maximum.",
+      "B": "In their study, Gignac and Erickson used tooth-bone interaction analysis to produce an estimated bite force range with a minimum of 8,000 newtons and a maximum of 34,000 newtons.",
+      "C": "The bite force estimates produced by Bates and Falkingham and by Cost et al. were similar to each other, while the estimates produced by Meers and by Gignac and Erickson each differed substantially from any other estimate.",
+      "D": "The estimated maximum bite force produced by Cost et al. exceeded the estimated maximum produced by Bates and Falkingham, even though both groups of researchers used the same method to generate their estimates."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because studies using the same technique (muscular/skeletal modeling) produced closely matching ranges (35,000–57,000 N and 35,000–63,000 N), whereas disparate methods (body-mass scaling and tooth-bone analysis) produced wildly divergent results (up to 235,000 N and down to 8,000 N), proving methodology drives the estimate."
+  },
+  {
+    "id": "sat8_rw2_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Psychologists Dacher Keltner and Jonathan Haidt have argued that experiencing awe—a sensation of reverence and wonder typically brought on by perceiving something grand or powerful—can enable us to feel more connected to others and thereby inspire us to act more altruistically. Keltner, along with Paul K. Piff, Pia Dietze, and colleagues, claims to have found evidence for this effect in a recent study where participants were asked to either gaze up at exceptionally tall trees in a nearby grove (reported to be a universally awe-inspiring experience) or stare at the exterior of a nearby, nondescript building. After one minute, an experimenter deliberately spilled a box of pens nearby.",
+    "question": "Which finding from the researchers' study, if true, would most strongly support their claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "Participants who had been looking at the trees helped the experimenter pick up significantly more pens than did participants who had been looking at the building.",
+      "B": "Participants who helped the experimenter pick up the pens used a greater number of positive words to describe the trees and the building in a postexperiment survey than did participants who did not help the experimenter.",
+      "C": "Participants who did not help the experimenter pick up the pens were significantly more likely to report having experienced a feeling of awe, regardless of whether they looked at the building or the trees.",
+      "D": "Participants who had been looking at the building were significantly more likely to notice that the experimenter had dropped the pens than were participants who had been looking at the trees."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because picking up significantly more dropped pens demonstrates altruistic assistance, directly verifying that the awe-inspired group (looking at the tall trees) acted more altruistically than the control group."
+  },
+  {
+    "id": "sat8_rw2_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "The domestic sweet potato (Ipomoea batatas) descends from a wild plant native to South America. It also populates the Polynesian Islands, where evidence confirms that Native Hawaiians and other Indigenous peoples were cultivating the plant centuries before seafaring first occurred over the thousands of miles of ocean separating them from South America. To explain how the sweet potato was first introduced in Polynesia, botanist Pablo Muñoz-Rodríguez and colleagues analyzed the DNA of numerous varieties of the plant, concluding that Polynesian varieties diverged from South American ones over 100,000 years ago. Given that Polynesia was peopled only in the last three thousand years, the team concluded that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "the cultivation of the sweet potato in Polynesia likely predates its cultivation in South America.",
+      "B": "Polynesian peoples likely acquired the sweet potato from South American peoples only within the last three thousand years.",
+      "C": "human activity likely played no role in the introduction of the sweet potato in Polynesia.",
+      "D": "Polynesian sweet potato varieties likely descend from a single South American variety that was domesticated, not wild."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because if Polynesian sweet potatoes diverged genetically over 100,000 years ago, but humans arrived in Polynesia only in the last 3,000 years, the plant must have arrived via natural oceanic dispersal without human involvement."
+  },
+  {
+    "id": "sat8_rw2_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "The morphological novelty of echinoderms—marine invertebrates with radial symmetry, usually starlike, around a central point—impedes comparisons with most other animals, in which bilateral symmetry on an anterior-posterior (head to tail) axis through a trunk is typical. Particularly puzzling are sea stars, thought to have evolved a headless layout from a known bilateral origin. Applying genomic knowledge of Saccoglossus kowalevskii acorn worms (close relatives of sea stars, and thus expected to have similar markers for corresponding anatomical regions) to the body patterning genes of Patiria miniata sea stars, Laurent Formery et al. observed activity only in anterior genes across P. miniata's entire body and some posterior genes limited to the edges, suggesting that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "despite the greater prevalence of anterior genes in sea stars' genetic makeup, posterior genes active at the body's perimeter are primarily responsible for the starlike layout that distinguishes sea stars' radial symmetry from that of other echinoderms.",
+      "B": "contrary to the belief that they evolved from early ancestors with the bilateral form typical of many other animals, sea stars instead originated with an atypical body layout that was neither bilaterally nor radially symmetrical.",
+      "C": "although the two species are closely related, there is only minimal correspondence in the genetic markers for head, tail, and trunk region development in P. miniata sea stars and S. kowalevskii acorn worms.",
+      "D": "rather than undergoing changes resulting in the eventual elimination of a head region in their radial body plan, as previously assumed, sea stars' morphology evolved to completely lack a trunk and consist primarily of a head region."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because pervasive anterior gene expression across the body accompanied by the absence of trunk markers disproves the 'headless' assumption, revealing that sea stars evolved to be essentially headless-trunkless organisms composed primarily of head tissue."
+  },
+  {
+    "id": "sat8_rw2_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "To survive when water is scarce, embryos inside African turquoise killifish eggs ______ a dormant state known as diapause. In this state, embryonic development is paused for as long as two years—longer than the life span of an adult killifish.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "enter",
+      "B": "to enter",
+      "C": "having entered",
+      "D": "entering"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the plural subject 'embryos' requires a finite present tense plural verb ('enter') to complete the main clause."
+  },
+  {
+    "id": "sat8_rw2_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Formed in 1967 to foster political and economic stability within the Asia-Pacific region, the Association of Southeast Asian Nations was originally made up of five members: Thailand, the Philippines, Singapore, Malaysia, and Indonesia. By the end of the 1990s, the organization ______ its initial membership.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "has doubled",
+      "B": "had doubled",
+      "C": "doubles",
+      "D": "will double"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the past perfect verb 'had doubled' correctly expresses an action completed before a specific past point in time ('By the end of the 1990s')."
+  },
+  {
+    "id": "sat8_rw2_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "After the United Kingdom began rolling out taxes equivalent to a few cents on single-use plastic grocery bags in 2011, plastic-bag consumption decreased by up to ninety ______ taxes are subject to what economists call the \"rebound effect\": as the change became normalized, plastic-bag use started to creep back up.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "percent, such",
+      "B": "percent and such",
+      "C": "percent. Such",
+      "D": "percent such"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because a period is needed to separate the first independent clause ending at 'percent' from the new sentence beginning with 'Such taxes are subject...'"
+  },
+  {
+    "id": "sat8_rw2_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In 1966, Emmett Ashford became the first African American to umpire a Major League Baseball game. His energetic gestures announcing when a player had struck out and his habit of barreling after a hit ball to see if it would land out of ______ transform the traditionally solemn umpire role into a dynamic one.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "bounds helped",
+      "B": "bounds, helping",
+      "C": "bounds that helped",
+      "D": "bounds to help"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the compound subject ('His energetic gestures... and his habit...') requires a finite past tense main verb ('helped') to complete the predicate."
+  },
+  {
+    "id": "sat8_rw2_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "The forty-seven geothermal springs of Arkansas' Hot Springs National Park are sourced via a process known as natural groundwater recharge, in which rainwater percolates downward through the earth—in this case, the porous rocks of the hills around Hot ______ collect in a subterranean basin.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Springs to",
+      "B": "Springs: to",
+      "C": "Springs—to",
+      "D": "Springs, to"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because an em dash is needed after 'Hot Springs' to close the parenthetical aside that was opened by the em dash before 'in this case'."
+  },
+  {
+    "id": "sat8_rw2_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting ______ some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "varied:",
+      "B": "varied,",
+      "C": "varied, while",
+      "D": "varied while"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because a colon correctly introduces the subsequent independent clause that explains how the number of jams varied (24 options versus 6)."
+  },
+  {
+    "id": "sat8_rw2_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Nigerian author Buchi Emecheta's celebrated literary oeuvre includes The Joys of Motherhood, a novel about the changing roles of women in 1950s ______ a television play about the private struggles of a newlywed couple in Nigeria; and Head Above Water, her autobiography.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Lagos, A Kind of Marriage,",
+      "B": "Lagos; A Kind of Marriage,",
+      "C": "Lagos, A Kind of Marriage:",
+      "D": "Lagos; A Kind of Marriage"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because a semicolon is used to separate items in a complex series that contains internal commas, and a comma sets off the appositive phrase describing 'A Kind of Marriage'."
+  },
+  {
+    "id": "sat8_rw2_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Jetties—long, narrow structures that extend from a landmass into the water—are often constructed to protect coastlines from erosion. Jetties can sometimes have the opposite ______ obstructing the natural flow of sand along the shore can lead to increased erosion in some areas.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "effect, though;",
+      "B": "effect, though",
+      "C": "effect; though",
+      "D": "effect, though,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'though' is an adverb set off by a comma, and a semicolon properly joins the subsequent independent clause explaining the opposing effect."
+  },
+  {
+    "id": "sat8_rw2_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "The Alaska Native Language Archive (ANLA) is known for its impressive audio collection. ______ the ANLA has more than 5,000 audio recordings of Native Alaskan languages dating as far back as 1943.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "In fact,",
+      "B": "After,",
+      "C": "Regardless,",
+      "D": "Instead,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'In fact,' introduces emphasizing, specific factual evidence (over 5,000 historical recordings) supporting the claim that the archive is impressive."
+  },
+  {
+    "id": "sat8_rw2_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Etched into Peru's Nazca Desert are line drawings so large that they can only be fully seen from high above. Archaeologists have known of the lines since the 1920s, when a researcher spotted some from a nearby foothill, and they have been studying the markings ever since. ______ archaeologists' efforts are aided by drones that capture high-resolution aerial photographs of the lines.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Currently,",
+      "B": "In comparison,",
+      "C": "Still,",
+      "D": "However,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Currently,' shifts the discussion to modern technological practices (using drones today) continuing the historical investigation that started in the 1920s."
+  },
+  {
+    "id": "sat8_rw2_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "At two weeks old, the time their critical socialization period begins, wolves can smell but cannot yet see or hear. Domesticated dogs, ______ can see, hear, and smell by the end of two weeks. This relative lack of sensory input may help explain why wolves behave so differently around humans than dogs do: from a very young age, wolves are more wary and less exploratory.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "in other words,",
+      "B": "for instance,",
+      "C": "by contrast,",
+      "D": "accordingly,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'by contrast,' sets up a direct physiological distinction between sensory development in wolves and dogs at two weeks old."
+  },
+  {
+    "id": "sat8_rw2_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Upon first approaching artist Kurt Wenner's Dies Irae, a colorful scene painted on the surface of a cobblestone street in Mantua, Italy, one might assume a deep hole filled with life-sized, classically styled sculptures had opened up in the street. ______ by expertly applying the principles of perspective, Wenner created merely the illusion of depth.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Additionally,",
+      "B": "On the contrary,",
+      "C": "As a result,",
+      "D": "Next,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'On the contrary,' directly contradicts the mistaken assumption that a real physical hole opened in the street, revealing that it is an optical perspective illusion."
+  },
+  {
+    "id": "sat8_rw2_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "Economist Elinor Ostrom's studies of communities around the world have empirically demonstrated that common pool resources, such as grazing lands, can be sustainably managed by the people who use them (rather than through private entities or centralized governments). ______ Ostrom's work is a repudiation of the \"tragedy of the commons,\" the view that individuals will inevitably overexploit a finite shared resource if given unfettered access to it.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "By contrast,",
+      "B": "For example,",
+      "C": "That said,",
+      "D": "As such,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'As such,' indicates that being a direct refutation of the tragedy of the commons follows logically from the empirical demonstration in the previous sentence."
+  },
+  {
+    "id": "sat8_rw2_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Some sandstone arches in Utah's Arches National Park have been defaced by tourists' carvings.\n• Park rangers can smooth away some carvings using power grinders.\n• For deep carvings, power grinding is not always feasible because it can greatly alter or damage the rock.\n• Park rangers can use an infilling technique, which involves filling in carvings with ground sandstone and a bonding agent.\n• This technique is minimally invasive.",
+    "question": "The student wants to explain an advantage of the infilling technique. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "To remove carvings from sandstone arches in Utah's Arches National Park, power grinding is not always feasible.",
+      "B": "Filling in carvings with ground sandstone and a bonding agent is less invasive than smoothing them away with a power grinder, which can greatly alter or damage the sandstone arches.",
+      "C": "Park rangers can use a power grinding technique to smooth away carvings or fill them in with ground sandstone and a bonding agent.",
+      "D": "As methods for removing carvings from sandstone, power grinding and infilling differ in their level of invasiveness."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it directly explains the advantage: infilling is less invasive and preserves the sandstone arch without causing the mechanical surface damage associated with power grinders."
+  },
+  {
+    "id": "sat8_rw2_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Las sergas de Esplandián was a novel popular in sixteenth-century Spain.\n• The novel featured a fictional island inhabited solely by Black women and known as California.\n• That same century, Spanish explorers learned of an \"island\" off the west coast of Mexico.\n• They called it California after the island in the novel.\n• The \"island\" was actually the peninsula now known as Baja California (\"Lower California\"), which lies to the south of the US state of California.",
+    "question": "The student wants to emphasize the role a misconception played in the naming of a place. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The novel Las sergas de Esplandián featured a fictional island known as California.",
+      "B": "To the south of the US state of California lies Baja California (\"Lower California\"), originally called California after a fictional place.",
+      "C": "In the sixteenth century, Spanish explorers learned of a peninsula off the west coast of Mexico and called it California.",
+      "D": "Thinking it was an island, Spanish explorers called a peninsula California after an island in a popular novel."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it specifically emphasizes the misconception: Spanish explorers mistakenly thought a peninsula was an island and named it after a fictional novel's island."
+  }
+]

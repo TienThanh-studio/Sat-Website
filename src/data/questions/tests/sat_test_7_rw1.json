@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat7_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "On the basis of extensive calculations and models, astronomers in the 1990s predicted that the collision of two neutron stars or a neutron star and a black hole could release a massive burst of gamma rays in an event called a kilonova. This ______ was confirmed with observations in 2017.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "theory",
+      "B": "evidence",
+      "C": "constant",
+      "D": "experiment"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because a 'theory' is a scientifically plausible explanation or predictive model. The astronomers' 1990s prediction based on models was a theory that was confirmed observationally in 2017."
+  },
+  {
+    "id": "sat7_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is from John Muir's 1913 autobiography The Story of My Boyhood and Youth. Muir describes being on a boat.\n\nThe water was so clear that it was almost invisible, and when we floated slowly out over the plants and fishes, we seemed to be miraculously sustained in the air while exploring a veritable fairyland.",
+    "question": "As used in the text, what does the word \"clear\" most nearly mean?",
+    "isGridIn": false,
+    "options": {
+      "A": "Simple",
+      "B": "Understandable",
+      "C": "Obvious",
+      "D": "Transparent"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'transparent' means see-through. Muir describes the water as being so clear that it was almost invisible, allowing passengers to see plants and fish below as if floating in air."
+  },
+  {
+    "id": "sat7_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "At the turn of the twentieth century, Black residents of Richmond, Virginia, had few formal options for banking and other financial services. To ______ this situation, Maggie Lena Walker chartered the St. Luke Penny Savings Bank in 1903. The bank went on to provide home loans and savings opportunities to thousands of Black families over the following decades.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "prolong",
+      "B": "rectify",
+      "C": "retain",
+      "D": "highlight"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'rectify' means to correct, remedy, or set right an undesirable situation. Walker founded the bank to rectify the lack of banking options for Black residents."
+  },
+  {
+    "id": "sat7_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "The results of randomized clinical trials testing the efficacy of common medical interventions sometimes fail to ______ conclusions that practitioners reach based on their real-world observations of patients. While there are several possible reasons for this, one is that practitioners may overlook confounding variables that account for the results they attribute to the interventions in question.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "circumvent",
+      "B": "corroborate",
+      "C": "disseminate",
+      "D": "implement"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'corroborate' means to confirm, support, or validate with evidence. The text explains that controlled clinical trials sometimes fail to corroborate observations made in clinical practice."
+  },
+  {
+    "id": "sat7_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Diadromous fish migrate between freshwater and marine biomes during their life cycle. The migration's obligate nature is why diadromous fish can be ______ those that are merely euryhaline (able to tolerate high salinity): the euryhaline blackchin tilapia can survive high salinity, but its life cycle does not involve relocation to a different biome, as does that of the diadromous wild salmon.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "demarcated from",
+      "B": "reconstituted as",
+      "C": "conflated with",
+      "D": "derived from"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'demarcated from' means distinguished or set apart from. The obligate migration between biomes allows diadromous fish to be clearly demarcated from euryhaline fish."
+  },
+  {
+    "id": "sat7_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is from Joan Didion's memoir The Year of Magical Thinking. In the text, the author discusses her home life.\n\n[I]n California we heated our houses by building fires. We built fires even on summer evenings, because the fog came in. Fires said we were home, we had drawn the circle, we were safe through the night.\n\n©2005 by Joan Didion",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It illustrates that a fire provides comfort beyond physical warmth.",
+      "B": "It summarizes the information that came before it in the text.",
+      "C": "It explains that the house remains cold even in summer.",
+      "D": "It suggests that the author feels comfortable in her home with or without a fire."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because describing fires as saying 'we were home, we had drawn the circle, we were safe through the night' demonstrates psychological comfort and emotional security beyond mere physical heat."
+  },
+  {
+    "id": "sat7_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The majority of plastics today wind up in landfills or are, at best, recycled into materials that have a very limited range of applications. To address this problem, chemist Guoliang Liu and colleagues designed a reactor that melts polyethylene and polypropylene—two widely used plastics—into a wax. The wax can then be transformed into a surfactant (a chemical compound usable as a detergent). With this promising new method, plastic waste could be turned into a range of useful cleaning products.",
+    "question": "Which choice best states the function of the underlined portion of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It clarifies the meaning of a scientific term.",
+      "B": "It describes an environmental concern.",
+      "C": "It explains the significance of a scientific discovery.",
+      "D": "It identifies a result that confused the team."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the parenthetical phrase directly provides a definition and practical explanation for the scientific term 'surfactant'."
+  },
+  {
+    "id": "sat7_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is from H.D.'s 1916 poem \"Mid-Day.\" In the poem, the speaker is on a path in an outdoor setting.\n\nA slight wind shakes the seed-pods—\nmy thoughts are spent\nas the black seeds.\nMy thoughts tear me,\nI dread their fever.\nI am scattered in its whirl.\nI am scattered like\nthe hot shrivelled seeds.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It illustrates a change in the natural environment that the speaker implies is responsible for the growing misgivings described in the text.",
+      "B": "It establishes an example of consistency in the natural landscape that the speaker then contrasts with the unpredictability of human emotions.",
+      "C": "It presents an observation of an occurrence in the natural world that the speaker then expands on to convey a sense of a turbulent interior state.",
+      "D": "It evokes the ordinariness of an event in nature to suggest that the critical self-evaluation the speaker engages in is a common pursuit."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because observing the wind shaking the seedpods serves as a natural metaphor that the speaker immediately builds upon to express her own scattered, turbulent emotional state."
+  },
+  {
+    "id": "sat7_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "In 2023 literary scholar Jeremy Douglass cautioned technology investors and enthusiasts who predict conventional books' ultimate displacement by newer forms of media. Douglass observed that the concept of an \"interactive\" text is much older than technologists assume, extending back to the first time readers scratched notes into a text's margins. In addition, newer media, such as video games, haven't replaced older forms of entertainment, such as comic books, but rather exist alongside them. Douglass believes that rather than supplanting books, technology is simply making new forms of expression possible.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It challenges the stance of the investors and enthusiasts who are mentioned earlier in the text.",
+      "B": "It explains the basis for the claim made by the technologists mentioned in the text.",
+      "C": "It suggests that academics are better suited than investors to see the potential uses of contemporary interactive texts.",
+      "D": "It provides a historical anecdote about the technological challenges involved in reading the earliest interactive texts."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because noting that interactive reading is centuries old undermines the assumption of investors and enthusiasts who view interactive digital media as an unprecedented replacement for printed books."
+  },
+  {
+    "id": "sat7_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "In 2018, scientists discovered an immense aggregation of Muusoctopus robustus (pearl octopuses) along a hydrothermal vent 3,200 meters beneath the ocean's surface. Water temperatures at this site—named the Octopus Garden—climb as high as 11°C, much warmer than the ambient 1.6°C typical at this depth. Based on observations made over three years, scientists concluded that temperatures at the site likely confer reproductive benefits and that the site is used exclusively for reproduction—6,000 M. robustus adults, hatchlings, and eggs were observed at the garden, but no juveniles were present.",
+    "question": "Which statement about M. robustus and the Octopus Garden is best supported by the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "M. robustus leave the Octopus Garden upon reaching an intermediary stage of development.",
+      "B": "The M. robustus population at the Octopus Garden remains stable despite variations in water temperature.",
+      "C": "M. robustus nests in the Octopus Garden contain on average fewer but larger eggs than nests at similar ocean depths.",
+      "D": "The Octopus Garden provides an ideal feeding ground for M. robustus hatchlings."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the presence of eggs, hatchlings, and adults alongside the complete absence of juveniles indicates that octopuses disperse from the garden during their juvenile stage."
+  },
+  {
+    "id": "sat7_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "The following text is from Thomas Mann's 1924 novel The Magic Mountain, translated by John E. Woods in 1995.\n\nThe story of Hans Castorp that we intend to tell here—not for his sake (for the reader will come to know him as a perfectly ordinary, if engaging young man), but for the sake of the story itself, which seems to us to be very much worth telling (although in Hans Castorp's favor it should be noted that it is his story, and that not every story happens to everybody)—is a story that took place long ago, and is, so to speak, covered with the patina of history and must necessarily be told with verbs whose tense is that of the deepest past.\n\n©1995 by Alfred A. Knopf, Inc.",
+    "question": "What does the text most strongly suggest about the story of Hans Castorp?",
+    "isGridIn": false,
+    "options": {
+      "A": "Though it is true that stories of even the most uninteresting people are themselves interesting because all people are unique, the reason this story is interesting is nonetheless difficult to understand because of the passage of time.",
+      "B": "Even though it is a story of a person of no particular importance, its age and the manner in which it therefore must be told are both indicators that the story itself is important.",
+      "C": "Like all stories about the lives of inconsequential people, this story must necessarily be related in a particular way if the reason the story is consequential is to be made evident to the audience.",
+      "D": "It is a remarkable story that happened to an unremarkable person, though one could plausibly argue that because the story is valuable, some of its value accrues to the person at its center."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the narrator describes Castorp as 'perfectly ordinary' yet central to a story 'very much worth telling', adding in his favor that some distinction accrues to him because 'it is his story'."
+  },
+  {
+    "id": "sat7_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Researcher Judith Hilton and her team interviewed 55 people about which factors would make them switch from using single-use plastic containers to reusable containers. The graph shows three of the factors mentioned in the interviews: convenience (about 70%), costs (about 50%), and established behaviors (about 25%).",
+    "question": "According to the graph, about what percentage of participants mentioned costs in the interviews?",
+    "isGridIn": false,
+    "options": {
+      "A": "10%",
+      "B": "95%",
+      "C": "25%",
+      "D": "50%"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the bar for 'costs' aligns directly with the 50% mark on the vertical axis."
+  },
+  {
+    "id": "sat7_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "A student in a political science course is writing a paper on Aristotle's The Politics, in which Aristotle offers his opinion on political instability and gives advice on how constitutions can be preserved. Aristotle observes that different forms of government can fall in different ways—for example, oligarchies might grant power to military leaders during wartime who refuse to relinquish that power during peacetime—but some methods of preserving order apply across all forms of government. The student claims that in particular Aristotle asserts that in a healthy state obedience to law must be as close to absolute as possible and that even minor infractions should not be ignored.",
+    "question": "Which quotation from a philosopher's analysis of The Politics would best support the student's claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"When constructing his argument regarding the characteristics of a well-functioning government, Aristotle asserts that 'Transgression creeps in unperceived and at last ruins the state,' illustrating this idea with a comparison to frequent small expenditures slowly and almost imperceptibly chipping away at a fortune until it is ultimately depleted.\"",
+      "B": "\"When Aristotle writes on the necessity of avoiding corruption in government, he proposes that 'every state should be so administered and so regulated by law that its magistrates cannot possibly make money.' In particular, he thinks oligarchies are particularly susceptible to corruption through bribery.\"",
+      "C": "\"When Aristotle considers the health of constitutions, he states that 'Constitutions are preserved when their destroyers are at a distance, and sometimes also because they are near, for the fear of them makes the government keep in hand the constitution.' He holds that rulers who wish to see constitutions preserved must continually remind the populace of the dangers that would result from a constitutional collapse.\"",
+      "D": "\"When contrasting different forms of government, Aristotle holds that 'oligarchies may last, not from any inherent stability in such forms of government, but because the rulers are on good terms both with the unenfranchised and with the governing classes.' That is, oligarchic leaders who wish to hold on to power will introduce members of disenfranchised classes into government in a participatory role.\""
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because citing Aristotle's warning that small, unperceived transgressions gradually ruin a state directly supports the student's claim that minor infractions must never be ignored."
+  },
+  {
+    "id": "sat7_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Almost all works of fiction contain references to the progression of time, including the time of day when events in a story take place. In a 2020 study, Allen Kim, Charuta Pethe, and Steven Skiena claim that an observable pattern in such references reflects a shift in human behavior prompted by the spread of electric lighting in the late nineteenth century. The researchers drew this conclusion from an analysis of more than 50,000 novels spanning many centuries and cultures, using software to recognize and tally both specific time references—that is, clock phrases, such as 7 a.m. or 2:30 p.m.—and implied ones, such as mentions of meals typically associated with a particular time of day.",
+    "question": "Which finding from the study, if true, would most directly support the researchers' conclusion?",
+    "isGridIn": false,
+    "options": {
+      "A": "Novels published after the year 1800 include the clock phrase 10 a.m. less often than novels published before the year 1800 do.",
+      "B": "Novels published after 1880 contain significantly more references to activities occurring after 10 p.m. than do novels from earlier periods.",
+      "C": "Among novels published in the nineteenth century, implied time references become steadily more common than clock phrases as publication dates approach 1900.",
+      "D": "The time references of noon (12 p.m.) and midnight (12 a.m.) are used with roughly the same frequency in the novels."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because an increase in late-night activities (after 10 p.m.) in novels published after 1880 reflects the societal shift enabled by widespread electric illumination."
+  },
+  {
+    "id": "sat7_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "In a study of urban physical expansion, Richa Mahtta et al. conducted a meta-analysis of more than 300 cities worldwide to determine whether urban land expansion (ULE) was more strongly influenced by urban population growth or by growth in gross domestic product (GDP) per capita, a measure of economic activity. Because efficient national government is necessary to provide urban services and infrastructure that attract economic investment, Mahtta et al. propose that absent other factors, the importance of GDP per capita growth to ULE would likely increase relative to the importance of population growth as governments become more efficient. If true, this suggests the possibility that ______",
+    "question": "Which choice most effectively uses data from the graph to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "national governments of countries in Region 1 experienced declines in efficiency in the period from 2000 to 2014, relative to the period from 1970 to 2000.",
+      "B": "countries in Region 1 experienced a slower rate of economic growth in the period from 2000 to 2014 than countries in Region 2 did, despite increasing national government efficiency in Region 1.",
+      "C": "national governments of most countries in Region 2 became more efficient in the period from 2000 to 2014 than they had been in the period from 1970 to 2000, but those of several countries in this region did not.",
+      "D": "national governments of countries in Region 1 and in Region 2 generally became more efficient in the period from 2000 to 2014 than they had been in the period from 1970 to 2000, but at different rates."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the graph shows that in Region 1, the attribution of ULE to GDP per capita growth decreased in 2000–2014 compared to 1970–2000, which, under the authors' hypothesis, corresponds to declining government efficiency."
+  },
+  {
+    "id": "sat7_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "A student is researching the Chinese government's 1992 shift to a market economy that emphasizes trade liberalization. One means of trade liberalization involves expanding from ordinary imports into an emphasis on processing imports, which have two types: processing with assembly (in which a firm obtains raw materials from a foreign trading partner without payment and sells the final goods to that partner, charging for assembly) and processing with inputs (in which a firm expends capital to buy raw materials from a trading partner, processes them into final goods, and sells those goods to whichever trading partner it chooses). The student asserts that while initial efforts at trade liberalization were shaped by Chinese firms' limited capital, this situation resolved during the 2000s.",
+    "question": "Which choice best describes data from the graph that support the student's assertion?",
+    "isGridIn": false,
+    "options": {
+      "A": "Processing imports with inputs were greater than both ordinary imports and processing imports with assembly in 2006.",
+      "B": "From 2000 to 2006, processing imports with inputs rose much more sharply than processing imports with assembly did.",
+      "C": "From 2000 to 2006, neither processing imports with inputs nor processing imports with assembly were greater than ordinary imports.",
+      "D": "Processing imports with assembly were greater in 2006 than processing imports with inputs in 2000."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the rapid surge in capital-intensive processing with inputs compared to assembly-only processing demonstrates that firms' capital constraints were resolved during the 2000s."
+  },
+  {
+    "id": "sat7_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Narwhals are shy whales that live in the remote Arctic Ocean. Some of them have a long tusk, like a unicorn horn, with sensitive nerves. Narwhals are known for this tusk, but many actually don't have one and its purpose is unknown. One group of scientists came up with a possible purpose in 2014. The scientists suggested that the tusk may help narwhals determine when water around them is likely to start freezing and become dangerous for them. Marine biologist Kristin Laidre disagrees with that idea, though. She reasons that if the narwhal's tusk serves such an important purpose, then it's most likely that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "some narwhals would seek a new habitat.",
+      "B": "fewer marine animals would also have tusks.",
+      "C": "more narwhals would have a tusk.",
+      "D": "narwhals would become less shy over time."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because if the tusk were essential for detecting life-threatening freezing water, natural selection would dictate that far more narwhals (including females) would possess it."
+  },
+  {
+    "id": "sat7_rw1_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "To address the susceptibility of materials used in components of high-performance machinery, such as aircraft engines, to creep (deformation that is induced by persistent mechanical stress and that often occurs at elevated temperatures), materials researchers have developed silicon carbide (SiC) fibers for producing aerospace composites. Testing the thermomechanical properties of several commercially available SiC fibers, Ramakrishna T. Bhatt et al. found that in comparison with two polymer-derived SiC fibers, a nitrogen-treated SiC fiber exhibited a lower minimum creep rate, a measure of the rate at which a stress-exposed material deforms at a constant temperature and uniaxial load. The finding suggests that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "unlike the two polymer-derived SiC fibers, the nitrogen-treated SiC fiber can substantially inhibit creep, provided that temperatures and loads are consistent.",
+      "B": "the two polymer-derived SiC fibers likely hold similar potential for reducing the creep resistance of materials exposed to stress and elevated temperatures, thus prolonging the life span of aerospace machinery.",
+      "C": "composites based on the two polymer-derived SiC fibers have chemical properties that may improve the mechanical and thermal stability of aerospace equipment to a greater extent than do composites based on the nitrogen-treated SiC fiber.",
+      "D": "aerospace composites containing the nitrogen-treated SiC fiber may have the ability to withstand mechanical stress for a longer period of time than can aerospace composites containing either of the two polymer-derived SiC fibers."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because exhibiting a lower minimum creep rate means the nitrogen-treated material deforms more slowly, enabling it to withstand persistent mechanical stress for longer durations."
+  },
+  {
+    "id": "sat7_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "One of the earliest known maps is a Babylonian clay tablet thought to be almost 4,500 years old. The map ______ the area of a plot of land, shows a river valley, and includes the cardinal directions.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "describes",
+      "B": "describe",
+      "C": "have described",
+      "D": "are describing"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the singular subject 'The map' requires the singular present tense verb 'describes' to maintain parallel structure with 'shows' and 'includes'."
+  },
+  {
+    "id": "sat7_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Eighteen letters written by Louisa May Alcott, author of the popular novel Little Women (1868), can be found at the New York Historical Society. ______ letters demonstrate Alcott's keen business sense in her interactions with publishers.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "One",
+      "B": "That",
+      "C": "This",
+      "D": "These"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the plural demonstrative determiner 'These' agrees with the plural noun 'letters'."
+  },
+  {
+    "id": "sat7_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "The Dust Bowl was a period of severe drought that plagued the Great Plains of the US during the 1930s. During this time, dust storms ______ over 100 million acres of land. They even reached as far east as New York City.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "are affecting",
+      "B": "will have affected",
+      "C": "will affect",
+      "D": "affected"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the simple past tense verb 'affected' matches the historical timeframe ('during the 1930s', 'During this time')."
+  },
+  {
+    "id": "sat7_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Many mechanical calculators were powered by a notched cylinder mechanism called the Leibniz wheel. Leibniz wheel calculators were popular in the first half of the twentieth ______ these ingenious devices were eventually replaced by electronic calculators.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "century",
+      "B": "century,",
+      "C": "century, but",
+      "D": "century that"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because a comma paired with the coordinating conjunction 'but' correctly connects the two independent clauses."
+  },
+  {
+    "id": "sat7_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Featuring jagged peaks of black ink surrounded by hazy swirls of blue and green paint, Zhang Daqian's 1983 painting Panorama of Mount Lu is inspired by the tradition of qinglü shanshui, a type of Chinese landscape painting ______ by the use of blue and green hues to depict ethereal, otherworldly landscapes.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "has been characterized",
+      "B": "will be characterized",
+      "C": "characterized",
+      "D": "is characterized"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the past participle 'characterized' forms a nonfinite participial phrase modifying 'a type of Chinese landscape painting'."
+  },
+  {
+    "id": "sat7_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Increasing the heat on an uncovered boiling pot of water does not increase the temperature of the water. What increases is the rate at which the water turns to ______ a pressure cooker pot, though, an airtight seal traps the vapor in the pot, creating pressure that allows the temperature of the water to increase past its boiling point.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "vapor. With",
+      "B": "vapor with",
+      "C": "vapor, with",
+      "D": "vapor and with"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because a period is required to close the independent clause ending at 'vapor' before beginning the next sentence with the prepositional phrase 'With a pressure cooker pot...'."
+  },
+  {
+    "id": "sat7_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Wanting to celebrate the 100th anniversary of the Alaska Purchase, ______ up with a motto that best captured the state's unique character. The commission selected \"North to the Future,\" submitted by Juneau journalist Richard Peter, as its winning entry.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "a contest sponsored by the Alaska Centennial Commission would award $300 to an individual who came",
+      "B": "an award of $300 would go to an individual in a contest sponsored by the Alaska Centennial Commission for coming",
+      "C": "$300 would be awarded to an individual by the Alaska Centennial Commission in a contest for coming",
+      "D": "the Alaska Centennial Commission sponsored a contest that would award $300 to an individual who came"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the entity that was 'Wanting to celebrate the 100th anniversary' is 'the Alaska Centennial Commission', avoiding a dangling modifier."
+  },
+  {
+    "id": "sat7_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Recently unearthed Neronian tools in France dating to 54,000 years ago and attributed to Homo sapiens may provide evidence that interactions between Neanderthals and modern humans occurred 10,000 years earlier than was previously ______ finding that, if true, would overturn current theories about H. sapiens migration during the Upper Paleolithic.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "supposed; a",
+      "B": "supposed. A",
+      "C": "supposed a",
+      "D": "supposed, a"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because a comma correctly attaches the appositive phrase ('a finding that, if true...') to the preceding independent clause."
+  },
+  {
+    "id": "sat7_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Guard cells are specialized cells that are part of a plant's pores. These cells help regulate the amount of carbon dioxide a plant takes in. ______ they help regulate a plant's water loss.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Additionally,",
+      "B": "Previously,",
+      "C": "In conclusion,",
+      "D": "Instead,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Additionally,' introduces an additional biological function of guard cells alongside carbon dioxide regulation."
+  },
+  {
+    "id": "sat7_rw1_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Angana Chaudhuri is a scientist.\n• Chaudhuri studies sedimentary rocks.\n• A scientist who studies sedimentary rocks is called a sedimentologist.\n• Shale, chalk, and sandstone are examples of sedimentary rocks.",
+    "question": "The student wants to identify what type of scientist Chaudhuri is. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Chalk is a type of sedimentary rock.",
+      "B": "Some scientists study shale, chalk, and sandstone.",
+      "C": "There are scientists who study sedimentary rocks.",
+      "D": "Chaudhuri is a sedimentologist."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it directly and concisely identifies Chaudhuri's specific scientific profession ('a sedimentologist')."
+  },
+  {
+    "id": "sat7_rw1_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• \"Raymond's Run\" is a short story.\n• It was written by African American author Toni Cade Bambara.\n• It was first published in her book Gorilla, My Love in 1972.\n• It is told from a first person perspective.\n• It takes place in Harlem.",
+    "question": "The student wants to indicate where the short story takes place. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"Raymond's Run\" takes place in Harlem.",
+      "B": "\"Raymond's Run\" was published in Gorilla, My Love.",
+      "C": "\"Raymond's Run\" is told from a first person perspective.",
+      "D": "\"Raymond's Run\" was written by Toni Cade Bambara."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it directly specifies the setting of the short story ('takes place in Harlem')."
+  },
+  {
+    "id": "sat7_rw1_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• The Royal Alcázar of Seville is a historic royal palace in Andalucía, Spain.\n• The palace is famous for its intricate tilework.\n• The palace features majolica and arista tiles.\n• In the majolica style, designs are painted directly on the ceramic tiles.\n• In the arista style, designs are stamped into the ceramic tiles.",
+    "question": "The student wants to contrast the two styles of tiles. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Tiles in the majolica and arista styles can be found in the Royal Alcázar of Seville in Andalucía, Spain.",
+      "B": "Featuring tiles in the majolica and arista styles, the Royal Alcázar of Seville in Spain is famous for its intricate tilework.",
+      "C": "In the arista style, designs are stamped into the ceramic tiles, whereas in the majolica style, the designs are painted directly on them.",
+      "D": "Among the famous tilework of the Royal Alcázar of Seville are majolica style tiles, made by painting designs directly on the ceramic tiles."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it directly contrasts the manufacturing techniques of arista tiles (stamped) versus majolica tiles (painted directly)."
+  },
+  {
+    "id": "sat7_rw1_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Musicians around the world have used protest songs to raise awareness about human rights violations.\n• US folk singer Aunt Molly Jackson released the protest song \"Poor Miner's Farewell\" in 1932.\n• It exposed the unlivable wages and dangerous working conditions coal miners faced in Kentucky during the 1920s and 1930s.\n• South African singer-songwriter Hugh Masekela released the protest song \"Bring Him Back Home\" in 1987.\n• It called on the South African government to free Nelson Mandela, an anti-apartheid leader who'd been unjustly imprisoned.",
+    "question": "The student wants to contrast the song \"Poor Miner's Farewell\" with the song \"Bring Him Back Home.\" Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The songs \"Poor Miner's Farewell\" and \"Bring Him Back Home\" both raised awareness about human rights violations.",
+      "B": "While both are protest songs, \"Poor Miner's Farewell\" is about coal miners in Kentucky, whereas \"Bring Him Back Home\" is about the anti-apartheid leader Nelson Mandela.",
+      "C": "Hugh Masekela's song \"Bring Him Back Home,\" released in 1987, called on the South African government to free Nelson Mandela.",
+      "D": "Released in 1932 by Aunt Molly Jackson, the song \"Poor Miner's Farewell\" was a protest against the unlivable wages and dangerous working conditions faced by Kentucky coal miners."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it clearly contrasts the subject matter of the two songs (Kentucky coal miners vs. Nelson Mandela)."
+  },
+  {
+    "id": "sat7_rw1_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Political scientist Graham Allison is known for his Thucydides trap theory.\n• Allison's theory states that whenever \"a rising power is threatening to displace a ruling power,\" conflict is likely.\n• The theory is based on Thucydides's explanation of the conflict between Athens and Sparta.\n• Thucydides wrote that \"the rise of Athens and the fear this instilled in Sparta\" made conflict \"inevitable.\"\n• History professor Edmund Stewart recently challenged the historical basis of the theory.\n• Stewart claimed that Athens was not a rising power and that the rivals experienced a \"clash of cultures\" instead.",
+    "question": "The student wants to use a quotation to challenge Thucydides's explanation of the conflict between Athens and Sparta. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "According to Allison's Thucydides trap theory, whenever \"a rising power is threatening to displace a ruling power,\" conflict is likely.",
+      "B": "Thucydides wrote that conflict between the two powers was \"inevitable,\" although Stewart later challenged the historical basis of this claim.",
+      "C": "According to Stewart, a \"clash of cultures\" between Athens and Sparta caused the conflict, not Athens's rise.",
+      "D": "Thucydides explained that conflict was caused by \"the rise of Athens and the fear this instilled in Sparta,\" but Allison disagreed, seeing the conflict as an example of the Thucydides trap."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it quotes Stewart's counter-explanation ('clash of cultures') to directly dispute Thucydides's thesis regarding the rise of Athens."
+  },
+  {
+    "id": "sat7_rw1_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Researchers in a 2021 study wanted to determine the rate at which 17 languages conveyed both information and syllables.\n• They calculated the bits of information conveyed per second (the IR, or information rate).\n• The IR was found to be approximately consistent across the 17 languages (an average of 39 bits per second).\n• They calculated the number of syllables spoken per second (the SR, or syllable rate).\n• Spanish had the second-fastest SR (7.7 syllables per second).\n• Vietnamese had the sixteenth-fastest SR (5.3 syllables per second).",
+    "question": "The student wants to present an overview of the study's findings. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The 2021 study determined the information rate (IR) of 17 languages in bits of information conveyed per second.",
+      "B": "Researchers found that information was conveyed more quickly in Spanish, at 7.7 syllables per second, than in Vietnamese, at 5.3 syllables per second.",
+      "C": "Vietnamese had the sixteenth-fastest syllable rate, lower than that of Spanish, which had the second-fastest; however, Spanish had the lower information rate of the two.",
+      "D": "Though some of the languages differed in number of syllables spoken per second, all 17 conveyed information at roughly the same rate."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it provides a comprehensive overview of the study's main conclusion: syllable speed varied among languages, but the information transmission rate was roughly constant across all 17."
+  }
+]

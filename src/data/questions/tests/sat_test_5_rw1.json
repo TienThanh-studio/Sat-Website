@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat5_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is from the 1913 story \"The King's Coin\" by Emily Pauline Johnson, a Kanienkahagen (Mohawk) writer also known as Tekahionwake. Fox-Foot, a young Ojibwe man, is guiding a group of fur traders who are traveling by canoe and suspects that they are being followed.\\n\\nAt supper time, Fox-Foot would allow no fire to be built, no landing to be made, no trace of their passing to be left. They ate canned meat and marmalade, drank again of the stream and pushed on, until just at dusk they reached the edge of a long, still lake, with shores of granite and dense fir forest.",
+    "question": "As used in the text, what does the word \"trace\" most nearly mean?",
+    "isGridIn": false,
+    "options": {
+      "A": "Evidence",
+      "B": "Blemish",
+      "C": "Amount",
+      "D": "Sketch"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'trace' in this context means evidence or a visible mark showing the group's passing. Fox-Foot did not want anyone following them to find any evidence of their presence."
+  },
+  {
+    "id": "sat5_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Many ancient sculptures of people's heads are missing their noses. This is because the nose is the most ______ part of a sculpture of a person's head. It is delicate and sticks out from the rest of the sculpture, making it especially easy to break.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "recognizable",
+      "B": "fragile",
+      "C": "common",
+      "D": "sophisticated"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'fragile' means delicate and easily broken. The text explicitly notes that the nose is 'delicate and sticks out... making it especially easy to break.'"
+  },
+  {
+    "id": "sat5_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "K.D. Leka and colleagues found that the Sun's corona provides an advance indication of solar flares—intense eruptions of electromagnetic radiation that emanate from active regions in the Sun's photosphere and can interfere with telecommunications on Earth. Preceding a flare, the corona temporarily exhibits increased brightness above the region where the flare is ______",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "antecedent",
+      "B": "impending",
+      "C": "innocuous",
+      "D": "perpetual"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'impending' means about to happen or imminent. The brightening in the corona provides an advance warning of an upcoming solar flare."
+  },
+  {
+    "id": "sat5_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "To demonstrate that the integrity of underground metal pipes can be assessed without unearthing the pipes, engineer Aroba Saleem and colleagues ______ the tendency of some metals' internal magnetic fields to alter under stress: the team showed that such alterations can be measured from a distance and can reveal concentrations of stress in the pipes.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "hypothesized",
+      "B": "discounted",
+      "C": "redefined",
+      "D": "exploited"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'exploited' means made productive use of. Saleem and her team took advantage of the metals' magnetic alterations to detect pipeline stress non-invasively."
+  },
+  {
+    "id": "sat5_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Despite the generalizations about human behavior they have produced, many studies of behavioral psychology have used highly unrepresentative subject pools: students at the colleges and universities where the researchers are employed. To ______ this situation, it is necessary to actively recruit subjects from diverse backgrounds and locations.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "sanction",
+      "B": "ameliorate",
+      "C": "rationalize",
+      "D": "postulate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'ameliorate' means to improve or remedy an undesirable condition. Actively recruiting participants from diverse backgrounds helps remedy unrepresentative pools."
+  },
+  {
+    "id": "sat5_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is adapted from Jean Webster's 1912 novel Daddy-Long-Legs. The narrator is a young college student writing letters detailing her weekly experiences.\\n\\n[The college is] organizing the Freshman basket-ball team and there's just a chance that I shall make it. I'm little of course, but terribly quick and wiry and tough. While the others are hopping about in the air, I can dodge under their feet and grab the ball.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To compare basketball with other sports",
+      "B": "To provide details of how to play basketball",
+      "C": "To state how players will be chosen for the basketball team",
+      "D": "To explain why the narrator thinks she might make the basketball team"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the narrator details her physical traits (quick, wiry, tough, dodging under taller players) to justify why she has a chance of making the team."
+  },
+  {
+    "id": "sat5_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "In the late 1800s, Spanish-language newspapers flourished in cities across Texas. San Antonio alone produced eleven newspapers in Spanish between 1890 and 1900. But El Paso surpassed all other cities in the state. This city produced twenty-two newspapers in Spanish during that period. El Paso is located on the border with Mexico and has always had a large population of Spanish speakers. Thus, it is unsurprising that this city became such a rich site for Spanish-language journalism.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To compare Spanish-language newspapers published in Texas today with ones published there during the late 1800s",
+      "B": "To explain that Spanish-language newspapers thrived in Texas and especially in El Paso during the late 1800s",
+      "C": "To argue that Spanish-language newspapers published in El Paso influenced the ones published in San Antonio during the late 1800s",
+      "D": "To explain why Spanish-language newspapers published in Texas were so popular in Mexico during the late 1800s"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text focuses on how Spanish-language journalism flourished in Texas during the late nineteenth century, highlighting El Paso's exceptional production."
+  },
+  {
+    "id": "sat5_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Chile's Atacama Desert is one of the driest places on Earth. Mary Beth Wilhelm and other astrobiologists search for life, or its remains, in this harsh place because the desert closely mirrors the extreme environment on Mars. The algae and bacteria found in Atacama's driest regions may offer clues about Martian life. By studying how these and other microorganisms survive such extreme conditions on Earth, Wilhelm's team hopes to determine whether similar life might have existed on Mars and to develop the best tools to look for evidence of it.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "To contrast the conditions in the Atacama Desert with those on Mars",
+      "B": "To explain why many life-forms cannot survive in the Atacama Desert",
+      "C": "To indicate why astrobiologists choose to conduct research in the Atacama Desert",
+      "D": "To describe certain limitations to conducting scientific study in the Atacama Desert"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the underlined sentence explains that researchers work in the Atacama Desert because its arid environment closely mimics Martian conditions."
+  },
+  {
+    "id": "sat5_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "More than 60% of journeys in Mexico City occur via public transit, but simply reproducing a feature of the city's transit system—e.g., its low fares—is unlikely to induce a significant increase in another city's transit ridership. As Erick Guerra et al. have shown, transportation mode choice in urban areas of Mexico is the product of a complex mix of factors, including population density, the spatial distribution of jobs, and demographic characteristics of individuals. System features do affect ridership, of course, but there is an irreducibly contextual dimension of transportation mode choice.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It presents an objection to the argument of Guerra et al. about transportation mode choice in urban areas of Mexico.",
+      "B": "It explains why it is challenging to influence transit ridership solely by altering characteristics of a transit system.",
+      "C": "It illustrates the claim that a characteristic associated with high transit ridership in Mexico City is not associated with high transit ridership elsewhere.",
+      "D": "It substantiates the assertion that population density, the spatial distribution of jobs, and demographic characteristics are important factors in transportation mode choice."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because emphasizing the 'irreducibly contextual dimension' explains why simply modifying isolated system traits (like fares) cannot reliably shift ridership elsewhere."
+  },
+  {
+    "id": "sat5_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Changes to vegetation cover and other human activities influence carbon and nitrogen levels in soil, though how deep these effects extend is unclear. Hypothesizing that differences in land use lead to differences in carbon and nitrogen levels that are not restricted to the topsoil layer (0–30 cm deep), Chukwuebuka Okolo and colleagues sampled soils across multiple land-use types (e.g., grazing land, cropland, forest) within each of several Ethiopian locations. They found, though, that across land-use types, carbon and nitrogen decreased to comparably low levels beyond depths of 30 cm.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It describes a phenomenon that scientists do not fully understand, explains a research team's hypothesis about that phenomenon, and then describes a finding that led the team to refine the hypothesis.",
+      "B": "It introduces an unresolved scientific question, presents a research team's hypothesis pertaining to that question, and then describes an observation made by the team that conflicts with that hypothesis.",
+      "C": "It discusses a process that scientists are somewhat unclear about, introduces competing hypotheses about that process, and then explains how a research team concluded that one of those hypotheses is likely correct.",
+      "D": "It explains a hypothesis that has been the subject of scientific debate, discusses how a research team tested that hypothesis, and then presents data the team collected that validate the hypothesis."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the text introduces an unresolved question (how deep soil impacts reach), presents the hypothesis (effects extend below 30 cm), and presents an empirical finding that contradicted that hypothesis."
+  },
+  {
+    "id": "sat5_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Recently, scientists looked at data collected by NASA's InSight lander to learn more about seismic activity on Mars, known as marsquakes. The data show that the marsquakes all started from the same location on the planet. This discovery was surprising to scientists, as they expected that the marsquakes would originate from all over the planet because of the cooling of the planet's surface. Now, scientists believe that there could be areas of active magma flows deep beneath the planet's surface that trigger the marsquakes.",
+    "question": "According to the text, what was surprising to scientists studying the seismic activity data from NASA's InSight lander?",
+    "isGridIn": false,
+    "options": {
+      "A": "The surface temperature of Mars has been rising.",
+      "B": "There were different types of seismic waves causing marsquakes.",
+      "C": "NASA's InSight lander collected less data than scientists had expected.",
+      "D": "All the marsquakes started from the same location on the planet."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the text states that scientists were surprised to discover that 'the marsquakes all started from the same location on the planet' rather than everywhere."
+  },
+  {
+    "id": "sat5_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "The ancient writing system used in the Maya kingdoms of southern Mexico and Central America had a symbol for the number zero. The earliest known example of the symbol dates to more than 2,000 years ago. At that time, almost none of the writing systems elsewhere in the world possessed a zero symbol. And the use of zero in Mexico and Central America may be even more ancient. Some historians suggest that Maya mathematicians inherited it from the Olmec civilization, which flourished in the region 2,400–3,600 years ago.",
+    "question": "According to the text, what do some historians suggest about Maya civilization?",
+    "isGridIn": false,
+    "options": {
+      "A": "Maya civilization acquired the use of zero from the Olmec civilization.",
+      "B": "Maya civilization respected its historians more than it respected its mathematicians.",
+      "C": "Maya civilization was highly secretive about its intellectual achievements.",
+      "D": "Maya civilization tried to introduce its writing system to other civilizations."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the final sentence states that historians suggest Maya mathematicians inherited the concept and symbol of zero from the Olmec civilization."
+  },
+  {
+    "id": "sat5_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "\"The Bet\" is an 1889 short story by Anton Chekhov. In the story, a banker is described as being very upset about something: ______",
+    "question": "Which quotation from \"The Bet\" most effectively illustrates the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"Then the banker cautiously broke the seals off the door and put the key in the keyhole.\"",
+      "B": "\"It struck three o'clock, the banker listened; everyone was asleep in the house and nothing could be heard outside but the rustling of the chilled trees.\"",
+      "C": "\"The banker, spoilt and frivolous, with millions beyond his reckoning, was delighted at the bet.\"",
+      "D": "\"When [the banker] got home he lay on his bed, but his tears and emotion kept him for hours from sleeping.\""
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the mention of the banker's 'tears and emotion' keeping him awake for hours clearly portrays him as being extremely upset."
+  },
+  {
+    "id": "sat5_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The passage of time is among the many obstacles faced by scientists who are pursuing de-extinction efforts—that is, efforts to use breeding or a mixture of cloning and genetic engineering to bring back extinct species. Specifically, researchers are concerned that the longer a species has been extinct, the less likely it is that a suitable habitat still exists for that species. Among candidate species for de-extinction, this problem would be especially concerning for the ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "passenger pigeon (Ectopistes migratorius), which became extinct only a few years after the huia (Heteralocha acutirostris).",
+      "B": "saber-toothed cat (Smilodon), which became extinct 11,000 years ago.",
+      "C": "woolly mammoth (Mammuthus primigenius), which became extinct several thousand years before the saber-toothed cat (Smilodon).",
+      "D": "Caribbean monk seal (Monachus tropicalis), which became extinct in 1952."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the saber-toothed cat has been extinct the longest (11,000 years ago) among the listed species, making habitat loss the most acute concern."
+  },
+  {
+    "id": "sat5_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "\"The Yellow Wallpaper\" is an 1892 short story by Charlotte Perkins Gilman. In the story, the narrator expresses mixed feelings about her surroundings: ______",
+    "question": "Which quotation from \"The Yellow Wallpaper\" most effectively illustrates the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"This wallpaper has a kind of sub-pattern in a different shade, a particularly irritating one, for you can only see it in certain lights, and not clearly then.\"",
+      "B": "\"By moonlight—the moon shines in all night when there is a moon—I wouldn't know it was the same paper.\"",
+      "C": "\"I'm really getting quite fond of the big room, all but that horrid [wall]paper.\"",
+      "D": "\"The color is repellant, almost revolting; a smouldering, unclean yellow, strangely faded by the slow-turning sunlight.\""
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because being 'fond of the big room' (positive) while disliking the 'horrid paper' (negative) demonstrates mixed feelings about the surroundings."
+  },
+  {
+    "id": "sat5_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "The population of the coral Lophelia pertusa declined significantly around 9,000 years ago in the Alboran Sea and around 11,000 years ago near the Mauritanian coast. Using the ratio of manganese to calcium, which inversely correlates with ocean oxygenation levels, marine scientist Rodrigo da Costa Portilho-Ramos and colleagues evaluated whether oxygenation played a role in the declines of L. pertusa. The researchers concluded that oxygenation may have been important in the Alboran Sea but not near the Mauritanian coast, since ______",
+    "question": "Which choice most effectively uses data from the graph to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "a substantial increase in oxygenation in the Alboran Sea corresponded with the local decline in L. pertusa, but the opposite relationship between oxygenation and L. pertusa was found near the Mauritanian coast.",
+      "B": "L. pertusa declined in the Alboran Sea during a period of substantial local decline in oxygenation, but L. pertusa declined near the Mauritanian coast during a period of little local change in oxygenation.",
+      "C": "oxygenation in the Alboran Sea was higher before the decline in L. pertusa than after the decline, whereas oxygenation near the Mauritanian coast was relatively low both before and after the decline in L. pertusa.",
+      "D": "oxygenation in the Alboran Sea tended to be substantially higher than oxygenation near the Mauritanian coast during the period studied."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the graph shows a surge in the Mn/Ca ratio (reflecting falling oxygenation) in the Alboran Sea around 9,000 years ago, while the Mauritanian coast showed virtually no change around 11,000 years ago."
+  },
+  {
+    "id": "sat5_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The Younger Dryas was a period of extreme cooling from 11,700 to 12,900 years ago in the Northern Hemisphere. Some scientists argue that a comet fragment hitting Earth brought about the cooling. Others disagree, partly because there is no known crater from such an impact that dates to the beginning of the period. In 2015, a team led by Kurt Kjær detected a 19-mile-wide crater beneath a glacier in Greenland. The scientists who believe an impact caused the Younger Dryas claim that this discovery supports their view. However, Kjær's team hasn't yet been able to determine the age of the crater. Therefore, the team suggests that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "it can't be concluded that the impact that made the crater was connected to the beginning of the Younger Dryas.",
+      "B": "it can't be determined whether a comet fragment could make a crater as large as 19 miles wide.",
+      "C": "scientists have ignored the possibility that something other than a comet fragment could have made the crater.",
+      "D": "the scientists who believe an impact caused the Younger Dryas have made incorrect assumptions about when the period began."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because without knowing the age of the crater, researchers cannot determine whether the impact aligned with the onset of the Younger Dryas."
+  },
+  {
+    "id": "sat5_rw1_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "In 2016 biological anthropologist Heather F. Smith and her team investigated the evolution of the appendix, an intestinal organ that is present in some mammals, including humans, but is generally thought to have no function. Studying 533 mammal species, the team found that the appendix has emerged independently across multiple lineages in separate instances and, significantly, hasn't disappeared after emerging in specific lineages. Moreover, the team determined that species with the organ tend to have higher concentrations of lymphoid tissue, which supports immune responses, in the cecum, the organ the appendix is attached to. Therefore, the team hypothesized that the appendix likely ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "was once present in many nonmammal species but has since disappeared from those lineages.",
+      "B": "has been preserved in certain mammal species because it benefits their immune systems.",
+      "C": "will emerge in a greater number of mammal species because it may serve a necessary function in the immune system.",
+      "D": "produced higher concentrations of lymphoid tissue in mammals in the past than it does currently."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the persistence of the organ across lineages and its correlation with immune-supporting lymphoid tissue suggests the appendix confers an evolutionary immune benefit."
+  },
+  {
+    "id": "sat5_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Some ethicists hold that the moral goodness of an individual's actions depends solely on whether the actions themselves are good, irrespective of the context in which they are carried out. Philosopher L. Sebastian Purcell has shown that surviving works of Aztec (Nahua) philosophy express a very different view. Purcell reveals that these works posit an ethical system in which an individual's actions are judged in light of how well they accord with the individual's role in society and how well they contribute to the community. To the extent that these works are representative of Aztec thought, Purcell's analysis suggests that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "the Aztecs would have disputed the idea that the morality of an individual's actions can be assessed by appealing to standards of behavior that are independent of the individual's social circumstances.",
+      "B": "the Aztecs would not have accepted the notion that the morality of an individual's actions can be fairly evaluated by people who do not live in the same society as that individual.",
+      "C": "actions by members of Aztec society who contributed a great deal to their community could be judged as morally good even if those actions were inconsistent with behaviors the Aztecs regarded as good in all contexts.",
+      "D": "similar actions performed by people in different social roles in Aztec society would have been regarded as morally equivalent unless those actions led to different outcomes for the community."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because Aztec ethics evaluated deeds based on social roles and communal contributions, directly opposing decontextualized, universal moral standards."
+  },
+  {
+    "id": "sat5_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Lê Lương Minh became the thirteenth secretary-general of the Association of Southeast Asian Nations (ASEAN) in January 2013, making ______ the first time the organization would appoint a Vietnamese leader.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "these",
+      "B": "those",
+      "C": "this",
+      "D": "some"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the singular demonstrative pronoun 'this' correctly refers to the singular milestone event of Minh becoming secretary-general."
+  },
+  {
+    "id": "sat5_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In 1929, Edwin Herbert Land invented a polarizing filter that was featured in a number of products, from sunglasses to 3D movies. A decade later, Land ______ his technology to invent the world's first instant camera, the Polaroid Land camera.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "used",
+      "B": "to have used",
+      "C": "to use",
+      "D": "using"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because a finite past tense verb ('used') is required to serve as the main predicate for the subject 'Land'."
+  },
+  {
+    "id": "sat5_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "An online content creator who uses copyrighted songs without permission risks being demonetized (prohibited from including paid advertisements in content). The best way to avoid demonetization is to choose music from the public domain. Using one of these noncopyrighted songs ______ a creator won't lose advertising revenue.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "are ensuring",
+      "B": "have ensured",
+      "C": "ensure",
+      "D": "ensures"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the gerund subject phrase 'Using one of these noncopyrighted songs' is singular and takes the singular verb 'ensures'."
+  },
+  {
+    "id": "sat5_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "What makes the theremin a unique musical instrument? You play it without touching it. When you place your ______ the pitch will shift as your hands move through the air.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "hand's between the two antenna's,",
+      "B": "hands between the two antennas,",
+      "C": "hands' between the two antennas'",
+      "D": "hands' between the two antennas,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because both 'hands' and 'antennas' are standard plural nouns requiring no possessive apostrophes."
+  },
+  {
+    "id": "sat5_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In the music video for the song \"We Didn't Start the Fire\" by Billy Joel, the singer lists 118 political and cultural references. Such iconic references, cited in rapid and frenetic procession by the musician, who is seated impassively at a dinner table, ______ key moments and personalities of the twentieth century.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "represents",
+      "B": "has represented",
+      "C": "was representing",
+      "D": "represent"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the plural subject 'Such iconic references' requires the plural verb 'represent'."
+  },
+  {
+    "id": "sat5_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Long attributed to Jacques-Louis David, the preeminent Neoclassical painter of his day, the 1801 painting Marie Joséphine Charlotte du Val d'Ognes gained fresh attention in the 1990s when art historians discovered that the painting—which depicts a solitary young woman sketching—was actually the work of little-known French portrait ______ Marie-Denise Villers (1774–1821).",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "artist-",
+      "B": "artist",
+      "C": "artist:",
+      "D": "artist,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because no punctuation should separate the restrictive title descriptor 'French portrait artist' from the proper name 'Marie-Denise Villers'."
+  },
+  {
+    "id": "sat5_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In 1986, conceptual artist Sophie Calle asked twenty-three people, all of whom had been born without sight, to describe \"their image of beauty\" in rich detail. Calle paired excerpts of these conversations with photographs—both of interviewees and the items they ______ to powerful effect in her exhibition The Blind.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "described, from hair to grass to sculptures",
+      "B": "described, from hair to grass to sculptures—",
+      "C": "described from hair to grass to sculptures,",
+      "D": "described: from hair to grass to sculptures"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the parenthetical aside opened by the dash before 'both' must be closed with a matching dash after 'sculptures'."
+  },
+  {
+    "id": "sat5_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Celebrated Tewa potter Maria Martinez (1887–1980) made her signature all-black ceramic vessels using a heating technique called reduction firing. This technique involves smothering the flame surrounding the clay vessel. ______ the vessel takes on a shiny, black hue.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "On the contrary,",
+      "B": "For example,",
+      "C": "Previously,",
+      "D": "As a result,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'As a result,' marks the shiny black appearance as the direct outcome of the reduction firing process."
+  },
+  {
+    "id": "sat5_rw1_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Historians agree that the jazz pianist Jelly Roll Morton was exaggerating when he claimed to have invented jazz music. No one can deny, ______ that Morton's innovative compositions and remarkable improvisational skills helped shape jazz as a genre during its early years.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "therefore,",
+      "B": "in the second place,",
+      "C": "in other words,",
+      "D": "though,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'though,' indicates a contrast: even though he exaggerated inventing jazz, his profound influence remains undeniable."
+  },
+  {
+    "id": "sat5_rw1_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "According to Duverger's law, countries with single-ballot majoritarian elections for single-member districts tend to polarize into two-party systems, wherein dueling political parties consistently dominate the political system. ______ countries with proportional-representation electoral systems tend to support multi-partyism, under which power gets distributed among many political parties.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Subsequently,",
+      "B": "Conversely,",
+      "C": "For instance,",
+      "D": "In other words,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'Conversely,' sets up a direct contrast between single-member majoritarian systems (two-party) and proportional systems (multi-party)."
+  },
+  {
+    "id": "sat5_rw1_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "A turtle shell appears external to the animal, protecting its body like armor. ______ the shell is often incorrectly assumed to be an exoskeleton, a rigid outer casing like that of a crustacean or an insect, when in fact it is an endoskeleton, a part of the turtle's internal bone structure, more akin to a spine or a pair of ribs.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "That being said,",
+      "B": "However,",
+      "C": "For instance,",
+      "D": "Hence,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'Hence,' explains that because the shell appears external, people consequently assume it is an exoskeleton."
+  },
+  {
+    "id": "sat5_rw1_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• In 1859, the novel Adam Bede was published in England.\\n• According to the novel's title page, the author's name was George Eliot.\\n• George Eliot was widely assumed to be a pseudonym.\\n• A pseudonym is a fake name used to conceal an author's identity.\\n• A woman named Mary Ann Evans later revealed herself as the novel's real author.",
+    "question": "The student wants to identify the real author of Adam Bede. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The real author of Adam Bede was Mary Ann Evans, who published the novel using the pseudonym George Eliot.",
+      "B": "George Eliot, which Adam Bede's title page indicated was the name of the novel's author, was widely assumed to be a pseudonym.",
+      "C": "The title page of the novel Adam Bede indicated that the author's name was George Eliot.",
+      "D": "A woman who had used a pseudonym to conceal her identity later revealed herself as the real author of Adam Bede."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it explicitly names Mary Ann Evans as the real author of Adam Bede and mentions her pseudonym."
+  },
+  {
+    "id": "sat5_rw1_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• Scientists have developed a \"freeze-thaw\" battery that can retain 92% of its charge after twelve weeks.\\n• The battery contains molten salt (a type of salt that liquifies when heated and solidifies at room temperature).\\n• When the salt is in a liquid state, energy flows through the battery.\\n• When the salt is in a solid state, energy stops flowing and is stored in the battery.\\n• The stored (frozen) energy can be used by reheating (thawing) the battery.",
+    "question": "The student wants to specify how the salt enables energy storage. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Scientists have developed a freeze-thaw battery that contains molten salt, which liquifies when heated and solidifies at room temperature.",
+      "B": "The stored energy in a freeze-thaw battery, which contains molten salt, can be used by reheating the battery.",
+      "C": "When the molten salt in a freeze-thaw battery solidifies at room temperature, energy stops flowing and can be stored in the battery.",
+      "D": "Molten salt allows a freeze-thaw battery to retain 92% of its charge after twelve weeks."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it specifically explains the physical mechanism enabling storage: solidifying at room temperature so energy stops flowing."
+  },
+  {
+    "id": "sat5_rw1_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• The US Fish and Wildlife Service (FWS) keeps a list of all at-risk species.\\n• Species on the list are classified as either endangered or threatened.\\n• A species that is in danger of extinction throughout most or all of its range is classified as endangered.\\n• A species that is likely to soon become endangered is classified as threatened.\\n• The California red-legged frog (Rana draytonii) is likely to soon become endangered, according to the FWS.",
+    "question": "The student wants to indicate the California red-legged frog's FWS classification category. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Species on the FWS list, which includes the California red-legged frog (Rana draytonii), are classified as either endangered or threatened.",
+      "B": "The California red-legged frog (Rana draytonii) appears on the FWS list of at-risk species.",
+      "C": "According to the FWS, the California red-legged frog is in the endangered category, in danger of extinction throughout most or all of its range.",
+      "D": "Likely to soon become endangered, the California red-legged frog is classified as threatened by the FWS."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it directly states the frog's specific classification category ('threatened') and the reason for it."
+  }
+]

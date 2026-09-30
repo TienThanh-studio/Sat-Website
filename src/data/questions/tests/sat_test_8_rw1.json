@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat8_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "As Mexico's first president from an Indigenous community, Benito Juarez became one of the most ______ figures in his country's history: among the many significant accomplishments of his long tenure in office (1858–1872), Juarez consolidated the authority of the national government and advanced the rights of Indigenous peoples.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "unpredictable",
+      "B": "important",
+      "C": "secretive",
+      "D": "ordinary"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'important' means significant, consequential, or of great value. The passage elaborates on Juarez's 'many significant accomplishments', affirming his status as an important historic figure."
+  },
+  {
+    "id": "sat8_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Mônica Lopes-Ferreira and others at Brazil's Butantan Institute are studying the freshwater stingray species Potamotrygon rex to determine whether biological characteristics such as the rays' age and sex have ______ effect on the toxicity of their venom—that is, to see if differences in these traits are associated with considerable variations in venom potency.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "a disconcerting",
+      "B": "an acceptable",
+      "C": "an imperceptible",
+      "D": "a substantial"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'a substantial' effect means a sizable, noticeable, or considerable effect. This matches the explanatory phrase that follows: 'associated with considerable variations in venom potency'."
+  },
+  {
+    "id": "sat8_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Kelp forests grow underwater along the eastern Pacific Coast. These underwater forests are important to fish and other marine animals. Ocean currents can be powerful and rough, making it difficult for animals to find safe places to hide from predators. The underwater forests slow down the currents. This creates a more ______ environment with calmer waters where animals can take shelter.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "tranquil",
+      "B": "dangerous",
+      "C": "imaginative",
+      "D": "surprising"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'tranquil' means calm, peaceful, and quiet. The text explains that the kelp forests slow down currents, directly creating calmer, tranquil waters for marine life."
+  },
+  {
+    "id": "sat8_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The Mule Bone, a 1930 play written by Zora Neale Hurston and Langston Hughes, is perhaps the best-known of the few examples of ______ in literature. Most writers prefer working alone, and given that working together cost Hurston and Hughes their friendship, it is not hard to see why.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "characterization",
+      "B": "interpretation",
+      "C": "collaboration",
+      "D": "commercialization"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'collaboration' means working jointly with others. The passage describes two renowned writers co-authoring a play ('working together') instead of working alone."
+  },
+  {
+    "id": "sat8_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Ofelia Zepeda's contributions to the field of linguistics are ______: her many accomplishments include working as a linguistics professor and bilingual poet, authoring the first Tohono O'odham grammar book, and co-founding the American Indian Language Development Institute.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "pragmatic",
+      "B": "controversial",
+      "C": "extensive",
+      "D": "universal"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'extensive' means broad, wide-ranging, or comprehensive. The colon introduces an expansive list of varied scholarly and creative achievements."
+  },
+  {
+    "id": "sat8_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Archaeologists studying the ancient city of Pompeii in Italy recently discovered a well-preserved food shop known as a thermopolium. The site contains food remains, artworks, and decorations. These items give researchers a better understanding of what daily life in Pompeii may have been like. For example, the archaeologists found a ceramic jar that they believe likely contained a meat and seafood stew.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To compare ancient artworks with modern ones",
+      "B": "To discuss the political system of Italy",
+      "C": "To present a recent archaeological discovery",
+      "D": "To describe a region's climate"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the text focuses on announcing and describing the recent discovery of an ancient Roman thermopolium in Pompeii."
+  },
+  {
+    "id": "sat8_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The following text is from Sarah Orne Jewett's 1899 short story \"Martha's Lady.\" Martha is employed by Miss Pyne as a maid.\n\nMiss Pyne sat by the window watching, in her best dress, looking stately and calm; she seldom went out now, and it was almost time for the carriage. Martha was just coming in from the garden with the strawberries, and with more flowers in her apron. It was a bright cool evening in June, the golden robins sang in the elms, and the sun was going down behind the apple-trees at the foot of the garden. The beautiful old house stood wide open to the long-expected guest.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To convey the worries brought about by a new guest",
+      "B": "To describe how the characters have changed over time",
+      "C": "To contrast the activity indoors with the stillness outside",
+      "D": "To depict the setting as the characters await a visitor's arrival"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the passage describes the peaceful physical atmosphere of the house and garden while Miss Pyne and Martha prepare for the carriage of an anticipated guest."
+  },
+  {
+    "id": "sat8_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Aphra Behn's 1689 novel The Lucky Mistake. Atlante and Rinaldo are neighbors who have been secretly exchanging letters through Charlot, Atlante's sister.\n\n[Atlante] gave this letter to Charlot; who immediately ran into the balcony with it, where she still found Rinaldo in a melancholy posture, leaning his head on his hand: She showed him the letter, but was afraid to toss it to him, for fear it might fall to the ground; so he ran and fetched a long cane, which he cleft at one end, and held it while she put the letter into the cleft, and stayed not to hear what he said to it. But never was man so transported with joy, as he was at the reading of this letter; it gives him new wounds; for to the generous, nothing obliges love so much as love.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It describes the delivery of a letter, and then portrays a character's happiness at reading that letter.",
+      "B": "It establishes that a character is desperate to receive a letter, and then explains why another character has not yet written that letter.",
+      "C": "It presents a character's concerns about delivering a letter, and then details the contents of that letter.",
+      "D": "It reveals the inspiration behind a character's letter, and then emphasizes the excitement that another character feels upon receiving that letter."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the text first details the physical process of passing the letter via a cleft cane across the balcony, then describes Rinaldo's overwhelming joy upon reading it."
+  },
+  {
+    "id": "sat8_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "According to historian Vicki L. Ruiz, Mexican American women made crucial contributions to the labor movement during World War II. At the time, food processing companies entered into contracts to supply United States armed forces with canned goods. Increased production quotas conferred greater bargaining power on the companies' employees, many of whom were Mexican American women: employees insisted on more favorable benefits, and employers, who were anxious to fulfill the contracts, complied. Thus, labor activism became a platform for Mexican American women to assert their agency.",
+    "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It elaborates on a claim about labor relations in a particular industry made earlier in the text.",
+      "B": "It offers an example of a trend in the World War II-era economy discussed earlier in the text.",
+      "C": "It notes a possible exception to the historical narrative of labor activism sketched earlier in the text.",
+      "D": "It provides further details about the identities of the workers discussed earlier in the text."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the colon introduces a detailed elaboration showing exactly how workers leveraged wartime canning contracts to secure better employee benefits."
+  },
+  {
+    "id": "sat8_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "For many years, the only existing fossil evidence of mixopterid eurypterids—an extinct family of large aquatic arthropods known as sea scorpions and related to modern arachnids and horseshoe crabs—came from four species living on the paleocontinent of Laurussia. In a discovery that expands our understanding of the geographical distribution of mixopterids, paleontologist Bo Wang and others have identified fossilized remains of a new mixopterid species, Terropterus xiushanensis, that lived over 400 million years ago on the paleocontinent of Gondwana.",
+    "question": "According to the text, why was Wang and his team's discovery of the Terropterus xiushanensis fossil significant?",
+    "isGridIn": false,
+    "options": {
+      "A": "The fossil constitutes the first evidence found by scientists that mixopterids lived more than 400 million years ago.",
+      "B": "The fossil helps establish that mixopterids are more closely related to modern arachnids and horseshoe crabs than previously thought.",
+      "C": "The fossil helps establish a more accurate timeline of the evolution of mixopterids on the paleocontinents of Laurussia and Gondwana.",
+      "D": "The fossil constitutes the first evidence found by scientists that mixopterids existed outside the paleocontinent of Laurussia."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the text specifies that all previous mixopterid fossils came solely from Laurussia, making this first discovery on Gondwana proof of a wider geographical range."
+  },
+  {
+    "id": "sat8_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Video Game Availability by Initial Release Years\nInitial release years | Percentage of games still available\n1975–1979 | 0.89%\n1980–1984 | 3.65%\n1985–1989 | 15.38%\n1990–1994 | 19.33%\n1995–1999 | 14.22%\n\nIn a recent study, researchers found that relatively few video games released over the decades remain available today. For example, only 14.22 percent of games are still available that were initially released in ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "2000–2004.",
+      "B": "1995–1999.",
+      "C": "1970–1974.",
+      "D": "1985–1989."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the table shows that 14.22% of games still available corresponds directly to the 1995–1999 release window."
+  },
+  {
+    "id": "sat8_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Depths at Which Four Deep-Sea Fish Species Live\nSpecies | Depth below the ocean surface\nFootballfish | 200–1,000 meters\nSouthern stoplight loosejaw | 500–2,000 meters\nBlack seadevil | 250–2,000 meters\nBollons' rattail | 300–800 meters\n\nSome oceanic fish species live very deep underwater. Researchers collected data about the depths at which various species live.",
+    "question": "Based on the information in the table, at what depth does the southern stoplight loosejaw live?",
+    "isGridIn": false,
+    "options": {
+      "A": "More than 2,000 meters below the surface",
+      "B": "150 to 400 meters below the surface",
+      "C": "500 to 2,000 meters below the surface",
+      "D": "250 to 500 meters below the surface"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the table explicitly lists the Southern stoplight loosejaw as inhabiting depths between 500 and 2,000 meters."
+  },
+  {
+    "id": "sat8_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Housing Starts in the US, January–April 2022 (in thousands)\nMonth | Housing starts\nJanuary | 1,669\nFebruary | 1,771\nMarch | 1,713\nApril | 1,803\n\nWhen construction of a single-family house begins, it is called a housing start. In the first four months of 2022, the highest number of housing starts in the United States was in ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "April.",
+      "B": "March.",
+      "C": "January.",
+      "D": "February."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because April recorded 1,803 thousand housing starts, which is the highest value in the table."
+  },
+  {
+    "id": "sat8_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Born in 1891 to a Quechua-speaking family in the Andes Mountains of Peru, Martín Chambi is today considered to be one of the most renowned figures of Latin American photography. In a paper for an art history class, a student claims that Chambi's photographs have considerable ethnographic value—in his work, Chambi was able to capture diverse elements of Peruvian society, representing his subjects with both dignity and authenticity.",
+    "question": "Which finding, if true, would most directly support the student's claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "Chambi took many commissioned portraits of wealthy Peruvians, but he also produced hundreds of images carefully documenting the peoples, sites, and customs of Indigenous communities of the Andes.",
+      "B": "Chambi's photographs demonstrate a high level of technical skill, as seen in his strategic use of illumination to create dramatic light and shadow contrasts.",
+      "C": "During his lifetime, Chambi was known and celebrated both within and outside his native Peru, as his work was published in places like Argentina, Spain, and Mexico.",
+      "D": "Some of the peoples and places Chambi photographed had long been popular subjects for Peruvian photographers."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because documenting both elite patrons and hundreds of authentic Indigenous cultural traditions directly supports the claim of diverse ethnographic value."
+  },
+  {
+    "id": "sat8_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Researchers hypothesized that a decline in the population of dusky sharks near the mid-Atlantic coast of North America led to a decline in the population of eastern oysters in the region. Dusky sharks do not typically consume eastern oysters but do consume cownose rays, which are the main predators of the oysters.",
+    "question": "Which finding, if true, would most directly support the researchers' hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "Declines in the regional abundance of dusky sharks' prey other than cownose rays are associated with regional declines in dusky shark abundance.",
+      "B": "Eastern oyster abundance tends to be greater in areas with both dusky sharks and cownose rays than in areas with only dusky sharks.",
+      "C": "Consumption of eastern oysters by cownose rays in the region substantially increased before the regional decline in dusky shark abundance began.",
+      "D": "Cownose rays have increased in regional abundance as dusky sharks have decreased in regional abundance."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because a trophic cascade occurs: as apex predatory sharks declined, intermediate ray predators multiplied, thereby overconsuming and depleting the oyster population."
+  },
+  {
+    "id": "sat8_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "In the mountains of Brazil, Barbacenia tomentosa and Barbacenia macrantha—two plants in the Velloziaceae family—establish themselves on soilless, nutrient-poor patches of quartzite rock. Plant ecologists Anna Abrahão and Patricia de Britto Costa used microscopic analysis to determine that the roots of B. tomentosa and B. macrantha, which grow directly into the quartzite, have clusters of fine hairs near the root tip; further analysis indicated that these hairs secrete both malic and citric acids. The researchers hypothesize that the plants depend on dissolving underlying rock with these acids, as the process not only creates channels for continued growth but also releases phosphates that provide the vital nutrient phosphorus.",
+    "question": "Which finding, if true, would most directly support the researchers' hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "Other species in the Velloziaceae family are found in terrains with more soil but have root structures similar to those of B. tomentosa and B. macrantha.",
+      "B": "Though B. tomentosa and B. macrantha both secrete citric and malic acids, each species produces the acids in different proportions.",
+      "C": "The roots of B. tomentosa and B. macrantha carve new entry points into rocks even when cracks in the surface are readily available.",
+      "D": "B. tomentosa and B. macrantha thrive even when transferred to the surfaces of rocks that do not contain phosphates."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because expending biochemical energy to dissolve solid quartzite even when cracks are available proves that the rock-dissolving action itself (releasing phosphorus) is necessary for survival."
+  },
+  {
+    "id": "sat8_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Many mosquito repellents contain natural components that work by activating multiple odor receptors on mosquitoes' antennae. As the insects develop resistance, new repellents are needed. Ke Dong and her team found that EBF, a molecular component of a chrysanthemum-flower extract, can repel mosquitoes by activating just one odor receptor—and this receptor, Or31, is present in all mosquito species known to carry diseases. Therefore, the researchers suggest that in developing new repellents, it would be most useful to ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "identify molecular components similar to EBF that target the activation of Or31 receptors.",
+      "B": "investigate alternative methods for extracting EBF molecules from chrysanthemums.",
+      "C": "verify the precise locations of Or31 and other odor receptors on mosquitoes' antennae.",
+      "D": "determine the maximum number of different odor receptors that can be activated by a single molecule."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because if Or31 is universally shared across disease-carrying mosquitoes, finding other molecules like EBF that stimulate this exact receptor offers the most promising strategy for developing new repellents."
+  },
+  {
+    "id": "sat8_rw1_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Birds of many species ingest foods containing carotenoids, pigmented molecules that are converted into feather coloration. Coloration tends to be especially saturated in male birds' feathers, and because carotenoids also confer health benefits, the deeply saturated colors generally serve to communicate what is known as an honest signal of a bird's overall fitness to potential mates. However, ornithologist Allison J. Shultz and others have found that males in several species of the tanager genus Ramphocelus use microstructures in their feathers to manipulate light, creating the appearance of deeper saturation without the birds necessarily having to maintain a carotenoid-rich diet. These findings suggest that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "individual male tanagers can engage in honest signaling without relying on carotenoid consumption.",
+      "B": "feather microstructures may be less effective than deeply saturated feathers for signaling overall fitness.",
+      "C": "scientists have yet to determine why tanagers have a preference for mates with colorful appearances.",
+      "D": "a male tanager's appearance may function as a dishonest signal of the individual's overall fitness."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because if microstructures create the optical illusion of carotenoid saturation without the bird possessing the underlying dietary health benefits, the visual display functions as a dishonest signal of fitness."
+  },
+  {
+    "id": "sat8_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "When writing The Other Black Girl (2021), novelist Zakiya Dalila Harris drew on her own experiences working at a publishing office. The award-winning book is Harris's first novel, but her writing ______ honored before. At the age of twelve, she entered a contest to have a story published in American Girl magazine—and won.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "were",
+      "B": "have been",
+      "C": "has been",
+      "D": "are"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the singular non-count gerund noun 'writing' takes the singular present perfect verb 'has been'."
+  },
+  {
+    "id": "sat8_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In order to prevent nonnative fish species from moving freely between the Mediterranean and Red Seas, marine biologist Bella Galil has proposed that a saline lock system be installed along the Suez Canal in Egypt's Great Bitter Lakes. The lock would increase the salinity of the lakes and ______ a natural barrier of water most marine creatures would be unable to cross.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "creates",
+      "B": "create",
+      "C": "creating",
+      "D": "created"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the base form 'create' coordinates with 'increase' under the governing modal auxiliary 'would' ('would increase... and create')."
+  },
+  {
+    "id": "sat8_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Paintings by the renowned twentieth-century US ______ were featured in Artist to Artist, an exhibition at the Smithsonian Art Museum that paired the works of artists whose career trajectories intersected in meaningful ways.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "artists: Thomas Hart Benton and Jackson Pollock,",
+      "B": "artists Thomas Hart Benton and Jackson Pollock",
+      "C": "artists Thomas Hart Benton, and Jackson Pollock,",
+      "D": "artists, Thomas Hart Benton and Jackson Pollock"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'Thomas Hart Benton and Jackson Pollock' is a restrictive appositive identifying the artists, requiring no punctuation separating it from the preceding noun or the following predicate verb."
+  },
+  {
+    "id": "sat8_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In 1943, in the midst of World War II, mathematics professor Grace Hopper was recruited by the US military to help the war effort by solving complex equations. Hopper's subsequent career would involve more than just ______ as a pioneering computer programmer, Hopper would help usher in the digital age.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "equations, though:",
+      "B": "equations, though,",
+      "C": "equations. Though,",
+      "D": "equations though"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the transition 'though' is offset by a comma, and a colon properly introduces the subsequent independent clause that explains how Hopper's career expanded beyond math."
+  },
+  {
+    "id": "sat8_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Increased gender diversity is revitalizing the field of economics, according to Harvard's Claudia Goldin. The trailblazing accomplishments of Goldin, winner of the 2023 Nobel Prize in Economics for her work on women in the labor force, ______ to the value of scholars of diverse backgrounds in spurring research into previously unexplored, but vitally important, topics.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "attests",
+      "B": "has attested",
+      "C": "is attesting",
+      "D": "attest"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the plural subject 'The trailblazing accomplishments' requires the plural present tense verb 'attest'."
+  },
+  {
+    "id": "sat8_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "During the English neoclassical period (1660–1789), many writers imitated the epic poetry and satires of ancient Greece and Rome. They were not the first in England to adopt the literary modes of classical ______ some of the most prominent figures of the earlier Renaissance period were also influenced by ancient Greek and Roman literature.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "antiquity, however",
+      "B": "antiquity, however,",
+      "C": "antiquity, however;",
+      "D": "antiquity; however,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'however' belongs adverbially to the first clause (offset by a comma), and a semicolon coordinates the subsequent complete independent clause."
+  },
+  {
+    "id": "sat8_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "hard",
+    "prompt": "English poet and Shakespeare contemporary John Donne's ______ much admired during his lifetime (1572–1631) and in the decades that followed, had, at the time of their enthusiastic rediscovery by the early twentieth-century modernists, been essentially gathering dust for the intervening 250 years.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "works were",
+      "B": "works, were",
+      "C": "works,",
+      "D": "works had been"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'works,' correctly serves as the main subject of the verb 'had... been gathering dust', with 'much admired... followed' functioning as an intervening nonessential participial phrase offset by commas."
+  },
+  {
+    "id": "sat8_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "hard",
+    "prompt": "Compared to that of alumina glass, ______ glass atoms are so far apart that they are unable to re-form bonds after being separated.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "silica glass is at a significant disadvantage due to its more dispersed atomic arrangement:",
+      "B": "silica glass has a more dispersed atomic arrangement, resulting in a significant disadvantage:",
+      "C": "a significant disadvantage of silica glass is that its atomic arrangement is more dispersed:",
+      "D": "silica glass's atomic arrangement is more dispersed, resulting in a significant disadvantage:"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the opening modifier 'Compared to that [the atomic arrangement] of alumina glass' must logically modify 'silica glass's atomic arrangement' to maintain a valid comparison."
+  },
+  {
+    "id": "sat8_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In November 1934, Amrita Sher-Gil was living in what must have seemed like the ideal city for a young artist: Paris. She was studying firsthand the color-saturated style of France's modernist masters and beginning to make a name for herself as a painter. ______ Sher-Gil longed to return to her childhood home of India; only there, she believed, could her art truly flourish.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Still,",
+      "B": "Therefore,",
+      "C": "Indeed,",
+      "D": "Furthermore,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Still,' signals a contrast: despite the promising opportunities in Paris, she nonetheless longed to return to India."
+  },
+  {
+    "id": "sat8_rw1_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In 1974, Mexican chemist Mario Molina and US chemist F. Sherwood Rowland discovered that chemicals called CFCs were harmful to the ozone layer. Their research was extremely influential in the fight against CFCs. ______ it laid the foundation for a 1987 treaty that phased out the use of CFCs across the globe.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Regardless,",
+      "B": "Specifically,",
+      "C": "However,",
+      "D": "Earlier,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'Specifically,' introduces a concrete example (the 1987 global treaty) demonstrating their research's profound influence."
+  },
+  {
+    "id": "sat8_rw1_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "With his room-sized installation Unicorn/My Private Sky, Norwegian artist Børre Sæthre succeeds in creating a whimsical yet perplexing experience. ______ when visitors set foot inside the fantastically blue room and encounter the life-sized stuffed unicorn preening at the far end of it, they are both dazzled and confused as if stepping into a strange and enchanting new world.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Second,",
+      "B": "Instead,",
+      "C": "Indeed,",
+      "D": "Nevertheless,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'Indeed,' emphasizes and corroborates the initial claim that the artwork produces a whimsical and perplexing viewer experience."
+  },
+  {
+    "id": "sat8_rw1_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• The Philadelphia and Lancaster Turnpike was a road built between 1792 and 1794.\n• It was the first private turnpike in the United States.\n• It connected the cities of Philadelphia and Lancaster in the state of Pennsylvania.\n• It was sixty-two miles long.",
+    "question": "The student wants to emphasize the distance covered by the Philadelphia and Lancaster Turnpike. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The sixty-two-mile-long Philadelphia and Lancaster Turnpike connected the Pennsylvania cities of Philadelphia and Lancaster.",
+      "B": "The Philadelphia and Lancaster Turnpike was the first private turnpike in the United States.",
+      "C": "The Philadelphia and Lancaster Turnpike, which connected two Pennsylvania cities, was built between 1792 and 1794.",
+      "D": "A historic Pennsylvania road, the Philadelphia and Lancaster Turnpike was completed in 1794."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it directly incorporates and emphasizes the road's length: 'sixty-two-mile-long'."
+  },
+  {
+    "id": "sat8_rw1_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Most, but not all, of the Moon's oxygen comes from the Sun, via solar wind.\n• Cosmochemist Kentaro Terada from Osaka University wondered if some of the unaccounted-for oxygen could be coming from Earth.\n• In 2008, he analyzed data from the Japanese satellite Kaguya.\n• Kaguya gathered data about gases and particles it encountered while orbiting the Moon.\n• Based on the Kaguya data, Terada confirmed his suspicion that Earth is sending oxygen to the Moon.",
+    "question": "The student wants to emphasize the aim of the research study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "As it orbited the Moon, the Kaguya satellite collected data that was later analyzed by cosmochemist Kentaro Terada.",
+      "B": "Before 2008, Kentaro Terada wondered if the Moon was receiving some of its oxygen from Earth.",
+      "C": "Cosmochemist Kentaro Terada set out to determine whether some of the Moon's oxygen was coming from Earth.",
+      "D": "Kentaro Terada's study determined that Earth is sending a small amount of oxygen to the Moon."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'set out to determine whether...' explicitly highlights the research objective (aim) of the investigation."
+  },
+  {
+    "id": "sat8_rw1_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• The factors that affect clutch size (the number of eggs laid at one time) have been well studied in birds but not in lizards.\n• A team led by Shai Meiri of Tel Aviv University investigated which factors influence lizard clutch size.\n• Meiri's team obtained clutch-size and habitat data for over 3,900 lizard species and analyzed the data with statistical models.\n• Larger clutch size was associated with environments in higher latitudes that have more seasonal change.\n• Lizards in higher-latitude environments may lay larger clutches to take advantage of shorter windows of favorable conditions.",
+    "question": "The student wants to emphasize the aim of the research study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Researchers wanted to know which factors influence lizard egg clutch size because such factors have been well studied in birds but not in lizards.",
+      "B": "After they obtained data for over 3,900 lizard species, researchers determined that larger clutch size was associated with environments in higher latitudes that have more seasonal change.",
+      "C": "We now know that lizards in higher-latitude environments may lay larger clutches to take advantage of shorter windows of favorable conditions.",
+      "D": "Researchers obtained clutch-size and habitat data for over 3,900 lizard species and analyzed the data with statistical models."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it directly explains the goal (aim) of the study: investigating which factors influence lizard clutch size."
+  },
+  {
+    "id": "sat8_rw1_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• British musicians John Lennon and Paul McCartney shared writing credit for numerous Beatles songs.\n• Many Lennon-McCartney songs were actually written by either Lennon or McCartney, not by both.\n• The exact authorship of specific parts of many Beatles songs, such as the verse for \"In My Life,\" is disputed.\n• Mark Glickman, Jason Brown, and Ryan Song used statistical methods to analyze the musical content of Beatles songs.\n• They concluded that there is 18.9% probability that McCartney wrote the verse for \"In My Life,\" stating that the verse is \"consistent with Lennon's songwriting style.\"",
+    "question": "The student wants to make a generalization about the kind of study conducted by Glickman, Brown, and Song. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Based on statistical analysis, Glickman, Brown, and Song claim that John Lennon wrote the verse of \"In My Life.\"",
+      "B": "There is only an 18.9% probability that Paul McCartney wrote the verse for \"In My Life\"; John Lennon is the more likely author.",
+      "C": "It is likely that John Lennon, not Paul McCartney, wrote the verse for \"In My Life.\"",
+      "D": "Researchers have used statistical methods to address questions of authorship within the field of music."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it articulates a broad, overarching generalization: applying statistical quantitative methods to resolve musicological authorship disputes."
+  }
+]

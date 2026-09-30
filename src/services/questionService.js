@@ -6,6 +6,26 @@ import inferenceQuestions from '../data/questions/inference.json';
 import verbalHard1 from '../data/questions/tests/verbal_hard_test1.json';
 import verbalHard2 from '../data/questions/tests/verbal_hard_test2.json';
 import satTest11RW1 from '../data/questions/tests/sat_test_11_rw1.json';
+import satTest4RW1 from '../data/questions/tests/sat_test_4_rw1.json';
+import satTest4RW2 from '../data/questions/tests/sat_test_4_rw2.json';
+import satTest4Math1 from '../data/questions/tests/sat_test_4_math1.json';
+import satTest4Math2 from '../data/questions/tests/sat_test_4_math2.json';
+import satTest5RW1 from '../data/questions/tests/sat_test_5_rw1.json';
+import satTest5RW2 from '../data/questions/tests/sat_test_5_rw2.json';
+import satTest5Math1 from '../data/questions/tests/sat_test_5_math1.json';
+import satTest5Math2 from '../data/questions/tests/sat_test_5_math2.json';
+import satTest6RW1 from '../data/questions/tests/sat_test_6_rw1.json';
+import satTest6RW2 from '../data/questions/tests/sat_test_6_rw2.json';
+import satTest6Math1 from '../data/questions/tests/sat_test_6_math1.json';
+import satTest6Math2 from '../data/questions/tests/sat_test_6_math2.json';
+import satTest7RW1 from '../data/questions/tests/sat_test_7_rw1.json';
+import satTest7RW2 from '../data/questions/tests/sat_test_7_rw2.json';
+import satTest7Math1 from '../data/questions/tests/sat_test_7_math1.json';
+import satTest7Math2 from '../data/questions/tests/sat_test_7_math2.json';
+import satTest8RW1 from '../data/questions/tests/sat_test_8_rw1.json';
+import satTest8RW2 from '../data/questions/tests/sat_test_8_rw2.json';
+import satTest8Math1 from '../data/questions/tests/sat_test_8_math1.json';
+import satTest8Math2 from '../data/questions/tests/sat_test_8_math2.json';
 
 const safeArray = (d) => {
   if (Array.isArray(d)) return d;
@@ -24,6 +44,26 @@ export const getAllQuestions = () => {
     ...safeArray(verbalHard1),
     ...safeArray(verbalHard2),
     ...safeArray(satTest11RW1),
+    ...safeArray(satTest4RW1),
+    ...safeArray(satTest4RW2),
+    ...safeArray(satTest4Math1),
+    ...safeArray(satTest4Math2),
+    ...safeArray(satTest5RW1),
+    ...safeArray(satTest5RW2),
+    ...safeArray(satTest5Math1),
+    ...safeArray(satTest5Math2),
+    ...safeArray(satTest6RW1),
+    ...safeArray(satTest6RW2),
+    ...safeArray(satTest6Math1),
+    ...safeArray(satTest6Math2),
+    ...safeArray(satTest7RW1),
+    ...safeArray(satTest7RW2),
+    ...safeArray(satTest7Math1),
+    ...safeArray(satTest7Math2),
+    ...safeArray(satTest8RW1),
+    ...safeArray(satTest8RW2),
+    ...safeArray(satTest8Math1),
+    ...safeArray(satTest8Math2),
   ];
 };
 
@@ -173,7 +213,227 @@ export const DEFAULT_CATEGORIES = [
     totalQuestions: safeArray(inferenceQuestions).length,
     description: 'Chuyên đề suy luận logic từ dữ kiện đoạn văn.',
     questions: safeArray(inferenceQuestions)
-  }
+  },
+  {
+    id: 'official-sat-practice-4-rw1',
+    title: 'Official SAT Practice Test #4 (Reading & Writing - Module 1)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest4RW1).length,
+    description: 'Đề thi chính thức số 04 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest4RW1)
+  },
+  {
+    id: 'official-sat-practice-4-rw2',
+    title: 'Official SAT Practice Test #4 (Reading & Writing - Module 2)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest4RW2).length,
+    description: 'Đề thi chính thức số 04 Module 2 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest4RW2)
+  },
+  {
+    id: 'official-sat-practice-4-math1',
+    title: 'Official SAT Practice Test #4 (Math - Module 1)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35, // Chuẩn Math 35 phút
+    totalQuestions: safeArray(satTest4Math1).length,
+    description: 'Đề thi chính thức số 04 Math Module 1 gồm 27 câu hỏi từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest4Math1)
+  },
+  {
+    id: 'official-sat-practice-4-math2',
+    title: 'Official SAT Practice Test #4 (Math - Module 2)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest4Math2).length,
+    description: 'Đề thi chính thức số 04 Math Module 2 gồm 27 câu hỏi phân hóa từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest4Math2)
+  },
+  {
+    id: 'official-sat-practice-5-rw1',
+    title: 'Official SAT Practice Test #5 (Reading & Writing - Module 1)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest5RW1).length,
+    description: 'Đề thi chính thức số 05 Module 1 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest5RW1)
+  },
+  {
+    id: 'official-sat-practice-5-rw2',
+    title: 'Official SAT Practice Test #5 (Reading & Writing - Module 2)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest5RW2).length,
+    description: 'Đề thi chính thức số 05 Module 2 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest5RW2)
+  },
+  {
+    id: 'official-sat-practice-5-math1',
+    title: 'Official SAT Practice Test #5 (Math - Module 1)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest5Math1).length,
+    description: 'Đề thi chính thức số 05 Math Module 1 gồm 27 câu hỏi từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest5Math1)
+  },
+  {
+    id: 'official-sat-practice-5-math2',
+    title: 'Official SAT Practice Test #5 (Math - Module 2)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest5Math2).length,
+    description: 'Đề thi chính thức số 05 Math Module 2 gồm 27 câu hỏi phân hóa từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest5Math2)
+  },
+  {
+    id: 'official-sat-practice-6-rw1',
+    title: 'Official SAT Practice Test #6 (Reading & Writing - Module 1)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest6RW1).length,
+    description: 'Đề thi chính thức số 06 Module 1 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest6RW1)
+  },
+  {
+    id: 'official-sat-practice-6-rw2',
+    title: 'Official SAT Practice Test #6 (Reading & Writing - Module 2)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest6RW2).length,
+    description: 'Đề thi chính thức số 06 Module 2 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest6RW2)
+  },
+  {
+    id: 'official-sat-practice-6-math1',
+    title: 'Official SAT Practice Test #6 (Math - Module 1)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest6Math1).length,
+    description: 'Đề thi chính thức số 06 Math Module 1 gồm 27 câu hỏi từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest6Math1)
+  },
+  {
+    id: 'official-sat-practice-6-math2',
+    title: 'Official SAT Practice Test #6 (Math - Module 2)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest6Math2).length,
+    description: 'Đề thi chính thức số 06 Math Module 2 gồm 27 câu hỏi phân hóa từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest6Math2)
+  },
+  {
+    id: 'official-sat-practice-7-rw1',
+    title: 'Official SAT Practice Test #7 (Reading & Writing - Module 1)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest7RW1).length,
+    description: 'Đề thi chính thức số 07 Module 1 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest7RW1)
+  },
+  {
+    id: 'official-sat-practice-7-rw2',
+    title: 'Official SAT Practice Test #7 (Reading & Writing - Module 2)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest7RW2).length,
+    description: 'Đề thi chính thức số 07 Module 2 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest7RW2)
+  },
+  {
+    id: 'official-sat-practice-7-math1',
+    title: 'Official SAT Practice Test #7 (Math - Module 1)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest7Math1).length,
+    description: 'Đề thi chính thức số 07 Math Module 1 gồm 27 câu hỏi từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest7Math1)
+  },
+  {
+    id: 'official-sat-practice-7-math2',
+    title: 'Official SAT Practice Test #7 (Math - Module 2)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest7Math2).length,
+    description: 'Đề thi chính thức số 07 Math Module 2 gồm 27 câu hỏi phân hóa từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest7Math2)
+  },
+  {
+    id: 'official-sat-practice-8-rw1',
+    title: 'Official SAT Practice Test #8 (Reading & Writing - Module 1)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest8RW1).length,
+    description: 'Đề thi chính thức số 08 Module 1 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest8RW1)
+  },
+  {
+    id: 'official-sat-practice-8-rw2',
+    title: 'Official SAT Practice Test #8 (Reading & Writing - Module 2)',
+    domain: 'Official College Board',
+    section: 'Full Test',
+    isRealExam: true,
+    duration: 32,
+    totalQuestions: safeArray(satTest8RW2).length,
+    description: 'Đề thi chính thức số 08 Module 2 chuẩn 33 câu từ College Board kèm giải thích chi tiết từng câu.',
+    questions: safeArray(satTest8RW2)
+  },
+  {
+    id: 'official-sat-practice-8-math1',
+    title: 'Official SAT Practice Test #8 (Math - Module 1)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest8Math1).length,
+    description: 'Đề thi chính thức số 08 Math Module 1 gồm 27 câu hỏi từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest8Math1)
+  },
+  {
+    id: 'official-sat-practice-8-math2',
+    title: 'Official SAT Practice Test #8 (Math - Module 2)',
+    domain: 'Official College Board',
+    section: 'Math',
+    isRealExam: true,
+    duration: 35,
+    totalQuestions: safeArray(satTest8Math2).length,
+    description: 'Đề thi chính thức số 08 Math Module 2 gồm 27 câu hỏi phân hóa từ College Board kèm giải thích chi tiết.',
+    questions: safeArray(satTest8Math2)
+  },
 ];
 
 // Export alias để tương thích mọi component cũ

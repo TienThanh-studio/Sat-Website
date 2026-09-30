@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat4_math1_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A group of students voted on five after-school activities. The bar graph shows the number of students who voted for each of the five activities: Activity 1 (40), Activity 2 (20), Activity 3 (39), Activity 4 (15), Activity 5 (48).",
+    "question": "How many students chose activity 3?",
+    "isGridIn": false,
+    "options": {
+      "A": "25",
+      "B": "39",
+      "C": "48",
+      "D": "50"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Chiều cao của cột tương ứng với Activity 3 nằm trong khoảng giữa 35 và 40 học sinh. Trong các phương án đưa ra, chỉ có 39 nằm trong khoảng này."
+  },
+  {
+    "id": "sat4_math1_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A percentage problem asks to find the ratio between 75 and 300.",
+    "question": "What percentage of $300$ is $75$?",
+    "isGridIn": false,
+    "options": {
+      "A": "25%",
+      "B": "50%",
+      "C": "75%",
+      "D": "225%"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Gọi tỷ lệ phần trăm là $x\\%$. Ta có phương trình: $\\frac{x}{100} \\times 300 = 75 \\iff 3x = 75 \\iff x = 25\\%$."
+  },
+  {
+    "id": "sat4_math1_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$\\frac{x^2}{25} = 36$$",
+    "question": "What is a solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "6",
+      "B": "30",
+      "C": "450",
+      "D": "900"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Nhân cả hai vế với $25$: $x^2 = 36 \\times 25 = 900$. Lấy căn bậc hai hai vế ta được $x = 30$ hoặc $x = -30$. Do đó 30 là nghiệm của phương trình."
+  },
+  {
+    "id": "sat4_math1_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "3 more than 8 times a number $x$ is equal to 83.",
+    "question": "Which equation represents this situation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(3)(8)x = 83$",
+      "B": "$8x = 83 + 3$",
+      "C": "$3x + 8 = 83$",
+      "D": "$8x + 3 = 83$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. '8 times a number $x$' là $8x$. '3 more than' tức là cộng thêm 3: $8x + 3$. Bằng 83 biểu diễn là $8x + 3 = 83$."
+  },
+  {
+    "id": "sat4_math1_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Hana deposited a fixed amount into her bank account each month. The function $f(t) = 100 + 25t$ gives the amount, in dollars, in Hana's bank account after $t$ monthly deposits.",
+    "question": "What is the best interpretation of 25 in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "With each monthly deposit, the amount in Hana's bank account increased by $25.",
+      "B": "Before Hana made any monthly deposits, the amount in her bank account was $25.",
+      "C": "After 1 monthly deposit, the amount in Hana's bank account was $25.",
+      "D": "Hana made a total of 25 monthly deposits."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Hệ số góc 25 biểu thị tốc độ tăng của tài khoản sau mỗi tháng gửi tiền, tức là mỗi tháng tài khoản tăng thêm 25 đô la."
+  },
+  {
+    "id": "sat4_math1_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A customer spent $27 to purchase oranges at $3 per pound.",
+    "question": "How many pounds of oranges did the customer purchase?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "9",
+    "explanation": "Đáp án là 9. Số pound cam mua được là: $\\frac{27}{3} = 9$ pounds."
+  },
+  {
+    "id": "sat4_math1_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Nasir bought 9 storage bins that were each the same price. He used a coupon for $63 off the entire purchase. The cost for the entire purchase after using the coupon was $27.",
+    "question": "What was the original price, in dollars, for 1 storage bin?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "10",
+    "explanation": "Đáp án là 10. Giá gốc của toàn bộ 9 thùng chứa trước khi giảm giá là $27 + 63 = 90$ đô la. Giá gốc của mỗi thùng chứa là $\\frac{90}{9} = 10$ đô la."
+  },
+  {
+    "id": "sat4_math1_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "For the linear function $f$, the table shows three values of $x$ and their corresponding values of $f(x)$: $(0, 29)$, $(1, 32)$, $(2, 35)$.",
+    "question": "Which equation defines $f(x)$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$f(x) = 3x + 29$",
+      "B": "$f(x) = 29x + 32$",
+      "C": "$f(x) = 35x + 29$",
+      "D": "$f(x) = 32x + 35$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giao điểm với trục tung là $(0, 29) \\implies b = 29$. Hệ số góc $m = \\frac{32 - 29}{1 - 0} = 3$. Vậy phương trình là $f(x) = 3x + 29$."
+  },
+  {
+    "id": "sat4_math1_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Right triangles $PQR$ and $STU$ are similar, where $P$ corresponds to $S$, and angles $R$ and $U$ are right angles. The measure of angle $Q$ is $18^\\circ$.",
+    "question": "What is the measure of angle $S$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$18^\\circ$",
+      "B": "$72^\\circ$",
+      "C": "$82^\\circ$",
+      "D": "$162^\\circ$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Vì hai tam giác đồng dạng nên $\\angle T = \\angle Q = 18^\\circ$. Trong tam giác vuông $STU$ với góc vuông tại $U$, ta có $\\angle S = 90^\\circ - 18^\\circ = 72^\\circ$."
+  },
+  {
+    "id": "sat4_math1_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A scatterplot shows data points with a negative linear correlation. At $x = 0$, $y$ is approximately $9.4$, and as $x$ increases from $0$ to $10$, $y$ decreases down toward $0$.",
+    "question": "Which of the following equations is the most appropriate linear model for the data shown?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 0.9 + 9.4x$",
+      "B": "$y = 0.9 - 9.4x$",
+      "C": "$y = 9.4 + 0.9x$",
+      "D": "$y = 9.4 - 0.9x$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Đồ thị có hệ số góc âm (dữ liệu đi xuống) và tung độ gốc lớn hơn 9. Chỉ có phương trình $y = 9.4 - 0.9x$ thỏa mãn cả hai điều kiện."
+  },
+  {
+    "id": "sat4_math1_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The equation $2.5b + 5r = 80$ describes the relationship between the number of birds, $b$, and the number of reptiles, $r$, that can be cared for at a pet care business on a given day.",
+    "question": "If the business cares for 16 reptiles on a given day, how many birds can it care for on this day?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "5",
+      "C": "40",
+      "D": "80"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Thay $r = 16$ vào phương trình: $2.5b + 5(16) = 80 \\iff 2.5b + 80 = 80 \\iff 2.5b = 0 \\iff b = 0$."
+  },
+  {
+    "id": "sat4_math1_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A line in the $xy$-plane passes through the points $(0, -8)$ and $(-8, 0)$.",
+    "question": "What is an equation of the graph shown?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = -2x - 8$",
+      "B": "$y = x - 8$",
+      "C": "$y = -x - 8$",
+      "D": "$y = 2x - 8$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Hệ số góc là $m = \\frac{0 - (-8)}{-8 - 0} = \\frac{8}{-8} = -1$. Tung độ gốc là $(0, -8) \\implies b = -8$. Do đó phương trình là $y = -x - 8$."
+  },
+  {
+    "id": "sat4_math1_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$\\frac{x}{8} = 5$$",
+    "question": "What is the value of $\\frac{8}{x}$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "1/5",
+    "explanation": "Đáp án là 1/5 hoặc 0.2. Vì $\\frac{x}{8} = 5 = \\frac{5}{1}$, nghịch đảo hai vế ta được ngay $\\frac{8}{x} = \\frac{1}{5}$."
+  },
+  {
+    "id": "sat4_math1_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of linear equations:\n$$24x + y = 48$$\n$$6x + y = 72$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $y$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "80",
+    "explanation": "Đáp án là 80. Trừ phương trình hai cho phương trình một: $18x = -24 \\implies 6x = -8$. Thay $6x = -8$ vào phương trình hai: $-8 + y = 72 \\implies y = 80$."
+  },
+  {
+    "id": "sat4_math1_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Line $t$ in the $xy$-plane has a slope of $-\\frac{1}{3}$ and passes through the point $(9, 10)$.",
+    "question": "Which equation defines line $t$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 13x - \\frac{1}{3}$",
+      "B": "$y = 9x + 10$",
+      "C": "$y = -\\frac{x}{3} + 10$",
+      "D": "$y = -\\frac{x}{3} + 13$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Dạng phương trình $y = -\\frac{1}{3}x + b$. Thay tọa độ $(9, 10)$: $10 = -\\frac{1}{3}(9) + b \\iff 10 = -3 + b \\iff b = 13$. Vậy $y = -\\frac{x}{3} + 13$."
+  },
+  {
+    "id": "sat4_math1_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $f(x) = 206(1.034)^x$ models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where $x$ is the number of years after 1957.",
+    "question": "Which of the following is the best interpretation of \"$f(5)$ is approximately equal to 243\" in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "The value of the bank account is estimated to be approximately 5 dollars greater in 1962 than in 1957.",
+      "B": "The value of the bank account is estimated to be approximately 243 dollars in 1962.",
+      "C": "The value, in dollars, of the bank account is estimated to be approximately 5 times greater in 1962 than in 1957.",
+      "D": "The value of the bank account is estimated to increase by approximately 243 dollars every 5 years between 1957 and 1972."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. $x = 5$ ứng với năm $1957 + 5 = 1962$. Giá trị $f(5) \\approx 243$ biểu thị số dư tài khoản ước tính đạt khoảng 243 đô la vào năm 1962."
+  },
+  {
+    "id": "sat4_math1_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "For a certain rectangular region, the ratio of its length to its width is 35 to 10. If the width of the rectangular region increases by 7 units, how must the length change to maintain this ratio?",
+    "question": "Which choice describes how the length must change?",
+    "isGridIn": false,
+    "options": {
+      "A": "It must decrease by 24.5 units.",
+      "B": "It must increase by 24.5 units.",
+      "C": "It must decrease by 7 units.",
+      "D": "It must increase by 7 units."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Tỉ lệ $\\frac{\\text{dài}}{\\text{rộng}} = \\frac{35}{10} = 3.5 \\implies \\text{dài} = 3.5 \\times \\text{rộng}$. Khi chiều rộng tăng 7 đơn vị, chiều dài phải tăng: $3.5 \\times 7 = 24.5$ đơn vị."
+  },
+  {
+    "id": "sat4_math1_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Square $P$ has a side length of $x$ inches. Square $Q$ has a perimeter that is 176 inches greater than the perimeter of square $P$. The function $f$ gives the area of square $Q$, in square inches.",
+    "question": "Which of the following defines $f$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$f(x) = (x + 44)^2$",
+      "B": "$f(x) = (x + 176)^2$",
+      "C": "$f(x) = (176x + 44)^2$",
+      "D": "$f(x) = (176x + 176)^2$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Chu vi hình vuông $P$ là $4x$. Chu vi hình vuông $Q$ là $4x + 176$. Độ dài cạnh của hình vuông $Q$ là $\\frac{4x + 176}{4} = x + 44$. Diện tích hình vuông $Q$ là $f(x) = (x + 44)^2$."
+  },
+  {
+    "id": "sat4_math1_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the equation relating distinct positive real numbers $w$, $x$, and $y$: $$\\frac{14x}{7y} = 2\\sqrt{w + 19}$$",
+    "question": "Which equation correctly expresses $w$ in terms of $x$ and $y$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$w = \\sqrt{\\frac{x}{y}} - 19$",
+      "B": "$w = \\sqrt{\\frac{28x}{14y}} - 19$",
+      "C": "$w = \\left(\\frac{x}{y}\\right)^2 - 19$",
+      "D": "$w = \\left(\\frac{28x}{14y}\\right)^2 - 19$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Rút gọn vế trái: $\\frac{14x}{7y} = 2\\frac{x}{y}$. Phương trình trở thành $2\\frac{x}{y} = 2\\sqrt{w + 19} \\iff \\frac{x}{y} = \\sqrt{w + 19}$. Bình phương hai vế: $\\left(\\frac{x}{y}\\right)^2 = w + 19 \\iff w = \\left(\\frac{x}{y}\\right)^2 - 19$."
+  },
+  {
+    "id": "sat4_math1_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "Point $O$ is the center of a circle. The measure of arc $RS$ on this circle is $100^\\circ$.",
+    "question": "What is the measure, in degrees, of its associated angle $\\angle ROS$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "100",
+    "explanation": "Đáp án là 100. Số đo của góc ở tâm $\\angle ROS$ bằng chính số đo của cung bị chắn $RS$, tức là $100^\\circ$."
+  },
+  {
+    "id": "sat4_math1_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The expression $6\\sqrt[5]{3^5 x^{45}} \\cdot \\sqrt[8]{2^8 x}$ is equivalent to $ax^b$, where $a$ and $b$ are positive constants and $x > 1$.",
+    "question": "What is the value of $a + b$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "361/8",
+    "explanation": "Đáp án là 361/8 hoặc 45.125. Ta có: $\\sqrt[5]{3^5 x^{45}} = 3x^9$ và $\\sqrt[8]{2^8 x} = 2x^{1/8}$. Biểu thức ban đầu trở thành: $6(3x^9)(2x^{1/8}) = 36 x^{9 + 1/8} = 36 x^{73/8}$. Do đó $a = 36$ và $b = \\frac{73}{8}$. Tổng $a + b = 36 + \\frac{73}{8} = \\frac{288 + 73}{8} = \\frac{361}{8}$."
+  },
+  {
+    "id": "sat4_math1_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "A right triangle has sides of length $2\\sqrt{2}$, $6\\sqrt{2}$, and $\\sqrt{80}$ units.",
+    "question": "What is the area of the triangle, in square units?",
+    "isGridIn": false,
+    "options": {
+      "A": "$8\\sqrt{2} + \\sqrt{80}$",
+      "B": "12",
+      "C": "$24\\sqrt{80}$",
+      "D": "24"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Cạnh huyền dài nhất là $\\sqrt{80}$ (vì $\\sqrt{80} \\approx 8.94$, còn $6\\sqrt{2} = \\sqrt{72} \\approx 8.49$, $2\\sqrt{2} = \\sqrt{8}$). Hai cạnh góc vuông là $2\\sqrt{2}$ và $6\\sqrt{2}$. Diện tích tam giác là: $A = \\frac{1}{2}(2\\sqrt{2})(6\\sqrt{2}) = 6 \\times 2 = 12$."
+  },
+  {
+    "id": "sat4_math1_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The expression $4x^2 + bx - 45$, where $b$ is a constant, can be rewritten as $(hx + k)(x + j)$, where $h$, $k$, and $j$ are integer constants.",
+    "question": "Which of the following must be an integer?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{b}{h}$",
+      "B": "$\\frac{b}{k}$",
+      "C": "$\\frac{45}{h}$",
+      "D": "$\\frac{45}{k}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Khai triển tích: $(hx + k)(x + j) = hx^2 + (hj + k)x + kj$. So sánh hệ số tự do ta có $kj = -45 \\implies j = -\\frac{45}{k}$. Vì $j$ là số nguyên nên $\\frac{45}{k}$ bắt buộc phải là số nguyên."
+  },
+  {
+    "id": "sat4_math1_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the system of equations:\n$$y = 2x^2 - 21x + 64$$\n$$y = 3x + a$$\nIn the given system of equations, $a$ is a constant. The graphs of the equations intersect at exactly one point, $(x, y)$, in the $xy$-plane.",
+    "question": "What is the value of $x$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-8",
+      "B": "-6",
+      "C": "6",
+      "D": "8"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Phương trình hoành độ giao điểm: $2x^2 - 21x + 64 = 3x + a \\iff 2x^2 - 24x + (64 - a) = 0$. Vì hệ có đúng 1 nghiệm nên $\\Delta' = (-12)^2 - 2(64 - a) = 0 \\iff 144 - 128 + 2a = 0 \\iff 2a = -16 \\iff a = -8$. Nghiệm kép là $x = -\\frac{b}{2a} = -\\frac{-24}{2(2)} = 6$."
+  },
+  {
+    "id": "sat4_math1_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "An isosceles right triangle has a hypotenuse of length 58 inches.",
+    "question": "What is the perimeter, in inches, of this triangle?",
+    "isGridIn": false,
+    "options": {
+      "A": "$29\\sqrt{2}$",
+      "B": "$58\\sqrt{2}$",
+      "C": "$58 + 58\\sqrt{2}$",
+      "D": "$58 + 116\\sqrt{2}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Gọi cạnh góc vuông là $a$. Theo định lý Pytago: $a^2 + a^2 = 58^2 \\implies 2a^2 = 58^2 \\implies a = \\frac{58}{\\sqrt{2}} = 29\\sqrt{2}$. Chu vi tam giác là $58 + 2a = 58 + 2(29\\sqrt{2}) = 58 + 58\\sqrt{2}$."
+  },
+  {
+    "id": "sat4_math1_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "In the $xy$-plane, a parabola has vertex $(9, -14)$ and intersects the $x$-axis at two points. If the equation of the parabola is written in the form $y = ax^2 + bx + c$, where $a$, $b$, and $c$ are constants.",
+    "question": "Which of the following could be the value of $a + b + c$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-23",
+      "B": "-19",
+      "C": "-14",
+      "D": "-12"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Đỉnh là $(9, -14) \\implies y = a(x - 9)^2 - 14$. Vì đỉnh nằm dưới trục hoành và cắt trục hoành tại 2 điểm nên parabol phải mở lên, tức $a > 0$. Ta có $a + b + c = y(1) = a(1 - 9)^2 - 14 = 64a - 14$. Với $64a - 14 = -12 \\implies 64a = 2 \\implies a = \\frac{2}{64} > 0$ (thỏa mãn)."
+  },
+  {
+    "id": "sat4_math1_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Function $f$ is defined by $f(x) = -a^x + b$, where $a$ and $b$ are constants. In the $xy$-plane, the graph of $y = f(x) - 15$ has a $y$-intercept at $(0, -\\frac{99}{7})$. The product of $a$ and $b$ is $\\frac{65}{7}$.",
+    "question": "What is the value of $a$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "5",
+    "explanation": "Đáp án là 5. Ta có $y(0) = f(0) - 15 = (-a^0 + b) - 15 = -1 + b - 15 = b - 16$. Theo đề bài $b - 16 = -\\frac{99}{7} \\implies b = 16 - \\frac{99}{7} = \\frac{13}{7}$. Do tích $ab = \\frac{65}{7}$ nên $a = \\frac{65/7}{13/7} = 5$."
+  }
+]

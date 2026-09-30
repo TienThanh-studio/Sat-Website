@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat5_math2_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "What is 20% of 440?",
+    "question": "What is the value of 20% of 440?",
+    "isGridIn": false,
+    "options": {
+      "A": "44",
+      "B": "88",
+      "C": "880",
+      "D": "1,760"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. $20\\%$ của $440$ được tính bằng: $\\frac{20}{100} \\times 440 = 0.2 \\times 440 = 88$."
+  },
+  {
+    "id": "sat5_math2_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Argon is placed inside a container with a constant volume. The graph shows the estimated pressure $y$, in pounds per square inch (psi), of the argon when its temperature is $x$ kelvins. The graph passes through the point $(600, 12)$.",
+    "question": "What is the estimated pressure of the argon, in psi, when the temperature is 600 kelvins?",
+    "isGridIn": false,
+    "options": {
+      "A": "6",
+      "B": "12",
+      "C": "300",
+      "D": "600"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Dựa vào đồ thị, tại hoành độ nhiệt độ $x = 600$ kelvins, tung độ áp suất tương ứng là $y = 12\\text{ psi}$."
+  },
+  {
+    "id": "sat5_math2_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f$ is defined by: $$f(x) = 4x - 3$$",
+    "question": "What is the value of $f(10)$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-30",
+      "B": "37",
+      "C": "40",
+      "D": "43"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Thay $x = 10$ vào phương trình hàm số: $f(10) = 4(10) - 3 = 40 - 3 = 37$."
+  },
+  {
+    "id": "sat5_math2_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the expression: $$16x^3y^2 + 14xy$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$2xy(8xy + 7)$",
+      "B": "$2xy(8x^2y + 7)$",
+      "C": "$14xy(2x^2y + 1)$",
+      "D": "$14xy(8x^2y + 1)$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đặt nhân tử chung $2xy$ ra ngoài: $16x^3y^2 + 14xy = 2xy(8x^2y + 7)$."
+  },
+  {
+    "id": "sat5_math2_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A veterinarian recommends that each day a certain rabbit should eat 25 calories per pound of the rabbit's weight, plus an additional 11 calories.",
+    "question": "Which equation represents this situation, where $c$ is the total number of calories the veterinarian recommends the rabbit should eat each day if the rabbit's weight is $x$ pounds?",
+    "isGridIn": false,
+    "options": {
+      "A": "$c = 25x$",
+      "B": "$c = 36x$",
+      "C": "$c = 11x + 25$",
+      "D": "$c = 25x + 11$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Với cân nặng $x$ pounds, số calo từ cân nặng là $25x$, cộng thêm $11$ calo bổ sung, ta được phương trình: $c = 25x + 11$."
+  },
+  {
+    "id": "sat5_math2_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$6n = 12$$",
+    "question": "What is the value of $n + 4$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "6",
+    "explanation": "Đáp án là 6. Chia cả hai vế cho $6$ ta được $n = 2$. Thay vào biểu thức: $n + 4 = 2 + 4 = 6$."
+  },
+  {
+    "id": "sat5_math2_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the quadratic equation: $$(d - 30)(d + 30) - 7 = -7$$",
+    "question": "What is a solution to the given equation?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "30",
+    "explanation": "Đáp án là 30 (hoặc -30). Cộng 7 vào cả hai vế: $(d - 30)(d + 30) = 0 \\implies d = 30$ hoặc $d = -30$."
+  },
+  {
+    "id": "sat5_math2_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Line $r$ in the $xy$-plane has a slope of $4$ and passes through the point $(0, 6)$.",
+    "question": "Which equation defines line $r$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = -6x + 4$",
+      "B": "$y = 6x + 4$",
+      "C": "$y = 4x - 6$",
+      "D": "$y = 4x + 6$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Phương trình dạng dốc-tung độ gốc $y = mx + b$ với $m = 4$ và $b = 6$ là $y = 4x + 6$."
+  },
+  {
+    "id": "sat5_math2_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "A competitive diver dives from a platform into the water. The graph shown gives the height above the water $y$, in meters, of the diver $x$ seconds after diving from the platform. The graph intersects the $x$-axis at approximately $(1.6, 0)$.",
+    "question": "What is the best interpretation of the $x$-intercept of the graph?",
+    "isGridIn": false,
+    "options": {
+      "A": "The diver reaches a maximum height above the water at 1.6 seconds.",
+      "B": "The diver hits the water at 1.6 seconds.",
+      "C": "The diver reaches a maximum height above the water at 0.2 seconds.",
+      "D": "The diver hits the water at 0.2 seconds."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Giao điểm với trục hoành là thời điểm tung độ độ cao $y = 0$ (mặt nước), tức là vận động viên chạm mặt nước sau 1.6 giây."
+  },
+  {
+    "id": "sat5_math2_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The kinetic energy, in joules, of an object with mass 9 kilograms traveling at a speed of $v$ meters per second is given by the function $K$, where: $$K(v) = \\frac{9}{2}v^2$$",
+    "question": "Which of the following is the best interpretation of $K(34) = 5,202$ in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "The object traveling at 34 meters per second has a kinetic energy of 5,202 joules.",
+      "B": "The object traveling at 340 meters per second has a kinetic energy of 5,202 joules.",
+      "C": "The object traveling at 5,202 meters per second has a kinetic energy of 34 joules.",
+      "D": "The object traveling at 23,409 meters per second has a kinetic energy of 34 joules."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giá trị đầu vào $v = 34\\text{ m/s}$ là vận tốc, và giá trị hàm $K(34) = 5,202\\text{ J}$ là động năng tương ứng của vật."
+  },
+  {
+    "id": "sat5_math2_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The scatterplot shows the relationship between two variables $x$ and $y$, along with a line of best fit. There are 10 data points plotted.",
+    "question": "For how many of the 10 data points is the actual $y$-value greater than the $y$-value predicted by the line of best fit?",
+    "isGridIn": false,
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "6",
+      "D": "7"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Các điểm có giá trị $y$ thực tế lớn hơn giá trị dự đoán là các điểm nằm phía trên đường thẳng hồi quy. Đếm trên đồ thị có 6 điểm nằm phía trên."
+  },
+  {
+    "id": "sat5_math2_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "At a movie theater, there are a total of 350 customers. Each customer is located in either theater A, theater B, or theater C. If one of these customers is selected at random, the probability of selecting a customer who is located in theater A is 0.48, and the probability of selecting a customer who is located in theater B is 0.24.",
+    "question": "How many customers are located in theater C?",
+    "isGridIn": false,
+    "options": {
+      "A": "28",
+      "B": "40",
+      "C": "84",
+      "D": "98"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Xác suất khách ở phòng C là: $1 - (0.48 + 0.24) = 1 - 0.72 = 0.28$. Số khách tại phòng C là: $0.28 \\times 350 = 98$ người."
+  },
+  {
+    "id": "sat5_math2_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the equation: $$y = \\frac{1}{3}(29x + 10) + 5x$$",
+    "question": "What is the slope of the graph of the given equation in the $xy$-plane?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "44/3",
+    "explanation": "Đáp án là 44/3 hoặc 14.67. Khai triển phương trình: $y = \\frac{29}{3}x + \\frac{10}{3} + 5x = \\left(\\frac{29}{3} + \\frac{15}{3}\\right)x + \\frac{10}{3} = \\frac{44}{3}x + \\frac{10}{3}$. Hệ số góc là $\\frac{44}{3}$."
+  },
+  {
+    "id": "sat5_math2_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "The length of each edge of a box is 29 inches. Each side of the box is in the shape of a square. The box does not have a lid.",
+    "question": "What is the exterior surface area, in square inches, of this box without a lid?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "4205",
+    "explanation": "Đáp án là 4205. Hộp không có nắp gồm 5 mặt hình vuông bằng nhau. Diện tích mỗi mặt là $29^2 = 841\\text{ in}^2$. Diện tích toàn phần ngoài của hộp là: $5 \\times 841 = 4,205\\text{ in}^2$."
+  },
+  {
+    "id": "sat5_math2_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Five sea turtles each have a nest. The table shows an original data set of the number of eggs that each turtle laid: 149, 144, 148, 136, 139. A sixth nest with 121 eggs is added to create a new data set.",
+    "question": "Which of the following correctly compares the means of the two data sets?",
+    "isGridIn": false,
+    "options": {
+      "A": "The mean of the original data set is greater than the mean of the new data set.",
+      "B": "The mean of the original data set is less than the mean of the new data set.",
+      "C": "The means of both data sets are equal.",
+      "D": "There is not enough information to compare the means."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giá trị mới thêm vào là $121$, nhỏ hơn tất cả các giá trị trong tập dữ liệu ban đầu, do đó nó kéo giá trị trung bình (mean) của tập mới giảm xuống so với tập ban đầu."
+  },
+  {
+    "id": "sat5_math2_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "In $\\triangle RST$, the measure of $\\angle R$ is $63^\\circ$.",
+    "question": "Which of the following could be the measure, in degrees, of $\\angle S$?",
+    "isGridIn": false,
+    "options": {
+      "A": "116",
+      "B": "118",
+      "C": "126",
+      "D": "180"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Tổng 3 góc trong một tam giác bằng $180^\\circ$. Do đó $\\angle S + \\angle T = 180^\\circ - 63^\\circ = 117^\\circ$. Vì $\\angle T > 0^\\circ$ nên $\\angle S < 117^\\circ$. Trong các phương án, chỉ có $116^\\circ$ thỏa mãn."
+  },
+  {
+    "id": "sat5_math2_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the polynomial expression: $$(8x^3 + 8) - (x^3 - 2)$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$8x^3 + 6$",
+      "B": "$7x^3 + 10$",
+      "C": "$8x^3 + 10$",
+      "D": "$7x^3 + 6$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Phá ngoặc và rút gọn: $8x^3 + 8 - x^3 + 2 = (8 - 1)x^3 + (8 + 2) = 7x^3 + 10$."
+  },
+  {
+    "id": "sat5_math2_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the equation: $$4\\sqrt{2x} = 16$$",
+    "question": "What is the value of $6x$?",
+    "isGridIn": false,
+    "options": {
+      "A": "24",
+      "B": "48",
+      "C": "72",
+      "D": "96"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Chia cả hai vế cho $4$: $\\sqrt{2x} = 4$. Bình phương hai vế: $2x = 16$. Nhân cả hai vế với $3$: $6x = 3(16) = 48$."
+  },
+  {
+    "id": "sat5_math2_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the linear inequality: $$2x - y > 883$$",
+    "question": "For which of the following tables are all the values of $x$ and their corresponding values of $y$ solutions to the given inequality?",
+    "isGridIn": false,
+    "options": {
+      "A": "x: 440, y: 0; x: 441, y: -2; x: 442, y: -4",
+      "B": "x: 440, y: 0; x: 442, y: -2; x: 441, y: -4",
+      "C": "x: 442, y: 0; x: 440, y: -2; x: 441, y: -4",
+      "D": "x: 442, y: 0; x: 441, y: -2; x: 440, y: -4"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Chuyển vế: $y < 2x - 883$. Với $x = 442 \\implies y < 884 - 883 = 1$ (0 < 1 đúng). Với $x = 441 \\implies y < 882 - 883 = -1$ (-2 < -1 đúng). Với $x = 440 \\implies y < 880 - 883 = -3$ (-4 < -3 đúng)."
+  },
+  {
+    "id": "sat5_math2_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of linear equations:\n$$5y = 10x + 11$$\n$$-5y = 5x - 21$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $30x$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "20",
+    "explanation": "Đáp án là 20. Cộng hai phương trình vế theo vế: $0 = 15x - 10 \\iff 15x = 10$. Nhân cả hai vế với 2 ta được: $30x = 20$."
+  },
+  {
+    "id": "sat5_math2_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "A rectangle is inscribed in a circle, such that each vertex of the rectangle lies on the circumference of the circle. The diagonal of the rectangle is twice the length of the shortest side of the rectangle. The area of the rectangle is $1,089\\sqrt{3}$ square units.",
+    "question": "What is the length, in units, of the diameter of the circle?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "66",
+    "explanation": "Đáp án là 66. Đường chéo hình chữ nhật nội tiếp chính là đường kính của hình tròn. Gọi cạnh ngắn là $s$, đường chéo là $2s$. Cạnh dài theo Pytago là: $\\sqrt{(2s)^2 - s^2} = s\\sqrt{3}$. Diện tích là $s(s\\sqrt{3}) = s^2\\sqrt{3} = 1,089\\sqrt{3} \\implies s^2 = 1,089 \\implies s = 33$. Đường kính đường tròn bằng $2s = 2(33) = 66$."
+  },
+  {
+    "id": "sat5_math2_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Rectangles $ABCD$ and $EFGH$ are similar. The length of each side of $EFGH$ is 6 times the length of the corresponding side of $ABCD$. The area of $ABCD$ is 54 square units.",
+    "question": "What is the area, in square units, of $EFGH$?",
+    "isGridIn": false,
+    "options": {
+      "A": "9",
+      "B": "36",
+      "C": "324",
+      "D": "1,944"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Tỉ số đồng dạng giữa hai cạnh là $k = 6$. Tỉ số diện tích bằng bình phương tỉ số đồng dạng: $k^2 = 6^2 = 36$. Diện tích của $EFGH$ là: $54 \\times 36 = 1,944$ square units."
+  },
+  {
+    "id": "sat5_math2_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the algebraic expression, where $k > 0$: $$\\frac{42a}{k} + 42ak$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{84a}{k}$",
+      "B": "$\\frac{84ak^2}{k}$",
+      "C": "$\\frac{42a(k + 1)}{k}$",
+      "D": "$\\frac{42a(k^2 + 1)}{k}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Quy đồng mẫu số chung là $k$: $\\frac{42a}{k} + \\frac{42ak^2}{k} = \\frac{42a(1 + k^2)}{k} = \\frac{42a(k^2 + 1)}{k}$."
+  },
+  {
+    "id": "sat5_math2_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Consider the following quadratic equations.",
+    "question": "Which quadratic equation has no real solutions?",
+    "isGridIn": false,
+    "options": {
+      "A": "$x^2 + 14x - 49 = 0$",
+      "B": "$x^2 - 14x + 49 = 0$",
+      "C": "$5x^2 - 14x - 49 = 0$",
+      "D": "$5x^2 - 14x + 49 = 0$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Phương trình vô nghiệm khi $\\Delta < 0$. Với phương trình D: $\\Delta = (-14)^2 - 4(5)(49) = 196 - 980 = -784 < 0$."
+  },
+  {
+    "id": "sat5_math2_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The function $P(t) = 260(1.04)^{(6/4)t}$ models the population, in thousands, of a certain city $t$ years after 2003. According to the model, the population is predicted to increase by 4% every $n$ months.",
+    "question": "What is the value of $n$?",
+    "isGridIn": false,
+    "options": {
+      "A": "8",
+      "B": "12",
+      "C": "18",
+      "D": "72"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Dân số tăng $4\\%$ khi số mũ tăng $1$ đơn vị: $\\frac{6}{4}t = 1 \\iff t = \\frac{4}{6} = \\frac{2}{3}\\text{ năm}$. Đổi sang tháng: $\\frac{2}{3} \\times 12 = 8\\text{ tháng}$."
+  },
+  {
+    "id": "sat5_math2_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "A circle in the $xy$-plane has its center at $(-1, 1)$. Line $t$ is tangent to this circle at the point $(5, -4)$.",
+    "question": "Which of the following points also lies on line $t$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(0, \\frac{6}{5})$",
+      "B": "$(4, 7)$",
+      "C": "$(10, 2)$",
+      "D": "$(11, 1)$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Hệ số góc của bán kính nối tâm $(-1, 1)$ và tiếp điểm $(5, -4)$ là $m_r = \\frac{-4 - 1}{5 - (-1)} = -\\frac{5}{6}$. Do tiếp tuyến vuông góc với bán kính tại tiếp điểm nên hệ số góc của đường tiếp tuyến là $m_t = \\frac{6}{5}$. Thử điểm $(10, 2)$ với tiếp điểm $(5, -4)$: $\\frac{2 - (-4)}{10 - 5} = \\frac{6}{5}$ (thỏa mãn)."
+  },
+  {
+    "id": "sat5_math2_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "For an electric field passing through a flat surface perpendicular to it, the electric flux is the product of the field's strength and the surface area. The surface consists of two adjacent squares, where the side length of the larger square is 3 times the side length of the smaller square. The electric field strength is $29.00\\text{ V/m}$, and the total electric flux is $4,640\\text{ V}\\cdot\\text{m}$.",
+    "question": "What is the electric flux, in volts meters, of the electric field through the larger square?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "4176",
+    "explanation": "Đáp án là 4176. Tổng diện tích là: $\\frac{4,640}{29} = 160\\text{ m}^2$. Gọi cạnh hình vuông nhỏ là $s$, cạnh hình vuông lớn là $3s$. Tổng diện tích là $s^2 + (3s)^2 = 10s^2 = 160 \\iff s^2 = 16$. Diện tích hình vuông lớn là $(3s)^2 = 9s^2 = 9(16) = 144\\text{ m}^2$. Từ thông điện trường qua hình vuông lớn là: $144 \\times 29 = 4,176\\text{ V}\\cdot\\text{m}$."
+  }
+]

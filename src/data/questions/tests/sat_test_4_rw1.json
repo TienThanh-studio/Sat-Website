@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat4_rw1_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The spacecraft OSIRIS-REx briefly made contact with the asteroid 101955 Bennu in 2020. NASA scientist Daniella DellaGiustina reports that despite facing the unexpected obstacle of a surface mostly covered in boulders, OSIRIS-REx successfully ______ a sample of the surface, gathering pieces of it to bring back to Earth.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "attached",
+      "B": "collected",
+      "C": "followed",
+      "D": "replaced"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'collected' means acquired and took away. The text indicates that OSIRIS-REx gathered pieces of 101955 Bennu to bring back to Earth, showing it successfully collected a sample."
+  },
+  {
+    "id": "sat4_rw1_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Research conducted by planetary scientist Katarina Miljkovic suggests that the Moon's surface may not accurately ______ early impact events. When the Moon was still forming, its surface was softer, and asteroid or meteoroid impacts would have left less of an impression; thus, evidence of early impacts may no longer be present.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "reflect",
+      "B": "receive",
+      "C": "evaluate",
+      "D": "mimic"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'reflect' means show or make apparent. The text explains that because the early Moon was softer, impacts left less of an impression, meaning the surface may not accurately reflect early impacts."
+  },
+  {
+    "id": "sat4_rw1_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Handedness, a preferential use of either the right or left hand, typically is easy to observe in humans. Because this trait is present but less ______ in many other animals, animal-behavior researchers often employ tasks specially designed to reveal individual animals' preferences for a certain hand or paw.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "recognizable",
+      "B": "intriguing",
+      "C": "significant",
+      "D": "useful"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'recognizable' means apparent or identifiable. The text contrasts humans, where handedness is easy to observe, with other animals, where it is less recognizable."
+  },
+  {
+    "id": "sat4_rw1_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "It is by no means ______ to recognize the influence of Dutch painter Hieronymus Bosch on Ali Banisadr's paintings; indeed, Banisadr himself cites Bosch as an inspiration. However, some scholars have suggested that the ancient Mesopotamian poem Epic of Gilgamesh may have had a far greater impact on Banisadr's work.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "substantial",
+      "B": "satisfying",
+      "C": "unimportant",
+      "D": "appropriate"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'unimportant' means trivial or lacking value. 'By no means unimportant' affirms that Bosch's influence is notable and recognized, as confirmed by Banisadr himself."
+  },
+  {
+    "id": "sat4_rw1_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Susan Glaspell's 1912 short story \"Out There.\" An elderly shop owner is looking at a picture that he recently acquired and hopes to sell.\\n\\nIt did seem that the picture failed to fit in with the rest of the shop. A persuasive young fellow who claimed he was closing out his stock let the old man have it for what he called a song. It was only a little out-of-the-way store which subsisted chiefly on the framing of pictures. The old man looked around at his views of the city, his pictures of cats and dogs, his flaming bits of landscape. \"Don't belong in here,\" he fumed.\\n\\nAnd yet the old man was secretly proud of his acquisition. There was a hidden dignity in his scowling as he shuffled about pondering the least ridiculous place for the picture.",
+    "question": "Which choice best states the main purpose of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "To reveal the shop owner's conflicted feelings about the new picture",
+      "B": "To convey the shop owner's resentment of the person he got the new picture from",
+      "C": "To describe the items that the shop owner most highly prizes",
+      "D": "To explain differences between the new picture and other pictures in the shop"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the text shows the shop owner fuming that the picture doesn't belong in his shop, yet he is secretly proud of acquiring it."
+  },
+  {
+    "id": "sat4_rw1_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is from the 1923 poem \"Black Finger\" by Angelina Weld Grimké, a Black American writer. A cypress is a type of evergreen tree.\\n\\nI have just seen a most beautiful thing,\\nSlim and still,\\nAgainst a gold, gold sky,\\nA straight black cypress,\\nSensitive,\\nExquisite,\\nA black finger\\nPointing upwards.\\n\\nWhy, beautiful still finger, are you black?\\nAnd why are you pointing upwards?",
+    "question": "Which choice best describes the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "The speaker assesses a natural phenomenon, then questions the accuracy of her assessment.",
+      "B": "The speaker describes a distinctive sight in nature, then ponders what meaning to attribute to that sight.",
+      "C": "The speaker presents an outdoor scene, then considers a human behavior occurring within that scene.",
+      "D": "The speaker examines her surroundings, then speculates about their influence on her emotional state."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the speaker first describes a cypress tree silhouetted against a golden sky like a black finger, then ponders why it is black and pointing upwards."
+  },
+  {
+    "id": "sat4_rw1_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The following text is from Walt Whitman's 1860 poem \"Calamus 24.\"\\n\\nI HEAR it is charged against me that I seek to destroy institutions;\\nBut really I am neither for nor against institutions\\n(What indeed have I in common with them?—Or what with the destruction of them?),\\nOnly I will establish in the Mannahatta [Manhattan] and in every city of These States, inland and seaboard,\\nAnd in the fields and woods, and above every keel [ship] little or large, that dents the water,\\nWithout edifices, or rules, or trustees, or any argument,\\nThe institution of the dear love of comrades.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "The speaker questions an increasingly prevalent attitude, then summarizes his worldview.",
+      "B": "The speaker regrets his isolation from others, then predicts a profound change in society.",
+      "C": "The speaker concedes his personal shortcomings, then boasts of his many achievements.",
+      "D": "The speaker addresses a criticism leveled against him, then announces a grand ambition of his."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the speaker begins by addressing the accusation that he seeks to destroy institutions, then announces his grand ambition to establish 'the institution of the dear love of comrades.'"
+  },
+  {
+    "id": "sat4_rw1_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "The mimosa tree evolved in East Asia, where the beetle Bruchidius terrenus preys on its seeds. In 1785, mimosa trees were introduced to North America, far from any B. terrenus. But evolutionary links between predators and their prey can persist across centuries and continents. Around 2001, B. terrenus was introduced in southeastern North America near where botanist Shu-Mei Chang and colleagues had been monitoring mimosa trees. Within a year, 93 percent of the trees had been attacked by the beetles.",
+    "question": "Which choice best describes the function of the third sentence in the overall structure of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "It states the hypothesis that Chang and colleagues had set out to investigate using mimosa trees and B. terrenus.",
+      "B": "It presents a generalization that is exemplified by the discussion of the mimosa trees and B. terrenus.",
+      "C": "It offers an alternative explanation for the findings of Chang and colleagues.",
+      "D": "It provides context that clarifies why the species mentioned spread to new locations."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the third sentence makes a broad statement ('evolutionary links... can persist across centuries and continents') that is subsequently illustrated by the beetle preying on mimosa trees in North America."
+  },
+  {
+    "id": "sat4_rw1_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Text 1\\nConventional wisdom long held that human social systems evolved in stages, beginning with hunter-gatherers forming small bands of members with roughly equal status. The shift to agriculture about 12,000 years ago sparked population growth that led to the emergence of groups with hierarchical structures: associations of clans first, then chiefdoms, and finally, bureaucratic states.\\n\\nText 2\\nIn a 2021 book, anthropologist David Graeber and archaeologist David Wengrow maintain that humans have always been socially flexible, alternately forming systems based on hierarchy and collective ones with decentralized leadership. The authors point to evidence that as far back as 50,000 years ago some hunter-gatherers adjusted their social structures seasonally, at times dispersing in small groups but also assembling into communities that included esteemed individuals.",
+    "question": "Based on the texts, how would Graeber and Wengrow (Text 2) most likely respond to the \"conventional wisdom\" presented in Text 1?",
+    "isGridIn": false,
+    "options": {
+      "A": "By conceding the importance of hierarchical systems but asserting the greater significance of decentralized collective societies",
+      "B": "By disputing the idea that developments in social structures have followed a linear progression through distinct stages",
+      "C": "By acknowledging that hierarchical roles likely weren't a part of social systems before the rise of agriculture",
+      "D": "By challenging the assumption that groupings of hunter-gatherers were among the earliest forms of social structure"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because Text 1 describes a linear stage-by-stage development, whereas Graeber and Wengrow in Text 2 argue that humans were always socially flexible, moving back and forth between hierarchy and collective systems."
+  },
+  {
+    "id": "sat4_rw1_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "The following text is adapted from Frances Hodgson Burnett's 1911 novel The Secret Garden. Mary, a young girl, recently found an overgrown hidden garden.\\n\\nMary was an odd, determined little person, and now she had something interesting to be determined about, she was very much absorbed, indeed. She worked and dug and pulled up weeds steadily, only becoming more pleased with her work every hour instead of tiring of it. It seemed to her like a fascinating sort of play.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Mary hides in the garden to avoid doing her chores.",
+      "B": "Mary is getting bored with pulling up so many weeds in the garden.",
+      "C": "Mary is clearing out the garden to create a space to play.",
+      "D": "Mary feels very satisfied when she's taking care of the garden."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the text describes Mary becoming 'more pleased with her work every hour' and finding gardening to be 'a fascinating sort of play.'"
+  },
+  {
+    "id": "sat4_rw1_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The following text is from Ezra Pound's 1909 poem \"Hymn III,\" based on the work of Marcantonio Flaminio.\\n\\nAs a fragile and lovely flower unfolds its gleaming foliage on the breast of the fostering earth, if the dew and the rain draw it forth;\\nSo doth my tender mind flourish, if it be fed with the sweet dew of the fostering spirit,\\nLacking this, it beginneth straightway to languish, even as a floweret born upon dry earth, if the dew and the rain tend it not.",
+    "question": "Based on the text, in what way is the human mind like a flower?",
+    "isGridIn": false,
+    "options": {
+      "A": "It becomes increasingly vigorous with the passage of time.",
+      "B": "It draws strength from changes in the weather.",
+      "C": "It requires proper nourishment in order to thrive.",
+      "D": "It perseveres despite challenging circumstances."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the text explicitly compares the flower needing dew and rain to the mind needing the 'sweet dew of the fostering spirit' to flourish, otherwise it languishes."
+  },
+  {
+    "id": "sat4_rw1_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "The following text is adapted from Jack London's 1903 novel The Call of the Wild. Buck is a sled dog living with John Thornton in Yukon, Canada.\\n\\nThornton alone held [Buck]. The rest of mankind was as nothing. Chance travellers might praise or pet him; but he was cold under it all, and from a too demonstrative man he would get up and walk away. When Thornton's partners, Hans and Pete, arrived on the long-expected raft, Buck refused to notice them till he learned they were close to Thornton; after that he tolerated them in a passive sort of way, accepting favors from them as though he favored them by accepting.",
+    "question": "Which choice best states the main idea of the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Buck has become less social since he began living with Thornton.",
+      "B": "Buck mistrusts humans and does his best to avoid them.",
+      "C": "Buck has been especially well liked by most of Thornton's friends.",
+      "D": "Buck holds Thornton in higher regard than any other person."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the passage emphasizes that 'Thornton alone held Buck' while 'the rest of mankind was as nothing,' tolerating others only if they were close to Thornton."
+  },
+  {
+    "id": "sat4_rw1_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Organic farming is a method of growing food that tries to reduce environmental harm by using natural forms of pest control and avoiding fertilizers made with synthetic materials. Organic farms are still a small fraction of the total farms in the United States, but they have been becoming more popular. According to the US Department of Agriculture, in 2016 California had between 2,600 and 2,800 organic farms and ______",
+    "question": "Which choice most effectively uses data from the graph to complete the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "Washington had between 600 and 800 organic farms.",
+      "B": "New York had fewer than 800 organic farms.",
+      "C": "Wisconsin and Iowa each had between 1,200 and 1,400 organic farms.",
+      "D": "Pennsylvania had more than 1,200 organic farms."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the graph shows Washington having between 600 and 800 organic farms in 2016."
+  },
+  {
+    "id": "sat4_rw1_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Biologist Valentina Gómez-Bahamón and her team have investigated two subspecies of the fork-tailed flycatcher bird that live in the same region in Colombia, but one subspecies migrates south for part of the year, and the other doesn't. The researchers found that, due to slight differences in feather shape, the feathers of migratory forked-tailed flycatcher males make a sound during flight that is higher pitched than that made by the feathers of nonmigratory males. The researchers hypothesize that fork-tailed flycatcher females are attracted to the specific sound made by the males of their own subspecies, and that over time the females' preference will drive further genetic and anatomical divergence between the subspecies.",
+    "question": "Which finding, if true, would most directly support Gómez-Bahamón and her team's hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "The feathers located on the wings of the migratory fork-tailed flycatchers have a narrower shape than those of the nonmigratory birds, which allows them to fly long distances.",
+      "B": "Over several generations, the sound made by the feathers of migratory male fork-tailed flycatchers grows progressively higher pitched relative to that made by the feathers of nonmigratory males.",
+      "C": "Fork-tailed flycatchers communicate different messages to each other depending on whether their feathers create high-pitched or low-pitched sounds.",
+      "D": "The breeding habits of the migratory and nonmigratory fork-tailed flycatchers remained generally the same over several generations."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because if the pitch made by migratory males grows progressively higher over generations, it directly confirms ongoing anatomical and acoustic divergence driven by female preference."
+  },
+  {
+    "id": "sat4_rw1_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Earth's atmosphere is bombarded by cosmic dust originating from several sources: short-period comets (SPCs), particles from the asteroid belt (ASTs), Halley-type comets (HTCs), and Oort cloud comets (OCCs). Some of the dust's material vaporizes in the atmosphere in a process called ablation, and the faster the particles move, the higher the rate of ablation. Astrophysicist Juan Diego Carrillo-Sánchez led a team that calculated average ablation rates for elements in the dust (such as iron and potassium) and showed that material in slower-moving SPC or AST dust has a lower rate than the same material in faster-moving HTC or OCC dust. For example, whereas the average ablation rate for iron from AST dust is 28%, the average rate for ______",
+    "question": "Which choice most effectively uses data from the table to complete the example?",
+    "isGridIn": false,
+    "options": {
+      "A": "iron from SPC dust is 20%.",
+      "B": "sodium from OCC dust is 100%.",
+      "C": "iron from HTC dust is 90%.",
+      "D": "sodium from AST dust is 75%."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the example compares iron ablation in slower-moving AST dust (28%) to iron ablation in faster-moving HTC dust (90%)."
+  },
+  {
+    "id": "sat4_rw1_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Art collectives, like the United States- and Vietnam-based collective The Propeller Group or Cuba's Los Carpinteros, are groups of artists who agree to work together: perhaps for stylistic reasons, or to advance certain shared political ideals, or to help mitigate the costs of supplies and studio space. Regardless of the reasons, art collectives usually involve some collaboration among the artists. Based on a recent series of interviews with various art collectives, an arts journalist claims that this can be difficult for artists who are often used to having sole control over their work.",
+    "question": "Which quotation from the interviews best illustrates the journalist's claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"The first collective I joined included many amazingly talented artists, and we enjoyed each other's company, but because we had a hard time sharing credit and responsibility for our work, the collective didn't last.\"",
+      "B": "\"We work together, but that doesn't mean that individual projects are equally the work of all of us. Many of our projects are primarily the responsibility of whoever originally proposed the work to the group.\"",
+      "C": "\"Having worked as a member of a collective for several years, it's sometimes hard to recall what it was like to work alone without the collective's support. But that support encourages my individual expression rather than limits it.\"",
+      "D": "\"Sometimes an artist from outside the collective will choose to collaborate with us on a project, but all of those projects fit within the larger themes of the work the collective does on its own.\""
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because stating that 'we had a hard time sharing credit and responsibility for our work, the collective didn't last' directly illustrates the difficulty artists face when relinquishing sole control."
+  },
+  {
+    "id": "sat4_rw1_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Mycorrhizal fungi in soil benefits many plants, substantially increasing the mass of some. A student conducted an experiment to illustrate this effect. The student chose three plant species for the experiment, including two that are mycorrhizal hosts (species known to benefit from mycorrhizal fungi) and one nonmycorrhizal species (a species that doesn't benefit from and may even be harmed by mycorrhizal fungi). The student then grew several plants from each species both in soil containing mycorrhizal fungi and in soil that had been treated to kill mycorrhizal and other fungi. After several weeks, the student measured the plants' average mass and was surprised to discover that ______",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "isGridIn": false,
+    "options": {
+      "A": "broccoli grown in soil containing mycorrhizal fungi had a slightly higher average mass than broccoli grown in soil that had been treated to kill fungi.",
+      "B": "corn grown in soil containing mycorrhizal fungi had a higher average mass than broccoli grown in soil containing mycorrhizal fungi.",
+      "C": "marigolds grown in soil containing mycorrhizal fungi had a much higher average mass than marigolds grown in soil that had been treated to kill fungi.",
+      "D": "corn had the highest average mass of all three species grown in soil that had been treated to kill fungi, while marigolds had the lowest."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because nonmycorrhizal species (broccoli) are not supposed to benefit from mycorrhizal fungi, so finding that broccoli had a slightly higher mass with fungi (7.5 g vs 7.0 g) would be surprising."
+  },
+  {
+    "id": "sat4_rw1_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Several artworks found among the ruins of the ancient Roman city of Pompeii depict a female figure fishing with a cupid nearby. Some scholars have asserted that the figure is the goddess Venus, since she is known to have been linked with cupids in Roman culture, but University of Leicester archaeologist Carla Brain suggests that cupids may have also been associated with fishing generally. The fact that a cupid is shown near the female figure, therefore, ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "is not conclusive evidence that the figure is Venus.",
+      "B": "suggests that Venus was often depicted fishing.",
+      "C": "eliminates the possibility that the figure is Venus.",
+      "D": "would be difficult to account for if the figure is not Venus."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because if cupids were associated with fishing in general, the mere presence of a cupid near a fishing figure does not prove conclusively that the figure is Venus."
+  },
+  {
+    "id": "sat4_rw1_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Literary agents estimate that more than half of all nonfiction books credited to a celebrity or other public figure are in fact written by ghostwriters, professional authors who are paid to write other ______ but whose names never appear on book covers.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "people's stories",
+      "B": "peoples story's",
+      "C": "peoples stories",
+      "D": "people's story's"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'people's' is the correct plural possessive form modifying the plural noun 'stories'."
+  },
+  {
+    "id": "sat4_rw1_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Like other amphibians, the wood frog (Rana sylvatica) is unable to generate its own heat, so during periods of subfreezing temperatures, it ______ by producing large amounts of glucose, a sugar that helps prevent damaging ice from forming inside its cells.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "had survived",
+      "B": "survived",
+      "C": "would survive",
+      "D": "survives"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the simple present tense 'survives' matches the general factual present tense established in 'is unable'."
+  },
+  {
+    "id": "sat4_rw1_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "After a spate of illnesses as a child, Wilma Rudolph was told she might never walk again. Defying all odds, Rudolph didn't just walk, she ______ the 1960 Summer Olympics in Rome, she won both the 100- and 200-meter dashes and clinched first place for her team in the 4x100-meter relay, becoming the first US woman to win three gold medals in a single Olympics.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "ran-fast-during",
+      "B": "ran-fast during",
+      "C": "ran-fast, during",
+      "D": "ran-fast. During"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because a period is needed to end the independent clause ('Rudolph didn't just walk, she ran-fast') before beginning the next sentence ('During the 1960 Summer Olympics...')."
+  },
+  {
+    "id": "sat4_rw1_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In many of her landscape paintings from the 1970s and 1980s, Lebanese American artist Etel Adnan worked to capture the essence of California's fog-shrouded Mount Tamalpais region through abstraction, using splotches of color to represent the area's features. Interestingly, the triangle representing the mountain itself ______ among the few defined figures in her paintings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "are",
+      "B": "have been",
+      "C": "were",
+      "D": "is"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the singular subject 'the triangle' requires the singular verb 'is'."
+  },
+  {
+    "id": "sat4_rw1_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Seneca sculptor Marie Watt's blanket art comes in a range of shapes and sizes. In 2004, Watt sewed strips of blankets together to craft a 10-by-13-inch ______ in 2014, she arranged folded blankets into two large stacks and then cast them in bronze, creating two curving 18-foot-tall blue-bronze pillars.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "sampler later,",
+      "B": "sampler;",
+      "C": "sampler,",
+      "D": "sampler, later,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because a semicolon correctly separates two independent clauses without a coordinating conjunction."
+  },
+  {
+    "id": "sat4_rw1_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "African American Percy Julian was a scientist and entrepreneur whose work helped people around the world to see. Named in 1999 as one of the greatest achievements by a US chemist in the past hundred years, ______ led to the first mass-produced treatment for glaucoma.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "Julian synthesized the alkaloid physostigmine in 1935; it",
+      "B": "in 1935 Julian synthesized the alkaloid physostigmine, which",
+      "C": "Julian's 1935 synthesis of the alkaloid physostigmine",
+      "D": "the alkaloid physostigmine was synthesized by Julian in 1935 and"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the introductory modifier 'Named in 1999 as one of the greatest achievements...' must logically modify 'Julian's 1935 synthesis of the alkaloid physostigmine'."
+  },
+  {
+    "id": "sat4_rw1_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "The Arctic-Alpine Botanic Garden in Norway and the Jardim Botânico of Rio de Janeiro in Brazil are two of many botanical gardens around the world dedicated to growing diverse plant ______ fostering scientific research; and educating the public about plant conservation.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "species, both native and nonnative,",
+      "B": "species, both native and nonnative;",
+      "C": "species; both native and nonnative,",
+      "D": "species both native and nonnative,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because semicolons are used to separate items in a complex list containing internal commas ('growing diverse plant species, both native and nonnative; fostering...; and educating...')."
+  },
+  {
+    "id": "sat4_rw1_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Sociologist Alton Okinaka sits on the review board tasked with adding new sites to the Hawai'i Register of Historic Places, which includes Pi'ilanihale Heiau and the 'Opaeka'a Road Bridge. Okinaka doesn't make such decisions ______ all historical designations must be approved by a group of nine other experts from the fields of architecture, archaeology, history, and Hawaiian culture.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "single-handedly, however;",
+      "B": "single-handedly; however,",
+      "C": "single-handedly, however,",
+      "D": "single-handedly however"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'however' is an adverb qualifying the first clause, followed by a semicolon to join the next independent clause ('all historical designations must be approved...')."
+  },
+  {
+    "id": "sat4_rw1_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "In 1968, US Congressman John Conyers introduced a bill to establish a national holiday in honor of Dr. Martin Luther King Jr. The bill didn't make it to a vote, but Conyers was determined. He teamed up with Shirley Chisholm, the first Black woman to be elected to Congress, and they resubmitted the bill every session for the next fifteen years. ______ in 1983, the bill passed.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Instead,",
+      "B": "Likewise,",
+      "C": "Finally,",
+      "D": "Additionally,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'Finally,' marks the culminating event after fifteen years of persistence."
+  },
+  {
+    "id": "sat4_rw1_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Geoscientists have long considered Hawaii's Mauna Loa volcano to be Earth's largest shield volcano by volume, measuring approximately 74,000 cubic kilometers. ______ according to a 2020 study by local geoscientist Michael Garcia, Hawaii's Pūhāhonu shield volcano is significantly larger, boasting a volume of about 148,000 cubic kilometers.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Secondly,",
+      "B": "Consequently,",
+      "C": "Moreover,",
+      "D": "However,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'However,' introduces information that refutes the long-held assumption that Mauna Loa was the largest."
+  },
+  {
+    "id": "sat4_rw1_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "Samuel Coleridge-Taylor was a prominent classical music composer from England who toured the US three times in the early 1900s. The child of a West African father and an English mother, Coleridge-Taylor emphasized his mixed-race ancestry. For example, he referred to himself as Anglo-African. ______ he incorporated the sounds of traditional African music into his classical music compositions.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "In addition,",
+      "B": "Actually,",
+      "C": "However,",
+      "D": "Regardless,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'In addition,' introduces a second way in which Coleridge-Taylor emphasized his African heritage."
+  },
+  {
+    "id": "sat4_rw1_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "In 2019, researcher Patricia Jurado Gonzalez and food historian Nawal Nasrallah prepared a stew from a 4,000-year-old recipe found on a Mesopotamian clay tablet. When they tasted the dish, known as pašrūtum (\"unwinding\"), they found that it had a mild taste and inspired a sense of calm. ______ the researchers, knowing that dishes were sometimes named after their intended effects, theorized that the dish's name, \"unwinding,\" referred to its function: to help ancient diners relax.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Therefore,",
+      "B": "Alternately,",
+      "C": "Nevertheless,",
+      "D": "Likewise,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Therefore,' signals that the researchers' theory was a direct consequence of their observation that the stew produced a calming effect."
+  },
+  {
+    "id": "sat4_rw1_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• Chemical leavening agents cause carbon dioxide to be released within a liquid batter, making the batter rise as it bakes.\\n• Baking soda and baking powder are chemical leavening agents.\\n• Baking soda is pure sodium bicarbonate.\\n• To produce carbon dioxide, baking soda needs to be mixed with liquid and an acidic ingredient such as honey.\\n• Baking powder is a mixture of sodium bicarbonate and an acid.\\n• To produce carbon dioxide, baking powder needs to be mixed with liquid but not with an acidic ingredient.",
+    "question": "The student wants to emphasize a difference between baking soda and baking powder. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "To make batters rise, bakers use chemical leavening agents such as baking soda and baking powder.",
+      "B": "Baking soda and baking powder are chemical leavening agents that, when mixed with other ingredients, cause carbon dioxide to be released within a batter.",
+      "C": "Baking soda is pure sodium bicarbonate, and honey is a type of acidic ingredient.",
+      "D": "To produce carbon dioxide within a liquid batter, baking soda needs to be mixed with an acidic ingredient, whereas baking powder does not."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it directly contrasts baking soda (which requires an acidic ingredient) with baking powder (which does not)."
+  },
+  {
+    "id": "sat4_rw1_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• Soo Sunny Park is a Korean American artist who uses light as her primary medium of expression.\\n• She created her work Unwoven Light in 2013.\\n• Unwoven Light featured a chain-link fence fitted with iridescent plexiglass tiles.\\n• When light passed through the fence, colorful prisms formed.",
+    "question": "The student wants to describe Unwoven Light to an audience unfamiliar with Soo Sunny Park. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Park's 2013 installation Unwoven Light, which included a chain-link fence and iridescent tiles made from plexiglass, featured light as its primary medium of expression.",
+      "B": "Korean American light artist Soo Sunny Park created Unwoven Light in 2013.",
+      "C": "The chain-link fence in Soo Sunny Park's Unwoven Light was fitted with tiles made from iridescent plexiglass.",
+      "D": "In Unwoven Light, a 2013 work by Korean American artist Soo Sunny Park, light formed colorful prisms as it passed through a fence Park had fitted with iridescent tiles."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because it describes the installation's visual mechanism while introducing who Soo Sunny Park is to an unfamiliar audience."
+  },
+  {
+    "id": "sat4_rw1_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• Cambodia's Angkor Wat was built in the 1100s to honor the Hindu god Vishnu.\\n• It has been a Buddhist temple since the sixteenth century.\\n• Decorrelation stretch analysis is a novel digital imaging technique that enhances the contrast between colors in a photograph.\\n• Archaeologist Noel Hidalgo Tan applied decorrelation stretch analysis to photographs he had taken of Angkor Wat's plaster walls.\\n• Tan's analysis revealed hundreds of images unknown to researchers.",
+    "question": "The student wants to present Tan's research to an audience unfamiliar with Angkor Wat. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Tan photographed Angkor Wat's plaster walls and then applied decorrelation stretch analysis to the photographs.",
+      "B": "Decorrelation stretch analysis is a novel digital imaging technique that Tan used to enhance the contrast between colors in a photograph.",
+      "C": "Using a novel digital imaging technique, Tan revealed hundreds of images hidden on the walls of Angkor Wat, a Cambodian temple.",
+      "D": "Built to honor a Hindu god before becoming a Buddhist temple, Cambodia's Angkor Wat concealed hundreds of images on its plaster walls."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it presents Tan's research findings while explaining to an unfamiliar audience what Angkor Wat is ('a Cambodian temple')."
+  }
+]

@@ -1,0 +1,596 @@
+[
+  {
+    "id": "sat4_rw2_01",
+    "questionNumber": 1,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "The fashion resale market, in which consumers purchase secondhand clothing from stores and online sellers, generated nearly $30 billion globally in 2019. Expecting to see continued growth, some analysts ______ that revenues will more than double by 2028.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "produced",
+      "B": "denied",
+      "C": "worried",
+      "D": "predicted"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'predicted' means forecast or indicated that something would happen in the future. Expecting continued growth, analysts predicted revenues would more than double by 2028."
+  },
+  {
+    "id": "sat4_rw2_02",
+    "questionNumber": 2,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Artificially delivering biomolecules to plant cells is an important component of protecting plants from pathogens, but it is difficult to transmit biomolecules through the layers of the plant cell wall. Markita del Carpio Landry and her colleagues have shown that it may be possible to ______ this problem by transmitting molecules through carbon nanotubes, which can cross cell walls.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "conceptualize",
+      "B": "neglect",
+      "C": "illustrate",
+      "D": "overcome"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because 'overcome' means to succeed in dealing with a problem or obstacle. Using carbon nanotubes that cross cell walls allows researchers to overcome the difficulty of transmitting biomolecules."
+  },
+  {
+    "id": "sat4_rw2_03",
+    "questionNumber": 3,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Particle physicists like Ayana Holloway Arce and Aida El-Khadra spend much of their time ______ what is invisible to the naked eye: using sophisticated technology, they closely examine the behavior of subatomic particles, the smallest detectable parts of matter.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "selecting",
+      "B": "inspecting",
+      "C": "creating",
+      "D": "deciding"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'inspecting' means viewing closely in order to examine. The text explains that they use sophisticated technology to closely examine subatomic particles invisible to the naked eye."
+  },
+  {
+    "id": "sat4_rw2_04",
+    "questionNumber": 4,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Anthropologist Kristian J. Carlson and colleagues examined the fossilized clavicle and shoulder bones of a 3.6-million-year-old early hominin known as \"Little Foot.\" They found that these bones were ______ the clavicle and shoulder bones of modern apes that are frequent climbers, such as gorillas and chimpanzees, suggesting that Little Foot had adapted to life in the trees.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "surpassed by",
+      "B": "comparable to",
+      "C": "independent of",
+      "D": "obtained from"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'comparable to' means similar to. The resemblance between Little Foot's bones and those of modern climbing apes suggests Little Foot had adapted to tree climbing."
+  },
+  {
+    "id": "sat4_rw2_05",
+    "questionNumber": 5,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "medium",
+    "prompt": "Rydra Wong, the protagonist of Samuel R. Delany's 1966 novel Babel-17, is a poet, an occupation which, in Delany's work, is not ______: nearly a dozen of the characters that populate his novels are poets or writers.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "infallible",
+      "B": "atypical",
+      "C": "lucrative",
+      "D": "tedious"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'atypical' means unusual or uncommon. Since nearly a dozen of Delany's characters are poets or writers, this occupation is not atypical in his fiction."
+  },
+  {
+    "id": "sat4_rw2_06",
+    "questionNumber": 6,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "For a 2020 exhibition, photographer and neurobiologist Okunola Jeyifous ______ a series of new images based on a series of alphabet posters from the 1970s known as the \"Black ABCs,\" which featured Black children from Chicago. Jeyifous photographed the now-adult models and layered the photos over magnified images of the models' cells, resulting in what he called \"micro and macro portraiture.\"",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "validated",
+      "B": "created",
+      "C": "challenged",
+      "D": "restored"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because 'created' means produced. The passage describes Jeyifous photographing models and layering the images to produce new portraits for an exhibition."
+  },
+  {
+    "id": "sat4_rw2_07",
+    "questionNumber": 7,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "In addition to being an accomplished psychologist himself, Francis Cecil Sumner was a ______ increasing the opportunity for Black students to study psychology, helping to found the psychology department at Howard University, a historically Black university, in 1930.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "proponent of",
+      "B": "supplement to",
+      "C": "beneficiary of",
+      "D": "distraction for"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'proponent of' means an advocate or supporter of. Helping found the psychology department at Howard University demonstrates that Sumner was a proponent of expanding opportunities for Black psychology students."
+  },
+  {
+    "id": "sat4_rw2_08",
+    "questionNumber": 8,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "hard",
+    "prompt": "Whether the reign of a French monarch such as Hugh Capet or Henry I was historically consequential or relatively uneventful, its trajectory was shaped by questions of legitimacy and therefore cannot be understood without a corollary understanding of the factors that allowed the monarch to ______ his right to hold the throne.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "isGridIn": false,
+    "options": {
+      "A": "reciprocate",
+      "B": "annotate",
+      "C": "buttress",
+      "D": "disengage"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because 'buttress' means to strengthen, support, or defend. To secure their reign against questions of legitimacy, monarchs had to buttress their right to hold the throne."
+  },
+  {
+    "id": "sat4_rw2_09",
+    "questionNumber": 9,
+    "section": "Reading and Writing",
+    "domain": "Craft and Structure",
+    "difficulty": "easy",
+    "prompt": "Some bird species don't raise their own chicks. Instead, adult females lay their eggs in other nests, next to another bird species' own eggs. Female cuckoos have been seen quickly laying eggs in the nests of other bird species when those birds are out looking for food. After the eggs hatch, the noncuckoo parents will typically raise the cuckoo chicks as if they were their own offspring, even if the cuckoos look very different from the other chicks.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "isGridIn": false,
+    "options": {
+      "A": "It introduces a physical feature of female cuckoos that is described later in the text.",
+      "B": "It describes the appearance of the cuckoo nests mentioned earlier in the text.",
+      "C": "It offers a detail about how female cuckoos carry out the behavior discussed in the text.",
+      "D": "It explains how other birds react to the female cuckoo behavior discussed in the text."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the underlined sentence provides a specific behavioral detail explaining how female cuckoos deposit eggs into other birds' nests while the hosts are out foraging."
+  },
+  {
+    "id": "sat4_rw2_10",
+    "questionNumber": 10,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "easy",
+    "prompt": "Cats can judge unseen people's positions in space by the sound of their voices and thus react with surprise when the same person calls to them from two different locations in a short span of time. Saho Takagi and colleagues reached this conclusion by measuring cats' levels of surprise based on their ear and head movements while the cats heard recordings of their owners' voices from two speakers spaced far apart. Cats exhibited a low level of surprise when owners' voices were played twice from the same speaker, but they showed a high level of surprise when the voice was played once each from the two different speakers.",
+    "question": "According to the text, how did the researchers determine the level of surprise displayed by the cats in the study?",
+    "isGridIn": false,
+    "options": {
+      "A": "They watched how each cat moved its ears and head.",
+      "B": "They examined how each cat reacted to the voice of a stranger.",
+      "C": "They studied how each cat physically interacted with its owner.",
+      "D": "They tracked how each cat moved around the room."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the text explicitly states that researchers measured the cats' surprise 'based on their ear and head movements.'"
+  },
+  {
+    "id": "sat4_rw2_11",
+    "questionNumber": 11,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "A student performs an experiment testing her hypothesis that a slightly acidic soil environment is more beneficial for the growth of the plant Brassica rapa parachinensis (a vegetable commonly known as choy sum) than a neutral soil environment. She plants sixteen seeds of choy sum in a mixture of equal amounts of coffee grounds (which are highly acidic) and potting soil and another sixteen seeds in potting soil without coffee grounds as the control for the experiment. The two groups of seeds were exposed to the same growing conditions and monitored for three weeks.",
+    "question": "Which finding, if true, would most directly weaken the student's hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "The choy sum planted in the soil without coffee grounds were significantly taller at the end of the experiment than the choy sum planted in the mixture of soil and coffee grounds.",
+      "B": "The choy sum grown in the soil without coffee grounds weighed significantly less at the end of the experiment than the choy sum grown in the mixture of soil and coffee grounds.",
+      "C": "The choy sum seeds planted in the soil without coffee grounds sprouted significantly later in the experiment than did the seeds planted in the mixture of soil and coffee grounds.",
+      "D": "Significantly fewer of the choy sum seeds planted in the soil without coffee grounds sprouted plants than did the seeds planted in the mixture of soil and coffee grounds."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because if plants in neutral control soil grew significantly taller than those in the acidic coffee-ground soil, it directly contradicts the hypothesis that acidic soil is more beneficial."
+  },
+  {
+    "id": "sat4_rw2_12",
+    "questionNumber": 12,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "\"The Young Girl\" is a 1920 short story by Katherine Mansfield. In the story, the narrator takes an unnamed seventeen-year-old girl and her younger brother out for a meal. In describing the teenager, Mansfield frequently contrasts the character's pleasant appearance with her unpleasant attitude, as when Mansfield writes of the teenager, ______",
+    "question": "Which quotation from \"The Young Girl\" most effectively illustrates the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "\"I heard her murmur, 'I can't bear flowers on a table.' They had evidently been giving her intense pain, for she positively closed her eyes as I moved them away.\"",
+      "B": "\"While we waited she took out a little, gold powder-box with a mirror in the lid, shook the poor little puff as though she loathed it, and dabbed her lovely nose.\"",
+      "C": "\"I saw, after that, she couldn't stand this place a moment longer, and, indeed, she jumped up and turned away while I went through the vulgar act of paying for the tea.\"",
+      "D": "\"She didn't even take her gloves off. She lowered her eyes and drummed on the table. When a faint violin sounded she winced and bit her lip again. Silence.\""
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it directly contrasts her unpleasant attitude (shaking the puff 'as though she loathed it') with her pleasant appearance (dabbing her 'lovely nose')."
+  },
+  {
+    "id": "sat4_rw2_13",
+    "questionNumber": 13,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "High levels of public uncertainty about which economic policies a country will adopt can make planning difficult for businesses, but measures of such uncertainty have not tended to be very detailed. Recently, however, economist Sandile Hlatshwayo analyzed trends in news reports to derive measures not only for general economic policy uncertainty but also for uncertainty related to specific areas of economic policy, like tax or trade policy. One revelation of her work is that a general measure may not fully reflect uncertainty about specific areas of policy, as in the case of the United Kingdom, where general economic policy uncertainty ______",
+    "question": "Which choice most effectively uses data from the graph to illustrate the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "aligned closely with uncertainty about tax and public spending policy in 2005 but differed from uncertainty about tax and public spending policy by a large amount in 2009.",
+      "B": "was substantially lower than uncertainty about tax and public spending policy each year from 2005 to 2010.",
+      "C": "reached its highest level between 2005 and 2010 in the same year that uncertainty about trade policy and tax and public spending policy reached their lowest levels.",
+      "D": "was substantially lower than uncertainty about trade policy in 2005 and substantially higher than uncertainty about trade policy in 2010."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because comparing the general economic policy index to trade policy (substantially lower in 2005, substantially higher in 2010) clearly demonstrates that general measures fail to mirror specific policy sectors."
+  },
+  {
+    "id": "sat4_rw2_14",
+    "questionNumber": 14,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Linguist Deborah Tannen has cautioned against framing contentious issues in terms of two highly competitive perspectives, such as pro versus con. According to Tannen, this debate-driven approach can strip issues of their complexity and, when used in front of an audience, can be less informative than the presentation of multiple perspectives in a noncompetitive format. To test Tannen's hypothesis, students conducted a study in which they showed participants one of three different versions of local news commentary about the same issue. Each version featured a debate between two commentators with opposing views, a panel of three commentators with various views, or a single commentator.",
+    "question": "Which finding from the students' study, if true, would most strongly support Tannen's hypothesis?",
+    "isGridIn": false,
+    "options": {
+      "A": "On average, participants perceived commentators in the debate as more knowledgeable about the issue than commentators in the panel.",
+      "B": "On average, participants perceived commentators in the panel as more knowledgeable about the issue than the single commentator.",
+      "C": "On average, participants who watched the panel correctly answered more questions about the issue than those who watched the debate or the single commentator did.",
+      "D": "On average, participants who watched the single commentator correctly answered more questions about the issue than those who watched the debate did."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because answering more questions correctly indicates greater factual comprehension, directly proving that the noncompetitive multiperspective panel was more informative than the debate."
+  },
+  {
+    "id": "sat4_rw2_15",
+    "questionNumber": 15,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "King Lear is a circa 1606 play by William Shakespeare. In the play, the character of King Lear attempts to test his three daughters' devotion to him. He later expresses regret for his actions, as is evident when he ______",
+    "question": "Which choice most effectively uses a quotation from King Lear to illustrate the claim?",
+    "isGridIn": false,
+    "options": {
+      "A": "says of himself, \"I am a man / more sinned against than sinning.\"",
+      "B": "says during a growing storm, \"This tempest will not give me leave to ponder / On things would hurt me more.\"",
+      "C": "says to himself while striking his head, \"Beat at this gate that let thy folly in / And thy dear judgement out!\"",
+      "D": "says of himself, \"I will do such things— / What they are yet, I know not; but they shall be / The terrors of the earth!\""
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because striking his head and rebuking himself for letting 'folly in' and 'dear judgement out' directly captures Lear's profound regret over his rash decisions."
+  },
+  {
+    "id": "sat4_rw2_16",
+    "questionNumber": 16,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "medium",
+    "prompt": "Many of William Shakespeare's tragedies address broad themes that still appeal to today's audiences. For instance, Romeo and Juliet, which is set in the Italy of Shakespeare's time, tackles the themes of parents versus children and love versus hate, and the play continues to be read and produced widely around the world. But understanding Shakespeare's so-called history plays can require a knowledge of several centuries of English history. Consequently, ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "many theatergoers and readers today are likely to find Shakespeare's history plays less engaging than the tragedies.",
+      "B": "some of Shakespeare's tragedies are more relevant to today's audiences than twentieth-century plays.",
+      "C": "Romeo and Juliet is the most thematically accessible of all Shakespeare's tragedies.",
+      "D": "experts in English history tend to prefer Shakespeare's history plays to his other works."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because if understanding history plays requires specialized historical knowledge that modern audiences largely lack, they will likely find them less accessible and engaging than the universal tragedies."
+  },
+  {
+    "id": "sat4_rw2_17",
+    "questionNumber": 17,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "Ancestral Puebloans, the civilization from which present-day Pueblo tribes descended, emerged as early as 1500 B.C.E. in an area of what is now the southwestern United States and dispersed suddenly in the late 1200s C.E., abandoning established villages with systems for farming crops and turkeys. Recent analysis comparing turkey remains at Mesa Verde, one such village in southern Colorado, to samples from modern turkey populations in the Rio Grande Valley of north central New Mexico determined that the latter birds descended in part from turkeys cultivated at Mesa Verde, with shared genetic markers appearing only after 1280. Thus, researchers concluded that ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "conditions of the terrains in the Rio Grande Valley and Mesa Verde had greater similarities in the past than they do today.",
+      "B": "some Ancestral Puebloans migrated to the Rio Grande Valley in the late 1200s and carried farming practices with them.",
+      "C": "Indigenous peoples living in the Rio Grande Valley primarily planted crops and did not cultivate turkeys before 1280.",
+      "D": "the Ancestral Puebloans of Mesa Verde likely adopted the farming practices of Indigenous peoples living in other regions."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the appearance of Mesa Verde turkey DNA in the Rio Grande Valley exclusively after 1280 indicates that migrating Puebloans brought their domesticated turkeys and farming practices southward."
+  },
+  {
+    "id": "sat4_rw2_18",
+    "questionNumber": 18,
+    "section": "Reading and Writing",
+    "domain": "Information and Ideas",
+    "difficulty": "hard",
+    "prompt": "One challenge when researching whether holding elected office changes a person's behavior is the problem of ensuring that the experiment has an appropriate control group. To reveal the effect of holding office, researchers must compare people who hold elected office with people who do not hold office but who are otherwise similar to the office-holders. Since researchers are unable to control which politicians win elections, they therefore ______",
+    "question": "Which choice most logically completes the text?",
+    "isGridIn": false,
+    "options": {
+      "A": "struggle to find valid data about the behavior of politicians who do not currently hold office.",
+      "B": "can only conduct valid studies with people who have previously held office rather than people who presently hold office.",
+      "C": "should select a control group of people who differ from office holders in several significant ways.",
+      "D": "will find it difficult to identify a group of people who can function as an appropriate control group for their studies."
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because an inability to randomly assign or control election outcomes makes assembling an equivalent group of non-office holders extremely difficult."
+  },
+  {
+    "id": "sat4_rw2_19",
+    "questionNumber": 19,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In his groundbreaking book Bengali Harlem and the Lost Histories of South Asian America, Vivek Bald uses newspaper articles, census records, ships' logs, and memoirs to tell the ______ who made New York City their home in the early twentieth century.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "story's of the South Asian immigrants",
+      "B": "story's of the South Asian immigrants'",
+      "C": "stories of the South Asian immigrants",
+      "D": "stories' of the South Asian immigrant's"
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because the context requires the plural noun 'stories' (direct object of 'tell') followed by the prepositional phrase containing the plural noun 'immigrants'."
+  },
+  {
+    "id": "sat4_rw2_20",
+    "questionNumber": 20,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "In her two major series \"Memory Test\" and \"Autobiography,\" painter Howardena Pindell explored themes ______ healing, self-discovery, and memory by cutting and sewing back together pieces of canvas and inserting personal artifacts, such as postcards, into some of the paintings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "of",
+      "B": "of,",
+      "C": "of-",
+      "D": "of:"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because no punctuation should separate the preposition 'of' from its noun phrase complement ('healing, self-discovery, and memory')."
+  },
+  {
+    "id": "sat4_rw2_21",
+    "questionNumber": 21,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "easy",
+    "prompt": "Both Sona Charaipotra, an Indian American, and Dhonielle Clayton, an African American, grew up frustrated by the lack of diverse characters in books for young people. In 2011, these two writers joined forces to found CAKE Literary, a book packaging ______ specializes in the creation and promotion of stories told from diverse perspectives for children and young adults.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "company,",
+      "B": "company that",
+      "C": "company",
+      "D": "company, that"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the restrictive relative pronoun 'that' (without commas) properly introduces the essential clause modifying 'a book packaging company'."
+  },
+  {
+    "id": "sat4_rw2_22",
+    "questionNumber": 22,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "A study led by scientist Rebecca Kirby at the University of Wisconsin-Madison found that black bears that eat human food before hibernation have increased levels of a rare carbon isotope, ______ due to the higher 13C levels in corn and cane sugar. Bears with these elevated levels were also found to have much shorter hibernation periods on average.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "carbon-13, (13C)",
+      "B": "carbon-13 (13C)",
+      "C": "carbon-13, (13C),",
+      "D": "carbon-13 (13C),"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because the nonessential modifier 'carbon-13 (13C)' is introduced with a comma after 'isotope' and must close with a comma before 'due to'."
+  },
+  {
+    "id": "sat4_rw2_23",
+    "questionNumber": 23,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In 2010, archaeologist Noel Hidalgo Tan was visiting the twelfth-century temple of Angkor Wat in Cambodia when he noticed markings of red paint on the temple ______ the help of digital imaging techniques, he discovered the markings to be part of an elaborate mural containing over 200 paintings.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "walls, with",
+      "B": "walls with",
+      "C": "walls so with",
+      "D": "walls. With"
+    },
+    "correctAnswer": "D",
+    "explanation": "Choice D is the best answer because a period is required to separate the first independent clause ending at 'walls' from the subsequent sentence beginning with the prepositional phrase 'With the help of...'."
+  },
+  {
+    "id": "sat4_rw2_24",
+    "questionNumber": 24,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "Working from an earlier discovery of Charpentier's, chemists Emmanuelle Charpentier and Jennifer Doudna—winners of the 2020 Nobel Prize in Chemistry—re-created and then reprogrammed the so-called \"genetic scissors\" of a species of DNA-cleaving bacteria ______ a tool that is revolutionizing the field of gene technology.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "to forge",
+      "B": "forging",
+      "C": "forged",
+      "D": "and forging"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because the infinitive 'to forge' clearly expresses the purpose of reprogramming the bacterial system without creating a dangling or ungrammatical participle construction."
+  },
+  {
+    "id": "sat4_rw2_25",
+    "questionNumber": 25,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "In 2016, engineer Vanessa Galvez oversaw the installation of 164 bioswales, vegetated channels designed to absorb and divert stormwater, along the streets of Queens, New York. By reducing the runoff flowing into city sewers, ______",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "the mitigation of both street flooding and the resulting pollution of nearby waterways has been achieved by bioswales.",
+      "B": "the bioswales have mitigated both street flooding and the resulting pollution of nearby waterways.",
+      "C": "the bioswales' mitigation of both street flooding and the resulting pollution of nearby waterways has been achieved.",
+      "D": "both street flooding and the resulting pollution of nearby waterways have been mitigated by bioswales."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because the subject performing the action of 'reducing the runoff' is 'the bioswales', avoiding a dangling modifier."
+  },
+  {
+    "id": "sat4_rw2_26",
+    "questionNumber": 26,
+    "section": "Reading and Writing",
+    "domain": "Standard English Conventions",
+    "difficulty": "medium",
+    "prompt": "A study published by Rice University geoscientist Ming Tang in 2019 offers a new explanation for the origin of Earth's ______ structures called arcs, towering ridges that form when a dense oceanic plate subducts under a less dense continental plate, melts in the mantle below, and then rises and bursts through the continental crust above.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "isGridIn": false,
+    "options": {
+      "A": "continents geological",
+      "B": "continents: geological",
+      "C": "continents; geological",
+      "D": "continents. Geological"
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because a colon introduces the following appositive phrase explaining and elaborating on the origin of Earth's continents."
+  },
+  {
+    "id": "sat4_rw2_27",
+    "questionNumber": 27,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "During a 2021 launch, Rocket Labs' Electron rocket experienced an unexpected failure: its second-stage booster shut down suddenly after ignition. ______ instead of downplaying the incident, Rocket Labs' CEO publicly acknowledged what happened and apologized for the loss of the rocket's payload, which had consisted of two satellites.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Afterward,",
+      "B": "Additionally,",
+      "C": "Indeed,",
+      "D": "Similarly,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because 'Afterward,' signals that the public acknowledgement occurred chronologically following the launch failure."
+  },
+  {
+    "id": "sat4_rw2_28",
+    "questionNumber": 28,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "When soil becomes contaminated by toxic metals, it can be removed from the ground and disposed of in a landfill. ______ contaminated soil can be detoxified via phytoremediation: plants that can withstand high concentrations of metals absorb the pollutants and store them in their shoots, which are then cut off and safely disposed of, preserving the health of the plants.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "isGridIn": false,
+    "options": {
+      "A": "Alternatively,",
+      "B": "Specifically,",
+      "C": "For example,",
+      "D": "As a result,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because phytoremediation is presented as another, alternative method for treating contaminated soil."
+  },
+  {
+    "id": "sat4_rw2_29",
+    "questionNumber": 29,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• The calendar used by most of the world (the Gregorian calendar) has 365 days.\\n• Because 365 days can't be divided evenly by 7 (the number of days in a week), calendar dates fall on a different day of the week each year.\\n• The Hanke-Henry permanent calendar, developed as an alternative to the Gregorian calendar, has 364 days.\\n• Because 364 can be divided evenly by 7, calendar dates fall on the same day of the week each year, which supports more predictable scheduling.",
+    "question": "The student wants to explain an advantage of the Hanke-Henry calendar. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "The Gregorian calendar has 365 days, which is one day longer than the Hanke-Henry permanent calendar.",
+      "B": "Adopting the Hanke-Henry permanent calendar would help solve a problem with the Gregorian calendar.",
+      "C": "Designed so calendar dates would occur on the same day of the week each year, the Hanke-Henry calendar supports more predictable scheduling than does the Gregorian calendar.",
+      "D": "The Hanke-Henry permanent calendar was developed as an alternative to the Gregorian calendar, which is currently the most-used calendar in the world."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it directly explains the advantage: supporting more predictable scheduling by having calendar dates fall on the same day of the week every year."
+  },
+  {
+    "id": "sat4_rw2_30",
+    "questionNumber": 30,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "medium",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• The Haudenosaunee Confederacy is a nearly 1,000-year-old alliance of six Native nations in the northeastern US.\\n• The members are bound by a centuries-old agreement known as the Great Law of Peace.\\n• Historian Bruce Johansen is one of several scholars who believe that the principles of the Great Law of Peace influenced the US Constitution.\\n• This theory is called the influence theory.\\n• Johansen cites the fact that Benjamin Franklin and Thomas Jefferson both studied the Haudenosaunee Confederacy.",
+    "question": "The student wants to present the influence theory to an audience unfamiliar with the Haudenosaunee Confederacy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Historian Bruce Johansen believes that the Great Law of Peace was very influential.",
+      "B": "The influence theory is supported by the fact that Benjamin Franklin and Thomas Jefferson both studied the Haudenosaunee Confederacy.",
+      "C": "The influence theory holds that the principles of the Great Law of Peace, a centuries-old agreement binding six Native nations in the northeastern US, influenced the US Constitution.",
+      "D": "Native people, including the members of the Haudenosaunee Confederacy, influenced the founding of the US in many different ways."
+    },
+    "correctAnswer": "C",
+    "explanation": "Choice C is the best answer because it defines the influence theory while providing necessary context about the Great Law of Peace and the confederacy for an unfamiliar audience."
+  },
+  {
+    "id": "sat4_rw2_31",
+    "questionNumber": 31,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• In 1999, astronomer Todd Henry studied the differences in surface temperature between the Sun and nearby stars.\\n• His team mapped all stars within 10 parsecs (approximately 200 trillion miles) of the Sun.\\n• The surface temperature of the Sun is around 9,800°F, which classifies it as a G star.\\n• 327 of the 357 stars in the study were classified as K or M stars, with surface temperatures under 8,900°F (cooler than the Sun).\\n• 11 of the 357 stars in the study were classified as A or F stars, with surface temperatures greater than 10,300°F (hotter than the Sun).",
+    "question": "The student wants to emphasize how hot the Sun is relative to nearby stars. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "At around 9,800°F, which classifies it as a G star, the Sun is hotter than most but not all of the stars within 10 parsecs of it.",
+      "B": "Astronomer Todd Henry determined that the Sun, at around 9,800°F, is a G star, and several other stars within a 10-parsec range are A or F stars.",
+      "C": "Of the 357 stars within ten parsecs of the Sun, 327 are classified as K or M stars, with surface temperatures under 8,900°F.",
+      "D": "While most of the stars within 10 parsecs of the Sun are classified as K, M, A, or F stars, the Sun is classified as a G star due to its surface temperature of 9,800°F."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it highlights the Sun's temperature and explicitly emphasizes that it is hotter than most nearby stars (327 out of 357)."
+  },
+  {
+    "id": "sat4_rw2_32",
+    "questionNumber": 32,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• The Atlantic Monthly magazine was first published in 1857.\\n• The magazine focused on politics, art, and literature.\\n• In 2019, historian Cathryn Halverson published the book Faraway Women and the \"Atlantic Monthly.\"\\n• Its subject is female authors whose autobiographies appeared in the magazine in the early 1900s.\\n• One of the authors discussed is Juanita Harrison.",
+    "question": "The student wants to introduce Cathryn Halverson's book to an audience already familiar with the Atlantic Monthly. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "Cathryn Halverson's Faraway Women and the \"Atlantic Monthly\" discusses female authors whose autobiographies appeared in the magazine in the early 1900s.",
+      "B": "A magazine called the Atlantic Monthly, referred to in Cathryn Halverson's book title, was first published in 1857.",
+      "C": "Faraway Women and the \"Atlantic Monthly\" features contributors to the Atlantic Monthly, first published in 1857 as a magazine focusing on politics, art, and literature.",
+      "D": "An author discussed by Cathryn Halverson is Juanita Harrison, whose autobiography appeared in the Atlantic Monthly in the early 1900s."
+    },
+    "correctAnswer": "A",
+    "explanation": "Choice A is the best answer because it introduces Halverson's book without wasting space explaining what the Atlantic Monthly is to an audience already familiar with it."
+  },
+  {
+    "id": "sat4_rw2_33",
+    "questionNumber": 33,
+    "section": "Reading and Writing",
+    "domain": "Expression of Ideas",
+    "difficulty": "easy",
+    "prompt": "While researching a topic, a student has taken the following notes:\\n• The magnificent frigatebird (fregata magnificens) is a species of seabird that feeds mainly on fish, tuna, squid, and other small sea animals.\\n• It is unusual among seabirds in that it doesn't dive into the water for prey.\\n• One way it acquires food is by using its hook-tipped bill to snatch prey from the surface of the water.\\n• Another way it acquires food is by taking it from weaker birds by force.\\n• This behavior is known as kleptoparasitism.",
+    "question": "The student wants to emphasize a similarity between the two ways a magnificent frigatebird acquires food. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "isGridIn": false,
+    "options": {
+      "A": "A magnificent frigatebird never dives into the water, instead using its hook-tipped bill to snatch prey from the surface.",
+      "B": "Neither of a magnificent frigatebird's two ways of acquiring food requires the bird to dive into the water.",
+      "C": "Of the magnificent frigatebird's two ways of acquiring food, only one is known as kleptoparasitism.",
+      "D": "In addition to snatching prey from the water with its hook-tipped bill, a magnificent frigatebird takes food from other birds by force."
+    },
+    "correctAnswer": "B",
+    "explanation": "Choice B is the best answer because it specifically emphasizes a commonality (similarity): neither method requires diving into the water."
+  }
+]

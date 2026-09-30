@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat6_math2_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f$ is defined by $f(x) = 8x$.",
+    "question": "For what value of $x$ does $f(x) = 72$?",
+    "isGridIn": false,
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "64",
+      "D": "80"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Thay $f(x) = 72$: $8x = 72 \\iff x = \\frac{72}{8} = 9$."
+  },
+  {
+    "id": "sat6_math2_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "Two lines intersect at a point. Angle 1 and angle 2 are vertical angles. The measure of angle 1 is $72^\\circ$.",
+    "question": "What is the measure of angle 2?",
+    "isGridIn": false,
+    "options": {
+      "A": "$72^\\circ$",
+      "B": "$108^\\circ$",
+      "C": "$144^\\circ$",
+      "D": "$288^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Hai góc đối đỉnh luôn có số đo bằng nhau, do đó góc 2 cũng có số đo bằng $72^\\circ$."
+  },
+  {
+    "id": "sat6_math2_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "On a street with 7 houses, 2 houses are blue.",
+    "question": "If a house from this street is selected at random, what is the probability of selecting a house that is blue?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{1}{7}$",
+      "B": "$\\frac{2}{7}$",
+      "C": "$\\frac{5}{7}$",
+      "D": "$\\frac{7}{7}$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Xác suất chọn ngẫu nhiên được một ngôi nhà màu xanh là số nhà màu xanh chia cho tổng số nhà: $\\frac{2}{7}$."
+  },
+  {
+    "id": "sat6_math2_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The graph of function $f$ is shown in the $xy$-plane, which is a straight line sloping upward from left to right.",
+    "question": "Which of the following describes function $f$?",
+    "isGridIn": false,
+    "options": {
+      "A": "Increasing linear",
+      "B": "Decreasing linear",
+      "C": "Increasing exponential",
+      "D": "Decreasing exponential"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Đồ thị là một đường thẳng đi lên từ trái sang phải, biểu thị một hàm số bậc nhất đồng biến (Increasing linear)."
+  },
+  {
+    "id": "sat6_math2_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The graph of the function $f$ is shown, where $y = f(x)$. The line intersects the $y$-axis at $(0, -4)$.",
+    "question": "What is the $y$-intercept of the graph?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(0, -1)$",
+      "B": "$(0, -4)$",
+      "C": "$(0, 1)$",
+      "D": "$(0, 4)$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Giao điểm với trục tung ($y$-intercept) là điểm mà đồ thị cắt trục $y$, tức là $(0, -4)$."
+  },
+  {
+    "id": "sat6_math2_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the system of equations:\n$$x = 8$$\n$$x + 3y = 26$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $y$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "6",
+    "explanation": "Đáp án là 6. Thay $x = 8$ vào phương trình thứ hai: $8 + 3y = 26 \\iff 3y = 18 \\iff y = 6$."
+  },
+  {
+    "id": "sat6_math2_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The amount of Hanna's bill for a food order was $50. Hanna gave a tip of 20% of the amount of the bill.",
+    "question": "What is the amount, in dollars, of the tip Hanna gave?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "10",
+    "explanation": "Đáp án là 10. Số tiền tip là $20\\%$ của $50$: $\\frac{20}{100} \\times 50 = 10$ đô la."
+  },
+  {
+    "id": "sat6_math2_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the polynomial expression: $$5x^5 - 6x^4 + 8x^3$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$x^4(5x - 6)$",
+      "B": "$x^3(5x^2 - 6x + 8)$",
+      "C": "$8x^3(5x^2 - 6x + 1)$",
+      "D": "$6x^5(-6x^4 + 8x^3 + 1)$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đặt nhân tử chung lớn nhất là $x^3$ ra ngoài: $5x^5 - 6x^4 + 8x^3 = x^3(5x^2 - 6x + 8)$."
+  },
+  {
+    "id": "sat6_math2_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "The ratio of the length of line segment $XY$ to the length of line segment $ZV$ is $6$ to $1$. The length of line segment $XY$ is $102$ inches.",
+    "question": "What is the length, in inches, of line segment $ZV$?",
+    "isGridIn": false,
+    "options": {
+      "A": "17",
+      "B": "96",
+      "C": "102",
+      "D": "612"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Tỉ lệ là $\\frac{XY}{ZV} = \\frac{6}{1} \\iff \\frac{102}{ZV} = 6 \\iff ZV = \\frac{102}{6} = 17$ inches."
+  },
+  {
+    "id": "sat6_math2_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the linear equation: $$7(2x - 3) = 63$$",
+    "question": "Which equation has the same solution as the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$2x - 3 = 9$",
+      "B": "$2x - 3 = 56$",
+      "C": "$2x - 21 = 63$",
+      "D": "$2x - 21 = 70$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Chia cả hai vế của phương trình cho 7: $\\frac{7(2x - 3)}{7} = \\frac{63}{7} \\iff 2x - 3 = 9$."
+  },
+  {
+    "id": "sat6_math2_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f$ defined by $f(t) = 14t + 9$ gives the estimated length, in inches, of a vine plant $t$ months after Tavon purchased it.",
+    "question": "Which of the following is the best interpretation of 9 in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "Tavon will keep the vine plant for 9 months.",
+      "B": "The vine plant is expected to grow 9 inches each month.",
+      "C": "The vine plant is expected to grow to a maximum length of 9 inches.",
+      "D": "The estimated length of the vine plant was 9 inches when Tavon purchased it."
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Hệ số tự do $9$ là giá trị $f(0)$, tức là chiều dài ước tính của cây leo tại thời điểm $t = 0$ khi mới mua."
+  },
+  {
+    "id": "sat6_math2_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$(x + 2)(x - 5)(x + 9) = 0$$",
+    "question": "What is a positive solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "18"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Các nghiệm của phương trình tích là $x = -2$, $x = 5$, và $x = -9$. Nghiệm dương duy nhất là $5$."
+  },
+  {
+    "id": "sat6_math2_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "Brian saves $\\frac{2}{5}$ of the $215 he earns each week from his job.",
+    "question": "If Brian continues to save at this rate, how much money, in dollars, will Brian save in 9 weeks?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "774",
+    "explanation": "Đáp án là 774. Mỗi tuần Brian tiết kiệm được: $\\frac{2}{5} \\times 215 = 86$ đô la. Sau 9 tuần, tổng số tiền tiết kiệm được là: $86 \\times 9 = 774$ đô la."
+  },
+  {
+    "id": "sat6_math2_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "A rectangle has an area of 155 square inches. The length of the rectangle is 4 inches less than 7 times the width of the rectangle.",
+    "question": "What is the width of the rectangle, in inches?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "5",
+    "explanation": "Đáp án là 5. Gọi chiều rộng là $w > 0$. Chiều dài là $7w - 4$. Diện tích: $w(7w - 4) = 155 \\iff 7w^2 - 4w - 155 = 0 \\iff (7w + 31)(w - 5) = 0$. Vì $w > 0$ nên $w = 5$ inches."
+  },
+  {
+    "id": "sat6_math2_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Consider the following data set of 8 numbers: $$4, 10, 18, 4, 4, 5, 6, 5$$",
+    "question": "What is the median of the data set shown?",
+    "isGridIn": false,
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "7",
+      "D": "14"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Sắp xếp dãy số theo thứ tự tăng dần: $4, 4, 4, 5, 5, 6, 10, 18$. Vì có 8 số nên trung vị là trung bình cộng của số thứ 4 và số thứ 5: $\\frac{5 + 5}{2} = 5$."
+  },
+  {
+    "id": "sat6_math2_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "A right circular cylinder has a volume of 432 cubic centimeters. The area of the base of the cylinder is 24 square centimeters.",
+    "question": "What is the height, in centimeters, of the cylinder?",
+    "isGridIn": false,
+    "options": {
+      "A": "18",
+      "B": "24",
+      "C": "216",
+      "D": "10,368"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Thể tích hình trụ bằng diện tích đáy nhân chiều cao: $V = B \\cdot h \\iff 432 = 24h \\iff h = \\frac{432}{24} = 18\\text{ cm}$."
+  },
+  {
+    "id": "sat6_math2_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$x^2 = -841$$",
+    "question": "How many distinct real solutions does the given equation have?",
+    "isGridIn": false,
+    "options": {
+      "A": "Exactly one",
+      "B": "Exactly two",
+      "C": "Infinitely many",
+      "D": "Zero"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Bình phương của một số thực luôn không âm ($x^2 \\ge 0$). Do đó phương trình $x^2 = -841$ không có nghiệm thực nào (Zero)."
+  },
+  {
+    "id": "sat6_math2_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Line $k$ is defined by $y = 7x + \\frac{1}{8}$. Line $j$ is perpendicular to line $k$ in the $xy$-plane.",
+    "question": "What is the slope of line $j$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-8",
+      "B": "$-\\frac{1}{7}$",
+      "C": "$\\frac{1}{8}$",
+      "D": "7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hệ số góc của đường thẳng $k$ là $7$. Đường thẳng $j$ vuông góc với $k$ nên hệ số góc của nó bằng nghịch đảo đổi dấu: $-\\frac{1}{7}$."
+  },
+  {
+    "id": "sat6_math2_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "The table shows the linear relationship between the number of cars, $c$, on a commuter train and the maximum number of passengers and crew, $p$, that the train can carry:\n$c = 3 \\implies p = 174$\n$c = 5 \\implies p = 284$\n$c = 10 \\implies p = 559$",
+    "question": "Which equation represents the linear relationship between $c$ and $p$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$55c - p = -9$",
+      "B": "$55c - p = 9$",
+      "C": "$55p - c = -9$",
+      "D": "$55p - c = 9$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Hệ số góc $m = \\frac{284 - 174}{5 - 3} = \\frac{110}{2} = 55$. Phương trình có dạng $p = 55c + b$. Thay $(3, 174)$: $174 = 55(3) + b = 165 + b \\implies b = 9$. Vậy $p = 55c + 9 \\iff 55c - p = -9$."
+  },
+  {
+    "id": "sat6_math2_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the exponential equation: $$4^{8c} = \\sqrt[3]{4^7}$$",
+    "question": "What is the value of $c$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "7/24",
+    "explanation": "Đáp án là 7/24 hoặc 0.2917. Viết lại vế phải dạng số mũ hữu tỉ: $\\sqrt[3]{4^7} = 4^{7/3}$. Khi đó $4^{8c} = 4^{7/3} \\iff 8c = \\frac{7}{3} \\iff c = \\frac{7}{24}$."
+  },
+  {
+    "id": "sat6_math2_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of equations:\n$$(x - 2) - 4(y + 7) = 117$$\n$$(x - 2) + 4(y + 7) = 442$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $6(x - 2)$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "1677",
+    "explanation": "Đáp án là 1677. Cộng hai phương trình vế theo vế: $2(x - 2) = 117 + 442 = 559$. Nhân cả hai vế với 3: $6(x - 2) = 3 \\times 559 = 1,677$."
+  },
+  {
+    "id": "sat6_math2_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "In triangle $ABC$, angle $B$ is a right angle. The length of side $AB$ is $10\\sqrt{37}$ and the length of side $BC$ is $24\\sqrt{37}$.",
+    "question": "What is the length of side $AC$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$14\\sqrt{37}$",
+      "B": "$26\\sqrt{37}$",
+      "C": "$34\\sqrt{37}$",
+      "D": "$\\sqrt{34 \\cdot 37}$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Áp dụng định lý Pytago với bộ ba số Pytago $5-12-13$ gấp đôi thành $10-24-26$: $AC = \\sqrt{(10\\sqrt{37})^2 + (24\\sqrt{37})^2} = \\sqrt{37(100 + 576)} = \\sqrt{37 \\times 676} = 26\\sqrt{37}$."
+  },
+  {
+    "id": "sat6_math2_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The function $f$ is defined by: $$f(x) = (1.84)^{x/4}$$\nThe equation can be rewritten as $f(x) = \\left(1 + \\frac{p}{100}\\right)^x$, where $p$ is a constant.",
+    "question": "Which of the following is closest to the value of $p$?",
+    "isGridIn": false,
+    "options": {
+      "A": "16",
+      "B": "21",
+      "C": "46",
+      "D": "96"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Ta có $(1.84)^{x/4} = \\left(1.84^{1/4}\\right)^x \\approx (1.1647)^x$. So sánh với $1 + \\frac{p}{100} \\approx 1.1647 \\implies \\frac{p}{100} \\approx 0.1647 \\implies p \\approx 16.47$. Giá trị gần nhất là 16."
+  },
+  {
+    "id": "sat6_math2_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The function $f$ is defined by $f(x) = a\\sqrt{x + b}$, where $a$ and $b$ are constants. In the $xy$-plane, the graph of $y = f(x)$ passes through the point $(-24, 0)$, and $f(24) < 0$.",
+    "question": "Which of the following must be true?",
+    "isGridIn": false,
+    "options": {
+      "A": "$f(0) = 24$",
+      "B": "$f(0) = -24$",
+      "C": "$a > b$",
+      "D": "$a < b$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Đồ thị đi qua $(-24, 0) \\implies a\\sqrt{-24 + b} = 0$. Vì tập xác định chứa $x = 24$ nên căn thức phải xác định, suy ra $-24 + b = 0 \\iff b = 24$. Với $x = 24$: $f(24) = a\\sqrt{24 + 24} = a\\sqrt{48} < 0 \\implies a < 0$. Vì $a < 0$ và $b = 24 > 0$ nên chắc chắn $a < b$."
+  },
+  {
+    "id": "sat6_math2_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In the $xy$-plane, a circle has center $C(h, k)$. Points $A$ and $B$ lie on the circle. Point $A$ has coordinates $(h + 1, k + \\sqrt{102})$, and $\\angle ACB$ is a right angle.",
+    "question": "What is the length of $\\overline{AB}$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\sqrt{206}$",
+      "B": "$2\\sqrt{102}$",
+      "C": "$103\\sqrt{2}$",
+      "D": "$103\\sqrt{3}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Bán kính $r = CA = \\sqrt{(h+1 - h)^2 + (k+\\sqrt{102} - k)^2} = \\sqrt{1^2 + 102} = \\sqrt{103}$. Tam giác $ABC$ vuông cân tại $C$ với hai cạnh góc vuông $CA = CB = r = \\sqrt{103}$. Độ dài cạnh huyền $AB = r\\sqrt{2} = \\sqrt{103} \\times \\sqrt{2} = \\sqrt{206}$."
+  },
+  {
+    "id": "sat6_math2_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "hard",
+    "prompt": "The scatterplot shows data set E with a line of best fit having a $y$-intercept at approximately $(0, 12)$ and passing near $(12, 30)$. Data set F is created by multiplying the $y$-coordinate of each data point from data set E by 3.9.",
+    "question": "Which of the following could be an equation of a line of best fit for data set F?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 46.8 + 5.9x$",
+      "B": "$y = 46.8 + 1.5x$",
+      "C": "$y = 12 + 5.9x$",
+      "D": "$y = 12 + 1.5x$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Tung độ gốc mới: $12 \\times 3.9 = 46.8$. Điểm $(12, 30)$ biến thành $(12, 30 \\times 3.9) = (12, 117)$. Hệ số góc mới: $m = \\frac{117 - 46.8}{12 - 0} = \\frac{70.2}{12} = 5.85 \\approx 5.9$. Phương trình là $y = 46.8 + 5.9x$."
+  },
+  {
+    "id": "sat6_math2_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "Given the system of linear equations:\n$$48x - 64y = 48y + 24$$\n$$ry = \\frac{1}{8} - 12x$$\nIn the given system of equations, $r$ is a constant. The system has no solution.",
+    "question": "What is the value of $r$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "-28",
+    "explanation": "Đáp án là -28. Đưa cả 2 phương trình về dạng chuẩn $Ax + By = C$:\nPhương trình 1: $48x - 112y = 24$.\nPhương trình 2: $12x + ry = \\frac{1}{8}$.\nNhân phương trình 2 với 4: $48x + 4ry = \\frac{1}{2}$.\nĐể hệ vô nghiệm thì hai đường thẳng phải song song và không trùng nhau: $-112 = 4r \\iff r = -28$ (đồng thời $\\frac{1}{2} \\ne 24$ thỏa mãn)."
+  }
+]

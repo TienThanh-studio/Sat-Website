@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat7_math1_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The scatterplot shows the temperature, in degrees Fahrenheit (°F), and the distance above sea level, in feet, measured at 6 locations on Mount Jefferson. A line of best fit is also shown.",
+    "question": "At a distance of 4,000 feet above sea level, what is the temperature, in °F, predicted by the line of best fit?",
+    "isGridIn": false,
+    "options": {
+      "A": "47",
+      "B": "35",
+      "C": "25",
+      "D": "0"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Trên đường thẳng hồi quy, điểm có hoành độ x = 4,000 feet có tung độ y tương ứng là 35°F."
+  },
+  {
+    "id": "sat7_math1_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "Rectangle $P$ has an area of $72$ square inches. If a rectangle with an area of $20$ square inches is removed from rectangle $P$, what is the area, in square inches, of the resulting figure?",
+    "question": "What is the area, in square inches, of the resulting figure?",
+    "isGridIn": false,
+    "options": {
+      "A": "92",
+      "B": "84",
+      "C": "80",
+      "D": "52"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Diện tích hình còn lại sau khi bớt đi phần 20 square inches là: $72 - 20 = 52$ square inches."
+  },
+  {
+    "id": "sat7_math1_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$|p| + 61 = 65$$",
+    "question": "Which value is a solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{65}{61}$",
+      "B": "4",
+      "C": "126",
+      "D": "130"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Trừ 61 ở cả hai vế: $|p| = 65 - 61 = 4 \\implies p = 4$ hoặc $p = -4$."
+  },
+  {
+    "id": "sat7_math1_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Lorenzo purchased a box of cereal and some strawberries at the grocery store. Lorenzo paid $2 for the box of cereal and $1.90 per pound for the strawberries. Lorenzo paid a total of $9.60 for the box of cereal and the strawberries.",
+    "question": "Which of the following equations can be used to find $p$, the number of pounds of strawberries Lorenzo purchased?",
+    "isGridIn": false,
+    "options": {
+      "A": "$1.90p + 2 = 9.60$",
+      "B": "$1.90p - 2 = 9.60$",
+      "C": "$1.90 + 2p = 9.60$",
+      "D": "$1.90 - 2p = 9.60$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giá tiền mua dâu tây là $1.90p$, cộng thêm $2 cho hộp ngũ cốc, tổng chi phí là $1.90p + 2 = 9.60$."
+  },
+  {
+    "id": "sat7_math1_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The bar graph summarizes the charge, in kilowatt-hours (kWh), a battery received each day for 15 days.",
+    "question": "For how many of these 15 days did the battery receive a charge of 0 kWh?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "4",
+      "D": "6"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Cột biểu thị mức nạp 0 kWh đạt chiều cao là 6, nghĩa là có 6 ngày pin nhận 0 kWh."
+  },
+  {
+    "id": "sat7_math1_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A line in the $xy$-plane has a slope of $9$ and passes through the point $(0, -5)$. The equation $y = px + r$ defines the line, where $p$ and $r$ are constants.",
+    "question": "What is the value of $p$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "9",
+    "explanation": "Đáp án là 9. Trong phương trình $y = px + r$, $p$ biểu thị hệ số góc (slope) của đường thẳng, do đó $p = 9$."
+  },
+  {
+    "id": "sat7_math1_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$y = 3(x - 14)(x + 5)(x + 4)$$",
+    "question": "What is an $x$-coordinate of an $x$-intercept of the graph in the $xy$-plane?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "14",
+    "explanation": "Đáp án là 14 (hoặc -5, -4). Giao điểm với trục hoành xảy ra khi $y = 0 \\iff 3(x - 14)(x + 5)(x + 4) = 0 \\implies x = 14, x = -5, x = -4$."
+  },
+  {
+    "id": "sat7_math1_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The graph shown gives the estimated value, in dollars, of a tablet as a function of the number of months since it was purchased. The line intersects the vertical axis at $(0, 225)$.",
+    "question": "What is the best interpretation of the $y$-intercept of the graph in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "The estimated value of the tablet was $225 when it was purchased.",
+      "B": "The estimated value of the tablet 24 months after it was purchased was $225.",
+      "C": "The estimated value of the tablet had decreased by $225 in the 24 months after it was purchased.",
+      "D": "The estimated value of the tablet decreased by approximately 2.25% each year after it was purchased."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Giao điểm với trục tung $(0, 225)$ ứng với thời điểm $x = 0$ (lúc mới mua), giá trị ước tính của máy tính bảng là $225."
+  },
+  {
+    "id": "sat7_math1_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "Triangles $EFG$ and $JKL$ are congruent, where $E$, $F$, and $G$ correspond to $J$, $K$, and $L$, respectively. The measure of angle $E$ is $45^\\circ$ and the measure of angle $F$ is $20^\\circ$.",
+    "question": "What is the measure of angle $J$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$20^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$135^\\circ$",
+      "D": "$160^\\circ$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hai tam giác bằng nhau thì các góc tương ứng bằng nhau. Đỉnh $E$ tương ứng với $J$ nên $\\angle J = \\angle E = 45^\\circ$."
+  },
+  {
+    "id": "sat7_math1_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f$ is defined by: $$f(x) = \\frac{1}{2}(x + 6)$$",
+    "question": "What is the value of $f(4)$?",
+    "isGridIn": false,
+    "options": {
+      "A": "20",
+      "B": "12",
+      "C": "10",
+      "D": "5"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Thay $x = 4$: $f(4) = \\frac{1}{2}(4 + 6) = \\frac{1}{2}(10) = 5$."
+  },
+  {
+    "id": "sat7_math1_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "The graph of a system of an absolute value function and a linear function is shown. The intersection point of the two functions lies in the second quadrant, between $x = -4$ and $x = -3$, and between $y = 4$ and $y = 5$.",
+    "question": "What is the solution $(x, y)$ to this system of two equations?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(0, 8)$",
+      "B": "$(\\frac{7}{2}, \\frac{9}{2})$",
+      "C": "$(-\\frac{7}{2}, \\frac{9}{2})$",
+      "D": "$(-3, 4)$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Tọa độ giao điểm thỏa mãn $-\\frac{7}{2} = -3.5$ (nằm giữa -4 và -3) và $\\frac{9}{2} = 4.5$ (nằm giữa 4 và 5)."
+  },
+  {
+    "id": "sat7_math1_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the equation: $$y = 6x + 3$$\nOne of the two equations in a system of linear equations is given. The system has infinitely many solutions.",
+    "question": "Which equation could be the second equation in this system?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 2(6x) + 3$",
+      "B": "$y = 2(6x + 3)$",
+      "C": "$2(y) = 2(6x) + 3$",
+      "D": "$2(y) = 2(6x + 3)$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Hệ có vô số nghiệm khi hai phương trình tương đương nhau. Nhân cả hai vế của $y = 6x + 3$ với 2 cho ta $2(y) = 2(6x + 3)$."
+  },
+  {
+    "id": "sat7_math1_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the linear equation: $$\\frac{6}{7}p + 18 = 54$$",
+    "question": "What is the value of $7p$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "294",
+    "explanation": "Đáp án là 294. Trừ 18: $\\frac{6}{7}p = 36 \\implies p = 36 \\times \\frac{7}{6} = 42$. Do đó $7p = 7(42) = 294$."
+  },
+  {
+    "id": "sat7_math1_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of equations:\n$$y = 9x + 12$$\n$$x + 7y = 20$$",
+    "question": "The solution to the given system of equations is $(x, y)$. What is the value of $y$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "3",
+    "explanation": "Đáp án là 3. Thay $y = 9x + 12$ vào phương trình 2: $x + 7(9x + 12) = 20 \\iff 64x + 84 = 20 \\iff 64x = -64 \\iff x = -1$. Suy ra $y = 9(-1) + 12 = 3$."
+  },
+  {
+    "id": "sat7_math1_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "A circle in the $xy$-plane has the equation: $$(x - 13)^2 + (y - k)^2 = 64$$",
+    "question": "Which of the following gives the center of the circle and its radius?",
+    "isGridIn": false,
+    "options": {
+      "A": "The center is at $(13, k)$ and the radius is 8.",
+      "B": "The center is at $(k, 13)$ and the radius is 8.",
+      "C": "The center is at $(k, 13)$ and the radius is 64.",
+      "D": "The center is at $(13, k)$ and the radius is 64."
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Phương trình $(x - h)^2 + (y - k)^2 = r^2$ có tâm tại $(h, k) = (13, k)$ và bán kính $r = \\sqrt{64} = 8$."
+  },
+  {
+    "id": "sat7_math1_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The function $f$ is defined by $f(x) = |x - 4x|$. What value of $a$ satisfies $f(5) - f(a) = -15$?",
+    "question": "Which of the following is a possible value of $a$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-20",
+      "B": "5",
+      "C": "10",
+      "D": "45"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. $f(x) = |-3x| = 3|x|$. Với $x = 5$, $f(5) = 15$. Khi đó $15 - 3|a| = -15 \\iff 3|a| = 30 \\iff |a| = 10 \\implies a = 10$ hoặc $a = -10$."
+  },
+  {
+    "id": "sat7_math1_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "For the exponential function $f$, the value of $f(0)$ is $c$, where $c$ is a constant.",
+    "question": "Of the following equations that define the function $f$, which equation shows the value of $c$ as the coefficient or the base?",
+    "isGridIn": false,
+    "options": {
+      "A": "$f(x) = 22(1.5)^{x+1}$",
+      "B": "$f(x) = 33(1.5)^x$",
+      "C": "$f(x) = 49.5(1.5)^{x-1}$",
+      "D": "$f(x) = 74.25(1.5)^{x-2}$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Ở dạng $f(x) = 33(1.5)^x$, khi $x = 0$ thì $f(0) = 33(1.5)^0 = 33$. Giá trị $c = 33$ hiển thị trực tiếp làm hệ số đứng đầu."
+  },
+  {
+    "id": "sat7_math1_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "The function $f(t) = 40,000(2)^{t/790}$ gives the number of bacteria in a population $t$ minutes after an initial observation.",
+    "question": "How much time, in minutes, does it take for the number of bacteria in the population to double?",
+    "isGridIn": false,
+    "options": {
+      "A": "2",
+      "B": "790",
+      "C": "1,580",
+      "D": "40,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Quần thể nhân đôi khi cơ số 2 đạt số mũ bằng 1: $\\frac{t}{790} = 1 \\iff t = 790$ phút."
+  },
+  {
+    "id": "sat7_math1_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The given equation relates the variables $n$, $t$, and $w$, where $n > 0$, $t > 0$, and $w > t$: $$\\frac{12}{n} - \\frac{2}{t} = -\\frac{2}{w}$$",
+    "question": "Which expression is equivalent to $n$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$12tw$",
+      "B": "$6(t - w)$",
+      "C": "$\\frac{w - t}{6tw}$",
+      "D": "$\\frac{6tw}{w - t}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Chuyển vế: $\\frac{12}{n} = \\frac{2}{t} - \\frac{2}{w} = \\frac{2(w - t)}{tw}$. Chia cho 2: $\\frac{6}{n} = \\frac{w - t}{tw} \\iff n = \\frac{6tw}{w - t}$."
+  },
+  {
+    "id": "sat7_math1_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "The scatterplot shows recorded temperatures $y$, in °C, of air in a chamber $x$ minutes after start: $(5, 14)$ and $(7, 24)$.",
+    "question": "What was the average rate of change, in °C per minute, of the recorded temperature of the air in the chamber from $x = 5$ to $x = 7$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "5",
+    "explanation": "Đáp án là 5. Tốc độ thay đổi trung bình: $\\frac{y(7) - y(5)}{7 - 5} = \\frac{24 - 14}{7 - 5} = \\frac{10}{2} = 5^\\circ\\text{C}/\\text{phút}$."
+  },
+  {
+    "id": "sat7_math1_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "In August, a car dealer completed 15 more than 3 times the number of sales completed in September. In August and September combined, the dealer completed 363 sales.",
+    "question": "How many sales did the car dealer complete in September?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "87",
+    "explanation": "Đáp án là 87. Gọi doanh số tháng 9 là $s$. Doanh số tháng 8 là $3s + 15$. Tổng hai tháng: $s + (3s + 15) = 363 \\iff 4s = 348 \\iff s = 87$."
+  },
+  {
+    "id": "sat7_math1_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Points $Q$ and $R$ lie on a circle with center $P$. The radius of this circle is 9 inches. Triangle $PQR$ has a perimeter of 31 inches.",
+    "question": "What is the length, in inches, of $\\overline{QR}$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$13\\sqrt{2}$",
+      "B": "13",
+      "C": "$9\\sqrt{2}$",
+      "D": "9"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hai cạnh $PQ$ và $PR$ là bán kính nên $PQ = PR = 9$ inches. Chu vi $PQ + PR + QR = 31 \\iff 9 + 9 + QR = 31 \\iff QR = 13$ inches."
+  },
+  {
+    "id": "sat7_math1_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "In a set of four consecutive odd integers ordered from least to greatest, the first integer is $x$. The product of 12 and the fourth odd integer is at most 26 less than the sum of the first and third odd integers.",
+    "question": "Which inequality represents this situation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$12(x + 6) \\le x + (x + 4) - 26$",
+      "B": "$12(x + 6) \\ge 26 - (x + (x + 4))$",
+      "C": "$12(x + 4) \\le x + (x + 3) - 26$",
+      "D": "$12(x + 4) \\ge 26 - (x + (x + 3))$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Bốn số lẻ liên tiếp là $x, x+2, x+4, x+6$. Tích số thứ tư với 12 là $12(x + 6)$. Tổng số thứ nhất và thứ ba là $x + (x + 4)$. Do đó: $12(x + 6) \\le x + (x + 4) - 26$."
+  },
+  {
+    "id": "sat7_math1_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "The table shows three values of $x$ and their corresponding values of $y$, where $s$ is a constant: $(-2s, 24)$, $(-s, 21)$, $(s, 15)$. There is a linear relationship between $x$ and $y$.",
+    "question": "Which of the following equations represents this relationship?",
+    "isGridIn": false,
+    "options": {
+      "A": "$sx + 3y = 18s$",
+      "B": "$3x + sy = 18s$",
+      "C": "$3x + sy = 18$",
+      "D": "$sx + 3y = 18$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Hệ số góc: $m = \\frac{15 - 21}{s - (-s)} = -\\frac{3}{s}$. Phương trình đường thẳng: $y - 15 = -\\frac{3}{s}(x - s) \\iff sy - 15s = -3x + 3s \\iff 3x + sy = 18s$."
+  },
+  {
+    "id": "sat7_math1_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Given the trigonometric expression: $$(\\sin 24^\\circ)(\\cos 66^\\circ) + (\\cos 24^\\circ)(\\sin 66^\\circ)$$",
+    "question": "Which of the following expressions is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$2(\\cos 66^\\circ)(\\sin 24^\\circ)$",
+      "B": "$2(\\cos 66^\\circ) + 2(\\cos 24^\\circ)$",
+      "C": "$(\\cos 66^\\circ)^2 + (\\cos 24^\\circ)^2$",
+      "D": "$(\\cos 66^\\circ)^2 + (\\sin 24^\\circ)^2$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Vì $24^\\circ$ và $66^\\circ$ phụ nhau nên $\\sin 24^\\circ = \\cos 66^\\circ$ và $\\sin 66^\\circ = \\cos 24^\\circ$. Thay vào biểu thức ta được $(\\cos 66^\\circ)^2 + (\\cos 24^\\circ)^2$."
+  },
+  {
+    "id": "sat7_math1_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "The cost of renting a carpet cleaner is $52 for the first day and $26 for each additional day.",
+    "question": "Which of the following functions gives the cost $C(d)$, in dollars, of renting the carpet cleaner for $d$ days, where $d$ is a positive integer?",
+    "isGridIn": false,
+    "options": {
+      "A": "$C(d) = 26d + 26$",
+      "B": "$C(d) = 26d + 52$",
+      "C": "$C(d) = 52d - 26$",
+      "D": "$C(d) = 52d + 78$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Chi phí: $C(d) = 52 + 26(d - 1) = 52 + 26d - 26 = 26d + 26$."
+  },
+  {
+    "id": "sat7_math1_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The function $f$ is defined by: $$f(x) = (x - 2)(x + 15)$$",
+    "question": "For what value of $x$ does $f(x)$ reach its minimum?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "-13/2",
+    "explanation": "Đáp án là -13/2 hoặc -6.5. Hai điểm cắt trục hoành là $x = 2$ và $x = -15$. Giá trị nhỏ nhất đạt tại đỉnh parabol nằm chính giữa hai nghiệm: $x = \\frac{2 + (-15)}{2} = -\\frac{13}{2}$."
+  }
+]

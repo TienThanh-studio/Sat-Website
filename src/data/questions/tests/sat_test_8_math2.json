@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat8_math2_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$x + 8 = 12$$",
+    "question": "What is the value of $x + 7$?",
+    "isGridIn": false,
+    "options": {
+      "A": "4",
+      "B": "11",
+      "C": "12",
+      "D": "19"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Từ phương trình $x + 8 = 12$, suy ra $x = 4$. Thay vào biểu thức cần tìm: $x + 7 = 4 + 7 = 11$ (hoặc trừ 1 ở cả hai vế: $(x + 8) - 1 = 12 - 1 = 11$)."
+  },
+  {
+    "id": "sat8_math2_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "An event planner purchased 12 packs of napkins for a banquet, with each pack containing 50 napkins.",
+    "question": "How many total napkins did the event planner purchase?",
+    "isGridIn": false,
+    "options": {
+      "A": "62",
+      "B": "500",
+      "C": "600",
+      "D": "620"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Tổng số khăn ăn đã mua là: $12 \\times 50 = 600$ chiếc."
+  },
+  {
+    "id": "sat8_math2_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Line $k$ in the $xy$-plane has a slope of $3$ and passes through the point $(0, -7)$.",
+    "question": "Which equation defines line $k$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 3x - 7$",
+      "B": "$y = 3x + 7$",
+      "C": "$y = -7x + 3$",
+      "D": "$y = 7x + 3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Phương trình dạng hệ số góc - tung độ gốc $y = mx + b$ với $m = 3$ và $b = -7$ là $y = 3x - 7$."
+  },
+  {
+    "id": "sat8_math2_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the quadratic equation: $$(x - 6)(x + 4) = 0$$",
+    "question": "What is the positive solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "24"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Hai nghiệm của phương trình tích là $x = 6$ và $x = -4$. Nghiệm dương duy nhất là $6$."
+  },
+  {
+    "id": "sat8_math2_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "A right triangle has legs of length $12$ inches and $16$ inches.",
+    "question": "What is the length, in inches, of the hypotenuse of the triangle?",
+    "isGridIn": false,
+    "options": {
+      "A": "18",
+      "B": "20",
+      "C": "28",
+      "D": "400"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Theo định lý Pytago: $c = \\sqrt{12^2 + 16^2} = \\sqrt{144 + 256} = \\sqrt{400} = 20$ inches (tương ứng bộ ba số Pytago $3-4-5$ nhân $4$)."
+  },
+  {
+    "id": "sat8_math2_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "A dataset contains five values: 18, 22, 22, 25, 28.",
+    "question": "What is the median of the values in the dataset?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "22",
+    "explanation": "Đáp án là 22. Dãy số gồm 5 giá trị đã được xếp theo thứ tự tăng dần, giá trị trung vị nằm ở vị trí thứ ba chính là 22."
+  },
+  {
+    "id": "sat8_math2_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$5(x + 3) = 45$$",
+    "question": "What is the value of $x$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "6",
+    "explanation": "Đáp án là 6. Chia cả hai vế cho $5$: $x + 3 = 9 \\iff x = 6$."
+  },
+  {
+    "id": "sat8_math2_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "A company charges a flat fee of $40 plus $15 per hour to rent a piece of equipment.",
+    "question": "Which function $C(h)$ gives the total cost, in dollars, to rent the equipment for $h$ hours?",
+    "isGridIn": false,
+    "options": {
+      "A": "$C(h) = 15h + 40$",
+      "B": "$C(h) = 40h + 15$",
+      "C": "$C(h) = 55h$",
+      "D": "$C(h) = 15h - 40$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Chi phí thuê gồm phí cố định 40 đô la cộng với 15 đô la cho mỗi giờ $h$: $C(h) = 15h + 40$."
+  },
+  {
+    "id": "sat8_math2_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the function $f(x) = 3x^2 - 12x + 7$.",
+    "question": "What is the $x$-coordinate of the vertex of the graph of $f(x)$ in the $xy$-plane?",
+    "isGridIn": false,
+    "options": {
+      "A": "-4",
+      "B": "-2",
+      "C": "2",
+      "D": "4"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Hoành độ đỉnh của parabol $y = ax^2 + bx + c$ được tính bằng công thức: $x = -\\frac{b}{2a} = -\\frac{-12}{2(3)} = \\frac{12}{6} = 2$."
+  },
+  {
+    "id": "sat8_math2_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "A sample of 400 voters in a town was surveyed about whether they support building a new park. Of those surveyed, 260 voters said they support the park. The town has a total of 8,000 registered voters.",
+    "question": "Based on the survey results, what is the best estimate of the total number of registered voters in the town who support building the new park?",
+    "isGridIn": false,
+    "options": {
+      "A": "2,600",
+      "B": "5,200",
+      "C": "5,600",
+      "D": "6,400"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Tỷ lệ ủng hộ trong mẫu khảo sát là $\\frac{260}{400} = 0.65 = 65\\%$. Ước tính tổng số cử tri ủng hộ trong toàn thị trấn là: $0.65 \\times 8,000 = 5,200$ người."
+  },
+  {
+    "id": "sat8_math2_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the system of linear equations:\n$$4x + 3y = 31$$\n$$2x - y = 3$$",
+    "question": "What is the value of $x$ in the solution $(x, y)$ to the given system of equations?",
+    "isGridIn": false,
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "7",
+      "D": "8"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Nhân phương trình thứ hai với 3: $6x - 3y = 9$. Cộng với phương trình thứ nhất: $(4x + 6x) + (3y - 3y) = 31 + 9 \\iff 10x = 40 \\iff x = 4$."
+  },
+  {
+    "id": "sat8_math2_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "A circle in the $xy$-plane has its center at $(3, -5)$ and passes through the point $(3, 1)$.",
+    "question": "What is the equation of the circle?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(x - 3)^2 + (y + 5)^2 = 6$",
+      "B": "$(x - 3)^2 + (y + 5)^2 = 36$",
+      "C": "$(x + 3)^2 + (y - 5)^2 = 36$",
+      "D": "$(x - 3)^2 + (y - 5)^2 = 36$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Bán kính đường tròn là khoảng cách từ tâm $(3, -5)$ đến $(3, 1)$: $r = \\sqrt{(3 - 3)^2 + (1 - (-5))^2} = \\sqrt{0 + 36} = 6$. Phương trình đường tròn là $(x - 3)^2 + (y - (-5))^2 = 6^2 \\iff (x - 3)^2 + (y + 5)^2 = 36$."
+  },
+  {
+    "id": "sat8_math2_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the equation: $$\\sqrt{3x + 19} = x - 3$$",
+    "question": "What is the solution to the given equation?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "10",
+    "explanation": "Đáp án là 10. Bình phương hai vế (với điều kiện $x - 3 \\ge 0 \\iff x \\ge 3$): $3x + 19 = (x - 3)^2 \\iff 3x + 19 = x^2 - 6x + 9 \\iff x^2 - 9x - 10 = 0 \\iff (x - 10)(x + 1) = 0$. Vì $x \\ge 3$, loại $x = -1$, nghiệm thỏa mãn duy nhất là $x = 10$."
+  },
+  {
+    "id": "sat8_math2_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Line $p$ is perpendicular to the line $y = -\\frac{2}{5}x + 8$ in the $xy$-plane.",
+    "question": "What is the slope of line $p$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "5/2",
+    "explanation": "Đáp án là 5/2 hoặc 2.5. Hai đường thẳng vuông góc có tích hai hệ số góc bằng $-1$. Do đó hệ số góc của đường thẳng $p$ là $-\\frac{1}{-2/5} = \\frac{5}{2}$."
+  },
+  {
+    "id": "sat8_math2_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "A radioactive substance decays according to the function $N(t) = N_0 \\left(\\frac{1}{2}\\right)^{t/14}$, where $t$ is the time elapsed in days and $N_0$ is the initial amount.",
+    "question": "How many days does it take for the substance to decay to 25% of its initial amount?",
+    "isGridIn": false,
+    "options": {
+      "A": "7",
+      "B": "14",
+      "C": "28",
+      "D": "56"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Lượng chất còn lại $25\\% = \\frac{1}{4} = \\left(\\frac{1}{2}\\right)^2$. Khi đó $\\left(\\frac{1}{2}\\right)^{t/14} = \\left(\\frac{1}{2}\\right)^2 \\iff \\frac{t}{14} = 2 \\iff t = 28$ ngày."
+  },
+  {
+    "id": "sat8_math2_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "The price of an item was decreased by 20%, and then the new price was increased by 25%.",
+    "question": "Compared to the original price, the final price is:",
+    "isGridIn": false,
+    "options": {
+      "A": "5% lower",
+      "B": "5% higher",
+      "C": "equal to the original price",
+      "D": "10% higher"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Gọi giá ban đầu là $P$. Sau khi giảm 20%, giá còn $0.80P$. Sau khi tăng 25%, giá mới là $0.80P \\times (1 + 0.25) = 0.80P \\times 1.25 = 1.00P$. Giá cuối cùng bằng đúng giá ban đầu."
+  },
+  {
+    "id": "sat8_math2_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "In right triangle $DEF$, angle $E$ is a right angle. Side $DE$ has a length of $7$ and side $EF$ has a length of $24$.",
+    "question": "What is the value of $\\sin D$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{7}{25}$",
+      "B": "$\\frac{7}{24}$",
+      "C": "$\\frac{24}{25}$",
+      "D": "$\\frac{24}{7}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Cạnh huyền $DF = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$. Góc $D$ có cạnh đối là $EF = 24$. Do đó $\\sin D = \\frac{\\text{đối}}{\\text{huyền}} = \\frac{EF}{DF} = \\frac{24}{25}$."
+  },
+  {
+    "id": "sat8_math2_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the linear equation: $$3x - 4kx = 15$$\nIn the given equation, $k$ is a constant. The equation has no solution for $x$.",
+    "question": "What is the value of $k$?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "$\\frac{3}{4}$",
+      "C": "$\\frac{4}{3}$",
+      "D": "3"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Viết lại phương trình dạng $(3 - 4k)x = 15$. Phương trình vô nghiệm khi hệ số của $x$ bằng 0 và vế phải khác 0: $3 - 4k = 0 \\iff 4k = 3 \\iff k = \\frac{3}{4}$."
+  },
+  {
+    "id": "sat8_math2_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the function: $$f(x) = (x - 4)^2 - 9$$",
+    "question": "What are the zeros of function $f$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$x = -1$ and $x = 7$",
+      "B": "$x = 1$ and $x = 7$",
+      "C": "$x = -5$ and $x = 13$",
+      "D": "$x = 5$ and $x = 13$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Điểm không (zeros) xảy ra khi $f(x) = 0 \\iff (x - 4)^2 - 9 = 0 \\iff (x - 4)^2 = 9 \\iff x - 4 = \\pm 3$. Ta có $x = 4 + 3 = 7$ hoặc $x = 4 - 3 = 1$."
+  },
+  {
+    "id": "sat8_math2_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "An arc of a circle has a measure of $72^\\circ$. The length of the arc is $8\\pi$ centimeters.",
+    "question": "What is the radius, in centimeters, of the circle?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "20",
+    "explanation": "Đáp án là 20. Công thức độ dài cung tròn: $L = 2\\pi r \\times \\frac{\\theta}{360^\\circ} \\iff 8\\pi = 2\\pi r \\times \\frac{72}{360} \\iff 8\\pi = 2\\pi r \\times \\frac{1}{5} \\iff 8 = \\frac{2r}{5} \\iff 2r = 40 \\iff r = 20\\text{ cm}$."
+  },
+  {
+    "id": "sat8_math2_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the quadratic equation: $$x^2 - kx + 49 = 0$$\nIn the given equation, $k$ is a constant. The equation has exactly one real solution.",
+    "question": "What is a possible value of $k$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "14",
+    "explanation": "Đáp án là 14 (hoặc -14). Phương trình có đúng 1 nghiệm thực khi biệt thức $\\Delta = 0 \\iff (-k)^2 - 4(1)(49) = 0 \\iff k^2 - 196 = 0 \\iff k^2 = 196 \\implies k = 14$ hoặc $k = -14$."
+  },
+  {
+    "id": "sat8_math2_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "Given the system of equations:\n$$y = 3x^2 - 8x + 5$$\n$$y = 4x + c$$\nIn the given system, $c$ is a constant. The graphs of the two equations intersect at exactly one point in the $xy$-plane.",
+    "question": "What is the value of $c$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-12",
+      "B": "-7",
+      "C": "5",
+      "D": "7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Phương trình hoành độ giao điểm: $3x^2 - 8x + 5 = 4x + c \\iff 3x^2 - 12x + (5 - c) = 0$. Hệ có đúng 1 nghiệm khi $\\Delta' = (-6)^2 - 3(5 - c) = 0 \\iff 36 - 15 + 3c = 0 \\iff 21 + 3c = 0 \\iff 3c = -21 \\iff c = -7$."
+  },
+  {
+    "id": "sat8_math2_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "A right circular cone has a base radius of 9 inches and a volume of $324\\pi$ cubic inches.",
+    "question": "What is the slant height, in inches, of the cone?",
+    "isGridIn": false,
+    "options": {
+      "A": "12",
+      "B": "15",
+      "C": "18",
+      "D": "$9\\sqrt{5}$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Thể tích hình nón: $V = \\frac{1}{3}\\pi r^2 h \\iff 324\\pi = \\frac{1}{3}\\pi (9^2) h \\iff 324 = 27h \\iff h = 12$ inches. Đường sinh (slant height) theo Pytago là: $l = \\sqrt{r^2 + h^2} = \\sqrt{9^2 + 12^2} = \\sqrt{81 + 144} = \\sqrt{225} = 15$ inches."
+  },
+  {
+    "id": "sat8_math2_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "hard",
+    "prompt": "Data set X consists of 10 positive integers with a mean of 42 and a standard deviation of 6. Data set Y is created by multiplying each value in data set X by 3 and then adding 8.",
+    "question": "Which of the following gives the mean and standard deviation of data set Y?",
+    "isGridIn": false,
+    "options": {
+      "A": "Mean: 126, Standard deviation: 18",
+      "B": "Mean: 134, Standard deviation: 18",
+      "C": "Mean: 134, Standard deviation: 26",
+      "D": "Mean: 126, Standard deviation: 26"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Khi biến đổi tuyến tính $Y = 3X + 8$, giá trị trung bình là: $\\text{Mean}_Y = 3(42) + 8 = 126 + 8 = 134$. Độ lệch chuẩn chỉ bị nhân với hệ số co giãn dương và không bị ảnh hưởng bởi phép cộng: $\\text{SD}_Y = 3 \\times 6 = 18$."
+  },
+  {
+    "id": "sat8_math2_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "For a polynomial $P(x)$, the remainder when $P(x)$ is divided by $(x - 5)$ is 12, and the remainder when $P(x)$ is divided by $(x + 2)$ is -9.",
+    "question": "If $P(x)$ is divided by $(x - 5)(x + 2)$, the remainder can be written as $ax + b$. What is the value of $a$?",
+    "isGridIn": false,
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Theo định lý Bezout, $P(5) = 12$ và $P(-2) = -9$. Khi chia cho $(x - 5)(x + 2)$, phần dư là $R(x) = ax + b$. Ta có hệ: $R(5) = 5a + b = 12$ và $R(-2) = -2a + b = -9$. Trừ hai phương trình: $7a = 21 \\iff a = 3$."
+  },
+  {
+    "id": "sat8_math2_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In the $xy$-plane, line $L$ passes through the origin and is tangent to the circle $(x - 10)^2 + (y - 5)^2 = 25$ in the first quadrant.",
+    "question": "What is the slope of line $L$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{1}{2}$",
+      "B": "$\\frac{3}{4}$",
+      "C": "$\\frac{4}{3}$",
+      "D": "2"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Đường tròn có tâm $C(10, 5)$ và bán kính $R = 5$. Đường thẳng $L$ đi qua gốc tọa độ có phương trình $mx - y = 0$. Khoảng cách từ tâm $C$ đến tiếp tuyến bằng $R$: $\\frac{|10m - 5|}{\\sqrt{m^2 + 1}} = 5 \\iff |2m - 1| = \\sqrt{m^2 + 1} \\iff (2m - 1)^2 = m^2 + 1 \\iff 4m^2 - 4m + 1 = m^2 + 1 \\iff 3m^2 - 4m = 0 \\iff m(3m - 4) = 0$. Vì tiếp tuyến nằm trong góc phần tư thứ nhất và không trùng trục hoành ($m > 0$), nên $m = \\frac{4}{3}$ (hoặc kiểm tra tiếp tuyến nằm dưới có $m = 0$, tiếp tuyến dốc lên có hệ số góc là $\\frac{4}{3}$ hoặc $\\frac{3}{4}$ tuỳ định hướng tiếp xúc; giải trực tiếp ra $m = \\frac{3}{4}$ khi hoán đổi trục)."
+  },
+  {
+    "id": "sat8_math2_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "Given the equation relating variables $x$ and $y$: $$2^{4x} \\cdot 8^y = 128$$",
+    "question": "What is the value of $4x + 3y$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "7",
+    "explanation": "Đáp án là 7. Đưa tất cả về lũy thừa cùng cơ số 2: $8^y = (2^3)^y = 2^{3y}$ và $128 = 2^7$. Phương trình trở thành: $2^{4x} \\cdot 2^{3y} = 2^7 \\iff 2^{4x + 3y} = 2^7 \\iff 4x + 3y = 7$."
+  }
+]

@@ -1,0 +1,453 @@
+[
+  {
+    "id": "sat6_math1_01",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$(p + 3) + 8 = 10$$",
+    "question": "What value of $p$ is the solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "-1",
+      "B": "5",
+      "C": "15",
+      "D": "21"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Rút gọn vế trái: $p + 11 = 10 \\iff p = 10 - 11 = -1$."
+  },
+  {
+    "id": "sat6_math1_02",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "The scatterplot shows the relationship between two variables, $x$ and $y$. The data points show an increasing nonlinear, curved trend.",
+    "question": "Which of the following graphs shows the most appropriate model for the data?",
+    "isGridIn": false,
+    "options": {
+      "A": "A linear model with a positive slope",
+      "B": "A linear model with a negative slope",
+      "C": "An exponential curve lying entirely below the data points",
+      "D": "An increasing curved model that follows the data points with points both above and below it"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Đồ thị phân tán thể hiện xu hướng tăng phi tuyến (đường cong). Mô hình phù hợp nhất phải là một đường cong tăng dần đi xuyên qua tập dữ liệu sao cho các điểm nằm cân đối ở cả hai phía."
+  },
+  {
+    "id": "sat6_math1_03",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "Given the equation: $$k^2 - 53 = 91$$",
+    "question": "What is the positive solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "144",
+      "B": "72",
+      "C": "38",
+      "D": "12"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Cộng $53$ vào cả hai vế: $k^2 = 91 + 53 = 144$. Lấy căn bậc hai hai vế ta được $k = \\pm 12$. Nghiệm dương là $12$."
+  },
+  {
+    "id": "sat6_math1_04",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "During a portion of a flight, a small airplane's cruising speed varied between 150 miles per hour and 170 miles per hour.",
+    "question": "Which inequality best represents this situation, where $s$ is the cruising speed, in miles per hour, during this portion of the flight?",
+    "isGridIn": false,
+    "options": {
+      "A": "$s \\le 20$",
+      "B": "$s \\le 150$",
+      "C": "$s \\le 170$",
+      "D": "$150 \\le s \\le 170$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Tốc độ dao động trong khoảng từ 150 đến 170 dặm/giờ, nghĩa là $s$ tối thiểu là 150 và tối đa là 170: $150 \\le s \\le 170$."
+  },
+  {
+    "id": "sat6_math1_05",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "An object was launched upward from a platform. The graph models the height above ground, $y$, in meters, of the object $x$ seconds after it was launched. The graph rises from $x = 0$ to its vertex at $x = 2$, and decreases from $x = 2$ to $x = 4$.",
+    "question": "For which of the following intervals of time was the height of the object increasing for the entire interval?",
+    "isGridIn": false,
+    "options": {
+      "A": "From $x = 0$ to $x = 2$",
+      "B": "From $x = 0$ to $x = 4$",
+      "C": "From $x = 2$ to $x = 3$",
+      "D": "From $x = 3$ to $x = 4$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Đồ thị parabol đi lên (hàm đồng biến) trong toàn bộ khoảng thời gian từ $x = 0$ đến đỉnh tại $x = 2$ giây."
+  },
+  {
+    "id": "sat6_math1_06",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "easy",
+    "prompt": "Convert 1,116 inches to yards. (1 yard = 36 inches)",
+    "question": "How many yards are equivalent to 1,116 inches?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "31",
+    "explanation": "Đáp án là 31. Đổi đơn vị: $\\frac{1,116}{36} = 31$ yards."
+  },
+  {
+    "id": "sat6_math1_07",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The function $f(x) = 14 + 4x$ represents the total cost, in dollars, of attending an arcade when $x$ games are played.",
+    "question": "How many games can be played for a total cost of $58?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "11",
+    "explanation": "Đáp án là 11. Giải phương trình: $14 + 4x = 58 \\iff 4x = 44 \\iff x = 11$ trò chơi."
+  },
+  {
+    "id": "sat6_math1_08",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "For the linear function $f(x) = x + b$, $b$ is a constant. When $x = 0$, $f(x) = 30$.",
+    "question": "What is the value of $b$?",
+    "isGridIn": false,
+    "options": {
+      "A": "-30",
+      "B": "$-\\frac{1}{30}$",
+      "C": "$\\frac{1}{30}$",
+      "D": "30"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Thay $x = 0$ và $f(0) = 30$: $30 = 0 + b \\implies b = 30$."
+  },
+  {
+    "id": "sat6_math1_09",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "The function $P(t) = 1,800(1.02)^t$ gives the estimated number of marine mammals in a certain area, where $t$ is the number of years since a study began.",
+    "question": "What is the best interpretation of $P(0) = 1,800$ in this context?",
+    "isGridIn": false,
+    "options": {
+      "A": "The estimated number of marine mammals in the area was 102 when the study began.",
+      "B": "The estimated number of marine mammals in the area was 1,800 when the study began.",
+      "C": "The estimated number of marine mammals in the area increased by 102 each year during the study.",
+      "D": "The estimated number of marine mammals in the area increased by 1,800 each year during the study."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. $t = 0$ là thời điểm bắt đầu nghiên cứu. Giá trị $P(0) = 1,800$ biểu thị số lượng động vật có vú biển ước tính ban đầu là 1,800 con."
+  },
+  {
+    "id": "sat6_math1_10",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "A manager is responsible for ordering supplies for a shaved ice shop. The shop's inventory starts with 4,500 paper cups, and the manager estimates that 70 of these paper cups are used each day.",
+    "question": "Based on this estimate, in how many days will the supply of paper cups reach 1,700?",
+    "isGridIn": false,
+    "options": {
+      "A": "20",
+      "B": "40",
+      "C": "60",
+      "D": "80"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Thiết lập phương trình: $4,500 - 70x = 1,700 \\iff 70x = 2,800 \\iff x = 40$ ngày."
+  },
+  {
+    "id": "sat6_math1_11",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the linear inequality: $$y > 4x + 8$$",
+    "question": "For which of the following tables are all the values of $x$ and their corresponding values of $y$ solutions to the given inequality?",
+    "isGridIn": false,
+    "options": {
+      "A": "x: 2, y: 19; x: 4, y: 30; x: 6, y: 41",
+      "B": "x: 2, y: 8; x: 4, y: 16; x: 6, y: 24",
+      "C": "x: 2, y: 13; x: 4, y: 18; x: 6, y: 23",
+      "D": "x: 2, y: 13; x: 4, y: 21; x: 6, y: 29"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Kiểm tra bảng A: với $x = 2 \\implies y > 16$ ($19 > 16$ đúng); với $x = 4 \\implies y > 24$ ($30 > 24$ đúng); với $x = 6 \\implies y > 32$ ($41 > 32$ đúng)."
+  },
+  {
+    "id": "sat6_math1_12",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the algebraic expression: $$(x^2 + 11)^2 + (x - 5)(x + 5)$$",
+    "question": "Which expression is equivalent to the given expression?",
+    "isGridIn": false,
+    "options": {
+      "A": "$x^4 + 23x^2 - 14$",
+      "B": "$x^4 + 23x^2 + 96$",
+      "C": "$x^4 + 12x^2 + 121$",
+      "D": "$x^4 + x^2 + 146$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Khai triển hằng đẳng thức: $(x^2 + 11)^2 = x^4 + 22x^2 + 121$. Khai triển hiệu hai bình phương: $(x - 5)(x + 5) = x^2 - 25$. Cộng lại: $x^4 + 22x^2 + 121 + x^2 - 25 = x^4 + 23x^2 + 96$."
+  },
+  {
+    "id": "sat6_math1_13",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "easy",
+    "prompt": "The function $h$ is defined by: $$h(x) = \\frac{8}{5x + 6}$$",
+    "question": "What is the value of $h(2)$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "1/2",
+    "explanation": "Đáp án là 1/2 hoặc 0.5. Thay $x = 2$ vào biểu thức: $h(2) = \\frac{8}{5(2) + 6} = \\frac{8}{16} = \\frac{1}{2}$."
+  },
+  {
+    "id": "sat6_math1_14",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "prompt": "A right triangle has legs of length 3 inches and 5 inches.",
+    "question": "What is the area of the triangle, in square inches?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "15/2",
+    "explanation": "Đáp án là 15/2 hoặc 7.5. Diện tích tam giác vuông bằng một nửa tích hai cạnh góc vuông: $A = \\frac{1}{2} \\times 3 \\times 5 = \\frac{15}{2}$ square inches."
+  },
+  {
+    "id": "sat6_math1_15",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "easy",
+    "prompt": "The graph models the number of active projects a company was working on $x$ months after the end of November 2012, where $0 \\le x \\le 6$. The $y$-intercept of the graph is at $(0, 5)$.",
+    "question": "According to the model, what is the predicted number of active projects the company was working on at the end of November 2012?",
+    "isGridIn": false,
+    "options": {
+      "A": "0",
+      "B": "5",
+      "C": "8",
+      "D": "9"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B chính xác. Cuối tháng 11 năm 2012 ứng với $x = 0$. Tung độ gốc $(0, 5)$ cho biết số dự án đang thực hiện ước tính là 5 dự án."
+  },
+  {
+    "id": "sat6_math1_16",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "The relationship between two variables, $x$ and $y$, is linear. For every increase in the value of $x$ by 1, the value of $y$ increases by 8. When the value of $x$ is 2, the value of $y$ is 18.",
+    "question": "Which equation represents this relationship?",
+    "isGridIn": false,
+    "options": {
+      "A": "$y = 2x + 18$",
+      "B": "$y = 2x + 8$",
+      "C": "$y = 8x + 2$",
+      "D": "$y = 3x + 26$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Hệ số góc là $m = 8$. Dạng phương trình: $y = 8x + b$. Thay điểm $(2, 18)$: $18 = 8(2) + b \\iff 18 = 16 + b \\iff b = 2$. Vậy $y = 8x + 2$."
+  },
+  {
+    "id": "sat6_math1_17",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the equation relating positive numbers $P$, $N$, and $C$: $$P = N(19 - C)$$",
+    "question": "Which equation correctly expresses $C$ in terms of $P$ and $N$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$C = \\frac{19 + P}{N}$",
+      "B": "$C = \\frac{19 - P}{N}$",
+      "C": "$C = 19 + \\frac{P}{N}$",
+      "D": "$C = 19 - \\frac{P}{N}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Chia hai vế cho $N$: $\\frac{P}{N} = 19 - C \\iff C = 19 - \\frac{P}{N}$."
+  },
+  {
+    "id": "sat6_math1_18",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "medium",
+    "prompt": "Given the quadratic equation: $$w^2 + 12w - 40 = 0$$",
+    "question": "Which of the following is a solution to the given equation?",
+    "isGridIn": false,
+    "options": {
+      "A": "$6 - 2\\sqrt{19}$",
+      "B": "$2\\sqrt{19}$",
+      "C": "$\\sqrt{19}$",
+      "D": "$-6 + 2\\sqrt{19}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Dùng công thức nghiệm: $w = \\frac{-12 \\pm \\sqrt{12^2 - 4(1)(-40)}}{2} = \\frac{-12 \\pm \\sqrt{144 + 160}}{2} = \\frac{-12 \\pm \\sqrt{304}}{2} = \\frac{-12 \\pm 4\\sqrt{19}}{2} = -6 \\pm 2\\sqrt{19}$."
+  },
+  {
+    "id": "sat6_math1_19",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "The table summarizes the number of employees at each of the 17 restaurants in a town:\n2 to 7 employees: 2 restaurants\n8 to 13 employees: 4 restaurants\n14 to 19 employees: 2 restaurants\n20 to 25 employees: 7 restaurants\n26 to 31 employees: 2 restaurants",
+    "question": "Which of the following could be the median number of employees for the restaurants in this town?",
+    "isGridIn": false,
+    "options": {
+      "A": "2",
+      "B": "9",
+      "C": "15",
+      "D": "21"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Với $N = 17$, trung vị là giá trị thứ 9. Cộng dồn tần số: $2 + 4 + 2 = 8$ nhà hàng đầu có từ 2 đến 19 nhân viên; 7 nhà hàng tiếp theo (thứ 9 đến thứ 15) có từ 20 đến 25 nhân viên. Vậy trung vị nằm trong khoảng $[20, 25]$, trong các đáp án chỉ có 21."
+  },
+  {
+    "id": "sat6_math1_20",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "medium",
+    "prompt": "Given the linear equation: $$\\frac{3x}{7} = -\\frac{5y}{9} + 21$$",
+    "question": "What is the $y$-coordinate of the $y$-intercept of the graph in the $xy$-plane?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "189/5",
+    "explanation": "Đáp án là 189/5 hoặc 37.8. Tung độ gốc xảy ra khi $x = 0$: $0 = -\\frac{5y}{9} + 21 \\iff \\frac{5y}{9} = 21 \\iff 5y = 189 \\iff y = \\frac{189}{5}$."
+  },
+  {
+    "id": "sat6_math1_21",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "The graph of $y = 2x^2 + bx + c$ is a parabola with its vertex at $(-1, -8)$ and passing through $(0, -6)$.",
+    "question": "What is the value of $bc$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "-24",
+    "explanation": "Đáp án là -24. Điểm $(0, -6)$ cho ta $c = -6$. Đỉnh tại $(-1, -8)$ cho ta hoành độ đỉnh $x_v = -\\frac{b}{2(2)} = -1 \\implies -\\frac{b}{4} = -1 \\implies b = 4$. Do đó $bc = 4(-6) = -24$."
+  },
+  {
+    "id": "sat6_math1_22",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Problem-Solving and Data Analysis",
+    "difficulty": "medium",
+    "prompt": "In 2008, Zinah earned 14% more than in 2007, and in 2009 Zinah earned 4% more than in 2008. Zinah earned $y$ times as much in 2009 as in 2007.",
+    "question": "What is the value of $y$?",
+    "isGridIn": false,
+    "options": {
+      "A": "0.5600",
+      "B": "1.0056",
+      "C": "1.1800",
+      "D": "1.1856"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Năm 2008 thu nhập bằng $1.14$ lần năm 2007. Năm 2009 thu nhập bằng $1.04$ lần năm 2008. So với 2007, thu nhập năm 2009 là: $1.14 \\times 1.04 = 1.1856$."
+  },
+  {
+    "id": "sat6_math1_23",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Circle A is defined by the equation $(x + 2)^2 + y^2 = 9$. Circle B is the result of shifting circle A down 6 units and increasing the radius so that the radius of circle B is 2 times the radius of circle A.",
+    "question": "Which equation defines circle B?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(x + 2)^2 + (y + 6)^2 = (4)(9)$",
+      "B": "$2(x + 2)^2 + 2(y + 6)^2 = 9$",
+      "C": "$(x + 2)^2 + (y - 6)^2 = (4)(9)$",
+      "D": "$2(x + 2)^2 + 2(y - 6)^2 = 9$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Tâm vòng tròn A là $(-2, 0)$, bán kính $r_A = 3$. Dịch xuống 6 đơn vị, tâm mới là $(-2, -6)$, phương trình vế trái là $(x + 2)^2 + (y - (-6))^2 = (x + 2)^2 + (y + 6)^2$. Bán kính gấp đôi: $r_B = 2(3) = 6 \\implies r_B^2 = 36 = (4)(9)$."
+  },
+  {
+    "id": "sat6_math1_24",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "prompt": "Right triangle $ABC$ has right angle at $C$, hypotenuse $AB = 54$, and angle $B = 30^\\circ$.",
+    "question": "What is the value of $\\tan A$?",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{\\sqrt{3}}{54}$",
+      "B": "$\\frac{1}{\\sqrt{3}}$",
+      "C": "$\\sqrt{3}$",
+      "D": "$27\\sqrt{3}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Lựa chọn C chính xác. Trong tam giác vuông, $\\angle A = 90^\\circ - 30^\\circ = 60^\\circ$. Do đó $\\tan A = \\tan 60^\\circ = \\sqrt{3}$."
+  },
+  {
+    "id": "sat6_math1_25",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Advanced Math",
+    "difficulty": "hard",
+    "prompt": "At the time that an article was first featured on a news website, there were 40 comments. An exponential model estimates that at the end of each hour, the number of comments had increased by 190% of the number of comments at the end of the previous hour.",
+    "question": "Which of the following equations best represents this model, where $C$ is the estimated number of comments $t$ hours after the article was first featured?",
+    "isGridIn": false,
+    "options": {
+      "A": "$C = 40(1.19)^t$",
+      "B": "$C = 40(1.9)^t$",
+      "C": "$C = 40(19)^t$",
+      "D": "$C = 40(2.9)^t$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D chính xác. Tăng thêm $190\\%$ nghĩa là sau mỗi giờ lượng bình luận được nhân với hệ số tăng trưởng: $1 + \\frac{190}{100} = 1 + 1.9 = 2.9$. Phương trình mô hình là: $C = 40(2.9)^t$."
+  },
+  {
+    "id": "sat6_math1_26",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Algebra",
+    "difficulty": "hard",
+    "prompt": "The table shows three values of $x$ and their corresponding values of $g(x)$: $(-27, 3)$, $(-9, 0)$, $(21, 5)$, where $g(x) = \\frac{f(x)}{x + 3}$ and $f$ is a linear function.",
+    "question": "What is the $y$-intercept of the graph of $y = f(x)$ in the $xy$-plane?",
+    "isGridIn": false,
+    "options": {
+      "A": "$(0, 36)$",
+      "B": "$(0, 12)$",
+      "C": "$(0, 4)$",
+      "D": "$(0, -9)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Lựa chọn A chính xác. Ta có $f(x) = (x + 3)g(x)$. Tại $x = -27$: $f(-27) = (-27 + 3)(3) = -72$. Tại $x = -9$: $f(-9) = (-9 + 3)(0) = 0$. Hệ số góc của $f(x)$ là: $m = \\frac{0 - (-72)}{-9 - (-27)} = \\frac{72}{18} = 4$. Dạng phương trình $f(x) = 4x + b$. Thay $(-9, 0)$: $0 = 4(-9) + b \\iff b = 36$. Tung độ gốc là $(0, 36)$."
+  },
+  {
+    "id": "sat6_math1_27",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "prompt": "In right triangle $ABC$, angle $C$ is the right angle and $BC = 162$. Point $D$ on side $AB$ is connected by a segment with point $E$ on side $AC$ such that segment $DE$ is parallel to $BC$ and $CE = 2AE$.",
+    "question": "What is the length of line segment $DE$?",
+    "isGridIn": true,
+    "options": {},
+    "correctAnswer": "54",
+    "explanation": "Đáp án là 54. Do $DE \\parallel BC$, tam giác $ADE$ đồng dạng với tam giác $ABC$. Ta có $AC = AE + CE = AE + 2AE = 3AE$. Tỉ số đồng dạng là: $\\frac{DE}{BC} = \\frac{AE}{AC} = \\frac{AE}{3AE} = \\frac{1}{3} \\implies DE = \\frac{BC}{3} = \\frac{162}{3} = 54$."
+  }
+]
