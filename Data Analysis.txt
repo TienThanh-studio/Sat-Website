@@ -1,0 +1,2750 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{microtype}
+\pgfplotsset{compat=1.18}
+
+\tcbset{
+    colback=white,
+    colframe=gray!60,
+    coltitle=black,
+    fonttitle=\bfseries,
+    arc=2mm,
+    boxrule=1pt,
+    before skip=10pt,
+    after skip=10pt
+}
+
+\begin{document}
+
+%% Question 1
+\begin{tcolorbox}[title=\textbf{Question 1}]
+One method of calculating the approximate age, in years, of a tree of a particular species is to multiply the diameter of the tree, in inches, by a constant called the growth factor for that species. The table above gives the growth factors for eight species of trees. If a white birch tree and a pin oak tree each now have a diameter of 1 foot, which of the following will be closest to the difference, in inches, of their diameters 10 years from now? ($1\text{ foot} = 12\text{ inches}$)
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Species of tree} & \textbf{Growth factor} \\ \hline
+Red maple & 4.5 \\ \hline
+River birch & 3.5 \\ \hline
+Cottonwood & 2.0 \\ \hline
+Black walnut & 4.5 \\ \hline
+White birch & 5.0 \\ \hline
+American elm & 4.0 \\ \hline
+Pin oak & 3.0 \\ \hline
+Shagbark hickory & 7.5 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1.0
+    \item 1.2
+    \item 1.3
+    \item 1.4
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 2
+\begin{tcolorbox}[title=\textbf{Question 2}]
+A sample of oak has a density of 807 kilograms per cubic meter. The sample is in the shape of a cube, where each edge has a length of 0.90 meters. To the nearest whole number, what is the mass, in kilograms, of this sample?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 588
+    \item 726
+    \item 897
+    \item 1,107
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 3
+\begin{tcolorbox}[title=\textbf{Question 3}]
+If $\dfrac{4a}{b} = 6.7$ and $\dfrac{a}{bn} = 26.8$, what is the value of $n$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 4
+\begin{tcolorbox}[title=\textbf{Question 4}]
+The density of a certain type of wood is 353 kilograms per cubic meter. A sample of this type of wood is in the shape of a cube and has a mass of 345 kilograms. To the nearest hundredth of a meter, what is the length of one edge of this sample?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.98
+    \item 0.99
+    \item 1.01
+    \item 1.02
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 5
+\begin{tcolorbox}[title=\textbf{Question 5}]
+Anita created a batch of green paint by mixing 2 ounces of blue paint with 3 ounces of yellow paint. She must mix a second batch using the same ratio of blue and yellow paints as the first batch. If she uses 5 ounces of blue paint for the second batch, how much yellow paint should Anita use?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Exactly 5 ounces
+    \item 3 ounces more than the amount of yellow paint used in the first batch
+    \item 1.5 times the amount of yellow paint used in the first batch
+    \item 1.5 times the amount of blue paint used in the second batch
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 6
+\begin{tcolorbox}[title=\textbf{Question 6}]
+A certain park has an area of 11,863,808 square yards. What is the area, in square miles, of this park? ($1\text{ mile} = 1{,}760\text{ yards}$)
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1.96
+    \item 3.83
+    \item 3,444.39
+    \item 6,740.8
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 7
+\begin{tcolorbox}[title=\textbf{Question 7}]
+Jeremy deposited $x$ dollars in his investment account on January 1, 2001. The amount of money in the account doubled each year until Jeremy had 480 dollars in his investment account on January 1, 2005. What is the value of $x$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 8
+\begin{tcolorbox}[title=\textbf{Question 8}]
+The table shows the distribution, by location and power capacity (maximum rate of power generation) of the twenty largest wind project in the United States in 2013. The total power capacity of the nine wind projects located in Texas was 4,952 megawatts (MW), and the total power capacity of the twenty wind projects was 11,037 MW in 2013. The amount of energy produced in one hour at a rate of one megawatt is one megawatt-hour. If each of the nine Texas wind projects in 2013 had operated continuously for 24 hours at the maximum rate of power generation, approximately how many megawatt-hours of energy would the nine projects have produced?
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{State} & \textbf{Low} & \textbf{Medium} & \textbf{High} & \textbf{Total} \\ \hline
+Texas & 4 & 2 & 3 & 9 \\ \hline
+California & 1 & 0 & 1 & 2 \\ \hline
+Oregon & 1 & 0 & 1 & 2 \\ \hline
+Indiana & 0 & 2 & 0 & 2 \\ \hline
+Colorado & 1 & 1 & 0 & 2 \\ \hline
+Iowa & 2 & 0 & 0 & 2 \\ \hline
+Oklahoma & 1 & 0 & 0 & 1 \\ \hline
+\textbf{Total} & 10 & 5 & 5 & 20 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 200
+    \item 5,000
+    \item 11,000
+    \item 120,000
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 9
+\begin{tcolorbox}[title=\textbf{Question 9}]
+A certain town has an area of 4.36 square miles. What is the area, in square yards, of this town? ($1\text{ mile} = 1{,}760\text{ yards}$)
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 404
+    \item 7,674
+    \item 710,459
+    \item 13,505,536
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 10
+\begin{tcolorbox}[title=\textbf{Question 10}]
+In a study of cell phone use, 799 randomly selected US teens were asked how often they talked on a cell phone and about their texting behavior. The data are summarized in the table above. Based on the data from the study, an estimate of the percent of US teens who are heavy texters is 30\% and the associated margin of error is 3\%. Which of the following is a correct statement based on the given margin of error?
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Texting behavior} & \textbf{Talks daily} & \textbf{Does not talk daily} & \textbf{Total} \\ \hline
+Light & 110 & 146 & 256 \\ \hline
+Medium & 139 & 164 & 303 \\ \hline
+Heavy & 166 & 74 & 240 \\ \hline
+\textbf{Total} & 415 & 384 & 799 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Approximately 3\% of the teens in the study who are classified as heavy texters are not really heavy texters
+    \item It is not possible that the percent of all US teens who are heavy texters is less than 27\%
+    \item The percent of all US teens who are heavy texters is 33\%
+    \item It is doubtful that the percent of all US teens who are heavy texters is 35\%
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 11
+\begin{tcolorbox}[title=\textbf{Question 11}]
+A researcher interviewed 411 randomly selected US residents and asked about their views on the use of nuclear energy. The table above summarizes the responses of the interviewees. If the population of the United States was 300 million when the survey was given, based on the sample data for the 411 US residents, what is the best estimate, in millions, of the difference between the number of US residents who somewhat favor or strongly favor the use of nuclear energy and the number of those who somewhat oppose or strongly oppose it? (Round your answer to the nearest whole number.)
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Response} & \textbf{Frequency} \\ \hline
+Strongly favor & 56 \\ \hline
+Somewhat favor & 214 \\ \hline
+Somewhat oppose & 104 \\ \hline
+Strongly oppose & 37 \\ \hline
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 12
+\begin{tcolorbox}[title=\textbf{Question 12}]
+The results of two random samples of votes for a proposition are shown above. The samples were selected from the same population, and the margins of error were calculated using the same method. Which of the following is the most appropriate reason that the margin of error for sample A is greater than the margin of error for sample B?
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Sample} & \textbf{Percent in favor} & \textbf{Margin of error} \\ \hline
+A & 52\% & 4.2\% \\ \hline
+B & 48\% & 1.6\% \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Sample A had a smaller number of votes that could not be recorded
+    \item Sample A had a higher percent of favorable responses
+    \item Sample A had a larger sample size
+    \item Sample A had a smaller sample size
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 13
+\begin{tcolorbox}[title=\textbf{Question 13}]
+In State X, Mr. Camp's eighth-grade class consisting of 26 students was surveyed and 34.6 percent of the students reported that they had at least two siblings. The average eighth-grade class size in the state is 26. If the students in Mr. Camp's class are representative of students in the state's eighth-grade classes and there are 1,800 eighth-grade classes in the state, which of the following best estimates the number of eighth-grade students in the state who have fewer than two siblings?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 16,200
+    \item 23,400
+    \item 30,600
+    \item 46,800
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 14
+\begin{tcolorbox}[title=\textbf{Question 14}]
+The table shows the results of a poll. A total of 803 voters selected at random were asked which candidate they would vote for in the upcoming election. According to the poll, if 6,424 people vote in the election, by how many votes would Angel Cruz be expected to win?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 163
+    \item 1,304
+    \item 3,864
+    \item 5,621
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 15
+\begin{tcolorbox}[title=\textbf{Question 15}]
+A sample of 40 fourth-grade students was selected at random from a certain school. The 40 students completed a survey about the morning announcements, and 32 thought the announcements were helpful. Which of the following is the largest population to which the results of the survey can be applied?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The 40 students who were surveyed
+    \item All fourth-grade students at the school
+    \item All students at the school
+    \item All fourth-grade students in the country in which the school is located
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 16
+\begin{tcolorbox}[title=\textbf{Question 16}]
+A trivia tournament organizer wanted to study the relationship between the number of points a team scores in a trivia round and the number of hours that a team practices each week. For the study, the organizer selected 55 teams at random from all trivia teams in a certain tournament. The table displays the information for the 40 teams in the sample that practiced for at least 3 hours per week.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Hours practiced} & \textbf{6 to 13 points} & \textbf{14 or more points} & \textbf{Total} \\ \hline
+3 to 5 hours & 6 & 4 & 10 \\ \hline
+More than 5 hours & 4 & 26 & 30 \\ \hline
+\textbf{Total} & 10 & 30 & 40 \\ \hline
+\end{tabular}
+\end{center}
+
+Which of the following is the largest population to which the results of the study can be generalized?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item All trivia teams in the tournament that scored 14 or more points in the round
+    \item The 55 trivia teams in the sample
+    \item The 40 trivia teams in the sample that practiced for at least 3 hours per week
+    \item All trivia teams in the tournament
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 17
+\begin{tcolorbox}[title=\textbf{Question 17}]
+A psychologist designed and conducted a study to determine whether playing a certain educational game increases middle school students' accuracy in adding fractions. For the study, the psychologist chose a random sample of 35 students from all of the students at one of the middle schools in a large city. The psychologist found that students who played the game showed significant improvement in accuracy when adding fractions. What is the largest group to which the results of the study can be generalized?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The 35 students in the sample
+    \item All students at the school
+    \item All middle school students in the city
+    \item All students in the city
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 18
+\begin{tcolorbox}[title=\textbf{Question 18}]
+Near the end of a US cable news show, the host invited viewers to respond to a poll on the show's website that asked, ``Do you support the new federal policy discussed during the show?'' At the end of the show, the host reported that 28\% responded ``Yes,'' and 70\% responded ``No.'' Which of the following best explains why the results are unlikely to represent the sentiments of the population of the United States?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The percentages do not add up to 100\%, so any possible conclusions from the poll are invalid
+    \item Those who responded to the poll were not a random sample of the population of the United States
+    \item There were not 50\% ``Yes'' responses and 50\% ``No'' responses
+    \item The show did not allow viewers enough time to respond to the poll
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 19
+\begin{tcolorbox}[title=\textbf{Question 19}]
+To determine the mean number of children per household in a community, Tabitha surveyed 20 families at a playground. For the 20 families surveyed, the mean number of children per household was 2.4. Which of the following statements must be true?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The mean number of children per household in the community is 2.4
+    \item A determination about the mean number of children per household in the community should not be made because the sample size is too small
+    \item The sampling method is flawed and may produce a biased estimate of the mean number of children per household in the community
+    \item The sampling method is not flawed and is likely to produce an unbiased estimate of the mean number of children per household in the community
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 20
+\begin{tcolorbox}[title=\textbf{Question 20}]
+The box plots summarize the masses, in kilograms, of two groups of gazelles. Based on the box plots, which of the following statements must be true?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+    \draw[thick] (0,0) -- (14,0);
+    \foreach \x/\val in {1/20, 3/22, 5/24, 7/26, 9/28, 11/30, 13/32} {
+        \draw[thick] (\x, -0.15) -- (\x, 0.15);
+        \node[below] at (\x, -0.15) {\val};
+    }
+    \node[below] at (7, -0.8) {Mass (kilograms)};
+
+    % Group 1: Min 21, Q1 22, Med 25, Q3 26, Max 28
+    \node[left] at (0, 2) {Group 1};
+    \draw[thick] (2, 2) -- (3, 2);
+    \draw[thick] (7, 2) -- (9, 2);
+    \draw[thick] (2, 1.8) -- (2, 2.2);
+    \draw[thick] (9, 1.8) -- (9, 2.2);
+    \draw[thick] (3, 1.6) rectangle (7, 2.4);
+    \draw[thick] (6, 1.6) -- (6, 2.4);
+
+    % Group 2: Min 22, Q1 23, Med 24, Q3 25, Max 28
+    \node[left] at (0, 1) {Group 2};
+    \draw[thick] (3, 1) -- (4, 1);
+    \draw[thick] (6, 1) -- (9, 1);
+    \draw[thick] (3, 0.8) -- (3, 1.2);
+    \draw[thick] (9, 0.8) -- (9, 1.2);
+    \draw[thick] (4, 0.6) rectangle (6, 1.4);
+    \draw[thick] (5, 0.6) -- (5, 1.4);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The mean mass of group 1 is greater than the mean mass of group 2
+    \item The mean mass of group 1 is less than the mean mass of group 2
+    \item The median mass of group 1 is greater than the median mass of group 2
+    \item The median mass of group 1 is less than the median mass of group 2
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 21
+\begin{tcolorbox}[title=\textbf{Question 21}]
+Data set A consists of 10 positive integers less than 60. The list shown gives 9 of the integers from data set A:
+\[ 43, 45, 44, 43, 38, 39, 40, 46, 40 \]
+The mean of these 9 integers is 42. If the mean of data set A is an integer that is greater than 42, what is the value of the largest integer from data set A?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 22
+\begin{tcolorbox}[title=\textbf{Question 22}]
+Two different teams consisting of 10 members each ran in a race. Each member's completion time of the race was recorded. The mean of the completion times for each team was calculated and is shown below.
+\begin{itemize}
+    \item Team A: 3.41 minutes
+    \item Team B: 3.79 minutes
+\end{itemize}
+Which of the following MUST be true?
+\begin{enumerate}[label=\Roman*.]
+    \item Every member of team A completed the race in less time than any member of team B.
+    \item The median time it took the members of team B to complete the race is greater than the median time it took the members of team A to complete the race.
+    \item There is at least one member of team B who took more time to complete the race than some member of team A.
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item III only
+    \item I and III only
+    \item II and III only
+    \item I, II, and III
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 23
+\begin{tcolorbox}[title=\textbf{Question 23}]
+The mean score of 8 players in a basketball game was 14.5 points. If the highest individual score is removed, the mean score of the remaining 7 players becomes 12 points. What was the highest score?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 20
+    \item 24
+    \item 32
+    \item 36
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 24
+\begin{tcolorbox}[title=\textbf{Question 24}]
+Each of the following frequency tables represents a data set. Which data set has the greatest mean?
+
+\begin{center}
+\begin{tabular}{cccc}
+\textbf{(A)} & \textbf{(B)} & \textbf{(C)} & \textbf{(D)} \\
+\begin{tabular}{|c|c|} \hline \textbf{Val} & \textbf{Freq} \\ \hline 70 & 4 \\ 80 & 5 \\ 90 & 6 \\ 100 & 7 \\ \hline \end{tabular} &
+\begin{tabular}{|c|c|} \hline \textbf{Val} & \textbf{Freq} \\ \hline 70 & 6 \\ 80 & 6 \\ 90 & 6 \\ 100 & 6 \\ \hline \end{tabular} &
+\begin{tabular}{|c|c|} \hline \textbf{Val} & \textbf{Freq} \\ \hline 70 & 7 \\ 80 & 6 \\ 90 & 6 \\ 100 & 7 \\ \hline \end{tabular} &
+\begin{tabular}{|c|c|} \hline \textbf{Val} & \textbf{Freq} \\ \hline 70 & 8 \\ 80 & 5 \\ 90 & 5 \\ 100 & 8 \\ \hline \end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item A
+    \item B
+    \item C
+    \item D
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 25
+\begin{tcolorbox}[title=\textbf{Question 25}]
+Data set F consists of 55 integers between 170 and 290. Data set G consists of all the integers in data set F as well as the integer 10. Which of the following must be less for data set F than for data set G?
+\begin{enumerate}[label=\Roman*.]
+    \item The mean
+    \item The median
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item I only
+    \item II only
+    \item I and II
+    \item Neither I nor II
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 26
+\begin{tcolorbox}[title=\textbf{Question 26}]
+Data set A consists of the heights of 75 buildings and has a mean of 32 meters. Data set B consists of the heights of 50 buildings and has a mean of 62 meters. Data set C consists of the heights of the 125 buildings from data sets A and B. What is the mean, in meters, of data set C?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 27
+\begin{tcolorbox}[title=\textbf{Question 27}]
+A survey was given to residents of all 50 states asking if they had earned a bachelor's degree or higher. The results from 7 of the states are given in the table above. The median percent of residents who earned a bachelor's degree or higher for all 50 states was 26.95\%. What is the difference between the median percent of residents who earned a bachelor's degree or higher for these 7 states and the median for all 50 states?
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{State} & \textbf{Percent of residents} \\ \hline
+State A & 21.9\% \\ \hline
+State B & 27.9\% \\ \hline
+State C & 25.9\% \\ \hline
+State D & 19.5\% \\ \hline
+State E & 30.1\% \\ \hline
+State F & 36.4\% \\ \hline
+State G & 35.5\% \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.05\%
+    \item 0.95\%
+    \item 1.22\%
+    \item 7.45\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 28
+\begin{tcolorbox}[title=\textbf{Question 28}]
+Andrew and Maria each collected six rocks, and the masses of the rocks are shown in the table above. The mean of the masses of the rocks Maria collected is 0.1 kilogram greater than the mean of the masses of the rocks Andrew collected. What is the value of $x$?
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+& \multicolumn{6}{c|}{\textbf{Masses (kilograms)}} \\ \hline
+\textbf{Andrew} & 2.4 & 2.5 & 3.6 & 3.1 & 2.5 & 2.7 \\ \hline
+\textbf{Maria} & $x$ & 3.1 & 2.7 & 2.9 & 3.3 & 2.8 \\ \hline
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 29
+\begin{tcolorbox}[title=\textbf{Question 29}]
+For a certain computer game, individuals receive an integer score that ranges from 2 through 10. The table below shows the frequency distribution of the scores of the 9 players in group A and the 11 players in group B.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Score} & \textbf{Group A} & \textbf{Group B} \\ \hline
+2 & 1 & 0 \\ \hline
+3 & 1 & 0 \\ \hline
+4 & 2 & 0 \\ \hline
+5 & 1 & 4 \\ \hline
+6 & 3 & 2 \\ \hline
+7 & 0 & 0 \\ \hline
+8 & 0 & 2 \\ \hline
+9 & 1 & 1 \\ \hline
+10 & 0 & 2 \\ \hline
+\textbf{Total} & 9 & 11 \\ \hline
+\end{tabular}
+\end{center}
+
+The median of the scores for group B is how much greater than the median of the scores for group A?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 30
+\begin{tcolorbox}[title=\textbf{Question 30}]
+Data set A consists of the heights of 75 objects and has a mean of 25 meters. Data set B consists of the heights of 50 objects and has a mean of 65 meters. Data set C consists of the heights of the 125 objects from data sets A and B. What is the mean, in meters, of data set C?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 31
+\begin{tcolorbox}[title=\textbf{Question 31}]
+The dot plot represents the 15 values in data set A. Data set B is created by adding 56 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    \draw[thick] (21.5, 0) -- (26.5, 0);
+    \foreach \x in {22, 23, 24, 25, 26} {
+        \draw[thick] (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {\x};
+    }
+    \node[above] at (24, 1.8) {\textbf{Data Set A}};
+    % Dot points: 22(1), 23(3), 24(5), 25(4), 26(2)
+    \fill (22, 0.3) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9} \fill (23, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2, 1.5} \fill (24, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (25, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (26, \y) circle (2.5pt);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A
+    \item The median of data set B is equal to the median of data set A, and the range of data set B is greater than the range of data set A
+    \item The median of data set B is greater than the median of data set A, and the range of data set B is equal to the range of data set A
+    \item The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 32
+\begin{tcolorbox}[title=\textbf{Question 32}]
+The mean amount of time that the 20 employees of a construction company have worked for the company is 6.7 years. After one of the employees leaves the company, the mean amount of time that the remaining employees have worked for the company is reduced to 6.25 years. How many years did the employee who left the company work for the company?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.45
+    \item 2.30
+    \item 9.00
+    \item 15.25
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 33
+\begin{tcolorbox}[title=\textbf{Question 33}]
+Data set A and data set B each consist of 27 values. The table shows the frequencies of the values for each data set. Which of the following statements best compares the means of the two data sets?
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Value} & \textbf{Data set A frequency} & \textbf{Data set B frequency} \\ \hline
+30 & 2 & 9 \\ \hline
+34 & 4 & 7 \\ \hline
+38 & 5 & 5 \\ \hline
+42 & 7 & 4 \\ \hline
+46 & 9 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The mean of data set A is greater than the mean of data set B
+    \item The mean of data set A is less than the mean of data set B
+    \item The mean of data set A is equal to the mean of data set B
+    \item There is not enough information to compare the means of the data sets
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 34
+\begin{tcolorbox}[title=\textbf{Question 34}]
+A data set of 27 different numbers has a mean of 33 and a median of 33. A new data set is created by adding 7 to each number in the original data set that is greater than the median and subtracting 7 from each number in the original data set that is less than the median. Which of the following measures does NOT have the same value in both the original and new data sets?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Median
+    \item Mean
+    \item Sum of the numbers
+    \item Standard deviation
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 35
+\begin{tcolorbox}[title=\textbf{Question 35}]
+The dot plots represent the distributions of values in data sets A and B.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.65]
+    % Data set A
+    \draw[thick] (9.5, 0) -- (16.5, 0);
+    \foreach \x in {10,11,12,13,14,15,16} {
+        \draw[thick] (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {\footnotesize \x};
+    }
+    \node[above] at (13, 1.8) {\textbf{Data Set A}};
+    \node[below] at (13, -0.6) {Value};
+    \foreach \y in {0.3, 0.6} \fill (10, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (11, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (12, \y) circle (2.5pt);
+    \fill (13, 0.3) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (14, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (15, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (16, \y) circle (2.5pt);
+
+    % Data set B
+    \begin{scope}[xshift=9cm]
+    \draw[thick] (9.5, 0) -- (16.5, 0);
+    \foreach \x in {10,11,12,13,14,15,16} {
+        \draw[thick] (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {\footnotesize \x};
+    }
+    \node[above] at (13, 1.8) {\textbf{Data Set B}};
+    \node[below] at (13, -0.6) {Value};
+    \foreach \y in {0.3, 0.6} \fill (10, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (11, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (12, \y) circle (2.5pt);
+    \fill (13, 0.3) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (14, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (15, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (16, \y) circle (2.5pt);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+
+Which of the following statements must be true?
+\begin{enumerate}[label=\Roman*.]
+    \item The median of data set A is equal to the median of data set B.
+    \item The standard deviation of data set A is equal to the standard deviation of data set B.
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item I only
+    \item II only
+    \item I and II
+    \item Neither I nor II
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 36
+\begin{tcolorbox}[title=\textbf{Question 36}]
+Two data sets of 23 integers each are summarized in the histograms shown. For each of the histograms, the first interval represents the frequency of integers greater than or equal to 10, but less than 20. The second interval represents the frequency of integers greater than or equal to 20, but less than 30, and so on. What is the smallest possible difference between the mean of data set A and the mean of data set B?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    % Histogram A
+    \draw[->] (0,0) -- (6.5,0) node[below right] {Integer};
+    \draw[->] (0,0) -- (0,13) node[above] {Frequency};
+    \foreach \y in {2,4,6,8,10,12} {
+        \draw (0,\y) -- (6,\y);
+        \node[left] at (0,\y) {\tiny \y};
+    }
+    \node[left] at (0,0) {\tiny 0};
+    \node[above] at (3.5, 13) {\textbf{Data Set A}};
+    \foreach \x/\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \node[below] at (\x, 0) {\tiny \val};
+    \draw[fill=gray!40] (2,0) rectangle (3,3);
+    \draw[fill=gray!40] (3,0) rectangle (4,4);
+    \draw[fill=gray!40] (4,0) rectangle (5,7);
+    \draw[fill=gray!40] (5,0) rectangle (6,9);
+
+    % Histogram B
+    \begin{scope}[xshift=9cm]
+    \draw[->] (0,0) -- (6.5,0) node[below right] {Integer};
+    \draw[->] (0,0) -- (0,13) node[above] {Frequency};
+    \foreach \y in {2,4,6,8,10,12} {
+        \draw (0,\y) -- (6,\y);
+        \node[left] at (0,\y) {\tiny \y};
+    }
+    \node[left] at (0,0) {\tiny 0};
+    \node[above] at (3.5, 13) {\textbf{Data Set B}};
+    \foreach \x/\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \node[below] at (\x, 0) {\tiny \val};
+    \draw[fill=gray!40] (1,0) rectangle (2,3);
+    \draw[fill=gray!40] (2,0) rectangle (3,4);
+    \draw[fill=gray!40] (3,0) rectangle (4,7);
+    \draw[fill=gray!40] (4,0) rectangle (5,9);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0
+    \item 1
+    \item 10
+    \item 23
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 37
+\begin{tcolorbox}[title=\textbf{Question 37}]
+The frequency distribution above summarizes a set of data, where $a$ is a positive integer. How much greater is the mean of the set of data than the median?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Value} & \textbf{Frequency} \\ \hline
+1 & $a$ \\ \hline
+2 & $2a$ \\ \hline
+3 & $3a$ \\ \hline
+4 & $2a$ \\ \hline
+5 & $a$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0
+    \item 1
+    \item 2
+    \item 3
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 38
+\begin{tcolorbox}[title=\textbf{Question 38}]
+Jennifer bought a box of Crunchy Grain cereal. The nutrition facts on the box state that a serving size of the cereal is $\frac{3}{4}$ cup and provides 210 calories, 50 of which are calories from fat. In addition, each serving of the cereal provides 180 milligrams of potassium, which is 5\% of the daily allowance for adults. If $p$ percent of an adult's daily allowance of potassium is provided by $x$ servings of Crunchy Grain cereal per day, which of the following expresses $p$ in terms of $x$?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $p = 0.5x$
+    \item $p = 5x$
+    \item $p = (0.05)^x$
+    \item $p = (1.05)^x$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 39
+\begin{tcolorbox}[title=\textbf{Question 39}]
+A school district is forming a committee to discuss plans for the construction of a new high school. Of those invited to join the committee, 15\% are parents of students, 45\% are teachers from the current high school, 25\% are school and district administrators, and the remaining 6 individuals are students. How many more teachers were invited to join the committee than school and district administrators?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 40
+\begin{tcolorbox}[title=\textbf{Question 40}]
+The manager of an online news service received the report above on the number of subscriptions sold by the service. The manager estimated that the percent increase from 2012 to 2013 would be double the percent increase from 2013 to 2014. How many subscriptions did the manager expect would be sold in 2014?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Year} & \textbf{Subscriptions sold} \\ \hline
+2012 & 5,600 \\ \hline
+2013 & 5,880 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 6,020
+    \item 6,027
+    \item 6,440
+    \item 6,468
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 41
+\begin{tcolorbox}[title=\textbf{Question 41}]
+The line graph shows the total amount of snow, in inches, recorded each year in Washington, DC, from 2003 to 2015. If $p\%$ is the percent decrease in the annual snowfall from 2003 to 2007, what is the value of $p$?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+    \draw[->] (0,0) -- (13,0) node[below] {Year};
+    \draw[->] (0,0) -- (0,7) node[above] {Annual snowfall (inches)};
+    \foreach \y/\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} {
+        \draw[gray!50] (0,\y) -- (12.5,\y);
+        \node[left] at (0,\y) {\tiny \val};
+    }
+    \node[left] at (0,0) {\tiny 0};
+    \draw[thick] (0,4) -- (1, 1.2) -- (2, 1.25) -- (3, 1.35) -- (4, 1.0) -- (5, 0.5) -- (6, 0.8) -- (7, 5.6) -- (8, 1.0) -- (9, 0.2) -- (10, 0.3) -- (11, 3.2) -- (12, 1.8);
+    \fill (0,4) circle (3pt) node[above right] {\tiny $(2003, 40)$};
+    \fill (4,1) circle (3pt) node[above right] {\tiny $(2007, 10)$};
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 42
+\begin{tcolorbox}[title=\textbf{Question 42}]
+The number $a$ is 70\% less than the positive number $b$. The number $c$ is 80\% greater than $a$. The number $c$ is how many times $b$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 43
+\begin{tcolorbox}[title=\textbf{Question 43}]
+210 is $p\%$ greater than 30. What is the value of $p$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 44
+\begin{tcolorbox}[title=\textbf{Question 44}]
+The number $w$ is 110\% greater than the number $z$. The number $z$ is 55\% less than 50. What is the value of $w$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 45
+\begin{tcolorbox}[title=\textbf{Question 45}]
+A gift shop buys souvenirs at a wholesale price of 7.00 dollars each and resells them each at a retail price that is 290\% of the wholesale price. At the end of the season, any remaining souvenirs are marked at a discounted price that is 80\% off the retail price. What is the discounted price of each remaining souvenir, in dollars?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 46
+\begin{tcolorbox}[title=\textbf{Question 46}]
+The regular price of a shirt at a store is \$11.70. The sale price of the shirt is 80\% less than the regular price, and the sale price is 30\% greater than the store's cost for the shirt. What was the store's cost, in dollars, for the shirt?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 47
+\begin{tcolorbox}[title=\textbf{Question 47}]
+According to a set of standards, a certain type of substance can contain a maximum of 0.001\% phosphorus by mass. If a sample of this substance has a mass of 140 grams, what is the maximum mass, in grams, of phosphorus the sample can contain to meet these standards?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 48
+\begin{tcolorbox}[title=\textbf{Question 48}]
+37\% of the items in a box are green. Of those, 37\% are also rectangular. Of the green rectangular items, 42\% are also metal. Which of the following is closest to the percentage of the items in the box that are not rectangular green metal items?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1.16\%
+    \item 57.50\%
+    \item 94.25\%
+    \item 98.84\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 49
+\begin{tcolorbox}[title=\textbf{Question 49}]
+The number $a$ is 60\% greater than the positive number $b$. The number $c$ is 45\% less than $a$. The number $c$ is how many times $b$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 50
+\begin{tcolorbox}[title=\textbf{Question 50}]
+The number $a$ is 110\% greater than the number $b$. The number $b$ is 90\% less than 47. What is the value of $a$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 51
+\begin{tcolorbox}[title=\textbf{Question 51}]
+The number $a$ is 70\% less than the positive number $b$. The number $c$ is 60\% greater than $a$. The number $c$ is how many times $b$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 52
+\begin{tcolorbox}[title=\textbf{Question 52}]
+According to the 2010 Census, the adult population aged 18 years or greater of the United States in 2010 was 234,564,071. In 2010, a survey was conducted among a randomly chosen sample of adults aged 18 years or greater in the United States about their preference to live in a warm climate or a cool climate. The table below displays a summary of the survey results.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+& \textbf{Warm} & \textbf{Cool} & \textbf{No preference} & \textbf{Total} \\ \hline
+18--35 years old & 295 & 168 & 45 & 508 \\ \hline
+36--50 years old & 246 & 123 & 41 & 410 \\ \hline
+51--65 years old & 238 & 117 & 48 & 403 \\ \hline
+Greater than 65 years old & 137 & 78 & 64 & 279 \\ \hline
+\textbf{Total} & 916 & 486 & 198 & 1,600 \\ \hline
+\end{tabular}
+\end{center}
+
+Which of the following is closest to the difference between the percentage of adults aged 18--50 years who responded ``warm'' and the percentage of adults aged 51 years or greater who responded ``warm''?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 4\%
+    \item 5\%
+    \item 10\%
+    \item 18\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 53
+\begin{tcolorbox}[title=\textbf{Question 53}]
+The value of a collectible comic book increased by 167\% from the end of 2011 to the end of 2012 and then decreased by 16\% from the end of 2012 to the end of 2013. What was the net percentage increase in the value of the collectible comic book from the end of 2011 to the end of 2013?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 124.28\%
+    \item 140.28\%
+    \item 151.00\%
+    \item 209.72\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 54
+\begin{tcolorbox}[title=\textbf{Question 54}]
+For $x > 0$, the function $f$ is defined as follows:
+\[ f(x) \text{ equals } 201\% \text{ of } x \]
+Which of the following could describe this function?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Decreasing exponential
+    \item Decreasing linear
+    \item Increasing exponential
+    \item Increasing linear
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 55
+\begin{tcolorbox}[title=\textbf{Question 55}]
+Two investments were made as shown in the table above. The interest in Account A is compounded once per year. Which of the following is true about the investments?
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+& \textbf{Account A} & \textbf{Account B} \\ \hline
+Amount invested & \$500 & \$1,000 \\ \hline
+Balance increase & 6\% annual interest & \$25 per year \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Account A always earns more money per year than Account B
+    \item Account A always earns less money per year than Account B
+    \item Account A earns more money per year than Account B at first but eventually earns less money per year
+    \item Account A earns less money per year than Account B at first but eventually earns more money per year
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 56
+\begin{tcolorbox}[title=\textbf{Question 56}]
+The scatterplot above shows the numbers of grams of both total protein and total fat for eight sandwiches on a restaurant menu. The line of best fit for the data is also shown. According to the line of best fit, which of the following is closest to the predicted increase in total fat, in grams, for every increase of 1 gram in total protein?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+    \draw[->] (0,0) -- (5.5,0) node[below right] {Total protein (grams)};
+    \draw[->] (0,0) -- (0,8.5) node[above] {Total fat (grams)};
+    \foreach \x/\val in {1/10, 2/20, 3/30, 4/40, 5/50} {
+        \draw[gray!40] (\x,0) -- (\x,8);
+        \node[below] at (\x,0) {\tiny \val};
+    }
+    \foreach \y/\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60, 7/70, 8/80} {
+        \draw[gray!40] (0,\y) -- (5,\y);
+        \node[left] at (0,\y) {\tiny \val};
+    }
+    \draw[thick] (0.9, 1.6) -- (5.0, 7.8);
+    \foreach \p in {(0.9, 1.6), (1.3, 2.2), (2.2, 3.7), (2.6, 4.4), (2.8, 4.7), (3.5, 5.6), (4.4, 7.0), (4.9, 7.5)} {
+        \fill \p circle (2pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 2.5
+    \item 2.0
+    \item 1.5
+    \item 1.0
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 57
+\begin{tcolorbox}[title=\textbf{Question 57}]
+The scatterplot above shows the size and the sale price $y$ of 25 houses for sale in Town H. Which of the following could be an equation for a line of best fit for the data?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (0,0) -- (3.5,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,4.5) node[above] {$y$};
+    \node[below] at (1.8, -0.6) {Size (thousands of square feet)};
+    \node[rotate=90, above] at (-0.8, 2.2) {Sale price (thousands of dollars)};
+    \foreach \x in {1,2,3} {
+        \draw[gray!40] (\x, 0) -- (\x, 4);
+        \node[below] at (\x, 0) {\small \x};
+    }
+    \foreach \y/\val in {0.5/50, 1/100, 1.5/150, 2/200, 2.5/250, 3/300, 3.5/350, 4/400} {
+        \draw[gray!40] (0, \y) -- (3, \y);
+        \node[left] at (0, \y) {\tiny \val};
+    }
+    \foreach \p in {(0.9, 1.8), (1.0, 2.0), (1.1, 2.0), (1.2, 2.3), (1.3, 2.2), (1.4, 1.8), (1.4, 2.8), (1.5, 3.2), (1.5, 3.4), (1.6, 2.2), (1.6, 2.5), (1.7, 2.4), (1.8, 2.4), (1.8, 2.7), (1.9, 3.3), (2.0, 2.3), (2.0, 2.7), (2.1, 2.4), (2.1, 3.5), (2.2, 2.8), (2.2, 3.4), (2.4, 3.5), (2.5, 3.5), (2.7, 3.3), (2.8, 3.5)} {
+        \fill \p circle (2pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $y = 200x + 100$
+    \item $y = 100x + 100$
+    \item $y = 50x + 100$
+    \item $y = 100x$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 58
+\begin{tcolorbox}[title=\textbf{Question 58}]
+The scatterplot below shows the amount of electric energy generated, in millions of megawatt-hours, by nuclear sources over a 10-year period. Of the following equations, which best models the data in the scatterplot?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    \draw[->] (0,0) -- (13,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,7) node[above] {$y$};
+    \node[below] at (6.5, -0.6) {Time (years)};
+    \node[rotate=90, above] at (-1.2, 3.5) {\footnotesize Energy (million megawatt-hours)};
+    \foreach \x in {2,4,6,8,10,12} \node[below] at (\x, 0) {\tiny \x};
+    \foreach \y/\val in {1/720, 2/740, 3/760, 4/780, 5/800, 6/820} {
+        \draw[gray!40] (0,\y) -- (12,\y);
+        \node[left] at (0,\y) {\tiny \val};
+    }
+    \foreach \p in {(1, 3.15), (2, 4.4), (3, 4.05), (4, 4.3), (5, 5.3), (6, 5.25), (7, 4.9), (8, 5.32), (9, 4.45), (10, 3.4)} {
+        \fill \p circle (3pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $y = 1.674x^2 + 19.76x - 745.73$
+    \item $y = -1.674x^2 - 19.76x - 745.73$
+    \item $y = 1.674x^2 + 19.76x + 745.73$
+    \item $y = -1.674x^2 + 19.76x + 745.73$
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 59
+\begin{tcolorbox}[title=\textbf{Question 59}]
+Each dot in the scatterplot above represents the temperature and the number of people who visited a beach in Lagos, Nigeria, on one of eleven different days. The line of best fit for the data is also shown. The line of best fit for the data has a slope of approximately 57. According to this estimate, how many additional people per day are predicted to visit the beach for each $5^\circ\text{C}$ increase in average temperature?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    \draw[->] (0,0) -- (11.5,0) node[below] {Average temperature ($^\circ$C)};
+    \draw[->] (0,0) -- (0,9) node[above] {Number of people};
+    \foreach \y/\val in {1/80, 2/160, 3/240, 4/320, 5/400, 6/480, 7/560, 8/640} {
+        \draw[gray!30] (0,\y) -- (11,\y);
+        \node[left] at (0,\y) {\tiny \val};
+    }
+    \foreach \x/\val in {0/25, 2/27, 4/29, 6/31, 8/33, 10/35} {
+        \draw[gray!30] (\x, 0) -- (\x, 8.5);
+        \node[below] at (\x, 0) {\tiny \val};
+    }
+    \draw[thick] (0, 1.0) -- (11, 8.5);
+    \foreach \p in {(2, 1.5), (3, 4.5), (4, 3.0), (5, 4.0), (5, 4.6), (6, 6.0), (6.5, 7.0), (8, 6.0), (9, 8.0), (9, 6.8), (10, 7.8)} {
+        \fill \p circle (3pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 60
+\begin{tcolorbox}[title=\textbf{Question 60}]
+The scatterplot shows the relationship between the length of time $y$, in hours, a certain bird spent in flight and the number of days after January 11, $x$. What is the average rate of change, in hours per day, of the length of time the bird spent in flight on January 13 to the length of time the bird spent in flight on January 15?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    \draw[->] (0,0) -- (11,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,9) node[above] {$y$};
+    \node[below] at (5.5,-0.6) {Days after January 11};
+    \node[rotate=90, above] at (-0.8, 4.5) {Length of time (hours)};
+    \foreach \x in {2,4,6,8,10} {
+        \draw[gray!40] (\x, 0) -- (\x, 8);
+        \node[below] at (\x, 0) {\tiny \x};
+    }
+    \foreach \y/\val in {1/2, 2/4, 3/6, 4/8, 5/10, 6/12, 7/14, 8/16} {
+        \draw[gray!40] (0, \y) -- (10, \y);
+        \node[left] at (0, \y) {\tiny \val};
+    }
+    \foreach \p in {(1, 7.0), (2, 3.0), (3, 5.0), (4, 7.5), (5, 7.1), (6, 3.5), (7, 5.5), (8, 7.0), (9, 6.75), (10, 6.6)} {
+        \fill \p circle (3pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 61
+\begin{tcolorbox}[title=\textbf{Question 61}]
+The scatterplot above shows a company's ice cream sales $d$, in dollars, and the high temperature $t$, in degrees Celsius ($^\circ\text{C}$), on 12 different days. A line of best fit for the data is also shown. Which of the following could be an equation of the line of best fit?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    \draw[->] (0,0) -- (9,0) node[below] {Temperature ($^\circ$C)};
+    \draw[->] (0,0) -- (0,8) node[above] {Sales (dollars)};
+    \foreach \y/\val in {1/300, 2/400, 3/500, 4/600, 5/700, 6/800, 7/900, 8/1000} {
+        \draw[gray!40] (0,\y) -- (8,\y);
+        \node[left] at (0,\y) {\tiny \val};
+    }
+    \foreach \x/\val in {0/10, 1/12, 2/14, 3/16, 4/18, 5/20, 6/22, 7/24, 8/26} {
+        \draw[gray!40] (\x, 0) -- (\x, 8);
+        \node[below] at (\x, 0) {\tiny \val};
+    }
+    \draw[thick] (0.5, 2.4) -- (8.0, 7.4);
+    \foreach \p in {(1, 2.9), (2.1, 3.2), (2.6, 4.35), (3.2, 4.25), (3.6, 5.1), (4.1, 5.25), (4.3, 5.1), (4.7, 5.15), (6.1, 6.25), (6.3, 5.5), (6.9, 6.45), (7.6, 7.1)} {
+        \fill \p circle (3pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $d = 0.03t + 402$
+    \item $d = 10t + 402$
+    \item $d = 33t + 300$
+    \item $d = 33t + 84$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 62
+\begin{tcolorbox}[title=\textbf{Question 62}]
+The scatterplot above shows the federal-mandated minimum wage every 10 years between 1940 and 2010. A line of best fit is shown, and its equation is $y = 0.096x - 0.488$. What does the line of best fit predict about the increase in the minimum wage over the 70-year period?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Each year between 1940 and 2010, the average increase in minimum wage was 0.096 dollars
+    \item Each year between 1940 and 2010, the average increase in minimum wage was 0.49 dollars
+    \item Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.096 dollars
+    \item Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.488 dollars
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 63
+\begin{tcolorbox}[title=\textbf{Question 63}]
+What is the median of the data set shown?
+\[ 7, 12, 20, 7, 7, 8, 9, 8 \]
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 7
+    \item 8
+    \item 9.25
+    \item 13
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 64
+\begin{tcolorbox}[title=\textbf{Question 64}]
+The table above shows information about 18 cars listed for sale on an auto dealership's website. If one of the cars listed for sale is selected at random, what is the probability that the car selected will be a hybrid car priced at no more than \$25,000?
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Type of car} & \textbf{Priced at no more than \$25,000} & \textbf{Priced greater than \$25,000} & \textbf{Total} \\ \hline
+Nonhybrid & 6 & 4 & 10 \\ \hline
+Hybrid & 3 & 5 & 8 \\ \hline
+\textbf{Total} & 9 & 9 & 18 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $1/6$
+    \item $5/9$
+    \item $3/8$
+    \item $5/8$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 65
+\begin{tcolorbox}[title=\textbf{Question 65}]
+A satellite orbits Earth at an average speed of 6.25 miles per second. What is the satellite's average speed in miles per hour?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 375.0
+    \item 750.0
+    \item 1,125.0
+    \item 22,500.0
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 66
+\begin{tcolorbox}[title=\textbf{Question 66}]
+The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit for the data is also shown. Which of the following is closest to the difference between the $y$-coordinate of the data point with $x = 0$ and the $y$-value predicted by the line of best fit at $x = 0$?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+    \draw[->] (0,0) -- (6.5,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,7) node[above] {$y$};
+    \foreach \x in {1,2,3,4,5,6} {
+        \draw[gray!40] (\x, 0) -- (\x, 6.5);
+        \node[below] at (\x, 0) {\tiny \x};
+    }
+    \foreach \y/\val in {0/6, 1/7, 2/8, 3/9, 4/10, 5/11, 6/12} {
+        \draw[gray!40] (0, \y) -- (6, \y);
+        \node[left] at (0, \y) {\tiny \val};
+    }
+    \draw[thick] (0, 6.2) -- (5.25, 0.0);
+    \foreach \p in {(0, 6.0), (0.75, 5.0), (1.0, 6.0), (1.5, 4.25), (2.0, 4.0), (2.25, 3.25), (3.0, 3.0), (3.5, 2.0), (3.8, 2.25), (4.0, 1.0)} {
+        \fill \p circle (2.5pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0
+    \item 2
+    \item 6
+    \item 12
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 67
+\begin{tcolorbox}[title=\textbf{Question 67}]
+The population density of a country, in people per square kilometer of land area, increased from 1.8 in 1990 to 2.6 in 2014. During this time period, the land area of the country was 250,400 square kilometers. By how many people did the country's population increase from 1990 to 2014?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 651,040
+    \item 361,689
+    \item 225,360
+    \item 200,320
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 68
+\begin{tcolorbox}[title=\textbf{Question 68}]
+The ratio 180 to $m$ is equivalent to the ratio 5 to 35. What is the value of $m$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 69
+\begin{tcolorbox}[title=\textbf{Question 69}]
+Employees of a company were surveyed to determine whether they are satisfied with the cafeteria at the workplace. A random sample of 250 employees was selected. All 250 responded, and 73\% said they are satisfied. Based on this information, which of the following statements must be true?
+\begin{enumerate}[label=\Roman*.]
+    \item Of all the company employees, 73\% would say they are satisfied with the cafeteria at the workplace.
+    \item If another random sample of 250 employees were surveyed, 73\% would say they are satisfied.
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Neither
+    \item I only
+    \item II only
+    \item I and II
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 70
+\begin{tcolorbox}[title=\textbf{Question 70}]
+How many fluid ounces are equivalent to 92 quarts? (8 fluid ounces $= 1$ cup and 4 cups $= 1$ quart)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 71
+\begin{tcolorbox}[title=\textbf{Question 71}]
+The table above shows the distribution of ages of the 19 students enrolled in a college class. Which of the following gives the correct order of the mean, median, and mode of the ages?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Age} & \textbf{Frequency} \\ \hline
+22 & 6 \\ \hline
+23 & 5 \\ \hline
+24 & 3 \\ \hline
+25 & 2 \\ \hline
+26 & 1 \\ \hline
+27 & 1 \\ \hline
+35 & 1 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $\text{mode} < \text{median} < \text{mean}$
+    \item $\text{mode} < \text{mean} < \text{median}$
+    \item $\text{median} < \text{mode} < \text{mean}$
+    \item $\text{mean} < \text{mode} < \text{median}$
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 72
+\begin{tcolorbox}[title=\textbf{Question 72}]
+The frequency table summarizes the 62 data values in a data set. What is the maximum data value in the data set?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Data value} & \textbf{Frequency} \\ \hline
+9 & 4 \\ \hline
+10 & 3 \\ \hline
+11 & 9 \\ \hline
+12 & 8 \\ \hline
+13 & 10 \\ \hline
+14 & 12 \\ \hline
+15 & 9 \\ \hline
+16 & 0 \\ \hline
+17 & 7 \\ \hline
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 73
+\begin{tcolorbox}[title=\textbf{Question 73}]
+The data on the coat color and eye color for 60 Persian kittens available for adoption were collected and summarized in the table above. What fraction of the chocolate-colored kittens has deep blue eyes?
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Coat color} & \textbf{Deep blue} & \textbf{Light brown} & \textbf{Total} \\ \hline
+Cream-tortoiseshell & 20 & 20 & 40 \\ \hline
+Chocolate & 15 & 5 & 20 \\ \hline
+\textbf{Total} & 35 & 25 & 60 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $15/60$
+    \item $15/35$
+    \item $20/40$
+    \item $15/20$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 74
+\begin{tcolorbox}[title=\textbf{Question 74}]
+If $x/y = 5$ and $35x/(ny) = 5$, what is the value of $n$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 75
+\begin{tcolorbox}[title=\textbf{Question 75}]
+In a sample, 75\% of the items are defective. There are 96 defective items in the sample. How many total items are in the sample?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 76
+\begin{tcolorbox}[title=\textbf{Question 76}]
+Pure beeswax has a density of 0.625 ounce per cubic inch. An online company sells pure beeswax at a price of \$12.00 per ounce. What is the selling price, in dollars per cubic inch, for pure beeswax purchased from this company?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 77
+\begin{tcolorbox}[title=\textbf{Question 77}]
+A study was done on the weights of different types of fish in a lake. A random sample of fish were caught and marked in order to ensure that none were weighed more than once. The sample contained 200 trout, of which 25\% weighed more than 3 pounds. Which of the following conclusions is best supported by the sample data?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The majority of all fish in the lake weigh less than 3 pounds.
+    \item The average weight of all fish in the lake is approximately 3 pounds.
+    \item Approximately 25\% of all fish in the lake weigh more than 3 pounds.
+    \item Approximately 25\% of all trout in the lake weigh more than 3 pounds.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 78
+\begin{tcolorbox}[title=\textbf{Question 78}]
+The table below shows the number of state parks in a certain state that contain camping facilities and bicycle paths.
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+& \textbf{Has bicycle paths} & \textbf{Does not have bicycle paths} \\ \hline
+Has camping facilities & 25 & 7 \\ \hline
+Does not have camping facilities & 12 & 6 \\ \hline
+\end{tabular}
+\end{center}
+
+If one of these state parks is selected at random, what is the probability that it has camping facilities but does not have bicycle paths?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $7/50$
+    \item $7/32$
+    \item $12/37$
+    \item $7/13$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 79
+\begin{tcolorbox}[title=\textbf{Question 79}]
+In a bag, there are 9 red, 6 white, 45 blue, and 30 yellow cubes. If one of these cubes is selected at random, what is the probability of selecting a cube that is neither blue nor yellow?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $5/6$
+    \item $6/15$
+    \item $1/3$
+    \item $1/6$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 80
+\begin{tcolorbox}[title=\textbf{Question 80}]
+The graph shows the momentum $y$, in newton-seconds, of an object $x$ seconds after the object started moving, for $0 \le x \le 8$. What is the average rate of change, in newton-seconds per second, in the momentum of the object from $x = 4$ to $x = 8$?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+    \draw[->] (0,0) -- (9,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,12) node[above] {$y$};
+    \node[below] at (4.5, -0.6) {Time (seconds)};
+    \node[rotate=90, above] at (-0.8, 6) {Momentum (newton-seconds)};
+    \foreach \x in {1,2,3,4,5,6,7,8} {
+        \draw[gray!40] (\x, 0) -- (\x, 11);
+        \node[below] at (\x, 0) {\tiny \x};
+    }
+    \foreach \y in {1,2,3,4,5,6,7,8,9,10,11} {
+        \draw[gray!40] (0, \y) -- (8, \y);
+        \node[left] at (0, \y) {\tiny \y};
+    }
+    \draw[thick] (0, 1.5) .. controls (3, 2.5) and (5, 5) .. (8, 9.5);
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 81
+\begin{tcolorbox}[title=\textbf{Question 81}]
+A park ranger asked a random sample of visitors how far they hiked during their visit. Based on the responses, the estimated mean was found to be 6.8 miles, with an associated margin of error of 0.7 miles. Which of the following is the best conclusion from these data?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item It is likely that all visitors hiked between 6.1 and 7.5 miles.
+    \item It is likely that most visitors hiked exactly 6.8 miles.
+    \item It is not possible that any visitor hiked less than 5 miles.
+    \item It is plausible that the mean distance hiked for all visitors is between 6.1 and 7.5 miles.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 82
+\begin{tcolorbox}[title=\textbf{Question 82}]
+The ratio $x$ to $y$ is equivalent to the ratio 7 to 4. If the value of $x$ is 168, what is the value of $y$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 83
+\begin{tcolorbox}[title=\textbf{Question 83}]
+Rectangle A has length 12 and width $w$. Rectangle B has length 18 and the same length-to-width ratio as rectangle A. What is the width of rectangle B in terms of $w$?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $(3/2)w$
+    \item $w + 6$
+    \item $(2/3)w$
+    \item $w - 6$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 84
+\begin{tcolorbox}[title=\textbf{Question 84}]
+Data set A has 15 values and is represented by the dot plot shown. Data set B is created by adding 38 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    \draw[thick] (21.5, 0) -- (26.5, 0);
+    \foreach \x in {22, 23, 24, 25, 26} {
+        \draw[thick] (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {\x};
+    }
+    \node[above] at (24, 1.8) {\textbf{Data Set A}};
+    \fill (22, 0.3) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9} \fill (23, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2, 1.5} \fill (24, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (25, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (26, \y) circle (2.5pt);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The median of data set B is greater than the median of data set A, and the range of data set B is equal to the range of data set A.
+    \item The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A.
+    \item The median of data set B is equal to the median of data set A, and the range of data set B is greater than the range of data set A.
+    \item The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 85
+\begin{tcolorbox}[title=\textbf{Question 85}]
+The scatterplot above shows data for ten charities along with the line of best fit. For the charity with the smallest percent of total expenses spent on programs, which of the following is closest to the difference of the actual percent and the percent predicted by the line of best fit?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+    \draw[->] (0,0) -- (8,0) node[below] {Total income (millions of dollars)};
+    \draw[->] (0,0) -- (0,6) node[above] {Percent of total expenses};
+    \foreach \x/\val in {1/1000, 2/2000, 3/3000, 4/4000, 5/5000, 6/6000, 7/7000} {
+        \draw[gray!30] (\x, 0) -- (\x, 5.5);
+        \node[below] at (\x, 0) {\tiny \val};
+    }
+    \foreach \y/\val in {0/70, 1/75, 2/80, 3/85, 4/90, 5/95} {
+        \draw[gray!30] (0, \y) -- (7.5, \y);
+        \node[left] at (0, \y) {\tiny \val};
+    }
+    \draw[thick] (0.5, 4.4) -- (7.5, 5.2);
+    \foreach \p in {(0.8, 3.8), (1.5, 4.5), (2.2, 4.6), (3.0, 4.7), (3.6, 2.8), (4.5, 4.9), (5.2, 4.8), (6.0, 5.0), (6.8, 5.1), (7.2, 5.3)} {
+        \fill \p circle (2.5pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 10\%
+    \item 8\%
+    \item 4\%
+    \item 1\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 86
+\begin{tcolorbox}[title=\textbf{Question 86}]
+An object has a mass of 270 grams and a volume of 30 cubic centimeters. What is the density, in grams per cubic centimeter, of the object?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 9
+    \item 240
+    \item 300
+    \item 8,100
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 87
+\begin{tcolorbox}[title=\textbf{Question 87}]
+A company fills boxes with approximately 18 pounds of apples. To test the accuracy of the filling process, 425 boxes of apples were selected at random and weighed. Based on the sample, it is estimated that the average weight of all boxes of apples filled by the company in an 8-hour period is 18.4 pounds, with an associated margin of error of 0.23 pounds. Which of the following is the best interpretation of this estimate?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Plausible values for the average weight of all boxes of apples filled by the company are between 18.17 pounds and 18.63 pounds.
+    \item Plausible values for the average weight of all boxes of apples filled by the company are less than 18.17 pounds or greater than 18.63 pounds.
+    \item The average weight of all boxes of apples filled by the company is less than 18.4 pounds.
+    \item The average weight of all boxes of apples filled by the company is greater than 18.4 pounds.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 88
+\begin{tcolorbox}[title=\textbf{Question 88}]
+Each vertex of an 18-sided polygon is labeled with one of the 18 letters A through R, with a different letter at each vertex. If one vertex is selected at random, what is the probability that the letter F will be at the selected vertex? (Express your answer as a decimal or fraction, not as a percent.)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 89
+\begin{tcolorbox}[title=\textbf{Question 89}]
+Which expression represents the result of increasing a positive quantity $w$ by 65\%?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $1.65w$
+    \item $0.35w$
+    \item $65w$
+    \item $0.65w$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 90
+\begin{tcolorbox}[title=\textbf{Question 90}]
+The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit for the data is also shown.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+    \draw[->] (0,0) -- (11,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,11) node[above] {$y$};
+    \foreach \x in {1,2,3,4,5,6,7,8,9,10} {
+        \draw[gray!30] (\x, 0) -- (\x, 10.5);
+        \node[below] at (\x, 0) {\tiny \x};
+    }
+    \foreach \y in {1,2,3,4,5,6,7,8,9,10} {
+        \draw[gray!30] (0, \y) -- (10.5, \y);
+        \node[left] at (0, \y) {\tiny \y};
+    }
+    \draw[thick] (0, 1.2) -- (10, 9.8);
+    % 10 data points
+    \foreach \p in {(1, 2.8), (2, 2.2), (3, 3.2), (4, 5.5), (5, 4.8), (6, 7.2), (7, 6.5), (8, 7.4), (9, 9.6), (10, 9.0)} {
+        \fill \p circle (3pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+For how many of the 10 data points is the actual $y$-value less than the $y$-value predicted by the line of best fit?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 3
+    \item 4
+    \item 6
+    \item 7
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 91
+\begin{tcolorbox}[title=\textbf{Question 91}]
+Marco earns \$16.25 per hour at his part-time job. When he works $z$ hours, he earns $16.25z$ dollars. Which of the following expressions gives the amount, in dollars, Marco will earn if he works $4z$ hours?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $4(16.25z)$
+    \item $4 + 16.25z$
+    \item $4z + 16.25z$
+    \item $16.25(z + 4)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 92
+\begin{tcolorbox}[title=\textbf{Question 92}]
+The population of City B increased by 12\% from 2018 to 2019. If the 2019 population is $k$ times the 2018 population, what is the value of $k$?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.12
+    \item 1.2
+    \item 1.12
+    \item 2.2
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 93
+\begin{tcolorbox}[title=\textbf{Question 93}]
+The list gives the mass, in grams, of 5 grizzly bear cubs:
+\[ 5{,}050;\; 5{,}050;\; 4{,}030;\; 5{,}070;\; 4{,}050 \]
+What is the mean mass, in grams, of these 5 grizzly bear cubs?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 94
+\begin{tcolorbox}[title=\textbf{Question 94}]
+A company that produces cups wants to estimate the percent of the cups produced in a typical week that are defective. A random sample of 420 cups produced in a certain week were inspected. Based on the sample, it is estimated that 8\% of all cups produced by the company in this week are defective, with an associated margin of error of 2.74\%. Based on the estimate and associated margin of error, which of the following is the most appropriate conclusion about all cups produced by the company during this week?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 2.74\% of the cups are defective.
+    \item It is plausible that between 5.26\% and 10.74\% of the cups are defective.
+    \item 8\% of the cups are defective.
+    \item It is plausible that more than 10.74\% of the cups are defective.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 95
+\begin{tcolorbox}[title=\textbf{Question 95}]
+The glass pictured above can hold a maximum volume of 946 cubic centimeters, which is approximately 32 fluid ounces. Jenny has a pitcher that contains 1 gallon of water. How many times could Jenny completely fill the glass with 1 gallon of water? ($1\text{ gallon} = 128\text{ fluid ounces}$)
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (-1.5, 2.5) -- (-0.8, 0) -- (0.8, 0) -- (1.5, 2.5);
+    \draw[thick] (0, 2.5) ellipse (1.5cm and 0.4cm);
+    \draw[thick] (-0.8, 0) arc (180:360:0.8cm and 0.25cm);
+    \draw[dashed] (-0.8, 0) arc (180:0:0.8cm and 0.25cm);
+    \node at (0, 1.2) {$\text{Volume} = \dfrac{7\pi k^3}{48}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 32
+    \item 8
+    \item 4
+    \item 2
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 96
+\begin{tcolorbox}[title=\textbf{Question 96}]
+What number is 25\% greater than 240?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 97
+\begin{tcolorbox}[title=\textbf{Question 97}]
+In the given scatterplot, a line of best fit for the data is shown.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    \draw[->] (0,0) -- (12,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,16) node[above] {$y$};
+    \foreach \x in {5,10} {
+        \draw[gray!30] (\x, 0) -- (\x, 15);
+        \node[below] at (\x, 0) {\tiny \x};
+    }
+    \foreach \y in {5,10,15} {
+        \draw[gray!30] (0, \y) -- (11, \y);
+        \node[left] at (0, \y) {\tiny \y};
+    }
+    \draw[thick] (0, 1) -- (8, 15.4);
+\end{tikzpicture}
+\end{center}
+
+Which of the following is closest to the slope of the line of best fit shown?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.3
+    \item 0.9
+    \item 1.8
+    \item 2.5
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 98
+\begin{tcolorbox}[title=\textbf{Question 98}]
+A storage facility has three areas for holding boxes before they are shipped. Twelve boxes weighing less than 4 pounds are placed in area W. Thirteen boxes weighing at least 4 pounds but no more than 10 pounds are placed in area X. Fourteen boxes weighing more than 10 pounds are placed in area Y. Which of the following could be the median of the weights, in pounds, of these 39 boxes?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 3.5
+    \item 7
+    \item 10.5
+    \item 12
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 99
+\begin{tcolorbox}[title=\textbf{Question 99}]
+588 is 84\% of what number?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 100
+\begin{tcolorbox}[title=\textbf{Question 100}]
+Which of the following could be the equation for a line of best fit for the data shown in the scatterplot above?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    \draw[->] (0,0) -- (11,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,7) node[above] {$y$};
+    \foreach \y/\val in {1/5, 2/10, 3/15, 4/20, 5/25, 6/30} {
+        \draw[gray!30] (0, \y) -- (10.5, \y);
+        \node[left] at (0, \y) {\tiny \val};
+    }
+    \foreach \x in {2,4,6,8,10} \node[below] at (\x, 0) {\tiny \x};
+    \draw[thick] (0, 0.6) -- (10, 6.2);
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $y = 3x + 0.5$
+    \item $y = 0.5x + 3$
+    \item $y = -0.5x + 3$
+    \item $y = -3x + 0.5$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 101
+\begin{tcolorbox}[title=\textbf{Question 101}]
+A set of 10 data values has a minimum of 14, a maximum of 44, and a range of 30. If the value 14 is removed and a new value of 18 is added to create an 10-value data set, what is the range of the new data set?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 102
+\begin{tcolorbox}[title=\textbf{Question 102}]
+A survey of 100 registered voters revealed that 54 intended to vote for Candidate A. If the survey has a margin of error of 4.5\%, which of the following is a plausible value for the percentage of all registered voters who intend to vote for Candidate A?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 48\%
+    \item 52\%
+    \item 60\%
+    \item 62\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 103
+\begin{tcolorbox}[title=\textbf{Question 103}]
+If 15\% of a positive number $x$ is equal to 45\% of a positive number $y$, what is the ratio of $x$ to $y$?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1 to 3
+    \item 3 to 1
+    \item 1 to 5
+    \item 5 to 1
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 104
+\begin{tcolorbox}[title=\textbf{Question 104}]
+The table below shows the distribution of two variables from a random sample of 200 participants in a study.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Group 1} & \textbf{Group 2} & \textbf{Total} \\ \hline
+\textbf{Type A} & 45 & 55 & 100 \\ \hline
+\textbf{Type B} & 60 & 40 & 100 \\ \hline
+\textbf{Total} & 105 & 95 & 200 \\ \hline
+\end{tabular}
+\end{center}
+
+What proportion of the participants in Group 1 are of Type A?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $\dfrac{45}{200}$
+    \item $\dfrac{45}{100}$
+    \item $\dfrac{45}{105}$
+    \item $\dfrac{105}{200}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 105
+\begin{tcolorbox}[title=\textbf{Question 105}]
+The scatterplot displays data comparing the weekly sales $S$ (in thousands of dollars) and advertising spending $A$ (in hundreds of dollars) for 15 retail stores. The line of best fit is given by $S = 1.4A + 12$. What does the slope of the line represent in this context?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The predicted sales when advertising spending is zero
+    \item The predicted increase in advertising spending for each \$1,000 increase in sales
+    \item The predicted increase in sales, in thousands of dollars, for each \$100 increase in advertising spending
+    \item The total sales for all 15 stores combined
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 106
+\begin{tcolorbox}[title=\textbf{Question 106}]
+A speed of 72 kilometers per hour is equivalent to how many meters per second? ($1\text{ km} = 1{,}000\text{ meters}$, $1\text{ hour} = 3{,}600\text{ seconds}$)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 107
+\begin{tcolorbox}[title=\textbf{Question 107}]
+A chemist prepared a solution by dissolving 18 grams of salt into 282 grams of water. What is the concentration of salt in the solution, expressed as a percentage of the total mass?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 6.0\%
+    \item 6.4\%
+    \item 15.6\%
+    \item 18.0\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 108
+\begin{tcolorbox}[title=\textbf{Question 108}]
+Data set X consists of 8 integers with a mean of 20 and a standard deviation of 4. Data set Y is obtained by multiplying every number in data set X by 3. What is the standard deviation of data set Y?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 109
+\begin{tcolorbox}[title=\textbf{Question 109}]
+A sample of 50 students from high school P reported an average study time of 14 hours per week, with a margin of error of 1.2 hours. A sample of 200 students from the same school reported an average study time of 14 hours per week. Assuming the confidence level and population variance remain the same, which of the following is the most likely margin of error for the larger sample?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.3 hours
+    \item 0.6 hours
+    \item 1.2 hours
+    \item 2.4 hours
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 110
+\begin{tcolorbox}[title=\textbf{Question 110}]
+A restaurant offers lunch specials consisting of 1 appetizer, 1 main course, and 1 drink. There are 4 appetizers, 6 main courses, and 5 drinks available. How many different combinations of lunch specials can be selected?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 111
+\begin{tcolorbox}[title=\textbf{Question 111}]
+The price of a computer was discounted by 20\% during a sale. The following week, the discounted price was reduced by an additional 10\%. What is the total overall percentage discount from the original price?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 28\%
+    \item 30\%
+    \item 32\%
+    \item 38\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 112
+\begin{tcolorbox}[title=\textbf{Question 112}]
+The histogram summarizes the quiz scores of 30 students in a math class.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+    \draw[->] (0,0) -- (6.5,0) node[right] {Quiz Score};
+    \draw[->] (0,0) -- (0,11) node[above] {Number of Students};
+    \foreach \y in {2,4,6,8,10} {
+        \draw[gray!30] (0,\y) -- (6,\y);
+        \node[left] at (0,\y) {\tiny \y};
+    }
+    \foreach \x/\val in {1/6, 2/7, 3/8, 4/9, 5/10} \node[below] at (\x,0) {\tiny \val};
+    \draw[fill=gray!40] (0.6,0) rectangle (1.4,3);
+    \draw[fill=gray!40] (1.6,0) rectangle (2.4,5);
+    \draw[fill=gray!40] (2.6,0) rectangle (3.4,10);
+    \draw[fill=gray!40] (3.6,0) rectangle (4.4,8);
+    \draw[fill=gray!40] (4.6,0) rectangle (5.4,4);
+\end{tikzpicture}
+\end{center}
+
+In which score interval does the median score lie?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 7
+    \item 8
+    \item 9
+    \item 10
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 113
+\begin{tcolorbox}[title=\textbf{Question 113}]
+If the ratio of boys to girls in a club is 5 to 7 and there are 84 members in total, how many girls are in the club?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 114
+\begin{tcolorbox}[title=\textbf{Question 114}]
+The table below shows the distribution of pet owners in a community.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Owns a dog} & \textbf{Does not own a dog} & \textbf{Total} \\ \hline
+\textbf{Owns a cat} & 30 & 45 & 75 \\ \hline
+\textbf{Does not own a cat} & 50 & 75 & 125 \\ \hline
+\textbf{Total} & 80 & 120 & 200 \\ \hline
+\end{tabular}
+\end{center}
+
+Given that a randomly selected person owns a dog, what is the probability that the person also owns a cat?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $3/8$
+    \item $2/5$
+    \item $3/5$
+    \item $5/8$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 115
+\begin{tcolorbox}[title=\textbf{Question 115}]
+An author wrote a total of 15 chapters. The mean chapter length was 24 pages. If 2 chapters of length 18 and 22 pages are deleted, what is the mean page length of the remaining 13 chapters? (Round your answer to the nearest tenth.)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 116
+\begin{tcolorbox}[title=\textbf{Question 116}]
+A company's revenue increased by 8\% in year 1 and then increased by 15\% in year 2. What was the total percentage increase over the two-year period?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 23.0\%
+    \item 24.2\%
+    \item 25.0\%
+    \item 26.5\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 117
+\begin{tcolorbox}[title=\textbf{Question 117}]
+A box contains 5 red marbles, 7 blue marbles, and 8 green marbles. If 2 marbles are drawn one after another without replacement, what is the probability that both marbles are green?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $\dfrac{14}{95}$
+    \item $\dfrac{16}{95}$
+    \item $\dfrac{2}{19}$
+    \item $\dfrac{4}{25}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 118
+\begin{tcolorbox}[title=\textbf{Question 118}]
+The line of best fit for a data set is $y = -2.5x + 40$. What is the residual for a point in the data set with coordinates $(6, 22)$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 119
+\begin{tcolorbox}[title=\textbf{Question 119}]
+A right circular cylinder has height $h = 10\text{ cm}$ and volume $250\pi\text{ cm}^3$. What is the diameter of the cylinder's base, in centimeters?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 120
+\begin{tcolorbox}[title=\textbf{Question 120}]
+Data set A has a mean of 50 and standard deviation 6. Data set B is formed by adding 10 to every value in data set A. Which of the following is true?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The mean increases to 60, and the standard deviation increases to 16.
+    \item The mean increases to 60, and the standard deviation remains 6.
+    \item The mean remains 50, and the standard deviation increases to 16.
+    \item Both the mean and standard deviation remain unchanged.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 121
+\begin{tcolorbox}[title=\textbf{Question 121}]
+A tank currently contains 450 liters of water. Water is being pumped out of the tank at a constant rate of 15 liters per minute. Which equation models the volume of water $V$, in liters, remaining in the tank after $m$ minutes?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $V = 450 - 15m$
+    \item $V = 450 + 15m$
+    \item $V = 15m - 450$
+    \item $V = \dfrac{450}{15m}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 122
+\begin{tcolorbox}[title=\textbf{Question 122}]
+In an experiment, 40 out of 250 randomly selected light bulbs were found to be defective. Based on this sample, how many defective light bulbs are expected in a shipment of 15,000 bulbs?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 123
+\begin{tcolorbox}[title=\textbf{Question 123}]
+A car travels at a constant speed of 65 miles per hour. How many feet does the car travel in 30 seconds? ($1\text{ mile} = 5{,}280\text{ feet}$)
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1,430
+    \item 2,860
+    \item 3,432
+    \item 5,720
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 124
+\begin{tcolorbox}[title=\textbf{Question 124}]
+A set of 5 positive integers has a mode of 12, a median of 14, and a mean of 15. If the range is 10, what is the largest number in the set?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 125
+\begin{tcolorbox}[title=\textbf{Question 125}]
+The scatterplot shows the number of hours studied and the exam score for 12 students. The line of best fit predicts a score of 85 for a student who studied for 6 hours. If a student actually studied for 6 hours and scored 91, what is the residual for this data point?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $-6$
+    \item 6
+    \item 85
+    \item 91
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 126
+\begin{tcolorbox}[title=\textbf{Question 126}]
+A quality control inspector inspects a random sample of 600 components produced by Factory 1 and 400 components from Factory 2.
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Defective} & \textbf{Non-defective} & \textbf{Total} \\ \hline
+Factory 1 & 18 & 582 & 600 \\ \hline
+Factory 2 & 24 & 376 & 400 \\ \hline
+\textbf{Total} & 42 & 958 & 1,000 \\ \hline
+\end{tabular}
+\end{center}
+What percentage of all defective components came from Factory 2?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 2.4\%
+    \item 4.2\%
+    \item 42.9\%
+    \item 57.1\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 127
+\begin{tcolorbox}[title=\textbf{Question 127}]
+A variable $y$ varies inversely as the square of $x$. When $x = 3$, $y = 16$. What is the value of $y$ when $x = 6$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 128
+\begin{tcolorbox}[title=\textbf{Question 128}]
+The weight of a puppy increased from 4.0 pounds to 6.5 pounds over a two-month period. What is the percent increase in the puppy's weight?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 38.5\%
+    \item 61.5\%
+    \item 62.5\%
+    \item 162.5\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 129
+\begin{tcolorbox}[title=\textbf{Question 129}]
+If the median of a symmetric distribution is 45, which of the following statements about the mean of this distribution must be true?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item The mean is greater than 45.
+    \item The mean is less than 45.
+    \item The mean is equal to 45.
+    \item The mean cannot be determined without additional information.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 130
+\begin{tcolorbox}[title=\textbf{Question 130}]
+An investment account with an initial deposit of \$2,500 earns interest compounded continuously at an annual rate of 4.5\%. Which expression represents the value of the investment after $t$ years?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $2{,}500(1.045)^t$
+    \item $2{,}500(1 + 0.045t)$
+    \item $2{,}500e^{0.045t}$
+    \item $2{,}500e^{1.045t}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 131
+\begin{tcolorbox}[title=\textbf{Question 131}]
+The following table shows the distribution of scores on an aptitude test.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Score Range} & \textbf{Number of Applicants} \\ \hline
+50--59 & 8 \\ \hline
+60--69 & 14 \\ \hline
+70--79 & 26 \\ \hline
+80--89 & 32 \\ \hline
+90--100 & 20 \\ \hline
+\end{tabular}
+\end{center}
+
+What percentage of the applicants scored 80 or higher?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 20\%
+    \item 32\%
+    \item 52\%
+    \item 78\%
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 132
+\begin{tcolorbox}[title=\textbf{Question 132}]
+A company's production rate is 350 units every 2.5 hours. At this rate, how many units can be produced in an 8-hour workday?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 133
+\begin{tcolorbox}[title=\textbf{Question 133}]
+A researcher found a strong positive linear relationship between two variables, $X$ and $Y$, with a correlation coefficient of $r = 0.92$. Which of the following is the most appropriate conclusion?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item An increase in $X$ causes an increase in $Y$.
+    \item As $X$ increases, $Y$ tends to increase.
+    \item 92\% of the data points fall exactly on the line of best fit.
+    \item There is no linear association between $X$ and $Y$.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 134
+\begin{tcolorbox}[title=\textbf{Question 134}]
+The original price of a pair of shoes is \$80. It is marked up by 25\%, and then discounted by 25\%. What is the final price of the shoes?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 135
+\begin{tcolorbox}[title=\textbf{Question 135}]
+A circle has a circumference of $16\pi\text{ inches}$. If the radius of the circle is doubled, what will be the area of the new circle, in square inches?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $64\pi$
+    \item $128\pi$
+    \item $256\pi$
+    \item $512\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 136
+\begin{tcolorbox}[title=\textbf{Question 136}]
+The box plot shows the distribution of daily high temperatures (in $^\circ\text{F}$) for a city during the month of July.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (0,0) -- (8,0);
+    \foreach \x/\val in {0/70, 2/75, 4/80, 6/85, 8/90} {
+        \draw[thick] (\x, -0.15) -- (\x, 0.15);
+        \node[below] at (\x, -0.15) {\val};
+    }
+    \draw[thick] (1, 1) -- (2.5, 1);
+    \draw[thick] (6, 1) -- (7.5, 1);
+    \draw[thick] (1, 0.8) -- (1, 1.2);
+    \draw[thick] (7.5, 0.8) -- (7.5, 1.2);
+    \draw[thick] (2.5, 0.6) rectangle (6, 1.4);
+    \draw[thick] (4.5, 0.6) -- (4.5, 1.4);
+\end{tikzpicture}
+\end{center}
+
+What is the interquartile range (IQR) of the temperature distribution?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 137
+\begin{tcolorbox}[title=\textbf{Question 137}]
+If 4 workers can complete a task in 6 days, how many days will it take 8 workers to complete the same task, assuming all workers work at the same constant rate?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 2
+    \item 3
+    \item 4
+    \item 12
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 138
+\begin{tcolorbox}[title=\textbf{Question 138}]
+A linear model predicts the value of an antique car as $V = 1{,}200t + 8{,}500$, where $t$ is the number of years since 2010. What was the predicted value of the car in 2018?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 139
+\begin{tcolorbox}[title=\textbf{Question 139}]
+In a bag containing red, blue, and green marbles, the ratio of red to blue is 2:3, and the ratio of blue to green is 4:5. What is the ratio of red to green marbles?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 8:15
+    \item 6:15
+    \item 2:5
+    \item 1:2
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 140
+\begin{tcolorbox}[title=\textbf{Question 140}]
+A set of numbers has a standard deviation of 0. Which of the following statements must be true about the data set?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item All numbers in the data set are equal to zero.
+    \item All numbers in the data set are equal to each other.
+    \item The mean of the data set is zero.
+    \item The range of the data set is equal to the mean.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 141
+\begin{tcolorbox}[title=\textbf{Question 141}]
+The population of an endangered bird species was 4,000 in 2015 and has been declining at a rate of 5\% per year. Which function models the population $P(t)$ of the species $t$ years after 2015?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $P(t) = 4{,}000(1.05)^t$
+    \item $P(t) = 4{,}000(0.95)^t$
+    \item $P(t) = 4{,}000 - 0.05t$
+    \item $P(t) = 4{,}000(0.05)^t$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 142
+\begin{tcolorbox}[title=\textbf{Question 142}]
+A recipe calls for 3 cups of flour to make 24 cookies. How many cups of flour are needed to make 60 cookies?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 143
+\begin{tcolorbox}[title=\textbf{Question 143}]
+A random sample of 120 employees at a corporation found that 72 supported the introduction of a four-day workweek. What is the sample proportion of employees who support this policy?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.40
+    \item 0.60
+    \item 0.72
+    \item 0.80
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 144
+\begin{tcolorbox}[title=\textbf{Question 144}]
+If the mean of $x, x+3, x+6, x+9,$ and $x+12$ is 25, what is the value of $x$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 145
+\begin{tcolorbox}[title=\textbf{Question 145}]
+The price of gold increased by 150\% over a certain decade. If the initial price was \$400 per ounce, what was the price at the end of the decade?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item \$600
+    \item \$800
+    \item \$1,000
+    \item \$1,200
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 146
+\begin{tcolorbox}[title=\textbf{Question 146}]
+A sphere has a volume of $36\pi\text{ cubic centimeters}$. What is the surface area of the sphere, in square centimeters? ($V = \dfrac{4}{3}\pi r^3$, $A = 4\pi r^2$)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 147
+\begin{tcolorbox}[title=\textbf{Question 147}]
+In a scatterplot of two variables $x$ and $y$, the line of best fit passes through the points $(2, 5)$ and $(6, 17)$. What is the $y$-intercept of this line?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $-2$
+    \item $-1$
+    \item 1
+    \item 3
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 148
+\begin{tcolorbox}[title=\textbf{Question 148}]
+The average score on a test for 12 girls was 84, and the average score for 8 boys was 78. What was the overall average score for all 20 students?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 149
+\begin{tcolorbox}[title=\textbf{Question 149}]
+An airplane cruises at an altitude of 36,000 feet. If 1 meter is approximately 3.28 feet, what is the altitude of the airplane to the nearest hundred meters?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 10,900
+    \item 11,000
+    \item 11,800
+    \item 12,000
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 150
+\begin{tcolorbox}[title=\textbf{Question 150}]
+A researcher conducts a randomized controlled trial to test the effectiveness of a new drug. Which feature of the experiment is essential to establish a cause-and-effect relationship?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Ensuring a sample size of at least 1,000 subjects
+    \item Random assignment of participants to the treatment and control groups
+    \item Selecting only healthy adult participants
+    \item Surveying participants about their diet and exercise habits
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 151
+\begin{tcolorbox}[title=\textbf{Question 151}]
+If $a$ is 40\% greater than $b$, and $b$ is 25\% less than $c$, what percentage of $c$ is $a$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 152
+\begin{tcolorbox}[title=\textbf{Question 152}]
+The frequency table shows the number of siblings reported by 25 children in a community center.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Number of Siblings} & \textbf{Frequency} \\ \hline
+0 & 4 \\ \hline
+1 & 8 \\ \hline
+2 & 7 \\ \hline
+3 & 4 \\ \hline
+4 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+What is the median number of siblings?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1
+    \item 1.5
+    \item 2
+    \item 2.5
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 153
+\begin{tcolorbox}[title=\textbf{Question 153}]
+A car’s fuel efficiency is 28 miles per gallon. If gasoline costs \$3.50 per gallon, what is the cost of gasoline, in dollars, for a 420-mile trip?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 154
+\begin{tcolorbox}[title=\textbf{Question 154}]
+Which of the following transformations applied to every value in a dataset will change its standard deviation?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Adding 15 to each value
+    \item Subtracting 8 from each value
+    \item Multiplying each value by 1.5
+    \item Shifting the mean to 0 by subtracting the mean from each value
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 155
+\begin{tcolorbox}[title=\textbf{Question 155}]
+A cylinder has a base radius of 4 inches and a height of 10 inches. A cone has the same base radius and height. What is the ratio of the volume of the cone to the volume of the cylinder?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1 to 2
+    \item 1 to 3
+    \item 1 to 4
+    \item 2 to 3
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 156
+\begin{tcolorbox}[title=\textbf{Question 156}]
+A poll conducted among 650 randomly selected voters in a city found that 58\% favored a municipal bond issue, with a 3.8\% margin of error. Which statement is the most valid conclusion?
+
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item Exactly 58\% of all registered voters in the city support the bond.
+    \item It is plausible that between 54.2\% and 61.8\% of all voters support the bond.
+    \item If another sample of 650 voters is taken, exactly 58\% will favor the bond.
+    \item The true population proportion cannot be less than 55\%.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 157
+\begin{tcolorbox}[title=\textbf{Question 157}]
+A certain medicine breaks down in the bloodstream such that the amount remaining decreases by 30\% every 4 hours. If an initial dose of 200 mg is administered, how much medicine remains after 8 hours?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 158
+\begin{tcolorbox}[title=\textbf{Question 158}]
+Two fair standard 6-sided dice are rolled. What is the probability that the sum of the two numbers rolled is 8?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $1/6$
+    \item $5/36$
+    \item $7/36$
+    \item $1/9$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 159
+\begin{tcolorbox}[title=\textbf{Question 159}]
+The scatterplot shows a set of bivariate data. Which value is the most reasonable estimate of the correlation coefficient between $x$ and $y$?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    \draw[->] (0,0) -- (7,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,7) node[above] {$y$};
+    \foreach \p in {(1, 5.8), (1.5, 5.2), (2, 4.6), (2.8, 3.9), (3.4, 3.5), (4, 2.7), (4.8, 2.1), (5.5, 1.4), (6, 0.8)} {
+        \fill \p circle (2.5pt);
+    }
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $-0.98$
+    \item $-0.35$
+    \item $0.35$
+    \item $0.98$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 160
+\begin{tcolorbox}[title=\textbf{Question 160}]
+If $m$ is 20\% greater than $n$, and $n$ is 20\% greater than $p$, by what percentage is $m$ greater than $p$?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 161
+\begin{tcolorbox}[title=\textbf{Question 161}]
+A set of 7 distinct numbers has a median of 24. If the three largest numbers are each increased by 5, what is the new median of the set?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 24
+    \item 26.5
+    \item 29
+    \item It cannot be determined
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 162
+\begin{tcolorbox}[title=\textbf{Question 162}]
+A rectangular prism has length 8 cm, width 6 cm, and height 10 cm. If all dimensions are increased by 50\%, by what factor does the volume increase?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 1.5
+    \item 2.25
+    \item 3.375
+    \item 4.5
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 163
+\begin{tcolorbox}[title=\textbf{Question 163}]
+The dot plot shows the number of books read during summer break by 16 students.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (0.5,0) -- (6.5,0);
+    \foreach \x in {1,2,3,4,5,6} {
+        \draw[thick] (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {\x};
+    }
+    \node[below] at (3.5, -0.6) {Books read};
+    \fill (1, 0.3) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9} \fill (2, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2, 1.5} \fill (3, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6, 0.9, 1.2} \fill (4, \y) circle (2.5pt);
+    \foreach \y in {0.3, 0.6} \fill (5, \y) circle (2.5pt);
+    \fill (6, 0.3) circle (2.5pt);
+\end{tikzpicture}
+\end{center}
+
+What is the range of the number of books read?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 164
+\begin{tcolorbox}[title=\textbf{Question 164}]
+The table shows data on 150 hospital patients with a particular condition.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Improved} & \textbf{No Change} & \textbf{Total} \\ \hline
+\textbf{Treatment A} & 60 & 15 & 75 \\ \hline
+\textbf{Placebo} & 30 & 45 & 75 \\ \hline
+\textbf{Total} & 90 & 60 & 150 \\ \hline
+\end{tabular}
+\end{center}
+
+What is the relative frequency of improvement among those who received Treatment A?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 0.40
+    \item 0.50
+    \item 0.67
+    \item 0.80
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 165
+\begin{tcolorbox}[title=\textbf{Question 165}]
+A map uses a scale of 1 inch to represent 25 miles. If two cities are 3.6 inches apart on the map, what is the actual distance between them, in miles?
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 166
+\begin{tcolorbox}[title=\textbf{Question 166}]
+A retail company tracked the number of complaints received per day over 20 consecutive days. The mean number of complaints was 8.5. If the company received 0 complaints on each of the next 2 days, what is the new mean number of complaints per day for the 22-day period? (Round your answer to the nearest tenth.)
+
+\medskip
+\textbf{Answer:} \rule{3cm}{0.4pt}
+\end{tcolorbox}
+
+%% Question 167
+\begin{tcolorbox}[title=\textbf{Question 167}]
+A student's score on a final exam accounts for 40\% of their overall grade, while midterm 1 and midterm 2 each account for 30\%. If the student scored 80 on midterm 1 and 90 on midterm 2, what score must the student earn on the final exam to achieve an overall course average of 87?
+
+\begin{multicols}{4}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item 88
+    \item 90
+    \item 92
+    \item 94
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}

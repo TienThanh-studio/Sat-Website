@@ -1,0 +1,2719 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+
+
+\title{\textbf{Geometry \& Trigonometry Question Bank}}
+\author{Digital SAT Practice}
+\date{}
+
+\begin{document}
+\maketitle
+
+%% Question 1
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 1}]
+Square $A$ has side lengths that are $166$ times the side lengths of square $B$. The area of square $A$ is $k$ times the area of square $B$. What is the value of $k$?\\
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 2
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 2}]
+A cube has an edge length of $68\text{ inches}$. A solid sphere with a radius of $34\text{ inches}$ is inside the cube, such that the sphere touches the center of each face of the cube. To the nearest cubic inch, what is the volume of the space in the cube not taken up by the sphere?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $149{,}796$
+    \item $164{,}500$
+    \item $190{,}955$
+    \item $310{,}800$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 3
+\begin{tcolorbox}[title=\textbf{Question 3}]
+The figure shown is a right circular cylinder with a radius of $r$ and height of $h$. A second right circular cylinder (not shown) has a volume that is $392$ times as large as the volume of the cylinder shown. Which of the following could represents the radius $R$, in terms of $r$, and the height $H$, in terms of $h$, of the second cylinder?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, line width=1pt]
+    % Tham số hình trụ
+    \def\rx{2.2}   % Bán kính ngang elip
+    \def\ry{0.7}   % Bán kính đứng elip
+    \def\h{2.0}    % Chiều cao hình trụ
+
+    % Thân trụ và đáy dưới
+    \draw (0,0) ellipse (\rx cm and \ry cm);
+    \draw (-\rx,0) -- (-\rx,-\h);
+    \draw (\rx,0) -- (\rx,-\h);
+    \draw (-\rx,-\h) arc (180:360:\rx cm and \ry cm);
+
+    % Ký hiệu chiều cao h
+    \draw[dashed, line width=0.6pt] (\rx, 0) -- (\rx + 0.3, 0);
+    \draw[dashed, line width=0.6pt] (\rx, -\h) -- (\rx + 0.3, -\h);
+    \draw[<->, line width=0.6pt] (\rx + 0.25, 0) -- (\rx + 0.25, -\h) node[midway, right=1pt] {$h$};
+
+    % Tâm và bán kính r
+    \fill (0,0) circle (2.2pt);
+    \draw[line width=1pt] (0,0) -- (40:\rx cm and \ry cm) node[midway, below right=-1pt] {$r$};
+\end{tikzpicture}
+\end{center}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\textbf{\Alph*})]
+    \item $R = 8r \text{ and } H = 7h$
+    \item $R = 8r \text{ and } H = 49h$
+    \item $R = 7r \text{ and } H = 8h$
+    \item $R = 49r \text{ and } H = 8h$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+%% Question 4
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 4}]
+A cube has a volume of $474{,}552\text{ cubic units}$. What is the surface area, in square units, of the cube?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 5
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 5}]
+A right circular cone has a height of $22\text{ centimeters (cm)}$ and a base with a diameter of $6\text{ cm}$. The volume of this cone is $n\pi\text{ cm}^3$. What is the value of $n$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 6
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 6}]
+A manufacturer determined that right cylindrical containers with a height that is $4\text{ inches}$ longer than the radius offer the optimal number of containers to be displayed on a shelf. Which of the following expresses the volume, $V$, in cubic inches, of such containers, where $r$ is the radius, in inches?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $V = 4\pi r^3$
+    \item $V = \pi(2r)^3$
+    \item $V = \pi r^2 + 4\pi r$
+    \item $V = \pi r^3 + 4\pi r^2$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 7
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 7}]
+A rectangular poster has an area of $360\text{ square inches}$. A copy of the poster is made in which the length and width of the original poster are each increased by $20\%$. What is the area of the copy, in square inches?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 8
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 8}]
+A right rectangular prism has a length of $28\text{ centimeters (cm)}$, a width of $15\text{ cm}$, and a height of $16\text{ cm}$. What is the surface area, in $\text{cm}^2$, of the right rectangular prism?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 9
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 9}]
+A right circular cone has a volume of $\frac{1}{3}\pi\text{ cubic feet}$ and a height of $9\text{ feet}$. What is the radius, in feet, of the base of the cone?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{1}{3}$
+    \item $\frac{1}{\sqrt{3}}$
+    \item $\sqrt{3}$
+    \item $3$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 10
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 10}]
+Two identical rectangular prisms each have a height of $90\text{ centimeters (cm)}$. The base of each prism is a square, and the surface area of each prism is $K\text{ cm}^2$. If the prisms are glued together along a square base, the resulting prism has a surface area of $\frac{92}{47}K\text{ cm}^2$. What is the side length, in cm, of each square base?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $4$
+    \item $8$
+    \item $9$
+    \item $16$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 11
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 11}]
+The volume of right circular cylinder $A$ is $22\text{ cubic centimeters}$. What is the volume, in cubic centimeters, of a right circular cylinder with twice the radius and half the height of cylinder $A$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $11$
+    \item $22$
+    \item $44$
+    \item $66$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 12
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 12}]
+\begin{minipage}{0.58\textwidth}
+What is the area, in square units, of the triangle formed by connecting the three points shown: $(-3, 4)$, $(5, 3)$, and $(4, -3)$?
+
+\vspace{1em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.38\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.35]
+    \draw[->] (-5.5,0) -- (7.5,0) node[right] {$x$};
+    \draw[->] (0,-5.5) -- (0,10.5) node[above] {$y$};
+    \foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5,6,7}
+        \draw (\x,0.1) -- (\x,-0.1) node[below, scale=0.55] {\x};
+    \foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10}
+        \draw (0.1,\y) -- (-0.1,\y) node[left, scale=0.55] {\y};
+    \draw[gray, very thin, dashed] (-5,-5) grid (7,10);
+    \filldraw[black] (-3,4) circle (3pt);
+    \filldraw[black] (5,3) circle (3pt);
+    \filldraw[black] (4,-3) circle (3pt);
+    \draw[thick, blue] (-3,4) -- (5,3) -- (4,-3) -- cycle;
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 13
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 13}]
+Circle $A$ has a radius of $3n$ and circle $B$ has a radius of $129n$, where $n$ is a positive constant. The area of circle $B$ is how many times the area of circle $A$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $43$
+    \item $86$
+    \item $129$
+    \item $1{,}849$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 14
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 14}]
+The dimensions of a right rectangular prism are $4\text{ inches}$ by $5\text{ inches}$ by $6\text{ inches}$. What is the surface area, in square inches, of the prism?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $30$
+    \item $74$
+    \item $120$
+    \item $148$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 15
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 15}]
+A right triangle has sides of length $2\sqrt{2}$, $6\sqrt{2}$, and $\sqrt{80}\text{ units}$. What is the area of the triangle, in square units?
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $8\sqrt{2} + \sqrt{80}$
+    \item $12$
+    \item $24\sqrt{80}$
+    \item $24$
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 16
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 16}]
+Triangles $ABC$ and $DEF$ are similar. Each side length of triangle $ABC$ is $4$ times the corresponding side length of triangle $DEF$. The area of triangle $ABC$ is $270\text{ square inches}$. What is the area, in square inches, of triangle $DEF$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 17
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 17}]
+A cube has a surface area of $54\text{ square meters}$. What is the volume, in cubic meters, of the cube?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $18$
+    \item $27$
+    \item $36$
+    \item $81$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 18
+%% Question 18
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 18}]
+\begin{minipage}{0.58\textwidth}
+In the figure, $AC = CD$. The measure of angle $EBC$ is $45^\circ$, and the measure of angle $ACD$ is $104^\circ$. What is the value of $x$?
+
+\vspace{0.5em}
+
+\vspace{1em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Coordinates
+    \coordinate (D) at (0, 0);
+    \coordinate (A) at (3.8, 0);
+    \coordinate (E) at (2.4, 0);
+    \coordinate (C) at (1.4, 1.15);
+    \coordinate (B) at (3.3, 2.7);
+    
+    % Lines
+    \draw[thick] (D) -- (A);        % Line D-E-A
+    \draw[thick] (D) -- (B);        % Line D-C-B
+    \draw[thick] (C) -- (A);        % Line C-A
+    \draw[thick] (B) -- (E);        % Line B-E
+    
+    % Labels
+    \node[below left] at (D) {$D$};
+    \node[below] at (E) {$E$};
+    \node[below right] at (A) {$A$};
+    \node[above left] at (C) {$C$};
+    \node[right] at (B) {$B$};
+    
+    % Angle x label
+    \node at (2.6, 0.18) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 19
+%% Question 19
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 19}]
+In the figure shown, points $Q$, $R$, $S$, and $T$ lie on line segment $PV$, and line segment $RU$ intersects line segment $SX$ at point $W$. The measure of $\angle SQX$ is $48^\circ$, the measure of $\angle SXQ$ is $86^\circ$, the measure of $\angle SWU$ is $85^\circ$, and the measure of $\angle VTU$ is $162^\circ$. What is the measure, in degrees, of $\angle TUR$?
+
+\vspace{0.8em}
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+    % Đáy ngang trên: P - Q - R - S - T - V
+    \coordinate (P) at (0, 2.5);
+    \coordinate (Q) at (0.7, 2.5);
+    \coordinate (R) at (1.5, 2.5);
+    \coordinate (S) at (4.2, 2.5);
+    \coordinate (T) at (6.0, 2.5);
+    \coordinate (V) at (6.6, 2.5);
+
+    % Các điểm phía dưới
+    \coordinate (X) at (1.5, 1.2);
+    \coordinate (U) at (4.2, 0.2);
+
+    % Giao điểm W của SX và RU
+    \coordinate (W) at (2.45, 1.66);
+
+    % Vẽ các đường thẳng
+    \draw[thick] (P) -- (V);
+    \draw[thick] (Q) -- (X) -- (S);
+    \draw[thick] (R) -- (U) -- (T);
+
+    % Nhãn các đỉnh
+    \node[above] at (P) {$P$};
+    \node[above] at (Q) {$Q$};
+    \node[above] at (R) {$R$};
+    \node[above] at (S) {$S$};
+    \node[above] at (T) {$T$};
+    \node[above] at (V) {$V$};
+    \node[below] at (X) {$X$};
+    \node[below] at (U) {$U$};
+    \node[below=2pt] at (W) {$W$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.3em}
+
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+%% Question 20
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 20}]
+\begin{minipage}{0.55\textwidth}
+Intersecting lines $r$, $s$, and $t$ are shown below.
+
+\vspace{1em}
+What is the value of $x$?
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Đường thẳng s (thẳng đứng)
+    \draw[thick] (1, -0.3) -- (1, 2.8) node[above] {$s$};
+    
+    % Đường thẳng t (dốc xuống sang phải)
+    \draw[thick] (0.2, 1.9) -- (5.2, 0.4) node[right] {$t$};
+    
+    % Đường thẳng r (dốc nhẹ lên sang phải)
+    \draw[thick] (0.1, 0.4) -- (5.0, 0.9) node[right] {$r$};
+    
+    % Nhãn các góc
+    \node at (1.45, 1.85) {\footnotesize $106^\circ$};
+    \node at (3.3, 0.9) {\footnotesize $23^\circ$};
+    \node at (0.7, 0.7) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 21
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 21}]
+\begin{minipage}{0.55\textwidth}
+In the figure above, $\overline{MQ}$ and $\overline{NR}$ intersect at point $P$, $NP = QP$, and $MP = PR$. What is the measure, in degrees, of $\angle\text{QMR}$? (Disregard the degree symbol when gridding your answer.)
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    % Các điểm đỉnh
+    \coordinate (M) at (0, 0);
+    \coordinate (R) at (4.0, 0);
+    \coordinate (N) at (0.7, 2.2);
+    \coordinate (Q) at (3.7, 2.3);
+    
+    % Giao điểm P giữa MQ và NR
+    \coordinate (P) at (2.0, 1.25);
+
+    % Các đoạn thẳng
+    \draw[thick] (M) -- (R);         % Đáy MR
+    \draw[thick] (M) -- (N);         % Cạnh trái MN
+    \draw[thick] (Q) -- (R);         % Cạnh phải QR
+    \draw[thick] (M) -- (Q);         % Đoạn chéo MQ
+    \draw[thick] (N) -- (R);         % Đoạn chéo NR
+
+    % Nhãn các đỉnh
+    \node[below left] at (M) {$M$};
+    \node[below right] at (R) {$R$};
+    \node[above] at (N) {$N$};
+    \node[above] at (Q) {$Q$};
+    \node[above=2pt] at (P) {$P$};
+
+    % Nhãn góc
+    \node at (2.45, 1.15) {\footnotesize $60^\circ$};
+    \node at (3.5, 1.95) {\footnotesize $70^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 22
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 22}]
+In triangle $ABC$, the measure of angle $B$ is $90^\circ$ and $\overline{BD}$ is an altitude of the triangle. The length of $\overline{AB}$ is $15$ and the length of $\overline{AC}$ is $23$ greater than the length of $\overline{AB}$. What is the value of $\frac{BC}{BD}$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{15}{38}$
+    \item $\frac{15}{23}$
+    \item $\frac{23}{15}$
+    \item $\frac{38}{15}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 23
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 23}]
+In triangles $ABC$ and $DEF$, angles $B$ and $E$ each have measure $27^\circ$ and angles $C$ and $F$ each have measure $41^\circ$. Which additional piece of information is sufficient to determine whether triangle $ABC$ is congruent to triangle $DEF$?
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item The measure of angle $A$
+    \item The length of side $AB$
+    \item The lengths of sides $BC$ and $EF$
+    \item No additional information is necessary
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 24
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 24}]
+In triangles $LMN$ and $RST$, angles $L$ and $R$ each have measure $60^\circ$, $LN = 10$, and $RT = 30$. Which additional piece of information is sufficient to prove that triangle $LMN$ is similar to triangle $RST$?
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $MN = 7$ and $ST = 7$
+    \item $MN = 7$ and $ST = 21$
+    \item The measures of angles $M$ and $S$ are $70^\circ$ and $60^\circ$, respectively
+    \item The measures of angles $M$ and $T$ are $70^\circ$ and $50^\circ$, respectively
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 25
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 25}]
+\begin{minipage}{0.65\textwidth}
+In the figure above, triangle $MNP$ is a right triangle with right angle at $N$, and $\overline{NQ} \perp \overline{MP}$. If $MN = 3$ and $NP = 4$, what is the length of $\overline{NQ}$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2.2$
+    \item $2.3$
+    \item $2.4$
+    \item $2.5$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \coordinate (M) at (0,0);
+    \coordinate (P) at (4,0);
+    \coordinate (N) at (1.2, 2.5);
+    \coordinate (Q) at (1.2, 0);
+    \draw[thick] (M) -- (N) -- (P) -- cycle;
+    \draw[thick] (N) -- (Q);
+    \draw (1.2, 0.3) -- (0.9, 0.3) -- (0.9, 0);
+    \node[below left] at (M) {$M$};
+    \node[below] at (Q) {$Q$};
+    \node[below right] at (P) {$P$};
+    \node[above] at (N) {$N$};
+    \node[left] at (0.6, 1.25) {$3$};
+    \node[right] at (2.6, 1.25) {$4$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 26
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 26}]
+Triangle $XYZ$ is similar to triangle $RST$ such that $X, Y$, and $Z$ correspond to $R, S$, and $T$, respectively. The measure of $\angle Z$ is $20^\circ$ and $2XY = RS$. What is the measure of $\angle T$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2^\circ$
+    \item $10^\circ$
+    \item $20^\circ$
+    \item $40^\circ$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 27
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 27}]
+\begin{minipage}{0.55\textwidth}
+In the figure above, $RT = TU$. What is the value of $x$?
+
+\vspace{1.5em}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $72$
+    \item $66$
+    \item $64$
+    \item $58$
+\end{enumerate}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Coordinates
+    \coordinate (S) at (0, 3.2);
+    \coordinate (R) at (0.2, 0);
+    \coordinate (V) at (1.5, 0);
+    \coordinate (U) at (4.5, 0);
+    \coordinate (T) at (2.4, 1.5);
+
+    % Lines
+    \draw[thick] (R) -- (U);        % Đáy R-V-U
+    \draw[thick] (S) -- (U);        % Cạnh xiên S-T-U
+    \draw[thick] (R) -- (T);        % Đoạn R-T
+    \draw[thick] (S) -- (V);        % Đoạn S-V
+
+    % Labels
+    \node[left] at (S) {$S$};
+    \node[left] at (R) {$R$};
+    \node[below] at (V) {$V$};
+    \node[right] at (U) {$U$};
+    \node[above right] at (T) {$T$};
+
+    % Angle labels
+    \node at (0.6, 2.7) {\footnotesize $31^\circ$};
+    \node at (2.3, 1.2) {\footnotesize $114^\circ$};
+    
+    % Arc & label for angle x
+    \draw[->] (0.9, 0) arc (180:115:0.5);
+    \node at (1.0, -0.25) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 28
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 28}]
+\begin{minipage}{0.55\textwidth}
+The area of triangle $ABC$ above is at least $48$ but no more than $60$. If $y$ is an integer, what is one possible value of $x$?
+
+\vspace{0.8em}
+\textit{Note: Figure not drawn to scale}
+
+\vspace{1.2em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh
+    \coordinate (A) at (0, 0);
+    \coordinate (D) at (1.8, 0);     % Điểm chia trên AC
+    \coordinate (C) at (4.32, 0);    % Đỉnh vuông C
+    \coordinate (E) at (1.8, 1.05);   % Điểm trên AB
+    \coordinate (B) at (4.32, 2.52);  % Đỉnh B
+
+    % Các cạnh của tam giác vuông lớn và đường cao bên trong
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+    \draw[thick] (D) -- (E);
+
+    % Ký hiệu góc vuông
+    \draw (D) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0);
+    \draw (C) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0);
+
+    % Tên đỉnh
+    \node[left] at (A) {$A$};
+    \node[right] at (C) {$C$};
+    \node[above] at (B) {$B$};
+
+    % Nhãn độ dài x và y
+    \node[right] at (1.8, 0.55) {$x$};
+    \node[right] at (4.32, 1.3) {$y$};
+
+    % Đoạn kích thước phía dưới đáy AC
+    \draw[|<->|] (0, -0.35) -- (1.8, -0.35) node[midway, fill=gray!5, inner sep=1pt] {\small $5$};
+    \draw[|<->|] (1.8, -0.35) -- (4.32, -0.35) node[midway, fill=gray!5, inner sep=1pt] {\small $7$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 29
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 29}]
+In triangle $RST$, angle $T$ is a right angle, point $L$ lies on $\overline{RS}$, point $K$ lies on $\overline{ST}$, and $\overline{LK}$ is parallel to $\overline{RT}$. If the length of $\overline{RT}$ is $72\text{ units}$, the length of $\overline{LK}$ is $24\text{ units}$, and the area of triangle $RST$ is $792\text{ square units}$, what is the length of $\overline{KT}$, in units?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 30
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 30}]
+\begin{minipage}{0.55\textwidth}
+In the figure, parallel lines $q$ and $t$ are intersected by lines $r$ and $s$. If $a = 43$ and $b = 122$, what is the value of $w$?
+
+\vspace{1em}
+\textit{Note: Figure not drawn to scale}
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Hai đường thẳng song song nằm ngang q và t
+    \draw[thick] (-0.3, 1.6) -- (4.8, 1.6) node[left, at start] {$q$};
+    \draw[thick] (-0.3, 0.4) -- (4.8, 0.4) node[left, at start] {$t$};
+
+    % Đường xiên s (đi lên sang phải)
+    \draw[thick] (0.2, -0.4) -- (2.3, 3.8) node[above] {$s$};
+
+    % Đường xiên r (dốc xuống sang phải)
+    \draw[thick] (0.9, 3.8) node[above] {$r$} -- (4.8, -0.4);
+
+    % Tia phụ từ giao điểm của r và t đi xuống phía dưới bên trái
+    \draw[thick] (4.0, 0.4) -- (3.3, -0.6);
+
+    % Nhãn các góc
+    \node at (1.8, 3.1) {\footnotesize $a^\circ$};
+    \node at (0.9, 1.85) {\footnotesize $b^\circ$};
+    \node at (3.65, 0.15) {\footnotesize $w^\circ$};
+    \node at (4.0, -0.15) {\footnotesize $w^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 31
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 31}]
+\begin{minipage}{0.65\textwidth}
+In the figure above, triangle $ABC$ is a right triangle at $B$, and $\overline{BD} \perp \overline{AC}$. If $BD = 6$ and $AD = 8$, what is the length of $\overline{DC}$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.7]
+    \coordinate (A) at (0,0);
+    \coordinate (C) at (4.5,0);
+    \coordinate (B) at (1.8, 2.4);
+    \coordinate (D) at (1.8, 0);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw[thick] (B) -- (D);
+    \draw (1.8, 0.3) -- (1.5, 0.3) -- (1.5, 0);
+    \node[below left] at (A) {$A$};
+    \node[below] at (D) {$D$};
+    \node[below right] at (C) {$C$};
+    \node[above] at (B) {$B$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 32
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 32}]
+\begin{minipage}{0.65\textwidth}
+Triangle $ABC$ above is a right triangle with right angle at $C$, hypotenuse $AB = 26$, and $\sin(B) = \frac{5}{13}$. What is the length of side $\overline{BC}$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.7]
+    \coordinate (C) at (0,0);
+    \coordinate (A) at (0,3);
+    \coordinate (B) at (2.2,0);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0, 0.3) -- (0.3, 0.3) -- (0.3, 0);
+    \node[above left] at (A) {$A$};
+    \node[below right] at (C) {$C$};
+    \node[above right] at (B) {$B$};
+    \node[left] at (0, 1.5) {$26$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 33
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 33}]
+\begin{minipage}{0.55\textwidth}
+In the triangle shown, what is the value of $\sin x^\circ$?
+
+\vspace{1em}
+\textit{Note: Figure not drawn to scale}
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ đỉnh tam giác vuông
+    \coordinate (A) at (0, 3.2);  % Đỉnh trên cùng có góc x
+    \coordinate (C) at (0, 0);    % Đỉnh góc vuông
+    \coordinate (B) at (3.8, 0);  % Đỉnh đáy bên phải
+
+    % Vẽ các cạnh
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+
+    % Ký hiệu góc vuông tại C
+    \draw (C) ++(0, 0.28) -- ++(0.28, 0) -- ++(0, -0.28);
+
+    % Nhãn cạnh
+    \node[below] at (1.9, 0) {$16$};
+    \node[above right] at (1.9, 1.6) {$23$};
+
+    % Nhãn góc x
+    \node at (0.22, 2.75) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 34
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 34}]
+An isosceles right triangle has a perimeter of $94 + 94\sqrt{2}\text{ inches}$. What is the length, in inches, of one leg of this triangle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $47$
+    \item $47\sqrt{2}$
+    \item $94$
+    \item $94\sqrt{2}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 35
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 35}]
+The side lengths of right triangle $RST$ are given: $RS = 440$, $ST = 384$, and $TR = 584$. Triangle $RST$ is similar to triangle $UVW$, where $S$ corresponds to $V$ and $T$ corresponds to $W$. What is the value of $\tan(W)$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{48}{73}$
+    \item $\frac{55}{73}$
+    \item $\frac{48}{55}$
+    \item $\frac{55}{48}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 36
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 36}]
+The side lengths of right triangle $RST$ are given: $RS = 20$, $ST = 48$, and $TR = 52$. Triangle $RST$ is similar to triangle $UVW$, where $S$ corresponds to $V$ and $T$ corresponds to $W$. What is the value of $\tan(W)$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{5}{13}$
+    \item $\frac{5}{12}$
+    \item $\frac{12}{13}$
+    \item $\frac{12}{5}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 37
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 37}]
+A square is inscribed in a circle. The radius of the circle is $\frac{20\sqrt{2}}{2}\text{ inches}$. What is the side length, in inches, of the square?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $20$
+    \item $\frac{20\sqrt{2}}{2}$
+    \item $20\sqrt{2}$
+    \item $40$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 38
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 38}]
+Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angles $C$ and $F$ are right angles. The length of $\overline{AB}$ is $2.9$ times the length of $\overline{DE}$. If $\tan(A) = \frac{21}{20}$, what is the value of $\sin(D)$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 39
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 39}]
+In a right triangle, the tangent of one of the two acute angles is $\frac{\sqrt{3}}{3}$. What is the tangent of the other acute angle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $-\frac{\sqrt{3}}{3}$
+    \item $-\frac{3}{\sqrt{3}}$
+    \item $\frac{\sqrt{3}}{3}$
+    \item $\frac{3}{\sqrt{3}}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 40
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 40}]
+Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angle $C$ corresponds to angle $F$. Angles $C$ and $F$ are right angles. If $\tan(A) = \frac{50}{7}$, what is the value of $\tan(E)$?
+
+\vspace{0.8em}
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh
+    \coordinate (C) at (0, 0);
+    \coordinate (B) at (1.4, 0);
+    \coordinate (A) at (4.2, 0);
+    \coordinate (D) at (1.4, 0.95);
+    \coordinate (E) at (4.2, 2.85);
+
+    % Vẽ tam giác lớn và đường song song BD
+    \draw[thick] (C) -- (A) -- (E) -- cycle;
+    \draw[thick] (B) -- (D);
+
+    % Ký hiệu góc vuông tại A
+    \draw (A) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0);
+
+    % Tên các đỉnh
+    \node[left] at (C) {$C$};
+    \node[below] at (B) {$B$};
+    \node[below right] at (A) {$A$};
+    \node[above left] at (D) {$D$};
+    \node[above] at (E) {$E$};
+
+    % Kích thước
+    \node[below] at (0.7, 0) {$8$};
+    \node[right] at (1.4, 0.5) {$6$};
+    \node[right] at (4.2, 1.45) {$18$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5em}
+\noindent In the figure above, $\overline{BD}$ is parallel to $\overline{AE}$. What is the length of $\overline{CE}$?
+
+\vspace{1.2em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+%% Question 41
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 41}]
+In triangle $JKL$, $\cos(K) = \frac{24}{51}$ and angle $J$ is a right angle. What is the value of $\cos(L)$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 42
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 42}]
+A triangle with angle measures $30^\circ, 60^\circ$, and $90^\circ$ has a perimeter of $18 + 6\sqrt{3}$. What is the length of the longest side of the triangle?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 43
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 43}]
+\begin{minipage}{0.55\textwidth}
+In triangle $RST$ above, point $W$ (not shown) lies on $\overline{RT}$. What is the value of $\cos(\angle RSW) - \sin(\angle WST)$?
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh của tam giác vuông RST
+    \coordinate (R) at (0, 0);
+    \coordinate (T) at (3.8, 0);
+    \coordinate (S) at (3.24, 1.35);
+
+    % Vẽ tam giác RST
+    \draw[thick] (R) -- (S) -- (T) -- cycle;
+
+    % Ký hiệu góc vuông tại đỉnh S
+    % Vector từ S về R và từ S về T để vẽ ô vuông vuông góc
+    \draw[rotate around={-22.6:(S)}] (S) ++(-0.25, 0) -- ++(0, -0.25) -- ++(0.25, 0);
+
+    % Nhãn các đỉnh
+    \node[left] at (R) {$R$};
+    \node[above] at (S) {$S$};
+    \node[right] at (T) {$T$};
+
+    % Nhãn độ dài các cạnh
+    \node[above left] at (1.62, 0.75) {$12$};
+    \node[above right] at (3.52, 0.65) {$5$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 44
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 44}]
+Triangle $ABC$ is similar to triangle $DEF$, where $A$ corresponds to $D$ and $C$ corresponds to $F$. Angles $C$ and $F$ are right angles. If $\tan(A) = \sqrt{3}$ and $DF = 125$, what is the length of $\overline{DE}$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $125\frac{\sqrt{3}}{3}$
+    \item $125\frac{\sqrt{3}}{2}$
+    \item $125\sqrt{3}$
+    \item $250$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 45
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 45}]
+The length of a rectangle's diagonal is $3\sqrt{17}$, and the length of the rectangle's shorter side is $3$. What is the length of the rectangle's longer side?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 46
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 46}]
+A right triangle has legs with lengths of $24\text{ centimeters}$ and $21\text{ centimeters}$. If the length of this triangle's hypotenuse, in centimeters, can be written in the form $3\sqrt{d}$ where $d$ is an integer, what is the value of $d$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 47
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 47}]
+\begin{minipage}{0.62\textwidth}
+A graphic designer is creating a logo for a company. The logo is shown in the figure. The logo is in the shape of a trapezoid and consists of three congruent equilateral triangles. If the perimeter of the logo is $20\text{ centimeters}$, what is the combined area of the shaded regions, in square centimeters, of the logo?
+
+\vspace{1.2em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2\sqrt{3}$
+    \item $4\sqrt{3}$
+    \item $8\sqrt{3}$
+    \item $16$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.35\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    % Tọa độ các đỉnh của 3 tam giác đều ghép thành hình thang
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (1.5, 0);
+    \coordinate (C) at (3.0, 0);
+    \coordinate (D) at (0.75, 1.3);
+    \coordinate (E) at (2.25, 1.3);
+
+    % Tô màu 2 tam giác đều hai bên
+    \fill[gray!45] (A) -- (D) -- (B) -- cycle;
+    \fill[gray!45] (B) -- (E) -- (C) -- cycle;
+
+    % Vẽ đường viền
+    \draw[thick] (A) -- (C) -- (E) -- (D) -- cycle; % Viền hình thang
+    \draw[thick] (D) -- (B) -- (E);                 % Các cạnh bên trong
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 48
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 48}]
+The perimeter of an equilateral triangle is $624\text{ centimeters}$. The height of this triangle is $k\sqrt{3}\text{ centimeters}$, where $k$ is a constant. What is the value of $k$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 49
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 49}]
+\begin{minipage}{0.6\textwidth}
+In the figure above, $\tan B = \frac{3}{4}$. If $BC = 15$ and $DA = 4$, what is the length of $\overline{DE}$?
+
+\vspace{1.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.38\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh
+    \coordinate (A) at (0, 0);
+    \coordinate (C) at (2.4, 0);
+    \coordinate (B) at (0, 3.2);
+    \coordinate (D) at (0, 0.9);
+    \coordinate (E) at (1.725, 0.9);
+
+    % Vẽ tam giác vuông lớn và đoạn DE
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+    \draw[thick] (D) -- (E);
+
+    % Ký hiệu góc vuông tại A và D
+    \draw (A) ++(0, 0.25) -- ++(0.25, 0) -- ++(0, -0.25);
+    \draw (D) ++(0, 0.25) -- ++(0.25, 0) -- ++(0, -0.25);
+
+    % Nhãn các đỉnh
+    \node[above] at (B) {$B$};
+    \node[left] at (D) {$D$};
+    \node[left] at (A) {$A$};
+    \node[right] at (E) {$E$};
+    \node[right] at (C) {$C$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 50
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 50}]
+An isosceles right triangle has a hypotenuse of length $58\text{ inches}$. What is the perimeter, in inches, of this triangle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $29\sqrt{2}$
+    \item $58\sqrt{2}$
+    \item $58 + 58\sqrt{2}$
+    \item $58 + 116\sqrt{2}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 51
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 51}]
+\begin{minipage}{0.65\textwidth}
+The circle above has center $O$, the length of arc $ADC$ is $5\pi$, and $x = 100$. What is the length of arc $ABC$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $9\pi$
+    \item $13\pi$
+    \item $18\pi$
+    \item $\frac{13}{2}\pi$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (0,0) circle (1.2);
+    \coordinate (O) at (0,0);
+    \filldraw (O) circle (1.5pt) node[left] {$O$};
+    \coordinate (A) at (-30:1.2);
+    \coordinate (C) at (50:1.2);
+    \coordinate (B) at (180:1.2);
+    \coordinate (D) at (10:1.2);
+    \draw[thick] (O) -- (A);
+    \draw[thick] (O) -- (C);
+    \node[right] at (A) {$A$};
+    \node[above right] at (C) {$C$};
+    \node[left] at (B) {$B$};
+    \node[right] at (D) {$D$};
+    \node at (0.3, 0.4) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 52
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 52}]
+The graph of $x^2 + x + y^2 + y = \frac{199}{2}$ in the $xy$-plane is a circle. What is the length of the circle's radius?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 53
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 53}]
+The equation $x^2 + 20x + y^2 + 16y = -20$ defines a circle in the $xy$-plane. What are the coordinates of the center of the circle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(-20, -16)$
+    \item $(-10, -8)$
+    \item $(10, 8)$
+    \item $(20, 16)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 54
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 54}]
+\begin{minipage}{0.65\textwidth}
+Point $O$ is the center of the circle above, and the measure of $\angle OAB$ is $30^\circ$. If the length of radius $OC$ is $18$, what is the length of arc $\widehat{AB}$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $9\pi$
+    \item $12\pi$
+    \item $15\pi$
+    \item $18\pi$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (0,0) circle (1.2);
+    \coordinate (O) at (0,0);
+    \filldraw (O) circle (1.5pt) node[below] {$O$};
+    \coordinate (A) at (210:1.2);
+    \coordinate (B) at (-30:1.2);
+    \coordinate (C) at (90:1.2);
+    \draw[thick] (A) -- (O) -- (B);
+    \draw[thick] (O) -- (C);
+    \draw[thick] (A) -- (B);
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above] at (C) {$C$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 55
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 55}]
+A circle has center $O$, and points $A$ and $B$ lie on the circle. The measure of $\text{arc } AB$ is $45^\circ$ and the length of $\text{arc } AB$ is $3\text{ inches}$. What is the circumference, in inches, of the circle?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $3$
+    \item $6$
+    \item $9$
+    \item $24$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 56
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 56}]
+In the $xy$-plane, the graph of the equation $(x - 6)^2 + (y + 5)^2 = 16$ is a circle. Point $P$ is on the circle and has coordinates $(10, -5)$. If $\overline{PQ}$ is a diameter of the circle, what are the coordinates of point $Q$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(2, -5)$
+    \item $(6, -1)$
+    \item $(6, -5)$
+    \item $(6, -9)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 57
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 57}]
+A circle in the $xy$-plane has its center at $(-5, 2)$ and has a radius of $9$. An equation of this circle is $x^2 + y^2 + ax + by + c = 0$, where $a$, $b$, and $c$ are constants. What is the value of $c$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 58
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 58}]
+Points $A$ and $B$ lie on a circle with radius $1$, and arc $AB$ has length $\frac{\pi}{3}$. What fraction of the circumference of the circle is the length of arc $AB$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 59
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 59}]
+A circle in the $xy$-plane has equation $(x + 3)^2 + (y - 1)^2 = 25$. Which of the following points does NOT lie in the interior of the circle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(-7, 3)$
+    \item $(-3, 1)$
+    \item $(0, 0)$
+    \item $(3, 2)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 60
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 60}]
+Point $O$ is the center of a circle. The measure of arc $RS$ on this circle is $100^\circ$. What is the measure, in degrees, of its associated angle $\angle ROS$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 61
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 61}]
+The equation $(x + 6)^2 + (y + 3)^2 = 121$ defines a circle in the $xy$-plane. What is the radius of the circle?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 62
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 62}]
+A circle in the $xy$-plane has its center at $(-4, -6)$. Line $k$ is tangent to this circle at the point $(-7, -7)$. What is the slope of line $k$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $-3$
+    \item $-\frac{1}{3}$
+    \item $\frac{1}{3}$
+    \item $3$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 63
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 63}]
+A circle has center $O$, and points $R$ and $S$ lie on the circle. In triangle $ORS$, the measure of $\angle ROS$ is $88^\circ$. What is the measure of $\angle RSO$, in degrees? (Disregard the degree symbol when entering your answer.)
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 64
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 64}]
+In the $xy$-plane, the graph of $2x^2 - 6x + 2y^2 + 2y = 45$ is a circle. What is the radius of the circle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $5$
+    \item $6.5$
+    \item $\sqrt{40}$
+    \item $\sqrt{50}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 65
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 65}]
+A circle in the $xy$-plane has a diameter with endpoints $(2, 4)$ and $(2, 14)$. An equation of this circle is $(x - 2)^2 + (y - 9)^2 = r^2$, where $r$ is a positive constant. What is the value of $r$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 66
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 66}]
+Circle $A$ in the $xy$-plane has the equation $(x + 5)^2 + (y - 5)^2 = 4$. Circle $B$ has the same center as circle $A$. The radius of circle $B$ is two times the radius of circle $A$. The equation defining circle $B$ in the $xy$-plane is $(x + 5)^2 + (y - 5)^2 = k$, where $k$ is a constant. What is the value of $k$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 67
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 67}]
+What is the diameter of the circle in the $xy$-plane with equation $(x - 5)^2 + (y - 3)^2 = 16$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $4$
+    \item $8$
+    \item $16$
+    \item $32$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 68
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 68}]
+The length of each edge of a box is $35\text{ inches}$. Each side of the box is in the shape of a square. The box does not have a lid. What is the exterior surface area, in square inches, of this box without a lid?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 69
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 69}]
+Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angles $C$ and $F$ are right angles. If $\sin(A) = \frac{7}{25}$, what is the value of $\sin(D)$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{24}{25}$
+    \item $\frac{7}{25}$
+    \item $\frac{25}{7}$
+    \item $\frac{25}{24}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 70
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 70}]
+A right circular cylinder has a volume of $80\pi$. If the height of the cylinder is $5$, what is the radius of the cylinder?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $4$
+    \item $8$
+    \item $16$
+    \item $75$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 71
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 71}]
+In right triangle $PQR$, the sum of the measures of angle $P$ and angle $Q$ is $90^\circ$. The value of $\sin(P)$ is $\frac{4}{5}$. What is the value of $\cos(Q)$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{3}{5}$
+    \item $\frac{4}{5}$
+    \item $\frac{5}{4}$
+    \item $\frac{5}{3}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 72
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 72}]
+What is the length of one side of a square that has the same area as a circle with radius $6$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $6$
+    \item $\sqrt{6\pi}$
+    \item $6\sqrt{\pi}$
+    \item $6\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 73
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 73}]
+\begin{minipage}{0.65\textwidth}
+Triangle $ABC$ shown is a right triangle, where angle $C$ is the right angle. Which of the following has the same value as $\sin(A)$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\sin(B)$
+    \item $\tan(A)$
+    \item $\tan(B)$
+    \item $\cos(B)$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.7]
+    \coordinate (C) at (0,0);
+    \coordinate (A) at (0,3);
+    \coordinate (B) at (3,0);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0, 0.3) -- (0.3, 0.3) -- (0.3, 0);
+    \node[above left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[below left] at (C) {$C$};
+    \node[left] at (0, 1.5) {$27$};
+    \node[below] at (1.5, 0) {$35$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 74
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 74}]
+Square $X$ has a side length of $9\text{ centimeters}$. The perimeter of square $Y$ is $5$ times the perimeter of square $X$. What is the length, in centimeters, of one side of square $Y$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $14$
+    \item $36$
+    \item $180$
+    \item $45$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 75
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 75}]
+\begin{minipage}{0.55\textwidth}
+In the figure, line $m$ is parallel to line $n$, and both lines are intersected by line $t$. If $x = 4y$, what is the value of $y$?
+
+\vspace{1em}
+\textit{Note: Figure not drawn to scale.}
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Hai đường thẳng song song nằm ngang m và n
+    \draw[thick] (-0.3, 2.0) -- (3.8, 2.0) node[right] {$m$};
+    \draw[thick] (-0.3, 0.8) -- (3.8, 0.8) node[right] {$n$};
+
+    % Cát tuyến t (dốc lên từ trái sang phải)
+    \draw[thick] (0.2, -0.4) -- (3.8, 2.9) node[above] {$t$};
+
+    % Giao điểm của t với m và n
+    % Với m: y = 2.0 -> x ≈ 2.7
+    % Với n: y = 0.8 -> x ≈ 1.45
+    \coordinate (Im) at (2.7, 2.0);
+    \coordinate (In) at (1.45, 0.8);
+
+    % Cung và nhãn cho góc x (phía dưới m, bên trái t)
+    \draw (2.35, 2.0) arc (180:222:0.35);
+    \node at (2.2, 1.75) {\footnotesize $x^\circ$};
+
+    % Cung và nhãn cho góc y tại giao điểm với n
+    \draw (1.8, 0.8) arc (0:42:0.35);
+    \node at (1.2, 1.0) {\footnotesize $y^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 76
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 76}]
+\begin{minipage}{0.58\textwidth}
+In the figure above, $AF$, $BE$, and $CD$ are parallel. Points $B$ and $E$ lie on $AC$ and $FD$, respectively. If $AB = 12$, $BC = 21$, and $FE = 9.5$, what is the length of $ED$, to the nearest tenth?
+
+\vspace{1.2em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $15.7$
+    \item $16.6$
+    \item $17.4$
+    \item $18.8$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.38\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh của hình thang mở rộng lên trên
+    \coordinate (A) at (0.6, 0);
+    \coordinate (F) at (1.8, 0);
+    \coordinate (B) at (0.3, 1.0);
+    \coordinate (E) at (2.1, 1.0);
+    \coordinate (C) at (0, 2.6);
+    \coordinate (D) at (2.6, 2.6);
+
+    % Các đoạn thẳng song song
+    \draw[thick] (A) -- (F);  % Đáy dưới AF
+    \draw[thick] (B) -- (E);  % Đoạn giữa BE
+    \draw[thick] (C) -- (D);  % Đáy trên CD
+
+    % Hai cạnh bên
+    \draw[thick] (A) -- (C);  % Cạnh bên AC
+    \draw[thick] (F) -- (D);  % Cạnh bên FD
+
+    % Nhãn các đỉnh
+    \node[below] at (A) {$A$};
+    \node[below] at (F) {$F$};
+    \node[left] at (B) {$B$};
+    \node[right] at (E) {$E$};
+    \node[above left] at (C) {$C$};
+    \node[above right] at (D) {$D$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 77
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 77}]
+A right triangle has a hypotenuse of $41$, a side of $40$, and a side of $9$. What is the value of $\tan(A)$, where angle $A$ is opposite the side of length $9$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{9}{41}$
+    \item $\frac{40}{41}$
+    \item $\frac{9}{40}$
+    \item $\frac{40}{9}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 78
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 78}]
+A circle has a radius of $7\text{ meters}$. What is the area, in square meters, of the circle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $7$
+    \item $14$
+    \item $14\pi$
+    \item $49\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 79
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 79}]
+Circle $N$ has a radius of $8\text{ millimeters}$. Circle $M$ has an area of $30\pi\text{ mm}^2$. What is the total area, in $\text{mm}^2$, of circles $N$ and $M$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $94\pi$
+    \item $38\pi$
+    \item $64\pi$
+    \item $240\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 80
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 80}]
+\begin{minipage}{0.55\textwidth}
+The three points shown define a circle. The circumference of this circle is $k\pi$, where $k$ is a constant. What is the value of $k$?
+
+\vspace{1.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $5$
+    \item $10$
+    \item $4$
+    \item $25$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.28]
+    % Lưới ô vuông
+    \draw[step=1, gray!40, thin] (0, 0) grid (15, 15);
+
+    % Hai trục tọa độ
+    \draw[thick, ->] (0, 0) -- (15.5, 0) node[right] {$x$};
+    \draw[thick, ->] (0, 0) -- (0, 15.5) node[above] {$y$};
+
+    % Các vạch chia và số trên trục x
+    \foreach \x in {2, 4, 6, 8, 10, 12, 14} {
+        \draw[thick] (\x, 0.2) -- (\x, -0.2) node[below, scale=0.7] {\x};
+    }
+
+    % Các vạch chia và số trên trục y
+    \foreach \y in {2, 4, 6, 8, 10, 12, 14} {
+        \draw[thick] (0.2, \y) -- (-0.2, \y) node[left, scale=0.7] {\y};
+    }
+
+    % Gốc tọa độ O
+    \node[below left, scale=0.8] at (0, 0) {$O$};
+
+    % 3 điểm đề bài cho
+    \filldraw[black] (6, 8) circle (6pt);
+    \filldraw[black] (7, 5) circle (6pt);
+    \filldraw[black] (7, 11) circle (6pt);
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 81
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 81}]
+What is the volume, in cubic centimeters, of a right rectangular prism that has a length of $6\text{ centimeters}$, a width of $8\text{ centimeters}$, and a height of $12\text{ centimeters}$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 82
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 82}]
+A right circular cylinder has a volume of $504\text{ cubic centimeters}$. The area of the base of the cylinder is $18\text{ square centimeters}$. What is the height, in centimeters, of the cylinder?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 83
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 83}]
+Two nearby trees are perpendicular to the ground, which is flat. One of these trees is $18\text{ feet}$ tall and has a shadow that is $12\text{ feet}$ long. At the same time, the shadow of the other tree is $20\text{ feet}$ long. How tall, in feet, is the other tree?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $8$
+    \item $30$
+    \item $14$
+    \item $26$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 84
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 84}]
+\begin{minipage}{0.58\textwidth}
+Triangle $PQR$ is similar to triangle $STU$. The lengths represented by $PQ$, $QR$, $ST$, and $TU$ in the figure are $8$, $12$, $6$, and $x$, respectively. What is the length of $TU$?
+
+\vspace{1.2em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $9$
+    \item $16$
+    \item $4$
+    \item $18$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.38\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.85]
+    % Đường đáy thẳng hàng P - R - T
+    \coordinate (P) at (0, 0);
+    \coordinate (R) at (2.4, 0);
+    \coordinate (T) at (4.0, 0);
+
+    % Đỉnh đứng Q và S
+    \coordinate (Q) at (0, 1.8);
+    \coordinate (S) at (4.0, 1.2);
+
+    % Vẽ 2 tam giác
+    \draw[thick] (Q) -- (P) -- (T) -- (S) -- (R) -- (Q);
+
+    % Ký hiệu góc vuông tại P và T
+    \draw (P) ++(0, 0.22) -- ++(0.22, 0) -- ++(0, -0.22);
+    \draw (T) ++(0, 0.22) -- ++(-0.22, 0) -- ++(0, -0.22);
+
+    % Nhãn đỉnh
+    \node[below left] at (P) {$P$};
+    \node[above left] at (Q) {$Q$};
+    \node[above] at (R) {$R$};
+    \node[above] at (S) {$S$};
+    \node[below right] at (T) {$T$};
+
+    % Nhãn góc x tại đỉnh R
+    \node at (1.9, 0.15) {\footnotesize $x^\circ$};
+    \node at (2.9, 0.15) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+
+\vspace{0.3em}
+{\footnotesize \textit{Note: Figure not drawn to scale.}}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 85
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 85}]
+Triangle $ABC$ is similar to triangle $DEF$, where $A, B,$ and $C$ correspond to $D, E,$ and $F$, respectively. In triangle $ABC$, the length of $\overline{AB}$ is $10$ and the length of $\overline{BC}$ is $15$. In triangle $DEF$, the length of $\overline{DE}$ is $4$. What is the length of $\overline{EF}$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $9$
+    \item $10$
+    \item $15$
+    \item $6$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 86
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 86}]
+What is the value of $\cos(\theta)$ in the triangle shown, where the leg adjacent to angle $\theta$ has length $8$ and the hypotenuse has length $17$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\frac{15}{17}$
+    \item $\frac{8}{17}$
+    \item $\frac{17}{8}$
+    \item $\frac{8}{15}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 87
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 87}]
+\begin{minipage}{0.65\textwidth}
+The lengths, in inches, of two legs of a right triangle, are $6\text{ inches}$ and $4\text{ inches}$. What is the area of the triangle, in square inches?
+
+\vspace{1.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.85]
+    % Tọa độ các đỉnh của tam giác vuông
+    \coordinate (A) at (0, 0);     % Đỉnh góc vuông
+    \coordinate (B) at (0, 2.7);   % Đỉnh trên cùng (cạnh đứng = 6)
+    \coordinate (C) at (3.0, 0);   % Đỉnh bên phải (cạnh đáy = 4)
+
+    % Vẽ tam giác vuông
+    \draw[thick] (B) -- (A) -- (C) -- cycle;
+
+    % Ký hiệu góc vuông tại đỉnh A
+    \draw (A) ++(0, 0.25) -- ++(0.25, 0) -- ++(0, -0.25);
+
+    % Nhãn độ dài các cạnh góc vuông (tuỳ chọn hiển thị)
+    \node[below] at (1.5, 0) {$4$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+%% Question 88
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 88}]
+A cube has an edge length of $7\text{ inches}$. What is the volume, in cubic inches, of the cube?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $28$
+    \item $49$
+    \item $294$
+    \item $343$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 89
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 89}]
+The length of the edge of the base of a right square prism is $4\text{ units}$. The volume of the prism is $192\text{ cubic units}$. What is the height, in units, of the prism?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $6$
+    \item $16$
+    \item $8$
+    \item $12$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 90
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 90}]
+A cylinder has a diameter of $10\text{ inches}$ and a height of $8\text{ inches}$. What is the volume, in cubic inches, of the cylinder?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $25\pi$
+    \item $80$
+    \item $200\pi$
+    \item $800\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 91
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 91}]
+Square $A$ has side lengths that are $7$ times the side lengths of square $B$. The area of square $A$ is $k$ times the area of square $B$. What is the value of $k$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $49$
+    \item $7$
+    \item $14$
+    \item $21$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 92
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 92}]
+A manufacturing company produces two sizes of cylindrical containers that each have a height of $60\text{ centimeters}$. The radius of container $A$ is $20\text{ centimeters}$, and the radius of container $B$ is $25\%$ longer than the radius of container $A$. What is the volume, in cubic centimeters, of container $B$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $30{,}000\pi$
+    \item $37{,}500\pi$
+    \item $24{,}000\pi$
+    \item $46{,}875\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 93
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 93}]
+A sphere has a radius of $6\text{ feet}$. What is the volume, in cubic feet, of the sphere?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $144\pi$
+    \item $36\pi$
+    \item $216\pi$
+    \item $288\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 94
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 94}]
+In triangle $XYZ$, angle $Z$ is a right angle and the length of $\overline{XY}$ is $65\text{ millimeters}$. If $\cos(X) = \frac{5}{13}$, what is the length, in millimeters, of $\overline{XZ}$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $5$
+    \item $25$
+    \item $60$
+    \item $169$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 95
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 95}]
+Each side of equilateral triangle $S$ is multiplied by a scale factor of $k$ to create equilateral triangle $T$. The length of each side of triangle $T$ is greater than the length of each side of triangle $S$. Which of the following could be the value of $k$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2.5$
+    \item $1$
+    \item $0.5$
+    \item $-2$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 96
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 96}]
+A right circular cylinder has a height of $9\text{ m}$ and a base with a radius of $4\text{ m}$. What is the volume, $V$, of the cylinder?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $36\pi$
+    \item $72\pi$
+    \item $81\pi$
+    \item $144\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 97
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 97}]
+Triangles $ABC$ and $DEF$ are shown above, where angle $C$ and angle $F$ are right angles, the measure of angle $A$ is $25^\circ$, and the measure of angle $E$ is $65^\circ$. Which of the following is equal to the ratio $\text{BC}/\text{AB}$?
+
+\vspace{0.8em}
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    % --- Tam giác ABC (bên trái) ---
+    \coordinate (A) at (0, 0);
+    \coordinate (C) at (2.4, 0);
+    \coordinate (B) at (2.4, 1.15);
+
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+    \draw (C) ++(-0.22, 0) -- ++(0, 0.22) -- ++(0.22, 0);
+
+    \node[left] at (A) {$A$};
+    \node[right] at (C) {$C$};
+    \node[above] at (B) {$B$};
+    \node at (0.8, 0.18) {\footnotesize $25^\circ$};
+
+    % --- Tam giác DEF (bên phải) ---
+    \begin{scope}[xshift=3.8cm]
+        \coordinate (D) at (0, 0);
+        \coordinate (F) at (1.3, 0);
+        \coordinate (E) at (1.3, 2.75);
+
+        \draw[thick] (D) -- (F) -- (E) -- cycle;
+        \draw (F) ++(-0.22, 0) -- ++(0, 0.22) -- ++(0.22, 0);
+
+        \node[left] at (D) {$D$};
+        \node[right] at (F) {$F$};
+        \node[above] at (E) {$E$};
+        \node at (0.45, 0.18) {\footnotesize $25^\circ$};
+        \node at (1.05, 2.05) {\footnotesize $65^\circ$};
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\text{DE}/\text{DF}$
+    \item $\text{DF}/\text{DE}$
+    \item $\text{DF}/\text{EF}$
+    \item $\text{EF}/\text{DE}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 98
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 98}]
+What is the radius of the circle in the $xy$-plane defined by $(x - 3)^2 + (y + 5)^2 = 169$?
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 99
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 99}]
+There are $2$ similar triangles $ABC$ and $DEF$, where $\overline{AB}$ corresponds to $\overline{DE}$. The perimeter of triangle $ABC$ is $24$ and the perimeter of triangle $DEF$ is $60$. The length of $\overline{AB}$ is $6$. What is the length of $\overline{DE}$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $12$
+    \item $6$
+    \item $24$
+    \item $15$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 100
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 100}]
+\begin{minipage}{0.62\textwidth}
+In the figure shown, lines $m$ and $n$ are parallel, and line $t$ intersects both lines. If $x > 50$, which of the following must be true?
+
+\vspace{1.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $y > 130$
+    \item $y < 130$
+    \item $y > 50$
+    \item $y < 50$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.35\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    % Hai đường thẳng thẳng đứng song song m và n
+    \draw[thick] (1.0, -0.4) -- (1.0, 3.2) node[above] {$m$};
+    \draw[thick] (2.5, -0.4) -- (2.5, 3.2) node[above] {$n$};
+
+    % Cát tuyến t (dốc xuống sang phải)
+    \draw[thick] (0.2, 3.2) node[above left] {$t$} -- (3.3, 0.1);
+
+    % Giao điểm của t với m (x=1.0, y=2.4) và n (x=2.5, y=0.9)
+    \coordinate (Im) at (1.0, 2.4);
+    \coordinate (In) at (2.5, 0.9);
+
+    % Cung góc tại giao điểm với m
+    \draw (0.8, 2.6) arc (135:90:0.28);
+    \node at (1.3, 2.45) {\footnotesize $x^\circ$};
+
+    % Cung góc tại giao điểm với n
+    \draw (2.5, 1.25) arc (90:-45:0.35);
+    \draw (2.5, 0.55) arc (-90:-45:0.35);
+    \node at (2.7, 0.65) {\footnotesize $y^\circ$};
+\end{tikzpicture}
+
+\vspace{0.3em}
+{\footnotesize \textit{Note: Figure not drawn to scale.}}
+\end{minipage}
+\end{tcolorbox}
+%% Question 101
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 101}]
+A circle has a circumference of $47\text{ centimeters}$. What is the diameter, in centimeters, of the circle?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 102
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 102}]
+Circle $X$ has a radius of $5$. Circle $Y$ has an area of $24\pi$. What is the total area, $A$, of circles $X$ and $Y$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $60\pi$
+    \item $80\pi$
+    \item $600\pi$
+    \item $49\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 103
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 103}]
+A circle in the $xy$-plane has the equation $(x - 7)^2 + (y + 2)^2 = 36$. Which of the following gives the center of the circle and its radius?
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item The center is at $(7, -2)$ and the radius is $6$.
+    \item The center is at $(-7, 2)$ and the radius is $6$.
+    \item The center is at $(7, -2)$ and the radius is $36$.
+    \item The center is at $(-7, 2)$ and the radius is $36$.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 104
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 104}]
+Triangle $ABC$ is similar to triangle $DEF$, such that $A$, $B$, and $C$ correspond to $D$, $E$, and $F$ respectively. The length of each side of triangle $DEF$ is $4$ times the length of its corresponding side in triangle $ABC$. The measure of side $BC$ is $8$. What is the measure of side $EF$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2$
+    \item $4$
+    \item $8$
+    \item $32$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 105
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 105}]
+In triangle $XYZ$, the measures of angle $X$ and angle $Y$ are each $35^\circ$. What is the measure of angle $Z$, in degrees? (Disregard the degree symbol when entering your answer.)
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 106
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 106}]
+In triangle $ABC$, the measure of angle $A$ is $40^\circ$ and the measure of angle $B$ is $75^\circ$. In triangle $DEF$, the measure of angle $D$ is $75^\circ$ and the measure of angle $E$ is $65^\circ$. Which of the following additional pieces of information is needed to determine whether triangle $ABC$ is similar to triangle $DEF$?
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item The measure of angle $C$
+    \item The measure of angle $F$
+    \item The measure of angle $C$ and the measure of angle $F$
+    \item No additional information is needed.
+\end{enumerate}
+\end{tcolorbox}
+
+%% Question 107
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 107}]
+Quadrilateral $ABCD$ is similar to quadrilateral $EFGH$, where $A, B, C,$ and $D$ correspond to $E, F, G,$ and $H$, respectively. The measure of angle $A$ is $80^\circ$, the measure of angle $B$ is $110^\circ$, and the measure of angle $C$ is $95^\circ$. The length of each side of $EFGH$ is $3$ times the length of each corresponding side of $ABCD$. What is the measure of angle $G$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $80^\circ$
+    \item $95^\circ$
+    \item $110^\circ$
+    \item $285^\circ$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 108
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 108}]
+The number of radians in a $540$-degree angle can be written as $a\pi$, where $a$ is a constant. What is the value of $a$?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 109
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 109}]
+For a triangle, where the legs have lengths $7$ and $y$ and the hypotenuse has length $z$, which expression represents the value of $y$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\sqrt{z^2 - 49}$
+    \item $\sqrt{z^2 + 49}$
+    \item $z - 7$
+    \item $z + 7$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 110
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 110}]
+\begin{minipage}{0.65\textwidth}
+Points $A$, $B$, and $C$ lie on the circle shown. On this circle, minor arc $AB$ has a length of $7\text{ centimeters}$ and major arc $AB$ has a length of $33\text{ centimeters}$. What is the circumference, in centimeters, of the circle shown?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $7$
+    \item $26$
+    \item $33$
+    \item $40$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    \draw[thick] (0,0) circle (1.3);
+    \filldraw[black] (0,0) circle (1.5pt);
+    \filldraw[black] (115:1.3) circle (1.5pt) node[above left] {$A$};
+    \filldraw[black] (65:1.3) circle (1.5pt) node[above right] {$B$};
+    \filldraw[black] (-35:1.3) circle (1.5pt) node[below right] {$C$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 111
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 111}]
+In triangle $ABC$, the measure of angle $A$ is $70^\circ$. If triangle $ABC$ is isosceles, which of the following is \textbf{NOT} a possible measure of angle $B$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $70^\circ$
+    \item $55^\circ$
+    \item $40^\circ$
+    \item $120^\circ$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 112
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 112}]
+\begin{minipage}{0.65\textwidth}
+In the figure, lines $m$ and $n$ are parallel. If $3x = y + 30$ and $2x + 50 = y + 70$, what is the value of $z$, where $z$ is the same-side interior angle supplementary to $y$?
+
+\textit{Note: Figure not drawn to scale.}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $30$
+    \item $60$
+    \item $110$
+    \item $70$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (-1.5,1.2) -- (2.5,1.2) node[right] {$m$};
+    \draw[thick] (-1.5,-0.6) -- (2.5,-0.6) node[right] {$n$};
+    \draw[thick] (-1.3,2.4) node[above] {$t$} -- (2.3,-1.8);
+    \node at (-0.3, 0.95) {$y$};
+    \node at (0.2, 0.95) {$x$};
+    \node at (0.7, -0.4) {$z$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 113
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 113}]
+One leg of a right triangle has a length of $24\text{ millimeters}$. The hypotenuse of the triangle has a length of $25\text{ millimeters}$. What is the length of the other leg of the triangle, in millimeters?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $1$
+    \item $49$
+    \item $7$
+    \item $\sqrt{49}$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 114
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 114}]
+\begin{minipage}{0.65\textwidth}
+In triangle $ABC$, $AB$ is extended to point $D$. The measure of angle $CBD$ is $130^\circ$, and the measure of angle $BCA$ is $40^\circ$. What is the measure of angle $BAC$?
+
+\textit{Note: Figure not drawn to scale.}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $50^\circ$
+    \item $90^\circ$
+    \item $130^\circ$
+    \item $40^\circ$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.2,0);
+    \coordinate (C) at (0,2.6);
+    \coordinate (D) at (3.5,0);
+    \draw[thick] (C) -- (A) -- (D);
+    \draw[thick] (C) -- (B);
+    \node[below left] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[above] at (C) {$C$};
+    \node[below right] at (D) {$D$};
+    \draw (0, 2.1) arc (-90:-45:0.5);
+    \node at (0.35, 1.9) {\footnotesize $40^\circ$};
+    \draw (2.5, 0) arc (0:135:0.3);
+    \node at (2.3, 0.5) {\footnotesize $130^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 115
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 115}]
+What is the center of the circle in the $xy$-plane defined by the equation $(x+4)^2 + (y-9)^2 = 25$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(4,-9)$
+    \item $(4,9)$
+    \item $(-4,9)$
+    \item $(-4,-9)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 116
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 116}]
+An angle has a measure of $9\pi/20\text{ radians}$. What is the measure of the angle in degrees?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 117
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 117}]
+In the $xy$-plane, the graph of the equation $x^2 + y^2 - 10x + 6y = 47$ is a circle. The point $(8, k)$, where $k$ is a constant, lies on this circle. What is the greatest possible value of $k$?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 118
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 118}]
+In the $xy$-plane shown, square $ABCD$ has its diagonals on the $x$- and $y$-axes, with vertices at $(0,7)$, $(-7, 0)$, $(0,-7)$, and $(7, 0)$. What is the area, in square units, of the square?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $28$
+    \item $49$
+    \item $98$
+    \item $196$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 119
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 119}]
+\begin{minipage}{0.55\textwidth}
+The glass pictured above can hold a maximum volume of $591\text{ cubic centimeters}$, which is approximately $20\text{ fluid ounces}$. The volume formula for the glass is $V = 7\pi k^3/48$. What is the value of $k$, in centimeters?
+
+\vspace{1.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $2.71$
+    \item $8.27$
+    \item $8.39$
+    \item $10.89$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    % Công thức bên trái
+    \node[left] at (-1.3, 1.2) {$\text{Volume} = \dfrac{7\pi k^3}{48}$};
+
+    % Miệng cốc (đáy trên)
+    \draw[thick] (0, 2.4) ellipse (1.1 and 0.3);
+
+    % Đáy dưới cốc
+    \draw[thick] (-0.55, 0) arc (180:360:0.55 and 0.16);
+    \draw[thick, dashed] (-0.55, 0) arc (180:0:0.55 and 0.16);
+
+    % Hai thành bên của cốc
+    \draw[thick] (-1.1, 2.4) -- (-0.55, 0);
+    \draw[thick] (1.1, 2.4) -- (0.55, 0);
+
+    % Kích thước đường kính miệng cốc (k)
+    \draw[|<->|] (-1.1, 2.9) -- (1.1, 2.9) node[midway, fill=gray!5, inner sep=1pt] {\small $k$};
+
+    % Kích thước chiều cao cốc (k)
+    \draw[|<->|] (1.5, 0) -- (1.5, 2.4) node[midway, fill=gray!5, inner sep=1pt] {\small $k$};
+
+    % Kích thước đường kính đáy cốc (k/2)
+    \draw[|<->|] (-0.55, -0.45) -- (0.55, -0.45) node[midway, fill=gray!5, inner sep=1pt] {\small $\frac{k}{2}$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 120
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 120}]
+In triangle $ABC$, the measure of angle $A$ is $x^\circ$, the measure of angle $B$ is $(2x)^\circ$, and the measure of angle $C$ is $(3x)^\circ$. What is the value of $x$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $60$
+    \item $45$
+    \item $30$
+    \item $90$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 121
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 121}]
+A triangle has a base length of $14\text{ centimeters}$ and a height of $9\text{ centimeters}$. What is the area, in square centimeters, of the triangle?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $23$
+    \item $126$
+    \item $63$
+    \item $46$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 122
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 122}]
+A cylindrical can containing pieces of fruit is filled to the top with syrup before being sealed. The base of the can has an area of $90\text{ cm}^2$, and the height of the can is $12\text{ cm}$. If $145\text{ cm}^3$ of syrup is needed to fill the can to the top, which of the following is closest to the total volume of the pieces of fruit in the can?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $12\text{ cm}^3$
+    \item $235\text{ cm}^3$
+    \item $935\text{ cm}^3$
+    \item $1080\text{ cm}^3$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 123
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 123}]
+A right circular cylinder has a volume of $96\pi\text{ cubic centimeters}$. The area of the base of the cylinder is $12\pi\text{ square centimeters}$. What is the height, in centimeters, of the cylinder?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $8$
+    \item $12$
+    \item $96$
+    \item $16$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 124
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 124}]
+Right triangles $ABC$ and $DEF$ are similar, where $A$ and $D$ correspond to each other, respectively. Angle $A$ has a measure of $47^\circ$. What is the measure of angle $D$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $43^\circ$
+    \item $47^\circ$
+    \item $133^\circ$
+    \item $90^\circ$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 125
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 125}]
+A triangle has a base length of $22\text{ centimeters}$ and a corresponding height of $10\text{ centimeters}$. What is the area, in square centimeters, of the triangle?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $220$
+    \item $110$
+    \item $55$
+    \item $32$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 126
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 126}]
+\begin{minipage}{0.55\textwidth}
+In triangle $ABC$ above, with a $30^\circ$ angle at $B$, a right angle at $D$ where $D$ is on $AC$, $BC = 18$, and an angle of $60^\circ$ at $C$, what is the length of $AD$?
+
+\vspace{1.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $6$
+    \item $9$
+    \item $9\sqrt{2}$
+    \item $9\sqrt{3}$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh:
+    % Đường cao BD = 18 * sin(60) ≈ 15.588, CD = 18 * cos(60) = 9
+    % AD = BD * tan(30) = 9. Do đó tam giác cân tại B với BD là phân giác.
+    \coordinate (D) at (0, 0);
+    \coordinate (B) at (0, 3.2);
+    \coordinate (C) at (1.85, 0);
+    \coordinate (A) at (-1.85, 0);
+
+    % Vẽ tam giác ABC và đường cao BD
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+    \draw[thick] (B) -- (D);
+
+    % Ký hiệu góc vuông tại D (bên phải)
+    \draw (D) ++(0.24, 0) -- ++(0, 0.24) -- ++(-0.24, 0);
+
+    % Nhãn các đỉnh
+    \node[left] at (A) {$A$};
+    \node[below] at (D) {$D$};
+    \node[right] at (C) {$C$};
+    \node[above] at (B) {$B$};
+
+    % Nhãn độ dài và các góc
+    \node[above right] at (0.9, 1.6) {$18$};
+    \node at (-0.3, 2.3) {\footnotesize $30^\circ$};
+    \node at (1.3, 0.25) {\footnotesize $60^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 127
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 127}]
+The length of each side of a square is $11p\text{ centimeters (cm)}$. Which expression gives the area, in $\text{cm}^2$, of the square?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $11p$
+    \item $22p$
+    \item $44p$
+    \item $121p^2$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 128
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 128}]
+\begin{minipage}{0.65\textwidth}
+In the $xy$-plane shown, points $P$, $Q$, $R$, and $T$ lie on the circle with center $O$. The degree measures of angles $POQ$ and $ROT$ are each $45^\circ$. What is the radian measure of angle $QOR$?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $3\pi/4$
+    \item $5\pi/8$
+    \item $\pi/2$
+    \item $\pi/4$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    \draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.8) node[above] {$y$};
+    \draw[thick] (0,0) circle (1.2);
+    \coordinate (O) at (0,0);
+    \node[below left] at (O) {$O$};
+    \filldraw (1.2,0) circle (1.5pt) node[below right] {\footnotesize $P\,(1,0)$};
+    \filldraw (-1.2,0) circle (1.5pt) node[below left] {\footnotesize $T\,(-1,0)$};
+    \filldraw (45:1.2) circle (1.5pt) node[above right] {$Q$};
+    \filldraw (135:1.2) circle (1.5pt) node[above left] {$R$};
+    \draw[thick] (O) -- (45:1.2);
+    \draw[thick] (O) -- (135:1.2);
+    \draw (0.15,0.15) -- (0,0.3) -- (-0.15,0.15);
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 129
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 129}]
+\begin{minipage}{0.65\textwidth}
+In the figure, segments $AE$ and $BD$ are parallel. If angle $BDC$ measures $64^\circ$ and angle $ACE$ measures $56^\circ$, what is the measure of angle $CAE$?
+
+\textit{Note: Figure not drawn to scale.}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $64^\circ$
+    \item $60^\circ$
+    \item $56^\circ$
+    \item $120^\circ$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \coordinate (C) at (1.5, 2.5);
+    \coordinate (A) at (0, 0);
+    \coordinate (E) at (3.2, 0);
+    \coordinate (B) at (0.75, 1.25);
+    \coordinate (D) at (2.35, 1.25);
+    \draw[thick] (A) -- (C) -- (E) -- cycle;
+    \draw[thick] (B) -- (D);
+    \node[above] at (C) {$C$};
+    \node[left] at (B) {$B$};
+    \node[right] at (D) {$D$};
+    \node[below left] at (A) {$A$};
+    \node[below right] at (E) {$E$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 130
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 130}]
+\begin{minipage}{0.65\textwidth}
+The circle shown has center $O$, circumference $144$, and diameters $PR$ and $QS$. The length of arc $PQ$ is twice the length of arc $QR$. What is the length of arc $QR$?
+
+\textit{Note: Figure not drawn to scale.}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $48$
+    \item $24$
+    \item $36$
+    \item $72$
+\end{enumerate}
+\end{multicols}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    \draw[thick] (0,0) circle (1.2);
+    \coordinate (O) at (0,0);
+    \node[left] at (O) {$O$};
+    \coordinate (P) at (-60:1.2);
+    \coordinate (R) at (120:1.2);
+    \coordinate (Q) at (-120:1.2);
+    \coordinate (S) at (60:1.2);
+    \draw[thick] (-65:1.2) node[below] {$Q$} -- (115:1.2) node[above] {$S$};
+    \draw[thick] (-115:1.2) node[below] {$P$} -- (65:1.2) node[above] {$R$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 131
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 131}]
+\begin{minipage}{0.55\textwidth}
+In the triangle shown, an isosceles right triangle has a right angle and two legs each of length $6$. What is the value of $x$, the measure of one of the non-right angles?
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh của tam giác vuông cân
+    \coordinate (A) at (0, 0);     % Đỉnh nhọn bên trái
+    \coordinate (C) at (3.2, 0);   % Đỉnh góc vuông góc dưới bên phải
+    \coordinate (B) at (3.2, 2.8); % Đỉnh nhọn trên cùng
+
+    % Vẽ tam giác
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+
+    % Ký hiệu góc vuông tại C
+    \draw (C) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0);
+
+    % Nhãn độ dài các cạnh
+    \node[below] at (1.6, 0) {$6$};
+    \node[right] at (3.2, 1.4) {$6$};
+
+    % Nhãn góc x tại đỉnh B
+    \node at (2.85, 2.45) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+
+\vspace{0.3em}
+{\footnotesize \textit{Note: Figure not drawn to scale.}}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 132
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 132}]
+The length of a rectangle's diagonal is $17$, and the length of the rectangle's shorter side is $8$. What is the length of the rectangle's longer side?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $9$
+    \item $15$
+    \item $25$
+    \item $225$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 133
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 133}]
+A right circular cylinder has a base diameter of $12\text{ centimeters}$ and a height of $10\text{ centimeters}$. What is the volume, in cubic centimeters, of the cylinder?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $120\pi$
+    \item $1440\pi$
+    \item $360\pi$
+    \item $60\pi$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 134
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 134}]
+\begin{minipage}{0.55\textwidth}
+In the right triangle $PQR$ shown above, where angle $P$ is the right angle, angle $R$ is $30^\circ$, and the hypotenuse $QR$ has length $14$, what is the length of $PQ$?
+
+\vspace{1.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.9]
+    % Tọa độ các đỉnh của tam giác vuông tại P
+    \coordinate (P) at (0, 0);       % Đỉnh vuông góc dưới bên trái
+    \coordinate (R) at (3.8, 0);     % Đỉnh nhọn góc 30 độ bên phải
+    \coordinate (Q) at (0, 2.19);    % Đỉnh trên cùng (3.8 * tan(30) ≈ 2.19)
+
+    % Vẽ tam giác PQR
+    \draw[thick] (Q) -- (P) -- (R) -- cycle;
+
+    % Ký hiệu góc vuông tại đỉnh P
+    \draw (P) ++(0, 0.25) -- ++(0.25, 0) -- ++(0, -0.25);
+
+    % Nhãn các đỉnh
+    \node[below left] at (P) {$P$};
+    \node[above left] at (Q) {$Q$};
+    \node[right] at (R) {$R$};
+
+    % Nhãn độ dài cạnh huyền và góc 30 độ
+    \node[above right] at (1.8, 1.1) {$14$};
+    \node at (2.8, 0.22) {\footnotesize $30^\circ$};
+\end{tikzpicture}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 135
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 135}]
+The length of one side of square $M$ is $4$ times the length of one side of square $N$. The area of square $N$ is $25\text{ square feet}$. What is the area, in square feet, of square $M$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $400$
+    \item $100$
+    \item $200$
+    \item $625$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 136
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 136}]
+Triangles $ABC$ and $DEF$ are congruent, where $A$ corresponds to $D$, and $C$ and $F$ are right angles. The measure of angle $B$ is $32^\circ$. What is the measure, in degrees, of angle $D$?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 137
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 137}]
+An angle has a measure of $17\pi/15\text{ radians}$. What is the measure of the angle, in degrees?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 138
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 138}]
+\begin{minipage}{0.55\textwidth}
+In the triangle shown, an isosceles right triangle has a right angle and two legs each of length $11$. What is the value of $x$, the measure of one of the non-right angles?
+
+\vspace{1.5em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.95]
+    % Tọa độ các đỉnh của tam giác vuông cân
+    \coordinate (A) at (0, 0);     % Đỉnh nhọn bên trái
+    \coordinate (C) at (3.2, 0);   % Đỉnh góc vuông góc dưới bên phải
+    \coordinate (B) at (3.2, 2.8); % Đỉnh nhọn trên cùng
+
+    % Vẽ tam giác
+    \draw[thick] (A) -- (C) -- (B) -- cycle;
+
+    % Ký hiệu góc vuông tại C
+    \draw (C) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0);
+
+    % Nhãn độ dài các cạnh
+    \node[below] at (1.6, 0) {$11$};
+    \node[right] at (3.2, 1.4) {$11$};
+
+    % Nhãn góc x tại đỉnh B
+    \node at (2.85, 2.45) {\footnotesize $x^\circ$};
+\end{tikzpicture}
+
+\vspace{0.3em}
+{\footnotesize \textit{Note: Figure not drawn to scale.}}
+\end{minipage}
+\end{tcolorbox}
+
+%% Question 139
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 139}]
+A circle has a radius of $1.5\text{ inches}$. The area of the circle is $k\pi\text{ square inches}$, where $k$ is a constant. What is the value of $k$?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 140
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 140}]
+A right triangle has legs with lengths of $9\text{ centimeters}$ and $40\text{ centimeters}$. What is the length of this triangle's hypotenuse, in centimeters?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $49$
+    \item $41$
+    \item $31$
+    \item $1681$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 141
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 141}]
+The measure of angle $A$ is $\pi/4\text{ radians}$. The measure of angle $B$ is $\pi/6\text{ radians}$ greater than the measure of angle $A$. What is the measure of angle $B$, in degrees?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $30$
+    \item $45$
+    \item $75$
+    \item $105$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 142
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 142}]
+Triangle $ABC$ and triangle $DEF$ are shown. The relationship between the side lengths of the two triangles is such that $AB/DE = BC/EF = AC/DF = 5$. If the measure of angle $BAC$ is $35^\circ$, what is the measure, in degrees, of angle $EDF$? (Disregard the degree symbol when gridding your answer.)
+
+\vspace{0.8em}
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    % --- Tam giác ABC (bên trái) ---
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (2.2, 1.3);
+    \coordinate (C) at (3.5, 0.35);
+
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    \node[below left] at (A) {$A$};
+    \node[above] at (B) {$B$};
+    \node[right] at (C) {$C$};
+
+    % --- Tam giác DEF (bên phải) ---
+    \begin{scope}[xshift=4.6cm, yshift=-0.05cm, scale=0.68]
+        \coordinate (D) at (0, 0);
+        \coordinate (E) at (2.2, 1.3);
+        \coordinate (F) at (3.5, 0.35);
+
+        \draw[thick] (D) -- (E) -- (F) -- cycle;
+
+        \node[below left] at (D) {$D$};
+        \node[above] at (E) {$E$};
+        \node[right] at (F) {$F$};
+    \end{scope}
+\end{tikzpicture}
+
+\vspace{0.4em}
+{\footnotesize \textit{Note: Figures not drawn to scale.}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 143
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 143}]
+The measure of angle $A$ is $30^\circ$. What is the measure, in radians, of angle $A$?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $\pi/3$
+    \item $\pi/6$
+    \item $\pi/4$
+    \item $\pi/2$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 144
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 144}]
+Rectangles $ABCD$ and $EFGH$ shown are similar, where $A, B, C,$ and $D$ correspond to $E, F, G,$ and $H$, respectively. The length of $AB$ is $8\text{ inches}$, the length of $BC$ is $12\text{ inches}$, and the length of $EF$ is $6\text{ inches}$. What is the length, in inches, of $FG$?
+
+\vspace{0.8em}
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    % --- Hình chữ nhật ABCD (bên trái) ---
+    \draw[thick] (0, 0) rectangle (2.7, 1.8);
+    \node[below left] at (0, 0) {$A$};
+    \node[above left] at (0, 1.8) {$B$};
+    \node[above right] at (2.7, 1.8) {$C$};
+    \node[below right] at (2.7, 0) {$D$};
+    
+    \node[left] at (0, 0.9) {\footnotesize $8\text{ in}$};
+    \node[above] at (1.35, 1.8) {\footnotesize $12\text{ in}$};
+
+    % --- Hình chữ nhật EFGH (bên phải) ---
+    \begin{scope}[xshift=3.8cm]
+        \draw[thick] (0, 0) rectangle (2.2, 1.25);
+        \node[below left] at (0, 0) {$E$};
+        \node[above left] at (0, 1.25) {$F$};
+        \node[above right] at (2.2, 1.25) {$G$};
+        \node[below right] at (2.2, 0) {$H$};
+
+        \node[left] at (0, 0.625) {\footnotesize $6\text{ in}$};
+        \node[below] at (1.1, 0) {\footnotesize $10\text{ in}$};
+    \end{scope}
+\end{tikzpicture}
+
+\vspace{0.4em}
+{\footnotesize \textit{Note: Figure not drawn to scale.}}
+\end{center}
+
+\vspace{0.5em}
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $4$
+    \item $9$
+    \item $16$
+    \item $12$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 145
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 145}]
+A triangular prism has a height of $12\text{ cm}$ and a volume of $360\text{ cm}^3$. What is the area, $B$, of the base of the prism, in $\text{cm}^2$? (The volume of a triangular prism is equal to $Bh$, where $B$ is the area of the base and $h$ is the height of the prism.)
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 146
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 146}]
+Triangles $ABC$ and $DEF$ are congruent, where $A$ corresponds to $D$, and $C$ and $F$ are right angles. The measure of angle $B$ is $74^\circ$. What is the measure, in degrees, of angle $D$?
+\vspace{0.8em}
+
+\noindent\textbf{Answer:} \underline{\hspace{3cm}}
+\end{tcolorbox}
+
+%% Question 147
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 147}]
+In the $xy$-plane, a circle with radius $7$ has center $(-3, 4)$. Which of the following is an equation of the circle?
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(x - 3)^2 + (y + 4)^2 = 49$
+    \item $(x + 3)^2 + (y - 4)^2 = 49$
+    \item $(x - 3)^2 + (y + 4)^2 = 7$
+    \item $(x + 3)^2 + (y - 4)^2 = 7$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+%% Question 148
+\begin{tcolorbox}[colback=gray!5,colframe=gray!40,title=\textbf{Question 148}]
+In the $xy$-plane, the graph of the given equation $x^2 + y^2 + 8x - 6y - 11 = 0$ is a circle. What are the coordinates of the center of the circle?
+\begin{multicols}{4}
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+    \item $(8, -6)$
+    \item $(-8, 6)$
+    \item $(4, -3)$
+    \item $(-4, 3)$
+\end{enumerate}
+\end{multicols}
+\end{tcolorbox}
+
+\end{document}

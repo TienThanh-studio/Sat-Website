@@ -1,0 +1,2342 @@
+[
+  {
+    "id": "geom_001",
+    "questionNumber": 1,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Square $A$ has side lengths that are $166$ times the side lengths of square $B$. The area of square $A$ is $k$ times the area of square $B$. What is the value of $k$?\\\\",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_002",
+    "questionNumber": 2,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A cube has an edge length of $68 inches$. A solid sphere with a radius of $34 inches$ is inside the cube, such that the sphere touches the center of each face of the cube. To the nearest cubic inch, what is the volume of the space in the cube not taken up by the sphere?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$149{,}796$",
+      "B": "$164{,}500$",
+      "C": "$190{,}955$",
+      "D": "$310{,}800$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_003",
+    "questionNumber": 3,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The figure shown is a right circular cylinder with a radius of $r$ and height of $h$. A second right circular cylinder (not shown) has a volume that is $392$ times as large as the volume of the cylinder shown. Which of the following could represents the radius $R$, in terms of $r$, and the height $H$, in terms of $h$, of the second cylinder? \\begin{tikzpicture}[scale=0.9, line width=1pt] % Tham số hình trụ \\def\\rx{2.2} % Bán kính ngang elip \\def\\ry{0.7} % Bán kính đứng elip \\def\\h{2.0} % Chiều cao hình trụ % Thân trụ và đáy dưới \\draw (0,0) ellipse (\\rx cm and \\ry cm); \\draw (-\\rx,0) -- (-\\rx,-\\h); \\draw (\\rx,0) -- (\\rx,-\\h); \\draw (-\\rx,-\\h) arc (180:360:\\rx cm and \\ry cm); % Ký hiệu chiều cao h \\draw[dashed, line width=0.6pt] (\\rx, 0) -- (\\rx + 0.3, 0); \\draw[dashed, line width=0.6pt] (\\rx, -\\h) -- (\\rx + 0.3, -\\h); \\draw[<->, line width=0.6pt] (\\rx + 0.25, 0) -- (\\rx + 0.25, -\\h) node[midway, right=1pt] {$h$}; % Tâm và bán kính r \\fill (0,0) circle (2.2pt); \\draw[line width=1pt] (0,0) -- (40:\\rx cm and \\ry cm) node[midway, below right=-1pt] {$r$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$R = 8r \\text{ and } H = 7h$",
+      "B": "$R = 8r \\text{ and } H = 49h$",
+      "C": "$R = 7r \\text{ and } H = 8h$",
+      "D": "$R = 49r \\text{ and } H = 8h$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_004",
+    "questionNumber": 4,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A cube has a volume of $474{,}552 cubic units$. What is the surface area, in square units, of the cube?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_005",
+    "questionNumber": 5,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A right circular cone has a height of $22 centimeters (cm)$ and a base with a diameter of $6 cm$. The volume of this cone is $n\\pi cm^3$. What is the value of $n$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_006",
+    "questionNumber": 6,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A manufacturer determined that right cylindrical containers with a height that is $4 inches$ longer than the radius offer the optimal number of containers to be displayed on a shelf. Which of the following expresses the volume, $V$, in cubic inches, of such containers, where $r$ is the radius, in inches?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$V = 4\\pi r^3$",
+      "B": "$V = \\pi(2r)^3$",
+      "C": "$V = \\pi r^2 + 4\\pi r$",
+      "D": "$V = \\pi r^3 + 4\\pi r^2$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_007",
+    "questionNumber": 7,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A rectangular poster has an area of $360 square inches$. A copy of the poster is made in which the length and width of the original poster are each increased by $20\\%$. What is the area of the copy, in square inches?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_008",
+    "questionNumber": 8,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A right rectangular prism has a length of $28 centimeters (cm)$, a width of $15 cm$, and a height of $16 cm$. What is the surface area, in $cm^2$, of the right rectangular prism?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_009",
+    "questionNumber": 9,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A right circular cone has a volume of $\\frac{1}{3}\\pi cubic feet$ and a height of $9 feet$. What is the radius, in feet, of the base of the cone?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{1}{3}$",
+      "B": "$\\frac{1}{\\sqrt{3}}$",
+      "C": "$\\sqrt{3}$",
+      "D": "$3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_010",
+    "questionNumber": 10,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Two identical rectangular prisms each have a height of $90 centimeters (cm)$. The base of each prism is a square, and the surface area of each prism is $K cm^2$. If the prisms are glued together along a square base, the resulting prism has a surface area of $\\frac{92}{47}K cm^2$. What is the side length, in cm, of each square base?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$4$",
+      "B": "$8$",
+      "C": "$9$",
+      "D": "$16$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_011",
+    "questionNumber": 11,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The volume of right circular cylinder $A$ is $22 cubic centimeters$. What is the volume, in cubic centimeters, of a right circular cylinder with twice the radius and half the height of cylinder $A$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$11$",
+      "B": "$22$",
+      "C": "$44$",
+      "D": "$66$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_012",
+    "questionNumber": 12,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.58\\textwidth} What is the area, in square units, of the triangle formed by connecting the three points shown: $(-3, 4)$, $(5, 3)$, and $(4, -3)$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_013",
+    "questionNumber": 13,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Circle $A$ has a radius of $3n$ and circle $B$ has a radius of $129n$, where $n$ is a positive constant. The area of circle $B$ is how many times the area of circle $A$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$43$",
+      "B": "$86$",
+      "C": "$129$",
+      "D": "$1{,}849$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_014",
+    "questionNumber": 14,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The dimensions of a right rectangular prism are $4 inches$ by $5 inches$ by $6 inches$. What is the surface area, in square inches, of the prism?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$30$",
+      "B": "$74$",
+      "C": "$120$",
+      "D": "$148$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_015",
+    "questionNumber": 15,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A right triangle has sides of length $2\\sqrt{2}$, $6\\sqrt{2}$, and $\\sqrt{80} units$. What is the area of the triangle, in square units?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$8\\sqrt{2} + \\sqrt{80}$",
+      "B": "$12$",
+      "C": "$24\\sqrt{80}$",
+      "D": "$24$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_016",
+    "questionNumber": 16,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangles $ABC$ and $DEF$ are similar. Each side length of triangle $ABC$ is $4$ times the corresponding side length of triangle $DEF$. The area of triangle $ABC$ is $270 square inches$. What is the area, in square inches, of triangle $DEF$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_017",
+    "questionNumber": 17,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A cube has a surface area of $54 square meters$. What is the volume, in cubic meters, of the cube?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$18$",
+      "B": "$27$",
+      "C": "$36$",
+      "D": "$81$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_018",
+    "questionNumber": 18,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.58\\textwidth} In the figure, $AC = CD$. The measure of angle $EBC$ is $45^\\circ$, and the measure of angle $ACD$ is $104^\\circ$. What is the value of $x$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_019",
+    "questionNumber": 19,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the figure shown, points $Q$, $R$, $S$, and $T$ lie on line segment $PV$, and line segment $RU$ intersects line segment $SX$ at point $W$. The measure of $\\angle SQX$ is $48^\\circ$, the measure of $\\angle SXQ$ is $86^\\circ$, the measure of $\\angle SWU$ is $85^\\circ$, and the measure of $\\angle VTU$ is $162^\\circ$. What is the measure, in degrees, of $\\angle TUR$? \\begin{tikzpicture}[scale=1.1] % Đáy ngang trên: P - Q - R - S - T - V \\coordinate (P) at (0, 2.5); \\coordinate (Q) at (0.7, 2.5); \\coordinate (R) at (1.5, 2.5); \\coordinate (S) at (4.2, 2.5); \\coordinate (T) at (6.0, 2.5); \\coordinate (V) at (6.6, 2.5); % Các điểm phía dưới \\coordinate (X) at (1.5, 1.2); \\coordinate (U) at (4.2, 0.2); % Giao điểm W của SX và RU \\coordinate (W) at (2.45, 1.66); % Vẽ các đường thẳng \\draw[thick] (P) -- (V); \\draw[thick] (Q) -- (X) -- (S); \\draw[thick] (R) -- (U) -- (T); % Nhãn các đỉnh \\node[above] at (P) {$P$}; \\node[above] at (Q) {$Q$}; \\node[above] at (R) {$R$}; \\node[above] at (S) {$S$}; \\node[above] at (T) {$T$}; \\node[above] at (V) {$V$}; \\node[below] at (X) {$X$}; \\node[below] at (U) {$U$}; \\node[below=2pt] at (W) {$W$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_020",
+    "questionNumber": 20,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "\\begin{minipage}{0.55\\textwidth} Intersecting lines $r$, $s$, and $t$ are shown below. What is the value of $x$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_021",
+    "questionNumber": 21,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the figure above, $\\overline{MQ}$ and $\\overline{NR}$ intersect at point $P$, $NP = QP$, and $MP = PR$. What is the measure, in degrees, of $\\angleQMR$? (Disregard the degree symbol when gridding your answer.)",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_022",
+    "questionNumber": 22,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In triangle $ABC$, the measure of angle $B$ is $90^\\circ$ and $\\overline{BD}$ is an altitude of the triangle. The length of $\\overline{AB}$ is $15$ and the length of $\\overline{AC}$ is $23$ greater than the length of $\\overline{AB}$. What is the value of $\\frac{BC}{BD}$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{15}{38}$",
+      "B": "$\\frac{15}{23}$",
+      "C": "$\\frac{23}{15}$",
+      "D": "$\\frac{38}{15}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_023",
+    "questionNumber": 23,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In triangles $ABC$ and $DEF$, angles $B$ and $E$ each have measure $27^\\circ$ and angles $C$ and $F$ each have measure $41^\\circ$. Which additional piece of information is sufficient to determine whether triangle $ABC$ is congruent to triangle $DEF$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "The measure of angle $A$",
+      "B": "The length of side $AB$",
+      "C": "The lengths of sides $BC$ and $EF$",
+      "D": "No additional information is necessary"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_024",
+    "questionNumber": 24,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangles $LMN$ and $RST$, angles $L$ and $R$ each have measure $60^\\circ$, $LN = 10$, and $RT = 30$. Which additional piece of information is sufficient to prove that triangle $LMN$ is similar to triangle $RST$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$MN = 7$ and $ST = 7$",
+      "B": "$MN = 7$ and $ST = 21$",
+      "C": "The measures of angles $M$ and $S$ are $70^\\circ$ and $60^\\circ$, respectively",
+      "D": "The measures of angles $M$ and $T$ are $70^\\circ$ and $50^\\circ$, respectively"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_025",
+    "questionNumber": 25,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the figure above, triangle $MNP$ is a right triangle with right angle at $N$, and $\\overline{NQ} \\perp \\overline{MP}$. If $MN = 3$ and $NP = 4$, what is the length of $\\overline{NQ}$? % \\hfill \\begin{tikzpicture}[scale=0.8] \\coordinate (M) at (0,0); \\coordinate (P) at (4,0); \\coordinate (N) at (1.2, 2.5); \\coordinate (Q) at (1.2, 0); \\draw[thick] (M) -- (N) -- (P) -- cycle; \\draw[thick] (N) -- (Q); \\draw (1.2, 0.3) -- (0.9, 0.3) -- (0.9, 0); \\node[below left] at (M) {$M$}; \\node[below] at (Q) {$Q$}; \\node[below right] at (P) {$P$}; \\node[above] at (N) {$N$}; \\node[left] at (0.6, 1.25) {$3$}; \\node[right] at (2.6, 1.25) {$4$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2.2$",
+      "B": "$2.3$",
+      "C": "$2.4$",
+      "D": "$2.5$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_026",
+    "questionNumber": 26,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Triangle $XYZ$ is similar to triangle $RST$ such that $X, Y$, and $Z$ correspond to $R, S$, and $T$, respectively. The measure of $\\angle Z$ is $20^\\circ$ and $2XY = RS$. What is the measure of $\\angle T$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2^\\circ$",
+      "B": "$10^\\circ$",
+      "C": "$20^\\circ$",
+      "D": "$40^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_027",
+    "questionNumber": 27,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In the figure above, $RT = TU$. What is the value of $x$? % \\hfill \\begin{tikzpicture}[scale=0.95] % Coordinates \\coordinate (S) at (0, 3.2); \\coordinate (R) at (0.2, 0); \\coordinate (V) at (1.5, 0); \\coordinate (U) at (4.5, 0); \\coordinate (T) at (2.4, 1.5); % Lines \\draw[thick] (R) -- (U); % Đáy R-V-U \\draw[thick] (S) -- (U); % Cạnh xiên S-T-U \\draw[thick] (R) -- (T); % Đoạn R-T \\draw[thick] (S) -- (V); % Đoạn S-V % Labels \\node[left] at (S) {$S$}; \\node[left] at (R) {$R$}; \\node[below] at (V) {$V$}; \\node[right] at (U) {$U$}; \\node[above right] at (T) {$T$}; % Angle labels \\node at (0.6, 2.7) {\\footnotesize $31^\\circ$}; \\node at (2.3, 1.2) {\\footnotesize $114^\\circ$}; % Arc & label for angle x \\draw[->] (0.9, 0) arc (180:115:0.5); \\node at (1.0, -0.25) {\\footnotesize $x^\\circ$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$72$",
+      "B": "$66$",
+      "C": "$64$",
+      "D": "$58$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_028",
+    "questionNumber": 28,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "\\begin{minipage}{0.55\\textwidth} The area of triangle $ABC$ above is at least $48$ but no more than $60$. If $y$ is an integer, what is one possible value of $x$? \\textit{Note: Figure not drawn to scale}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_029",
+    "questionNumber": 29,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In triangle $RST$, angle $T$ is a right angle, point $L$ lies on $\\overline{RS}$, point $K$ lies on $\\overline{ST}$, and $\\overline{LK}$ is parallel to $\\overline{RT}$. If the length of $\\overline{RT}$ is $72 units$, the length of $\\overline{LK}$ is $24 units$, and the area of triangle $RST$ is $792 square units$, what is the length of $\\overline{KT}$, in units?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_030",
+    "questionNumber": 30,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the figure, parallel lines $q$ and $t$ are intersected by lines $r$ and $s$. If $a = 43$ and $b = 122$, what is the value of $w$? \\textit{Note: Figure not drawn to scale}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_031",
+    "questionNumber": 31,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "\\begin{minipage}{0.65\\textwidth} In the figure above, triangle $ABC$ is a right triangle at $B$, and $\\overline{BD} \\perp \\overline{AC}$. If $BD = 6$ and $AD = 8$, what is the length of $\\overline{DC}$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_032",
+    "questionNumber": 32,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "\\begin{minipage}{0.65\\textwidth} Triangle $ABC$ above is a right triangle with right angle at $C$, hypotenuse $AB = 26$, and $\\sin(B) = \\frac{5}{13}$. What is the length of side $\\overline{BC}$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_033",
+    "questionNumber": 33,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the triangle shown, what is the value of $\\sin x^\\circ$? \\textit{Note: Figure not drawn to scale}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_034",
+    "questionNumber": 34,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "An isosceles right triangle has a perimeter of $94 + 94\\sqrt{2} inches$. What is the length, in inches, of one leg of this triangle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$47$",
+      "B": "$47\\sqrt{2}$",
+      "C": "$94$",
+      "D": "$94\\sqrt{2}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_035",
+    "questionNumber": 35,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The side lengths of right triangle $RST$ are given: $RS = 440$, $ST = 384$, and $TR = 584$. Triangle $RST$ is similar to triangle $UVW$, where $S$ corresponds to $V$ and $T$ corresponds to $W$. What is the value of $\\tan(W)$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{48}{73}$",
+      "B": "$\\frac{55}{73}$",
+      "C": "$\\frac{48}{55}$",
+      "D": "$\\frac{55}{48}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_036",
+    "questionNumber": 36,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The side lengths of right triangle $RST$ are given: $RS = 20$, $ST = 48$, and $TR = 52$. Triangle $RST$ is similar to triangle $UVW$, where $S$ corresponds to $V$ and $T$ corresponds to $W$. What is the value of $\\tan(W)$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{5}{13}$",
+      "B": "$\\frac{5}{12}$",
+      "C": "$\\frac{12}{13}$",
+      "D": "$\\frac{12}{5}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_037",
+    "questionNumber": 37,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A square is inscribed in a circle. The radius of the circle is $\\frac{20\\sqrt{2}}{2} inches$. What is the side length, in inches, of the square?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$20$",
+      "B": "$\\frac{20\\sqrt{2}}{2}$",
+      "C": "$20\\sqrt{2}$",
+      "D": "$40$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_038",
+    "questionNumber": 38,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angles $C$ and $F$ are right angles. The length of $\\overline{AB}$ is $2.9$ times the length of $\\overline{DE}$. If $\\tan(A) = \\frac{21}{20}$, what is the value of $\\sin(D)$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_039",
+    "questionNumber": 39,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In a right triangle, the tangent of one of the two acute angles is $\\frac{\\sqrt{3}}{3}$. What is the tangent of the other acute angle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$-\\frac{\\sqrt{3}}{3}$",
+      "B": "$-\\frac{3}{\\sqrt{3}}$",
+      "C": "$\\frac{\\sqrt{3}}{3}$",
+      "D": "$\\frac{3}{\\sqrt{3}}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_040",
+    "questionNumber": 40,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angle $C$ corresponds to angle $F$. Angles $C$ and $F$ are right angles. If $\\tan(A) = \\frac{50}{7}$, what is the value of $\\tan(E)$? \\begin{tikzpicture}[scale=0.95] % Tọa độ các đỉnh \\coordinate (C) at (0, 0); \\coordinate (B) at (1.4, 0); \\coordinate (A) at (4.2, 0); \\coordinate (D) at (1.4, 0.95); \\coordinate (E) at (4.2, 2.85); % Vẽ tam giác lớn và đường song song BD \\draw[thick] (C) -- (A) -- (E) -- cycle; \\draw[thick] (B) -- (D); % Ký hiệu góc vuông tại A \\draw (A) ++(-0.25, 0) -- ++(0, 0.25) -- ++(0.25, 0); % Tên các đỉnh \\node[left] at (C) {$C$}; \\node[below] at (B) {$B$}; \\node[below right] at (A) {$A$}; \\node[above left] at (D) {$D$}; \\node[above] at (E) {$E$}; % Kích thước \\node[below] at (0.7, 0) {$8$}; \\node[right] at (1.4, 0.5) {$6$}; \\node[right] at (4.2, 1.45) {$18$}; \\end{tikzpicture} \\noindent In the figure above, $\\overline{BD}$ is parallel to $\\overline{AE}$. What is the length of $\\overline{CE}$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_041",
+    "questionNumber": 41,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In triangle $JKL$, $\\cos(K) = \\frac{24}{51}$ and angle $J$ is a right angle. What is the value of $\\cos(L)$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_042",
+    "questionNumber": 42,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A triangle with angle measures $30^\\circ, 60^\\circ$, and $90^\\circ$ has a perimeter of $18 + 6\\sqrt{3}$. What is the length of the longest side of the triangle?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_043",
+    "questionNumber": 43,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "\\begin{minipage}{0.55\\textwidth} In triangle $RST$ above, point $W$ (not shown) lies on $\\overline{RT}$. What is the value of $\\cos(\\angle RSW) - \\sin(\\angle WST)$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_044",
+    "questionNumber": 44,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, where $A$ corresponds to $D$ and $C$ corresponds to $F$. Angles $C$ and $F$ are right angles. If $\\tan(A) = \\sqrt{3}$ and $DF = 125$, what is the length of $\\overline{DE}$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$125\\frac{\\sqrt{3}}{3}$",
+      "B": "$125\\frac{\\sqrt{3}}{2}$",
+      "C": "$125\\sqrt{3}$",
+      "D": "$250$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_045",
+    "questionNumber": 45,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The length of a rectangle's diagonal is $3\\sqrt{17}$, and the length of the rectangle's shorter side is $3$. What is the length of the rectangle's longer side?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_046",
+    "questionNumber": 46,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A right triangle has legs with lengths of $24 centimeters$ and $21 centimeters$. If the length of this triangle's hypotenuse, in centimeters, can be written in the form $3\\sqrt{d}$ where $d$ is an integer, what is the value of $d$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_047",
+    "questionNumber": 47,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A graphic designer is creating a logo for a company. The logo is shown in the figure. The logo is in the shape of a trapezoid and consists of three congruent equilateral triangles. If the perimeter of the logo is $20 centimeters$, what is the combined area of the shaded regions, in square centimeters, of the logo? % \\hfill \\begin{tikzpicture}[scale=0.9] % Tọa độ các đỉnh của 3 tam giác đều ghép thành hình thang \\coordinate (A) at (0, 0); \\coordinate (B) at (1.5, 0); \\coordinate (C) at (3.0, 0); \\coordinate (D) at (0.75, 1.3); \\coordinate (E) at (2.25, 1.3); % Tô màu 2 tam giác đều hai bên \\fill[gray!45] (A) -- (D) -- (B) -- cycle; \\fill[gray!45] (B) -- (E) -- (C) -- cycle; % Vẽ đường viền \\draw[thick] (A) -- (C) -- (E) -- (D) -- cycle; % Viền hình thang \\draw[thick] (D) -- (B) -- (E); % Các cạnh bên trong \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2\\sqrt{3}$",
+      "B": "$4\\sqrt{3}$",
+      "C": "$8\\sqrt{3}$",
+      "D": "$16$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_048",
+    "questionNumber": 48,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The perimeter of an equilateral triangle is $624 centimeters$. The height of this triangle is $k\\sqrt{3} centimeters$, where $k$ is a constant. What is the value of $k$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_049",
+    "questionNumber": 49,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "\\begin{minipage}{0.6\\textwidth} In the figure above, $\\tan B = \\frac{3}{4}$. If $BC = 15$ and $DA = 4$, what is the length of $\\overline{DE}$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_050",
+    "questionNumber": 50,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "An isosceles right triangle has a hypotenuse of length $58 inches$. What is the perimeter, in inches, of this triangle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$29\\sqrt{2}$",
+      "B": "$58\\sqrt{2}$",
+      "C": "$58 + 58\\sqrt{2}$",
+      "D": "$58 + 116\\sqrt{2}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_051",
+    "questionNumber": 51,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The circle above has center $O$, the length of arc $ADC$ is $5\\pi$, and $x = 100$. What is the length of arc $ABC$? % \\hfill \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0,0) circle (1.2); \\coordinate (O) at (0,0); \\filldraw (O) circle (1.5pt) node[left] {$O$}; \\coordinate (A) at (-30:1.2); \\coordinate (C) at (50:1.2); \\coordinate (B) at (180:1.2); \\coordinate (D) at (10:1.2); \\draw[thick] (O) -- (A); \\draw[thick] (O) -- (C); \\node[right] at (A) {$A$}; \\node[above right] at (C) {$C$}; \\node[left] at (B) {$B$}; \\node[right] at (D) {$D$}; \\node at (0.3, 0.4) {\\footnotesize $x^\\circ$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$9\\pi$",
+      "B": "$13\\pi$",
+      "C": "$18\\pi$",
+      "D": "$\\frac{13}{2}\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_052",
+    "questionNumber": 52,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "The graph of $x^2 + x + y^2 + y = \\frac{199}{2}$ in the $xy$-plane is a circle. What is the length of the circle's radius?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_053",
+    "questionNumber": 53,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The equation $x^2 + 20x + y^2 + 16y = -20$ defines a circle in the $xy$-plane. What are the coordinates of the center of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(-20, -16)$",
+      "B": "$(-10, -8)$",
+      "C": "$(10, 8)$",
+      "D": "$(20, 16)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_054",
+    "questionNumber": 54,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Point $O$ is the center of the circle above, and the measure of $\\angle OAB$ is $30^\\circ$. If the length of radius $OC$ is $18$, what is the length of arc $\\widehat{AB}$? % \\hfill \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0,0) circle (1.2); \\coordinate (O) at (0,0); \\filldraw (O) circle (1.5pt) node[below] {$O$}; \\coordinate (A) at (210:1.2); \\coordinate (B) at (-30:1.2); \\coordinate (C) at (90:1.2); \\draw[thick] (A) -- (O) -- (B); \\draw[thick] (O) -- (C); \\draw[thick] (A) -- (B); \\node[below left] at (A) {$A$}; \\node[below right] at (B) {$B$}; \\node[above] at (C) {$C$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$9\\pi$",
+      "B": "$12\\pi$",
+      "C": "$15\\pi$",
+      "D": "$18\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_055",
+    "questionNumber": 55,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A circle has center $O$, and points $A$ and $B$ lie on the circle. The measure of $arc AB$ is $45^\\circ$ and the length of $arc AB$ is $3 inches$. What is the circumference, in inches, of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$3$",
+      "B": "$6$",
+      "C": "$9$",
+      "D": "$24$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_056",
+    "questionNumber": 56,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In the $xy$-plane, the graph of the equation $(x - 6)^2 + (y + 5)^2 = 16$ is a circle. Point $P$ is on the circle and has coordinates $(10, -5)$. If $\\overline{PQ}$ is a diameter of the circle, what are the coordinates of point $Q$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(2, -5)$",
+      "B": "$(6, -1)$",
+      "C": "$(6, -5)$",
+      "D": "$(6, -9)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_057",
+    "questionNumber": 57,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A circle in the $xy$-plane has its center at $(-5, 2)$ and has a radius of $9$. An equation of this circle is $x^2 + y^2 + ax + by + c = 0$, where $a$, $b$, and $c$ are constants. What is the value of $c$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_058",
+    "questionNumber": 58,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Points $A$ and $B$ lie on a circle with radius $1$, and arc $AB$ has length $\\frac{\\pi}{3}$. What fraction of the circumference of the circle is the length of arc $AB$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_059",
+    "questionNumber": 59,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A circle in the $xy$-plane has equation $(x + 3)^2 + (y - 1)^2 = 25$. Which of the following points does NOT lie in the interior of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(-7, 3)$",
+      "B": "$(-3, 1)$",
+      "C": "$(0, 0)$",
+      "D": "$(3, 2)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_060",
+    "questionNumber": 60,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Point $O$ is the center of a circle. The measure of arc $RS$ on this circle is $100^\\circ$. What is the measure, in degrees, of its associated angle $\\angle ROS$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_061",
+    "questionNumber": 61,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "The equation $(x + 6)^2 + (y + 3)^2 = 121$ defines a circle in the $xy$-plane. What is the radius of the circle?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_062",
+    "questionNumber": 62,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A circle in the $xy$-plane has its center at $(-4, -6)$. Line $k$ is tangent to this circle at the point $(-7, -7)$. What is the slope of line $k$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$-3$",
+      "B": "$-\\frac{1}{3}$",
+      "C": "$\\frac{1}{3}$",
+      "D": "$3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_063",
+    "questionNumber": 63,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A circle has center $O$, and points $R$ and $S$ lie on the circle. In triangle $ORS$, the measure of $\\angle ROS$ is $88^\\circ$. What is the measure of $\\angle RSO$, in degrees? (Disregard the degree symbol when entering your answer.)",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_064",
+    "questionNumber": 64,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the $xy$-plane, the graph of $2x^2 - 6x + 2y^2 + 2y = 45$ is a circle. What is the radius of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$5$",
+      "B": "$6.5$",
+      "C": "$\\sqrt{40}$",
+      "D": "$\\sqrt{50}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_065",
+    "questionNumber": 65,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A circle in the $xy$-plane has a diameter with endpoints $(2, 4)$ and $(2, 14)$. An equation of this circle is $(x - 2)^2 + (y - 9)^2 = r^2$, where $r$ is a positive constant. What is the value of $r$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_066",
+    "questionNumber": 66,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Circle $A$ in the $xy$-plane has the equation $(x + 5)^2 + (y - 5)^2 = 4$. Circle $B$ has the same center as circle $A$. The radius of circle $B$ is two times the radius of circle $A$. The equation defining circle $B$ in the $xy$-plane is $(x + 5)^2 + (y - 5)^2 = k$, where $k$ is a constant. What is the value of $k$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_067",
+    "questionNumber": 67,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "What is the diameter of the circle in the $xy$-plane with equation $(x - 5)^2 + (y - 3)^2 = 16$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$4$",
+      "B": "$8$",
+      "C": "$16$",
+      "D": "$32$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_068",
+    "questionNumber": 68,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The length of each edge of a box is $35 inches$. Each side of the box is in the shape of a square. The box does not have a lid. What is the exterior surface area, in square inches, of this box without a lid?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_069",
+    "questionNumber": 69,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, where angle $A$ corresponds to angle $D$ and angles $C$ and $F$ are right angles. If $\\sin(A) = \\frac{7}{25}$, what is the value of $\\sin(D)$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{24}{25}$",
+      "B": "$\\frac{7}{25}$",
+      "C": "$\\frac{25}{7}$",
+      "D": "$\\frac{25}{24}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_070",
+    "questionNumber": 70,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A right circular cylinder has a volume of $80\\pi$. If the height of the cylinder is $5$, what is the radius of the cylinder?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$4$",
+      "B": "$8$",
+      "C": "$16$",
+      "D": "$75$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_071",
+    "questionNumber": 71,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In right triangle $PQR$, the sum of the measures of angle $P$ and angle $Q$ is $90^\\circ$. The value of $\\sin(P)$ is $\\frac{4}{5}$. What is the value of $\\cos(Q)$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{3}{5}$",
+      "B": "$\\frac{4}{5}$",
+      "C": "$\\frac{5}{4}$",
+      "D": "$\\frac{5}{3}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_072",
+    "questionNumber": 72,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "What is the length of one side of a square that has the same area as a circle with radius $6$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$6$",
+      "B": "$\\sqrt{6\\pi}$",
+      "C": "$6\\sqrt{\\pi}$",
+      "D": "$6\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_073",
+    "questionNumber": 73,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangle $ABC$ shown is a right triangle, where angle $C$ is the right angle. Which of the following has the same value as $\\sin(A)$? % \\hfill \\begin{tikzpicture}[scale=0.7] \\coordinate (C) at (0,0); \\coordinate (A) at (0,3); \\coordinate (B) at (3,0); \\draw[thick] (A) -- (B) -- (C) -- cycle; \\draw (0, 0.3) -- (0.3, 0.3) -- (0.3, 0); \\node[above left] at (A) {$A$}; \\node[below right] at (B) {$B$}; \\node[below left] at (C) {$C$}; \\node[left] at (0, 1.5) {$27$}; \\node[below] at (1.5, 0) {$35$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\sin(B)$",
+      "B": "$\\tan(A)$",
+      "C": "$\\tan(B)$",
+      "D": "$\\cos(B)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_074",
+    "questionNumber": 74,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Square $X$ has a side length of $9 centimeters$. The perimeter of square $Y$ is $5$ times the perimeter of square $X$. What is the length, in centimeters, of one side of square $Y$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$14$",
+      "B": "$36$",
+      "C": "$180$",
+      "D": "$45$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_075",
+    "questionNumber": 75,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the figure, line $m$ is parallel to line $n$, and both lines are intersected by line $t$. If $x = 4y$, what is the value of $y$? \\textit{Note: Figure not drawn to scale.}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_076",
+    "questionNumber": 76,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the figure above, $AF$, $BE$, and $CD$ are parallel. Points $B$ and $E$ lie on $AC$ and $FD$, respectively. If $AB = 12$, $BC = 21$, and $FE = 9.5$, what is the length of $ED$, to the nearest tenth? % \\hfill \\begin{tikzpicture}[scale=0.95] % Tọa độ các đỉnh của hình thang mở rộng lên trên \\coordinate (A) at (0.6, 0); \\coordinate (F) at (1.8, 0); \\coordinate (B) at (0.3, 1.0); \\coordinate (E) at (2.1, 1.0); \\coordinate (C) at (0, 2.6); \\coordinate (D) at (2.6, 2.6); % Các đoạn thẳng song song \\draw[thick] (A) -- (F); % Đáy dưới AF \\draw[thick] (B) -- (E); % Đoạn giữa BE \\draw[thick] (C) -- (D); % Đáy trên CD % Hai cạnh bên \\draw[thick] (A) -- (C); % Cạnh bên AC \\draw[thick] (F) -- (D); % Cạnh bên FD % Nhãn các đỉnh \\node[below] at (A) {$A$}; \\node[below] at (F) {$F$}; \\node[left] at (B) {$B$}; \\node[right] at (E) {$E$}; \\node[above left] at (C) {$C$}; \\node[above right] at (D) {$D$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$15.7$",
+      "B": "$16.6$",
+      "C": "$17.4$",
+      "D": "$18.8$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_077",
+    "questionNumber": 77,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A right triangle has a hypotenuse of $41$, a side of $40$, and a side of $9$. What is the value of $\\tan(A)$, where angle $A$ is opposite the side of length $9$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{9}{41}$",
+      "B": "$\\frac{40}{41}$",
+      "C": "$\\frac{9}{40}$",
+      "D": "$\\frac{40}{9}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_078",
+    "questionNumber": 78,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A circle has a radius of $7 meters$. What is the area, in square meters, of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$7$",
+      "B": "$14$",
+      "C": "$14\\pi$",
+      "D": "$49\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_079",
+    "questionNumber": 79,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Circle $N$ has a radius of $8 millimeters$. Circle $M$ has an area of $30\\pi mm^2$. What is the total area, in $mm^2$, of circles $N$ and $M$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$94\\pi$",
+      "B": "$38\\pi$",
+      "C": "$64\\pi$",
+      "D": "$240\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_080",
+    "questionNumber": 80,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The three points shown define a circle. The circumference of this circle is $k\\pi$, where $k$ is a constant. What is the value of $k$? % \\hfill \\begin{tikzpicture}[scale=0.28] % Lưới ô vuông \\draw[step=1, gray!40, thin] (0, 0) grid (15, 15); % Hai trục tọa độ \\draw[thick, ->] (0, 0) -- (15.5, 0) node[right] {$x$}; \\draw[thick, ->] (0, 0) -- (0, 15.5) node[above] {$y$}; % Các vạch chia và số trên trục x \\foreach \\x in {2, 4, 6, 8, 10, 12, 14} { \\draw[thick] (\\x, 0.2) -- (\\x, -0.2) node[below, scale=0.7] {\\x}; } % Các vạch chia và số trên trục y \\foreach \\y in {2, 4, 6, 8, 10, 12, 14} { \\draw[thick] (0.2, \\y) -- (-0.2, \\y) node[left, scale=0.7] {\\y}; } % Gốc tọa độ O \\node[below left, scale=0.8] at (0, 0) {$O$}; % 3 điểm đề bài cho \\filldraw[black] (6, 8) circle (6pt); \\filldraw[black] (7, 5) circle (6pt); \\filldraw[black] (7, 11) circle (6pt); \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$5$",
+      "B": "$10$",
+      "C": "$4$",
+      "D": "$25$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_081",
+    "questionNumber": 81,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "What is the volume, in cubic centimeters, of a right rectangular prism that has a length of $6 centimeters$, a width of $8 centimeters$, and a height of $12 centimeters$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_082",
+    "questionNumber": 82,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A right circular cylinder has a volume of $504 cubic centimeters$. The area of the base of the cylinder is $18 square centimeters$. What is the height, in centimeters, of the cylinder?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_083",
+    "questionNumber": 83,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Two nearby trees are perpendicular to the ground, which is flat. One of these trees is $18 feet$ tall and has a shadow that is $12 feet$ long. At the same time, the shadow of the other tree is $20 feet$ long. How tall, in feet, is the other tree?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$8$",
+      "B": "$30$",
+      "C": "$14$",
+      "D": "$26$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_084",
+    "questionNumber": 84,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Triangle $PQR$ is similar to triangle $STU$. The lengths represented by $PQ$, $QR$, $ST$, and $TU$ in the figure are $8$, $12$, $6$, and $x$, respectively. What is the length of $TU$? % \\hfill \\begin{tikzpicture}[scale=0.85] % Đường đáy thẳng hàng P - R - T \\coordinate (P) at (0, 0); \\coordinate (R) at (2.4, 0); \\coordinate (T) at (4.0, 0); % Đỉnh đứng Q và S \\coordinate (Q) at (0, 1.8); \\coordinate (S) at (4.0, 1.2); % Vẽ 2 tam giác \\draw[thick] (Q) -- (P) -- (T) -- (S) -- (R) -- (Q); % Ký hiệu góc vuông tại P và T \\draw (P) ++(0, 0.22) -- ++(0.22, 0) -- ++(0, -0.22); \\draw (T) ++(0, 0.22) -- ++(-0.22, 0) -- ++(0, -0.22); % Nhãn đỉnh \\node[below left] at (P) {$P$}; \\node[above left] at (Q) {$Q$}; \\node[above] at (R) {$R$}; \\node[above] at (S) {$S$}; \\node[below right] at (T) {$T$}; % Nhãn góc x tại đỉnh R \\node at (1.9, 0.15) {\\footnotesize $x^\\circ$}; \\node at (2.9, 0.15) {\\footnotesize $x^\\circ$}; \\end{tikzpicture} {\\footnotesize \\textit{Note: Figure not drawn to scale.}}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$9$",
+      "B": "$16$",
+      "C": "$4$",
+      "D": "$18$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_085",
+    "questionNumber": 85,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, where $A, B,$ and $C$ correspond to $D, E,$ and $F$, respectively. In triangle $ABC$, the length of $\\overline{AB}$ is $10$ and the length of $\\overline{BC}$ is $15$. In triangle $DEF$, the length of $\\overline{DE}$ is $4$. What is the length of $\\overline{EF}$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$9$",
+      "B": "$10$",
+      "C": "$15$",
+      "D": "$6$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_086",
+    "questionNumber": 86,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "What is the value of $\\cos(\\theta)$ in the triangle shown, where the leg adjacent to angle $\\theta$ has length $8$ and the hypotenuse has length $17$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\frac{15}{17}$",
+      "B": "$\\frac{8}{17}$",
+      "C": "$\\frac{17}{8}$",
+      "D": "$\\frac{8}{15}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_087",
+    "questionNumber": 87,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.65\\textwidth} The lengths, in inches, of two legs of a right triangle, are $6 inches$ and $4 inches$. What is the area of the triangle, in square inches?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_088",
+    "questionNumber": 88,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A cube has an edge length of $7 inches$. What is the volume, in cubic inches, of the cube?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$28$",
+      "B": "$49$",
+      "C": "$294$",
+      "D": "$343$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_089",
+    "questionNumber": 89,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The length of the edge of the base of a right square prism is $4 units$. The volume of the prism is $192 cubic units$. What is the height, in units, of the prism?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$6$",
+      "B": "$16$",
+      "C": "$8$",
+      "D": "$12$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_090",
+    "questionNumber": 90,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A cylinder has a diameter of $10 inches$ and a height of $8 inches$. What is the volume, in cubic inches, of the cylinder?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$25\\pi$",
+      "B": "$80$",
+      "C": "$200\\pi$",
+      "D": "$800\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_091",
+    "questionNumber": 91,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Square $A$ has side lengths that are $7$ times the side lengths of square $B$. The area of square $A$ is $k$ times the area of square $B$. What is the value of $k$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$49$",
+      "B": "$7$",
+      "C": "$14$",
+      "D": "$21$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_092",
+    "questionNumber": 92,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A manufacturing company produces two sizes of cylindrical containers that each have a height of $60 centimeters$. The radius of container $A$ is $20 centimeters$, and the radius of container $B$ is $25\\%$ longer than the radius of container $A$. What is the volume, in cubic centimeters, of container $B$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$30{,}000\\pi$",
+      "B": "$37{,}500\\pi$",
+      "C": "$24{,}000\\pi$",
+      "D": "$46{,}875\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_093",
+    "questionNumber": 93,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A sphere has a radius of $6 feet$. What is the volume, in cubic feet, of the sphere?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$144\\pi$",
+      "B": "$36\\pi$",
+      "C": "$216\\pi$",
+      "D": "$288\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_094",
+    "questionNumber": 94,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In triangle $XYZ$, angle $Z$ is a right angle and the length of $\\overline{XY}$ is $65 millimeters$. If $\\cos(X) = \\frac{5}{13}$, what is the length, in millimeters, of $\\overline{XZ}$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$5$",
+      "B": "$25$",
+      "C": "$60$",
+      "D": "$169$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_095",
+    "questionNumber": 95,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Each side of equilateral triangle $S$ is multiplied by a scale factor of $k$ to create equilateral triangle $T$. The length of each side of triangle $T$ is greater than the length of each side of triangle $S$. Which of the following could be the value of $k$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2.5$",
+      "B": "$1$",
+      "C": "$0.5$",
+      "D": "$-2$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_096",
+    "questionNumber": 96,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A right circular cylinder has a height of $9 m$ and a base with a radius of $4 m$. What is the volume, $V$, of the cylinder?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$36\\pi$",
+      "B": "$72\\pi$",
+      "C": "$81\\pi$",
+      "D": "$144\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_097",
+    "questionNumber": 97,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangles $ABC$ and $DEF$ are shown above, where angle $C$ and angle $F$ are right angles, the measure of angle $A$ is $25^\\circ$, and the measure of angle $E$ is $65^\\circ$. Which of the following is equal to the ratio $BC/AB$? \\begin{tikzpicture}[scale=0.95] % --- Tam giác ABC (bên trái) --- \\coordinate (A) at (0, 0); \\coordinate (C) at (2.4, 0); \\coordinate (B) at (2.4, 1.15); \\draw[thick] (A) -- (C) -- (B) -- cycle; \\draw (C) ++(-0.22, 0) -- ++(0, 0.22) -- ++(0.22, 0); \\node[left] at (A) {$A$}; \\node[right] at (C) {$C$}; \\node[above] at (B) {$B$}; \\node at (0.8, 0.18) {\\footnotesize $25^\\circ$}; % --- Tam giác DEF (bên phải) --- \\begin{scope}[xshift=3.8cm] \\coordinate (D) at (0, 0); \\coordinate (F) at (1.3, 0); \\coordinate (E) at (1.3, 2.75); \\draw[thick] (D) -- (F) -- (E) -- cycle; \\draw (F) ++(-0.22, 0) -- ++(0, 0.22) -- ++(0.22, 0); \\node[left] at (D) {$D$}; \\node[right] at (F) {$F$}; \\node[above] at (E) {$E$}; \\node at (0.45, 0.18) {\\footnotesize $25^\\circ$}; \\node at (1.05, 2.05) {\\footnotesize $65^\\circ$}; \\end{scope} \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\text{DE}/\\text{DF}$",
+      "B": "$\\text{DF}/\\text{DE}$",
+      "C": "$\\text{DF}/\\text{EF}$",
+      "D": "$\\text{EF}/\\text{DE}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_098",
+    "questionNumber": 98,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "What is the radius of the circle in the $xy$-plane defined by $(x - 3)^2 + (y + 5)^2 = 169$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_099",
+    "questionNumber": 99,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "There are $2$ similar triangles $ABC$ and $DEF$, where $\\overline{AB}$ corresponds to $\\overline{DE}$. The perimeter of triangle $ABC$ is $24$ and the perimeter of triangle $DEF$ is $60$. The length of $\\overline{AB}$ is $6$. What is the length of $\\overline{DE}$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$12$",
+      "B": "$6$",
+      "C": "$24$",
+      "D": "$15$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_100",
+    "questionNumber": 100,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the figure shown, lines $m$ and $n$ are parallel, and line $t$ intersects both lines. If $x > 50$, which of the following must be true? % \\hfill \\begin{tikzpicture}[scale=0.9] % Hai đường thẳng thẳng đứng song song m và n \\draw[thick] (1.0, -0.4) -- (1.0, 3.2) node[above] {$m$}; \\draw[thick] (2.5, -0.4) -- (2.5, 3.2) node[above] {$n$}; % Cát tuyến t (dốc xuống sang phải) \\draw[thick] (0.2, 3.2) node[above left] {$t$} -- (3.3, 0.1); % Giao điểm của t với m (x=1.0, y=2.4) và n (x=2.5, y=0.9) \\coordinate (Im) at (1.0, 2.4); \\coordinate (In) at (2.5, 0.9); % Cung góc tại giao điểm với m \\draw (0.8, 2.6) arc (135:90:0.28); \\node at (1.3, 2.45) {\\footnotesize $x^\\circ$}; % Cung góc tại giao điểm với n \\draw (2.5, 1.25) arc (90:-45:0.35); \\draw (2.5, 0.55) arc (-90:-45:0.35); \\node at (2.7, 0.65) {\\footnotesize $y^\\circ$}; \\end{tikzpicture} {\\footnotesize \\textit{Note: Figure not drawn to scale.}}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$y > 130$",
+      "B": "$y < 130$",
+      "C": "$y > 50$",
+      "D": "$y < 50$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_101",
+    "questionNumber": 101,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A circle has a circumference of $47 centimeters$. What is the diameter, in centimeters, of the circle?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_102",
+    "questionNumber": 102,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Circle $X$ has a radius of $5$. Circle $Y$ has an area of $24\\pi$. What is the total area, $A$, of circles $X$ and $Y$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$60\\pi$",
+      "B": "$80\\pi$",
+      "C": "$600\\pi$",
+      "D": "$49\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_103",
+    "questionNumber": 103,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A circle in the $xy$-plane has the equation $(x - 7)^2 + (y + 2)^2 = 36$. Which of the following gives the center of the circle and its radius?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "The center is at $(7, -2)$ and the radius is $6$.",
+      "B": "The center is at $(-7, 2)$ and the radius is $6$.",
+      "C": "The center is at $(7, -2)$ and the radius is $36$.",
+      "D": "The center is at $(-7, 2)$ and the radius is $36$."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_104",
+    "questionNumber": 104,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Triangle $ABC$ is similar to triangle $DEF$, such that $A$, $B$, and $C$ correspond to $D$, $E$, and $F$ respectively. The length of each side of triangle $DEF$ is $4$ times the length of its corresponding side in triangle $ABC$. The measure of side $BC$ is $8$. What is the measure of side $EF$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2$",
+      "B": "$4$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_105",
+    "questionNumber": 105,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangle $XYZ$, the measures of angle $X$ and angle $Y$ are each $35^\\circ$. What is the measure of angle $Z$, in degrees? (Disregard the degree symbol when entering your answer.)",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_106",
+    "questionNumber": 106,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In triangle $ABC$, the measure of angle $A$ is $40^\\circ$ and the measure of angle $B$ is $75^\\circ$. In triangle $DEF$, the measure of angle $D$ is $75^\\circ$ and the measure of angle $E$ is $65^\\circ$. Which of the following additional pieces of information is needed to determine whether triangle $ABC$ is similar to triangle $DEF$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "The measure of angle $C$",
+      "B": "The measure of angle $F$",
+      "C": "The measure of angle $C$ and the measure of angle $F$",
+      "D": "No additional information is needed."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_107",
+    "questionNumber": 107,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Quadrilateral $ABCD$ is similar to quadrilateral $EFGH$, where $A, B, C,$ and $D$ correspond to $E, F, G,$ and $H$, respectively. The measure of angle $A$ is $80^\\circ$, the measure of angle $B$ is $110^\\circ$, and the measure of angle $C$ is $95^\\circ$. The length of each side of $EFGH$ is $3$ times the length of each corresponding side of $ABCD$. What is the measure of angle $G$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$80^\\circ$",
+      "B": "$95^\\circ$",
+      "C": "$110^\\circ$",
+      "D": "$285^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_108",
+    "questionNumber": 108,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The number of radians in a $540$-degree angle can be written as $a\\pi$, where $a$ is a constant. What is the value of $a$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_109",
+    "questionNumber": 109,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "For a triangle, where the legs have lengths $7$ and $y$ and the hypotenuse has length $z$, which expression represents the value of $y$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\sqrt{z^2 - 49}$",
+      "B": "$\\sqrt{z^2 + 49}$",
+      "C": "$z - 7$",
+      "D": "$z + 7$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_110",
+    "questionNumber": 110,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Points $A$, $B$, and $C$ lie on the circle shown. On this circle, minor arc $AB$ has a length of $7 centimeters$ and major arc $AB$ has a length of $33 centimeters$. What is the circumference, in centimeters, of the circle shown? % \\hfill \\begin{tikzpicture}[scale=0.9] \\draw[thick] (0,0) circle (1.3); \\filldraw[black] (0,0) circle (1.5pt); \\filldraw[black] (115:1.3) circle (1.5pt) node[above left] {$A$}; \\filldraw[black] (65:1.3) circle (1.5pt) node[above right] {$B$}; \\filldraw[black] (-35:1.3) circle (1.5pt) node[below right] {$C$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$7$",
+      "B": "$26$",
+      "C": "$33$",
+      "D": "$40$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_111",
+    "questionNumber": 111,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangle $ABC$, the measure of angle $A$ is $70^\\circ$. If triangle $ABC$ is isosceles, which of the following is \\textbf{NOT} a possible measure of angle $B$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$70^\\circ$",
+      "B": "$55^\\circ$",
+      "C": "$40^\\circ$",
+      "D": "$120^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_112",
+    "questionNumber": 112,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the figure, lines $m$ and $n$ are parallel. If $3x = y + 30$ and $2x + 50 = y + 70$, what is the value of $z$, where $z$ is the same-side interior angle supplementary to $y$? \\textit{Note: Figure not drawn to scale.} % \\hfill \\begin{tikzpicture}[scale=0.8] \\draw[thick] (-1.5,1.2) -- (2.5,1.2) node[right] {$m$}; \\draw[thick] (-1.5,-0.6) -- (2.5,-0.6) node[right] {$n$}; \\draw[thick] (-1.3,2.4) node[above] {$t$} -- (2.3,-1.8); \\node at (-0.3, 0.95) {$y$}; \\node at (0.2, 0.95) {$x$}; \\node at (0.7, -0.4) {$z$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$30$",
+      "B": "$60$",
+      "C": "$110$",
+      "D": "$70$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_113",
+    "questionNumber": 113,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "One leg of a right triangle has a length of $24 millimeters$. The hypotenuse of the triangle has a length of $25 millimeters$. What is the length of the other leg of the triangle, in millimeters?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$1$",
+      "B": "$49$",
+      "C": "$7$",
+      "D": "$\\sqrt{49}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_114",
+    "questionNumber": 114,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangle $ABC$, $AB$ is extended to point $D$. The measure of angle $CBD$ is $130^\\circ$, and the measure of angle $BCA$ is $40^\\circ$. What is the measure of angle $BAC$? \\textit{Note: Figure not drawn to scale.} % \\hfill \\begin{tikzpicture}[scale=0.8] \\coordinate (A) at (0,0); \\coordinate (B) at (2.2,0); \\coordinate (C) at (0,2.6); \\coordinate (D) at (3.5,0); \\draw[thick] (C) -- (A) -- (D); \\draw[thick] (C) -- (B); \\node[below left] at (A) {$A$}; \\node[below] at (B) {$B$}; \\node[above] at (C) {$C$}; \\node[below right] at (D) {$D$}; \\draw (0, 2.1) arc (-90:-45:0.5); \\node at (0.35, 1.9) {\\footnotesize $40^\\circ$}; \\draw (2.5, 0) arc (0:135:0.3); \\node at (2.3, 0.5) {\\footnotesize $130^\\circ$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$50^\\circ$",
+      "B": "$90^\\circ$",
+      "C": "$130^\\circ$",
+      "D": "$40^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_115",
+    "questionNumber": 115,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "What is the center of the circle in the $xy$-plane defined by the equation $(x+4)^2 + (y-9)^2 = 25$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(4,-9)$",
+      "B": "$(4,9)$",
+      "C": "$(-4,9)$",
+      "D": "$(-4,-9)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_116",
+    "questionNumber": 116,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "An angle has a measure of $9\\pi/20 radians$. What is the measure of the angle in degrees?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_117",
+    "questionNumber": 117,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In the $xy$-plane, the graph of the equation $x^2 + y^2 - 10x + 6y = 47$ is a circle. The point $(8, k)$, where $k$ is a constant, lies on this circle. What is the greatest possible value of $k$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_118",
+    "questionNumber": 118,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the $xy$-plane shown, square $ABCD$ has its diagonals on the $x$- and $y$-axes, with vertices at $(0,7)$, $(-7, 0)$, $(0,-7)$, and $(7, 0)$. What is the area, in square units, of the square?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$28$",
+      "B": "$49$",
+      "C": "$98$",
+      "D": "$196$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_119",
+    "questionNumber": 119,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The glass pictured above can hold a maximum volume of $591 cubic centimeters$, which is approximately $20 fluid ounces$. The volume formula for the glass is $V = 7\\pi k^3/48$. What is the value of $k$, in centimeters? % \\hfill \\begin{tikzpicture}[scale=0.9] % Công thức bên trái \\node[left] at (-1.3, 1.2) {$Volume = \\dfrac{7\\pi k^3}{48}$}; % Miệng cốc (đáy trên) \\draw[thick] (0, 2.4) ellipse (1.1 and 0.3); % Đáy dưới cốc \\draw[thick] (-0.55, 0) arc (180:360:0.55 and 0.16); \\draw[thick, dashed] (-0.55, 0) arc (180:0:0.55 and 0.16); % Hai thành bên của cốc \\draw[thick] (-1.1, 2.4) -- (-0.55, 0); \\draw[thick] (1.1, 2.4) -- (0.55, 0); % Kích thước đường kính miệng cốc (k) \\draw[|<->|] (-1.1, 2.9) -- (1.1, 2.9) node[midway, fill=gray!5, inner sep=1pt] {\\small $k$}; % Kích thước chiều cao cốc (k) \\draw[|<->|] (1.5, 0) -- (1.5, 2.4) node[midway, fill=gray!5, inner sep=1pt] {\\small $k$}; % Kích thước đường kính đáy cốc (k/2) \\draw[|<->|] (-0.55, -0.45) -- (0.55, -0.45) node[midway, fill=gray!5, inner sep=1pt] {\\small $\\frac{k}{2}$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$2.71$",
+      "B": "$8.27$",
+      "C": "$8.39$",
+      "D": "$10.89$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_120",
+    "questionNumber": 120,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangle $ABC$, the measure of angle $A$ is $x^\\circ$, the measure of angle $B$ is $(2x)^\\circ$, and the measure of angle $C$ is $(3x)^\\circ$. What is the value of $x$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$60$",
+      "B": "$45$",
+      "C": "$30$",
+      "D": "$90$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_121",
+    "questionNumber": 121,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A triangle has a base length of $14 centimeters$ and a height of $9 centimeters$. What is the area, in square centimeters, of the triangle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$23$",
+      "B": "$126$",
+      "C": "$63$",
+      "D": "$46$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_122",
+    "questionNumber": 122,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A cylindrical can containing pieces of fruit is filled to the top with syrup before being sealed. The base of the can has an area of $90 cm^2$, and the height of the can is $12 cm$. If $145 cm^3$ of syrup is needed to fill the can to the top, which of the following is closest to the total volume of the pieces of fruit in the can?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$12\\text{ cm}^3$",
+      "B": "$235\\text{ cm}^3$",
+      "C": "$935\\text{ cm}^3$",
+      "D": "$1080\\text{ cm}^3$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_123",
+    "questionNumber": 123,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "A right circular cylinder has a volume of $96\\pi cubic centimeters$. The area of the base of the cylinder is $12\\pi square centimeters$. What is the height, in centimeters, of the cylinder?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$8$",
+      "B": "$12$",
+      "C": "$96$",
+      "D": "$16$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_124",
+    "questionNumber": 124,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Right triangles $ABC$ and $DEF$ are similar, where $A$ and $D$ correspond to each other, respectively. Angle $A$ has a measure of $47^\\circ$. What is the measure of angle $D$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$43^\\circ$",
+      "B": "$47^\\circ$",
+      "C": "$133^\\circ$",
+      "D": "$90^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_125",
+    "questionNumber": 125,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A triangle has a base length of $22 centimeters$ and a corresponding height of $10 centimeters$. What is the area, in square centimeters, of the triangle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$220$",
+      "B": "$110$",
+      "C": "$55$",
+      "D": "$32$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_126",
+    "questionNumber": 126,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In triangle $ABC$ above, with a $30^\\circ$ angle at $B$, a right angle at $D$ where $D$ is on $AC$, $BC = 18$, and an angle of $60^\\circ$ at $C$, what is the length of $AD$? % \\hfill \\begin{tikzpicture}[scale=0.95] % Tọa độ các đỉnh: % Đường cao BD = 18 * sin(60) ≈ 15.588, CD = 18 * cos(60) = 9 % AD = BD * tan(30) = 9. Do đó tam giác cân tại B với BD là phân giác. \\coordinate (D) at (0, 0); \\coordinate (B) at (0, 3.2); \\coordinate (C) at (1.85, 0); \\coordinate (A) at (-1.85, 0); % Vẽ tam giác ABC và đường cao BD \\draw[thick] (A) -- (C) -- (B) -- cycle; \\draw[thick] (B) -- (D); % Ký hiệu góc vuông tại D (bên phải) \\draw (D) ++(0.24, 0) -- ++(0, 0.24) -- ++(-0.24, 0); % Nhãn các đỉnh \\node[left] at (A) {$A$}; \\node[below] at (D) {$D$}; \\node[right] at (C) {$C$}; \\node[above] at (B) {$B$}; % Nhãn độ dài và các góc \\node[above right] at (0.9, 1.6) {$18$}; \\node at (-0.3, 2.3) {\\footnotesize $30^\\circ$}; \\node at (1.3, 0.25) {\\footnotesize $60^\\circ$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$6$",
+      "B": "$9$",
+      "C": "$9\\sqrt{2}$",
+      "D": "$9\\sqrt{3}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_127",
+    "questionNumber": 127,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "The length of each side of a square is $11p centimeters (cm)$. Which expression gives the area, in $cm^2$, of the square?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$11p$",
+      "B": "$22p$",
+      "C": "$44p$",
+      "D": "$121p^2$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_128",
+    "questionNumber": 128,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "In the $xy$-plane shown, points $P$, $Q$, $R$, and $T$ lie on the circle with center $O$. The degree measures of angles $POQ$ and $ROT$ are each $45^\\circ$. What is the radian measure of angle $QOR$? % \\hfill \\begin{tikzpicture}[scale=0.9] \\draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$}; \\draw[->] (0,-1.5) -- (0,1.8) node[above] {$y$}; \\draw[thick] (0,0) circle (1.2); \\coordinate (O) at (0,0); \\node[below left] at (O) {$O$}; \\filldraw (1.2,0) circle (1.5pt) node[below right] {\\footnotesize $P\\,(1,0)$}; \\filldraw (-1.2,0) circle (1.5pt) node[below left] {\\footnotesize $T\\,(-1,0)$}; \\filldraw (45:1.2) circle (1.5pt) node[above right] {$Q$}; \\filldraw (135:1.2) circle (1.5pt) node[above left] {$R$}; \\draw[thick] (O) -- (45:1.2); \\draw[thick] (O) -- (135:1.2); \\draw (0.15,0.15) -- (0,0.3) -- (-0.15,0.15); \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$3\\pi/4$",
+      "B": "$5\\pi/8$",
+      "C": "$\\pi/2$",
+      "D": "$\\pi/4$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_129",
+    "questionNumber": 129,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In the figure, segments $AE$ and $BD$ are parallel. If angle $BDC$ measures $64^\\circ$ and angle $ACE$ measures $56^\\circ$, what is the measure of angle $CAE$? \\textit{Note: Figure not drawn to scale.} % \\hfill \\begin{tikzpicture}[scale=0.8] \\coordinate (C) at (1.5, 2.5); \\coordinate (A) at (0, 0); \\coordinate (E) at (3.2, 0); \\coordinate (B) at (0.75, 1.25); \\coordinate (D) at (2.35, 1.25); \\draw[thick] (A) -- (C) -- (E) -- cycle; \\draw[thick] (B) -- (D); \\node[above] at (C) {$C$}; \\node[left] at (B) {$B$}; \\node[right] at (D) {$D$}; \\node[below left] at (A) {$A$}; \\node[below right] at (E) {$E$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$64^\\circ$",
+      "B": "$60^\\circ$",
+      "C": "$56^\\circ$",
+      "D": "$120^\\circ$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_130",
+    "questionNumber": 130,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "The circle shown has center $O$, circumference $144$, and diameters $PR$ and $QS$. The length of arc $PQ$ is twice the length of arc $QR$. What is the length of arc $QR$? \\textit{Note: Figure not drawn to scale.} % \\hfill \\begin{tikzpicture}[scale=0.9] \\draw[thick] (0,0) circle (1.2); \\coordinate (O) at (0,0); \\node[left] at (O) {$O$}; \\coordinate (P) at (-60:1.2); \\coordinate (R) at (120:1.2); \\coordinate (Q) at (-120:1.2); \\coordinate (S) at (60:1.2); \\draw[thick] (-65:1.2) node[below] {$Q$} -- (115:1.2) node[above] {$S$}; \\draw[thick] (-115:1.2) node[below] {$P$} -- (65:1.2) node[above] {$R$}; \\end{tikzpicture}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$48$",
+      "B": "$24$",
+      "C": "$36$",
+      "D": "$72$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_131",
+    "questionNumber": 131,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the triangle shown, an isosceles right triangle has a right angle and two legs each of length $6$. What is the value of $x$, the measure of one of the non-right angles?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_132",
+    "questionNumber": 132,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The length of a rectangle's diagonal is $17$, and the length of the rectangle's shorter side is $8$. What is the length of the rectangle's longer side?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$9$",
+      "B": "$15$",
+      "C": "$25$",
+      "D": "$225$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_133",
+    "questionNumber": 133,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A right circular cylinder has a base diameter of $12 centimeters$ and a height of $10 centimeters$. What is the volume, in cubic centimeters, of the cylinder?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$120\\pi$",
+      "B": "$1440\\pi$",
+      "C": "$360\\pi$",
+      "D": "$60\\pi$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_134",
+    "questionNumber": 134,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the right triangle $PQR$ shown above, where angle $P$ is the right angle, angle $R$ is $30^\\circ$, and the hypotenuse $QR$ has length $14$, what is the length of $PQ$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_135",
+    "questionNumber": 135,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The length of one side of square $M$ is $4$ times the length of one side of square $N$. The area of square $N$ is $25 square feet$. What is the area, in square feet, of square $M$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$400$",
+      "B": "$100$",
+      "C": "$200$",
+      "D": "$625$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_136",
+    "questionNumber": 136,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangles $ABC$ and $DEF$ are congruent, where $A$ corresponds to $D$, and $C$ and $F$ are right angles. The measure of angle $B$ is $32^\\circ$. What is the measure, in degrees, of angle $D$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_137",
+    "questionNumber": 137,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "An angle has a measure of $17\\pi/15 radians$. What is the measure of the angle, in degrees?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_138",
+    "questionNumber": 138,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "\\begin{minipage}{0.55\\textwidth} In the triangle shown, an isosceles right triangle has a right angle and two legs each of length $11$. What is the value of $x$, the measure of one of the non-right angles?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_139",
+    "questionNumber": 139,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A circle has a radius of $1.5 inches$. The area of the circle is $k\\pi square inches$, where $k$ is a constant. What is the value of $k$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_140",
+    "questionNumber": 140,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "A right triangle has legs with lengths of $9 centimeters$ and $40 centimeters$. What is the length of this triangle's hypotenuse, in centimeters?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$49$",
+      "B": "$41$",
+      "C": "$31$",
+      "D": "$1681$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_141",
+    "questionNumber": 141,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "The measure of angle $A$ is $\\pi/4 radians$. The measure of angle $B$ is $\\pi/6 radians$ greater than the measure of angle $A$. What is the measure of angle $B$, in degrees?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$30$",
+      "B": "$45$",
+      "C": "$75$",
+      "D": "$105$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_142",
+    "questionNumber": 142,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "Triangle $ABC$ and triangle $DEF$ are shown. The relationship between the side lengths of the two triangles is such that $AB/DE = BC/EF = AC/DF = 5$. If the measure of angle $BAC$ is $35^\\circ$, what is the measure, in degrees, of angle $EDF$? (Disregard the degree symbol when gridding your answer.) \\begin{tikzpicture}[scale=0.95] % --- Tam giác ABC (bên trái) --- \\coordinate (A) at (0, 0); \\coordinate (B) at (2.2, 1.3); \\coordinate (C) at (3.5, 0.35); \\draw[thick] (A) -- (B) -- (C) -- cycle; \\node[below left] at (A) {$A$}; \\node[above] at (B) {$B$}; \\node[right] at (C) {$C$}; % --- Tam giác DEF (bên phải) --- \\begin{scope}[xshift=4.6cm, yshift=-0.05cm, scale=0.68] \\coordinate (D) at (0, 0); \\coordinate (E) at (2.2, 1.3); \\coordinate (F) at (3.5, 0.35); \\draw[thick] (D) -- (E) -- (F) -- cycle; \\node[below left] at (D) {$D$}; \\node[above] at (E) {$E$}; \\node[right] at (F) {$F$}; \\end{scope} \\end{tikzpicture} {\\footnotesize \\textit{Note: Figures not drawn to scale.}}",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_143",
+    "questionNumber": 143,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "The measure of angle $A$ is $30^\\circ$. What is the measure, in radians, of angle $A$?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$\\pi/3$",
+      "B": "$\\pi/6$",
+      "C": "$\\pi/4$",
+      "D": "$\\pi/2$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_144",
+    "questionNumber": 144,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "Rectangles $ABCD$ and $EFGH$ shown are similar, where $A, B, C,$ and $D$ correspond to $E, F, G,$ and $H$, respectively. The length of $AB$ is $8 inches$, the length of $BC$ is $12 inches$, and the length of $EF$ is $6 inches$. What is the length, in inches, of $FG$? \\begin{tikzpicture}[scale=0.95] % --- Hình chữ nhật ABCD (bên trái) --- \\draw[thick] (0, 0) rectangle (2.7, 1.8); \\node[below left] at (0, 0) {$A$}; \\node[above left] at (0, 1.8) {$B$}; \\node[above right] at (2.7, 1.8) {$C$}; \\node[below right] at (2.7, 0) {$D$}; \\node[left] at (0, 0.9) {\\footnotesize $8 in$}; \\node[above] at (1.35, 1.8) {\\footnotesize $12 in$}; % --- Hình chữ nhật EFGH (bên phải) --- \\begin{scope}[xshift=3.8cm] \\draw[thick] (0, 0) rectangle (2.2, 1.25); \\node[below left] at (0, 0) {$E$}; \\node[above left] at (0, 1.25) {$F$}; \\node[above right] at (2.2, 1.25) {$G$}; \\node[below right] at (2.2, 0) {$H$}; \\node[left] at (0, 0.625) {\\footnotesize $6 in$}; \\node[below] at (1.1, 0) {\\footnotesize $10 in$}; \\end{scope} \\end{tikzpicture} {\\footnotesize \\textit{Note: Figure not drawn to scale.}}",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$4$",
+      "B": "$9$",
+      "C": "$16$",
+      "D": "$12$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_145",
+    "questionNumber": 145,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "A triangular prism has a height of $12 cm$ and a volume of $360 cm^3$. What is the area, $B$, of the base of the prism, in $cm^2$? (The volume of a triangular prism is equal to $Bh$, where $B$ is the area of the base and $h$ is the height of the prism.)",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_146",
+    "questionNumber": 146,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "medium",
+    "question": "Triangles $ABC$ and $DEF$ are congruent, where $A$ corresponds to $D$, and $C$ and $F$ are right angles. The measure of angle $B$ is $74^\\circ$. What is the measure, in degrees, of angle $D$?",
+    "prompt": "",
+    "isGridIn": true,
+    "correctAnswer": "0",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_147",
+    "questionNumber": 147,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "hard",
+    "question": "In the $xy$-plane, a circle with radius $7$ has center $(-3, 4)$. Which of the following is an equation of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(x - 3)^2 + (y + 4)^2 = 49$",
+      "B": "$(x + 3)^2 + (y - 4)^2 = 49$",
+      "C": "$(x - 3)^2 + (y + 4)^2 = 7$",
+      "D": "$(x + 3)^2 + (y - 4)^2 = 7$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  },
+  {
+    "id": "geom_148",
+    "questionNumber": 148,
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "difficulty": "easy",
+    "question": "In the $xy$-plane, the graph of the given equation $x^2 + y^2 + 8x - 6y - 11 = 0$ is a circle. What are the coordinates of the center of the circle?",
+    "prompt": "",
+    "isGridIn": false,
+    "options": {
+      "A": "$(8, -6)$",
+      "B": "$(-8, 6)$",
+      "C": "$(4, -3)$",
+      "D": "$(-4, 3)$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+  }
+]

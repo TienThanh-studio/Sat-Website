@@ -12,7 +12,7 @@ import {
 } from '../services/adaptiveEngine';
 import { calculateSatSectionScore } from '../services/satIrtScoring';
 
-// Tự động nạp sẵn đề Module 2 chuẩn của Test 8 làm fallback bảo đảm 100% luôn có Module 2
+// Import các đề thi chuẩn bị cho Module 2
 import satTest8RW2 from '../data/questions/tests/sat_test_8_rw2.json';
 import satTest8Math2 from '../data/questions/tests/sat_test_8_math2.json';
 
@@ -30,7 +30,7 @@ export default function ExamWorkspacePage({
   const examTitle = examConfig.title || examConfig.name || 'SAT Practice Test';
   const isMathSection = useMemo(() => {
     const sec = String(examConfig.section || examConfig.domain || examTitle).toLowerCase();
-    return sec.includes('math') || sec.includes('algebra') || sec.includes('geometry');
+    return sec.includes('math') || sec.includes('algebra') || sec.includes('geometry') || sec.includes('analysis');
   }, [examConfig, examTitle]);
 
   const isExamMode = useMemo(() => {
@@ -40,7 +40,7 @@ export default function ExamWorkspacePage({
            examTitle.toLowerCase().includes('test');
   }, [examConfig, examTitle]);
 
-  // Luôn luôn bảo đảm chia 2 Module đầy đủ, chuyển thẳng sang Module 2 của Test 8
+  // Luôn phân định rõ ràng Module 1 và Module 2 bảo toàn số câu
   const initialPools = useMemo(() => {
     const fallbackM2 = isMathSection 
       ? (Array.isArray(satTest8Math2) ? satTest8Math2 : []) 
@@ -55,20 +55,17 @@ export default function ExamWorkspacePage({
     } else {
       let rawList = Array.isArray(examConfig.questions) ? examConfig.questions : [];
       
-      // Nếu bài thi đã có sẵn cấu trúc tách rời
       const m1Explicit = rawList.filter(q => q.stage === 1 || q.module === 1);
       const m2Explicit = rawList.filter(q => q.stage === 2 || q.module === 2);
 
       if (m1Explicit.length > 0 && m2Explicit.length > 0) {
         m1 = m1Explicit;
         m2 = m2Explicit;
-      } else if (rawList.length >= 50) {
-        // Đề gộp 54-66 câu
+      } else if (rawList.length >= 45) {
         const half = Math.floor(rawList.length / 2);
         m1 = rawList.slice(0, half);
         m2 = rawList.slice(half);
       } else {
-        // Đề đơn (như Test 4, Test 7 Module 1 hay đề 27-33 câu) -> Nối thẳng sang Module 2 của Test 8
         m1 = rawList.length > 0 ? rawList : fallbackM2;
         m2 = fallbackM2;
       }
@@ -106,6 +103,7 @@ export default function ExamWorkspacePage({
   const [showReport, setShowReport] = useState(false);
   const [finalReportData, setFinalReportData] = useState(null);
 
+  // Bộ đếm thời gian: 35 phút Math / 32 phút Verbal
   const defaultDuration = isMathSection ? 35 * 60 : 32 * 60;
   const [timeLeft, setTimeLeft] = useState(defaultDuration);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
@@ -122,6 +120,7 @@ export default function ExamWorkspacePage({
   const answersRef = useRef(moduleAnswers);
   answersRef.current = moduleAnswers;
 
+  // Tính điểm và hoàn thành bài thi
   const finishWholeExam = useCallback(() => {
     const m1Answers = answersRef.current[1] || {};
     const m2Answers = answersRef.current[2] || {};
@@ -212,27 +211,28 @@ export default function ExamWorkspacePage({
     }
   }, [currentModule, completeModule1, finishWholeExam]);
 
+  // Bộ đếm thời gian thực tuyệt đối bằng mốc timestamp (Không bao giờ bị chậm hoặc dừng)
   const isAutoSubmittingRef = useRef(false);
   useEffect(() => {
     if (showInstructions || showTransitionModal || showReport) return;
 
+    const startTimestamp = Date.now();
+    const durationLeft = timeLeft;
+
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (isExamMode) {
-          if (prev <= 1) {
-            clearInterval(timer);
-            if (!isAutoSubmittingRef.current) {
-              isAutoSubmittingRef.current = true;
-              handleAutoSubmit();
-            }
-            return 0;
-          }
-          return prev - 1;
-        } else {
-          return prev + 1;
+      const elapsedSeconds = Math.floor((Date.now() - startTimestamp) / 1000);
+      const remaining = Math.max(0, durationLeft - elapsedSeconds);
+
+      setTimeLeft(remaining);
+
+      if (isExamMode && remaining <= 0) {
+        clearInterval(timer);
+        if (!isAutoSubmittingRef.current) {
+          isAutoSubmittingRef.current = true;
+          handleAutoSubmit();
         }
-      });
-    }, 1000);
+      }
+    }, 500);
 
     return () => clearInterval(timer);
   }, [showInstructions, showTransitionModal, showReport, isExamMode, currentModule, handleAutoSubmit]);
@@ -306,7 +306,7 @@ export default function ExamWorkspacePage({
       range.surroundContents(span);
       sel.removeAllRanges();
     } catch (e) {
-      console.warn('Vui lòng chỉ highlight trong cùng một đoạn:', e);
+      console.warn('Highlight trong cùng đoạn:', e);
     }
     setHighlightTooltip(null);
   };
@@ -380,7 +380,7 @@ export default function ExamWorkspacePage({
                 <div>
                   <h4 className="text-sm font-bold text-slate-800">Thời gian quy chuẩn</h4>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    {isMathSection ? '35 phút / Module' : '32 phút / Module'}.
+                    {isMathSection ? '35 phút / Module Math' : '32 phút / Module Reading & Writing'}.
                   </p>
                 </div>
               </div>
@@ -389,7 +389,7 @@ export default function ExamWorkspacePage({
                 <div>
                   <h4 className="text-sm font-bold text-slate-800">Cấu trúc 2 Module</h4>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    Tự động chuyển tiếp từ Module 1 sang Module 2 chuẩn Digital SAT.
+                    Tự động phân nhánh thích ứng Module 2 theo mô hình thi thật College Board.
                   </p>
                 </div>
               </div>
@@ -445,6 +445,7 @@ export default function ExamWorkspacePage({
 
   return (
     <div className="flex flex-col h-screen bg-[#f8fafc] text-slate-800 select-none overflow-hidden font-sans">
+      {/* 1. TOP BAR */}
       <header className="h-14 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs z-20">
         <div className="flex items-center gap-2">
           <span className="font-black text-sm tracking-tight text-slate-900">
@@ -511,6 +512,7 @@ export default function ExamWorkspacePage({
         </div>
       </header>
 
+      {/* 2. SUB-HEADER XANH NAVY */}
       <div className="h-8 bg-[#11224d] text-white px-6 flex items-center justify-between text-xs font-bold tracking-wide shrink-0">
         <span>Section: {isMathSection ? 'Math' : 'Reading and Writing'}</span>
         <span className="bg-blue-600/40 px-2 py-0.5 rounded text-[11px] font-semibold border border-blue-400/30">
@@ -518,8 +520,10 @@ export default function ExamWorkspacePage({
         </span>
       </div>
 
+      {/* 3. WORKSPACE 2 CỘT */}
       {currentQ && (
         <main className="flex-1 flex flex-col md:flex-row overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200 bg-white relative">
+          {/* CỘT TRÁI: Prompt, Đọc hiểu, Bảng biểu hoặc Đồ thị */}
           <div
             ref={passageRef}
             onMouseUp={handleMouseUpPassage}
@@ -573,8 +577,20 @@ export default function ExamWorkspacePage({
                 </div>
               )}
             </div>
+
+            {/* Dựng hình ảnh/đồ thị nếu câu hỏi có trường image hoặc figure */}
+            {currentQ.image && (
+              <div className="my-4 flex justify-center">
+                <img 
+                  src={currentQ.image} 
+                  alt="Question Figure" 
+                  className="max-h-72 rounded-lg border border-slate-200 shadow-sm object-contain"
+                />
+              </div>
+            )}
           </div>
 
+          {/* CỘT PHẢI: Số câu, Mark review, Question Stem, Options */}
           <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-between bg-slate-50/50">
             <div>
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-slate-200">
@@ -607,6 +623,7 @@ export default function ExamWorkspacePage({
                 </div>
               )}
 
+              {/* Grid-in (Student-Produced Response) */}
               {currentQ.isGridIn ? (
                 <div className="mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs max-w-sm">
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
@@ -626,6 +643,7 @@ export default function ExamWorkspacePage({
                   </p>
                 </div>
               ) : (
+                /* Multiple Choice ABCD */
                 <div className="space-y-3">
                   {Object.entries(currentQ.options || {}).map(([key, text]) => {
                     const isSelected = currentAnswers[currentQ.id] === key;
@@ -693,6 +711,7 @@ export default function ExamWorkspacePage({
         </main>
       )}
 
+      {/* 4. FOOTER */}
       <footer className="h-16 bg-white border-t border-slate-200 px-6 flex items-center justify-between shrink-0 z-20">
         <div className="text-xs font-semibold text-slate-500">
           Thí sinh: <span className="text-slate-800 font-bold">{currentUser?.name || 'Học viên'}</span>
