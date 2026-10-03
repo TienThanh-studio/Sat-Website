@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
-  Clock, ArrowLeft, ArrowRight, CheckCircle2, Bookmark, 
-  HelpCircle, AlertTriangle, Send, Calculator as CalcIcon, 
-  BookOpen, Eye, EyeOff, Check, X
+  Clock, ArrowLeft, ArrowRight, Bookmark, 
+  AlertTriangle, Send, Calculator as CalcIcon, 
+  BookOpen, Eye, EyeOff, Check, X, LogOut, ChevronUp, MapPin
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
@@ -21,19 +21,24 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
   const [secondsLeft, setSecondsLeft] = useState(null);
   const [examResult, setExamResult] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
+  
+  // Popup danh sách câu hỏi & cảnh báo thoát
+  const [isGridModalOpen, setIsGridModalOpen] = useState(false);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
-  // Công cụ thi
+  // Modal hỗ trợ toán học
   const [isDesmosOpen, setIsDesmosOpen] = useState(false);
   const [isReferenceOpen, setIsReferenceOpen] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
-  const [isReviewOpen, setIsReviewOpen] = useState(false);
 
-  // Theo dõi thời gian làm bài
+  // Theo dõi thời gian làm từng câu
   const timesPerQuestion = useRef({});
   const activeQuestionTrack = useRef({ id: null, startTime: Date.now() });
   const deadlineRef = useRef(null);
 
-  // 1. Khởi tạo phiên thi từ Supabase (hoặc fallback bộ đề local nếu mất kết nối)
+  const isRealExam = Boolean(sessionConfig?.isExam || sessionConfig?.is_exam);
+
+  // 1. Tải đề từ Supabase
   useEffect(() => {
     let isCancelled = false;
 
@@ -49,13 +54,11 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
             setCurrentModule(payload.module || 1);
             setQuestions(payload.questions || []);
             
-            // Đồng bộ đồng hồ server
             const deadlineTime = new Date(payload.deadline).getTime();
             deadlineRef.current = deadlineTime;
             const diff = Math.max(0, Math.floor((deadlineTime - Date.now()) / 1000));
             setSecondsLeft(diff);
 
-            // Phục hồi bản nháp cục bộ nếu học viên reload trang
             const draft = storageService.loadDraft(payload.sessionId);
             if (draft && draft.module === payload.module) {
               setAnswers(draft.answers || {});
@@ -66,17 +69,16 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
           }
         }
       } catch (err) {
-        console.warn('Khởi tạo Supabase không thành công, chuyển sang bộ đề dự phòng:', err.message);
+        console.warn('Khởi tạo Supabase không thành công, dùng cấu hình fallback:', err.message);
       }
 
-      // Fallback: Sử dụng dữ liệu phiên cấu hình truyền từ giao diện
       if (!isCancelled) {
-        if (sessionConfig && sessionConfig.questions && sessionConfig.questions.length > 0) {
+        if (sessionConfig?.questions && sessionConfig.questions.length > 0) {
           setQuestions(sessionConfig.questions);
           setSecondsLeft((sessionConfig.duration || 35) * 60);
           setPhase('testing');
         } else {
-          setErrorMessage('Không thể tải danh sách câu hỏi của bài thi này.');
+          setErrorMessage('Không thể tải dữ liệu câu hỏi của đề thi này.');
           setPhase('error');
         }
       }
@@ -89,7 +91,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     };
   }, [examId, sessionConfig]);
 
-  // 2. Đo thời lượng học viên dừng lại ở từng câu hỏi
+  // 2. Đo thời gian dừng ở từng câu
   const trackTime = useCallback((newQuestionId) => {
     const now = Date.now();
     const prev = activeQuestionTrack.current;
@@ -106,7 +108,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     }
   }, [currentIndex, questions, trackTime]);
 
-  // 3. Đếm ngược thời gian
+  // 3. Đếm ngược
   useEffect(() => {
     if (phase !== 'testing' || secondsLeft === null) return;
 
@@ -114,7 +116,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
       setSecondsLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          handleSubmitCurrentModule();
+          handleSubmit(false);
           return 0;
         }
         return prev - 1;
@@ -124,7 +126,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     return () => clearInterval(timer);
   }, [phase, secondsLeft]);
 
-  // 4. Lưu câu trả lời của thí sinh
+  // 4. Lưu đáp án
   const handleSelectAnswer = (qId, val) => {
     const nextAnswers = { ...answers, [qId]: val };
     setAnswers(nextAnswers);
@@ -133,15 +135,16 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     }
   };
 
-  // 5. Nộp Module hoặc Nộp bài hoàn tất
-  const handleSubmitCurrentModule = async () => {
+  // 5. Nộp bài
+  const handleSubmit = async (isForcedExit = false) => {
     trackTime(null);
     setPhase('submitting');
+    setShowExitConfirm(false);
+    setIsGridModalOpen(false);
 
     try {
       if (sessionId) {
-        // Nộp bài trực tuyến an toàn qua Supabase RPC
-        if (currentModule === 1 && sessionConfig?.isExam) {
+        if (currentModule === 1 && isRealExam && !isForcedExit) {
           const nextPayload = await examService.submitModule1(sessionId, answers, timesPerQuestion.current);
           storageService.clearDraft(sessionId);
           setCurrentModule(2);
@@ -168,10 +171,10 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
         }
       }
     } catch (err) {
-      console.error('Lỗi khi nộp bài lên Supabase:', err);
+      console.error('Lỗi khi nộp bài:', err);
     }
 
-    // Fallback: Tự động chấm điểm tại Client nếu phiên offline
+    // Fallback offline
     let correct = 0;
     const details = questions.map((q) => {
       const userAns = (answers[q.id] || '').trim().toLowerCase();
@@ -183,7 +186,8 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
         userAnswer: answers[q.id] || 'Chưa trả lời',
         correctAnswer: q.correctAnswer || 'A',
         isCorrect: isRight,
-        explanation: q.explanation || 'Hướng dẫn giải chi tiết cho câu hỏi.',
+        explanation: q.explanation || 'Hướng dẫn giải chi tiết.',
+        passage: q.passage || q.text || q.stimulus || '',
         question: q.question || q.prompt,
         options: q.options
       };
@@ -202,6 +206,14 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     setPhase('result');
   };
 
+  const handleExitClick = () => {
+    if (isRealExam) {
+      setShowExitConfirm(true);
+    } else {
+      onExit();
+    }
+  };
+
   const currentQ = questions[currentIndex];
   const formatTimer = (s) => {
     if (s === null || s === undefined) return '00:00';
@@ -210,13 +222,16 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     return `${String(m).padStart(2, '0')}:${String(rem).padStart(2, '0')}`;
   };
 
-  // MÀN HÌNH CHỜ / LỖI
+  // Xác định đoạn văn đọc hiểu và câu hỏi lệnh riêng biệt
+  const passageText = currentQ ? (currentQ.passage || currentQ.text || currentQ.stimulus || currentQ.context || '') : '';
+  const questionPrompt = currentQ ? (currentQ.prompt || currentQ.question || '') : '';
+
   if (phase === 'loading') {
     return (
       <div className="flex-1 flex flex-col items-center justify-center bg-slate-900 text-white min-h-screen">
         <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4" />
-        <h2 className="text-xl font-bold">Đang kết nối phòng thi bảo mật...</h2>
-        <p className="text-sm text-slate-400 mt-2">Đang tải đề thi từ hệ thống Supabase Cloud.</p>
+        <h2 className="text-xl font-bold">Đang tải phòng thi bảo mật...</h2>
+        <p className="text-sm text-slate-400 mt-2">Dữ liệu đang được kết nối với Supabase Cloud.</p>
       </div>
     );
   }
@@ -239,7 +254,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     );
   }
 
-  // MÀN HÌNH BÁO CÁO KẾT QUẢ SAU THI
+  // MÀN HÌNH BÁO CÁO ĐIỂM
   if (phase === 'result' && examResult) {
     return (
       <div className="flex-1 bg-slate-50 min-h-screen overflow-y-auto p-6 md:p-10 select-none">
@@ -253,7 +268,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
                 {sessionConfig?.title || 'Digital SAT Exam Session'}
               </h1>
               <p className="text-xs text-slate-500">
-                Bài làm đã được chấm điểm bảo mật trực tiếp bởi hệ thống Supabase Database.
+                Bài làm đã kết thúc và được chấm điểm an toàn bởi hệ thống máy chủ.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-6 rounded-2xl text-center min-w-[160px] shadow-md">
@@ -263,7 +278,6 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
             </div>
           </div>
 
-          {/* Chi tiết thống kê câu đúng */}
           <div className="grid grid-cols-3 gap-4">
             <div className="bg-white p-5 rounded-2xl border border-slate-200 text-center">
               <span className="text-xs text-slate-400 font-bold block">Số câu đúng</span>
@@ -285,7 +299,6 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
             </div>
           </div>
 
-          {/* Bảng lời giải chi tiết từng câu */}
           <div className="space-y-4">
             <h2 className="text-lg font-black text-slate-900">Chi tiết đáp án & Lời giải</h2>
             <div className="space-y-4">
@@ -302,6 +315,12 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
                       {item.isCorrect ? 'Chính xác' : 'Sai'}
                     </span>
                   </div>
+
+                  {item.passage && (
+                    <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 leading-relaxed font-serif">
+                      <MathRenderer text={item.passage} />
+                    </div>
+                  )}
 
                   <MathRenderer text={item.question} className="text-sm text-slate-800" />
 
@@ -342,26 +361,26 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
     );
   }
 
-  // MÀN HÌNH LÀM BÀI CHÍNH THỨC (CHUẨN GIAO DIỆN BLUEBOOK)
+  // PHÒNG THI CHÍNH THỨC
   return (
-    <div className="flex flex-col h-screen bg-white select-none">
-      {/* THANH ĐIỀU HƯỚNG TRÊN CÙNG */}
+    <div className="flex flex-col h-screen bg-white select-none relative">
+      {/* HEADER PHÒNG THI */}
       <header className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white z-20">
         <div className="flex items-center gap-3">
           <span className="font-extrabold text-slate-900 text-sm tracking-tight">
-            {sessionConfig?.section === 'Math' ? 'Section 2: Math' : 'Section 1: Reading and Writing'}
+            {sessionConfig?.title || (sessionConfig?.section === 'Math' ? 'Section 2: Math' : 'Section 1: Reading and Writing')}
           </span>
           <span className="text-slate-300">|</span>
           <span className="text-xs font-bold text-slate-500">
-            {sessionConfig?.isExam ? `Module ${currentModule}` : 'Luyện tập chuyên đề'}
+            {isRealExam ? `Module ${currentModule}` : 'Practice Module'}
           </span>
         </div>
 
-        {/* ĐỒNG HỒ ĐẾM NGƯỢC */}
+        {/* ĐỒNG HỒ TRUNG TÂM */}
         <div className="flex items-center gap-2">
           {!isTimerHidden && (
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 rounded-lg text-xs font-black text-slate-800 tabular-nums">
-              <Clock className="w-3.5 h-3.5 text-slate-500" />
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 rounded-lg text-sm font-black text-slate-800 tabular-nums">
+              <Clock className="w-4 h-4 text-slate-500" />
               <span>{formatTimer(secondsLeft)}</span>
             </div>
           )}
@@ -374,7 +393,7 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
           </button>
         </div>
 
-        {/* CÔNG CỤ THI */}
+        {/* CÔNG CỤ & THOÁT */}
         <div className="flex items-center gap-2">
           {sessionConfig?.section === 'Math' && (
             <>
@@ -395,10 +414,11 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
             </>
           )}
           <button
-            onClick={onExit}
-            className="px-3 py-1.5 text-xs font-bold text-rose-600 border border-rose-200 rounded-lg hover:bg-rose-50 transition"
+            onClick={handleExitClick}
+            className="px-3 py-1.5 text-xs font-bold text-rose-600 border border-rose-200 rounded-lg hover:bg-rose-50 transition flex items-center gap-1"
           >
-            Thoát
+            <LogOut className="w-3.5 h-3.5" />
+            <span>Thoát</span>
           </button>
         </div>
       </header>
@@ -407,17 +427,30 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
       <main className="flex-1 flex overflow-hidden">
         {currentQ ? (
           <>
-            {/* CỘT TRÁI: ĐỀ BÀI, HÌNH VẼ, BẢNG BIỂU */}
+            {/* CỘT TRÁI: ĐOẠN VĂN ĐỌC HIỂU (PASSAGE) + CÂU HỎI LỆNH (PROMPT) */}
             <div className="w-1/2 p-8 overflow-y-auto border-r border-slate-200 bg-white">
-              <div className="max-w-xl mx-auto space-y-4">
-                <span className="inline-block px-2 py-0.5 rounded text-[11px] font-black uppercase tracking-wider bg-slate-100 text-slate-600">
+              <div className="max-w-xl mx-auto space-y-5">
+                <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-black uppercase tracking-wider bg-slate-100 text-slate-600">
                   Question {currentIndex + 1} of {questions.length}
                 </span>
-                <MathRenderer text={currentQ.question || currentQ.prompt} className="text-sm text-slate-800 leading-relaxed font-normal" />
+
+                {/* Đoạn văn đọc hiểu / Bối cảnh bài tập */}
+                {passageText && (
+                  <div className="text-[14px] text-slate-800 leading-relaxed font-serif selection:bg-blue-100">
+                    <MathRenderer text={passageText} />
+                  </div>
+                )}
+
+                {/* Câu lệnh / Câu hỏi chi tiết */}
+                {questionPrompt && (
+                  <div className={`${passageText ? 'pt-4 border-t border-slate-100' : ''} text-sm font-semibold text-slate-900 leading-relaxed`}>
+                    <MathRenderer text={questionPrompt} />
+                  </div>
+                )}
               </div>
             </div>
 
-            {/* CỘT PHẢI: LỰA CHỌN TRẢ LỜI */}
+            {/* CỘT PHẢI: LỰA CHỌN */}
             <div className="w-1/2 p-8 overflow-y-auto bg-slate-50/50">
               <div className="max-w-xl mx-auto space-y-6">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-200">
@@ -433,7 +466,6 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
                   </button>
                 </div>
 
-                {/* Dạng Grid-in (Tự điền số) */}
                 {currentQ.isGridIn ? (
                   <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200">
                     <label className="text-xs font-bold text-slate-600 block">Nhập câu trả lời của bạn:</label>
@@ -449,7 +481,6 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
                     </p>
                   </div>
                 ) : (
-                  /* Dạng trắc nghiệm 4 lựa chọn */
                   <div className="space-y-3">
                     {['A', 'B', 'C', 'D'].map((letter) => {
                       const optText = currentQ.options ? currentQ.options[letter] : null;
@@ -490,51 +521,81 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
         )}
       </main>
 
-      {/* THANH ĐIỀU HƯỚNG DƯỚI CÙNG */}
-      <footer className="h-16 border-t border-slate-200 px-6 flex items-center justify-between bg-white z-20">
+      {/* FOOTER CHUẨN BLUEBOOK */}
+      <footer className="h-16 border-t border-slate-200 px-6 bg-white z-20 flex items-center justify-between">
+        <div className="text-xs font-bold text-slate-700">
+          <span>{currentUser?.full_name || 'Phan Tiến Thành'}</span>
+        </div>
+
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <button
+            onClick={() => setIsGridModalOpen(true)}
+            className="flex items-center gap-2 px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition shadow-sm"
+          >
+            <span>Question {currentIndex + 1} of {questions.length}</span>
+            <ChevronUp className="w-4 h-4 text-slate-400" />
+          </button>
+        </div>
+
         <div className="flex items-center gap-2">
           <button
             disabled={currentIndex === 0}
             onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-            className="px-4 py-2 text-xs font-bold text-slate-700 border border-slate-200 rounded-xl hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5"
+            className="px-4 py-2 text-xs font-bold text-slate-700 border border-slate-200 rounded-xl hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back</span>
           </button>
-          <button
-            onClick={() => setIsReviewOpen(!isReviewOpen)}
-            className="px-4 py-2 text-xs font-bold text-slate-700 bg-slate-100 rounded-xl hover:bg-slate-200"
-          >
-            Câu {currentIndex + 1} / {questions.length}
-          </button>
+
           <button
             disabled={currentIndex === questions.length - 1}
             onClick={() => setCurrentIndex((prev) => Math.min(questions.length - 1, prev + 1))}
-            className="px-4 py-2 text-xs font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5"
+            className="px-5 py-2 text-xs font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1"
           >
             <span>Next</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
-        </div>
 
-        <button
-          onClick={handleSubmitCurrentModule}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition shadow-xs flex items-center gap-2"
-        >
-          <Send className="w-3.5 h-3.5" />
-          <span>{currentModule === 1 && sessionConfig?.isExam ? 'Nộp Module 1' : 'Nộp bài thi'}</span>
-        </button>
+          <button
+            onClick={() => handleSubmit(false)}
+            className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition shadow-xs flex items-center gap-1.5 ml-2"
+          >
+            <Send className="w-3.5 h-3.5" />
+            <span>{currentModule === 1 && isRealExam ? 'Nộp Module 1' : 'Nộp bài'}</span>
+          </button>
+        </div>
       </footer>
 
-      {/* MODAL DANH SÁCH CÂU HỎI (REVIEW DRAWER) */}
-      {isReviewOpen && (
-        <div className="absolute bottom-16 left-0 right-0 bg-white border-t border-slate-200 p-6 shadow-2xl z-30 max-h-60 overflow-y-auto">
-          <div className="max-w-4xl mx-auto space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-700">Bảng điều hướng câu hỏi:</span>
-              <button onClick={() => setIsReviewOpen(false)} className="text-xs font-bold text-blue-600">Đóng</button>
+      {/* MODAL GRID CÂU HỎI */}
+      {isGridModalOpen && (
+        <div 
+          onClick={() => setIsGridModalOpen(false)}
+          className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center z-50 p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-3xl p-8 max-w-xl w-full shadow-2xl space-y-6 border border-slate-100"
+          >
+            <h2 className="text-xl font-black text-center text-slate-900 tracking-tight">
+              {sessionConfig?.title || 'Question Bank Session'}
+            </h2>
+
+            <div className="flex items-center justify-center gap-6 text-xs font-bold text-slate-600">
+              <div className="flex items-center gap-1.5">
+                <span className="w-4 h-4 rounded bg-sky-200 inline-block" />
+                <span>Answered</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <MapPin className="w-4 h-4 text-slate-800" />
+                <span>Current</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Bookmark className="w-4 h-4 fill-red-500 text-red-500" />
+                <span>Mark For Review</span>
+              </div>
             </div>
-            <div className="grid grid-cols-10 gap-2">
+
+            <div className="grid grid-cols-8 gap-2.5 max-h-72 overflow-y-auto p-1">
               {questions.map((q, idx) => {
                 const isAnswered = Boolean(answers[q.id]);
                 const isMarked = Boolean(bookmarked[q.id]);
@@ -542,26 +603,69 @@ export default function ExamWorkspacePage({ examId, sessionConfig, onExit, curre
 
                 return (
                   <button
-                    key={q.id}
+                    key={q.id || idx}
                     onClick={() => {
                       setCurrentIndex(idx);
-                      setIsReviewOpen(false);
+                      setIsGridModalOpen(false);
                     }}
-                    className={`h-9 rounded-lg text-xs font-bold relative flex items-center justify-center border ${
+                    className={`h-11 rounded-xl text-xs font-bold relative flex items-center justify-center transition ${
                       isCurrent
-                        ? 'border-blue-600 bg-blue-50 text-blue-700'
+                        ? 'border-2 border-slate-900 bg-white text-slate-900 shadow-xs'
                         : isAnswered
-                        ? 'border-slate-800 bg-slate-900 text-white'
-                        : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+                        ? 'bg-sky-200/90 text-slate-800 hover:bg-sky-300'
+                        : 'border border-dashed border-slate-300 text-slate-700 hover:border-slate-400 bg-white'
                     }`}
                   >
-                    {idx + 1}
+                    {isCurrent && (
+                      <MapPin className="w-3.5 h-3.5 text-slate-900 absolute -top-2 left-1/2 -translate-x-1/2" />
+                    )}
+                    <span>{idx + 1}</span>
                     {isMarked && (
-                      <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-500 rounded-full" />
+                      <Bookmark className="w-3 h-3 fill-red-500 text-red-500 absolute -top-1.5 -right-1" />
                     )}
                   </button>
                 );
               })}
+            </div>
+
+            <div className="pt-2 flex justify-center">
+              <button
+                onClick={() => setIsGridModalOpen(false)}
+                className="w-full py-3 bg-[#b91c1c] hover:bg-[#991b1b] text-white rounded-2xl text-xs font-bold transition shadow-md"
+              >
+                Go to Review Page
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CẢNH BÁO KHI THOÁT ĐỀ THI THẬT */}
+      {showExitConfirm && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 border border-slate-200">
+            <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <div className="text-center space-y-2">
+              <h3 className="text-base font-black text-slate-900">Xác nhận nộp bài và rời phòng thi?</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Đây là <strong>Đề thi thật Digital SAT</strong>. Nếu bạn thoát lúc này, hệ thống sẽ <strong>tự động nộp bài và chấm điểm ngay lập tức</strong>. Bạn sẽ không thể quay lại làm tiếp đề thi này.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <button
+                onClick={() => setShowExitConfirm(false)}
+                className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition"
+              >
+                Làm bài tiếp
+              </button>
+              <button
+                onClick={() => handleSubmit(true)}
+                className="w-full py-2.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-xs font-bold transition shadow-xs"
+              >
+                Xác nhận nộp & Thoát
+              </button>
             </div>
           </div>
         </div>
