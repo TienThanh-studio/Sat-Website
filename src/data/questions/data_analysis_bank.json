@@ -5,7 +5,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "One method of calculating the approximate age, in years, of a tree of a particular species is to multiply the diameter of the tree, in inches, by a constant called the growth factor for that species. The table above gives the growth factors for eight species of trees. If a white birch tree and a pin oak tree each now have a diameter of 1 foot, which of the following will be closest to the difference, in inches, of their diameters 10 years from now? ($1 foot = 12 inches$)",
+    "question": "One method of calculating the approximate age, in years, of a tree of a particular species is to multiply the diameter of the tree, in inches, by a constant called the growth factor for that species. The table above gives the growth factors for eight species of trees. If a white birch tree and a pin oak tree each now have a diameter of 1 foot, which of the following will be closest to the difference, in inches, of their diameters 10 years from now? ($1\\text{ foot } = 12\\text{ inches }$)",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -15,7 +15,7 @@
       "D": "1.4"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_002",
@@ -33,7 +33,7 @@
       "D": "1,107"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_003",
@@ -41,11 +41,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "If $\\dfrac{4a}{b} = 6.7$ and $\\dfrac{a}{bn} = 26.8$, what is the value of $n$? \\textbf{Answer:}",
+    "question": "If $\\dfrac{4a}{b} = 6.7$ and $\\dfrac{a}{bn} = 26.8$, what is the value of $n$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_004",
@@ -63,7 +63,7 @@
       "D": "1.02"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_005",
@@ -81,7 +81,7 @@
       "D": "1.5 times the amount of blue paint used in the second batch"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_006",
@@ -89,7 +89,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A certain park has an area of 11,863,808 square yards. What is the area, in square miles, of this park? ($1 mile = 1{,}760 yards$)",
+    "question": "A certain park has an area of 11,863,808 square yards. What is the area, in square miles, of this park? ($1\\text{ mile } = 1,760\\text{ yards }$)",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -99,7 +99,7 @@
       "D": "6,740.8"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_007",
@@ -107,11 +107,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "Jeremy deposited $x$ dollars in his investment account on January 1, 2001. The amount of money in the account doubled each year until Jeremy had 480 dollars in his investment account on January 1, 2005. What is the value of $x$? \\textbf{Answer:}",
+    "question": "Jeremy deposited $x$ dollars in his investment account on January 1, 2001. The amount of money in the account doubled each year until Jeremy had 480 dollars in his investment account on January 1, 2005. What is the value of $x$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_008",
@@ -129,7 +129,7 @@
       "D": "120,000"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_009",
@@ -137,7 +137,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A certain town has an area of 4.36 square miles. What is the area, in square yards, of this town? ($1 mile = 1{,}760 yards$)",
+    "question": "A certain town has an area of 4.36 square miles. What is the area, in square yards, of this town? ($1\\text{ mile } = 1,760\\text{ yards }$)",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -147,7 +147,7 @@
       "D": "13,505,536"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_010",
@@ -155,17 +155,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "In a study of cell phone use, 799 randomly selected US teens were asked how often they talked on a cell phone and about their texting behavior. The data are summarized in the table above. Based on the data from the study, an estimate of the percent of US teens who are heavy texters is 30\\% and the associated margin of error is 3\\%. Which of the following is a correct statement based on the given margin of error?",
+    "question": "In a study of cell phone use, 799 randomly selected US teens were asked how often they talked on a cell phone and about their texting behavior. The data are summarized in the table above. Based on the data from the study, an estimate of the percent of US teens who are heavy texters is 30",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "Approximately 3\\% of the teens in the study who are classified as heavy texters are not really heavy texters",
-      "B": "It is not possible that the percent of all US teens who are heavy texters is less than 27\\%",
-      "C": "The percent of all US teens who are heavy texters is 33\\%",
-      "D": "It is doubtful that the percent of all US teens who are heavy texters is 35\\%"
+      "A": "Approximately 3",
+      "B": "It is not possible that the percent of all US teens who are heavy texters is less than 27",
+      "C": "The percent of all US teens who are heavy texters is 33",
+      "D": "It is doubtful that the percent of all US teens who are heavy texters is 35"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_011",
@@ -173,11 +173,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A researcher interviewed 411 randomly selected US residents and asked about their views on the use of nuclear energy. The table above summarizes the responses of the interviewees. If the population of the United States was 300 million when the survey was given, based on the sample data for the 411 US residents, what is the best estimate, in millions, of the difference between the number of US residents who somewhat favor or strongly favor the use of nuclear energy and the number of those who somewhat oppose or strongly oppose it? (Round your answer to the nearest whole number.) \\textbf{Answer:}",
+    "question": "A researcher interviewed 411 randomly selected US residents and asked about their views on the use of nuclear energy. The table above summarizes the responses of the interviewees. If the population of the United States was 300 million when the survey was given, based on the sample data for the 411 US residents, what is the best estimate, in millions, of the difference between the number of US residents who somewhat favor or strongly favor the use of nuclear energy and the number of those who somewhat oppose or strongly oppose it? (Round your answer to the nearest whole number.)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_012",
@@ -195,7 +195,7 @@
       "D": "Sample A had a smaller sample size"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_013",
@@ -213,7 +213,7 @@
       "D": "46,800"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_014",
@@ -231,7 +231,7 @@
       "D": "5,621"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_015",
@@ -249,7 +249,7 @@
       "D": "All fourth-grade students in the country in which the school is located"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_016",
@@ -267,7 +267,7 @@
       "D": "All trivia teams in the tournament"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_017",
@@ -285,7 +285,7 @@
       "D": "All students in the city"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_018",
@@ -293,17 +293,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Near the end of a US cable news show, the host invited viewers to respond to a poll on the show's website that asked, ``Do you support the new federal policy discussed during the show?'' At the end of the show, the host reported that 28\\% responded ``Yes,'' and 70\\% responded ``No.'' Which of the following best explains why the results are unlikely to represent the sentiments of the population of the United States?",
+    "question": "Near the end of a US cable news show, the host invited viewers to respond to a poll on the show's website that asked, ``Do you support the new federal policy discussed during the show?'' At the end of the show, the host reported that 28",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "The percentages do not add up to 100\\%, so any possible conclusions from the poll are invalid",
+      "A": "The percentages do not add up to 100",
       "B": "Those who responded to the poll were not a random sample of the population of the United States",
-      "C": "There were not 50\\% ``Yes'' responses and 50\\% ``No'' responses",
+      "C": "There were not 50",
       "D": "The show did not allow viewers enough time to respond to the poll"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_019",
@@ -321,7 +321,7 @@
       "D": "The sampling method is not flawed and is likely to produce an unbiased estimate of the mean number of children per household in the community"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_020",
@@ -329,7 +329,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The box plots summarize the masses, in kilograms, of two groups of gazelles. Based on the box plots, which of the following statements must be true? \\begin{tikzpicture}[scale=0.85] \\draw[thick] (0,0) -- (14,0); \\foreach \\x/\\val in {1/20, 3/22, 5/24, 7/26, 9/28, 11/30, 13/32} { \\draw[thick] (\\x, -0.15) -- (\\x, 0.15); \\node[below] at (\\x, -0.15) {\\val}; } \\node[below] at (7, -0.8) {Mass (kilograms)}; % Group 1: Min 21, Q1 22, Med 25, Q3 26, Max 28 \\node[left] at (0, 2) {Group 1}; \\draw[thick] (2, 2) -- (3, 2); \\draw[thick] (7, 2) -- (9, 2); \\draw[thick] (2, 1.8) -- (2, 2.2); \\draw[thick] (9, 1.8) -- (9, 2.2); \\draw[thick] (3, 1.6) rectangle (7, 2.4); \\draw[thick] (6, 1.6) -- (6, 2.4); % Group 2: Min 22, Q1 23, Med 24, Q3 25, Max 28 \\node[left] at (0, 1) {Group 2}; \\draw[thick] (3, 1) -- (4, 1); \\draw[thick] (6, 1) -- (9, 1); \\draw[thick] (3, 0.8) -- (3, 1.2); \\draw[thick] (9, 0.8) -- (9, 1.2); \\draw[thick] (4, 0.6) rectangle (6, 1.4); \\draw[thick] (5, 0.6) -- (5, 1.4); \\end{tikzpicture}",
+    "question": "The box plots summarize the masses, in kilograms, of two groups of gazelles. Based on the box plots, which of the following statements must be true? \\begin{tikzpicture}[scale=0.85] \\draw[thick] (0,0) -- (14,0); \\foreach \\x/\\val in {1/20, 3/22, 5/24, 7/26, 9/28, 11/30, 13/32} { \\draw[thick] (\\x, -0.15) -- (\\x, 0.15); \\node[below] at (\\x, -0.15) {\\val}; } \\node[below] at (7, -0.8) {Mass (kilograms)}; \\node[left] at (0, 2) {Group 1}; \\draw[thick] (2, 2) -- (3, 2); \\draw[thick] (7, 2) -- (9, 2); \\draw[thick] (2, 1.8) -- (2, 2.2); \\draw[thick] (9, 1.8) -- (9, 2.2); \\draw[thick] (3, 1.6) rectangle (7, 2.4); \\draw[thick] (6, 1.6) -- (6, 2.4); \\node[left] at (0, 1) {Group 2}; \\draw[thick] (3, 1) -- (4, 1); \\draw[thick] (6, 1) -- (9, 1); \\draw[thick] (3, 0.8) -- (3, 1.2); \\draw[thick] (9, 0.8) -- (9, 1.2); \\draw[thick] (4, 0.6) rectangle (6, 1.4); \\draw[thick] (5, 0.6) -- (5, 1.4); \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -339,7 +339,7 @@
       "D": "The median mass of group 1 is less than the median mass of group 2"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_021",
@@ -347,11 +347,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Data set A consists of 10 positive integers less than 60. The list shown gives 9 of the integers from data set A: \\[ 43, 45, 44, 43, 38, 39, 40, 46, 40 \\] The mean of these 9 integers is 42. If the mean of data set A is an integer that is greater than 42, what is the value of the largest integer from data set A? \\textbf{Answer:}",
+    "question": "Data set A consists of 10 positive integers less than 60. The list shown gives 9 of the integers from data set A: \\[ 43, 45, 44, 43, 38, 39, 40, 46, 40 \\] The mean of these 9 integers is 42. If the mean of data set A is an integer that is greater than 42, what is the value of the largest integer from data set A?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_022",
@@ -368,7 +368,7 @@
       "C": "There is at least one member of team B who took more time to complete the race than some member of team A."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_023",
@@ -386,7 +386,7 @@
       "D": "36"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_024",
@@ -404,7 +404,7 @@
       "D": "D"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_025",
@@ -420,7 +420,7 @@
       "B": "The median"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_026",
@@ -428,11 +428,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "Data set A consists of the heights of 75 buildings and has a mean of 32 meters. Data set B consists of the heights of 50 buildings and has a mean of 62 meters. Data set C consists of the heights of the 125 buildings from data sets A and B. What is the mean, in meters, of data set C? \\textbf{Answer:}",
+    "question": "Data set A consists of the heights of 75 buildings and has a mean of 32 meters. Data set B consists of the heights of 50 buildings and has a mean of 62 meters. Data set C consists of the heights of the 125 buildings from data sets A and B. What is the mean, in meters, of data set C?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_027",
@@ -440,17 +440,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A survey was given to residents of all 50 states asking if they had earned a bachelor's degree or higher. The results from 7 of the states are given in the table above. The median percent of residents who earned a bachelor's degree or higher for all 50 states was 26.95\\%. What is the difference between the median percent of residents who earned a bachelor's degree or higher for these 7 states and the median for all 50 states?",
+    "question": "A survey was given to residents of all 50 states asking if they had earned a bachelor's degree or higher. The results from 7 of the states are given in the table above. The median percent of residents who earned a bachelor's degree or higher for all 50 states was 26.95",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "0.05\\%",
-      "B": "0.95\\%",
-      "C": "1.22\\%",
-      "D": "7.45\\%"
+      "A": "0.05",
+      "B": "0.95",
+      "C": "1.22",
+      "D": "7.45"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_028",
@@ -458,11 +458,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "Andrew and Maria each collected six rocks, and the masses of the rocks are shown in the table above. The mean of the masses of the rocks Maria collected is 0.1 kilogram greater than the mean of the masses of the rocks Andrew collected. What is the value of $x$? \\textbf{Answer:}",
+    "question": "Andrew and Maria each collected six rocks, and the masses of the rocks are shown in the table above. The mean of the masses of the rocks Maria collected is 0.1 kilogram greater than the mean of the masses of the rocks Andrew collected. What is the value of $x$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_029",
@@ -470,11 +470,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "For a certain computer game, individuals receive an integer score that ranges from 2 through 10. The table below shows the frequency distribution of the scores of the 9 players in group A and the 11 players in group B. The median of the scores for group B is how much greater than the median of the scores for group A? \\textbf{Answer:}",
+    "question": "For a certain computer game, individuals receive an integer score that ranges from 2 through 10. The table below shows the frequency distribution of the scores of the 9 players in group A and the 11 players in group B. The median of the scores for group B is how much greater than the median of the scores for group A?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_030",
@@ -482,11 +482,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Data set A consists of the heights of 75 objects and has a mean of 25 meters. Data set B consists of the heights of 50 objects and has a mean of 65 meters. Data set C consists of the heights of the 125 objects from data sets A and B. What is the mean, in meters, of data set C? \\textbf{Answer:}",
+    "question": "Data set A consists of the heights of 75 objects and has a mean of 25 meters. Data set B consists of the heights of 50 objects and has a mean of 65 meters. Data set C consists of the heights of the 125 objects from data sets A and B. What is the mean, in meters, of data set C?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_031",
@@ -494,7 +494,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The dot plot represents the 15 values in data set A. Data set B is created by adding 56 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B? \\begin{tikzpicture}[scale=0.9] \\draw[thick] (21.5, 0) -- (26.5, 0); \\foreach \\x in {22, 23, 24, 25, 26} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\x}; } \\node[above] at (24, 1.8) {\\textbf{Data Set A}}; % Dot points: 22(1), 23(3), 24(5), 25(4), 26(2) \\fill (22, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9} \\fill (23, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2, 1.5} \\fill (24, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (25, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (26, \\y) circle (2.5pt); \\end{tikzpicture}",
+    "question": "The dot plot represents the 15 values in data set A. Data set B is created by adding 56 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B? \\begin{tikzpicture}[scale=0.9] \\draw[thick] (21.5, 0) -- (26.5, 0); \\foreach \\x in {22, 23, 24, 25, 26} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\x}; } \\node[above] at (24, 1.8) {\\textbf{Data Set A}}; \\fill (22, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9} \\fill (23, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2, 1.5} \\fill (24, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (25, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (26, \\y) circle (2.5pt); \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -504,7 +504,7 @@
       "D": "The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_032",
@@ -522,7 +522,7 @@
       "D": "15.25"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_033",
@@ -540,7 +540,7 @@
       "D": "There is not enough information to compare the means of the data sets"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_034",
@@ -558,7 +558,7 @@
       "D": "Standard deviation"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_035",
@@ -566,7 +566,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The dot plots represent the distributions of values in data sets A and B. \\begin{tikzpicture}[scale=0.65] % Data set A \\draw[thick] (9.5, 0) -- (16.5, 0); \\foreach \\x in {10,11,12,13,14,15,16} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\footnotesize \\x}; } \\node[above] at (13, 1.8) {\\textbf{Data Set A}}; \\node[below] at (13, -0.6) {Value}; \\foreach \\y in {0.3, 0.6} \\fill (10, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (11, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (12, \\y) circle (2.5pt); \\fill (13, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (14, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (15, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (16, \\y) circle (2.5pt); % Data set B \\begin{scope}[xshift=9cm] \\draw[thick] (9.5, 0) -- (16.5, 0); \\foreach \\x in {10,11,12,13,14,15,16} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\footnotesize \\x}; } \\node[above] at (13, 1.8) {\\textbf{Data Set B}}; \\node[below] at (13, -0.6) {Value}; \\foreach \\y in {0.3, 0.6} \\fill (10, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (11, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (12, \\y) circle (2.5pt); \\fill (13, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (14, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (15, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (16, \\y) circle (2.5pt); \\end{scope} \\end{tikzpicture} Which of the following statements must be true?",
+    "question": "The dot plots represent the distributions of values in data sets A and B. \\begin{tikzpicture}[scale=0.65] \\draw[thick] (9.5, 0) -- (16.5, 0); \\foreach \\x in {10,11,12,13,14,15,16} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\footnotesize \\x}; } \\node[above] at (13, 1.8) {\\textbf{Data Set A}}; \\node[below] at (13, -0.6) {Value}; \\foreach \\y in {0.3, 0.6} \\fill (10, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (11, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (12, \\y) circle (2.5pt); \\fill (13, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (14, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (15, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (16, \\y) circle (2.5pt); \\begin{scope}[xshift=9cm] \\draw[thick] (9.5, 0) -- (16.5, 0); \\foreach \\x in {10,11,12,13,14,15,16} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\footnotesize \\x}; } \\node[above] at (13, 1.8) {\\textbf{Data Set B}}; \\node[below] at (13, -0.6) {Value}; \\foreach \\y in {0.3, 0.6} \\fill (10, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (11, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (12, \\y) circle (2.5pt); \\fill (13, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (14, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (15, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (16, \\y) circle (2.5pt); \\end{scope} \\end{tikzpicture} Which of the following statements must be true?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -574,7 +574,7 @@
       "B": "The standard deviation of data set A is equal to the standard deviation of data set B."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_036",
@@ -582,7 +582,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Two data sets of 23 integers each are summarized in the histograms shown. For each of the histograms, the first interval represents the frequency of integers greater than or equal to 10, but less than 20. The second interval represents the frequency of integers greater than or equal to 20, but less than 30, and so on. What is the smallest possible difference between the mean of data set A and the mean of data set B? \\begin{tikzpicture}[scale=0.55] % Histogram A \\draw[->] (0,0) -- (6.5,0) node[below right] {Integer}; \\draw[->] (0,0) -- (0,13) node[above] {Frequency}; \\foreach \\y in {2,4,6,8,10,12} { \\draw (0,\\y) -- (6,\\y); \\node[left] at (0,\\y) {\\tiny \\y}; } \\node[left] at (0,0) {\\tiny 0}; \\node[above] at (3.5, 13) {\\textbf{Data Set A}}; \\foreach \\x/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \\node[below] at (\\x, 0) {\\tiny \\val}; \\draw[fill=gray!40] (2,0) rectangle (3,3); \\draw[fill=gray!40] (3,0) rectangle (4,4); \\draw[fill=gray!40] (4,0) rectangle (5,7); \\draw[fill=gray!40] (5,0) rectangle (6,9); % Histogram B \\begin{scope}[xshift=9cm] \\draw[->] (0,0) -- (6.5,0) node[below right] {Integer}; \\draw[->] (0,0) -- (0,13) node[above] {Frequency}; \\foreach \\y in {2,4,6,8,10,12} { \\draw (0,\\y) -- (6,\\y); \\node[left] at (0,\\y) {\\tiny \\y}; } \\node[left] at (0,0) {\\tiny 0}; \\node[above] at (3.5, 13) {\\textbf{Data Set B}}; \\foreach \\x/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \\node[below] at (\\x, 0) {\\tiny \\val}; \\draw[fill=gray!40] (1,0) rectangle (2,3); \\draw[fill=gray!40] (2,0) rectangle (3,4); \\draw[fill=gray!40] (3,0) rectangle (4,7); \\draw[fill=gray!40] (4,0) rectangle (5,9); \\end{scope} \\end{tikzpicture}",
+    "question": "Two data sets of 23 integers each are summarized in the histograms shown. For each of the histograms, the first interval represents the frequency of integers greater than or equal to 10, but less than 20. The second interval represents the frequency of integers greater than or equal to 20, but less than 30, and so on. What is the smallest possible difference between the mean of data set A and the mean of data set B? \\begin{tikzpicture}[scale=0.55] \\draw[->] (0,0) -- (6.5,0) node[below right] {Integer}; \\draw[->] (0,0) -- (0,13) node[above] {Frequency}; \\foreach \\y in {2,4,6,8,10,12} { \\draw (0,\\y) -- (6,\\y); \\node[left] at (0,\\y) {\\tiny \\y}; } \\node[left] at (0,0) {\\tiny 0}; \\node[above] at (3.5, 13) {\\textbf{Data Set A}}; \\foreach \\x/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \\node[below] at (\\x, 0) {\\tiny \\val}; \\draw[fill=gray!40] (2,0) rectangle (3,3); \\draw[fill=gray!40] (3,0) rectangle (4,4); \\draw[fill=gray!40] (4,0) rectangle (5,7); \\draw[fill=gray!40] (5,0) rectangle (6,9); \\begin{scope}[xshift=9cm] \\draw[->] (0,0) -- (6.5,0) node[below right] {Integer}; \\draw[->] (0,0) -- (0,13) node[above] {Frequency}; \\foreach \\y in {2,4,6,8,10,12} { \\draw (0,\\y) -- (6,\\y); \\node[left] at (0,\\y) {\\tiny \\y}; } \\node[left] at (0,0) {\\tiny 0}; \\node[above] at (3.5, 13) {\\textbf{Data Set B}}; \\foreach \\x/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} \\node[below] at (\\x, 0) {\\tiny \\val}; \\draw[fill=gray!40] (1,0) rectangle (2,3); \\draw[fill=gray!40] (2,0) rectangle (3,4); \\draw[fill=gray!40] (3,0) rectangle (4,7); \\draw[fill=gray!40] (4,0) rectangle (5,9); \\end{scope} \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -592,7 +592,7 @@
       "D": "23"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_037",
@@ -610,7 +610,7 @@
       "D": "3"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_038",
@@ -618,7 +618,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "Jennifer bought a box of Crunchy Grain cereal. The nutrition facts on the box state that a serving size of the cereal is $\\frac{3}{4}$ cup and provides 210 calories, 50 of which are calories from fat. In addition, each serving of the cereal provides 180 milligrams of potassium, which is 5\\% of the daily allowance for adults. If $p$ percent of an adult's daily allowance of potassium is provided by $x$ servings of Crunchy Grain cereal per day, which of the following expresses $p$ in terms of $x$?",
+    "question": "Jennifer bought a box of Crunchy Grain cereal. The nutrition facts on the box state that a serving size of the cereal is $\\frac{3}{4}$ cup and provides 210 calories, 50 of which are calories from fat. In addition, each serving of the cereal provides 180 milligrams of potassium, which is 5",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -628,7 +628,7 @@
       "D": "$p = (1.05)^x$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_039",
@@ -636,11 +636,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A school district is forming a committee to discuss plans for the construction of a new high school. Of those invited to join the committee, 15\\% are parents of students, 45\\% are teachers from the current high school, 25\\% are school and district administrators, and the remaining 6 individuals are students. How many more teachers were invited to join the committee than school and district administrators? \\textbf{Answer:}",
+    "question": "A school district is forming a committee to discuss plans for the construction of a new high school. Of those invited to join the committee, 15",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_040",
@@ -658,7 +658,7 @@
       "D": "6,468"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_041",
@@ -666,11 +666,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The line graph shows the total amount of snow, in inches, recorded each year in Washington, DC, from 2003 to 2015. If $p\\%$ is the percent decrease in the annual snowfall from 2003 to 2007, what is the value of $p$? \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (13,0) node[below] {Year}; \\draw[->] (0,0) -- (0,7) node[above] {Annual snowfall (inches)}; \\foreach \\y/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} { \\draw[gray!50] (0,\\y) -- (12.5,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\node[left] at (0,0) {\\tiny 0}; \\draw[thick] (0,4) -- (1, 1.2) -- (2, 1.25) -- (3, 1.35) -- (4, 1.0) -- (5, 0.5) -- (6, 0.8) -- (7, 5.6) -- (8, 1.0) -- (9, 0.2) -- (10, 0.3) -- (11, 3.2) -- (12, 1.8); \\fill (0,4) circle (3pt) node[above right] {\\tiny $(2003, 40)$}; \\fill (4,1) circle (3pt) node[above right] {\\tiny $(2007, 10)$}; \\end{tikzpicture} \\textbf{Answer:}",
+    "question": "The line graph shows the total amount of snow, in inches, recorded each year in Washington, DC, from 2003 to 2015. If $p \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (13,0) node[below] {Year}; \\draw[->] (0,0) -- (0,7) node[above] {Annual snowfall (inches)}; \\foreach \\y/\\val in {1/10, 2/20, 3/30, 4/40, 5/50, 6/60} { \\draw[gray!50] (0,\\y) -- (12.5,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\node[left] at (0,0) {\\tiny 0}; \\draw[thick] (0,4) -- (1, 1.2) -- (2, 1.25) -- (3, 1.35) -- (4, 1.0) -- (5, 0.5) -- (6, 0.8) -- (7, 5.6) -- (8, 1.0) -- (9, 0.2) -- (10, 0.3) -- (11, 3.2) -- (12, 1.8); \\fill (0,4) circle (3pt) node[above right] {\\tiny $(2003, 40)$}; \\fill (4,1) circle (3pt) node[above right] {\\tiny $(2007, 10)$}; \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_042",
@@ -678,11 +678,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The number $a$ is 70\\% less than the positive number $b$. The number $c$ is 80\\% greater than $a$. The number $c$ is how many times $b$? \\textbf{Answer:}",
+    "question": "The number $a$ is 70",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_043",
@@ -690,11 +690,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "210 is $p\\%$ greater than 30. What is the value of $p$? \\textbf{Answer:}",
+    "question": "210 is $p",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_044",
@@ -702,11 +702,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The number $w$ is 110\\% greater than the number $z$. The number $z$ is 55\\% less than 50. What is the value of $w$? \\textbf{Answer:}",
+    "question": "The number $w$ is 110",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_045",
@@ -714,11 +714,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A gift shop buys souvenirs at a wholesale price of 7.00 dollars each and resells them each at a retail price that is 290\\% of the wholesale price. At the end of the season, any remaining souvenirs are marked at a discounted price that is 80\\% off the retail price. What is the discounted price of each remaining souvenir, in dollars? \\textbf{Answer:}",
+    "question": "A gift shop buys souvenirs at a wholesale price of 7.00 dollars each and resells them each at a retail price that is 290",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_046",
@@ -726,11 +726,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The regular price of a shirt at a store is \\$11.70. The sale price of the shirt is 80\\% less than the regular price, and the sale price is 30\\% greater than the store's cost for the shirt. What was the store's cost, in dollars, for the shirt? \\textbf{Answer:}",
+    "question": "The regular price of a shirt at a store is $11.70. The sale price of the shirt is 80",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_047",
@@ -738,11 +738,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "According to a set of standards, a certain type of substance can contain a maximum of 0.001\\% phosphorus by mass. If a sample of this substance has a mass of 140 grams, what is the maximum mass, in grams, of phosphorus the sample can contain to meet these standards? \\textbf{Answer:}",
+    "question": "According to a set of standards, a certain type of substance can contain a maximum of 0.001",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_048",
@@ -750,17 +750,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "37\\% of the items in a box are green. Of those, 37\\% are also rectangular. Of the green rectangular items, 42\\% are also metal. Which of the following is closest to the percentage of the items in the box that are not rectangular green metal items?",
+    "question": "37",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "1.16\\%",
-      "B": "57.50\\%",
-      "C": "94.25\\%",
-      "D": "98.84\\%"
+      "A": "1.16",
+      "B": "57.50",
+      "C": "94.25",
+      "D": "98.84"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_049",
@@ -768,11 +768,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The number $a$ is 60\\% greater than the positive number $b$. The number $c$ is 45\\% less than $a$. The number $c$ is how many times $b$? \\textbf{Answer:}",
+    "question": "The number $a$ is 60",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_050",
@@ -780,11 +780,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The number $a$ is 110\\% greater than the number $b$. The number $b$ is 90\\% less than 47. What is the value of $a$? \\textbf{Answer:}",
+    "question": "The number $a$ is 110",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_051",
@@ -792,11 +792,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The number $a$ is 70\\% less than the positive number $b$. The number $c$ is 60\\% greater than $a$. The number $c$ is how many times $b$? \\textbf{Answer:}",
+    "question": "The number $a$ is 70",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_052",
@@ -808,13 +808,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "4\\%",
-      "B": "5\\%",
-      "C": "10\\%",
-      "D": "18\\%"
+      "A": "4",
+      "B": "5",
+      "C": "10",
+      "D": "18"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_053",
@@ -822,17 +822,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The value of a collectible comic book increased by 167\\% from the end of 2011 to the end of 2012 and then decreased by 16\\% from the end of 2012 to the end of 2013. What was the net percentage increase in the value of the collectible comic book from the end of 2011 to the end of 2013?",
+    "question": "The value of a collectible comic book increased by 167",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "124.28\\%",
-      "B": "140.28\\%",
-      "C": "151.00\\%",
-      "D": "209.72\\%"
+      "A": "124.28",
+      "B": "140.28",
+      "C": "151.00",
+      "D": "209.72"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_054",
@@ -840,7 +840,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "For $x > 0$, the function $f$ is defined as follows: \\[ f(x) equals 201\\% of x \\] Which of the following could describe this function?",
+    "question": "For $x > 0$, the function $f$ is defined as follows: \\[ f(x) \\text{ equals } 201 Which of the following could describe this function?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -850,7 +850,7 @@
       "D": "Increasing linear"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_055",
@@ -868,7 +868,7 @@
       "D": "Account A earns less money per year than Account B at first but eventually earns more money per year"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_056",
@@ -886,7 +886,7 @@
       "D": "1.0"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_057",
@@ -904,7 +904,7 @@
       "D": "$y = 100x$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_058",
@@ -922,7 +922,7 @@
       "D": "$y = -1.674x^2 + 19.76x + 745.73$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_059",
@@ -930,11 +930,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "Each dot in the scatterplot above represents the temperature and the number of people who visited a beach in Lagos, Nigeria, on one of eleven different days. The line of best fit for the data is also shown. The line of best fit for the data has a slope of approximately 57. According to this estimate, how many additional people per day are predicted to visit the beach for each $5^\\circC$ increase in average temperature? \\begin{tikzpicture}[scale=0.5] \\draw[->] (0,0) -- (11.5,0) node[below] {Average temperature ($^\\circ$C)}; \\draw[->] (0,0) -- (0,9) node[above] {Number of people}; \\foreach \\y/\\val in {1/80, 2/160, 3/240, 4/320, 5/400, 6/480, 7/560, 8/640} { \\draw[gray!30] (0,\\y) -- (11,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\foreach \\x/\\val in {0/25, 2/27, 4/29, 6/31, 8/33, 10/35} { \\draw[gray!30] (\\x, 0) -- (\\x, 8.5); \\node[below] at (\\x, 0) {\\tiny \\val}; } \\draw[thick] (0, 1.0) -- (11, 8.5); \\foreach \\p in {(2, 1.5), (3, 4.5), (4, 3.0), (5, 4.0), (5, 4.6), (6, 6.0), (6.5, 7.0), (8, 6.0), (9, 8.0), (9, 6.8), (10, 7.8)} { \\fill \\p circle (3pt); } \\end{tikzpicture} \\textbf{Answer:}",
+    "question": "Each dot in the scatterplot above represents the temperature and the number of people who visited a beach in Lagos, Nigeria, on one of eleven different days. The line of best fit for the data is also shown. The line of best fit for the data has a slope of approximately 57. According to this estimate, how many additional people per day are predicted to visit the beach for each $5^\\circ\\text{ C }$ increase in average temperature? \\begin{tikzpicture}[scale=0.5] \\draw[->] (0,0) -- (11.5,0) node[below] {Average temperature ($^\\circ$C)}; \\draw[->] (0,0) -- (0,9) node[above] {Number of people}; \\foreach \\y/\\val in {1/80, 2/160, 3/240, 4/320, 5/400, 6/480, 7/560, 8/640} { \\draw[gray!30] (0,\\y) -- (11,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\foreach \\x/\\val in {0/25, 2/27, 4/29, 6/31, 8/33, 10/35} { \\draw[gray!30] (\\x, 0) -- (\\x, 8.5); \\node[below] at (\\x, 0) {\\tiny \\val}; } \\draw[thick] (0, 1.0) -- (11, 8.5); \\foreach \\p in {(2, 1.5), (3, 4.5), (4, 3.0), (5, 4.0), (5, 4.6), (6, 6.0), (6.5, 7.0), (8, 6.0), (9, 8.0), (9, 6.8), (10, 7.8)} { \\fill \\p circle (3pt); } \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_060",
@@ -942,11 +942,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The scatterplot shows the relationship between the length of time $y$, in hours, a certain bird spent in flight and the number of days after January 11, $x$. What is the average rate of change, in hours per day, of the length of time the bird spent in flight on January 13 to the length of time the bird spent in flight on January 15? \\begin{tikzpicture}[scale=0.5] \\draw[->] (0,0) -- (11,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,9) node[above] {$y$}; \\node[below] at (5.5,-0.6) {Days after January 11}; \\node[rotate=90, above] at (-0.8, 4.5) {Length of time (hours)}; \\foreach \\x in {2,4,6,8,10} { \\draw[gray!40] (\\x, 0) -- (\\x, 8); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y/\\val in {1/2, 2/4, 3/6, 4/8, 5/10, 6/12, 7/14, 8/16} { \\draw[gray!40] (0, \\y) -- (10, \\y); \\node[left] at (0, \\y) {\\tiny \\val}; } \\foreach \\p in {(1, 7.0), (2, 3.0), (3, 5.0), (4, 7.5), (5, 7.1), (6, 3.5), (7, 5.5), (8, 7.0), (9, 6.75), (10, 6.6)} { \\fill \\p circle (3pt); } \\end{tikzpicture} \\textbf{Answer:}",
+    "question": "The scatterplot shows the relationship between the length of time $y$, in hours, a certain bird spent in flight and the number of days after January 11, $x$. What is the average rate of change, in hours per day, of the length of time the bird spent in flight on January 13 to the length of time the bird spent in flight on January 15? \\begin{tikzpicture}[scale=0.5] \\draw[->] (0,0) -- (11,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,9) node[above] {$y$}; \\node[below] at (5.5,-0.6) {Days after January 11}; \\node[rotate=90, above] at (-0.8, 4.5) {Length of time (hours)}; \\foreach \\x in {2,4,6,8,10} { \\draw[gray!40] (\\x, 0) -- (\\x, 8); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y/\\val in {1/2, 2/4, 3/6, 4/8, 5/10, 6/12, 7/14, 8/16} { \\draw[gray!40] (0, \\y) -- (10, \\y); \\node[left] at (0, \\y) {\\tiny \\val}; } \\foreach \\p in {(1, 7.0), (2, 3.0), (3, 5.0), (4, 7.5), (5, 7.1), (6, 3.5), (7, 5.5), (8, 7.0), (9, 6.75), (10, 6.6)} { \\fill \\p circle (3pt); } \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_061",
@@ -954,7 +954,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The scatterplot above shows a company's ice cream sales $d$, in dollars, and the high temperature $t$, in degrees Celsius ($^\\circC$), on 12 different days. A line of best fit for the data is also shown. Which of the following could be an equation of the line of best fit? \\begin{tikzpicture}[scale=0.55] \\draw[->] (0,0) -- (9,0) node[below] {Temperature ($^\\circ$C)}; \\draw[->] (0,0) -- (0,8) node[above] {Sales (dollars)}; \\foreach \\y/\\val in {1/300, 2/400, 3/500, 4/600, 5/700, 6/800, 7/900, 8/1000} { \\draw[gray!40] (0,\\y) -- (8,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\foreach \\x/\\val in {0/10, 1/12, 2/14, 3/16, 4/18, 5/20, 6/22, 7/24, 8/26} { \\draw[gray!40] (\\x, 0) -- (\\x, 8); \\node[below] at (\\x, 0) {\\tiny \\val}; } \\draw[thick] (0.5, 2.4) -- (8.0, 7.4); \\foreach \\p in {(1, 2.9), (2.1, 3.2), (2.6, 4.35), (3.2, 4.25), (3.6, 5.1), (4.1, 5.25), (4.3, 5.1), (4.7, 5.15), (6.1, 6.25), (6.3, 5.5), (6.9, 6.45), (7.6, 7.1)} { \\fill \\p circle (3pt); } \\end{tikzpicture}",
+    "question": "The scatterplot above shows a company's ice cream sales $d$, in dollars, and the high temperature $t$, in degrees Celsius ($^\\circ\\text{ C }$), on 12 different days. A line of best fit for the data is also shown. Which of the following could be an equation of the line of best fit? \\begin{tikzpicture}[scale=0.55] \\draw[->] (0,0) -- (9,0) node[below] {Temperature ($^\\circ$C)}; \\draw[->] (0,0) -- (0,8) node[above] {Sales (dollars)}; \\foreach \\y/\\val in {1/300, 2/400, 3/500, 4/600, 5/700, 6/800, 7/900, 8/1000} { \\draw[gray!40] (0,\\y) -- (8,\\y); \\node[left] at (0,\\y) {\\tiny \\val}; } \\foreach \\x/\\val in {0/10, 1/12, 2/14, 3/16, 4/18, 5/20, 6/22, 7/24, 8/26} { \\draw[gray!40] (\\x, 0) -- (\\x, 8); \\node[below] at (\\x, 0) {\\tiny \\val}; } \\draw[thick] (0.5, 2.4) -- (8.0, 7.4); \\foreach \\p in {(1, 2.9), (2.1, 3.2), (2.6, 4.35), (3.2, 4.25), (3.6, 5.1), (4.1, 5.25), (4.3, 5.1), (4.7, 5.15), (6.1, 6.25), (6.3, 5.5), (6.9, 6.45), (7.6, 7.1)} { \\fill \\p circle (3pt); } \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -964,7 +964,7 @@
       "D": "$d = 33t + 84$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_062",
@@ -982,7 +982,7 @@
       "D": "Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.488 dollars"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_063",
@@ -1000,7 +1000,7 @@
       "D": "13"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_064",
@@ -1008,7 +1008,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The table above shows information about 18 cars listed for sale on an auto dealership's website. If one of the cars listed for sale is selected at random, what is the probability that the car selected will be a hybrid car priced at no more than \\$25,000?",
+    "question": "The table above shows information about 18 cars listed for sale on an auto dealership's website. If one of the cars listed for sale is selected at random, what is the probability that the car selected will be a hybrid car priced at no more than $25,000?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1018,7 +1018,7 @@
       "D": "$5/8$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_065",
@@ -1036,7 +1036,7 @@
       "D": "22,500.0"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_066",
@@ -1054,7 +1054,7 @@
       "D": "12"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_067",
@@ -1072,7 +1072,7 @@
       "D": "200,320"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_068",
@@ -1080,11 +1080,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The ratio 180 to $m$ is equivalent to the ratio 5 to 35. What is the value of $m$? \\textbf{Answer:}",
+    "question": "The ratio 180 to $m$ is equivalent to the ratio 5 to 35. What is the value of $m$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_069",
@@ -1092,15 +1092,15 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Employees of a company were surveyed to determine whether they are satisfied with the cafeteria at the workplace. A random sample of 250 employees was selected. All 250 responded, and 73\\% said they are satisfied. Based on this information, which of the following statements must be true?",
+    "question": "Employees of a company were surveyed to determine whether they are satisfied with the cafeteria at the workplace. A random sample of 250 employees was selected. All 250 responded, and 73",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "Of all the company employees, 73\\% would say they are satisfied with the cafeteria at the workplace.",
-      "B": "If another random sample of 250 employees were surveyed, 73\\% would say they are satisfied."
+      "A": "Of all the company employees, 73",
+      "B": "If another random sample of 250 employees were surveyed, 73"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_070",
@@ -1108,11 +1108,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "How many fluid ounces are equivalent to 92 quarts? (8 fluid ounces $= 1$ cup and 4 cups $= 1$ quart) \\textbf{Answer:}",
+    "question": "How many fluid ounces are equivalent to 92 quarts? (8 fluid ounces $= 1$ cup and 4 cups $= 1$ quart)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_071",
@@ -1124,13 +1124,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "$\\text{mode} < \\text{median} < \\text{mean}$",
-      "B": "$\\text{mode} < \\text{mean} < \\text{median}$",
-      "C": "$\\text{median} < \\text{mode} < \\text{mean}$",
-      "D": "$\\text{mean} < \\text{mode} < \\text{median}$"
+      "A": "$\\text{ mode } < \\text{ median } < \\text{ mean }$",
+      "B": "$\\text{ mode } < \\text{ mean } < \\text{ median }$",
+      "C": "$\\text{ median } < \\text{ mode } < \\text{ mean }$",
+      "D": "$\\text{ mean } < \\text{ mode } < \\text{ median }$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_072",
@@ -1138,11 +1138,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The frequency table summarizes the 62 data values in a data set. What is the maximum data value in the data set? \\textbf{Answer:}",
+    "question": "The frequency table summarizes the 62 data values in a data set. What is the maximum data value in the data set?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_073",
@@ -1160,7 +1160,7 @@
       "D": "$15/20$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_074",
@@ -1168,11 +1168,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "If $x/y = 5$ and $35x/(ny) = 5$, what is the value of $n$? \\textbf{Answer:}",
+    "question": "If $x/y = 5$ and $35x/(ny) = 5$, what is the value of $n$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_075",
@@ -1180,11 +1180,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "In a sample, 75\\% of the items are defective. There are 96 defective items in the sample. How many total items are in the sample? \\textbf{Answer:}",
+    "question": "In a sample, 75",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_076",
@@ -1192,11 +1192,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "Pure beeswax has a density of 0.625 ounce per cubic inch. An online company sells pure beeswax at a price of \\$12.00 per ounce. What is the selling price, in dollars per cubic inch, for pure beeswax purchased from this company? \\textbf{Answer:}",
+    "question": "Pure beeswax has a density of 0.625 ounce per cubic inch. An online company sells pure beeswax at a price of $12.00 per ounce. What is the selling price, in dollars per cubic inch, for pure beeswax purchased from this company?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_077",
@@ -1204,17 +1204,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A study was done on the weights of different types of fish in a lake. A random sample of fish were caught and marked in order to ensure that none were weighed more than once. The sample contained 200 trout, of which 25\\% weighed more than 3 pounds. Which of the following conclusions is best supported by the sample data?",
+    "question": "A study was done on the weights of different types of fish in a lake. A random sample of fish were caught and marked in order to ensure that none were weighed more than once. The sample contained 200 trout, of which 25",
     "prompt": "",
     "isGridIn": false,
     "options": {
       "A": "The majority of all fish in the lake weigh less than 3 pounds.",
       "B": "The average weight of all fish in the lake is approximately 3 pounds.",
-      "C": "Approximately 25\\% of all fish in the lake weigh more than 3 pounds.",
-      "D": "Approximately 25\\% of all trout in the lake weigh more than 3 pounds."
+      "C": "Approximately 25",
+      "D": "Approximately 25"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_078",
@@ -1232,7 +1232,7 @@
       "D": "$7/13$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_079",
@@ -1250,7 +1250,7 @@
       "D": "$1/6$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_080",
@@ -1258,11 +1258,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The graph shows the momentum $y$, in newton-seconds, of an object $x$ seconds after the object started moving, for $0 \\le x \\le 8$. What is the average rate of change, in newton-seconds per second, in the momentum of the object from $x = 4$ to $x = 8$? \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (9,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,12) node[above] {$y$}; \\node[below] at (4.5, -0.6) {Time (seconds)}; \\node[rotate=90, above] at (-0.8, 6) {Momentum (newton-seconds)}; \\foreach \\x in {1,2,3,4,5,6,7,8} { \\draw[gray!40] (\\x, 0) -- (\\x, 11); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y in {1,2,3,4,5,6,7,8,9,10,11} { \\draw[gray!40] (0, \\y) -- (8, \\y); \\node[left] at (0, \\y) {\\tiny \\y}; } \\draw[thick] (0, 1.5) .. controls (3, 2.5) and (5, 5) .. (8, 9.5); \\end{tikzpicture} \\textbf{Answer:}",
+    "question": "The graph shows the momentum $y$, in newton-seconds, of an object $x$ seconds after the object started moving, for $0 \\le x \\le 8$. What is the average rate of change, in newton-seconds per second, in the momentum of the object from $x = 4$ to $x = 8$? \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (9,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,12) node[above] {$y$}; \\node[below] at (4.5, -0.6) {Time (seconds)}; \\node[rotate=90, above] at (-0.8, 6) {Momentum (newton-seconds)}; \\foreach \\x in {1,2,3,4,5,6,7,8} { \\draw[gray!40] (\\x, 0) -- (\\x, 11); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y in {1,2,3,4,5,6,7,8,9,10,11} { \\draw[gray!40] (0, \\y) -- (8, \\y); \\node[left] at (0, \\y) {\\tiny \\y}; } \\draw[thick] (0, 1.5) .. controls (3, 2.5) and (5, 5) .. (8, 9.5); \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_081",
@@ -1280,7 +1280,7 @@
       "D": "It is plausible that the mean distance hiked for all visitors is between 6.1 and 7.5 miles."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_082",
@@ -1288,11 +1288,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The ratio $x$ to $y$ is equivalent to the ratio 7 to 4. If the value of $x$ is 168, what is the value of $y$? \\textbf{Answer:}",
+    "question": "The ratio $x$ to $y$ is equivalent to the ratio 7 to 4. If the value of $x$ is 168, what is the value of $y$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_083",
@@ -1310,7 +1310,7 @@
       "D": "$w - 6$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_084",
@@ -1328,7 +1328,7 @@
       "D": "The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_085",
@@ -1340,13 +1340,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "10\\%",
-      "B": "8\\%",
-      "C": "4\\%",
-      "D": "1\\%"
+      "A": "10",
+      "B": "8",
+      "C": "4",
+      "D": "1"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_086",
@@ -1364,7 +1364,7 @@
       "D": "8,100"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_087",
@@ -1382,7 +1382,7 @@
       "D": "The average weight of all boxes of apples filled by the company is greater than 18.4 pounds."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_088",
@@ -1390,11 +1390,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "Each vertex of an 18-sided polygon is labeled with one of the 18 letters A through R, with a different letter at each vertex. If one vertex is selected at random, what is the probability that the letter F will be at the selected vertex? (Express your answer as a decimal or fraction, not as a percent.) \\textbf{Answer:}",
+    "question": "Each vertex of an 18-sided polygon is labeled with one of the 18 letters A through R, with a different letter at each vertex. If one vertex is selected at random, what is the probability that the letter F will be at the selected vertex? (Express your answer as a decimal or fraction, not as a percent.)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_089",
@@ -1402,7 +1402,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "Which expression represents the result of increasing a positive quantity $w$ by 65\\%?",
+    "question": "Which expression represents the result of increasing a positive quantity $w$ by 65",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1412,7 +1412,7 @@
       "D": "$0.65w$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_090",
@@ -1420,7 +1420,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit for the data is also shown. \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (11,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,11) node[above] {$y$}; \\foreach \\x in {1,2,3,4,5,6,7,8,9,10} { \\draw[gray!30] (\\x, 0) -- (\\x, 10.5); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y in {1,2,3,4,5,6,7,8,9,10} { \\draw[gray!30] (0, \\y) -- (10.5, \\y); \\node[left] at (0, \\y) {\\tiny \\y}; } \\draw[thick] (0, 1.2) -- (10, 9.8); % 10 data points \\foreach \\p in {(1, 2.8), (2, 2.2), (3, 3.2), (4, 5.5), (5, 4.8), (6, 7.2), (7, 6.5), (8, 7.4), (9, 9.6), (10, 9.0)} { \\fill \\p circle (3pt); } \\end{tikzpicture} For how many of the 10 data points is the actual $y$-value less than the $y$-value predicted by the line of best fit?",
+    "question": "The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit for the data is also shown. \\begin{tikzpicture}[scale=0.6] \\draw[->] (0,0) -- (11,0) node[right] {$x$}; \\draw[->] (0,0) -- (0,11) node[above] {$y$}; \\foreach \\x in {1,2,3,4,5,6,7,8,9,10} { \\draw[gray!30] (\\x, 0) -- (\\x, 10.5); \\node[below] at (\\x, 0) {\\tiny \\x}; } \\foreach \\y in {1,2,3,4,5,6,7,8,9,10} { \\draw[gray!30] (0, \\y) -- (10.5, \\y); \\node[left] at (0, \\y) {\\tiny \\y}; } \\draw[thick] (0, 1.2) -- (10, 9.8); \\foreach \\p in {(1, 2.8), (2, 2.2), (3, 3.2), (4, 5.5), (5, 4.8), (6, 7.2), (7, 6.5), (8, 7.4), (9, 9.6), (10, 9.0)} { \\fill \\p circle (3pt); } \\end{tikzpicture} For how many of the 10 data points is the actual $y$-value less than the $y$-value predicted by the line of best fit?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1430,7 +1430,7 @@
       "D": "7"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_091",
@@ -1438,7 +1438,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "Marco earns \\$16.25 per hour at his part-time job. When he works $z$ hours, he earns $16.25z$ dollars. Which of the following expressions gives the amount, in dollars, Marco will earn if he works $4z$ hours?",
+    "question": "Marco earns $16.25 per hour at his part-time job. When he works $z$ hours, he earns $16.25z$ dollars. Which of the following expressions gives the amount, in dollars, Marco will earn if he works $4z$ hours?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1448,7 +1448,7 @@
       "D": "$16.25(z + 4)$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_092",
@@ -1456,7 +1456,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The population of City B increased by 12\\% from 2018 to 2019. If the 2019 population is $k$ times the 2018 population, what is the value of $k$?",
+    "question": "The population of City B increased by 12",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1466,7 +1466,7 @@
       "D": "2.2"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_093",
@@ -1474,11 +1474,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The list gives the mass, in grams, of 5 grizzly bear cubs: \\[ 5{,}050;\\; 5{,}050;\\; 4{,}030;\\; 5{,}070;\\; 4{,}050 \\] What is the mean mass, in grams, of these 5 grizzly bear cubs? \\textbf{Answer:}",
+    "question": "The list gives the mass, in grams, of 5 grizzly bear cubs: \\[ 5,050;\\; 5,050;\\; 4,030;\\; 5,070;\\; 4,050 \\] What is the mean mass, in grams, of these 5 grizzly bear cubs?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_094",
@@ -1486,17 +1486,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A company that produces cups wants to estimate the percent of the cups produced in a typical week that are defective. A random sample of 420 cups produced in a certain week were inspected. Based on the sample, it is estimated that 8\\% of all cups produced by the company in this week are defective, with an associated margin of error of 2.74\\%. Based on the estimate and associated margin of error, which of the following is the most appropriate conclusion about all cups produced by the company during this week?",
+    "question": "A company that produces cups wants to estimate the percent of the cups produced in a typical week that are defective. A random sample of 420 cups produced in a certain week were inspected. Based on the sample, it is estimated that 8",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "2.74\\% of the cups are defective.",
-      "B": "It is plausible that between 5.26\\% and 10.74\\% of the cups are defective.",
-      "C": "8\\% of the cups are defective.",
-      "D": "It is plausible that more than 10.74\\% of the cups are defective."
+      "A": "2.74",
+      "B": "It is plausible that between 5.26",
+      "C": "8",
+      "D": "It is plausible that more than 10.74"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_095",
@@ -1504,7 +1504,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The glass pictured above can hold a maximum volume of 946 cubic centimeters, which is approximately 32 fluid ounces. Jenny has a pitcher that contains 1 gallon of water. How many times could Jenny completely fill the glass with 1 gallon of water? ($1 gallon = 128 fluid ounces$) \\begin{tikzpicture}[scale=0.8] \\draw[thick] (-1.5, 2.5) -- (-0.8, 0) -- (0.8, 0) -- (1.5, 2.5); \\draw[thick] (0, 2.5) ellipse (1.5cm and 0.4cm); \\draw[thick] (-0.8, 0) arc (180:360:0.8cm and 0.25cm); \\draw[dashed] (-0.8, 0) arc (180:0:0.8cm and 0.25cm); \\node at (0, 1.2) {$Volume = \\dfrac{7\\pi k^3}{48}$}; \\end{tikzpicture}",
+    "question": "The glass pictured above can hold a maximum volume of 946 cubic centimeters, which is approximately 32 fluid ounces. Jenny has a pitcher that contains 1 gallon of water. How many times could Jenny completely fill the glass with 1 gallon of water? ($1\\text{ gallon } = 128\\text{ fluid ounces }$) \\begin{tikzpicture}[scale=0.8] \\draw[thick] (-1.5, 2.5) -- (-0.8, 0) -- (0.8, 0) -- (1.5, 2.5); \\draw[thick] (0, 2.5) ellipse (1.5cm and 0.4cm); \\draw[thick] (-0.8, 0) arc (180:360:0.8cm and 0.25cm); \\draw[dashed] (-0.8, 0) arc (180:0:0.8cm and 0.25cm); \\node at (0, 1.2) {$\\text{ Volume } = \\dfrac{7\\pi k^3}{48}$}; \\end{tikzpicture}",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1514,7 +1514,7 @@
       "D": "2"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_096",
@@ -1522,11 +1522,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "What number is 25\\% greater than 240? \\textbf{Answer:}",
+    "question": "What number is 25",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_097",
@@ -1544,7 +1544,7 @@
       "D": "2.5"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_098",
@@ -1562,7 +1562,7 @@
       "D": "12"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_099",
@@ -1570,11 +1570,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "588 is 84\\% of what number? \\textbf{Answer:}",
+    "question": "588 is 84",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_100",
@@ -1592,7 +1592,7 @@
       "D": "$y = -3x + 0.5$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_101",
@@ -1600,11 +1600,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A set of 10 data values has a minimum of 14, a maximum of 44, and a range of 30. If the value 14 is removed and a new value of 18 is added to create an 10-value data set, what is the range of the new data set? \\textbf{Answer:}",
+    "question": "A set of 10 data values has a minimum of 14, a maximum of 44, and a range of 30. If the value 14 is removed and a new value of 18 is added to create an 10-value data set, what is the range of the new data set?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_102",
@@ -1612,17 +1612,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A survey of 100 registered voters revealed that 54 intended to vote for Candidate A. If the survey has a margin of error of 4.5\\%, which of the following is a plausible value for the percentage of all registered voters who intend to vote for Candidate A?",
+    "question": "A survey of 100 registered voters revealed that 54 intended to vote for Candidate A. If the survey has a margin of error of 4.5",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "48\\%",
-      "B": "52\\%",
-      "C": "60\\%",
-      "D": "62\\%"
+      "A": "48",
+      "B": "52",
+      "C": "60",
+      "D": "62"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_103",
@@ -1630,7 +1630,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "If 15\\% of a positive number $x$ is equal to 45\\% of a positive number $y$, what is the ratio of $x$ to $y$?",
+    "question": "If 15",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1640,7 +1640,7 @@
       "D": "5 to 1"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_104",
@@ -1658,7 +1658,7 @@
       "D": "$\\dfrac{105}{200}$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_105",
@@ -1671,12 +1671,12 @@
     "isGridIn": false,
     "options": {
       "A": "The predicted sales when advertising spending is zero",
-      "B": "The predicted increase in advertising spending for each \\$1,000 increase in sales",
-      "C": "The predicted increase in sales, in thousands of dollars, for each \\$100 increase in advertising spending",
+      "B": "The predicted increase in advertising spending for each $1,000 increase in sales",
+      "C": "The predicted increase in sales, in thousands of dollars, for each $100 increase in advertising spending",
       "D": "The total sales for all 15 stores combined"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_106",
@@ -1684,11 +1684,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A speed of 72 kilometers per hour is equivalent to how many meters per second? ($1 km = 1{,}000 meters$, $1 hour = 3{,}600 seconds$) \\textbf{Answer:}",
+    "question": "A speed of 72 kilometers per hour is equivalent to how many meters per second? ($1\\text{ km } = 1,000\\text{ meters }$, $1\\text{ hour } = 3,600\\text{ seconds }$)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_107",
@@ -1700,13 +1700,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "6.0\\%",
-      "B": "6.4\\%",
-      "C": "15.6\\%",
-      "D": "18.0\\%"
+      "A": "6.0",
+      "B": "6.4",
+      "C": "15.6",
+      "D": "18.0"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_108",
@@ -1714,11 +1714,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "Data set X consists of 8 integers with a mean of 20 and a standard deviation of 4. Data set Y is obtained by multiplying every number in data set X by 3. What is the standard deviation of data set Y? \\textbf{Answer:}",
+    "question": "Data set X consists of 8 integers with a mean of 20 and a standard deviation of 4. Data set Y is obtained by multiplying every number in data set X by 3. What is the standard deviation of data set Y?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_109",
@@ -1736,7 +1736,7 @@
       "D": "2.4 hours"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_110",
@@ -1744,11 +1744,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A restaurant offers lunch specials consisting of 1 appetizer, 1 main course, and 1 drink. There are 4 appetizers, 6 main courses, and 5 drinks available. How many different combinations of lunch specials can be selected? \\textbf{Answer:}",
+    "question": "A restaurant offers lunch specials consisting of 1 appetizer, 1 main course, and 1 drink. There are 4 appetizers, 6 main courses, and 5 drinks available. How many different combinations of lunch specials can be selected?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_111",
@@ -1756,17 +1756,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The price of a computer was discounted by 20\\% during a sale. The following week, the discounted price was reduced by an additional 10\\%. What is the total overall percentage discount from the original price?",
+    "question": "The price of a computer was discounted by 20",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "28\\%",
-      "B": "30\\%",
-      "C": "32\\%",
-      "D": "38\\%"
+      "A": "28",
+      "B": "30",
+      "C": "32",
+      "D": "38"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_112",
@@ -1784,7 +1784,7 @@
       "D": "10"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_113",
@@ -1792,11 +1792,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "If the ratio of boys to girls in a club is 5 to 7 and there are 84 members in total, how many girls are in the club? \\textbf{Answer:}",
+    "question": "If the ratio of boys to girls in a club is 5 to 7 and there are 84 members in total, how many girls are in the club?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_114",
@@ -1814,7 +1814,7 @@
       "D": "$5/8$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_115",
@@ -1822,11 +1822,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "An author wrote a total of 15 chapters. The mean chapter length was 24 pages. If 2 chapters of length 18 and 22 pages are deleted, what is the mean page length of the remaining 13 chapters? (Round your answer to the nearest tenth.) \\textbf{Answer:}",
+    "question": "An author wrote a total of 15 chapters. The mean chapter length was 24 pages. If 2 chapters of length 18 and 22 pages are deleted, what is the mean page length of the remaining 13 chapters? (Round your answer to the nearest tenth.)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_116",
@@ -1834,17 +1834,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A company's revenue increased by 8\\% in year 1 and then increased by 15\\% in year 2. What was the total percentage increase over the two-year period?",
+    "question": "A company's revenue increased by 8",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "23.0\\%",
-      "B": "24.2\\%",
-      "C": "25.0\\%",
-      "D": "26.5\\%"
+      "A": "23.0",
+      "B": "24.2",
+      "C": "25.0",
+      "D": "26.5"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_117",
@@ -1862,7 +1862,7 @@
       "D": "$\\dfrac{4}{25}$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_118",
@@ -1870,11 +1870,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The line of best fit for a data set is $y = -2.5x + 40$. What is the residual for a point in the data set with coordinates $(6, 22)$? \\textbf{Answer:}",
+    "question": "The line of best fit for a data set is $y = -2.5x + 40$. What is the residual for a point in the data set with coordinates $(6, 22)$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_119",
@@ -1882,11 +1882,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A right circular cylinder has height $h = 10 cm$ and volume $250\\pi cm^3$. What is the diameter of the cylinder's base, in centimeters? \\textbf{Answer:}",
+    "question": "A right circular cylinder has height $h = 10\\text{ cm }$ and volume $250\\pi\\text{ cm }^3$. What is the diameter of the cylinder's base, in centimeters?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_120",
@@ -1904,7 +1904,7 @@
       "D": "Both the mean and standard deviation remain unchanged."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_121",
@@ -1922,7 +1922,7 @@
       "D": "$V = \\dfrac{450}{15m}$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_122",
@@ -1930,11 +1930,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "In an experiment, 40 out of 250 randomly selected light bulbs were found to be defective. Based on this sample, how many defective light bulbs are expected in a shipment of 15,000 bulbs? \\textbf{Answer:}",
+    "question": "In an experiment, 40 out of 250 randomly selected light bulbs were found to be defective. Based on this sample, how many defective light bulbs are expected in a shipment of 15,000 bulbs?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_123",
@@ -1942,7 +1942,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A car travels at a constant speed of 65 miles per hour. How many feet does the car travel in 30 seconds? ($1 mile = 5{,}280 feet$)",
+    "question": "A car travels at a constant speed of 65 miles per hour. How many feet does the car travel in 30 seconds? ($1\\text{ mile } = 5,280\\text{ feet }$)",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -1952,7 +1952,7 @@
       "D": "5,720"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_124",
@@ -1960,11 +1960,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A set of 5 positive integers has a mode of 12, a median of 14, and a mean of 15. If the range is 10, what is the largest number in the set? \\textbf{Answer:}",
+    "question": "A set of 5 positive integers has a mode of 12, a median of 14, and a mean of 15. If the range is 10, what is the largest number in the set?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_125",
@@ -1982,7 +1982,7 @@
       "D": "91"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_126",
@@ -1994,13 +1994,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "2.4\\%",
-      "B": "4.2\\%",
-      "C": "42.9\\%",
-      "D": "57.1\\%"
+      "A": "2.4",
+      "B": "4.2",
+      "C": "42.9",
+      "D": "57.1"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_127",
@@ -2008,11 +2008,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A variable $y$ varies inversely as the square of $x$. When $x = 3$, $y = 16$. What is the value of $y$ when $x = 6$? \\textbf{Answer:}",
+    "question": "A variable $y$ varies inversely as the square of $x$. When $x = 3$, $y = 16$. What is the value of $y$ when $x = 6$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_128",
@@ -2024,13 +2024,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "38.5\\%",
-      "B": "61.5\\%",
-      "C": "62.5\\%",
-      "D": "162.5\\%"
+      "A": "38.5",
+      "B": "61.5",
+      "C": "62.5",
+      "D": "162.5"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_129",
@@ -2048,7 +2048,7 @@
       "D": "The mean cannot be determined without additional information."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_130",
@@ -2056,17 +2056,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "An investment account with an initial deposit of \\$2,500 earns interest compounded continuously at an annual rate of 4.5\\%. Which expression represents the value of the investment after $t$ years?",
+    "question": "An investment account with an initial deposit of $2,500 earns interest compounded continuously at an annual rate of 4.5",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "$2{,}500(1.045)^t$",
-      "B": "$2{,}500(1 + 0.045t)$",
-      "C": "$2{,}500e^{0.045t}$",
-      "D": "$2{,}500e^{1.045t}$"
+      "A": "$2,500(1.045)^t$",
+      "B": "$2,500(1 + 0.045t)$",
+      "C": "$2,500e^{0.045t}$",
+      "D": "$2,500e^{1.045t}$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_131",
@@ -2078,13 +2078,13 @@
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "20\\%",
-      "B": "32\\%",
-      "C": "52\\%",
-      "D": "78\\%"
+      "A": "20",
+      "B": "32",
+      "C": "52",
+      "D": "78"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_132",
@@ -2092,11 +2092,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A company's production rate is 350 units every 2.5 hours. At this rate, how many units can be produced in an 8-hour workday? \\textbf{Answer:}",
+    "question": "A company's production rate is 350 units every 2.5 hours. At this rate, how many units can be produced in an 8-hour workday?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_133",
@@ -2110,11 +2110,11 @@
     "options": {
       "A": "An increase in $X$ causes an increase in $Y$.",
       "B": "As $X$ increases, $Y$ tends to increase.",
-      "C": "92\\% of the data points fall exactly on the line of best fit.",
+      "C": "92",
       "D": "There is no linear association between $X$ and $Y$."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_134",
@@ -2122,11 +2122,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "The original price of a pair of shoes is \\$80. It is marked up by 25\\%, and then discounted by 25\\%. What is the final price of the shoes? \\textbf{Answer:}",
+    "question": "The original price of a pair of shoes is $80. It is marked up by 25",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_135",
@@ -2134,7 +2134,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A circle has a circumference of $16\\pi inches$. If the radius of the circle is doubled, what will be the area of the new circle, in square inches?",
+    "question": "A circle has a circumference of $16\\pi\\text{ inches }$. If the radius of the circle is doubled, what will be the area of the new circle, in square inches?",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -2144,7 +2144,7 @@
       "D": "$512\\pi$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_136",
@@ -2152,11 +2152,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The box plot shows the distribution of daily high temperatures (in $^\\circF$) for a city during the month of July. \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0,0) -- (8,0); \\foreach \\x/\\val in {0/70, 2/75, 4/80, 6/85, 8/90} { \\draw[thick] (\\x, -0.15) -- (\\x, 0.15); \\node[below] at (\\x, -0.15) {\\val}; } \\draw[thick] (1, 1) -- (2.5, 1); \\draw[thick] (6, 1) -- (7.5, 1); \\draw[thick] (1, 0.8) -- (1, 1.2); \\draw[thick] (7.5, 0.8) -- (7.5, 1.2); \\draw[thick] (2.5, 0.6) rectangle (6, 1.4); \\draw[thick] (4.5, 0.6) -- (4.5, 1.4); \\end{tikzpicture} What is the interquartile range (IQR) of the temperature distribution? \\textbf{Answer:}",
+    "question": "The box plot shows the distribution of daily high temperatures (in $^\\circ\\text{ F }$) for a city during the month of July. \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0,0) -- (8,0); \\foreach \\x/\\val in {0/70, 2/75, 4/80, 6/85, 8/90} { \\draw[thick] (\\x, -0.15) -- (\\x, 0.15); \\node[below] at (\\x, -0.15) {\\val}; } \\draw[thick] (1, 1) -- (2.5, 1); \\draw[thick] (6, 1) -- (7.5, 1); \\draw[thick] (1, 0.8) -- (1, 1.2); \\draw[thick] (7.5, 0.8) -- (7.5, 1.2); \\draw[thick] (2.5, 0.6) rectangle (6, 1.4); \\draw[thick] (4.5, 0.6) -- (4.5, 1.4); \\end{tikzpicture} What is the interquartile range (IQR) of the temperature distribution?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_137",
@@ -2174,7 +2174,7 @@
       "D": "12"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_138",
@@ -2182,11 +2182,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A linear model predicts the value of an antique car as $V = 1{,}200t + 8{,}500$, where $t$ is the number of years since 2010. What was the predicted value of the car in 2018? \\textbf{Answer:}",
+    "question": "A linear model predicts the value of an antique car as $V = 1,200t + 8,500$, where $t$ is the number of years since 2010. What was the predicted value of the car in 2018?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_139",
@@ -2204,7 +2204,7 @@
       "D": "1:2"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_140",
@@ -2222,7 +2222,7 @@
       "D": "The range of the data set is equal to the mean."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_141",
@@ -2230,17 +2230,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "The population of an endangered bird species was 4,000 in 2015 and has been declining at a rate of 5\\% per year. Which function models the population $P(t)$ of the species $t$ years after 2015?",
+    "question": "The population of an endangered bird species was 4,000 in 2015 and has been declining at a rate of 5",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "$P(t) = 4{,}000(1.05)^t$",
-      "B": "$P(t) = 4{,}000(0.95)^t$",
-      "C": "$P(t) = 4{,}000 - 0.05t$",
-      "D": "$P(t) = 4{,}000(0.05)^t$"
+      "A": "$P(t) = 4,000(1.05)^t$",
+      "B": "$P(t) = 4,000(0.95)^t$",
+      "C": "$P(t) = 4,000 - 0.05t$",
+      "D": "$P(t) = 4,000(0.05)^t$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_142",
@@ -2248,11 +2248,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A recipe calls for 3 cups of flour to make 24 cookies. How many cups of flour are needed to make 60 cookies? \\textbf{Answer:}",
+    "question": "A recipe calls for 3 cups of flour to make 24 cookies. How many cups of flour are needed to make 60 cookies?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_143",
@@ -2270,7 +2270,7 @@
       "D": "0.80"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_144",
@@ -2278,11 +2278,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "If the mean of $x, x+3, x+6, x+9,$ and $x+12$ is 25, what is the value of $x$? \\textbf{Answer:}",
+    "question": "If the mean of $x, x+3, x+6, x+9,$ and $x+12$ is 25, what is the value of $x$?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_145",
@@ -2290,17 +2290,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The price of gold increased by 150\\% over a certain decade. If the initial price was \\$400 per ounce, what was the price at the end of the decade?",
+    "question": "The price of gold increased by 150",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "\\$600",
-      "B": "\\$800",
-      "C": "\\$1,000",
-      "D": "\\$1,200"
+      "A": "$600",
+      "B": "$800",
+      "C": "$1,000",
+      "D": "$1,200"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_146",
@@ -2308,11 +2308,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A sphere has a volume of $36\\pi cubic centimeters$. What is the surface area of the sphere, in square centimeters? ($V = \\dfrac{4}{3}\\pi r^3$, $A = 4\\pi r^2$) \\textbf{Answer:}",
+    "question": "A sphere has a volume of $36\\pi\\text{ cubic centimeters }$. What is the surface area of the sphere, in square centimeters? ($V = \\dfrac{4}{3}\\pi r^3$, $A = 4\\pi r^2$)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_147",
@@ -2330,7 +2330,7 @@
       "D": "3"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_148",
@@ -2338,11 +2338,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The average score on a test for 12 girls was 84, and the average score for 8 boys was 78. What was the overall average score for all 20 students? \\textbf{Answer:}",
+    "question": "The average score on a test for 12 girls was 84, and the average score for 8 boys was 78. What was the overall average score for all 20 students?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_149",
@@ -2360,7 +2360,7 @@
       "D": "12,000"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_150",
@@ -2378,7 +2378,7 @@
       "D": "Surveying participants about their diet and exercise habits"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_151",
@@ -2386,11 +2386,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "If $a$ is 40\\% greater than $b$, and $b$ is 25\\% less than $c$, what percentage of $c$ is $a$? \\textbf{Answer:}",
+    "question": "If $a$ is 40",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_152",
@@ -2408,7 +2408,7 @@
       "D": "2.5"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_153",
@@ -2416,11 +2416,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A car’s fuel efficiency is 28 miles per gallon. If gasoline costs \\$3.50 per gallon, what is the cost of gasoline, in dollars, for a 420-mile trip? \\textbf{Answer:}",
+    "question": "A car’s fuel efficiency is 28 miles per gallon. If gasoline costs $3.50 per gallon, what is the cost of gasoline, in dollars, for a 420-mile trip?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_154",
@@ -2438,7 +2438,7 @@
       "D": "Shifting the mean to 0 by subtracting the mean from each value"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_155",
@@ -2456,7 +2456,7 @@
       "D": "2 to 3"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_156",
@@ -2464,17 +2464,17 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A poll conducted among 650 randomly selected voters in a city found that 58\\% favored a municipal bond issue, with a 3.8\\% margin of error. Which statement is the most valid conclusion?",
+    "question": "A poll conducted among 650 randomly selected voters in a city found that 58",
     "prompt": "",
     "isGridIn": false,
     "options": {
-      "A": "Exactly 58\\% of all registered voters in the city support the bond.",
-      "B": "It is plausible that between 54.2\\% and 61.8\\% of all voters support the bond.",
-      "C": "If another sample of 650 voters is taken, exactly 58\\% will favor the bond.",
-      "D": "The true population proportion cannot be less than 55\\%."
+      "A": "Exactly 58",
+      "B": "It is plausible that between 54.2",
+      "C": "If another sample of 650 voters is taken, exactly 58",
+      "D": "The true population proportion cannot be less than 55"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_157",
@@ -2482,11 +2482,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A certain medicine breaks down in the bloodstream such that the amount remaining decreases by 30\\% every 4 hours. If an initial dose of 200 mg is administered, how much medicine remains after 8 hours? \\textbf{Answer:}",
+    "question": "A certain medicine breaks down in the bloodstream such that the amount remaining decreases by 30",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_158",
@@ -2504,7 +2504,7 @@
       "D": "$1/9$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_159",
@@ -2522,7 +2522,7 @@
       "D": "$0.98$"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_160",
@@ -2530,11 +2530,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "If $m$ is 20\\% greater than $n$, and $n$ is 20\\% greater than $p$, by what percentage is $m$ greater than $p$? \\textbf{Answer:}",
+    "question": "If $m$ is 20",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_161",
@@ -2552,7 +2552,7 @@
       "D": "It cannot be determined"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_162",
@@ -2560,7 +2560,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A rectangular prism has length 8 cm, width 6 cm, and height 10 cm. If all dimensions are increased by 50\\%, by what factor does the volume increase?",
+    "question": "A rectangular prism has length 8 cm, width 6 cm, and height 10 cm. If all dimensions are increased by 50",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -2570,7 +2570,7 @@
       "D": "4.5"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_163",
@@ -2578,11 +2578,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "The dot plot shows the number of books read during summer break by 16 students. \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0.5,0) -- (6.5,0); \\foreach \\x in {1,2,3,4,5,6} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\x}; } \\node[below] at (3.5, -0.6) {Books read}; \\fill (1, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9} \\fill (2, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2, 1.5} \\fill (3, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (4, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (5, \\y) circle (2.5pt); \\fill (6, 0.3) circle (2.5pt); \\end{tikzpicture} What is the range of the number of books read? \\textbf{Answer:}",
+    "question": "The dot plot shows the number of books read during summer break by 16 students. \\begin{tikzpicture}[scale=0.8] \\draw[thick] (0.5,0) -- (6.5,0); \\foreach \\x in {1,2,3,4,5,6} { \\draw[thick] (\\x, -0.1) -- (\\x, 0.1); \\node[below] at (\\x, -0.1) {\\x}; } \\node[below] at (3.5, -0.6) {Books read}; \\fill (1, 0.3) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9} \\fill (2, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2, 1.5} \\fill (3, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6, 0.9, 1.2} \\fill (4, \\y) circle (2.5pt); \\foreach \\y in {0.3, 0.6} \\fill (5, \\y) circle (2.5pt); \\fill (6, 0.3) circle (2.5pt); \\end{tikzpicture} What is the range of the number of books read?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_164",
@@ -2600,7 +2600,7 @@
       "D": "0.80"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_165",
@@ -2608,11 +2608,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "hard",
-    "question": "A map uses a scale of 1 inch to represent 25 miles. If two cities are 3.6 inches apart on the map, what is the actual distance between them, in miles? \\textbf{Answer:}",
+    "question": "A map uses a scale of 1 inch to represent 25 miles. If two cities are 3.6 inches apart on the map, what is the actual distance between them, in miles?",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_166",
@@ -2620,11 +2620,11 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "easy",
-    "question": "A retail company tracked the number of complaints received per day over 20 consecutive days. The mean number of complaints was 8.5. If the company received 0 complaints on each of the next 2 days, what is the new mean number of complaints per day for the 22-day period? (Round your answer to the nearest tenth.) \\textbf{Answer:}",
+    "question": "A retail company tracked the number of complaints received per day over 20 consecutive days. The mean number of complaints was 8.5. If the company received 0 complaints on each of the next 2 days, what is the new mean number of complaints per day for the 22-day period? (Round your answer to the nearest tenth.)",
     "prompt": "",
     "isGridIn": true,
     "correctAnswer": "0",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   },
   {
     "id": "data_167",
@@ -2632,7 +2632,7 @@
     "section": "Math",
     "domain": "Problem-Solving and Data Analysis",
     "difficulty": "medium",
-    "question": "A student's score on a final exam accounts for 40\\% of their overall grade, while midterm 1 and midterm 2 each account for 30\\%. If the student scored 80 on midterm 1 and 90 on midterm 2, what score must the student earn on the final exam to achieve an overall course average of 87?",
+    "question": "A student's score on a final exam accounts for 40",
     "prompt": "",
     "isGridIn": false,
     "options": {
@@ -2642,6 +2642,6 @@
       "D": "94"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board."
+    "explanation": "Đáp án và hướng dẫn giải chi tiết cho câu hỏi này."
   }
 ]

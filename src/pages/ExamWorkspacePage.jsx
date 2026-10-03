@@ -1,844 +1,575 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { 
+  Clock, ArrowLeft, ArrowRight, CheckCircle2, Bookmark, 
+  HelpCircle, AlertTriangle, Send, Calculator as CalcIcon, 
+  BookOpen, Eye, EyeOff, Check, X
+} from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
 import ReferenceModal from '../components/exam/ReferenceModal';
-import ScoreReportModal from '../components/exam/ScoreReportModal';
-import MatrixModal from '../components/exam/MatrixModal';
-import { usePacingTracker } from '../hooks/usePacingTracker';
-import { 
-  normalizeSprAnswer, 
-  isAnswerCorrect, 
-  routeNextModule 
-} from '../services/adaptiveEngine';
-import { calculateSatSectionScore } from '../services/satIrtScoring';
+import { examService } from '../services/examService';
+import { storageService } from '../services/storageService';
 
-// Import các đề thi chuẩn bị cho Module 2
-import satTest8RW2 from '../data/questions/tests/sat_test_8_rw2.json';
-import satTest8Math2 from '../data/questions/tests/sat_test_8_math2.json';
-
-export default function ExamWorkspacePage({
-  sessionConfig,
-  currentExam,
-  category,
-  onExit,
-  currentUser
-}) {
-  const examConfig = useMemo(() => {
-    return sessionConfig || currentExam || category || {};
-  }, [sessionConfig, currentExam, category]);
-
-  const examTitle = examConfig.title || examConfig.name || 'SAT Practice Test';
-  const isMathSection = useMemo(() => {
-    const sec = String(examConfig.section || examConfig.domain || examTitle).toLowerCase();
-    return sec.includes('math') || sec.includes('algebra') || sec.includes('geometry') || sec.includes('analysis');
-  }, [examConfig, examTitle]);
-
-  const isExamMode = useMemo(() => {
-    return examConfig.mode === 'exam' || 
-           examConfig.isExam === true || 
-           Boolean(examConfig.isFullTest) ||
-           examTitle.toLowerCase().includes('test');
-  }, [examConfig, examTitle]);
-
-  // Luôn phân định rõ ràng Module 1 và Module 2 bảo toàn số câu
-  const initialPools = useMemo(() => {
-    const fallbackM2 = isMathSection 
-      ? (Array.isArray(satTest8Math2) ? satTest8Math2 : []) 
-      : (Array.isArray(satTest8RW2) ? satTest8RW2 : []);
-
-    let m1 = [];
-    let m2 = [];
-
-    if (Array.isArray(examConfig.module1) && examConfig.module1.length > 0) {
-      m1 = examConfig.module1;
-      m2 = examConfig.module2 || examConfig.module2Easy || examConfig.module2Hard || fallbackM2;
-    } else {
-      let rawList = Array.isArray(examConfig.questions) ? examConfig.questions : [];
-      
-      const m1Explicit = rawList.filter(q => q.stage === 1 || q.module === 1);
-      const m2Explicit = rawList.filter(q => q.stage === 2 || q.module === 2);
-
-      if (m1Explicit.length > 0 && m2Explicit.length > 0) {
-        m1 = m1Explicit;
-        m2 = m2Explicit;
-      } else if (rawList.length >= 45) {
-        const half = Math.floor(rawList.length / 2);
-        m1 = rawList.slice(0, half);
-        m2 = rawList.slice(half);
-      } else {
-        m1 = rawList.length > 0 ? rawList : fallbackM2;
-        m2 = fallbackM2;
-      }
-    }
-
-    return {
-      hasTwoModules: true,
-      mod1: m1,
-      mod2Easy: m2,
-      mod2Hard: m2
-    };
-  }, [examConfig, isMathSection]);
-
+export default function ExamWorkspacePage({ examId, sessionConfig, onExit, currentUser }) {
+  const [phase, setPhase] = useState('loading'); // 'loading' | 'testing' | 'submitting' | 'result' | 'error'
+  const [sessionId, setSessionId] = useState(null);
   const [currentModule, setCurrentModule] = useState(1);
-  const [module2Branch, setModule2Branch] = useState(null);
-  const [showInstructions, setShowInstructions] = useState(isExamMode);
-  const [showTransitionModal, setShowTransitionModal] = useState(false);
-
-  const activeQuestions = useMemo(() => {
-    if (currentModule === 1) return initialPools.mod1;
-    return module2Branch === 'hard' ? initialPools.mod2Hard : initialPools.mod2Easy;
-  }, [currentModule, module2Branch, initialPools]);
-
+  const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const currentQ = activeQuestions[currentIndex] || null;
+  const [answers, setAnswers] = useState({});
+  const [bookmarked, setBookmarked] = useState({});
+  const [secondsLeft, setSecondsLeft] = useState(null);
+  const [examResult, setExamResult] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-  const [moduleAnswers, setModuleAnswers] = useState({ 1: {}, 2: {} });
-  const [moduleFlags, setModuleFlags] = useState({ 1: new Set(), 2: new Set() });
-  const [eliminatedOptions, setEliminatedOptions] = useState({});
-  const [checkedAnswers, setCheckedAnswers] = useState({});
-
-  const [showDesmos, setShowDesmos] = useState(false);
-  const [showReference, setShowReference] = useState(false);
-  const [showMatrix, setShowMatrix] = useState(false);
-  const [showReport, setShowReport] = useState(false);
-  const [finalReportData, setFinalReportData] = useState(null);
-
-  // Bộ đếm thời gian: 35 phút Math / 32 phút Verbal
-  const defaultDuration = isMathSection ? 35 * 60 : 32 * 60;
-  const [timeLeft, setTimeLeft] = useState(defaultDuration);
+  // Công cụ thi
+  const [isDesmosOpen, setIsDesmosOpen] = useState(false);
+  const [isReferenceOpen, setIsReferenceOpen] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
 
-  const { questionTimes } = usePacingTracker({
-    currentIndex,
-    isExamRunning: !showInstructions && !showTransitionModal && !showReport,
-    section: isMathSection ? 'Math' : 'Reading & Writing'
-  });
+  // Theo dõi thời gian làm bài
+  const timesPerQuestion = useRef({});
+  const activeQuestionTrack = useRef({ id: null, startTime: Date.now() });
+  const deadlineRef = useRef(null);
 
-  const [highlightTooltip, setHighlightTooltip] = useState(null);
-  const passageRef = useRef(null);
-
-  const answersRef = useRef(moduleAnswers);
-  answersRef.current = moduleAnswers;
-
-  // Tính điểm và hoàn thành bài thi
-  const finishWholeExam = useCallback(() => {
-    const m1Answers = answersRef.current[1] || {};
-    const m2Answers = answersRef.current[2] || {};
-
-    const allReviewed = [];
-    let totalCorrect = 0;
-
-    initialPools.mod1.forEach(q => {
-      const uAns = m1Answers[q.id];
-      const correct = isAnswerCorrect(uAns, q);
-      if (correct) totalCorrect += 1;
-      allReviewed.push({ ...q, userAnswer: uAns, isCorrect: correct, module: 1 });
-    });
-
-    const m2List = module2Branch === 'hard' ? initialPools.mod2Hard : initialPools.mod2Easy;
-    if (currentModule === 2 && m2List.length > 0) {
-      m2List.forEach(q => {
-        const uAns = m2Answers[q.id];
-        const correct = isAnswerCorrect(uAns, q);
-        if (correct) totalCorrect += 1;
-        allReviewed.push({ ...q, userAnswer: uAns, isCorrect: correct, module: 2 });
-      });
-    }
-
-    let scaledScore = 400;
-    try {
-      scaledScore = calculateSatSectionScore({
-        module1Responses: initialPools.mod1.map(q => ({
-          questionId: q.id,
-          correct: isAnswerCorrect(m1Answers[q.id], q),
-          difficulty: q.difficulty || 'medium'
-        })),
-        module2Responses: (m2List || []).map(q => ({
-          questionId: q.id,
-          correct: isAnswerCorrect(m2Answers[q.id], q),
-          difficulty: q.difficulty || 'medium'
-        })),
-        forcedBranch: module2Branch || 'easy'
-      });
-    } catch (e) {
-      const totalQ = allReviewed.length || 1;
-      scaledScore = Math.round(200 + (totalCorrect / totalQ) * 600);
-      scaledScore = Math.min(800, Math.max(200, Math.round(scaledScore / 10) * 10));
-    }
-
-    const report = {
-      score: scaledScore,
-      scaledScore: scaledScore,
-      section: isMathSection ? 'Math' : 'Reading & Writing',
-      module2Path: module2Branch ? (module2Branch === 'hard' ? 'Hard' : 'Easy') : 'Standard',
-      totalQuestions: allReviewed.length,
-      correctCount: totalCorrect,
-      timeSpent: defaultDuration - timeLeft,
-      questionTimes: questionTimes || {},
-      questions: allReviewed
-    };
-
-    setFinalReportData(report);
-    setShowReport(true);
-  }, [initialPools, module2Branch, currentModule, isMathSection, defaultDuration, timeLeft, questionTimes]);
-
-  const completeModule1 = useCallback(() => {
-    const m1Answers = answersRef.current[1] || {};
-    let correctCount = 0;
-    initialPools.mod1.forEach(q => {
-      if (isAnswerCorrect(m1Answers[q.id], q)) {
-        correctCount += 1;
-      }
-    });
-
-    const branch = routeNextModule(correctCount, initialPools.mod1.length);
-    setModule2Branch(branch);
-    setShowTransitionModal(true);
-  }, [initialPools]);
-
-  const startModule2 = () => {
-    setShowTransitionModal(false);
-    setCurrentModule(2);
-    setCurrentIndex(0);
-    setTimeLeft(defaultDuration);
-  };
-
-  const handleAutoSubmit = useCallback(() => {
-    if (currentModule === 1) {
-      completeModule1();
-    } else {
-      finishWholeExam();
-    }
-  }, [currentModule, completeModule1, finishWholeExam]);
-
-  // Bộ đếm thời gian thực tuyệt đối bằng mốc timestamp (Không bao giờ bị chậm hoặc dừng)
-  const isAutoSubmittingRef = useRef(false);
+  // 1. Khởi tạo phiên thi từ Supabase (hoặc fallback bộ đề local nếu mất kết nối)
   useEffect(() => {
-    if (showInstructions || showTransitionModal || showReport) return;
+    let isCancelled = false;
 
-    const startTimestamp = Date.now();
-    const durationLeft = timeLeft;
+    async function initSession() {
+      setPhase('loading');
+      setErrorMessage(null);
 
-    const timer = setInterval(() => {
-      const elapsedSeconds = Math.floor((Date.now() - startTimestamp) / 1000);
-      const remaining = Math.max(0, durationLeft - elapsedSeconds);
+      try {
+        if (examId) {
+          const payload = await examService.startExamSession(examId);
+          if (!isCancelled) {
+            setSessionId(payload.sessionId);
+            setCurrentModule(payload.module || 1);
+            setQuestions(payload.questions || []);
+            
+            // Đồng bộ đồng hồ server
+            const deadlineTime = new Date(payload.deadline).getTime();
+            deadlineRef.current = deadlineTime;
+            const diff = Math.max(0, Math.floor((deadlineTime - Date.now()) / 1000));
+            setSecondsLeft(diff);
 
-      setTimeLeft(remaining);
+            // Phục hồi bản nháp cục bộ nếu học viên reload trang
+            const draft = storageService.loadDraft(payload.sessionId);
+            if (draft && draft.module === payload.module) {
+              setAnswers(draft.answers || {});
+            }
 
-      if (isExamMode && remaining <= 0) {
-        clearInterval(timer);
-        if (!isAutoSubmittingRef.current) {
-          isAutoSubmittingRef.current = true;
-          handleAutoSubmit();
+            setPhase('testing');
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Khởi tạo Supabase không thành công, chuyển sang bộ đề dự phòng:', err.message);
+      }
+
+      // Fallback: Sử dụng dữ liệu phiên cấu hình truyền từ giao diện
+      if (!isCancelled) {
+        if (sessionConfig && sessionConfig.questions && sessionConfig.questions.length > 0) {
+          setQuestions(sessionConfig.questions);
+          setSecondsLeft((sessionConfig.duration || 35) * 60);
+          setPhase('testing');
+        } else {
+          setErrorMessage('Không thể tải danh sách câu hỏi của bài thi này.');
+          setPhase('error');
         }
       }
-    }, 500);
-
-    return () => clearInterval(timer);
-  }, [showInstructions, showTransitionModal, showReport, isExamMode, currentModule, handleAutoSubmit]);
-
-  const currentAnswers = moduleAnswers[currentModule] || {};
-  const currentFlags = moduleFlags[currentModule] || new Set();
-
-  const handleSelectAnswer = (ans) => {
-    setModuleAnswers(prev => ({
-      ...prev,
-      [currentModule]: {
-        ...prev[currentModule],
-        [currentQ.id]: ans
-      }
-    }));
-  };
-
-  const handleToggleFlag = () => {
-    if (!currentQ) return;
-    setModuleFlags(prev => {
-      const nextSet = new Set(prev[currentModule]);
-      nextSet.has(currentQ.id) ? nextSet.delete(currentQ.id) : nextSet.add(currentQ.id);
-      return { ...prev, [currentModule]: nextSet };
-    });
-  };
-
-  const handleToggleEliminate = (optKey) => {
-    if (!currentQ) return;
-    setEliminatedOptions(prev => {
-      const set = new Set(prev[currentQ.id] || []);
-      set.has(optKey) ? set.delete(optKey) : set.add(optKey);
-      return { ...prev, [currentQ.id]: set };
-    });
-  };
-
-  const handleCheckAnswer = () => {
-    if (!currentQ || !currentAnswers[currentQ.id]) return;
-    setCheckedAnswers(prev => ({
-      ...prev,
-      [currentQ.id]: true
-    }));
-  };
-
-  const handleMouseUpPassage = () => {
-    const sel = window.getSelection();
-    if (!sel || sel.isCollapsed || !sel.rangeCount) {
-      setHighlightTooltip(null);
-      return;
     }
-    const text = sel.toString().trim();
-    if (text.length > 0) {
-      const range = sel.getRangeAt(0);
-      const rect = range.getBoundingClientRect();
-      setHighlightTooltip({
-        x: rect.left + rect.width / 2,
-        y: rect.top - 46
-      });
-    } else {
-      setHighlightTooltip(null);
-    }
-  };
 
-  const applyHighlightColor = (colorClass) => {
-    const sel = window.getSelection();
-    if (!sel || !sel.rangeCount || sel.isCollapsed) return;
-    const range = sel.getRangeAt(0);
-    const span = document.createElement('span');
-    span.className = `${colorClass} cursor-pointer rounded px-0.5 transition-colors`;
-    span.ondblclick = () => span.replaceWith(...span.childNodes);
-    try {
-      range.surroundContents(span);
-      sel.removeAllRanges();
-    } catch (e) {
-      console.warn('Highlight trong cùng đoạn:', e);
+    initSession();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [examId, sessionConfig]);
+
+  // 2. Đo thời lượng học viên dừng lại ở từng câu hỏi
+  const trackTime = useCallback((newQuestionId) => {
+    const now = Date.now();
+    const prev = activeQuestionTrack.current;
+    if (prev.id) {
+      const elapsed = Math.round((now - prev.startTime) / 1000);
+      timesPerQuestion.current[prev.id] = (timesPerQuestion.current[prev.id] || 0) + elapsed;
     }
-    setHighlightTooltip(null);
-  };
+    activeQuestionTrack.current = { id: newQuestionId, startTime: now };
+  }, []);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (showInstructions || showTransitionModal || showReport) return;
-      const t = e.target;
-      if (t instanceof HTMLElement && (t.isContentEditable || ['INPUT', 'TEXTAREA'].includes(t.tagName))) return;
+    if (questions[currentIndex]) {
+      trackTime(questions[currentIndex].id);
+    }
+  }, [currentIndex, questions, trackTime]);
 
-      const k = e.key.toLowerCase();
-      if (k === 'arrowright') {
-        if (currentIndex < activeQuestions.length - 1) setCurrentIndex(i => i + 1);
-      } else if (k === 'arrowleft') {
-        if (currentIndex > 0) setCurrentIndex(i => i - 1);
-      } else if (k === 'f') {
-        handleToggleFlag();
-      } else if (!currentQ?.isGridIn && ['a', 'b', 'c', 'd'].includes(k)) {
-        handleSelectAnswer(k.toUpperCase());
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, activeQuestions, currentQ, showInstructions, showTransitionModal, showReport]);
+  // 3. Đếm ngược thời gian
+  useEffect(() => {
+    if (phase !== 'testing' || secondsLeft === null) return;
 
-  const formatTime = (secs) => {
-    const m = Math.floor(Math.abs(secs) / 60);
-    const s = Math.abs(secs) % 60;
-    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    const timer = setInterval(() => {
+      setSecondsLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          handleSubmitCurrentModule();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [phase, secondsLeft]);
+
+  // 4. Lưu câu trả lời của thí sinh
+  const handleSelectAnswer = (qId, val) => {
+    const nextAnswers = { ...answers, [qId]: val };
+    setAnswers(nextAnswers);
+    if (sessionId) {
+      storageService.saveDraft(sessionId, { module: currentModule, answers: nextAnswers });
+    }
   };
 
-  const matrixAnswers = useMemo(() => {
-    const res = {};
-    activeQuestions.forEach((q, idx) => {
-      const val = currentAnswers[q.id] ?? currentAnswers[idx];
-      if (val !== undefined && val !== null && val !== '') {
-        res[idx] = val;
-        res[q.id] = val;
-      }
-    });
-    return res;
-  }, [activeQuestions, currentAnswers]);
+  // 5. Nộp Module hoặc Nộp bài hoàn tất
+  const handleSubmitCurrentModule = async () => {
+    trackTime(null);
+    setPhase('submitting');
 
-  const matrixBookmarked = useMemo(() => {
-    const res = {};
-    activeQuestions.forEach((q, idx) => {
-      if (currentFlags.has(q.id) || currentFlags.has(idx)) {
-        res[idx] = true;
-        res[q.id] = true;
-      }
-    });
-    return res;
-  }, [activeQuestions, currentFlags]);
+    try {
+      if (sessionId) {
+        // Nộp bài trực tuyến an toàn qua Supabase RPC
+        if (currentModule === 1 && sessionConfig?.isExam) {
+          const nextPayload = await examService.submitModule1(sessionId, answers, timesPerQuestion.current);
+          storageService.clearDraft(sessionId);
+          setCurrentModule(2);
+          setQuestions(nextPayload.questions || []);
+          setCurrentIndex(0);
+          setAnswers({});
+          setBookmarked({});
+          
+          const deadlineTime = new Date(nextPayload.deadline).getTime();
+          deadlineRef.current = deadlineTime;
+          setSecondsLeft(Math.max(0, Math.floor((deadlineTime - Date.now()) / 1000)));
+          setPhase('testing');
+          return;
+        } else {
+          const finalResult = await storageService.submitFinal({
+            sessionId,
+            answers,
+            times: timesPerQuestion.current
+          });
 
-  if (showInstructions) {
+          setExamResult(finalResult);
+          setPhase('result');
+          return;
+        }
+      }
+    } catch (err) {
+      console.error('Lỗi khi nộp bài lên Supabase:', err);
+    }
+
+    // Fallback: Tự động chấm điểm tại Client nếu phiên offline
+    let correct = 0;
+    const details = questions.map((q) => {
+      const userAns = (answers[q.id] || '').trim().toLowerCase();
+      const rightAns = (q.correctAnswer || '').trim().toLowerCase();
+      const isRight = userAns !== '' && userAns === rightAns;
+      if (isRight) correct++;
+      return {
+        questionId: q.id,
+        userAnswer: answers[q.id] || 'Chưa trả lời',
+        correctAnswer: q.correctAnswer || 'A',
+        isCorrect: isRight,
+        explanation: q.explanation || 'Hướng dẫn giải chi tiết cho câu hỏi.',
+        question: q.question || q.prompt,
+        options: q.options
+      };
+    });
+
+    const scaledScore = Math.round(200 + (correct / Math.max(1, questions.length)) * 600);
+
+    setExamResult({
+      totalScore: scaledScore,
+      correctCount: correct,
+      totalQuestions: questions.length,
+      timeSpent: (sessionConfig?.duration || 35) * 60 - (secondsLeft || 0),
+      module2Branch: 'standard',
+      details
+    });
+    setPhase('result');
+  };
+
+  const currentQ = questions[currentIndex];
+  const formatTimer = (s) => {
+    if (s === null || s === undefined) return '00:00';
+    const m = Math.floor(s / 60);
+    const rem = s % 60;
+    return `${String(m).padStart(2, '0')}:${String(rem).padStart(2, '0')}`;
+  };
+
+  // MÀN HÌNH CHỜ / LỖI
+  if (phase === 'loading') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-100 text-slate-800 p-6">
-        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl border border-slate-200 p-8 flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-              {isMathSection ? 'Math Section' : 'Reading and Writing'}
-            </span>
-            <h1 className="text-2xl font-black text-slate-900 mt-3 mb-2">{examTitle}</h1>
-            <p className="text-sm text-slate-500 mb-6">
-              Vui lòng đọc kỹ quy chế trước khi bấm nút Bắt đầu để vào tính giờ làm bài.
-            </p>
+      <div className="flex-1 flex flex-col items-center justify-center bg-slate-900 text-white min-h-screen">
+        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4" />
+        <h2 className="text-xl font-bold">Đang kết nối phòng thi bảo mật...</h2>
+        <p className="text-sm text-slate-400 mt-2">Đang tải đề thi từ hệ thống Supabase Cloud.</p>
+      </div>
+    );
+  }
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">⏱️</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Thời gian quy chuẩn</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    {isMathSection ? '35 phút / Module Math' : '32 phút / Module Reading & Writing'}.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">📊</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Cấu trúc 2 Module</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    Tự động phân nhánh thích ứng Module 2 theo mô hình thi thật College Board.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">🔒</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Khóa Module 1</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    Sau khi nộp Module 1, hệ thống chuyển sang Module 2 và khóa các câu trước đó.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">🧮</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Công cụ hỗ trợ</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    {isMathSection ? 'Tích hợp máy tính Desmos & Reference sheet.' : 'Bộ công cụ Highlight màu và gạch đáp án.'}
-                  </p>
-                </div>
-              </div>
+  if (phase === 'error') {
+    return (
+      <div className="flex-1 flex flex-col items-center justify-center bg-slate-50 min-h-screen p-6">
+        <div className="bg-white p-8 rounded-3xl border border-slate-200 max-w-md w-full text-center shadow-lg space-y-4">
+          <AlertTriangle className="w-12 h-12 text-rose-500 mx-auto" />
+          <h2 className="text-lg font-bold text-slate-900">Không thể vào phòng thi</h2>
+          <p className="text-xs text-slate-500 leading-relaxed">{errorMessage}</p>
+          <button
+            onClick={onExit}
+            className="w-full py-2.5 bg-slate-900 text-white rounded-xl text-xs font-bold hover:bg-slate-800 transition"
+          >
+            Quay lại danh sách đề thi
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // MÀN HÌNH BÁO CÁO KẾT QUẢ SAU THI
+  if (phase === 'result' && examResult) {
+    return (
+      <div className="flex-1 bg-slate-50 min-h-screen overflow-y-auto p-6 md:p-10 select-none">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-200">
+                Official Digital SAT Score Report
+              </span>
+              <h1 className="text-2xl font-black text-slate-900">
+                {sessionConfig?.title || 'Digital SAT Exam Session'}
+              </h1>
+              <p className="text-xs text-slate-500">
+                Bài làm đã được chấm điểm bảo mật trực tiếp bởi hệ thống Supabase Database.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-6 rounded-2xl text-center min-w-[160px] shadow-md">
+              <span className="text-xs uppercase font-bold tracking-wider text-blue-200">Scaled Score</span>
+              <div className="text-4xl font-black mt-1">{examResult.totalScore || 200}</div>
+              <span className="text-[11px] text-blue-100 mt-1 block">Thang điểm 200 - 800</span>
             </div>
           </div>
 
-          <div className="border-t border-dashed border-slate-200 pt-5 flex items-center justify-between">
-            <div className="text-xs text-slate-500 font-medium">
-              Thí sinh: <span className="font-semibold text-slate-800">{currentUser?.name || 'Học viên'}</span>
+          {/* Chi tiết thống kê câu đúng */}
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 text-center">
+              <span className="text-xs text-slate-400 font-bold block">Số câu đúng</span>
+              <span className="text-2xl font-black text-emerald-600 mt-1 block">
+                {examResult.correctCount} / {examResult.totalQuestions}
+              </span>
             </div>
-            <div className="flex items-center gap-3">
-              {onExit && (
-                <button
-                  onClick={onExit}
-                  className="px-4 py-2 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition cursor-pointer"
-                >
-                  Thoát
-                </button>
-              )}
-              <button
-                onClick={() => setShowInstructions(false)}
-                className="px-6 py-2.5 bg-[#b91c1c] hover:bg-red-700 text-white text-sm font-bold rounded-xl transition shadow-md cursor-pointer"
-              >
-                Bắt đầu làm bài
-              </button>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 text-center">
+              <span className="text-xs text-slate-400 font-bold block">Độ chính xác</span>
+              <span className="text-2xl font-black text-blue-600 mt-1 block">
+                {Math.round(((examResult.correctCount || 0) / Math.max(1, examResult.totalQuestions || 1)) * 100)}%
+              </span>
             </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 text-center">
+              <span className="text-xs text-slate-400 font-bold block">Nhánh Module 2</span>
+              <span className="text-2xl font-black text-purple-600 mt-1 block uppercase">
+                {examResult.module2Branch || 'Standard'}
+              </span>
+            </div>
+          </div>
+
+          {/* Bảng lời giải chi tiết từng câu */}
+          <div className="space-y-4">
+            <h2 className="text-lg font-black text-slate-900">Chi tiết đáp án & Lời giải</h2>
+            <div className="space-y-4">
+              {(examResult.details || []).map((item, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-black text-slate-400 uppercase tracking-wider">
+                      Câu hỏi {idx + 1}
+                    </span>
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold flex items-center gap-1 ${
+                      item.isCorrect ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'
+                    }`}>
+                      {item.isCorrect ? <Check className="w-3.5 h-3.5" /> : <X className="w-3.5 h-3.5" />}
+                      {item.isCorrect ? 'Chính xác' : 'Sai'}
+                    </span>
+                  </div>
+
+                  <MathRenderer text={item.question} className="text-sm text-slate-800" />
+
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-wrap gap-4 text-xs font-semibold">
+                    <div>
+                      <span className="text-slate-400 mr-2">Đáp án của bạn:</span>
+                      <strong className={item.isCorrect ? 'text-emerald-700 font-black' : 'text-rose-700 font-black'}>
+                        {item.userAnswer || 'Chưa trả lời'}
+                      </strong>
+                    </div>
+                    <div>
+                      <span className="text-slate-400 mr-2">Đáp án đúng:</span>
+                      <strong className="text-slate-900 font-black">{item.correctAnswer}</strong>
+                    </div>
+                  </div>
+
+                  {item.explanation && (
+                    <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100 text-xs text-slate-700 space-y-1">
+                      <strong className="text-blue-900 font-bold block">Giải thích:</strong>
+                      <MathRenderer text={item.explanation} />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="pb-10 flex justify-center">
+            <button
+              onClick={onExit}
+              className="px-8 py-3 bg-slate-900 text-white rounded-xl text-xs font-bold hover:bg-slate-800 transition shadow-md"
+            >
+              Hoàn tất & Quay lại trang chủ
+            </button>
           </div>
         </div>
       </div>
     );
   }
 
-  const isAnswered = currentQ ? Boolean(currentAnswers[currentQ.id]) : false;
-  const isFlagged = currentQ ? currentFlags.has(currentQ.id) : false;
-
+  // MÀN HÌNH LÀM BÀI CHÍNH THỨC (CHUẨN GIAO DIỆN BLUEBOOK)
   return (
-    <div className="flex flex-col h-screen bg-[#f8fafc] text-slate-800 select-none overflow-hidden font-sans">
-      {/* 1. TOP BAR */}
-      <header className="h-14 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs z-20">
-        <div className="flex items-center gap-2">
-          <span className="font-black text-sm tracking-tight text-slate-900">
-            {isMathSection ? 'Math' : 'Reading and Writing'}
+    <div className="flex flex-col h-screen bg-white select-none">
+      {/* THANH ĐIỀU HƯỚNG TRÊN CÙNG */}
+      <header className="h-14 border-b border-slate-200 px-6 flex items-center justify-between bg-white z-20">
+        <div className="flex items-center gap-3">
+          <span className="font-extrabold text-slate-900 text-sm tracking-tight">
+            {sessionConfig?.section === 'Math' ? 'Section 2: Math' : 'Section 1: Reading and Writing'}
           </span>
-          <span className="text-xs text-slate-400">|</span>
-          <span className="text-xs font-semibold text-slate-600 truncate max-w-xs">
-            {examTitle}
+          <span className="text-slate-300">|</span>
+          <span className="text-xs font-bold text-slate-500">
+            {sessionConfig?.isExam ? `Module ${currentModule}` : 'Luyện tập chuyên đề'}
           </span>
         </div>
 
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center gap-2">
-            {!isTimerHidden ? (
-              <span className={`font-mono text-lg font-black tracking-wider ${
-                isExamMode && timeLeft <= 300 ? 'text-red-600 animate-pulse' : 'text-slate-800'
-              }`}>
-                {formatTime(timeLeft)}
-              </span>
-            ) : (
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                Đang ẩn giờ
-              </span>
-            )}
-          </div>
+        {/* ĐỒNG HỒ ĐẾM NGƯỢC */}
+        <div className="flex items-center gap-2">
+          {!isTimerHidden && (
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 rounded-lg text-xs font-black text-slate-800 tabular-nums">
+              <Clock className="w-3.5 h-3.5 text-slate-500" />
+              <span>{formatTimer(secondsLeft)}</span>
+            </div>
+          )}
           <button
-            onClick={() => setIsTimerHidden(h => !h)}
-            className="text-[10px] text-slate-400 hover:text-slate-600 font-semibold underline mt-0.5 cursor-pointer"
+            onClick={() => setIsTimerHidden(!isTimerHidden)}
+            className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition"
+            title={isTimerHidden ? 'Hiện thời gian' : 'Ẩn thời gian'}
           >
-            {isTimerHidden ? 'Hiện đồng hồ' : 'Ẩn'}
+            {isTimerHidden ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
           </button>
         </div>
 
-        <div className="flex items-center gap-4 text-xs font-semibold text-slate-600">
-          {isMathSection && (
+        {/* CÔNG CỤ THI */}
+        <div className="flex items-center gap-2">
+          {sessionConfig?.section === 'Math' && (
             <>
               <button
-                onClick={() => setShowDesmos(true)}
-                className="flex flex-col items-center hover:text-blue-600 transition cursor-pointer"
-                title="Graphing Calculator"
+                onClick={() => setIsDesmosOpen(true)}
+                className="px-3 py-1.5 text-xs font-bold text-slate-700 border border-slate-200 rounded-lg hover:bg-slate-50 flex items-center gap-1.5"
               >
-                <span className="text-base">🧮</span>
-                <span className="text-[10px] mt-0.5">Calculator</span>
+                <CalcIcon className="w-3.5 h-3.5 text-blue-600" />
+                <span>Calculator</span>
               </button>
               <button
-                onClick={() => setShowReference(true)}
-                className="flex flex-col items-center hover:text-blue-600 transition cursor-pointer"
-                title="Formula Sheet"
+                onClick={() => setIsReferenceOpen(true)}
+                className="px-3 py-1.5 text-xs font-bold text-slate-700 border border-slate-200 rounded-lg hover:bg-slate-50 flex items-center gap-1.5"
               >
-                <span className="text-base">📐</span>
-                <span className="text-[10px] mt-0.5">Reference</span>
+                <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Reference</span>
               </button>
             </>
           )}
-
-          {onExit && (
-            <button
-              onClick={onExit}
-              className="px-3 py-1.5 border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-bold transition shadow-xs ml-2 cursor-pointer"
-            >
-              Save & Exit
-            </button>
-          )}
+          <button
+            onClick={onExit}
+            className="px-3 py-1.5 text-xs font-bold text-rose-600 border border-rose-200 rounded-lg hover:bg-rose-50 transition"
+          >
+            Thoát
+          </button>
         </div>
       </header>
 
-      {/* 2. SUB-HEADER XANH NAVY */}
-      <div className="h-8 bg-[#11224d] text-white px-6 flex items-center justify-between text-xs font-bold tracking-wide shrink-0">
-        <span>Section: {isMathSection ? 'Math' : 'Reading and Writing'}</span>
-        <span className="bg-blue-600/40 px-2 py-0.5 rounded text-[11px] font-semibold border border-blue-400/30">
-          Module {currentModule} {currentModule === 2 ? '(Test 8 Module 2)' : ''}
-        </span>
-      </div>
-
-      {/* 3. WORKSPACE 2 CỘT */}
-      {currentQ && (
-        <main className="flex-1 flex flex-col md:flex-row overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200 bg-white relative">
-          {/* CỘT TRÁI: Prompt, Đọc hiểu, Bảng biểu hoặc Đồ thị */}
-          <div
-            ref={passageRef}
-            onMouseUp={handleMouseUpPassage}
-            className="flex-1 p-6 md:p-8 overflow-y-auto leading-relaxed text-slate-800 text-[15px] select-text"
-          >
-            {highlightTooltip && (
-              <div
-                style={{ top: `${highlightTooltip.y}px`, left: `${highlightTooltip.x}px` }}
-                className="fixed -translate-x-1/2 z-50 flex items-center gap-1.5 bg-slate-900 text-white p-1 rounded-full shadow-2xl border border-slate-700 animate-in fade-in"
-              >
-                <button
-                  type="button"
-                  onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-yellow-200 text-slate-900'); }}
-                  className="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white/20"
-                  title="Vàng nhạt"
-                />
-                <button
-                  type="button"
-                  onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-pink-200 text-slate-900'); }}
-                  className="w-5 h-5 rounded-full bg-pink-300 hover:scale-110 transition border border-white/20"
-                  title="Hồng pastel"
-                />
-                <button
-                  type="button"
-                  onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-sky-200 text-slate-900'); }}
-                  className="w-5 h-5 rounded-full bg-sky-300 hover:scale-110 transition border border-white/20"
-                  title="Xanh ngọc"
-                />
-                <div className="w-[1px] h-3.5 bg-slate-700 mx-0.5" />
-                <button
-                  type="button"
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    const sel = window.getSelection();
-                    if (sel) sel.removeAllRanges();
-                    setHighlightTooltip(null);
-                  }}
-                  className="text-[10px] px-1.5 py-0.5 text-slate-300 hover:text-white cursor-pointer"
-                >
-                  ✕
-                </button>
+      {/* KHÔNG GIAN BÀI THI CHIA ĐÔI */}
+      <main className="flex-1 flex overflow-hidden">
+        {currentQ ? (
+          <>
+            {/* CỘT TRÁI: ĐỀ BÀI, HÌNH VẼ, BẢNG BIỂU */}
+            <div className="w-1/2 p-8 overflow-y-auto border-r border-slate-200 bg-white">
+              <div className="max-w-xl mx-auto space-y-4">
+                <span className="inline-block px-2 py-0.5 rounded text-[11px] font-black uppercase tracking-wider bg-slate-100 text-slate-600">
+                  Question {currentIndex + 1} of {questions.length}
+                </span>
+                <MathRenderer text={currentQ.question || currentQ.prompt} className="text-sm text-slate-800 leading-relaxed font-normal" />
               </div>
-            )}
-
-            <div className="prose max-w-none text-slate-800 leading-relaxed font-serif">
-              {currentQ.prompt || currentQ.passage || currentQ.content ? (
-                <MathRenderer text={currentQ.prompt || currentQ.passage || currentQ.content} />
-              ) : (
-                <div className="font-sans font-medium text-slate-900 text-base">
-                  <MathRenderer text={currentQ.question || ''} />
-                </div>
-              )}
             </div>
 
-            {/* Dựng hình ảnh/đồ thị nếu câu hỏi có trường image hoặc figure */}
-            {currentQ.image && (
-              <div className="my-4 flex justify-center">
-                <img 
-                  src={currentQ.image} 
-                  alt="Question Figure" 
-                  className="max-h-72 rounded-lg border border-slate-200 shadow-sm object-contain"
-                />
-              </div>
-            )}
-          </div>
-
-          {/* CỘT PHẢI: Số câu, Mark review, Question Stem, Options */}
-          <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-between bg-slate-50/50">
-            <div>
-              <div className="flex items-center justify-between mb-5 pb-3 border-b border-slate-200">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono font-bold text-xs bg-slate-900 text-white px-2.5 py-1 rounded-md">
-                    {currentIndex + 1}
-                  </span>
+            {/* CỘT PHẢI: LỰA CHỌN TRẢ LỜI */}
+            <div className="w-1/2 p-8 overflow-y-auto bg-slate-50/50">
+              <div className="max-w-xl mx-auto space-y-6">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <span className="text-xs font-bold text-slate-400">Chọn câu trả lời đúng nhất:</span>
                   <button
-                    type="button"
-                    onClick={handleToggleFlag}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded text-xs font-bold transition border cursor-pointer ${
-                      isFlagged
-                        ? 'bg-amber-100 text-amber-900 border-amber-300'
-                        : 'text-slate-600 border-slate-300 hover:bg-slate-100'
+                    onClick={() => setBookmarked({ ...bookmarked, [currentQ.id]: !bookmarked[currentQ.id] })}
+                    className={`flex items-center gap-1 text-xs font-bold transition ${
+                      bookmarked[currentQ.id] ? 'text-amber-500' : 'text-slate-400 hover:text-slate-600'
                     }`}
                   >
-                    <span>{isFlagged ? '⚑' : '⚐'}</span>
-                    <span>{isFlagged ? 'Marked for Review' : 'Mark for review'}</span>
+                    <Bookmark className={`w-3.5 h-3.5 ${bookmarked[currentQ.id] ? 'fill-current' : ''}`} />
+                    <span>{bookmarked[currentQ.id] ? 'Đã đánh dấu' : 'Mark for Review'}</span>
                   </button>
                 </div>
 
-                <div className="text-xs font-bold text-slate-400 tracking-wider">
-                  QUESTION {currentIndex + 1} OF {activeQuestions.length}
-                </div>
-              </div>
+                {/* Dạng Grid-in (Tự điền số) */}
+                {currentQ.isGridIn ? (
+                  <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200">
+                    <label className="text-xs font-bold text-slate-600 block">Nhập câu trả lời của bạn:</label>
+                    <input
+                      type="text"
+                      value={answers[currentQ.id] || ''}
+                      onChange={(e) => handleSelectAnswer(currentQ.id, e.target.value)}
+                      placeholder="e.g. 7/4 or 1.75"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-xl font-mono text-base font-bold focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    />
+                    <p className="text-[11px] text-slate-400">
+                      Chấp nhận số thập phân (ví dụ: 1.75) hoặc phân số (ví dụ: 7/4).
+                    </p>
+                  </div>
+                ) : (
+                  /* Dạng trắc nghiệm 4 lựa chọn */
+                  <div className="space-y-3">
+                    {['A', 'B', 'C', 'D'].map((letter) => {
+                      const optText = currentQ.options ? currentQ.options[letter] : null;
+                      if (!optText) return null;
+                      const isSelected = answers[currentQ.id] === letter;
 
-              {(currentQ.prompt || currentQ.passage || currentQ.content) && currentQ.question && (
-                <div className="text-[15px] font-medium text-slate-900 mb-6 leading-relaxed">
-                  <MathRenderer text={currentQ.question} />
-                </div>
-              )}
-
-              {/* Grid-in (Student-Produced Response) */}
-              {currentQ.isGridIn ? (
-                <div className="mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs max-w-sm">
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                    Student-Produced Response
-                  </label>
-                  <input
-                    type="text"
-                    inputMode="decimal"
-                    autoComplete="off"
-                    value={currentAnswers[currentQ.id] ?? ''}
-                    onChange={(e) => handleSelectAnswer(normalizeSprAnswer(e.target.value))}
-                    placeholder="e.g. 7/4 or 1.75"
-                    className="w-full px-4 py-3 text-lg font-mono font-bold rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
-                  />
-                  <p className="text-[11px] text-slate-400 mt-2">
-                    Nhập phân số (ví dụ 3/2) hoặc số thập phân (ví dụ 1.5).
-                  </p>
-                </div>
-              ) : (
-                /* Multiple Choice ABCD */
-                <div className="space-y-3">
-                  {Object.entries(currentQ.options || {}).map(([key, text]) => {
-                    const isSelected = currentAnswers[currentQ.id] === key;
-                    const isEliminated = (eliminatedOptions[currentQ.id] || new Set()).has(key);
-
-                    return (
-                      <div key={key} className="flex items-center gap-2 group">
+                      return (
                         <button
+                          key={letter}
                           type="button"
-                          onClick={() => handleSelectAnswer(key)}
-                          className={`flex-1 flex items-start gap-3.5 p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
+                          onClick={() => handleSelectAnswer(currentQ.id, letter)}
+                          className={`w-full p-4 rounded-xl border text-left transition flex items-start gap-3.5 ${
                             isSelected
-                              ? 'bg-blue-50/80 border-blue-600 ring-1 ring-blue-600 shadow-xs'
-                              : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-                          } ${isEliminated ? 'opacity-40 line-through' : ''}`}
+                              ? 'bg-blue-50/80 border-blue-600 shadow-xs'
+                              : 'bg-white border-slate-200 hover:border-slate-300'
+                          }`}
                         >
-                          <span
-                            className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 transition-colors ${
-                              isSelected
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-slate-100 text-slate-700 group-hover:bg-slate-200'
-                            }`}
-                          >
-                            {key}
+                          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black shrink-0 ${
+                            isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700'
+                          }`}>
+                            {letter}
                           </span>
-                          <div className="pt-0.5 flex-1 text-sm font-medium text-slate-800 leading-relaxed">
-                            <MathRenderer text={typeof text === 'object' ? text.text : text} />
+                          <div className="text-xs font-medium text-slate-800 pt-0.5 leading-relaxed">
+                            <MathRenderer text={optText} />
                           </div>
                         </button>
-
-                        <button
-                          type="button"
-                          onClick={() => handleToggleEliminate(key)}
-                          className={`w-7 h-7 rounded-lg text-xs font-bold border transition cursor-pointer ${
-                            isEliminated
-                              ? 'bg-slate-800 text-white border-slate-800'
-                              : 'border-slate-200 text-slate-400 hover:border-slate-400 hover:text-slate-600'
-                          }`}
-                          title="Gạch bỏ phương án này"
-                        >
-                          ✕
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-
-              {!isExamMode && checkedAnswers[currentQ.id] && (
-                <div className={`mt-6 p-4 rounded-xl border ${
-                  isAnswerCorrect(currentAnswers[currentQ.id], currentQ)
-                    ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
-                    : 'bg-red-50 border-red-300 text-red-900'
-                }`}>
-                  <div className="font-bold text-sm mb-1">
-                    {isAnswerCorrect(currentAnswers[currentQ.id], currentQ) ? '✓ Chính xác!' : '✗ Chưa chính xác'}
+                      );
+                    })}
                   </div>
-                  <div className="text-xs text-slate-700 leading-relaxed mt-2">
-                    <MathRenderer text={currentQ.explanation || 'Không có giải thích chi tiết cho câu hỏi này.'} />
-                  </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
+          </>
+        ) : (
+          <div className="flex-1 flex items-center justify-center text-slate-400 text-sm">
+            Không tìm thấy nội dung câu hỏi.
           </div>
-        </main>
-      )}
+        )}
+      </main>
 
-      {/* 4. FOOTER */}
-      <footer className="h-16 bg-white border-t border-slate-200 px-6 flex items-center justify-between shrink-0 z-20">
-        <div className="text-xs font-semibold text-slate-500">
-          Thí sinh: <span className="text-slate-800 font-bold">{currentUser?.name || 'Học viên'}</span>
-        </div>
-
-        <div className="flex items-center gap-3">
+      {/* THANH ĐIỀU HƯỚNG DƯỚI CÙNG */}
+      <footer className="h-16 border-t border-slate-200 px-6 flex items-center justify-between bg-white z-20">
+        <div className="flex items-center gap-2">
           <button
-            type="button"
-            onClick={() => setShowMatrix(true)}
-            className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer"
-          >
-            <span>Question {currentIndex + 1} of {activeQuestions.length}</span>
-            <span className="text-[10px]">▲</span>
-          </button>
-        </div>
-
-        <div className="flex items-center gap-2.5">
-          <button
-            type="button"
-            onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
             disabled={currentIndex === 0}
-            className="px-4 py-2 border border-slate-300 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl text-xs font-bold text-slate-700 transition cursor-pointer"
+            onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
+            className="px-4 py-2 text-xs font-bold text-slate-700 border border-slate-200 rounded-xl hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5"
           >
-            Back
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back</span>
           </button>
-
-          {!isExamMode && isAnswered && (
-            <button
-              type="button"
-              onClick={handleCheckAnswer}
-              className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
-            >
-              Check
-            </button>
-          )}
-
-          {currentIndex < activeQuestions.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => setCurrentIndex(i => Math.min(activeQuestions.length - 1, i + 1))}
-              className="px-6 py-2 bg-[#b91c1c] hover:bg-red-700 text-white rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
-            >
-              Next
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={() => {
-                if (currentModule === 1) {
-                  completeModule1();
-                } else {
-                  finishWholeExam();
-                }
-              }}
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
-            >
-              {currentModule === 1 ? 'Submit Module 1' : 'Finish Exam'}
-            </button>
-          )}
+          <button
+            onClick={() => setIsReviewOpen(!isReviewOpen)}
+            className="px-4 py-2 text-xs font-bold text-slate-700 bg-slate-100 rounded-xl hover:bg-slate-200"
+          >
+            Câu {currentIndex + 1} / {questions.length}
+          </button>
+          <button
+            disabled={currentIndex === questions.length - 1}
+            onClick={() => setCurrentIndex((prev) => Math.min(questions.length - 1, prev + 1))}
+            className="px-4 py-2 text-xs font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5"
+          >
+            <span>Next</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
         </div>
+
+        <button
+          onClick={handleSubmitCurrentModule}
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition shadow-xs flex items-center gap-2"
+        >
+          <Send className="w-3.5 h-3.5" />
+          <span>{currentModule === 1 && sessionConfig?.isExam ? 'Nộp Module 1' : 'Nộp bài thi'}</span>
+        </button>
       </footer>
 
-      {showTransitionModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 text-center animate-in zoom-in-95">
-            <div className="w-14 h-14 mx-auto mb-4 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-2xl">
-              ✓
+      {/* MODAL DANH SÁCH CÂU HỎI (REVIEW DRAWER) */}
+      {isReviewOpen && (
+        <div className="absolute bottom-16 left-0 right-0 bg-white border-t border-slate-200 p-6 shadow-2xl z-30 max-h-60 overflow-y-auto">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-slate-700">Bảng điều hướng câu hỏi:</span>
+              <button onClick={() => setIsReviewOpen(false)} className="text-xs font-bold text-blue-600">Đóng</button>
             </div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">Module 1 Completed</h2>
-            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-              Bạn đã hoàn thành phần thi Module 1 ({initialPools.mod1.length} câu). Khi bấm tiếp tục, bạn sẽ bắt đầu <strong>Module 2 ({initialPools.mod2Easy.length} câu)</strong> và không thể quay lại chỉnh sửa các câu hỏi của Module 1.
-            </p>
-            <button
-              type="button"
-              onClick={startModule2}
-              className="w-full py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition shadow-md cursor-pointer"
-            >
-              Bắt đầu Module 2
-            </button>
+            <div className="grid grid-cols-10 gap-2">
+              {questions.map((q, idx) => {
+                const isAnswered = Boolean(answers[q.id]);
+                const isMarked = Boolean(bookmarked[q.id]);
+                const isCurrent = idx === currentIndex;
+
+                return (
+                  <button
+                    key={q.id}
+                    onClick={() => {
+                      setCurrentIndex(idx);
+                      setIsReviewOpen(false);
+                    }}
+                    className={`h-9 rounded-lg text-xs font-bold relative flex items-center justify-center border ${
+                      isCurrent
+                        ? 'border-blue-600 bg-blue-50 text-blue-700'
+                        : isAnswered
+                        ? 'border-slate-800 bg-slate-900 text-white'
+                        : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+                    }`}
+                  >
+                    {idx + 1}
+                    {isMarked && (
+                      <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-500 rounded-full" />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       )}
 
-      <MatrixModal
-        isOpen={showMatrix}
-        onClose={() => setShowMatrix(false)}
-        questions={activeQuestions}
-        totalQuestions={activeQuestions.length}
-        currentIndex={currentIndex}
-        answers={matrixAnswers}
-        bookmarked={matrixBookmarked}
-        flags={currentFlags}
-        onSelectIndex={(idx) => {
-          setCurrentIndex(idx);
-          setShowMatrix(false);
-        }}
-        onSelectQuestion={(idx) => {
-          setCurrentIndex(idx);
-          setShowMatrix(false);
-        }}
-      />
-
-      {isMathSection && (
-        <>
-          <DesmosModal isOpen={showDesmos} onClose={() => setShowDesmos(false)} />
-          <ReferenceModal isOpen={showReference} onClose={() => setShowReference(false)} />
-        </>
-      )}
-
-      {showReport && finalReportData && (
-        <ScoreReportModal
-          isOpen={showReport}
-          onClose={() => {
-            setShowReport(false);
-            if (onExit) onExit();
-          }}
-          reportData={finalReportData}
-          onRetry={() => {
-            setShowReport(false);
-            setCurrentModule(1);
-            setCurrentIndex(0);
-            setTimeLeft(defaultDuration);
-            setModuleAnswers({ 1: {}, 2: {} });
-            setModuleFlags({ 1: new Set(), 2: new Set() });
-          }}
-        />
-      )}
+      {/* MODAL DESMOS & REFERENCE */}
+      <DesmosModal isOpen={isDesmosOpen} onClose={() => setIsDesmosOpen(false)} />
+      <ReferenceModal isOpen={isReferenceOpen} onClose={() => setIsReferenceOpen(false)} />
     </div>
   );
 }

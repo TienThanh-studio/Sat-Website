@@ -1,7 +1,36 @@
 import fs from 'fs';
-import path from 'path';
 
-// Hàm phân tích file LaTeX thành danh sách câu hỏi chuẩn JSON
+function cleanMathString(str) {
+  if (!str) return '';
+
+  return str
+    // 1. Giữ nguyên dấu cách cho các từ nối trong công thức (\text{ and } -> \text{ and })
+    .replace(/\\text\{\s*and\s*\}/gi, ' \\text{ and } ')
+    // 2. Chuyển \text{ cm}^3, \text{ inches}... sang \text{...} an toàn không làm vỡ dấu $
+    .replace(/\\text\{([^\}]+)\}/g, (match, p1) => {
+      // Nếu là chữ thông thường dài > 5 ký tự không chứa công thức, thêm space bao quanh
+      return `\\text{ ${p1.trim()} }`;
+    })
+    // 3. Chuẩn hóa các dấu % và $ bị escape
+    .replace(/\\%/g, '%')
+    .replace(/\\\$/g, '$')
+    .replace(/\{,\}/g, ',')
+    // 4. Xóa các layout tags không cần thiết
+    .replace(/\\begin\{minipage\}(?:\{.*?\})?/gi, '')
+    .replace(/\\end\{minipage\}/gi, '')
+    .replace(/\\begin\{multicols\}\{\d+\}/gi, '')
+    .replace(/\\end\{multicols\}/gi, '')
+    .replace(/\\noindent\\textbf\{Answer:\}[\s\S]*/gi, '')
+    .replace(/\\textbf\{Answer:\}[\s\S]*/gi, '')
+    .replace(/\\underline\{.*?\}|\\rule\{.*?\}\{.*?\}/gi, '')
+    .replace(/%[^\n]*/g, '')
+    .replace(/\\medskip|\\vspace\{.*?\}|\\hfill/gi, '')
+    .replace(/\\centerline\{|\\centering/gi, '')
+    .replace(/\\begin\{center\}|\\end\{center\}/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function parseLatexQuestions(content, domainName, idPrefix) {
   const boxRegex = /\\begin\{tcolorbox\}(?:\[.*?\])?([\s\S]*?)\\end\{tcolorbox\}/g;
   const questions = [];
@@ -9,9 +38,9 @@ function parseLatexQuestions(content, domainName, idPrefix) {
   let index = 1;
 
   while ((match = boxRegex.exec(content)) !== null) {
-    const rawBox = match[1];
+    let rawBox = match[1];
 
-    // 1. Kiểm tra trắc nghiệm (enumerate)
+    // 1. Tách các lựa chọn trắc nghiệm
     let isGridIn = true;
     const options = {};
     const enumMatch = rawBox.match(/\\begin\{enumerate\}(?:\[.*?\])?([\s\S]*?)\\end\{enumerate\}/);
@@ -22,24 +51,15 @@ function parseLatexQuestions(content, domainName, idPrefix) {
       const labels = ['A', 'B', 'C', 'D'];
       items.forEach((item, idx) => {
         if (idx < 4) {
-          options[labels[idx]] = item.trim().replace(/\s+/g, ' ');
+          options[labels[idx]] = cleanMathString(item);
         }
       });
     }
 
-    // 2. Tách phần đề bài (loại bỏ enumerate và Answer line)
-    let promptText = rawBox
-      .replace(/\\begin\{enumerate\}[\s\S]*?\\end\{enumerate\}/g, '')
-      .replace(/\\begin\{multicols\}\{\d+\}/g, '')
-      .replace(/\\end\{multicols\}/g, '')
-      .replace(/\\noindent\\textbf\{Answer:\}[\s\S]*/g, '')
-      .replace(/\\begin\{minipage\}[\s\S]*?\\end\{minipage\}/g, (m) => {
-        // Giữ lại nội dung bên trong minipage
-        return m.replace(/\\begin\{minipage\}\{.*?\}|\\end\{minipage\}/g, '');
-      })
-      .trim();
+    // 2. Loại bỏ khối enumerate khỏi đề bài
+    let promptText = rawBox.replace(/\\begin\{enumerate\}[\s\S]*?\\end\{enumerate\}/g, '');
 
-    // Xử lý bảng table trong LaTeX (tabular) nếu có sang định dạng Markdown
+    // 3. Chuyển bảng tabular LaTeX sang Markdown Table
     promptText = promptText.replace(/\\begin\{tabular\}\{.*?\}([\s\S]*?)\\end\{tabular\}/g, (tabMatch, tabContent) => {
       const rows = tabContent.split('\\\\').map(r => r.trim()).filter(r => r && !r.startsWith('\\hline'));
       if (rows.length === 0) return '';
@@ -54,14 +74,8 @@ function parseLatexQuestions(content, domainName, idPrefix) {
       return mdTable + '\n';
     });
 
-    // Làm sạch các thẻ LaTeX định dạng thừa
-    promptText = promptText
-      .replace(/\\medskip|\\vspace\{.*?\}|\\rule\{.*?\}\{.*?\}/g, '')
-      .replace(/\\centerline\{|\\centering/g, '')
-      .replace(/\\begin\{center\}|\\end\{center\}/g, '')
-      .replace(/\\text\{([^\}]+)\}/g, '$1')
-      .replace(/\s+/g, ' ')
-      .trim();
+    // 4. Làm sạch toàn diện đề bài
+    promptText = cleanMathString(promptText);
 
     questions.push({
       id: `${idPrefix}_${String(index).padStart(3, '0')}`,
@@ -74,7 +88,7 @@ function parseLatexQuestions(content, domainName, idPrefix) {
       isGridIn,
       options: isGridIn ? undefined : options,
       correctAnswer: isGridIn ? '0' : 'A',
-      explanation: 'Đáp án và hướng dẫn giải chi tiết cho dạng bài chuẩn College Board.'
+      explanation: 'Đáp án và hướng dẫn giải chi tiết cho câu hỏi này.'
     });
 
     index++;
@@ -83,24 +97,19 @@ function parseLatexQuestions(content, domainName, idPrefix) {
   return questions;
 }
 
-// Đường dẫn đọc 2 file
+// Chạy cập nhật lại dữ liệu
 const geomFile = './Geometry Trigonometry.txt';
-const dataFile = './Data Analysis.txt';
-
 if (fs.existsSync(geomFile)) {
   const geomRaw = fs.readFileSync(geomFile, 'utf8');
   const geomQuestions = parseLatexQuestions(geomRaw, 'Geometry and Trigonometry', 'geom');
   fs.writeFileSync('./src/data/questions/geometry_trig_bank.json', JSON.stringify(geomQuestions, null, 2));
-  console.log(`Đã nạp thành công: ${geomQuestions.length} câu Geometry & Trigonometry!`);
-} else {
-  console.log('Không tìm thấy file Geometry Trigonometry.txt ở thư mục gốc');
+  console.log(`✓ Đã nạp thành công: ${geomQuestions.length} câu Geometry & Trigonometry!`);
 }
 
+const dataFile = './Data Analysis.txt';
 if (fs.existsSync(dataFile)) {
   const dataRaw = fs.readFileSync(dataFile, 'utf8');
   const dataQuestions = parseLatexQuestions(dataRaw, 'Problem-Solving and Data Analysis', 'data');
   fs.writeFileSync('./src/data/questions/data_analysis_bank.json', JSON.stringify(dataQuestions, null, 2));
-  console.log(`Đã nạp thành công: ${dataQuestions.length} câu Problem-Solving & Data Analysis!`);
-} else {
-  console.log('Không tìm thấy file Data Analysis.txt ở thư mục gốc');
+  console.log(`✓ Đã nạp thành công: ${dataQuestions.length} câu Problem-Solving & Data Analysis!`);
 }

@@ -1,60 +1,88 @@
-/**
- * storageService.js
- * Quản lý LocalStorage an toàn, hỗ trợ đồng bộ hóa trạng thái phiên làm bài thi.
- * Đảm bảo khi F5 hoặc tắt trình duyệt, tiến trình làm bài vẫn còn nguyên.
- */
+import { examService, isNetworkError } from './examService';
 
-const STORAGE_KEYS = {
-  CURRENT_USER: 'exam_current_user',
-  EXAM_SESSION: 'exam_active_session',
-  USER_STATS: 'exam_user_stats',
-  CUSTOM_QUESTIONS: 'exam_custom_questions',
-  INVITE_CODES: 'exam_invite_codes',
-  DOCUMENTS: 'exam_uploaded_docs'
+const K = {
+  draft: (sid) => `sat:draft:${sid}`,
+  queue: 'sat:pendingSubmissions',
+  attempts: 'sat:attemptsCache',
+};
+
+const read = (key, fallback) => {
+  try {
+    const v = localStorage.getItem(key);
+    return v ? JSON.parse(v) : fallback;
+  } catch {
+    return fallback;
+  }
+};
+
+const write = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* quota / private mode */
+  }
 };
 
 export const storageService = {
-  get(key, defaultValue = null) {
+  // Bản nháp khi học viên đang làm bài
+  saveDraft: (sessionId, draft) => write(K.draft(sessionId), { ...draft, savedAt: Date.now() }),
+  loadDraft: (sessionId) => read(K.draft(sessionId), null),
+  clearDraft: (sessionId) => localStorage.removeItem(K.draft(sessionId)),
+
+  // Hàng đợi nộp bài khi rớt mạng
+  getPending: () => read(K.queue, []),
+  enqueueFinal({ sessionId, answers, times }) {
+    const q = read(K.queue, []).filter((i) => i.sessionId !== sessionId);
+    q.push({ sessionId, answers, times, queuedAt: Date.now() });
+    write(K.queue, q);
+  },
+
+  /** Nộp bài; nếu mất mạng thì lưu tạm vào hàng đợi */
+  async submitFinal({ sessionId, answers, times }) {
     try {
-      const data = localStorage.getItem(key);
-      return data ? JSON.parse(data) : defaultValue;
-    } catch (e) {
-      console.error(`Error reading ${key} from localStorage:`, e);
-      return defaultValue;
+      const result = await examService.submitExam(sessionId, answers, times);
+      this.clearDraft(sessionId);
+      return result;
+    } catch (err) {
+      if (err.isNetwork || isNetworkError(err)) {
+        this.enqueueFinal({ sessionId, answers, times });
+        return { queued: true };
+      }
+      throw err;
     }
   },
 
-  set(key, value) {
+  /** Tự động đồng bộ các bài thi còn trong hàng đợi khi có mạng */
+  async flushPending() {
+    const queue = read(K.queue, []);
+    const synced = [];
+    const remaining = [];
+    for (let i = 0; i < queue.length; i++) {
+      try {
+        const result = await examService.submitExam(queue[i].sessionId, queue[i].answers, queue[i].times);
+        this.clearDraft(queue[i].sessionId);
+        synced.push(result);
+      } catch (err) {
+        if (err.isNetwork || isNetworkError(err)) {
+          remaining.push(...queue.slice(i));
+          break;
+        }
+      }
+    }
+    write(K.queue, remaining);
+    return synced;
+  },
+
+  async getAttempts(userId) {
     try {
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch (e) {
-      console.error(`Error saving ${key} to localStorage:`, e);
+      const rows = await examService.listAttempts();
+      write(`${K.attempts}:${userId}`, rows);
+      return { rows, fromCache: false };
+    } catch (err) {
+      if (err.isNetwork) return { rows: read(`${K.attempts}:${userId}`, []), fromCache: true };
+      throw err;
     }
   },
 
-  remove(key) {
-    try {
-      localStorage.removeItem(key);
-    } catch (e) {
-      console.error(`Error removing ${key} from localStorage:`, e);
-    }
-  },
-
-  // Quản lý phiên làm bài thi (Chống mất bài khi F5)
-  saveExamSession(sessionData) {
-    this.set(STORAGE_KEYS.EXAM_SESSION, {
-      ...sessionData,
-      lastUpdated: Date.now()
-    });
-  },
-
-  getExamSession() {
-    return this.get(STORAGE_KEYS.EXAM_SESSION, null);
-  },
-
-  clearExamSession() {
-    this.remove(STORAGE_KEYS.EXAM_SESSION);
-  },
-
-  KEYS: STORAGE_KEYS
+  getAttemptResult: (attemptId) => examService.getAttemptResult(attemptId),
 };

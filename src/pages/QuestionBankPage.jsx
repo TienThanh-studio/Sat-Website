@@ -8,7 +8,40 @@ export default function QuestionBankPage(props) {
   const [searchTerm, setSearchTerm] = useState('');
   const [isCustomQuizOpen, setIsCustomQuizOpen] = useState(false);
 
-  // Bộ lọc triệt để từng Tab
+  // Kích hoạt chuẩn xác callback chuyển trang của App.jsx
+  const launchExamSession = (rawItem) => {
+    // Đảm bảo item luôn có danh sách câu hỏi hợp lệ
+    const questionsList = Array.isArray(rawItem.questions) && rawItem.questions.length > 0
+      ? rawItem.questions
+      : Array.isArray(rawItem.module1) && rawItem.module1.length > 0
+      ? rawItem.module1
+      : [];
+
+    const examConfig = {
+      ...rawItem,
+      id: rawItem.id || `session_${Date.now()}`,
+      title: rawItem.title || 'SAT Practice Session',
+      section: rawItem.section || 'Reading and Writing',
+      questions: questionsList,
+      module1: rawItem.module1 || questionsList,
+      module2: rawItem.module2 || questionsList,
+      isRealExam: rawItem.isExam === true,
+      mode: rawItem.isExam ? 'exam' : 'practice',
+      duration: rawItem.duration || (rawItem.section === 'Math' ? 35 : 32)
+    };
+
+    if (typeof props.onStartExam === 'function') {
+      props.onStartExam(examConfig);
+    } else if (typeof props.onStartPractice === 'function') {
+      props.onStartPractice(examConfig);
+    } else if (typeof props.onStartRealExam === 'function') {
+      props.onStartRealExam(examConfig);
+    } else if (typeof props.onSelectCategory === 'function') {
+      props.onSelectCategory(examConfig);
+    }
+  };
+
+  // Bộ lọc đúng theo yêu cầu phân tách từng Tab
   const filteredCategories = useMemo(() => {
     return DEFAULT_CATEGORIES.filter((item) => {
       const matchSearch =
@@ -18,7 +51,7 @@ export default function QuestionBankPage(props) {
 
       if (!matchSearch) return false;
 
-      // 1. Tab Đề thi thật: CHỈ HIỆN ĐỀ FULL 2 MODULES
+      // 1. Tab Đề thi thật: CHỈ HIỆN ĐỀ THI THẬT FULL 2 MODULES
       if (activeTab === 'exam') {
         return item.isExam === true;
       }
@@ -28,12 +61,12 @@ export default function QuestionBankPage(props) {
         return item.isExam !== true;
       }
 
-      // 3. Tab Math: CHỈ HIỆN CÂU HỎI LUYỆN TẬP TOÁN (ẨN HẾT ĐỀ THI THẬT)
+      // 3. Tab Math: CHỈ HIỆN CÂU HỎI LUYỆN TẬP TOÁN (ẨN SẠCH ĐỀ THI THẬT)
       if (activeTab === 'math') {
         return item.section === 'Math' && item.isExam !== true;
       }
 
-      // 4. Tab R&W: CHỈ HIỆN CÂU HỎI LUYỆN TẬP VERBAL (ẨN HẾT ĐỀ THI THẬT)
+      // 4. Tab R&W: CHỈ HIỆN CÂU HỎI LUYỆN TẬP VERBAL (ẨN SẠCH ĐỀ THI THẬT)
       if (activeTab === 'rw') {
         return item.section === 'Reading and Writing' && item.isExam !== true;
       }
@@ -42,22 +75,9 @@ export default function QuestionBankPage(props) {
     });
   }, [activeTab, searchTerm]);
 
-  // Xử lý click: Gọi linh hoạt mọi hàm callback được App truyền vào
-  const handleLaunchItem = (item) => {
-    if (typeof props.onSelectCategory === 'function') {
-      props.onSelectCategory(item);
-    } else if (typeof props.onStartRealExam === 'function' && item.isExam) {
-      props.onStartRealExam(item);
-    } else if (typeof props.onStartPractice === 'function') {
-      props.onStartPractice(item);
-    } else if (typeof props.onSelectExam === 'function') {
-      props.onSelectExam(item);
-    }
-  };
-
   const handleLaunchAdaptive = (section) => {
     const session = createAdaptiveExamSession(section);
-    handleLaunchItem(session);
+    launchExamSession(session);
   };
 
   return (
@@ -244,7 +264,7 @@ export default function QuestionBankPage(props) {
 
                   <button
                     type="button"
-                    onClick={() => handleLaunchItem(item)}
+                    onClick={() => launchExamSession(item)}
                     className={`w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-xs cursor-pointer ${
                       isExam
                         ? 'bg-[#b91c1c] hover:bg-red-700 text-white'
@@ -266,7 +286,7 @@ export default function QuestionBankPage(props) {
           onClose={() => setIsCustomQuizOpen(false)}
           onStartQuiz={(cfg) => {
             setIsCustomQuizOpen(false);
-            handleLaunchItem(cfg);
+            launchExamSession(cfg);
           }}
         />
 

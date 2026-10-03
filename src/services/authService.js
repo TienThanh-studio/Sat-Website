@@ -1,92 +1,86 @@
-import { storageService } from './storageService';
-import initialCodes from '../data/validCodes.json';
+import { supabase } from '../lib/supabaseClient';
 
-/**
- * authService.js
- * Xử lý xác thực người dùng, kiểm tra mã mời admin, phân quyền RBAC.
- */
-export const authService = {
-  initCodes() {
-    const existing = storageService.get(storageService.KEYS.INVITE_CODES);
-    if (!existing) {
-      storageService.set(storageService.KEYS.INVITE_CODES, initialCodes);
-    }
-  },
-
-  getCurrentUser() {
-    return storageService.get(storageService.KEYS.CURRENT_USER, {
-      id: 'demo-user-01',
-      name: 'Phan Tiến Thành',
-      email: 'meoconhuhong@gmail.com',
-      role: 'ADMIN' // Mặc định tài khoản demo quyền ADMIN để test toàn diện
-    });
-  },
-
-  login(email, password) {
-    // Giả lập đăng nhập thành công
-    const user = {
-      id: 'usr_' + Date.now(),
-      name: email.split('@')[0],
-      email: email,
-      role: email.includes('admin') ? 'ADMIN' : 'STUDENT'
-    };
-    storageService.set(storageService.KEYS.CURRENT_USER, user);
-    return { success: true, user };
-  },
-
-  register({ name, email, password, inviteCode }) {
-    this.initCodes();
-    const codes = storageService.get(storageService.KEYS.INVITE_CODES, initialCodes);
-    
-    // Kiểm tra mã code
-    const codeEntry = codes.find(c => c.code.trim().toUpperCase() === inviteCode.trim().toUpperCase());
-    if (!codeEntry) {
-      return { success: false, message: 'Mã mời không tồn tại trên hệ thống!' };
-    }
-
-    if (codeEntry.usedCount >= codeEntry.maxUses) {
-      return { success: false, message: 'Mã mời đã hết lượt sử dụng!' };
-    }
-
-    // Tăng lượt sử dụng
-    codeEntry.usedCount += 1;
-    storageService.set(storageService.KEYS.INVITE_CODES, codes);
-
-    const newUser = {
-      id: 'usr_' + Date.now(),
-      name,
-      email,
-      role: codeEntry.role // Gán quyền tương ứng mã mời
-    };
-
-    storageService.set(storageService.KEYS.CURRENT_USER, newUser);
-    return { success: true, user: newUser };
-  },
-
-  logout() {
-    storageService.remove(storageService.KEYS.CURRENT_USER);
-  },
-
-  getInviteCodes() {
-    this.initCodes();
-    return storageService.get(storageService.KEYS.INVITE_CODES, initialCodes);
-  },
-
-  createInviteCode({ code, role, maxUses = 10 }) {
-    const codes = this.getInviteCodes();
-    const formattedCode = code.trim().toUpperCase();
-    if (codes.some(c => c.code === formattedCode)) {
-      return { success: false, message: 'Mã mời này đã tồn tại!' };
-    }
-    const newEntry = {
-      code: formattedCode,
-      role: role || 'STUDENT',
-      usedCount: 0,
-      maxUses: Number(maxUses),
-      createdAt: new Date().toISOString().split('T')[0]
-    };
-    codes.push(newEntry);
-    storageService.set(storageService.KEYS.INVITE_CODES, codes);
-    return { success: true, code: newEntry };
-  }
+const unwrap = ({ data, error }) => {
+  if (error) throw error;
+  return data;
 };
+
+export const authService = {
+  async signUp({ email, password, fullName }) {
+    return unwrap(
+      await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name: fullName }, emailRedirectTo: window.location.origin },
+      })
+    );
+  },
+
+  async signIn({ email, password }) {
+    return unwrap(await supabase.auth.signInWithPassword({ email, password }));
+  },
+
+  async signInWithGoogle() {
+    return unwrap(
+      await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.origin, queryParams: { prompt: 'select_account' } },
+      })
+    );
+  },
+
+  async signOut() {
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  },
+
+  async sendPasswordReset(email) {
+    return unwrap(
+      await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` })
+    );
+  },
+
+  async updatePassword(newPassword) {
+    return unwrap(await supabase.auth.updateUser({ password: newPassword }));
+  },
+
+  async getSession() {
+    const { data, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    return data.session;
+  },
+
+  onAuthStateChange(callback) {
+    const { data } = supabase.auth.onAuthStateChange(callback);
+    return () => data?.subscription?.unsubscribe();
+  },
+
+  async getProfile(userId) {
+    return unwrap(await supabase.from('profiles').select('*').eq('id', userId).single());
+  },
+
+  async updateProfile(userId, { fullName, avatarUrl }) {
+    return unwrap(
+      await supabase
+        .from('profiles')
+        .update({ full_name: fullName, avatar_url: avatarUrl })
+        .eq('id', userId)
+        .select()
+        .single()
+    );
+  },
+
+  async redeemCode(code) {
+    return unwrap(await supabase.rpc('redeem_code', { p_code: code }));
+  },
+
+  isPremium(profile) {
+    if (!profile) return false;
+    return (
+      profile.tier === 'premium' &&
+      (!profile.premium_until || new Date(profile.premium_until) > new Date())
+    );
+  },
+};
+
+export default authService;

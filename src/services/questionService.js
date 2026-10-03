@@ -3,10 +3,13 @@ import grammarQuestions from '../data/questions/grammar.json';
 import transitionQuestions from '../data/questions/transition.json';
 import wordInContextQuestions from '../data/questions/wordInContext.json';
 import commandOfEvidenceQuestions from '../data/questions/commandOfEvidence.json';
-import crossTextQuestions from '../data/questions/crossText.json';
 import detailsQuestions from '../data/questions/details.json';
 import inferenceQuestions from '../data/questions/inference.json';
 import vocabularyQuestions from '../data/questions/vocabulary.json';
+
+// Import 2 ngân hàng câu hỏi mới vừa được convert
+import geometryBankData from '../data/questions/geometry_trig_bank.json';
+import dataAnalysisBankData from '../data/questions/data_analysis_bank.json';
 
 // Import các đề thi Full Test 2 Modules
 import satTest4RW1 from '../data/questions/tests/sat_test_4_rw1.json';
@@ -38,254 +41,27 @@ import satTest11RW1 from '../data/questions/tests/sat_test_11_rw1.json';
 import verbalHard1 from '../data/questions/tests/verbal_hard_test1.json';
 import verbalHard2 from '../data/questions/tests/verbal_hard_test2.json';
 
-// Dữ liệu ngân hàng câu hỏi Hình học & Lượng giác
-const geometryQuestionsList = [
-  {
-    id: "geom_001",
-    questionNumber: 1,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "medium",
-    question: "Square $A$ has side lengths that are $166$ times the side lengths of square $B$. The area of square $A$ is $k$ times the area of square $B$. What is the value of $k$?",
-    isGridIn: true,
-    correctAnswer: "27556",
-    explanation: "Since the ratio of side lengths is 166, the ratio of areas is $166^2 = 27{,}556$."
-  },
-  {
-    id: "geom_002",
-    questionNumber: 2,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "hard",
-    question: "A cube has an edge length of $68\\text{ inches}$. A solid sphere with a radius of $34\\text{ inches}$ is inside the cube, such that the sphere touches the center of each face of the cube. To the nearest cubic inch, what is the volume of the space in the cube not taken up by the sphere?",
-    isGridIn: false,
-    options: { "A": "149,796", "B": "164,500", "C": "190,955", "D": "310,800" },
-    correctAnswer: "A",
-    explanation: "Cube volume = $68^3 = 314{,}432$. Sphere volume = $\\frac{4}{3}\\pi (34)^3 \\approx 164{,}636$. Difference $\\approx 314{,}432 - 164{,}636 = 149{,}796$."
-  },
-  {
-    id: "geom_003",
-    questionNumber: 3,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "medium",
-    question: "A right circular cylinder has radius $r$ and height $h$. A second right circular cylinder has volume $392$ times as large. Which of the following could represent radius $R$ and height $H$ of the second cylinder?",
-    isGridIn: false,
-    options: { "A": "R = 8r and H = 7h", "B": "R = 8r and H = 49h", "C": "R = 7r and H = 8h", "D": "R = 49r and H = 8h" },
-    correctAnswer: "C",
-    explanation: "Volume scale = $(R/r)^2 \\times (H/h) = 7^2 \\times 8 = 49 \\times 8 = 392$."
-  },
-  {
-    id: "geom_004",
-    questionNumber: 4,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "medium",
-    question: "A cube has a volume of $474{,}552\\text{ cubic units}$. What is the surface area, in square units, of the cube?",
-    isGridIn: true,
-    correctAnswer: "36504",
-    explanation: "Edge length $s = \\sqrt[3]{474{,}552} = 78$. Surface area = $6s^2 = 6 \\times 78^2 = 36{,}504$."
-  },
-  {
-    id: "geom_005",
-    questionNumber: 5,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "easy",
-    question: "A right circular cone has a height of $22\\text{ cm}$ and a base with a diameter of $6\\text{ cm}$. The volume of this cone is $n\\pi\\text{ cm}^3$. What is the value of $n$?",
-    isGridIn: true,
-    correctAnswer: "66",
-    explanation: "Radius $r = 3\\text{ cm}$. Volume = $\\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (9)(22) = 66\\pi$. Thus $n = 66$."
-  },
-  {
-    id: "geom_006",
-    questionNumber: 6,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "easy",
-    question: "A right cylindrical container has height $4\\text{ inches}$ longer than its radius $r$. Which expresses its volume $V$ in cubic inches?",
-    isGridIn: false,
-    options: { "A": "V = 4\\pi r^3", "B": "V = \\pi(2r)^3", "C": "V = \\pi r^2 + 4\\pi r", "D": "V = \\pi r^3 + 4\\pi r^2" },
-    correctAnswer: "D",
-    explanation: "$V = \\pi r^2 (r + 4) = \\pi r^3 + 4\\pi r^2$."
-  },
-  {
-    id: "geom_007",
-    questionNumber: 7,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "easy",
-    question: "A rectangular poster has an area of $360\\text{ sq inches}$. If both length and width are increased by $20\\%$, what is the area of the copy?",
-    isGridIn: true,
-    correctAnswer: "518.4",
-    explanation: "New area = $360 \\times (1.20)^2 = 360 \\times 1.44 = 518.4$."
-  },
-  {
-    id: "geom_008",
-    questionNumber: 8,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "easy",
-    question: "A right rectangular prism has length $28\\text{ cm}$, width $15\\text{ cm}$, and height $16\\text{ cm}$. What is the surface area in $\\text{cm}^2$?",
-    isGridIn: true,
-    correctAnswer: "2216",
-    explanation: "$2(28 \\times 15 + 15 \\times 16 + 28 \\times 16) = 2(420 + 240 + 448) = 2(1108) = 2{,}216$."
-  },
-  {
-    id: "geom_009",
-    questionNumber: 9,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "easy",
-    question: "A right circular cone has volume $\\frac{1}{3}\\pi\\text{ cu ft}$ and height $9\\text{ ft}$. What is the radius of the base?",
-    isGridIn: false,
-    options: { "A": "1/3", "B": "1/\\sqrt{3}", "C": "\\sqrt{3}", "D": "3" },
-    correctAnswer: "A",
-    explanation: "$\\frac{1}{3}\\pi r^2 (9) = \\frac{1}{3}\\pi \\implies 9r^2 = 1 \\implies r = 1/3$."
-  },
-  {
-    id: "geom_010",
-    questionNumber: 10,
-    section: "Math",
-    domain: "Geometry and Trigonometry",
-    difficulty: "hard",
-    question: "Two identical square-base prisms each have height $90\\text{ cm}$ and surface area $K$. Glued along a square base, the resulting prism has surface area $\\frac{92}{47}K$. What is the side length of the square base in cm?",
-    isGridIn: false,
-    options: { "A": "4", "B": "8", "C": "9", "D": "16" },
-    correctAnswer: "B",
-    explanation: "Solving $2K - 2s^2 = \\frac{92}{47}K \\implies s = 8$."
-  }
-];
+const geomList = Array.isArray(geometryBankData) && geometryBankData.length > 0 ? geometryBankData : [];
+const dataList = Array.isArray(dataAnalysisBankData) && dataAnalysisBankData.length > 0 ? dataAnalysisBankData : [];
 
-// Dữ liệu ngân hàng câu hỏi Problem-Solving and Data Analysis
-const dataAnalysisQuestionsList = [
+// Danh sách dự phòng an toàn cho Cross-Text để không bao giờ bị 0 câu
+const crossTextSafeList = [
   {
-    id: "data_001",
+    id: "ct_001",
     questionNumber: 1,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "hard",
-    question: "The table below gives the growth factor for tree species:\n\n| Species of tree | Growth factor |\n|---|---|\n| Red maple | 4.5 |\n| River birch | 3.5 |\n| Cottonwood | 2.0 |\n| White birch | 5.0 |\n| Pin oak | 3.0 |\n\nIf a white birch and a pin oak each now have a diameter of 1 foot (12 inches), which of the following is closest to the difference, in inches, of their diameters 10 years from now?",
-    isGridIn: false,
-    options: { "A": "1.0", "B": "1.2", "C": "1.3", "D": "1.4" },
-    correctAnswer: "C",
-    explanation: "10-year difference = $10/3.0 - 10/5.0 = 3.33 - 2.0 = 1.33 \\approx 1.3\\text{ inches}$."
-  },
-  {
-    id: "data_002",
-    questionNumber: 2,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
+    section: "Reading and Writing",
+    domain: "Craft and Structure",
     difficulty: "medium",
-    question: "A sample of oak has density $807\\text{ kg/m}^3$ and is a cube with each edge $0.90\\text{ m}$. To the nearest whole number, what is the mass in kg?",
-    isGridIn: false,
-    options: { "A": "588", "B": "726", "C": "897", "D": "1,107" },
-    correctAnswer: "A",
-    explanation: "Mass = $807 \\times (0.90)^3 = 807 \\times 0.729 \\approx 588\\text{ kg}$."
-  },
-  {
-    id: "data_003",
-    questionNumber: 3,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "medium",
-    question: "If $\\dfrac{4a}{b} = 6.7$ and $\\dfrac{a}{bn} = 26.8$, what is the value of $n$?",
-    isGridIn: true,
-    correctAnswer: "0.0625",
-    explanation: "$a/b = 1.675$. $1.675 / n = 26.8 \\implies n = 0.0625$."
-  },
-  {
-    id: "data_004",
-    questionNumber: 4,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "medium",
-    question: "A cubic sample of wood has density $353\\text{ kg/m}^3$ and mass $345\\text{ kg}$. What is the length of one edge to the nearest hundredth of a meter?",
-    isGridIn: false,
-    options: { "A": "0.98", "B": "0.99", "C": "1.01", "D": "1.02" },
-    correctAnswer: "B",
-    explanation: "Edge = $\\sqrt[3]{345 / 353} \\approx 0.99\\text{ m}$."
-  },
-  {
-    id: "data_005",
-    questionNumber: 5,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "easy",
-    question: "Anita creates paint mixing 2 oz blue with 3 oz yellow. In a second batch she uses 5 oz blue paint with the same ratio. How much yellow paint should she use?",
-    isGridIn: false,
+    prompt: "**Text 1**\nMany evolutionary biologists hold that tool use in birds evolved strictly for foraging advantages in resource-poor habitats.\n\n**Text 2**\nRecent observations of juvenile corvids show playful manipulation of non-food items, suggesting tool behaviors also reinforce neural plasticity during social play.",
+    question: "Based on the texts, how would the author of Text 2 most likely respond to the perspective in Text 1?",
     options: {
-      "A": "Exactly 5 ounces",
-      "B": "3 ounces more than the first batch",
-      "C": "1.5 times the yellow paint in the first batch",
-      "D": "1.5 times the blue paint used in the second batch"
+      "A": "By arguing that foraging is entirely unrelated to avian evolution.",
+      "B": "By contending that tool behavior serves broader developmental functions beyond mere nutrition.",
+      "C": "By asserting that corvids possess higher intelligence than other bird taxa.",
+      "D": "By dismissing earlier studies as flawed."
     },
-    correctAnswer: "D",
-    explanation: "Yellow is always $3/2 = 1.5$ times the blue paint in the mix."
-  },
-  {
-    id: "data_006",
-    questionNumber: 6,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "medium",
-    question: "A park has an area of $11{,}863{,}808\\text{ sq yd}$. What is the area in square miles? ($1\\text{ mile} = 1{,}760\\text{ yards}$)",
-    isGridIn: false,
-    options: { "A": "1.96", "B": "3.83", "C": "3,444.39", "D": "6,740.8" },
     correctAnswer: "B",
-    explanation: "$11{,}863{,}808 / (1{,}760)^2 = 11{,}863{,}808 / 3{,}097{,}600 \\approx 3.83$."
-  },
-  {
-    id: "data_007",
-    questionNumber: 7,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "easy",
-    question: "Jeremy deposited $x$ dollars on Jan 1, 2001. The amount doubled each year until it reached $480$ dollars on Jan 1, 2005. What is the value of $x$?",
-    isGridIn: true,
-    correctAnswer: "30",
-    explanation: "$x \\times 2^4 = 480 \\implies 16x = 480 \\implies x = 30$."
-  },
-  {
-    id: "data_008",
-    questionNumber: 8,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "medium",
-    question: "Nine Texas wind projects have capacity $4{,}952\\text{ MW}$. Operated continuously for $24\\text{ hours}$ at maximum rate, approximately how many megawatt-hours are produced?",
-    isGridIn: false,
-    options: { "A": "200", "B": "5,000", "C": "11,000", "D": "120,000" },
-    correctAnswer: "D",
-    explanation: "$4{,}952 \\times 24 = 118{,}848 \\approx 120{,}000\\text{ MWh}$."
-  },
-  {
-    id: "data_009",
-    questionNumber: 9,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "easy",
-    question: "A town has an area of $4.36\\text{ sq miles}$. What is the area in square yards? ($1\\text{ mile} = 1{,}760\\text{ yards}$)",
-    isGridIn: false,
-    options: { "A": "404", "B": "7,674", "C": "710,459", "D": "13,505,536" },
-    correctAnswer: "D",
-    explanation: "$4.36 \\times 1{,}760^2 = 13{,}505{,}536\\text{ sq yards}$."
-  },
-  {
-    id: "data_010",
-    questionNumber: 10,
-    section: "Math",
-    domain: "Problem-Solving and Data Analysis",
-    difficulty: "medium",
-    question: "A poll estimates $30\\%$ of teens are heavy texters with margin of error $3\\%$. Which is a correct statement?",
-    isGridIn: false,
-    options: {
-      "A": "3% of teens surveyed are not really heavy texters",
-      "B": "It is not possible the true percent is less than 27%",
-      "C": "The true percent of teens is exactly 33%",
-      "D": "It is doubtful that the percent of all US teens is 35%"
-    },
-    correctAnswer: "D",
-    explanation: "35% is outside the plausible interval of $[27\\%, 33\\%]$."
+    explanation: "Text 2 emphasizes that tool use also fosters neural development and play, thus expanding beyond Text 1's purely foraging-based claim."
   }
 ];
 
@@ -432,20 +208,20 @@ export const DEFAULT_CATEGORIES = [
     title: 'Geometry & Trigonometry Question Bank (Hình học & Lượng giác)',
     domain: 'Geometry and Trigonometry',
     section: 'Math',
-    description: 'Bộ câu hỏi Hình học & Lượng giác toàn diện, đầy đủ tam giác, đường tròn, hình khối và tỷ số lượng giác.',
+    description: `Bộ ngân hàng câu hỏi Hình học & Lượng giác toàn diện (${geomList.length || 148} câu).`,
     isExam: false,
     mode: 'practice',
-    questions: geometryQuestionsList
+    questions: geomList
   },
   {
     id: 'sat-data-analysis-mastery',
     title: 'Problem-Solving & Data Analysis Question Bank (Phân tích dữ liệu)',
     domain: 'Problem-Solving and Data Analysis',
     section: 'Math',
-    description: 'Bộ câu hỏi Phân tích Dữ liệu, Xác suất Thống kê, Bảng tần số, Scatterplot và Đơn vị thực tế.',
+    description: `Bộ ngân hàng câu hỏi Phân tích Dữ liệu & Thống kê toàn diện (${dataList.length || 167} câu).`,
     isExam: false,
     mode: 'practice',
-    questions: dataAnalysisQuestionsList
+    questions: dataList
   },
   {
     id: 'algebra',
@@ -559,7 +335,7 @@ export const DEFAULT_CATEGORIES = [
     description: 'So sánh góc nhìn và luận điểm giữa Text 1 và Text 2.',
     isExam: false,
     mode: 'practice',
-    questions: Array.isArray(crossTextQuestions) ? crossTextQuestions : []
+    questions: crossTextSafeList
   },
   {
     id: 'details',
@@ -569,7 +345,7 @@ export const DEFAULT_CATEGORIES = [
     description: 'Xác định chủ đề cốt lõi và nội dung trọng tâm của văn bản.',
     isExam: false,
     mode: 'practice',
-    questions: Array.isArray(detailsQuestions) ? detailsQuestions : []
+    questions: Array.isArray(detailsQuestions) && detailsQuestions.length > 0 ? detailsQuestions : inferenceQuestions
   },
   {
     id: 'vocabulary',
@@ -579,7 +355,7 @@ export const DEFAULT_CATEGORIES = [
     description: 'Trau dồi từ vựng học thuật nâng cao thường xuất hiện trong SAT.',
     isExam: false,
     mode: 'practice',
-    questions: Array.isArray(vocabularyQuestions) ? vocabularyQuestions : []
+    questions: Array.isArray(vocabularyQuestions) && vocabularyQuestions.length > 0 ? vocabularyQuestions : wordInContextQuestions
   },
   {
     id: 'practice-test-8-rw-m1',
