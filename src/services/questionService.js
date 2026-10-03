@@ -41,6 +41,8 @@ import satTest11RW1 from '../data/questions/tests/sat_test_11_rw1.json';
 import verbalHard1 from '../data/questions/tests/verbal_hard_test1.json';
 import verbalHard2 from '../data/questions/tests/verbal_hard_test2.json';
 
+import satRealVerbalFull from '../data/questions/tests/sat_real_verbal_full.json';
+
 const geomList = Array.isArray(geometryBankData) && geometryBankData.length > 0 ? geometryBankData : [];
 const dataList = Array.isArray(dataAnalysisBankData) && dataAnalysisBankData.length > 0 ? dataAnalysisBankData : [];
 
@@ -426,6 +428,22 @@ export const DEFAULT_CATEGORIES = [
     isExam: false,
     mode: 'practice',
     questions: Array.isArray(verbalHard2) ? verbalHard2 : []
+  },
+  {
+    id: 'sat-real-verbal-full-54',
+    title: 'Official SAT Verbal Test October - Full 2 Modules (54 Qs)',
+    name: 'Official SAT Verbal Test October- Full 2 Modules',
+    section: 'Reading & Writing',
+    domain: 'Reading & Writing',
+    mode: 'exam',
+    isExam: true,
+    isFullTest: true,
+    totalQuestions: 54,
+    // Truyền trực tiếp 2 module để ExamWorkspacePage nhận diện
+    module1: satRealVerbalFull.module1,
+    module2Hard: satRealVerbalFull.module2,
+    module2Easy: satRealVerbalFull.module2, // fallback nếu phân nhánh
+    questions: [...satRealVerbalFull.module1, ...satRealVerbalFull.module2]
   }
 ];
 

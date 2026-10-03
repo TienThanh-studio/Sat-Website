@@ -2,207 +2,185 @@ import React, { useMemo } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
-export default function MathRenderer({ text, content, className = '' }) {
-  const rawInput = text || content || '';
+// Tự động chuẩn hóa các công thức toán chưa được bọc dấu $
+function autoFormatMathText(input) {
+  if (!input) return '';
+  let str = String(input);
 
-  const { cleanedText, tikzElements } = useMemo(() => {
-    if (!rawInput || typeof rawInput !== 'string') {
-      return { cleanedText: '', tikzElements: [] };
+  // Nếu chuỗi đã có dấu $ thì giữ nguyên
+  if (str.includes('$')) return str;
+
+  // Nếu là dạng lũy thừa x^(a/b) hoặc x^n -> bọc $x^{...}$
+  if (/^[a-zA-Z0-9\s\+\-\*\/\(\)\^\.\,]+$/.test(str.trim())) {
+    if (str.includes('^') || str.includes('\\sqrt') || (str.includes('/') && /\d+\/\d+/.test(str))) {
+      let formatted = str
+        .replace(/([a-zA-Z0-9]+)\^\(([^)]+)\)/g, '$1^{$2}')
+        .replace(/([a-zA-Z0-9]+)\^([a-zA-Z0-9]+)/g, '$1^{$2}');
+      return `$${formatted}$`;
     }
+  }
 
-    // 1. Tách TikZ để render SVG riêng biệt
-    const tikzRegex = /\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/g;
-    const tikzs = [];
-    let match;
-    while ((match = tikzRegex.exec(rawInput)) !== null) {
-      tikzs.push(match[0]);
-    }
+  return str;
+}
 
-    let clean = rawInput.replace(tikzRegex, '').trim();
+function renderKatexText(content) {
+  if (!content) return null;
+  const processed = autoFormatMathText(content);
+  const parts = processed.split(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g);
 
-    // 2. Làm sạch layout tàn dư
-    clean = clean
-      .replace(/\\begin\{minipage\}(?:\{.*?\})?/gi, '')
-      .replace(/\\end\{minipage\}/gi, '')
-      .replace(/%[^\n]*/g, '');
+  return parts.map((part, index) => {
+    if (!part) return null;
 
-    return { cleanedText: clean, tikzElements: tikzs };
-  }, [rawInput]);
-
-  // Bộ phân tích bảng Markdown
-  const blocks = useMemo(() => {
-    if (!cleanedText) return [];
-
-    const lines = cleanedText.split('\n');
-    const result = [];
-    let tableBuffer = [];
-
-    const isTableLine = (line) => {
-      const trimmed = line.trim();
-      return trimmed.startsWith('|') && trimmed.endsWith('|') && trimmed.length > 2;
-    };
-
-    lines.forEach((line) => {
-      if (isTableLine(line)) {
-        tableBuffer.push(line);
-      } else {
-        if (tableBuffer.length > 0) {
-          result.push({ type: 'table', lines: [...tableBuffer] });
-          tableBuffer = [];
-        }
-        if (line.trim()) {
-          result.push({ type: 'text', text: line });
-        }
+    if (part.startsWith('$$') && part.endsWith('$$')) {
+      const math = part.slice(2, -2).trim();
+      try {
+        const html = katex.renderToString(math, { displayMode: true, throwOnError: false });
+        return (
+          <span
+            key={index}
+            dangerouslySetInnerHTML={{ __html: html }}
+            className="my-2 block text-center overflow-x-auto"
+          />
+        );
+      } catch (e) {
+        return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
       }
-    });
-
-    if (tableBuffer.length > 0) {
-      result.push({ type: 'table', lines: [...tableBuffer] });
     }
 
-    return result;
-  }, [cleanedText]);
-
-  // Render KaTeX inline / display bảo vệ chữ tiếng Anh không bị dính
-  const renderMathAndText = (textLine) => {
-    if (!textLine) return null;
-
-    // Bắt đúng cặp $...$ hoặc $$...$$
-    const mathRegex = /(\$\$[\s\S]+?\$\$|\$[^\$]+?\$)/g;
-    const parts = textLine.split(mathRegex);
-
-    return parts.map((part, idx) => {
-      if (part.startsWith('$$') && part.endsWith('$$')) {
-        const mathExpr = part.slice(2, -2).trim();
-        try {
-          const html = katex.renderToString(mathExpr, { displayMode: true, throwOnError: false });
-          return <span key={idx} dangerouslySetInnerHTML={{ __html: html }} className="my-2 block text-center" />;
-        } catch {
-          return <span key={idx} className="font-mono">{part}</span>;
-        }
-      } else if (part.startsWith('$') && part.endsWith('$')) {
-        let mathExpr = part.slice(1, -1).trim();
-
-        // Xử lý bảo vệ từ "and" trong KaTeX: biến "and" thành "\text{ and }"
-        mathExpr = mathExpr.replace(/(?<=\s|^)and(?=\s|$)/g, '\\text{ and }');
-
-        // Nếu chuỗi bên trong chứa cả một câu văn dài (>20 ký tự và có nhiều từ), render thẳng ra text thường
-        if (/^[a-zA-Z\s.,?!()'-]{20,}$/.test(mathExpr)) {
-          return <span key={idx}> {mathExpr} </span>;
-        }
-
-        try {
-          const html = katex.renderToString(mathExpr, { displayMode: false, throwOnError: false });
-          return <span key={idx} dangerouslySetInnerHTML={{ __html: html }} className="inline-block px-0.5" />;
-        } catch {
-          return <span key={idx}>{mathExpr}</span>;
-        }
+    if (part.startsWith('$') && part.endsWith('$')) {
+      const math = part.slice(1, -1).trim();
+      try {
+        const html = katex.renderToString(math, { displayMode: false, throwOnError: false });
+        return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
+      } catch (e) {
+        return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
       }
-
-      // Xử lý in đậm Markdown **text**
-      const boldRegex = /(\*\*[^*]+\*\*)/g;
-      const subParts = part.split(boldRegex);
-
-      return (
-        <span key={idx}>
-          {subParts.map((sub, sIdx) => {
-            if (sub.startsWith('**') && sub.endsWith('**')) {
-              return <strong key={sIdx} className="font-bold text-slate-900">{sub.slice(2, -2)}</strong>;
-            }
-            return sub;
-          })}
-        </span>
-      );
-    });
-  };
-
-  // Render Markdown Table
-  const renderTableBlock = (tableLines, keyIdx) => {
-    const cleanRows = tableLines.map(row => 
-      row.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
-    );
-    const filteredRows = cleanRows.filter(row => !row.every(cell => /^[-:\s]+$/.test(cell)));
-    if (filteredRows.length === 0) return null;
-
-    const [headerRow, ...bodyRows] = filteredRows;
-
-    return (
-      <div key={keyIdx} className="my-4 overflow-x-auto rounded-xl border border-slate-300 shadow-sm bg-white">
-        <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
-          <thead className="bg-slate-100 font-bold text-slate-800">
-            <tr>
-              {headerRow.map((cell, cIdx) => (
-                <th key={cIdx} className="px-4 py-2.5 border-r border-slate-200 last:border-r-0">
-                  {renderMathAndText(cell)}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
-            {bodyRows.map((row, rIdx) => (
-              <tr key={rIdx} className={rIdx % 2 === 1 ? 'bg-slate-50/60' : 'bg-white'}>
-                {row.map((cell, cIdx) => (
-                  <td key={cIdx} className="px-4 py-2 border-r border-slate-200 last:border-r-0">
-                    {renderMathAndText(cell)}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  };
-
-  // Render SVG cho hình trụ & tam giác
-  const renderTikZFigure = (tikzCode, keyIdx) => {
-    if (tikzCode.includes('ellipse') || tikzCode.includes('cylinder') || tikzCode.includes('hình trụ')) {
-      return (
-        <div key={keyIdx} className="my-5 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-xs">
-          <svg width="220" height="180" viewBox="0 0 220 180" className="stroke-slate-900 fill-none">
-            <ellipse cx="100" cy="40" rx="60" ry="18" strokeWidth="2" fill="#f8fafc" />
-            <line x1="40" y1="40" x2="40" y2="130" strokeWidth="2" />
-            <line x1="160" y1="40" x2="160" y2="130" strokeWidth="2" />
-            <path d="M 40,130 A 60 18 0 0 0 160,130" strokeWidth="2" />
-            <path d="M 40,130 A 60 18 0 0 1 160,130" strokeWidth="1.5" strokeDasharray="4 4" stroke="#94a3b8" />
-            <line x1="100" y1="40" x2="160" y2="40" strokeWidth="1.5" stroke="#2563eb" />
-            <circle cx="100" cy="40" r="3" fill="#0f172a" />
-            <text x="125" y="34" className="text-xs font-serif font-bold italic fill-blue-600">r</text>
-            <line x1="180" y1="40" x2="180" y2="130" strokeWidth="1" strokeDasharray="3 3" stroke="#64748b" />
-            <line x1="175" y1="40" x2="185" y2="40" strokeWidth="1" stroke="#64748b" />
-            <line x1="175" y1="130" x2="185" y2="130" strokeWidth="1" stroke="#64748b" />
-            <text x="190" y="90" className="text-xs font-serif font-bold italic fill-slate-700">h</text>
-          </svg>
-          <span className="text-[11px] text-slate-400 italic mt-1 font-serif">Note: Figure not drawn to scale.</span>
-        </div>
-      );
     }
 
-    return (
-      <div key={keyIdx} className="my-5 flex flex-col items-center justify-center p-3 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <svg width="220" height="150" viewBox="0 0 220 150" className="stroke-slate-900 fill-none">
-          <polygon points="30,120 180,120 180,30" strokeWidth="2" fill="#f8fafc" />
-          <polyline points="165,120 165,105 180,105" strokeWidth="1.5" stroke="#64748b" />
-        </svg>
-        <span className="text-[11px] text-slate-400 italic mt-1 font-serif">Note: Figure not drawn to scale.</span>
-      </div>
-    );
-  };
+    return <span key={index}>{part}</span>;
+  });
+}
+
+function renderTableMarkdown(text) {
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+  const tableLines = lines.filter(l => l.includes('|'));
+  if (tableLines.length < 2) return null;
+
+  const nonDividerLines = tableLines.filter(l => !l.match(/^[|\s\-:]+$/));
+  if (nonDividerLines.length === 0) return null;
+
+  const headers = nonDividerLines[0].split('|').map(s => s.trim()).filter(Boolean);
+  const rows = nonDividerLines.slice(1).map(row => 
+    row.split('|').map(s => s.trim()).filter(Boolean)
+  );
 
   return (
-    <div className={`space-y-2 leading-relaxed break-words ${className}`}>
-      {blocks.map((block, idx) => {
-        if (block.type === 'table') {
-          return renderTableBlock(block.lines, idx);
-        }
-        return (
-          <div key={idx} className="min-h-[1.25rem]">
-            {renderMathAndText(block.text)}
-          </div>
-        );
-      })}
-
-      {tikzElements.map((code, idx) => renderTikZFigure(code, `tikz_${idx}`))}
+    <div className="my-4 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-xs">
+      <table className="min-w-full divide-y divide-slate-200 text-left text-xs font-sans">
+        <thead className="bg-slate-50 text-slate-800 font-bold uppercase tracking-wider">
+          <tr>
+            {headers.map((h, i) => (
+              <th key={i} className="px-4 py-3 border-r border-slate-200 last:border-r-0">
+                {renderKatexText(h)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100 font-medium text-slate-800">
+          {rows.map((row, rIdx) => (
+            <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+              {row.map((cell, cIdx) => (
+                <td key={cIdx} className="px-4 py-2.5 border-r border-slate-100 last:border-r-0 text-[13px]">
+                  {renderKatexText(cell)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
+  );
+}
+
+function renderRhetoricalNotes(text) {
+  const parts = text.split(/(•|\n\s*[-*]\s*)/g);
+  const intro = parts[0].trim();
+  const bullets = [];
+
+  for (let i = 1; i < parts.length; i += 2) {
+    const bulletContent = parts[i + 1]?.trim();
+    if (bulletContent) bullets.push(bulletContent);
+  }
+
+  if (bullets.length === 0) return null;
+
+  return (
+    <div className="space-y-3 font-serif leading-relaxed text-slate-800">
+      {intro && <p className="font-sans font-medium text-slate-700">{renderKatexText(intro)}</p>}
+      <ul className="space-y-2 pl-4 list-disc marker:text-slate-500 text-[15px]">
+        {bullets.map((bullet, idx) => (
+          <li key={idx} className="pl-1">
+            {renderKatexText(bullet)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function MathRenderer({ text = '', className = '' }) {
+  const cleanContent = useMemo(() => {
+    if (!text) return '';
+    let val = String(text);
+    try { val = val.normalize('NFC'); } catch (e) {}
+
+    val = val.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
+    val = val.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+    val = val.replace(/\\%/g, '%');
+    val = val.replace(/\\\$/g, '$');
+    val = val.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/gi, '');
+    return val;
+  }, [text]);
+
+  if (!cleanContent) return null;
+
+  const isNotesQuestion = cleanContent.includes('•') || (cleanContent.toLowerCase().includes('notes:') && cleanContent.includes('-'));
+  if (isNotesQuestion) {
+    const renderedNotes = renderRhetoricalNotes(cleanContent);
+    if (renderedNotes) return renderedNotes;
+  }
+
+  const isTableContent = cleanContent.includes('|') && cleanContent.split('\n').filter(l => l.includes('|')).length >= 2;
+  if (isTableContent) {
+    const lines = cleanContent.split('\n');
+    const introLines = [];
+    const tableLines = [];
+    const outroLines = [];
+    let state = 'intro';
+
+    for (const l of lines) {
+      if (l.includes('|')) {
+        state = 'table';
+        tableLines.push(l);
+      } else {
+        if (state === 'table') state = 'outro';
+        if (state === 'intro') introLines.push(l);
+        if (state === 'outro') outroLines.push(l);
+      }
+    }
+
+    return (
+      <div className={`space-y-3 font-serif leading-relaxed ${className}`}>
+        {introLines.length > 0 && <p>{renderKatexText(introLines.join(' '))}</p>}
+        {renderTableMarkdown(tableLines.join('\n'))}
+        {outroLines.length > 0 && <p>{renderKatexText(outroLines.join(' '))}</p>}
+      </div>
+    );
+  }
+
+  return (
+    <span className={`leading-relaxed ${className}`}>
+      {renderKatexText(cleanContent)}
+    </span>
   );
 }

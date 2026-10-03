@@ -1,0 +1,955 @@
+{
+  "id": "sat-real-verbal-full-54",
+  "title": "Official SAT Verbal Practice (Full 2 Modules - 54 Questions)",
+  "section": "Reading & Writing",
+  "totalQuestions": 54,
+  "module1": [
+    {
+      "id": "m1_q1",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "__________ the source of a malfunction in a complex electrical system can be a painstaking, time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "Adapting",
+        "B": "Isolating",
+        "C": "Incorporating",
+        "D": "Fabricating"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Isolating' means identifying or setting apart something specific. Testing components one by one to find the exact source of a problem describes isolating the issue."
+    },
+    {
+      "id": "m1_q2",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they __________ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes—including salt—in response to external changes. It may be that coastal foraminifera do the same.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "counteract",
+        "B": "elude",
+        "C": "tolerate",
+        "D": "regulate"
+      },
+      "correctAnswer": "D",
+      "explanation": "'Regulate' means to control or maintain internal levels in response to environmental shifts."
+    },
+    {
+      "id": "m1_q3",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "Though most studies of the effect of altitude on blood chemistry usually concentrate on people who live above sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the __________ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Westmorland and Thermal.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "predictable",
+        "B": "innovative",
+        "C": "idealistic",
+        "D": "timeworn"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Innovative' fits because the researchers broke from the traditional focus on people living above sea level to study people below sea level."
+    },
+    {
+      "id": "m1_q4",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "While once __________, basic computer security training that only teaches recognition of obvious scams cannot provide enough protection against today's sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "uncommon",
+        "B": "superficial",
+        "C": "sufficient",
+        "D": "affordable"
+      },
+      "correctAnswer": "C",
+      "explanation": "'While once sufficient' contrasts with the subsequent idea that such training 'cannot provide enough protection' today."
+    },
+    {
+      "id": "m1_q5",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Text Structure and Purpose",
+      "prompt": "What is a city? The answer depends on where you live! Many countries define an area as a city based on how many people live there. However, not every country uses the same numbers. Iceland defines a city as an area with a population of at least 200, while the Netherlands defines a city as having a population of 20,000. Some countries even define cities using other factors, like if there is a local government.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "options": {
+        "A": "It lists the number of cities in one country, then compares that number to the number of cities in another country.",
+        "B": "It poses a question, then explains why the question has many answers.",
+        "C": "It offers a recommendation, then provides reasons for that recommendation.",
+        "D": "It describes two locations, then explains why only one of the locations is considered a city."
+      },
+      "correctAnswer": "B",
+      "explanation": "The text begins with 'What is a city?' and shows how different countries use completely different definitions and criteria."
+    },
+    {
+      "id": "m1_q6",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Text Structure and Purpose",
+      "prompt": "The following text is adapted from the 1940 novel The Hamlet by William Faulkner. In rural Mississippi, a man is riding a horse toward the residence of someone he intends to meet with about a business matter.\n\nHe was breathing hard but not because he had been galloping. On the contrary, since he had approached near enough to his destination to believe he could have seen if there had been, he had ridden slower and slower. Nevertheless he now sat the horse before the gap in the fence, breathing hard enough through his nose and even sweating a little, looking at the sagging broken-backed cabin set in its inevitable treeless and grassless plot and weathered to the color of an old bee-hive, with that expression of tense and rapid speculation of a man approaching a dud howitzer artillery shell.",
+      "question": "Which choice best states the main purpose of the text?",
+      "options": {
+        "A": "To contrast the man's desire to attend the meeting with his awareness of the risk involved in attending it",
+        "B": "To compare the upcoming meeting to a far more serious experience from earlier in the man's life",
+        "C": "To depict the man's insistence on meeting despite the inconvenience of traveling on horseback",
+        "D": "To portray the man's anxiety about the meeting as reflected by his physical state and demeanor"
+      },
+      "correctAnswer": "D",
+      "explanation": "The text emphasizes physical signs of stress: breathing hard, sweating, slowing down, and looking with 'tense and rapid speculation'."
+    },
+    {
+      "id": "m1_q7",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Text Structure and Purpose",
+      "prompt": "Modern forestry offers diverse career opportunities that integrate scientific knowledge with hands-on environmental work. Arborists assess tree health and perform maintenance such as pruning to promote safety and prevent problems. Forestry technicians collect data on growth patterns and biodiversity in the wild. Forest ecologists conduct research and analyze ecosystems to understand how forests respond to changes in weather patterns. With this blend of scientific understanding and practical application, forestry professionals address a variety of complex environmental challenges.",
+      "question": "Which choice best describes the main purpose of the text?",
+      "options": {
+        "A": "To explain technological advances in modern forestry and demonstrate how they've transformed traditional practices",
+        "B": "To analyze environmental challenges facing forests and describe how modern professionals address these problems",
+        "C": "To compare career opportunities in modern forestry and explain which positions offer the best job security",
+        "D": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work"
+      },
+      "correctAnswer": "D",
+      "explanation": "The passage outlines various specific roles in modern forestry and emphasizes how they combine science with practical work."
+    },
+    {
+      "id": "m1_q8",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Central Ideas and Details",
+      "prompt": "James Fong and his team claim to have discovered a new color, which they named olo. Olo is a very saturated blue-green color that can't be seen with the human eye under natural conditions. In the human eye, long, medium, and short cones in the retina help perceive bright light and color. Olo can only be seen by activating the medium cones alone. Fong and team activated these cones by using a targeted laser technology to stimulate just the medium cone cells.",
+      "question": "According to the text, how can the color olo be seen?",
+      "options": {
+        "A": "By activating only the medium cones in the retina",
+        "B": "By activating the long, medium, and short cones in the retina",
+        "C": "By activating both the long and short cones in the retina",
+        "D": "By activating only the long cones in the retina"
+      },
+      "correctAnswer": "A",
+      "explanation": "The text states explicitly: 'Olo can only be seen by activating the medium cones alone.'"
+    },
+    {
+      "id": "m1_q9",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "A student is collecting data about countries with volcanoes that have been active in the time since 1800 and in the time since 1960. The student records that Ethiopia has fewer volcanoes active since 1960 than since 1800, but when comparing countries, Ethiopia has __________",
+      "question": "Which choice most effectively uses data from the graph to complete the statement?",
+      "options": {
+        "A": "the same number of volcanoes that have been active since 1800 as Tanzania has.",
+        "B": "no volcanoes that have been active since 1800.",
+        "C": "more volcanoes that have been active since 1960 than Tanzania has.",
+        "D": "fewer volcanoes that have been active since 1960 than Tanzania has."
+      },
+      "correctAnswer": "C",
+      "explanation": "The graph indicates Ethiopia has 8 volcanoes active since 1960, whereas Tanzania has significantly fewer (around 2)."
+    },
+    {
+      "id": "m1_q10",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "Editor Jared Shurin's enormous 2023 anthology The Big Book of Cyberpunk comprises 108 stories. In his introduction, Shurin defines cyberpunk as a subgenre of speculative fiction concerning 'the influence of technology on the scale, the structure, or the pattern of human affairs'; however, some critics assert that cyberpunk is a literary movement that is in large part aesthetic rather than idea driven.",
+      "question": "Which quotation from a literary critic would be the most effective evidence in support of the underlined claim?",
+      "options": {
+        "A": "\"Not all the stories anthologized in The Big Book of Cyberpunk were first published as stand-alone short stories in magazines or journals: for example, qntm's 2021 story 'Lena' was originally self-published on the author's site qntm.org.\"",
+        "B": "\"The stories in The Big Book of Cyberpunk share a number of common themes indicative of cyberpunk as a whole: body modification; resistance to authority; the ways in which technological advancements alter human behavior.\"",
+        "C": "\"Shurin's characterization of cyberpunk is remarkably generous: it is a categorization that might well serve for the entire field of science fiction in general, rather than cyberpunk in particular.\"",
+        "D": "\"A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.\""
+      },
+      "correctAnswer": "D",
+      "explanation": "Focusing on 'totems of 1980s pop culture, such as the mirrored sunglasses' provides direct evidence that cyberpunk is defined largely by aesthetic style rather than pure concepts."
+    },
+{
+      "id": "m1_q11",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "Employment in Tribal Economies in December 2017 and December 2023 by Sector\n\n| Economic sector | Approximate total number of employees, 2017 | Percentage of workforce, 2017 | Approximate total number of employees, 2023 | Percentage of workforce, 2023 |\n| :--- | :--- | :--- | :--- | :--- |\n| Business sector (all tribal businesses) | 220,700 | 66.0% | 232,300 | 65.4% |\n| Leisure and hospitality businesses | 185,100 | 55.3% | 192,300 | 54.2% |\n| Education and healthcare businesses | 19,100 | 5.7% | 21,600 | 6.1% |\n| Other businesses | 16,500 | 5.0% | 18,400 | 5.1% |\n| Public sector (tribal government and public administration) | 113,800 | 34.0% | 122,700 | 34.6% |\n\nTribal nations employ a large percentage of their populations in tribally owned businesses as well as in public administration. This is especially true in Oklahoma and other states with robust tribal economies and large Native populations. Between end-of-year 2017 and end-of-year 2023, the percentage of tribal employees working in the public sector increased, from 34.0% to 34.6%, while the percentage working in the business sector declined from 66.0% to 65.4%.",
+      "question": "Which statement about the decline in the percentage of tribal employees working in the business sector is best supported by information in the table?",
+      "options": {
+        "A": "It didn't result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period.",
+        "B": "It was offset by changes in leisure and hospitality businesses, since the percentage of employees working in those businesses increased during this period.",
+        "C": "It was driven primarily by changes in businesses classified as 'other,' since those businesses had the lowest number of employees by the end of 2023.",
+        "D": "It resulted from widespread workforce redistributions, since several thousand employees left that sector to take new jobs in the public sector during this period."
+      },
+      "correctAnswer": "A",
+      "explanation": "Total employees in the business sector rose from 220,700 to 232,300, proving the relative percentage drop was not caused by an overall contraction of raw employee numbers."
+    },
+    {
+      "id": "m1_q12",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "While US public charities, like Commonfund, must file Form 990 yearly with the IRS, private foundations, such as Lilly Endowment Inc., must file a different form, 990-PF. In addition, foundations that engage in certain prohibited activities must also file Form 4720 and pay a penalty tax on the money involved. Private foundations are prohibited from holding excess interests in a business enterprise, self-dealing (conducting activities that benefit foundation insiders), making taxable expenditures such as grants to noncharitable entities, and failing to cross a required threshold in making charitable distributions from income. Out of the organizations that filed Form 990-PF in the years 2003–2005, __________",
+      "question": "Which choice most effectively uses data from the graph to complete the assertion?",
+      "options": {
+        "A": "those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures.",
+        "B": "those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005.",
+        "C": "those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.",
+        "D": "those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason."
+      },
+      "correctAnswer": "C",
+      "explanation": "Failing to meet minimum charitable distributions represents undistributed income. The graph clearly shows this penalty accounted for ~79% in 2003 compared to ~55% in 2005."
+    },
+    {
+      "id": "m1_q13",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "Philoctetes is a play by Sophocles that was first performed in 409 BCE. In the play, Odysseus and Neoptolemus must retrieve Philoctetes—a master archer who is believed necessary for the Greeks to win the Trojan War—from a cave on a remote island where Odysseus and others had abandoned him with a debilitating injury earlier in the war. Odysseus suggests that the plan for returning with Philoctetes rests on Neoptolemus not having been part of the group that abandoned him:",
+      "question": "Which quotation from Philoctetes most effectively illustrates the claim?",
+      "options": {
+        "A": "\"Since the prize of victory is so dear, / Endure it [acting deceitfully]—We'll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.\"",
+        "B": "\"Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere, that informed of this / I may proceed with what remains to say, / And we may act in concert.\"",
+        "C": "\"Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.\"",
+        "D": "\"No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.\""
+      },
+      "correctAnswer": "C",
+      "explanation": "Quotation C directly contrasts Neoptolemus's 'safe and trustful' status with Odysseus's guilt for having been in the foremost band that abandoned Philoctetes."
+    },
+    {
+      "id": "m1_q14",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Inferences",
+      "prompt": "Louis-Ferdinand Céline's 1932 novel Journey to the End of the Night is regularly described as autobiographical. That characterization is apt—there are many parallels between the experiences of the novel's protagonist, Ferdinand Bardamu, and those of Céline—but it should not be taken to mean that every person or event depicted in Journey to the End of the Night has a real-life analogue. Much of the novel is inventive fiction, and readers who neglect this fact and instead focus excessively on correspondences between the novel and Céline's life can thus __________",
+      "question": "Which choice most logically completes the text?",
+      "options": {
+        "A": "fail to appreciate how much creativity Céline shows in the book.",
+        "B": "overemphasize the extent to which Céline took inspiration from earlier writers.",
+        "C": "refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night.",
+        "D": "misrepresent Journey to the End of the Night as being more widely read than it actually is."
+      },
+      "correctAnswer": "A",
+      "explanation": "If readers focus only on real-life biographical facts and ignore 'inventive fiction', they will fail to appreciate the author's creative invention."
+    },
+    {
+      "id": "m1_q15",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Inferences",
+      "prompt": "Last-mile delivery, the final stage in the delivery of products to customers, is subject to increasing pressure as consumers place greater emphasis on convenience and immediacy, often expecting next-day delivery. In response to this challenge and others, such as the increasing volume of parcels to be delivered, delivery companies are continually looking for ways to make last-mile delivery more efficient. One advance in last-mile delivery is the use of self-service lockers. This approach, while promising, also introduces new obstacles (e.g., convenient placement of self-service lockers is challenging). It is therefore likely that __________",
+      "question": "Which choice most logically completes the text?",
+      "options": {
+        "A": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations.",
+        "B": "delivery companies will continue promising next-day delivery out of a desire to meet consumers' expectations.",
+        "C": "advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience.",
+        "D": "innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications."
+      },
+      "correctAnswer": "A",
+      "explanation": "Since new solutions bring new complications while consumer expectations rise, companies must keep testing and experimenting with ongoing solutions."
+    },
+    {
+      "id": "m1_q16",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "With an average summer temperature of 82.5 degrees Fahrenheit, Nicosia is one European __________ many travelers recommend, especially from June to September.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "city, which",
+        "B": "city in which,",
+        "C": "city that",
+        "D": "city, that"
+      },
+      "correctAnswer": "C",
+      "explanation": "A restrictive relative clause modifying 'European city' requires 'that' without a preceding comma."
+    },
+    {
+      "id": "m1_q17",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Form, Structure, and Sense",
+      "prompt": "Nanoengineers have developed synthesized mesoporous silica nanoparticles that are used to transport genes and medicines to specific cells in the body. As nanotechnology evolves, medical technology __________ to evolve as well.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "had likely continued",
+        "B": "would likely have continued",
+        "C": "had likely been continuing",
+        "D": "will likely continue"
+      },
+      "correctAnswer": "D",
+      "explanation": "'As nanotechnology evolves' (present tense dependent clause expressing future ongoing condition) pairs with simple future 'will likely continue'."
+    },
+    {
+      "id": "m1_q18",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "To more easily balance the weight of her body on her toes while performing the demanding pointe work that became increasingly common in early 20th-century ballet, internationally known ballerina Anna Pavlova redesigned her pointe shoes. The modifications she made—adding a stiffened leather sole and hardened toe __________ began the modernization of ballet's iconic footwear.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "box,",
+        "B": "box—",
+        "C": "box",
+        "D": "box:"
+      },
+      "correctAnswer": "B",
+      "explanation": "The parenthetical clause starts with an em dash ('—adding a stiffened...'), so it must close with an em dash ('box—')."
+    },
+    {
+      "id": "m1_q19",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "Archaeological evidence indicates that board games have existed in human societies for at least five millennia, with examples discovered in the tombs of ancient Egypt and the ruins of Mesopotamia. The purpose of these ancient games was __________ provide entertainment during leisure time, to reflect cultural beliefs, and to develop strategic thinking skills among players.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "threefold. To",
+        "B": "threefold: to",
+        "C": "threefold; to",
+        "D": "threefold to"
+      },
+      "correctAnswer": "B",
+      "explanation": "A colon is used after an independent clause to introduce an illustrative list or series of items."
+    },
+    {
+      "id": "m1_q20",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "Extensive radiocarbon dating of reed samples from Caral confirmed Ruth Shady Solís's hypothesis about the Peruvian site's __________ nearly 5,000 years ago, the ancient city preceded the Olmec civilization to the north by a full millennium, a revelation that fundamentally altered our understanding of urban development in the Western Hemisphere.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "age, built",
+        "B": "age: built",
+        "C": "age and built",
+        "D": "age built"
+      },
+      "correctAnswer": "B",
+      "explanation": "The colon properly connects the announcement of the hypothesis about the site's age to the explanatory clause that follows."
+    },
+    {
+      "id": "m1_q21",
+      "stage": 1,
+      "module": 1,
+      "domain": "Standard English Conventions",
+      "category": "Form, Structure, and Sense",
+      "prompt": "Chemists investigating the properties of coal tar in the mid-nineteenth century discovered compounds that led to the creation of vibrant artificial colorants. Commercial applications of this new synthetic dye technology—beginning with the purple dye called mauve, discovered by William Perkin in 1856—__________ responsible for launching what one science historian calls a 'manufacturing revolution based on chemistry.'",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "was",
+        "B": "is",
+        "C": "were",
+        "D": "has been"
+      },
+      "correctAnswer": "C",
+      "explanation": "The subject is the plural noun 'Commercial applications', requiring the plural past tense verb 'were'."
+    },
+    {
+      "id": "m1_q22",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "How does a clear evening become foggy? First, the ground releases heat, which radiates upward. This causes the air near the ground to cool. __________, tiny water droplets begin to form as the cooling air reaches its dew point and can no longer hold its moisture as invisible vapor. Finally, as more droplets accumulate, a visible layer of fog develops close to the ground.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "Similarly,",
+        "B": "Lastly,",
+        "C": "Instead,",
+        "D": "Next,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The text describes a sequential timeline: 'First...', followed naturally by 'Next...', and concluded with 'Finally...'."
+    },
+    {
+      "id": "m1_q23",
+      "stage": 1,
+      "module": 1,
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "Scientists studying forest restoration have discovered that trees depend on complex partnerships with microscopic organisms for survival. The researchers found that special fungi called endophytes live inside tree leaves and serve as a defense mechanism. __________, these endophytes help by fighting off diseases and boosting the tree's immune system.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "In conclusion,",
+        "B": "Nevertheless,",
+        "C": "Alternatively,",
+        "D": "Specifically,"
+      },
+      "correctAnswer": "D",
+      "explanation": "'Specifically' introduces precise details about how the endophytes act as a defense mechanism."
+    },
+    {
+      "id": "m1_q24",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• Pistol shrimp are small marine crustaceans that hunt using a specialized oversized claw.\n• When the claw snaps shut rapidly, it pushes water through a narrow groove at extreme speeds.\n• This high-speed water jet creates a bubble that pops forcefully near the shrimp's prey.\n• The popping bubble generates shock waves powerful enough to stun small fish.",
+      "question": "The student wants to introduce pistol shrimp to an audience unfamiliar with these crustaceans. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": {
+        "A": "Some crustaceans use a specialized claw to create high-speed water jets and a bubble that stuns the small fish they prey on.",
+        "B": "Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish.",
+        "C": "Pushing water through a narrow groove at extreme speeds, the snapping shut of the shrimp's claw sets the shock-wave hunting process in motion.",
+        "D": "Pistol shrimp are preyed on by small marine crustaceans that create high-speed water jets to stun their prey."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B directly names pistol shrimp, defines what kind of creatures they are, and summarizes their notable claw mechanism clearly for a general audience."
+    },
+    {
+      "id": "m1_q25",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• Elizabeth Catlett (1915–2012) was a celebrated African American artist.\n• She is best known for creating sculptures and prints that explore the Black experience.\n• Standing Mother and Child is a 1980 sculpture by Catlett.\n• New Generation is a 1992 print by Catlett.",
+      "question": "The student wants to provide an example of one of Catlett's sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": {
+        "A": "The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.",
+        "B": "The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.",
+        "C": "Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience.",
+        "D": "Elizabeth Catlett, a celebrated artist, was born in 1915."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B specifically names and provides an example of one of Catlett's sculptures ('Standing Mother and Child')."
+    },
+    {
+      "id": "m1_q26",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• Chapantongo is a municipality in the state of Hidalgo, Mexico.\n• Municipalities are governmental regions responsible for providing many public services to their residents.\n• One service they provide is traffic control.\n• Hidalgo is divided into 84 municipalities.\n• Chapantongo's population was 12,967 in 2020.\n• Its population was 12,271 in 2010.",
+      "question": "The student wants to emphasize the 2020 population of Chapantongo. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": {
+        "A": "As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico.",
+        "B": "In 2020, the municipality of Chapantongo had a population of 12,967.",
+        "C": "As a municipality in Hidalgo, Chapantongo is responsible for providing public services to its population.",
+        "D": "Home to 12,271 people, the governmental region was responsible for providing traffic control to its population in 2010."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B highlights the target fact directly: the 2020 population of Chapantongo was 12,967."
+    },
+    {
+      "id": "m1_q27",
+      "stage": 1,
+      "module": 1,
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• The Future of Nostalgia is a scholarly book by literary theorist Svetlana Boym.\n• The book explores the concept of nostalgia from various angles.\n• Chapter 8 explores nostalgia and Europe's largest shopping mall.\n• Chapter 17 discusses various skeptics' takes on the concept of nostalgia.\n• In chapter 17, Boym writes, 'The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.'",
+      "question": "The student wants to explain what Svetlana Boym writes about in chapter 8. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": {
+        "A": "Svetlana Boym's The Future of Nostalgia explores the concept of nostalgia from various angles.",
+        "B": "As Svetlana Boym writes in the seventeenth chapter of her book, 'The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.'",
+        "C": "Literary theorist Svetlana Boym explores nostalgia and Europe's largest shopping mall in chapter 8 of her book.",
+        "D": "After exploring nostalgia and Europe's largest shopping mall, Svetlana Boym goes on to discuss various skeptics' takes on the concept of nostalgia."
+      },
+      "correctAnswer": "C",
+      "explanation": "Choice C cleanly addresses what chapter 8 covers: nostalgia and Europe's largest shopping mall."
+    }
+  ],
+  "module2": [
+    {
+      "id": "m2_q1",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "Weather patterns, market trends, input costs, labor availability, equipment maintenance, and biological cycles are all variables that farmers must consider separately and in terms of how they may affect each other, and it is this __________ of factors in particular that makes successful farm management so challenging.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "neglect",
+        "B": "misinterpretation",
+        "C": "resolution",
+        "D": "interplay"
+      },
+      "correctAnswer": "D",
+      "explanation": "'Interplay' refers to the mutual influence and reciprocal action between multiple factors, matching 'how they may affect each other'."
+    },
+    {
+      "id": "m2_q2",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "To maximize __________, package distribution centers employ advanced scheduling systems and strategic staging areas that allow for goods received from warehouses to be immediately transferred to trucks for delivery to their final destinations. Some centers are so efficient that even the largest delivery trucks can be filled in a matter of minutes.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "throughput",
+        "B": "staffing",
+        "C": "overhead",
+        "D": "liability"
+      },
+      "correctAnswer": "A",
+      "explanation": "'Throughput' refers to the amount of material or items passing through a system or process from input to departure."
+    },
+    {
+      "id": "m2_q3",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "Researchers have developed algorithms that take into account how various __________ influence production schedules, allowing rapid solution generation for manufacturing planning problems. The algorithms help identify efficient production schedules by processing those quantifiable inputs (e.g., demand patterns and capacity constraints) without exhaustively testing all possible scenarios.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "optimizations",
+        "B": "predictions",
+        "C": "parameters",
+        "D": "anomalies"
+      },
+      "correctAnswer": "C",
+      "explanation": "'Parameters' fits because the sentence clarifies them as 'quantifiable inputs (e.g., demand patterns and capacity constraints)'."
+    },
+    {
+      "id": "m2_q4",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Words in Context",
+      "prompt": "Marvel Girl's ability to lift modest loads with her mind is illustrative of the lackluster powers bestowed on many female superheroes, but even those with more formidable powers have been subject to unflattering portrayals that often serve as __________: as the Phoenix, Jean Grey loses control of a cosmic force and destroys an entire planet, showing the corrupting influence of power.",
+      "question": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": {
+        "A": "venerations",
+        "B": "admonitions",
+        "C": "obfuscations",
+        "D": "exonerations"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Admonitions' refers to warnings or cautionary tales, matching the cautionary depiction of 'showing the corrupting influence of power'."
+    },
+    {
+      "id": "m2_q5",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Text Structure and Purpose",
+      "prompt": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun's surface. High-resolution images show these eruptions produce thin streams of hot gas moving at speeds between 55 and 200 kilometers per second. Although these are impressive velocities, they are not sufficient to overcome the confining forces of the Sun's gravity and magnetic field, so the material is pulled back down.",
+      "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "options": {
+        "A": "It describes a natural phenomenon that is explained later in the text.",
+        "B": "It presents a research finding that challenges the view mentioned in the first sentence of the text.",
+        "C": "It acknowledges an exception to the pattern described in the first sentence of the text.",
+        "D": "It discusses a natural occurrence that leads to the consequences explained later in the text."
+      },
+      "correctAnswer": "D",
+      "explanation": "The sentence presents the eruption velocities, which lead directly to the consequence that gravity and magnetic fields pull the material back down."
+    },
+    {
+      "id": "m2_q6",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Text Structure and Purpose",
+      "prompt": "With examples ranging from Dean's Blue Hole in the Bahamas to Watling's Blue Hole near San Salvador Island, blue holes are large underwater sinkholes: pits filled with dark blue water that contrasts with lighter blue shallower waters surrounding them. The formation of blue holes typically involves several natural processes, including the dissolution of limestone or other soluble rocks. Currently, the deepest blue hole on record is the Taam Ja' Blue Hole in Chetumal Bay, Mexico, which is reported by Laura Carrillo and colleagues as extending at least 420 meters below sea level.",
+      "question": "Which choice best describes the overall structure of the text?",
+      "options": {
+        "A": "It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type.",
+        "B": "It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole.",
+        "C": "It explains how a particular sinkhole formed, evaluates that sinkhole's unusual appearance, and names a research team that is studying the sinkhole.",
+        "D": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
+      },
+      "correctAnswer": "D",
+      "explanation": "The text defines blue holes, describes their color contrast and rock-dissolution formation, and ends with details on the deepest recorded one."
+    },
+    {
+      "id": "m2_q7",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Cross-Text Connections",
+      "prompt": "Text 1\nThe wood I walk in on this mild May day, with the young yellow-brown foliage of the oaks between me and the blue sky, the white star-flowers and the blue-eyed speedwell and the ground ivy at my feet, what grove of tropic palms, what strange ferns or splendid broad-petalled blossoms, could ever thrill such deep and delicate fibres within me as this home scene?\n\nText 2\nMy feelings seem to be part of our ancient earth in the daily ecstasy of its sun-kissed life; my own consciousness seems to stream through each blade of grass, each sucking root, to rise with the sap through the trees, to break out with joyous thrills in the waving fields of corn, in the rustling palm leaves.",
+      "question": "Which choice best describes a notable difference in how the references to palm trees function in Text 1 and Text 2?",
+      "options": {
+        "A": "While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only the narrator of Text 1 suggests that the palm trees are representative of home.",
+        "B": "While palm trees form part of a series conveying the variety of the natural world in both texts, only the author of Text 2 recognizes how closely interconnected palm trees are with other plants in their environment.",
+        "C": "While the narrator of Text 1 and the author of Text 2 both discuss palm trees to suggest the value of experiencing the natural world, only the narrator of Text 1 alludes to the labor that goes into cultivating real palm trees.",
+        "D": "While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees."
+      },
+      "correctAnswer": "D",
+      "explanation": "In Text 1, palm trees are exotic and distant compared to home, whereas in Text 2, the author's own consciousness actively streams into the rustling palm leaves."
+    },
+    {
+      "id": "m2_q8",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Central Ideas and Details",
+      "prompt": "Primarily encountered by modern readers as inert written texts, the vernacular riddles of early medieval England contain 'implicit vestiges' of an interactive performance context, scholar Jill Frederick argues. Locative phrases (e.g., 'here' and 'now') scattered throughout the riddles indicate the space shared by their speakers and audiences; the common refrain 'say what I am called' invites a verbalized response; and the conflation of many of the riddles' speakers with their solutions (typically animals, objects, or natural phenomena) suggests a form of dramatic impersonation perhaps meant to entertain during public gatherings.",
+      "question": "Which choice best states the main idea of the text?",
+      "options": {
+        "A": "It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation of the locations in which they were performed is unlikely to exist.",
+        "B": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today.",
+        "C": "People of early medieval England likely found that era's vernacular riddles to be more amusing than modern readers do, given that there is substantial evidence to indicate that they are best experienced in the context of an interactive performance rather than exclusively as written texts.",
+        "D": "Scholars once assumed that the vernacular riddles of early medieval England were originally intended to be read silently, but newly uncovered historical documents corroborate Jill Frederick's assertion that they may in fact have been intended primarily for oral performance."
+      },
+      "correctAnswer": "B",
+      "explanation": "The text focuses on textual clues indicating oral and interactive community performances in contrast with how modern readers read them on paper."
+    },
+    {
+      "id": "m2_q9",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Central Ideas and Details",
+      "prompt": "In the Mexican dialect of Spanish, the consonant s is pronounced with greater tension in the tongue than it is in Castilian, the dominant dialect in Spain, resulting in a sharper sound. Margarita Hidalgo, a linguist at San Diego State University, argues that Mexican Spanish acquired this pronunciation from Nahuatl, the language of the Nahua people in Central Mexico: as the Spanish colonizers of Mexico incorporated Nahuatl words into their speech, and as more and more Nahuas spoke Spanish as a second language, the Nahuatl pronunciation of the s consonant replaced the Castilian pronunciation.",
+      "question": "Information in the text best supports which statement about the consonant s?",
+      "options": {
+        "A": "The pronunciation of this consonant is the principal difference between the Mexican and Castilian dialects of Spanish.",
+        "B": "This consonant appears in a higher percentage of Nahuatl vocabulary than of Castilian vocabulary.",
+        "C": "The pronunciation of this consonant in Nahuatl may have been affected by its pronunciation in Mexican Spanish.",
+        "D": "The pronunciation of this consonant requires greater tension in the tongue in Nahuatl than in Castilian."
+      },
+      "correctAnswer": "D",
+      "explanation": "Since Mexican Spanish acquired its sharper pronunciation (with greater tongue tension) from Nahuatl, Nahuatl itself required greater tongue tension than Castilian."
+    },
+    {
+      "id": "m2_q10",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Command of Evidence",
+      "prompt": "Cover crops, such as teff, are planted by many farmers between main growing seasons. While these crops are known for increasing biodiversity, Axel Don and his coauthor argued in a 2015 study that cover crops' role in supporting soil carbon sequestration deserves more attention. Cover crops remove carbon dioxide (CO2) from the air and convert it to organic compounds; some of these compounds are stored in the soil as soil organic carbon (SOC), which contributes to the buildup of SOC stocks over time. Based on data from numerous farm fields, Don and his coauthor concluded that cover crops contribute meaningfully to soil carbon sequestration and, if widely adopted, could significantly offset agricultural emissions of atmospheric CO2 and other greenhouse gases.",
+      "question": "Which finding, if true, would be most consistent with Don and his coauthor's conclusion?",
+      "options": {
+        "A": "Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species of cover crops.",
+        "B": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions compared with fields exposed to low levels of those emissions.",
+        "C": "SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced.",
+        "D": "SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years."
+      },
+      "correctAnswer": "D",
+      "explanation": "Finding lower soil organic carbon (SOC) in fields lacking cover crops compared to fields utilizing them directly supports the claim that cover crops meaningfully boost SOC stocks."
+    },
+    {
+      "id": "m2_q11",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Inferences",
+      "prompt": "While the brain regions most strongly associated with language tasks have some modularity in that different language tasks activate these areas to varying degrees, comprehension also invokes other areas of the brain more strongly associated with nonlinguistic functions. For example, understanding a description of a person performing physical actions might call on parts of the listener's brain associated with sensory-motor functions, whereas a highly emotive account will likely activate areas associated with affective processing. Thus, beyond the areas most strongly associated with linguistic functions, __________",
+      "question": "Which choice most logically completes the text?",
+      "options": {
+        "A": "the specific combination of brain regions involved in comprehending speech is likely contingent on the total context in which the speech is embedded.",
+        "B": "the brain regions associated with sensory-motor functions are often involved in general comprehension, even in contexts that don't involve descriptions of physical movement.",
+        "C": "the brain regions most strongly associated with affective processing activate whenever a listener believes an utterance has emotional connotations, even if the speaker did not intend those connotations.",
+        "D": "the areas of the brain that activate when processing speech will typically include areas primarily responsible for nonlinguistic functions, although the exact combination of areas may be impossible to determine."
+      },
+      "correctAnswer": "A",
+      "explanation": "Because physical topics invoke sensory-motor regions and emotional topics invoke affective regions, the specific brain areas activated depend directly on the context of what is spoken."
+    },
+    {
+      "id": "m2_q12",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Inferences",
+      "prompt": "The Clarion-Clipperton Zone (CCZ) is an expanse of abyssal plain and seamounts between Hawai'i and Mexico in which mining is permitted, but the area's biodiversity is poorly understood. The vast majority of invertebrate species found in a recent survey of the CCZ were hitherto unknown to scientists. Some species like Psychropotes dyscrita were identified both morphologically and molecularly (using DNA analysis), whereas Discantenna metallica and other species for which molecular sampling was impracticable were identified solely based on morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is __________",
+      "question": "Which choice most logically completes the text?",
+      "options": {
+        "A": "more frequently used for identifying species with physiological characteristics like those of Psychropotes dyscrita than morphological analysis is.",
+        "B": "capable of providing greater physiological detail about a species than is the method used for Discantenna metallica.",
+        "C": "better suited to distinguishing Discantenna metallica from morphologically similar species than to distinguishing Psychropotes dyscrita from morphologically similar species.",
+        "D": "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica."
+      },
+      "correctAnswer": "D",
+      "explanation": "Because molecular DNA testing does not depend on spotting minute physiological variations, it is more reliable at discerning morphologically similar species than purely visual morphological methods."
+    },
+    {
+      "id": "m2_q13",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Inferences",
+      "prompt": "Rare species advantage (RSA) describes the situation in which there are few conspecifics (other members of the same species) in an organism's immediate surroundings, enabling the organism to avoid competition with conspecifics for the same resources; RSA is widely believed to play a crucial role in maintaining ecological stability. Among tree species in tropical forest sites, there is little correlation between conspecific aggregation and the abundance of a given species, so RSA is expected; but in temperate forest sites, the aggregation-abundance correlation for tree species is strongly negative. Mathematical modeling suggests, however, that ecological niche distinction may mitigate the apparent risk to temperate ecological stability engendered by this pattern: __________",
+      "question": "Which choice most logically completes the text?",
+      "options": {
+        "A": "as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources to a greater extent than rare species can.",
+        "B": "even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they are sufficiently rare locally that they benefit from RSA more than rare tropical species do.",
+        "C": "although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.",
+        "D": "while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem, reducing the expected effect of abundance on aggregation."
+      },
+      "correctAnswer": "C",
+      "explanation": "Niche differentiation means species survive competition by occupying distinct resource niches. Thus, even with high conspecific clustering, rare species can thrive by exploiting underutilized resources."
+    },
+    {
+      "id": "m2_q14",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "A premortem is an exercise in which teams imagine their project has already failed, then brainstorm possible reasons for that failure. Despite its apparent pessimism, __________ prompting teams to proactively develop mitigation strategies during the planning stage. As a result, the project is more likely to succeed.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "effective uncovering of potential problems by the team in this activity is done early,",
+        "B": "this activity effectively uncovers potential problems early,",
+        "C": "potential problems are effectively uncovered by this activity early,",
+        "D": "teams effectively uncover potential problems early with this activity,"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Despite its apparent pessimism' modifies 'this activity'. Placing 'this activity' right after the comma resolves modifier placement."
+    },
+    {
+      "id": "m2_q15",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Form, Structure, and Sense",
+      "prompt": "The trailblazing achievements of Roger Bannister, the English track star famous for breaking the four-minute-mile barrier at Oxford's Iffley Road Track in 1954, __________ confined to the realm of athletics: Bannister also became a pioneering neurologist in the field of autonomic disorders—conditions affecting involuntary nervous system responses—and established the field's first specialized scientific journal.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "isn't",
+        "B": "hasn't been",
+        "C": "wasn't",
+        "D": "weren't"
+      },
+      "correctAnswer": "D",
+      "explanation": "The plural subject 'The trailblazing achievements' requires the plural past-tense verb 'weren't'."
+    },
+    {
+      "id": "m2_q16",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "As one of aviation's earliest female stunt performers, Gladys Ingle developed a versatile repertoire of acrobatic feats. Her specialized skills included standing on the wing of a flying aircraft and shooting a bow and arrow at a __________ maintaining perfect balance during aerial maneuvers, such as vertical loops; and even walking across the wing as an aircraft flew at full speed beneath a bridge.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "target; maintaining",
+        "B": "target maintaining",
+        "C": "target. Maintaining",
+        "D": "target, maintaining"
+      },
+      "correctAnswer": "A",
+      "explanation": "Because the items in this complex list contain internal commas (e.g., 'such as vertical loops'), semicolons must separate the items."
+    },
+    {
+      "id": "m2_q17",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Form, Structure, and Sense",
+      "prompt": "During a recent investigation, archaeologists __________ an explanation for the consistent and seemingly deliberate placement of petroglyphs (rock carvings) near water analyzed several sites on Caribbean islands. They discovered that many of the pools near petroglyphs had consistent water levels year-round, creating perfect reflecting surfaces for the carved symbols on the rocks.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "had sought",
+        "B": "sought",
+        "C": "seeking",
+        "D": "were seeking"
+      },
+      "correctAnswer": "C",
+      "explanation": "'archaeologists seeking an explanation...' creates a participial phrase modifying 'archaeologists', who then 'analyzed several sites'."
+    },
+    {
+      "id": "m2_q18",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "For his mash-up 'Smells Like Rockin' Robin,' DJ Mark Vidler layered Kurt Cobain's minor-key vocals from 'Smells Like Teen Spirit' over the Jackson 5's major-key blues progression from 'Rockin' __________ by inserting the grunge singer's vocal melody as pitch-shifted 'blue notes' over the pop-soul group's harmonic framework, creates an intensified 'bluesy' feeling and subverts the expectations of listeners familiar with either musical source.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "Robin,\" a technique that",
+        "B": "Robin.\" A technique that",
+        "C": "Robin\"; a technique that,",
+        "D": "Robin\"—a technique that,"
+      },
+      "correctAnswer": "D",
+      "explanation": "The em dash cleanly sets off the parenthetical appositive noun phrase 'a technique that...'."
+    },
+    {
+      "id": "m2_q19",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Standard English Conventions",
+      "category": "Boundaries and Clauses",
+      "prompt": "Named for the year in which it was detected by English astronomers, SN 2016aps was a supernova (the explosion of a massive __________ in the constellation Draco, 3.6 billion light-years from Earth, the transient yet powerful blast propelled particles and debris into space at extremely high speeds.",
+      "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": {
+        "A": "star). Occurring",
+        "B": "star) occurring",
+        "C": "star) and occurring",
+        "D": "star), occurring"
+      },
+      "correctAnswer": "A",
+      "explanation": "Closes the parenthetical definition and ends the first independent clause with a period. 'Occurring in the constellation...' starts a participial modifier for the next sentence."
+    },
+    {
+      "id": "m2_q20",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes (graminoids, forbs, and browse) within the diets of North American ungulates. The researchers did not perform this analysis on all such ungulates; __________, they focused exclusively on elk in Wyoming.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "for instance;",
+        "B": "in other words;",
+        "C": "regardless;",
+        "D": "however;"
+      },
+      "correctAnswer": "D",
+      "explanation": "'However;' indicates contrast between what they did not do (test all ungulates) and what they actually did (focused solely on elk)."
+    },
+    {
+      "id": "m2_q21",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "The Hornbostel-Sachs system classifies musical instruments by how they produce sound. For example, an instrument that is popular in India called the saraswati veena produces sound primarily through the vibration of its strings. __________, under the Hornbostel-Sachs system, the saraswati veena is a chordophone.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "Furthermore,",
+        "B": "Thus,",
+        "C": "Similarly,",
+        "D": "Instead,"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Thus,' indicates a logical cause-and-effect conclusion (because it produces sound via strings, it is categorized as a chordophone)."
+    },
+    {
+      "id": "m2_q22",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the Airbus A350 XWB jet, __________, helps it glide through wind with relative ease, while a boxy pickup truck encounters more wind resistance, making it less aerodynamic.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "additionally,",
+        "B": "however,",
+        "C": "for example,",
+        "D": "meanwhile,"
+      },
+      "correctAnswer": "C",
+      "explanation": "'for example,' illustrates the general rule about sleek vehicles using the specific case of the Airbus A350 jet."
+    },
+    {
+      "id": "m2_q23",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "India's prominence as a supplier of information technology services to companies in North America and Europe is a result of several factors, including the country's investments in technical education, but the most serendipitous is India's large number of English speakers. English is spoken by more people in India—129 million—than in any nation except the US. __________, only about 10% of Indians speak English.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "However, English is not the first language for most English speakers in India:",
+        "B": "Granted, this numerical advantage is due more to population size than to language penetration:",
+        "C": "As a result, careers in information technology services are not available to all people in India:",
+        "D": "Accordingly, 90% of people in India—over one billion people—do not speak the language:"
+      },
+      "correctAnswer": "B",
+      "explanation": "Conceding that the massive 129 million figure is due to total population rather than broad percentage penetration provides a logical transition to the 10% statistic."
+    },
+    {
+      "id": "m2_q24",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "On June 13, 1927, aviator Charles Lindbergh received a ticker-tape parade in New York City in recognition of his transatlantic flight. Of the 206 ticker-tape parades held between 1886 and 2022, a number were for achievements in aviation. __________, Lindbergh's parade was just one of 16 honoring pilots.",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "Therefore,",
+        "B": "Indeed,",
+        "C": "In addition,",
+        "D": "Nevertheless,"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Indeed,' emphasizes and confirms the preceding statement with concrete historical evidence (one of 16 parades)."
+    },
+    {
+      "id": "m2_q25",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Craft and Structure",
+      "category": "Transitions",
+      "prompt": "Between February 1876 and September 1876, George Eliot's novel Daniel Deronda was serialized in eight installments in Blackwood's Magazine. Scholars typically regard the serial version of Eliot's novel as less authoritative than the version later published in book form. __________, as scholar Philip Allingham notes, serialized texts were the versions in which the nineteenth-century readership first 'saw itself and its world reflected, and to which it responded, often with great emotion.'",
+      "question": "Which choice completes the text with the most logical transition?",
+      "options": {
+        "A": "Accordingly, they emphasize the appeal of the serial version for Victorian audiences;",
+        "B": "Still, the serial version is important to an understanding of the novel's historical context;",
+        "C": "Consequently, the book version of the novel is often favored over the serial version;",
+        "D": "However, others regard the serial version as a more faithful representation of Eliot's intentions;"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Still,' introduces a counterbalancing point acknowledging that despite being deemed less authoritative, the serialized text remains historically vital."
+    },
+    {
+      "id": "m2_q26",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• The Highpointers Club is a hiking club.\n• Those who achieve this are called 50 Completers.\n• One of the main goals among club members is to reach the highest points in all fifty US states.\n• In Suk Han became a 50 Completer on November 15, 2013.\n• The highest point in Wisconsin is Timms Hill, at 1,951 ft.\n• The highest point in Wyoming is Gannett Peak, at 13,809 ft.",
+      "question": "Which choice most effectively uses information from the given sentences to explain the 50 Completers hiking challenge to a new audience?",
+      "options": {
+        "A": "If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state.",
+        "B": "Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.",
+        "C": "On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming.",
+        "D": "Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin's Timms Hill but also the even higher peak of Gannett Peak in Wyoming."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B explains both what the 50 Completers challenge is (reaching highest points in all 50 states) and the association with the Highpointers Club."
+    },
+    {
+      "id": "m2_q27",
+      "stage": 2,
+      "module": 2,
+      "branch": "hard",
+      "domain": "Information and Ideas",
+      "category": "Rhetorical Synthesis",
+      "prompt": "While researching a topic, a student has taken the following notes:\n• Enhanced rock weathering (ERW) is a method of spreading crushed basalt on farmland to capture carbon dioxide (CO2) and improve soil health.\n• ERW increases crop yields and removes harmful CO2 from the air.\n• ERW offers a low-cost, low-tech alternative to expensive, energy-intensive carbon capture methods.\n• The CO2 captured by ERW becomes stable bicarbonate in water, which eventually streams into the ocean to remain safely stored for hundreds of years.\n• ERW can improve rural economies by reducing farmers' need for fertilizers and increasing their earnings from carbon credits.",
+      "question": "The student wants to explain why ERW is a superior method for capturing CO2. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": {
+        "A": "ERW improves soil health and helps farmers increase their income from selling carbon credits.",
+        "B": "ERW removes CO2 from the air in a way that is both low-cost and low-tech compared to expensive, energy-intensive alternatives.",
+        "C": "The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years.",
+        "D": "ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies."
+      },
+      "correctAnswer": "B",
+      "explanation": "Choice B explains superiority by directly contrasting ERW's low-cost, low-tech advantages against expensive, energy-intensive alternatives."
+    }
+  ]
+}

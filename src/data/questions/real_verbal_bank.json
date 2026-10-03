@@ -1,0 +1,706 @@
+[
+  {
+    "id": "rv_full_01",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "__________ the source of a malfunction in a complex electrical system can be a painstaking, time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "Adapting",
+      "B": "Isolating",
+      "C": "Incorporating",
+      "D": "Fabricating"
+    },
+    "correctAnswer": "B",
+    "explanation": "'Isolating' mang nghĩa khoanh vùng, xác định chính xác bộ phận bị lỗi."
+  },
+  {
+    "id": "rv_full_02",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they __________ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes—including salt—in response to external changes. It may be that coastal foraminifera do the same.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "counteract",
+      "B": "elude",
+      "C": "tolerate",
+      "D": "regulate"
+    },
+    "correctAnswer": "D",
+    "explanation": "'Regulate' có nghĩa là điều hòa, duy trì nồng độ muối nội bào."
+  },
+  {
+    "id": "rv_full_03",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Though most studies of the effect of altitude on blood chemistry usually concentrate on people who live above sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the __________ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Westmorland and Thermal.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "predictable",
+      "B": "innovative",
+      "C": "idealistic",
+      "D": "timeworn"
+    },
+    "correctAnswer": "B",
+    "explanation": "'Innovative' mô tả lối đi nghiên cứu mới mẻ, đột phá."
+  },
+  {
+    "id": "rv_full_04",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "While once __________, basic computer security training that only teaches recognition of obvious scams cannot provide enough protection against today's sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "uncommon",
+      "B": "superficial",
+      "C": "sufficient",
+      "D": "affordable"
+    },
+    "correctAnswer": "C",
+    "explanation": "'While once sufficient' diễn tả sự tương phản: trước đây từng đủ nhưng nay không còn đáp ứng."
+  },
+  {
+    "id": "rv_full_05",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "The National Heritage Fellowship was created to honor exceptional folk and traditional artists in the United States. One artist who received the fellowship is Mexican American rodeo tailor Manuel Cuevas. Cuevas was chosen for his lifetime __________ the arts.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "imitations of",
+      "B": "misunderstandings of",
+      "C": "contributions to",
+      "D": "doubts about"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Contributions to' (những đóng góp cho nghệ thuật suốt cuộc đời)."
+  },
+  {
+    "id": "rv_full_06",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Car manufacturers increasingly label certain vehicle components as 'lifetime' parts that supposedly never need replacement. Mechanics tend to greet such assertions __________, as ample experience has shown them that environmental factors, varied driving conditions, and intensive use will likely lead to the eventual failure of these components.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "unreasonably",
+      "B": "hastily",
+      "C": "skeptically",
+      "D": "ambivalently"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Skeptically' thể hiện thái độ hoài nghi của các thợ cơ khí trước tuyên bố của nhà sản xuất."
+  },
+  {
+    "id": "rv_full_07",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "From fountains like Crown Fountain by Jaume Plensa, found at Millennium Park, to street art like Don't Fret's mural Gift To The Class of 2016 on South Wabash Avenue, Chicago offers an array of works to __________ the tastes of art lovers.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "mitigate",
+      "B": "venerate",
+      "C": "satiate",
+      "D": "supplant"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Satiate' nghĩa là thỏa mãn, làm no nê sở thích thưởng lãm của giới yêu nghệ thuật."
+  },
+  {
+    "id": "rv_full_08",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "The following text is from Jacqueline Woodson's 2018 novel Harbor Me.\n\nI've pulled the voice recorder from my closet and have it sitting on the middle of my bed now. When I press play, Esteban's voice fills my room.",
+    "question": "As used in the text, what does the word 'pulled' most nearly mean?",
+    "options": {
+      "A": "Developed",
+      "B": "Attracted",
+      "C": "Startled",
+      "D": "Taken"
+    },
+    "correctAnswer": "D",
+    "explanation": "'Pulled' trong văn cảnh lấy chiếc máy ghi âm ra khỏi tủ đồ đồng nghĩa với 'taken'."
+  },
+  {
+    "id": "rv_full_09",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Nancy Bird-Walton, who was an aviation pioneer, undoubtedly accomplished much, but to gain a lasting place in our historical memory, there is little that can __________ being the first to do something. For example, people will always remember that Amelia Earhart was the first woman to fly solo across the Atlantic Ocean.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "overreach by",
+      "B": "constrain within",
+      "C": "prevail over",
+      "D": "fluctuate with"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Prevail over' mang nghĩa vượt trội hơn, đánh bại được vị thế của việc là người tiên phong đầu tiên."
+  },
+  {
+    "id": "rv_full_10",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "The following text is adapted from John Matheus's 1925 short story 'Fog.'\n\nThe fog extended its tentacles over city and river, gradually obliterating traces of familiar landscapes. At five-thirty the old Panhandle bridge, supported by massive sandstone pillars, stalwart, had become a spectral outline against the sky.",
+    "question": "As used in the text, what does the word 'traces' most nearly mean?",
+    "options": {
+      "A": "Indications",
+      "B": "Debris",
+      "C": "Copies",
+      "D": "Recollections"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Traces' đồng nghĩa với 'indications' (dấu vết, dấu hiệu nhận biết của cảnh quan)."
+  },
+  {
+    "id": "rv_full_11",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "The architectural firm's design for the new municipal library was deliberately __________; by rejecting ornate embellishments in favor of clean lines and unadorned surfaces, the architects prioritized utility and simplicity over grandeur.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "austere",
+      "B": "capricious",
+      "C": "ostentatious",
+      "D": "convoluted"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Austere' (tối giản, mộc mạc) thể hiện việc từ chối trang trí cầu kỳ rườm rà."
+  },
+  {
+    "id": "rv_full_12",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Weather patterns, market trends, input costs, labor availability, equipment maintenance, and biological cycles are all variables that farmers must consider separately and in terms of how they may affect each other, and it is this __________ of factors in particular that makes successful farm management so challenging.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "neglect",
+      "B": "misinterpretation",
+      "C": "resolution",
+      "D": "interplay"
+    },
+    "correctAnswer": "D",
+    "explanation": "'Interplay' là sự tương tác qua lại mật thiết giữa nhiều yếu tố biến số."
+  },
+  {
+    "id": "rv_full_13",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "To maximize __________, package distribution centers employ advanced scheduling systems and strategic staging areas that allow for goods received from warehouses to be immediately transferred to trucks for delivery to their final destinations. Some centers are so efficient that even the largest delivery trucks can be filled in a matter of minutes.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "throughput",
+      "B": "staffing",
+      "C": "overhead",
+      "D": "liability"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Throughput' biểu thị lưu lượng hàng hóa trung chuyển qua hệ thống kho bãi."
+  },
+  {
+    "id": "rv_full_14",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Researchers have developed algorithms that take into account how various __________ influence production schedules, allowing rapid solution generation for manufacturing planning problems. The algorithms help identify efficient production schedules by processing those quantifiable inputs (e.g., demand patterns and capacity constraints) without exhaustively testing all possible scenarios.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "optimizations",
+      "B": "predictions",
+      "C": "parameters",
+      "D": "anomalies"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Parameters' (các tham số/đầu vào định lượng như nhu cầu và giới hạn công suất)."
+  },
+  {
+    "id": "rv_full_15",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Words in Context",
+    "prompt": "Marvel Girl's ability to lift modest loads with her mind is illustrative of the lackluster powers bestowed on many female superheroes, but even those with more formidable powers have been subject to unflattering portrayals that often serve as __________: as the Phoenix, Jean Grey loses control of a cosmic force and destroys an entire planet, showing the corrupting influence of power.",
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "options": {
+      "A": "venerations",
+      "B": "admonitions",
+      "C": "obfuscations",
+      "D": "exonerations"
+    },
+    "correctAnswer": "B",
+    "explanation": "'Admonitions' (những lời răn dạy, cảnh báo về sự tha hóa của quyền lực quá lớn)."
+  },
+  {
+    "id": "rv_full_16",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Text Structure and Purpose",
+    "prompt": "What is a city? The answer depends on where you live! Many countries define an area as a city based on how many people live there. However, not every country uses the same numbers. Iceland defines a city as an area with a population of at least 200, while the Netherlands defines a city as having a minimum population of 20,000. Some countries even define cities using other factors, like if there is a local government.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It lists the number of cities in one country, then compares that number to the number of cities in another country.",
+      "B": "It poses a question, then explains why the question has many answers.",
+      "C": "It offers a recommendation, then provides reasons for that recommendation.",
+      "D": "It describes two locations, then explains why only one of the locations is considered a city."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn nêu một câu hỏi định nghĩa và đưa ra các câu trả lời khác biệt giữa các quốc gia."
+  },
+  {
+    "id": "rv_full_17",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Text Structure and Purpose",
+    "prompt": "Modern forestry offers diverse career opportunities that integrate scientific knowledge with hands-on environmental work. Arborists assess tree health and perform maintenance such as pruning to promote safety and prevent problems. Forestry technicians collect data on growth patterns and biodiversity in the wild. Forest ecologists conduct field research and analyze ecosystems to understand how forests respond to changes in weather patterns. With this blend of scientific understanding and practical application, forestry professionals address a variety of complex environmental challenges.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To explain technological advances in modern forestry and demonstrate how they've transformed traditional practices",
+      "B": "To analyze environmental challenges facing forests and describe how modern professionals address these problems",
+      "C": "To compare career opportunities in modern forestry and explain which positions offer the best job security",
+      "D": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn nêu bật các cơ hội việc làm kết hợp kiến thức khoa học và ứng dụng thực tiễn."
+  },
+  {
+    "id": "rv_full_18",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Text Structure and Purpose",
+    "prompt": "Ethicist Ingrid Robeyns argues in her work that taxes on the very wealthy should be increased so that governments will be enabled to solve problems of collective action, such as mitigating climate change. Robeyns cites the work of economist Mariana Mazzucato, who shows that government subsidies are a more effective engine of innovation than private sector investments; in addition, government-funded innovations tend to lead to further developments in disparate fields (such as the United States mission to land a person on the Moon, which accelerated developments in nutrition as well as communications).",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It summarizes the research of one scholar, then presents a study by another scholar that was inspired by the findings of that research.",
+      "B": "It introduces a proposition by a scholar, then describes that scholar's use of findings by another scholar to support that proposition.",
+      "C": "It details the findings of a research project by one scholar, then puts forward the suggestions of another scholar for further investigation.",
+      "D": "It offers a claim by a scholar, then uses the results of a project by another scholar to show why that claim should be rejected."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn nêu luận điểm của Robeyns rồi dẫn nghiên cứu của Mazzucato để củng cố lập luận đó."
+  },
+  {
+    "id": "rv_full_19",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Text Structure and Purpose",
+    "prompt": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun's surface. High-resolution images show these eruptions produce thin streams of hot gas moving at speeds between 55 and 200 kilometers per second. Although these are impressive velocities, they are not sufficient to overcome the confining forces of the Sun's gravity and magnetic field, so the material is pulled back down.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "options": {
+      "A": "It describes a natural phenomenon that is explained later in the text.",
+      "B": "It presents a research finding that challenges the view mentioned in the first sentence of the text.",
+      "C": "It acknowledges an exception to the pattern described in the first sentence of the text.",
+      "D": "It discusses a natural occurrence that leads to the consequences explained later in the text."
+    },
+    "correctAnswer": "D",
+    "explanation": "Câu gạch chân nêu vận tốc của luồng khí, dẫn tới hệ quả bị lực hấp dẫn kéo trở lại bề mặt Mặt Trời."
+  },
+  {
+    "id": "rv_full_20",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Text Structure and Purpose",
+    "prompt": "With examples ranging from Dean's Blue Hole in the Bahamas to Watling's Blue Hole near San Salvador Island, blue holes are large underwater sinkholes: pits filled with dark blue water that contrasts with lighter blue shallower waters surrounding them. The formation of blue holes typically involves several natural processes, including the dissolution of limestone or other soluble rocks. Currently, the deepest blue hole on record is the Taam Ja' Blue Hole in Chetumal Bay, Mexico, which is reported by Laura Carrillo and colleagues as extending at least 420 meters below sea level.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type.",
+      "B": "It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole.",
+      "C": "It explains how a particular sinkhole formed, evaluates that sinkhole's unusual appearance, and names a research team that is studying the sinkhole.",
+      "D": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
+    },
+    "correctAnswer": "D",
+    "explanation": "Định nghĩa hố xanh (blue hole), miêu tả cấu tạo/hình thức và cung cấp thông tin về hố sâu nhất từng ghi nhận."
+  },
+  {
+    "id": "rv_full_21",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Cross-Text Connections",
+    "prompt": "Text 1\nThe novels of Henry James changed stylistically starting in 1902, becoming more demanding and featuring a much more measured pace than his earlier works. This places a burden on readers that they may not be prepared for: James's late novels are some of the best he wrote, but they are not for everyone.\n\nText 2\nThe films of Martin Scorsese released starting in 2016 have the same place in his filmography that the late novels of Henry James have in his bibliography. Both are works by proven masters—James had published The American (1877); Scorsese had directed Taxi Driver (1976)—who began to make demanding works, such as James's The Ambassadors (1903) and Scorsese's Silence (2016), that ask more of their audiences than their earlier works do but give more in return.",
+    "question": "Based on the texts, how would the author of Text 2 most likely respond to the underlined claim in Text 1?",
+    "options": {
+      "A": "By asserting that both James and Scorsese ought to be considered masters of their chosen art forms",
+      "B": "By conceding that James's The American is a superior novel to The Ambassadors",
+      "C": "By arguing that James's novels cannot be fully understood without also considering Scorsese's films",
+      "D": "By agreeing that James's late novels are excellent but can be challenging for their readers"
+    },
+    "correctAnswer": "D",
+    "explanation": "Tác giả Text 2 đồng tình rằng các tác phẩm giai đoạn sau đòi hỏi nhiều hơn ở độc giả/khán giả nhưng mang lại giá trị lớn lao."
+  },
+  {
+    "id": "rv_full_22",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Central Ideas and Details",
+    "prompt": "The following text is from Hilda Eunice Burgos's 2018 novel Ana María Reyes Does Not Live in a Castle. The narrator is in sixth grade.\n\nThe next day I went to my piano lesson, as I did every Tuesday after school. My piano teacher, Doña Dulce Sánchez, lived two blocks from my school, in the opposite direction from my house.",
+    "question": "According to the text, where did the narrator's piano teacher live?",
+    "options": {
+      "A": "Near the center of town",
+      "B": "Two blocks from the narrator's school",
+      "C": "Across the street from the narrator's home",
+      "D": "One block from the narrator's home"
+    },
+    "correctAnswer": "B",
+    "explanation": "Văn bản nêu rõ ràng: 'lived two blocks from my school'."
+  },
+  {
+    "id": "rv_full_23",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Central Ideas and Details",
+    "prompt": "Emulsification is a process that creates a uniform mixture that includes two ingredients that do not combine on their own, such as oil and water. For this process to happen, a third ingredient, an emulsifier, must be combined with the other two. Carrageenan, a substance extracted from red seaweed, is a common emulsifier: it helps to create a smooth texture in condensed milk that makes it more pleasant to drink.",
+    "question": "According to the text, what result is associated with carrageenan?",
+    "options": {
+      "A": "It helps ensure that condensed milk has a smooth texture.",
+      "B": "It prolongs the time it takes for ingredients to mix together during the making of condensed milk.",
+      "C": "It decreases the amount of one ingredient in condensed milk while increasing the amount of another.",
+      "D": "It assists in the evaporation of water during the making of condensed milk."
+    },
+    "correctAnswer": "A",
+    "explanation": "Carrageenan giúp tạo độ sánh mịn (smooth texture) cho sữa đặc."
+  },
+  {
+    "id": "rv_full_24",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Central Ideas and Details",
+    "prompt": "Biologist Nathalie Stroeymeyt and her team found that black garden ants demonstrated a sophisticated form of 'architectural immunity.' When confronted with fungal pathogens, these ants modified their excavation patterns in several strategic ways to speed up nest growth, increase spacing between entrances, and reduce the centrality of key chambers (containing the queen, food, or nursery). The team noted that these architectural modifications weren't random but specifically arranged to minimize fungal spread.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "A team of scientists noticed that fungal pathogen exposure causes black garden ants to abandon their existing nest structures.",
+      "B": "According to a team of biologists, black garden ants build larger nests when exposed to a harmful fungus than they otherwise would build.",
+      "C": "A study found that black garden ants deliberately modify their nest architecture to keep a harmful fungus from spreading.",
+      "D": "A study noted that black garden ants exposed to a harmful fungus tend to dig longer tunnels in their nests instead of reducing the centrality of the nest's chambers."
+    },
+    "correctAnswer": "C",
+    "explanation": "Kiến vườn đen chủ động thay đổi kiến trúc tổ để ngăn chặn nấm bệnh phát tán lan rộng."
+  },
+  {
+    "id": "rv_full_25",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Command of Evidence",
+    "prompt": "Peter Pan is a 1911 novel by J.M. Barrie. In the fantasy novel, a young boy named Peter lives on a mythical island. The narrator indicates that Peter does not know that pretend things are not real:",
+    "question": "Which quotation about Peter from Peter Pan best supports the claim?",
+    "options": {
+      "A": "\"He boasted that he had gone walking for the good of his health.\"",
+      "B": "\"He had fallen at once into a dreamless sleep.\"",
+      "C": "\"In his absence things are usually quiet on the island.\"",
+      "D": "\"To him make-believe and true were exactly the same thing.\""
+    },
+    "correctAnswer": "D",
+    "explanation": "'To him make-believe and true were exactly the same thing' chứng minh Peter coi chuyện giả vờ và sự thật là một."
+  },
+  {
+    "id": "rv_full_26",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Command of Evidence",
+    "prompt": "Home Video Game Systems of the 1970s and 1980s\n\n| System | Manufacturer | Approximate number of units sold worldwide |\n| :--- | :--- | :--- |\n| Apple II | Apple Inc. | 4,487,000 |\n| Amstrad CPC | Amstrad | 2,000,000 |\n| Game & Watch | Nintendo | 18,600,000 |\n| Intellivision | Mattel | 3,000,000 |\n\nA student is researching the Amstrad CPC and other important gaming systems that were part of the global rise of the home video game industry during the 1970s and 1980s. The student is surprised to find that the Amstrad CPC sold relatively few units worldwide, with only about __________",
+    "question": "Which choice most effectively uses data from the table to complete the statement?",
+    "options": {
+      "A": "2,000,000 units sold compared to the approximately 18,600,000 units sold of the Game & Watch.",
+      "B": "3,000,000 units sold compared to the approximately 4,487,000 units sold of the Game & Watch.",
+      "C": "2,000,000 units sold compared to the approximately 18,600,000 units sold of the Intellivision.",
+      "D": "3,000,000 units sold compared to the approximately 4,487,000 units sold of the Apple II."
+    },
+    "correctAnswer": "A",
+    "explanation": "Amstrad CPC bán được khoảng 2,000,000 máy so với 18,600,000 máy của Game & Watch."
+  },
+  {
+    "id": "rv_full_27",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Inferences",
+    "prompt": "Brittle stars are sea animals that move along the ocean floor using their five arms. Unlike most animals, brittle stars have 70%–80% of their weight in their arms. To better understand the benefits of this unusual design, scientists built a soft robot inspired by the brittle star's body structure. The robot has a middle disk and five arms whose weights can be changed. When the scientists made the arms heavier, the arms pressed down more firmly on the ground. This stronger grip kept the arms from slipping and allowed the robot to move more steadily across the ocean floor. Based on these results, the scientists hypothesize that __________",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "brittle stars have most of the weight in their arms because that is where they store nutrients.",
+      "B": "brittle stars have most of their weight in their arms so they can scare off predators.",
+      "C": "having most of their weight in their arms allows brittle stars to climb steep underwater cliffs.",
+      "D": "having most of their weight in their arms helps brittle stars move across the ocean floor."
+    },
+    "correctAnswer": "D",
+    "explanation": "Cánh tay nặng hơn tạo độ bám vững chắc, giúp sao biển di chuyển ổn định trên đáy đại dương."
+  },
+  {
+    "id": "rv_full_28",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Inferences",
+    "prompt": "The state of Maine has classified the smallmouth bass as an invasive species that could harm some of the state's native species. But researchers Alejandro Camacho and Jason McLachlan have pointed out that Earth's climate is changing in ways that challenge such classifications. Climate changes may force animals from their current ranges. Climate changes may also create good habitats in areas where a species couldn't live previously. These observations suggest that __________",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "Maine was previously home to some smallmouth bass but they were outcompeted by invading species.",
+      "B": "it's useful at present for Maine to distinguish between invasive and native species in some instances but not in the case of the smallmouth bass.",
+      "C": "labels like the one that Maine has applied to the smallmouth bass reflect environmental conditions that may not persist.",
+      "D": "even if Earth's climate doesn't change in the way scientists predict, the smallmouth bass will likely establish itself in Maine."
+    },
+    "correctAnswer": "C",
+    "explanation": "Biến đổi khí hậu khiến ranh giới phân bố loài thay đổi, nên các nhãn phân loại 'xâm lấn' phản ánh điều kiện có thể sẽ không còn duy trì mãi."
+  },
+  {
+    "id": "rv_full_29",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Boundaries and Clauses",
+    "prompt": "In the tapestries Blessing of Rain and Intended Vermillion, Diné textile artist D.Y. Begay uses __________ from cochineal insects from Peru as well as local hollyhocks, coreopsis, and chamisa plants gathered from her Tsélání homeland in Arizona.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "reds, greens,",
+      "B": "reds greens,",
+      "C": "reds greens",
+      "D": "reds; greens,"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dấu phẩy phân tách các thành phần liệt kê song song trong chuỗi 'reds, greens, and yellows'."
+  },
+  {
+    "id": "rv_full_30",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Form, Structure, and Sense",
+    "prompt": "Although Spanish artist Pablo Picasso (1881–1973) is famous mainly for his paintings, he worked in other art forms as well. Picasso __________ experimenting with sculpture as a young man and eventually created hundreds of innovative pieces, many of which he kept in his home.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "having begun",
+      "B": "began",
+      "C": "beginning",
+      "D": "to begin"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mệnh đề chính cần một vị ngữ chia ở thì quá khứ đơn: 'Picasso began experimenting... and eventually created'."
+  },
+  {
+    "id": "rv_full_31",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Boundaries and Clauses",
+    "prompt": "Colonial American newspapers played an important role in protesting British taxes, such as those resulting from the Stamp Act in 1765. Publisher William Rind showed his opposition by printing skull and crossbones symbols __________ the front page of his newspaper, the Maryland Gazette, where tax stamps would normally go.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "on:",
+      "B": "on,",
+      "C": "on: ",
+      "D": "on"
+    },
+    "correctAnswer": "D",
+    "explanation": "Giới từ 'on' nối liền mạch với bổ ngữ chỉ vị trí 'the front page', không cần dấu ngắt câu."
+  },
+  {
+    "id": "rv_full_32",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Boundaries and Clauses",
+    "prompt": "Rock carvings found on islands around the lower Susquehanna River in Maryland repeatedly feature the same stylized face. Experts are divided on whether the face represents the head of a __________ a human, or a mythical figure.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "fish: a serpent",
+      "B": "fish. A serpent,",
+      "C": "fish a serpent,",
+      "D": "fish, a serpent,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dấu phẩy phân tách các danh từ trong danh sách liệt kê lựa chọn."
+  },
+  {
+    "id": "rv_full_33",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Form, Structure, and Sense",
+    "prompt": "In ancient China, the art of miniaturizing trees in containers was called 'penjing.' This term, which means 'potted scenery,' __________ in China.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "to still use",
+      "B": "still being used",
+      "C": "is still used",
+      "D": "still used"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mệnh đề chính cần động từ bị động ở hiện tại: 'This term... is still used in China'."
+  },
+  {
+    "id": "rv_full_34",
+    "section": "Reading & Writing",
+    "domain": "Standard English Conventions",
+    "category": "Form, Structure, and Sense",
+    "prompt": "A recent study by biologists Brandi Pessman and Eileen Hebets at the University of Nebraska-Lincoln found that in noisy environments, some funnel-weaving spiders built webs that amplified the sound of incoming vibrations at a particular frequency, allowing the spiders 'to better hear certain signals above the noise,' according to Pessman.",
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": {
+      "A": "had been conducted",
+      "B": "is conducted",
+      "C": "conducted",
+      "D": "was conducted"
+    },
+    "correctAnswer": "C",
+    "explanation": "Rút gọn mệnh đề quan hệ dạng quá khứ phân từ: 'A recent study... conducted by biologists'."
+  },
+  {
+    "id": "rv_full_35",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Transitions",
+    "prompt": "Many cities invest in public art, displaying works in locations where they can be enjoyed by anyone. On display in Charlotte, North Carolina, __________, is a sculpture with rotating steel layers that align to form a human head.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "however,",
+      "B": "nevertheless,",
+      "C": "for instance,",
+      "D": "finally,"
+    },
+    "correctAnswer": "C",
+    "explanation": "'For instance' đưa ra ví dụ cụ thể về tác phẩm nghệ thuật công cộng ở Charlotte."
+  },
+  {
+    "id": "rv_full_36",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Transitions",
+    "prompt": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes (graminoids, forbs, and browse) within the diets of North American ungulates. The researchers did not perform this analysis on all such ungulates; __________, they focused exclusively on elk in Wyoming.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "in other words;",
+      "B": "regardless;",
+      "C": "for instance;",
+      "D": "however;"
+    },
+    "correctAnswer": "D",
+    "explanation": "'However;' thể hiện sự tương phản giữa việc không phân tích tất cả và việc tập trung duy nhất vào loài nai sừng tấm."
+  },
+  {
+    "id": "rv_full_37",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Transitions",
+    "prompt": "Lalo Schifrin, an Argentine American composer and pianist who wrote and recorded a number of jazz albums with trumpeter Dizzy Gillespie in the 1960s, also composed music for many films and television shows. Schifrin's most iconic work, the theme for the 1966 TV show Mission: Impossible, uses a jazz-inspired 5/4 time signature.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "Conversely,",
+      "B": "In other words,",
+      "C": "Fittingly,",
+      "D": "Actually,"
+    },
+    "correctAnswer": "C",
+    "explanation": "'Fittingly' (thật phù hợp/thật tương xứng) nối kết giữa nền tảng jazz của tác giả với tác phẩm nhạc phim mang nhịp 5/4 phong cách jazz."
+  },
+  {
+    "id": "rv_full_38",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Transitions",
+    "prompt": "In Angola, the National Assembly is elected via a proportional representation (PR) system. In PR elections, votes are cast (not for specific candidates, as they are in single-member plurality systems, but for political parties) and then tabulated; __________, each qualifying party is awarded a number of seats proportional to the number of votes it received.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "accordingly,",
+      "B": "by contrast,",
+      "C": "second of all,",
+      "D": "in fact,"
+    },
+    "correctAnswer": "A",
+    "explanation": "'Accordingly' chỉ kết quả tất yếu theo quy định của hệ thống bầu cử đại diện tỷ lệ."
+  },
+  {
+    "id": "rv_full_39",
+    "section": "Reading & Writing",
+    "domain": "Craft and Structure",
+    "category": "Transitions",
+    "prompt": "One might assume that the Netherlands' Gemini offshore wind farm produces the same amount of energy as land-based wind farms of a similar size. __________, because wind speeds over open water are generally higher than those over land, Gemini's turbines turn faster and produce more energy than do most land farms' turbines.",
+    "question": "Which choice completes the text with the most logical transition?",
+    "options": {
+      "A": "Finally,",
+      "B": "Therefore,",
+      "C": "For example,",
+      "D": "Actually,"
+    },
+    "correctAnswer": "D",
+    "explanation": "'Actually' bác bỏ giả định sai lầm ban đầu để đưa ra thực tế trang trại gió ngoài khơi tạo nhiều năng lượng hơn."
+  },
+  {
+    "id": "rv_full_40",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Rhetorical Synthesis",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• The Highpointers Club is a hiking club.\n• Those who achieve this are called 50 Completers.\n• One of the main goals among club members is to reach the highest points in all fifty US states.\n• In Suk Han became a 50 Completer on November 15, 2013.\n• The highest point in Wisconsin is Timms Hill, at 1,951 ft.\n• The highest point in Wyoming is Gannett Peak, at 13,809 ft.",
+    "question": "Which choice most effectively uses information from the given sentences to explain the 50 Completers hiking challenge to a new audience?",
+    "options": {
+      "A": "If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state.",
+      "B": "Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.",
+      "C": "On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming.",
+      "D": "Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin's Timms Hill but also the even higher peak of Gannett Peak in Wyoming."
+    },
+    "correctAnswer": "B",
+    "explanation": "Phương án B giải thích hoàn chỉnh thử thách 50 Completers là gì và gắn liền với câu lạc bộ nào."
+  },
+  {
+    "id": "rv_full_41",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Rhetorical Synthesis",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Cinematographers work with cameras and lighting.\n• They help translate film directors' ideas into visual images.\n• Passengers (2016) was directed by Morten Tyldum.\n• Rodrigo Prieto was the film's cinematographer.",
+    "question": "Which choice most effectively uses information from the given sentences to provide an example of a film Prieto worked on?",
+    "options": {
+      "A": "One example of Rodrigo Prieto's work as a cinematographer is the 2016 film Passengers.",
+      "B": "As cinematographer, Rodrigo Prieto works with cameras and lighting to translate the film director's ideas into visual images.",
+      "C": "Cinematographer Rodrigo Prieto and director Morten Tyldum have worked together.",
+      "D": "In filmmaking, directors work with others to translate their ideas into the visual images that we encounter on the screen."
+    },
+    "correctAnswer": "A",
+    "explanation": "Phương án A cung cấp trực tiếp ví dụ cụ thể về bộ phim mà Prieto từng làm đạo diễn hình ảnh."
+  },
+  {
+    "id": "rv_full_42",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Rhetorical Synthesis",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Waiting is a 1987 black-and-white linocut print by Kuwaiti artist Thuraya Al-Baqsami.\n• It depicts a tranquil, everyday scene (a woman in a headscarf gazing out a window).\n• ¡Sera toda nuestra! ('It will all be ours!') is a 1977 color linocut print by Mexican American artist Carlos Cortéz.\n• It features a scene with an explicitly political point of view (a group of laborers preparing to go on strike).\n• Relief printing is a technique in which an image is carved onto a printing block, covered in ink or paint, and stamped onto paper.\n• Lino cutting is a type of relief printing that uses linoleum tile as the printing block.",
+    "question": "The student wants to contrast the subject matter of the two prints. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "Cortéz made ¡Sera toda nuestra! ('It will all be ours!') in 1977, while Al-Baqsami made Waiting later, in 1987.",
+      "B": "The scenes depicted in both works were first carved onto a printing block, then stamped onto paper; however, one work is a linocut, while the other is a relief print.",
+      "C": "Cortéz's print expresses an explicitly political point of view, while Al-Baqsami's depicts a tranquil, everyday scene.",
+      "D": "The print by Cortéz is a color linocut; by contrast, Al-Baqsami's is a relief print."
+    },
+    "correctAnswer": "C",
+    "explanation": "Phương án C tương phản trực diện đề tài và góc nhìn thể hiện của hai bức tranh in."
+  },
+  {
+    "id": "rv_full_43",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Rhetorical Synthesis",
+    "prompt": "While researching asteroid 16 Psyche, a student gathered the following notes:\n• Asteroid 16 Psyche orbits the Sun within the main asteroid belt between Mars and Jupiter.\n• The majority of known asteroids are composed primarily of rocky silicate minerals, ice, or carbonaceous matter.\n• Psyche is exceptionally dense and consists almost entirely of metallic iron and nickel.\n• Scientists hypothesize that Psyche may be the exposed metallic core of an early protoplanet.",
+    "question": "The student wants to emphasize the unique composition of asteroid 16 Psyche compared to other asteroids. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "Orbiting between Mars and Jupiter, asteroid 16 Psyche was the target of an exploratory mission launched by NASA.",
+      "B": "Unlike typical asteroids composed mainly of silicates, ice, or carbon, 16 Psyche consists almost entirely of metallic iron and nickel.",
+      "C": "Most asteroids in the main belt contain rocky silicates, though scientists study multiple compositions to investigate planetary formation.",
+      "D": "Scientists hypothesize that Psyche may represent the exposed core of an early protoplanet due to its high density."
+    },
+    "correctAnswer": "B",
+    "explanation": "Phương án B nhấn mạnh thành phần kim loại sắt và niken khác biệt hoàn toàn với thành phần silicat thông thường của các tiểu hành tinh khác."
+  },
+  {
+    "id": "rv_full_44",
+    "section": "Reading & Writing",
+    "domain": "Information and Ideas",
+    "category": "Rhetorical Synthesis",
+    "prompt": "While researching a topic, a student has taken the following notes:\n• Enhanced rock weathering (ERW) is a method of spreading crushed basalt on farmland to capture carbon dioxide (CO2) and improve soil health.\n• ERW increases crop yields and removes harmful CO2 from the air.\n• ERW offers a low-cost, low-tech alternative to expensive, energy-intensive carbon capture methods.\n• The CO2 captured by ERW becomes stable bicarbonate in soil water, which eventually streams into the ocean to remain safely stored for hundreds of years.\n• ERW can improve rural economies by reducing farmers' need for fertilizers and increasing their earnings from carbon credits.",
+    "question": "The student wants to explain why ERW is a superior method for capturing CO2. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "options": {
+      "A": "ERW improves soil health and helps farmers increase their income from selling carbon credits.",
+      "B": "ERW removes CO2 from the air in a way that is both low-cost and low-tech compared to expensive, energy-intensive alternatives.",
+      "C": "The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years.",
+      "D": "ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies."
+    },
+    "correctAnswer": "B",
+    "explanation": "Phương án B giải thích tính ưu việt của phương pháp ERW (chi phí thấp, công nghệ đơn giản hơn nhiều so với các phương pháp tiêu tốn năng lượng đắt đỏ)."
+  }
+]

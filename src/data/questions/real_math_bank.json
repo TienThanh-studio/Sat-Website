@@ -1,0 +1,425 @@
+[
+  {
+    "id": "rm_full_01",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Functions",
+    "isGridIn": false,
+    "prompt": "The function $h$ is defined by $h(x) = 100x - 50$. What is the value of $h(x)$ when $x = 6$?",
+    "question": "Which choice gives the correct value?",
+    "options": {
+      "A": "56",
+      "B": "156",
+      "C": "550",
+      "D": "650"
+    },
+    "correctAnswer": "C",
+    "explanation": "$h(6) = 100(6) - 50 = 600 - 50 = 550$."
+  },
+  {
+    "id": "rm_full_02",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations in Real Context",
+    "isGridIn": false,
+    "prompt": "The graph shown gives the estimated value, in dollars, of a mountain bike as a function of the number of months since it was purchased. The line has a y-intercept at $(0, 275)$ and passes through $(24, 150)$.",
+    "question": "What is the best interpretation of the y-intercept of the graph in this context?",
+    "options": {
+      "A": "The estimated value of the bike was $275 when it was purchased.",
+      "B": "The estimated value of the bike 24 months after it was purchased was $275.",
+      "C": "The estimated value of the bike had decreased by $275 in the 24 months after it was purchased.",
+      "D": "The estimated value of the bike decreased by approximately 2.75% each year after it was purchased."
+    },
+    "correctAnswer": "A",
+    "explanation": "Điểm cắt trục tung tại $x = 0$ biểu thị giá trị của xe đạp tại thời điểm vừa mới mua là $275."
+  },
+  {
+    "id": "rm_full_03",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Percentages",
+    "isGridIn": true,
+    "prompt": "Out of 200 attempts, 55% were successful.",
+    "question": "How many of these attempts were successful?",
+    "options": {},
+    "correctAnswer": "110",
+    "explanation": "$200 \\times 0.55 = 110$."
+  },
+  {
+    "id": "rm_full_04",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Equivalent Expressions",
+    "isGridIn": false,
+    "prompt": "Which expression is equivalent to $29x^2 + 29$?",
+    "question": "Select the correct option:",
+    "options": {
+      "A": "29(x^2 + 1)",
+      "B": "29(x^2 + 29)",
+      "C": "29(29x^2 + 1)",
+      "D": "29(x^2 + 1/29)"
+    },
+    "correctAnswer": "A",
+    "explanation": "$29x^2 + 29 = 29(x^2 + 1)$."
+  },
+  {
+    "id": "rm_full_05",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations",
+    "isGridIn": false,
+    "prompt": "If $2(x - 3) = (2)(90)$, what is the value of $x - 3$?",
+    "question": "Which choice is the correct value?",
+    "options": {
+      "A": "30",
+      "B": "60",
+      "C": "90",
+      "D": "180"
+    },
+    "correctAnswer": "C",
+    "explanation": "Chia cả hai vế cho 2 ta được $x - 3 = 90$."
+  },
+  {
+    "id": "rm_full_06",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Rates and Units",
+    "isGridIn": false,
+    "prompt": "A commercial water pump drains water from a reservoir at a constant rate of 180 gallons per minute.",
+    "question": "At this rate, how many hours will it take to drain 32,400 gallons of water?",
+    "options": {
+      "A": "2.5",
+      "B": "3.0",
+      "C": "3.5",
+      "D": "4.0"
+    },
+    "correctAnswer": "B",
+    "explanation": "Thời gian $= 32,400 / 180 = 180$ phút $= 3.0$ giờ."
+  },
+  {
+    "id": "rm_full_07",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations in Real Context",
+    "isGridIn": true,
+    "prompt": "A store sells two different-sized bottles of a certain shampoo. The store's sales of this shampoo totaled 902.07 dollars last month. The equation $4.57x + 6.08y = 902.07$ represents this situation, where $x$ is the number of smaller bottles sold and $y$ is the number of larger bottles sold.",
+    "question": "According to the equation, what is the price, in dollars, of each smaller bottle?",
+    "options": {},
+    "correctAnswer": "4.57",
+    "explanation": "Đơn giá của chai nhỏ là hệ số đứng trước $x$: 4.57 đô la."
+  },
+  {
+    "id": "rm_full_08",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Similar Triangles",
+    "isGridIn": false,
+    "prompt": "Triangle ABC is similar to triangle XYZ, where A, B, and C correspond to X, Y, and Z, respectively. In triangle ABC, the length of segment AB is 180 and the length of segment BC is 900. In triangle XYZ, the length of segment YZ is 80.",
+    "question": "What is the length of segment XY?",
+    "options": {
+      "A": "288",
+      "B": "196",
+      "C": "80",
+      "D": "16"
+    },
+    "correctAnswer": "D",
+    "explanation": "Tỷ số đồng dạng: $AB / BC = XY / YZ \\Rightarrow 180 / 900 = XY / 80 \\Rightarrow XY = 16$."
+  },
+  {
+    "id": "rm_full_09",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Absolute Value Equations",
+    "isGridIn": false,
+    "prompt": "$$|x| - 43 = 0$$",
+    "question": "Which value is a solution to the given equation?",
+    "options": {
+      "A": "1/43",
+      "B": "0",
+      "C": "-1/43",
+      "D": "-43"
+    },
+    "correctAnswer": "D",
+    "explanation": "$|x| = 43 \\Rightarrow x = -43$ hoặc $x = 43$."
+  },
+  {
+    "id": "rm_full_10",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations from Points",
+    "isGridIn": false,
+    "prompt": "In the xy-plane, line $k$ passes through the points $(0, -8)$ and $(1, -5)$.",
+    "question": "Which equation defines line k?",
+    "options": {
+      "A": "y = (1/3)x - 8",
+      "B": "y = -x + 1/3",
+      "C": "y = 3x - 8",
+      "D": "y = -x + 3"
+    },
+    "correctAnswer": "C",
+    "explanation": "Độ dốc $m = (-5 - (-8))/(1 - 0) = 3$. Giao điểm trục tung $(0, -8) \\Rightarrow y = 3x - 8$."
+  },
+  {
+    "id": "rm_full_11",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Rational Functions",
+    "isGridIn": false,
+    "prompt": "What is the x-intercept of the graph of $y = \\frac{21 - x}{ax + b}$ in the xy-plane, where $a$ and $b$ are positive constants?",
+    "question": "Select the correct coordinate pair:",
+    "options": {
+      "A": "(21, 0)",
+      "B": "(0, -21)",
+      "C": "(0, 21/b)",
+      "D": "(-b/a, 0)"
+    },
+    "correctAnswer": "A",
+    "explanation": "Khi $y = 0 \\Rightarrow 21 - x = 0 \\Rightarrow x = 21$. Giao điểm là $(21, 0)$."
+  },
+  {
+    "id": "rm_full_12",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Inequalities",
+    "isGridIn": false,
+    "prompt": "A model estimates that a glacier moves between 17 and 24 centimeters per day.",
+    "question": "Which inequality represents all possible values of x, where x is the total distance, in centimeters, the glacier moves in 2 days?",
+    "options": {
+      "A": "0 <= x <= 2",
+      "B": "(17)(0.5) <= x <= (24)(0.5)",
+      "C": "17 <= x <= 24",
+      "D": "(17)(2) <= x <= (24)(2)"
+    },
+    "correctAnswer": "D",
+    "explanation": "Trong 2 ngày, quãng đường di chuyển nằm trong khoảng từ $17 \\times 2$ đến $24 \\times 2$ cm."
+  },
+  {
+    "id": "rm_full_13",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Unit Conversions",
+    "isGridIn": true,
+    "prompt": "In the ancient Roman measurement system, a leuga was a unit of length that was equal to 7,500 pedes.",
+    "question": "In this measurement system, how many pedes were equivalent to 4.6 leugas?",
+    "options": {},
+    "correctAnswer": "34500",
+    "explanation": "$4.6 \\times 7,500 = 34,500$ pedes."
+  },
+  {
+    "id": "rm_full_14",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Equations in Context",
+    "isGridIn": true,
+    "prompt": "A rectangle has a width of $n$ yards and a length of $(n + 7)$ yards. The rectangle has an area of 198 square yards.",
+    "question": "What is the value of n?",
+    "options": {},
+    "correctAnswer": "11",
+    "explanation": "$n(n + 7) = 198 \\Rightarrow n^2 + 7n - 198 = 0 \\Rightarrow (n - 11)(n + 18) = 0 \\Rightarrow n = 11$."
+  },
+  {
+    "id": "rm_full_15",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Isolating Quantities",
+    "isGridIn": false,
+    "prompt": "$$55 = \\frac{2K}{v^2}$$ For an object with a mass of 55 kilograms, the given equation relates the kinetic energy $K$, in joules, to the object's speed $v$, in meters per second, where $K$ and $v$ are positive.",
+    "question": "Which equation correctly expresses this object's speed, in meters per second, in terms of the object's kinetic energy, in joules?",
+    "options": {
+      "A": "v = (2K) / 55^2",
+      "B": "v = 55^2 / (2K)",
+      "C": "v = sqrt(55 / (2K))",
+      "D": "v = sqrt((2K) / 55)"
+    },
+    "correctAnswer": "D",
+    "explanation": "$v^2 = \\frac{2K}{55} \\Rightarrow v = \\sqrt{\\frac{2K}{55}}$."
+  },
+  {
+    "id": "rm_full_16",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Algebraic Manipulation",
+    "isGridIn": false,
+    "prompt": "If $\\frac{j}{k} = 83$ and $\\frac{44j}{22xk} = 83$, what is the value of $x$?",
+    "question": "Select the correct option:",
+    "options": {
+      "A": "22/83",
+      "B": "1/2",
+      "C": "2",
+      "D": "44"
+    },
+    "correctAnswer": "C",
+    "explanation": "$\\frac{44}{22x} \\cdot \\frac{j}{k} = \\frac{2}{x} \\cdot 83 = 83 \\Rightarrow x = 2$."
+  },
+  {
+    "id": "rm_full_17",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Right Triangle Trigonometry",
+    "isGridIn": false,
+    "prompt": "In a right triangle ABC with right angle at C, angle A measures $45^\\circ$ and hypotenuse AB has length 19.",
+    "question": "What is the value of $\\sin A$?",
+    "options": {
+      "A": "1 / sqrt(3)",
+      "B": "1 / sqrt(2)",
+      "C": "1",
+      "D": "sqrt(2)"
+    },
+    "correctAnswer": "B",
+    "explanation": "Tam giác vuông cân có góc $45^\\circ \\Rightarrow \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$."
+  },
+  {
+    "id": "rm_full_18",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Volume of Solids",
+    "isGridIn": true,
+    "prompt": "A right square prism has a height of 15 units. The volume of the prism is 1,815 cubic units.",
+    "question": "What is the length, in units, of an edge of the base?",
+    "options": {},
+    "correctAnswer": "11",
+    "explanation": "$V = s^2 \\cdot h \\Rightarrow s^2 \\cdot 15 = 1,815 \\Rightarrow s^2 = 121 \\Rightarrow s = 11$."
+  },
+  {
+    "id": "rm_full_19",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Systems of Nonlinear Equations",
+    "isGridIn": false,
+    "prompt": "$$y = x - 1$$\n$$y = 19(x - 1)^2 - 20$$ A solution to the given system of equations is $(x, y)$.",
+    "question": "What is one possible value of $x - 1$?",
+    "options": {
+      "A": "-2",
+      "B": "-20/19",
+      "C": "-1",
+      "D": "-1/19"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đặt $u = x - 1 \\Rightarrow 19u^2 - u - 20 = 0 \\Rightarrow (u + 1)(19u - 20) = 0 \\Rightarrow u = -1$."
+  },
+  {
+    "id": "rm_full_20",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circle Equations",
+    "isGridIn": true,
+    "prompt": "A circle in the xy-plane has center $(24, 5)$ and y-intercepts $(0, -27)$ and $(0, 37)$.",
+    "question": "What is the radius of this circle?",
+    "options": {},
+    "correctAnswer": "40",
+    "explanation": "$r = \\sqrt{(24 - 0)^2 + (5 - 37)^2} = \\sqrt{576 + 1024} = 40$."
+  },
+  {
+    "id": "rm_full_21",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Systems with No Solution",
+    "isGridIn": true,
+    "prompt": "$$18x + 6y = 8y + 9$$\n$$ty = \\frac{1}{5} + 9x$$ In the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?",
+    "options": {},
+    "correctAnswer": "1",
+    "explanation": "Hai phương trình biến đổi về cùng dạng: $9x - y = 4.5$ và $9x - ty = -0.2$. Để vô nghiệm thì $-t = -1 \\Rightarrow t = 1$."
+  },
+  {
+    "id": "rm_full_22",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Radicals and Exponents",
+    "isGridIn": false,
+    "prompt": "For $x > 0$, which expression is equivalent to $\\sqrt{x^3} \\cdot \\sqrt[4]{x}$?",
+    "question": "Select the correct option:",
+    "options": {
+      "A": "x^(3/8)",
+      "B": "x^(7/4)",
+      "C": "x^(5/4)",
+      "D": "x^(3/4)"
+    },
+    "correctAnswer": "B",
+    "explanation": "$x^{3/2} \\cdot x^{1/4} = x^{6/4 + 1/4} = x^{7/4}$."
+  },
+  {
+    "id": "rm_full_23",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Angles and Lines",
+    "isGridIn": false,
+    "prompt": "Two intersecting lines form adjacent angles $r$ and $s$, where $r + s = 180^\\circ$. If $r = 71^\\circ$, what is the value of $s$?",
+    "question": "Select the correct angle value:",
+    "options": {
+      "A": "19",
+      "B": "71",
+      "C": "109",
+      "D": "251"
+    },
+    "correctAnswer": "C",
+    "explanation": "$s = 180^\\circ - 71^\\circ = 109^\\circ$."
+  },
+  {
+    "id": "rm_full_24",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations in Real Context",
+    "isGridIn": false,
+    "prompt": "$$x + y = 88$$ The given equation relates the total number of marble queen pothos stems, $x$, and the total number of snow queen pothos stems, $y$, a plant nursery propagates to create pothos plants. If 28 snow queen pothos stems are propagated, how many marble queen pothos stems are propagated?",
+    "question": "Select the correct value of x:",
+    "options": {
+      "A": "88",
+      "B": "60",
+      "C": "32",
+      "D": "28"
+    },
+    "correctAnswer": "B",
+    "explanation": "$x + 28 = 88 \\Rightarrow x = 60$."
+  },
+  {
+    "id": "rm_full_25",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Median and Statistics",
+    "isGridIn": false,
+    "prompt": "A data set consists of 8 integers: 4, 7, 7, 9, 12, 14, 15, 20.",
+    "question": "What is the median of this data set?",
+    "options": {
+      "A": "7",
+      "B": "9",
+      "C": "10.5",
+      "D": "11"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dãy có 8 số đã sắp xếp, trung vị là trung bình cộng của số thứ 4 và thứ 5: $(9 + 12)/2 = 10.5$."
+  },
+  {
+    "id": "rm_full_26",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Vertex",
+    "isGridIn": false,
+    "prompt": "The function $f$ is defined by $f(x) = -2(x - 3)^2 + 8$.",
+    "question": "What is the maximum value of $f(x)$?",
+    "options": {
+      "A": "-2",
+      "B": "3",
+      "C": "6",
+      "D": "8"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dạng đỉnh $y = a(x - h)^2 + k$. Với $a = -2 < 0$, giá trị cực đại đạt tại đỉnh $k = 8$."
+  },
+  {
+    "id": "rm_full_27",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Right Triangle Trigonometry",
+    "isGridIn": false,
+    "prompt": "In right triangle ABC, angle C measures $90^\\circ$. If $\\cos A = \\frac{5}{13}$, what is the value of $\\tan A$?",
+    "question": "Select the correct value:",
+    "options": {
+      "A": "12/5",
+      "B": "5/12",
+      "C": "12/13",
+      "D": "13/5"
+    },
+    "correctAnswer": "A",
+    "explanation": "Kề $= 5$, huyền $= 13 \\Rightarrow$ đối $= \\sqrt{13^2 - 5^2} = 12$. Do đó $\\tan A = 12/5$."
+  }
+]
