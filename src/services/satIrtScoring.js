@@ -1,94 +1,75 @@
-export function calculateSatScore({
-  module1Responses = [],
-  module2Responses = [],
-  module1Questions = [],
-  module1Answers = {},
-  module2Questions = [],
-  module2Answers = {},
-  branch = 'easy',
-  forcedBranch
+/**
+ * Thuật toán tính điểm chuẩn College Board Full Test (4 Modules):
+ * - Mỗi Module có 2 câu Experimental (isExperimental = true): Bỏ qua hoàn toàn, Unscored (không trừ điểm).
+ * - Sai 1 câu có tính điểm ở Module 1: Trừ 20 điểm.
+ * - Sai 1 câu có tính điểm ở Module 2: Trừ 10 điểm.
+ * - Base Score mỗi Section: 800 (tối đa), sàn tối thiểu: 200.
+ * - Tổng điểm chuẩn: 400 - 1600.
+ */
+
+export function calculateModuleScore({
+  m1Questions = [],
+  m1Answers = {},
+  m2Questions = [],
+  m2Answers = {}
 }) {
-  const chosenBranch = forcedBranch || branch || 'easy';
+  let penaltyM1 = 0;
+  let penaltyM2 = 0;
+  let correctCount = 0;
+  let totalScored = 0;
+  let unScoredCount = 0;
 
-  let responses = [];
+  // 1. Chấm điểm Module 1 (-20đ / câu sai)
+  m1Questions.forEach((q) => {
+    if (q.isExperimental) {
+      unScoredCount++;
+      return; // Bỏ qua câu thử nghiệm
+    }
+    totalScored++;
+    const userAns = String(m1Answers[q.id] || '').trim().toUpperCase();
+    const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
 
-  if (Array.isArray(module1Responses) && module1Responses.length > 0) {
-    responses = [...module1Responses, ...module2Responses];
-  } else {
-    const parseList = (qList, aMap) => {
-      return (qList || []).map(q => {
-        const uAns = aMap ? aMap[q.id] : q.userAnswer;
-        const cAns = q.correctAnswer;
-        let isCorrect = false;
-
-        if (uAns !== undefined && uAns !== null && uAns !== '') {
-          if (q.isGridIn || q.type === 'spr') {
-            const acc = q.acceptedAnswers || [cAns];
-            isCorrect = acc.some(a => String(a).trim().toLowerCase() === String(uAns).trim().toLowerCase());
-          } else {
-            isCorrect = String(uAns).trim().toUpperCase() === String(cAns).trim().toUpperCase();
-          }
-        }
-
-        return {
-          questionId: q.id,
-          correct: isCorrect,
-          difficulty: q.difficulty || 'medium'
-        };
-      });
-    };
-
-    responses = [
-      ...parseList(module1Questions, module1Answers),
-      ...parseList(module2Questions, module2Answers)
-    ];
-  }
-
-  const totalQuestions = responses.length || 54;
-  const correctCount = responses.filter(r => r.correct).length;
-
-  let earnedWeight = 0;
-  let maxWeight = 0;
-
-  responses.forEach(r => {
-    const diff = (r.difficulty || 'medium').toLowerCase();
-    const weight = diff === 'hard' ? 2.2 : diff === 'medium' ? 1.5 : 1.0;
-    maxWeight += weight;
-    if (r.correct) {
-      earnedWeight += weight;
+    if (userAns && userAns === correctAns) {
+      correctCount++;
+    } else {
+      penaltyM1 += 20;
     }
   });
 
-  const accuracyRatio = totalQuestions > 0 ? correctCount / totalQuestions : 0;
-  const weightRatio = maxWeight > 0 ? earnedWeight / maxWeight : accuracyRatio;
-  const abilityEstimate = weightRatio * 0.7 + accuracyRatio * 0.3;
+  // 2. Chấm điểm Module 2 (-10đ / câu sai)
+  m2Questions.forEach((q) => {
+    if (q.isExperimental) {
+      unScoredCount++;
+      return; // Bỏ qua câu thử nghiệm
+    }
+    totalScored++;
+    const userAns = String(m2Answers[q.id] || '').trim().toUpperCase();
+    const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
 
-  let scaledScore = 400;
-  if (chosenBranch === 'hard') {
-    scaledScore = 480 + abilityEstimate * (800 - 480);
-  } else {
-    scaledScore = 200 + abilityEstimate * (620 - 200);
-  }
+    if (userAns && userAns === correctAns) {
+      correctCount++;
+    } else {
+      penaltyM2 += 10;
+    }
+  });
 
-  scaledScore = Math.round(scaledScore / 10) * 10;
-  scaledScore = Math.max(200, Math.min(800, scaledScore));
+  const rawScore = 800 - penaltyM1 - penaltyM2;
+  const scaledScore = Math.max(200, Math.min(800, rawScore));
 
   return {
-    scaledScore,
-    score: scaledScore,
-    totalQuestions,
+    sectionScore: Math.round(scaledScore / 10) * 10,
     correctCount,
-    branch: chosenBranch,
-    accuracy: Math.round(accuracyRatio * 100)
+    totalScored,
+    unScoredCount,
+    penaltyM1,
+    penaltyM2
   };
 }
 
-export const calculateSatSectionScore = (params) => {
-  const res = calculateSatScore(params);
-  return typeof res === 'object' ? res.scaledScore : res;
-};
-
-export default {
-  calculateSatScore,
-  calculateSatSectionScore
-};
+export function calculateSatSectionScore(params) {
+  // Hàm fallback tương thích với các bài thi module đơn cũ
+  const totalCorrect = params?.totalCorrect || 0;
+  const totalQ = params?.totalQuestions || 27;
+  const approx = Math.round(200 + (totalCorrect / totalQ) * 600);
+  return Math.max(200, Math.min(800, Math.round(approx / 10) * 10));
+}

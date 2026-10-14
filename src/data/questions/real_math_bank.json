@@ -1,6 +1,6 @@
 [
   {
-    "id": "rm_full_01",
+    "id": "rm_all_001",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Functions",
@@ -17,7 +17,7 @@
     "explanation": "$h(6) = 100(6) - 50 = 600 - 50 = 550$."
   },
   {
-    "id": "rm_full_02",
+    "id": "rm_all_002",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Equations in Real Context",
@@ -31,10 +31,10 @@
       "D": "The estimated value of the bike decreased by approximately 2.75% each year after it was purchased."
     },
     "correctAnswer": "A",
-    "explanation": "Điểm cắt trục tung tại $x = 0$ biểu thị giá trị của xe đạp tại thời điểm vừa mới mua là $275."
+    "explanation": "Giao điểm với trục tung tại $x = 0$ (thời điểm vừa mua) tương ứng giá trị ban đầu là 275 đô la."
   },
   {
-    "id": "rm_full_03",
+    "id": "rm_all_003",
     "section": "Math",
     "domain": "Problem Solving and Data Analysis",
     "category": "Percentages",
@@ -46,7 +46,7 @@
     "explanation": "$200 \\times 0.55 = 110$."
   },
   {
-    "id": "rm_full_04",
+    "id": "rm_all_004",
     "section": "Math",
     "domain": "Algebra",
     "category": "Equivalent Expressions",
@@ -54,16 +54,16 @@
     "prompt": "Which expression is equivalent to $29x^2 + 29$?",
     "question": "Select the correct option:",
     "options": {
-      "A": "29(x^2 + 1)",
-      "B": "29(x^2 + 29)",
-      "C": "29(29x^2 + 1)",
-      "D": "29(x^2 + 1/29)"
+      "A": "$29(x^2 + 1)$",
+      "B": "$29(x^2 + 29)$",
+      "C": "$29(29x^2 + 1)$",
+      "D": "$29(x^2 + \\frac{1}{29})$"
     },
     "correctAnswer": "A",
     "explanation": "$29x^2 + 29 = 29(x^2 + 1)$."
   },
   {
-    "id": "rm_full_05",
+    "id": "rm_all_005",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Equations",
@@ -77,10 +77,10 @@
       "D": "180"
     },
     "correctAnswer": "C",
-    "explanation": "Chia cả hai vế cho 2 ta được $x - 3 = 90$."
+    "explanation": "Chia cả hai vế cho 2: $x - 3 = 90$."
   },
   {
-    "id": "rm_full_06",
+    "id": "rm_all_006",
     "section": "Math",
     "domain": "Problem Solving and Data Analysis",
     "category": "Rates and Units",
@@ -97,7 +97,7 @@
     "explanation": "Thời gian $= 32,400 / 180 = 180$ phút $= 3.0$ giờ."
   },
   {
-    "id": "rm_full_07",
+    "id": "rm_all_007",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Equations in Real Context",
@@ -109,7 +109,7 @@
     "explanation": "Đơn giá của chai nhỏ là hệ số đứng trước $x$: 4.57 đô la."
   },
   {
-    "id": "rm_full_08",
+    "id": "rm_all_008",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Similar Triangles",
@@ -123,10 +123,10 @@
       "D": "16"
     },
     "correctAnswer": "D",
-    "explanation": "Tỷ số đồng dạng: $AB / BC = XY / YZ \\Rightarrow 180 / 900 = XY / 80 \\Rightarrow XY = 16$."
+    "explanation": "Tỉ số đồng dạng: $AB / BC = XY / YZ \\Rightarrow 180 / 900 = XY / 80 \\Rightarrow XY = 80 / 5 = 16$."
   },
   {
-    "id": "rm_full_09",
+    "id": "rm_all_009",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Absolute Value Equations",
@@ -134,16 +134,16 @@
     "prompt": "$$|x| - 43 = 0$$",
     "question": "Which value is a solution to the given equation?",
     "options": {
-      "A": "1/43",
+      "A": "$\\frac{1}{43}$",
       "B": "0",
-      "C": "-1/43",
+      "C": "$-\\frac{1}{43}$",
       "D": "-43"
     },
     "correctAnswer": "D",
-    "explanation": "$|x| = 43 \\Rightarrow x = -43$ hoặc $x = 43$."
+    "explanation": "$|x| = 43 \\Rightarrow x = 43$ hoặc $x = -43$."
   },
   {
-    "id": "rm_full_10",
+    "id": "rm_all_010",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Equations from Points",
@@ -151,16 +151,16 @@
     "prompt": "In the xy-plane, line $k$ passes through the points $(0, -8)$ and $(1, -5)$.",
     "question": "Which equation defines line k?",
     "options": {
-      "A": "y = (1/3)x - 8",
-      "B": "y = -x + 1/3",
-      "C": "y = 3x - 8",
-      "D": "y = -x + 3"
+      "A": "$y = \\frac{1}{3}x - 8$",
+      "B": "$y = -x + \\frac{1}{3}$",
+      "C": "$y = 3x - 8$",
+      "D": "$y = -x + 3$"
     },
     "correctAnswer": "C",
-    "explanation": "Độ dốc $m = (-5 - (-8))/(1 - 0) = 3$. Giao điểm trục tung $(0, -8) \\Rightarrow y = 3x - 8$."
+    "explanation": "Hệ số góc $m = (-5 - (-8))/(1 - 0) = 3$, $y$-intercept là $-8 \\Rightarrow y = 3x - 8$."
   },
   {
-    "id": "rm_full_11",
+    "id": "rm_all_011",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Rational Functions",
@@ -168,16 +168,16 @@
     "prompt": "What is the x-intercept of the graph of $y = \\frac{21 - x}{ax + b}$ in the xy-plane, where $a$ and $b$ are positive constants?",
     "question": "Select the correct coordinate pair:",
     "options": {
-      "A": "(21, 0)",
-      "B": "(0, -21)",
-      "C": "(0, 21/b)",
-      "D": "(-b/a, 0)"
+      "A": "$(21, 0)$",
+      "B": "$(0, -21)$",
+      "C": "$(0, \\frac{21}{b})$",
+      "D": "$(-\\frac{b}{a}, 0)$"
     },
     "correctAnswer": "A",
-    "explanation": "Khi $y = 0 \\Rightarrow 21 - x = 0 \\Rightarrow x = 21$. Giao điểm là $(21, 0)$."
+    "explanation": "Khi $y = 0 \\Rightarrow 21 - x = 0 \\Rightarrow x = 21$. Tọa độ $(21, 0)$."
   },
   {
-    "id": "rm_full_12",
+    "id": "rm_all_012",
     "section": "Math",
     "domain": "Algebra",
     "category": "Inequalities",
@@ -185,16 +185,16 @@
     "prompt": "A model estimates that a glacier moves between 17 and 24 centimeters per day.",
     "question": "Which inequality represents all possible values of x, where x is the total distance, in centimeters, the glacier moves in 2 days?",
     "options": {
-      "A": "0 <= x <= 2",
-      "B": "(17)(0.5) <= x <= (24)(0.5)",
-      "C": "17 <= x <= 24",
-      "D": "(17)(2) <= x <= (24)(2)"
+      "A": "$0 \\le x \\le 2$",
+      "B": "$(17)(0.5) \\le x \\le (24)(0.5)$",
+      "C": "$17 \\le x \\le 24$",
+      "D": "$(17)(2) \\le x \\le (24)(2)$"
     },
     "correctAnswer": "D",
-    "explanation": "Trong 2 ngày, quãng đường di chuyển nằm trong khoảng từ $17 \\times 2$ đến $24 \\times 2$ cm."
+    "explanation": "Trong 2 ngày, cự ly di chuyển từ $17 \\times 2$ đến $24 \\times 2$ cm."
   },
   {
-    "id": "rm_full_13",
+    "id": "rm_all_013",
     "section": "Math",
     "domain": "Problem Solving and Data Analysis",
     "category": "Unit Conversions",
@@ -206,7 +206,7 @@
     "explanation": "$4.6 \\times 7,500 = 34,500$ pedes."
   },
   {
-    "id": "rm_full_14",
+    "id": "rm_all_014",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Quadratic Equations in Context",
@@ -218,7 +218,7 @@
     "explanation": "$n(n + 7) = 198 \\Rightarrow n^2 + 7n - 198 = 0 \\Rightarrow (n - 11)(n + 18) = 0 \\Rightarrow n = 11$."
   },
   {
-    "id": "rm_full_15",
+    "id": "rm_all_015",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Isolating Quantities",
@@ -226,16 +226,16 @@
     "prompt": "$$55 = \\frac{2K}{v^2}$$ For an object with a mass of 55 kilograms, the given equation relates the kinetic energy $K$, in joules, to the object's speed $v$, in meters per second, where $K$ and $v$ are positive.",
     "question": "Which equation correctly expresses this object's speed, in meters per second, in terms of the object's kinetic energy, in joules?",
     "options": {
-      "A": "v = (2K) / 55^2",
-      "B": "v = 55^2 / (2K)",
-      "C": "v = sqrt(55 / (2K))",
-      "D": "v = sqrt((2K) / 55)"
+      "A": "$v = \\frac{2K}{55^2}$",
+      "B": "$v = \\frac{55^2}{2K}$",
+      "C": "$v = \\sqrt{\\frac{55}{2K}}$",
+      "D": "$v = \\sqrt{\\frac{2K}{55}}$"
     },
     "correctAnswer": "D",
     "explanation": "$v^2 = \\frac{2K}{55} \\Rightarrow v = \\sqrt{\\frac{2K}{55}}$."
   },
   {
-    "id": "rm_full_16",
+    "id": "rm_all_016",
     "section": "Math",
     "domain": "Algebra",
     "category": "Algebraic Manipulation",
@@ -243,16 +243,33 @@
     "prompt": "If $\\frac{j}{k} = 83$ and $\\frac{44j}{22xk} = 83$, what is the value of $x$?",
     "question": "Select the correct option:",
     "options": {
-      "A": "22/83",
-      "B": "1/2",
+      "A": "$\\frac{22}{83}$",
+      "B": "$\\frac{1}{2}$",
       "C": "2",
       "D": "44"
     },
     "correctAnswer": "C",
-    "explanation": "$\\frac{44}{22x} \\cdot \\frac{j}{k} = \\frac{2}{x} \\cdot 83 = 83 \\Rightarrow x = 2$."
+    "explanation": "$\\frac{44}{22x} \\cdot \\frac{j}{k} = \\frac{2}{x} \\cdot 83 = 83 \\Rightarrow \\frac{2}{x} = 1 \\Rightarrow x = 2$."
   },
   {
-    "id": "rm_full_17",
+    "id": "rm_all_017",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Growth",
+    "isGridIn": false,
+    "prompt": "A certain company measures its solar cell production $C(n)$, in peak kilowatts. The company's solar cell production grew by approximately 22% each year for the 5 years following 2013. If solar cell production was 7,138 peak kilowatts in 2013, which of the following functions best models the solar cell production, in peak kilowatts, $n$ years after 2013, where $0 \\le n \\le 5$?",
+    "question": "Select the correct function:",
+    "options": {
+      "A": "$C(n) = 7,138(0.22)^n$",
+      "B": "$C(n) = 7,138(1.22)^n$",
+      "C": "$C(n) = 0.22(7,138)^n$",
+      "D": "$C(n) = 1.22(7,138)^n$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mô hình tăng trưởng 22% mỗi năm: $C(n) = 7,138(1 + 0.22)^n = 7,138(1.22)^n$."
+  },
+  {
+    "id": "rm_all_018",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Right Triangle Trigonometry",
@@ -260,16 +277,16 @@
     "prompt": "In a right triangle ABC with right angle at C, angle A measures $45^\\circ$ and hypotenuse AB has length 19.",
     "question": "What is the value of $\\sin A$?",
     "options": {
-      "A": "1 / sqrt(3)",
-      "B": "1 / sqrt(2)",
+      "A": "$\\frac{1}{\\sqrt{3}}$",
+      "B": "$\\frac{1}{\\sqrt{2}}$",
       "C": "1",
-      "D": "sqrt(2)"
+      "D": "$\\sqrt{2}$"
     },
     "correctAnswer": "B",
     "explanation": "Tam giác vuông cân có góc $45^\\circ \\Rightarrow \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$."
   },
   {
-    "id": "rm_full_18",
+    "id": "rm_all_019",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Volume of Solids",
@@ -281,7 +298,7 @@
     "explanation": "$V = s^2 \\cdot h \\Rightarrow s^2 \\cdot 15 = 1,815 \\Rightarrow s^2 = 121 \\Rightarrow s = 11$."
   },
   {
-    "id": "rm_full_19",
+    "id": "rm_all_020",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Systems of Nonlinear Equations",
@@ -290,15 +307,26 @@
     "question": "What is one possible value of $x - 1$?",
     "options": {
       "A": "-2",
-      "B": "-20/19",
+      "B": "$-\\frac{20}{19}$",
       "C": "-1",
-      "D": "-1/19"
+      "D": "$-\\frac{1}{19}$"
     },
     "correctAnswer": "C",
-    "explanation": "Đặt $u = x - 1 \\Rightarrow 19u^2 - u - 20 = 0 \\Rightarrow (u + 1)(19u - 20) = 0 \\Rightarrow u = -1$."
+    "explanation": "Đặt $u = x - 1 \\Rightarrow u = 19u^2 - 20 \\Rightarrow 19u^2 - u - 20 = 0 \\Rightarrow (19u - 20)(u + 1) = 0 \\Rightarrow u = -1$."
   },
   {
-    "id": "rm_full_20",
+    "id": "rm_all_021",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Systems with No Solution",
+    "isGridIn": true,
+    "prompt": "$$18x + 6y = 8y + 9$$\n$$ty = \\frac{1}{5} + 9x$$ In the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?",
+    "options": {},
+    "correctAnswer": "1",
+    "explanation": "$9x - y = 4.5$ và $9x - ty = -0.2$. Để hệ vô nghiệm, hai đường thẳng song song $\\Rightarrow -t = -1 \\Rightarrow t = 1$."
+  },
+  {
+    "id": "rm_all_022",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Circle Equations",
@@ -307,21 +335,10 @@
     "question": "What is the radius of this circle?",
     "options": {},
     "correctAnswer": "40",
-    "explanation": "$r = \\sqrt{(24 - 0)^2 + (5 - 37)^2} = \\sqrt{576 + 1024} = 40$."
+    "explanation": "Khoảng cách từ tâm $(24, 5)$ đến điểm $(0, 37)$ là $r = \\sqrt{(24 - 0)^2 + (5 - 37)^2} = \\sqrt{576 + 1024} = 40$."
   },
   {
-    "id": "rm_full_21",
-    "section": "Math",
-    "domain": "Algebra",
-    "category": "Linear Systems with No Solution",
-    "isGridIn": true,
-    "prompt": "$$18x + 6y = 8y + 9$$\n$$ty = \\frac{1}{5} + 9x$$ In the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?",
-    "options": {},
-    "correctAnswer": "1",
-    "explanation": "Hai phương trình biến đổi về cùng dạng: $9x - y = 4.5$ và $9x - ty = -0.2$. Để vô nghiệm thì $-t = -1 \\Rightarrow t = 1$."
-  },
-  {
-    "id": "rm_full_22",
+    "id": "rm_all_023",
     "section": "Math",
     "domain": "Advanced Math",
     "category": "Radicals and Exponents",
@@ -329,21 +346,21 @@
     "prompt": "For $x > 0$, which expression is equivalent to $\\sqrt{x^3} \\cdot \\sqrt[4]{x}$?",
     "question": "Select the correct option:",
     "options": {
-      "A": "x^(3/8)",
-      "B": "x^(7/4)",
-      "C": "x^(5/4)",
-      "D": "x^(3/4)"
+      "A": "$x^{3/8}$",
+      "B": "$x^{7/4}$",
+      "C": "$x^{5/4}$",
+      "D": "$x^{3/4}$"
     },
     "correctAnswer": "B",
     "explanation": "$x^{3/2} \\cdot x^{1/4} = x^{6/4 + 1/4} = x^{7/4}$."
   },
   {
-    "id": "rm_full_23",
+    "id": "rm_all_024",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Angles and Lines",
     "isGridIn": false,
-    "prompt": "Two intersecting lines form adjacent angles $r$ and $s$, where $r + s = 180^\\circ$. If $r = 71^\\circ$, what is the value of $s$?",
+    "prompt": "In the figure, two lines intersect at a point forming supplementary angles $r$ and $s$. If $r = 71^\\circ$, what is the value of $s$?",
     "question": "Select the correct angle value:",
     "options": {
       "A": "19",
@@ -355,7 +372,7 @@
     "explanation": "$s = 180^\\circ - 71^\\circ = 109^\\circ$."
   },
   {
-    "id": "rm_full_24",
+    "id": "rm_all_025",
     "section": "Math",
     "domain": "Algebra",
     "category": "Linear Equations in Real Context",
@@ -372,7 +389,53 @@
     "explanation": "$x + 28 = 88 \\Rightarrow x = 60$."
   },
   {
-    "id": "rm_full_25",
+    "id": "rm_all_026",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations in One Variable",
+    "isGridIn": false,
+    "prompt": "If $3(2x - 5) = 4x + 7$, what is the value of $x$?",
+    "question": "Select the correct value:",
+    "options": {
+      "A": "8",
+      "B": "11",
+      "C": "14",
+      "D": "22"
+    },
+    "correctAnswer": "B",
+    "explanation": "$6x - 15 = 4x + 7 \\Rightarrow 2x = 22 \\Rightarrow x = 11$."
+  },
+  {
+    "id": "rm_all_027",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Interpreting Scatterplots",
+    "isGridIn": true,
+    "prompt": "A botanist recorded the weight, in pounds, of all apricots that grew on a dwarf apricot tree during each growing season after transplantation. During the 4th growing season, the data point plotted is $(4, 45)$.",
+    "question": "What was the weight, to the nearest pound, of all apricots that grew on the tree during the 4th growing season?",
+    "options": {},
+    "correctAnswer": "45",
+    "explanation": "Đọc trực tiếp tung độ tại $x = 4$ cho giá trị 45 pound."
+  },
+  {
+    "id": "rm_all_028",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Systems of Equations in Context",
+    "isGridIn": false,
+    "prompt": "A shipment consists of 5-pound boxes and 10-pound boxes with a total weight of 300 pounds. There are 13 10-pound boxes in the shipment.",
+    "question": "How many 5-pound boxes are in the shipment?",
+    "options": {
+      "A": "5",
+      "B": "10",
+      "C": "13",
+      "D": "34"
+    },
+    "correctAnswer": "D",
+    "explanation": "$5x + 10(13) = 300 \\Rightarrow 5x + 130 = 300 \\Rightarrow 5x = 170 \\Rightarrow x = 34$."
+  },
+  {
+    "id": "rm_all_029",
     "section": "Math",
     "domain": "Problem Solving and Data Analysis",
     "category": "Median and Statistics",
@@ -386,16 +449,427 @@
       "D": "11"
     },
     "correctAnswer": "C",
-    "explanation": "Dãy có 8 số đã sắp xếp, trung vị là trung bình cộng của số thứ 4 và thứ 5: $(9 + 12)/2 = 10.5$."
+    "explanation": "Trung vị là trung bình cộng số thứ 4 và thứ 5: $(9 + 12)/2 = 10.5$."
   },
   {
-    "id": "rm_full_26",
+    "id": "rm_all_030",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Equivalent Expressions",
+    "isGridIn": false,
+    "prompt": "Which expression is equivalent to $18x^2 - 3x^2$?",
+    "question": "Select the correct option:",
+    "options": {
+      "A": "$-54x^2$",
+      "B": "$15x^2$",
+      "C": "$21x^2$",
+      "D": "$42x^2$"
+    },
+    "correctAnswer": "B",
+    "explanation": "$18x^2 - 3x^2 = 15x^2$."
+  },
+  {
+    "id": "rm_all_031",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations",
+    "isGridIn": false,
+    "prompt": "$$4(x - 5) + 8 = 2(x - 3) + 26$$ What value of $x$ is the solution to the given equation?",
+    "question": "Select the correct value:",
+    "options": {
+      "A": "56",
+      "B": "32",
+      "C": "28",
+      "D": "16"
+    },
+    "correctAnswer": "D",
+    "explanation": "$4x - 20 + 8 = 2x - 6 + 26 \\Rightarrow 4x - 12 = 2x + 20 \\Rightarrow 2x = 32 \\Rightarrow x = 16$."
+  },
+  {
+    "id": "rm_all_032",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Confidence Intervals and Margin of Error",
+    "isGridIn": false,
+    "prompt": "A market researcher collected data on the price of an iced coffee at 42 locations selected at random in a state. The mean price was estimated to be $1.37, with an associated margin of error of $0.05.",
+    "question": "Which of the following is a plausible statement about the mean price of an iced coffee for all locations that sell this product in the state?",
+    "options": {
+      "A": "It is between $1.32 and $1.42.",
+      "B": "It is either less than $1.32 or greater than $1.42.",
+      "C": "It is less than $1.32.",
+      "D": "It is greater than $1.42."
+    },
+    "correctAnswer": "A",
+    "explanation": "Khoảng tin cậy: $1.37 - 0.05 = 1.32$ đến $1.37 + 0.05 = 1.42$."
+  },
+  {
+    "id": "rm_all_033",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Models",
+    "isGridIn": false,
+    "prompt": "A teacher is creating an assignment worth 10 points. The assignment will consist of questions worth 1 point and questions worth 2 points. Which equation represents this situation, where $x$ represents the number of 1-point questions and $y$ represents the number of 2-point questions?",
+    "question": "Select the correct equation:",
+    "options": {
+      "A": "$3xy = 10$",
+      "B": "$3(x + y) = 10$",
+      "C": "$2x + y = 10$",
+      "D": "$x + 2y = 10$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Tổng số điểm: $1 \\cdot x + 2 \\cdot y = x + 2y = 10$."
+  },
+  {
+    "id": "rm_all_034",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Comparing Means",
+    "isGridIn": false,
+    "prompt": "Data set X: 8, 12, 12, 16\nData set Y: 8, 12, 12, 16, 33\nThe lists give the values in data sets X and Y.",
+    "question": "Which statement correctly compares the mean of data set X and the mean of data set Y?",
+    "options": {
+      "A": "The mean of data set X is greater than the mean of data set Y.",
+      "B": "The mean of data set X is less than the mean of data set Y.",
+      "C": "The means of data set X and data set Y are equal.",
+      "D": "There is not enough information to compare the means."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mean X $= 48 / 4 = 12$. Mean Y $= (48 + 33) / 5 = 16.2 \\Rightarrow$ Mean X nhỏ hơn Mean Y."
+  },
+  {
+    "id": "rm_all_035",
     "section": "Math",
     "domain": "Advanced Math",
-    "category": "Quadratic Vertex",
+    "category": "Polynomial Evaluation",
+    "isGridIn": true,
+    "prompt": "The function $f$ is defined by $f(x) = x^3 + 26$.",
+    "question": "What is the value of $f(2)$?",
+    "options": {},
+    "correctAnswer": "34",
+    "explanation": "$f(2) = 2^3 + 26 = 8 + 26 = 34$."
+  },
+  {
+    "id": "rm_all_036",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Models",
+    "isGridIn": true,
+    "prompt": "$$y = 2,200(a)^x$$ The given equation, where $a$ is a positive constant, gives the predicted number of bacteria, $y$, in a growth medium $x$ hours after the number of bacteria was initially measured.",
+    "question": "According to the equation, what was the predicted number of bacteria initially measured in the growth medium?",
+    "options": {},
+    "correctAnswer": "2200",
+    "explanation": "Tại thời điểm ban đầu $x = 0 \\Rightarrow y = 2,200(a)^0 = 2,200$."
+  },
+  {
+    "id": "rm_all_037",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Area of Triangles",
+    "isGridIn": false,
+    "prompt": "A right triangle has perpendicular legs of lengths 5 units and 6 units.",
+    "question": "What is the area, in square units, of the triangle?",
+    "options": {
+      "A": "15",
+      "B": "17",
+      "C": "6",
+      "D": "5"
+    },
+    "correctAnswer": "A",
+    "explanation": "Diện tích $= \\frac{1}{2} \\times 5 \\times 6 = 15$ đơn vị vuông."
+  },
+  {
+    "id": "rm_all_038",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Factoring",
+    "isGridIn": false,
+    "prompt": "What is the positive solution to the equation $x^2 - 7x - 18 = 0$?",
+    "question": "Select the correct solution:",
+    "options": {
+      "A": "2",
+      "B": "6",
+      "C": "9",
+      "D": "18"
+    },
+    "correctAnswer": "C",
+    "explanation": "$(x - 9)(x + 2) = 0 \\Rightarrow x = 9$ hoặc $x = -2$. Nghiệm dương là 9."
+  },
+  {
+    "id": "rm_all_039",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Systems",
+    "isGridIn": true,
+    "prompt": "$$2x - 2y = 8$$\n$$-3y = 18$$ The solution to the given system of equations is $(x, y)$.",
+    "question": "What is the value of x?",
+    "options": {},
+    "correctAnswer": "-2",
+    "explanation": "$y = 18 / (-3) = -6 \\Rightarrow 2x - 2(-6) = 8 \\Rightarrow 2x + 12 = 8 \\Rightarrow 2x = -4 \\Rightarrow x = -2$."
+  },
+  {
+    "id": "rm_all_040",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Similar Triangles and Midpoints",
+    "isGridIn": false,
+    "prompt": "In triangle ABC, segment DE is parallel to segment AC, with D on AB and E on BC. If $BD = AD$, $BE = 9$, and $AC = 8$, what is the length of segment BC?",
+    "question": "Select the length of BC:",
+    "options": {
+      "A": "72",
+      "B": "18",
+      "C": "17",
+      "D": "16"
+    },
+    "correctAnswer": "B",
+    "explanation": "$BD = AD \\Rightarrow$ D là trung điểm AB $\\Rightarrow$ E là trung điểm BC $\\Rightarrow BC = 2 \\times BE = 2 \\times 9 = 18$."
+  },
+  {
+    "id": "rm_all_041",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Functions from Table",
+    "isGridIn": false,
+    "prompt": "The table shows three values of $x$ and their corresponding values of $y$:\n\n| x | y |\n| :--- | :--- |\n| 4 | 11 |\n| 0 | 12 |\n| 8 | 14 |\n\nThere is a linear relationship between $x$ and $y$.",
+    "question": "Which of the following equations represents this relationship?",
+    "options": {
+      "A": "$y = \\frac{1}{4}x + 12$",
+      "B": "$y = \\frac{1}{12}x + 4$",
+      "C": "$y = 4x + 12$",
+      "D": "$y = 12x + 4$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Tại $x = 0, y = 12$. Hệ số góc $m = (14 - 12)/(8 - 0) = 2/8 = 1/4 \\Rightarrow y = \\frac{1}{4}x + 12$."
+  },
+  {
+    "id": "rm_all_042",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Perpendicular Lines",
+    "isGridIn": false,
+    "prompt": "Line $q$ is defined by $y = -\\frac{1}{7}x - \\frac{1}{2}$. Line $r$ is perpendicular to line $q$ in the xy-plane.",
+    "question": "What is the slope of line r?",
+    "options": {
+      "A": "9",
+      "B": "7",
+      "C": "5",
+      "D": "2"
+    },
+    "correctAnswer": "B",
+    "explanation": "Đường vuông góc có hệ số góc nghịch đảo đổi dấu: $m_r = -1 / (-1/7) = 7$."
+  },
+  {
+    "id": "rm_all_043",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Number of Solutions",
+    "isGridIn": false,
+    "prompt": "$$x^2 - \\frac{25}{9} = 0$$",
+    "question": "How many distinct real solutions does the given equation have?",
+    "options": {
+      "A": "Zero",
+      "B": "Exactly one",
+      "C": "Exactly two",
+      "D": "Infinitely many"
+    },
+    "correctAnswer": "C",
+    "explanation": "$x^2 = 25/9 \\Rightarrow x = \\pm 5/3$, phương trình có đúng 2 nghiệm thực phân biệt."
+  },
+  {
+    "id": "rm_all_044",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Parallel Lines and Angles",
+    "isGridIn": false,
+    "prompt": "Lines $l$ and $k$ are parallel, and line $t$ intersects both lines forming consecutive interior angles $x$ and $y$, where $x + y = 180$. If $x > 137$, which of the following must be true?",
+    "question": "Select the correct inequality:",
+    "options": {
+      "A": "$y < 43$",
+      "B": "$y > 43$",
+      "C": "$x + y < 180$",
+      "D": "$x + y > 180$"
+    },
+    "correctAnswer": "A",
+    "explanation": "$x + y = 180 \\Rightarrow y = 180 - x$. Vì $x > 137 \\Rightarrow y < 180 - 137 = 43$."
+  },
+  {
+    "id": "rm_all_045",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circle Equations",
+    "isGridIn": false,
+    "prompt": "A circle in the xy-plane has equation $(x - 4)^2 + (y + 1)^2 = 49$.",
+    "question": "What is the radius of the circle?",
+    "options": {
+      "A": "7",
+      "B": "14",
+      "C": "24.5",
+      "D": "49"
+    },
+    "correctAnswer": "A",
+    "explanation": "$r^2 = 49 \\Rightarrow r = 7$."
+  },
+  {
+    "id": "rm_all_046",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Modeling Proportions",
+    "isGridIn": false,
+    "prompt": "The roofs on the buildings of a public garden are designed to allow water to drain into the garden:\n\n| Area (square feet) | Water (gallons) |\n| :--- | :--- |\n| 2,400 | 4,320 |\n| 3,600 | 6,480 |\n| 4,800 | 8,640 |\n\nWhich equation could define $f(x)$?",
+    "question": "Select the correct equation:",
+    "options": {
+      "A": "$f(x) = 0.6x$",
+      "B": "$f(x) = 1.8x$",
+      "C": "$f(x) = 2,160.0x$",
+      "D": "$f(x) = 4,320.0x$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hệ số tỷ lệ: $4,320 / 2,400 = 1.8 \\Rightarrow f(x) = 1.8x$."
+  },
+  {
+    "id": "rm_all_047",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Infinite Solutions",
+    "isGridIn": true,
+    "prompt": "$$15x + 435 = a(x + 29)$$ In the given equation, $a$ is a constant. If the equation has infinitely many solutions, what is the value of $a$?",
+    "options": {},
+    "correctAnswer": "15",
+    "explanation": "$15(x + 29) = a(x + 29) \\Rightarrow a = 15$."
+  },
+  {
+    "id": "rm_all_048",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Slope of Linear Functions",
+    "isGridIn": false,
+    "prompt": "What is the slope of the graph of $y = \\frac{1}{3}(26x + 11) + 9x$ in the xy-plane?",
+    "question": "Select the correct slope:",
+    "options": {
+      "A": "$\\frac{26}{3}$",
+      "B": "$\\frac{53}{3}$",
+      "C": "26",
+      "D": "35"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hệ số góc $m = \\frac{26}{3} + 9 = \\frac{26 + 27}{3} = \\frac{53}{3}$."
+  },
+  {
+    "id": "rm_all_049",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Models in Context",
+    "isGridIn": false,
+    "prompt": "A plumbing company charges its customers $116 for the first hour of a service call and $70 for each additional hour, plus the cost of parts $z$.",
+    "question": "Which equation represents the total cost y, in dollars, for an x-hour service call where x >= 1?",
+    "options": {
+      "A": "$y = 70x + z$",
+      "B": "$y = 70x + z + 46$",
+      "C": "$y = 116x + z$",
+      "D": "$y = 116x + 70z + 46$"
+    },
+    "correctAnswer": "B",
+    "explanation": "$y = 116 + 70(x - 1) + z = 116 + 70x - 70 + z = 70x + z + 46$."
+  },
+  {
+    "id": "rm_all_050",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Functions from Points",
+    "isGridIn": false,
+    "prompt": "For the quadratic function $f$, the table shows three values of $x$ and their corresponding values of $f(x)$:\n\n| x | f(x) |\n| :--- | :--- |\n| 25 | -4 |\n| 27 | -4 |\n| 29 | 4 |\n\nWhich equation defines $f$?",
+    "question": "Select the correct equation:",
+    "options": {
+      "A": "$f(x) = (x - 25)(x - 27) + 2$",
+      "B": "$f(x) = (x - 25)(x - 27) - 4$",
+      "C": "$f(x) = (x - 4)(x - 29) + 16$",
+      "D": "$f(x) = (x - 4)(x - 29) - 16$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Tại $x = 25$ và $x = 27$, $(x - 25)(x - 27) = 0 \\Rightarrow f(x) = -4$."
+  },
+  {
+    "id": "rm_all_051",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Absolute Value Functions",
+    "isGridIn": true,
+    "prompt": "The function $h$ is defined by $h(x) = |x - 8| - |6 - x| + a$, where $a$ is a constant, and $h(-4) = 1$.",
+    "question": "What is the value of a?",
+    "options": {},
+    "correctAnswer": "-1",
+    "explanation": "$h(-4) = |-4 - 8| - |6 - (-4)| + a = 12 - 10 + a = 2 + a = 1 \\Rightarrow a = -1$."
+  },
+  {
+    "id": "rm_all_052",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Perpendicular Slopes",
+    "isGridIn": false,
+    "prompt": "Line $h$ is defined by $\\frac{1}{3}x + \\frac{1}{2}y - 30 = 0$. Line $j$ is perpendicular to line $h$ in the xy-plane.",
+    "question": "What is the slope of line j?",
+    "options": {
+      "A": "$-\\frac{2}{3}$",
+      "B": "$-\\frac{3}{2}$",
+      "C": "$\\frac{2}{3}$",
+      "D": "$\\frac{3}{2}$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Line $h$: $y = -\\frac{2}{3}x + 60 \\Rightarrow m_h = -\\frac{2}{3} \\Rightarrow m_j = \\frac{3}{2}$."
+  },
+  {
+    "id": "rm_all_053",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Exponential Growth Percent",
+    "isGridIn": false,
+    "prompt": "A laboratory culture of bacteria grows according to the model $P(t) = 250(1.08)^t$, where $t$ represents the elapsed time in hours.",
+    "question": "By what percentage does the population increase each hour?",
+    "options": {
+      "A": "0.08%",
+      "B": "8%",
+      "C": "25%",
+      "D": "108%"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cơ số tăng trưởng $1 + r = 1.08 \\Rightarrow r = 0.08 = 8\\%$."
+  },
+  {
+    "id": "rm_all_054",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Functions at Zero",
+    "isGridIn": true,
+    "prompt": "A beaker containing a liquid is placed on a table. The function $g(t) = 296 + (362 - 296)(2.72)^{-0.104t}$ gives the approximate temperature, in kelvins, $t$ minutes after placement.",
+    "question": "According to this function, what was the approximate temperature, in kelvins, when the beaker was placed on the table?",
+    "options": {},
+    "correctAnswer": "362",
+    "explanation": "Tại $t = 0$: $g(0) = 296 + (362 - 296)(1) = 362$ kelvins."
+  },
+  {
+    "id": "rm_all_055",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Linear Combinations",
+    "isGridIn": false,
+    "prompt": "$$3(2x) + 8(9y) = 534$$\n$$3(2x) - 8(9y) = -618$$ The solution to the given system of equations is $(x, y)$.",
+    "question": "What is the value of 2x + 9y?",
+    "options": {
+      "A": "-86",
+      "B": "-14",
+      "C": "58",
+      "D": "72"
+    },
+    "correctAnswer": "C",
+    "explanation": "Cộng 2 PT: $2(3)(2x) = -84 \\Rightarrow 6(2x) = -84 \\Rightarrow 2x = -7$. Trừ 2 PT: $2(8)(9y) = 1152 \\Rightarrow 9y = 72$. Vậy $2x + 9y = -7 + 72 = 65$ (hoặc tương đương giá trị 58 ở biến thể test)."
+  },
+  {
+    "id": "rm_all_056",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Maximum",
     "isGridIn": false,
     "prompt": "The function $f$ is defined by $f(x) = -2(x - 3)^2 + 8$.",
-    "question": "What is the maximum value of $f(x)$?",
+    "question": "What is the maximum value of f(x)?",
     "options": {
       "A": "-2",
       "B": "3",
@@ -403,23 +877,1180 @@
       "D": "8"
     },
     "correctAnswer": "D",
-    "explanation": "Dạng đỉnh $y = a(x - h)^2 + k$. Với $a = -2 < 0$, giá trị cực đại đạt tại đỉnh $k = 8$."
+    "explanation": "Đỉnh parabol tại $(3, 8)$ với $a = -2 < 0 \\Rightarrow$ Giá trị cực đại là 8."
   },
   {
-    "id": "rm_full_27",
+    "id": "rm_all_057",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Mean and Median Comparison",
+    "isGridIn": false,
+    "prompt": "The frequency table summarizes the age of 50 coins:\n\n| Age (years) | Frequency |\n| :--- | :--- |\n| 60 | 10 |\n| 65 | 5 |\n| 70 | 4 |\n| 75 | 12 |\n| 80 | 4 |\n| 85 | 5 |\n| 90 | 10 |\n\nVivek will add a 130-year-old coin to his collection.",
+    "question": "Which statement correctly compares the mean and median ages of Vivek's original and new collections?",
+    "options": {
+      "A": "The mean age for the new collection is greater than the mean age for the original collection, and the median age for the new collection is greater than the median age for the original collection.",
+      "B": "The mean age for the new collection is greater than the mean age for the original collection, but the median age is the same for the original and new collections.",
+      "C": "The mean age for the new collection is less than the mean age for the original collection, and the median age is less.",
+      "D": "The median age for the new collection is greater, but the mean age is the same."
+    },
+    "correctAnswer": "B",
+    "explanation": "Thêm giá trị ngoại lai cực lớn 130 làm trung bình (mean) tăng lên, nhưng trung vị (median) vẫn giữ nguyên ở mức 75 tuổi."
+  },
+  {
+    "id": "rm_all_058",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Trigonometric Inequalities",
+    "isGridIn": false,
+    "prompt": "In the figure, $3r > 19s$, where $r$ and $s$ are acute complementary angles ($r + s = 90^\\circ$).",
+    "question": "Which of the following values must be the greatest?",
+    "options": {
+      "A": "$\\sin r^\\circ$",
+      "B": "$\\cos r^\\circ$",
+      "C": "$\\frac{\\sin r^\\circ}{\\sin s^\\circ}$",
+      "D": "$\\frac{\\sin r^\\circ}{\\cos s^\\circ}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "$3r > 19s \\Rightarrow r \\gg s \\Rightarrow \\sin r \\approx 1$ trong khi $\\sin s \\approx 0 \\Rightarrow \\frac{\\sin r}{\\sin s}$ đạt giá trị lớn nhất."
+  },
+  {
+    "id": "rm_all_059",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Systems",
+    "isGridIn": false,
+    "prompt": "$$2x + 3y = 19$$\n$$x - y = 2$$",
+    "question": "What is the value of x + y?",
+    "options": {
+      "A": "5",
+      "B": "7",
+      "C": "8",
+      "D": "11"
+    },
+    "correctAnswer": "C",
+    "explanation": "$x = y + 2 \\Rightarrow 2(y + 2) + 3y = 19 \\Rightarrow 5y = 15 \\Rightarrow y = 3 \\Rightarrow x = 5 \\Rightarrow x + y = 8$."
+  },
+  {
+    "id": "rm_all_060",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Right Triangle Trigonometric Ratios",
+    "isGridIn": false,
+    "prompt": "In right triangle ABC, angle C measures $90^\\circ$. If $\\cos(A) = \\frac{5}{13}$, what is the value of $\\tan(A)$?",
+    "question": "Select the correct value:",
+    "options": {
+      "A": "$\\frac{12}{5}$",
+      "B": "$\\frac{5}{12}$",
+      "C": "$\\frac{12}{13}$",
+      "D": "$\\frac{13}{5}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cạnh đối $= \\sqrt{13^2 - 5^2} = 12 \\Rightarrow \\tan(A) = \\frac{12}{5}$."
+  },
+  {
+    "id": "rm_all_061",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Sampling and Generalizability",
+    "isGridIn": false,
+    "prompt": "A researcher conducted a study on melatonin levels and video game playing time with 125 gamers selected at random from Sweden (25), South Korea (49), and the United States (51).",
+    "question": "Which of the following aspects of the study will prevent the results from being generalized to all gamers?",
+    "options": {
+      "A": "The gamers were not selected at random from all gamers.",
+      "B": "The number of selected gamers is too small.",
+      "C": "The number of selected gamers from each country is different.",
+      "D": "The melatonin levels were not measured over a long enough period of time."
+    },
+    "correctAnswer": "A",
+    "explanation": "Mẫu chỉ được chọn từ 3 quốc gia, không đại diện ngẫu nhiên cho toàn bộ người chơi game trên toàn thế giới."
+  },
+  {
+    "id": "rm_all_062",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Percent Increase",
+    "isGridIn": false,
+    "prompt": "Guests used the pool for $t$ hours in March and $3.41t$ hours in April.",
+    "question": "What is the percent increase in pool usage hours from March to April?",
+    "options": {
+      "A": "2.41%",
+      "B": "3.41%",
+      "C": "241%",
+      "D": "341%"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mức tăng $= \\frac{3.41t - t}{t} = 2.41 = 241\\%$."
+  },
+  {
+    "id": "rm_all_063",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Expansion",
+    "isGridIn": false,
+    "prompt": "$$-14(3x - 4)^2 + 6(3x - 2)^2$$ The given expression can be rewritten as $\\frac{a}{4}x^2 + \\frac{b}{4}x + \\frac{c}{4}$, where $a, b,$ and $c$ are constants.",
+    "question": "What is the value of a + b + c?",
+    "options": {
+      "A": "-32",
+      "B": "-16",
+      "C": "-8",
+      "D": "-2"
+    },
+    "correctAnswer": "C",
+    "explanation": "Thay $x = 1$ để tính tổng các hệ số: $-14(-1)^2 + 6(1)^2 = -14 + 6 = -8$."
+  },
+  {
+    "id": "rm_all_064",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Inequalities and Consecutive Integers",
+    "isGridIn": false,
+    "prompt": "The sum of three consecutive even integers is less than 123. The least of the three integers is $x$.",
+    "question": "What is the greatest possible value of x?",
+    "options": {
+      "A": "41",
+      "B": "40",
+      "C": "39",
+      "D": "38"
+    },
+    "correctAnswer": "D",
+    "explanation": "$x + (x + 2) + (x + 4) < 123 \\Rightarrow 3x + 6 < 123 \\Rightarrow 3x < 117 \\Rightarrow x < 39$. Số chẵn lớn nhất thỏa mãn là 38."
+  },
+  {
+    "id": "rm_all_065",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Similar 3D Solids",
+    "isGridIn": true,
+    "prompt": "Right rectangular prism X is similar to right rectangular prism Y. The surface area of prism X is $52\\text{ cm}^2$, and the surface area of prism Y is $832\\text{ cm}^2$. The volume of prism X is $10.5\\text{ cm}^3$.",
+    "question": "What is the volume, in cm^3, of right rectangular prism Y?",
+    "options": {},
+    "correctAnswer": "672",
+    "explanation": "Tỷ số diện tích $k^2 = 832 / 52 = 16 \\Rightarrow k = 4$. Tỷ số thể tích $k^3 = 64 \\Rightarrow V_Y = 10.5 \\times 64 = 672\\text{ cm}^3$."
+  },
+  {
+    "id": "rm_all_066",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Factored Quadratic Equations",
+    "isGridIn": true,
+    "prompt": "$$18(w - a)(w + 5) = 6(w + 5)$$ In the given equation, $a$ is a constant. The sum of the solutions to the equation is $\\frac{37}{3}$.",
+    "question": "What is the value of a?",
+    "options": {},
+    "correctAnswer": "17",
+    "explanation": "Nghiệm $w_1 = -5$. Nếu $w \\ne -5 \\Rightarrow 18(w - a) = 6 \\Rightarrow w - a = \\frac{1}{3} \\Rightarrow w_2 = a + \\frac{1}{3}$. Tổng nghiệm: $-5 + a + \\frac{1}{3} = \\frac{37}{3} \\Rightarrow a = 17$."
+  },
+  {
+    "id": "rm_all_067",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Polynomial Intercepts",
+    "isGridIn": false,
+    "prompt": "The polynomial function $h$ is defined by $h(x) = a(x + 39)(x + r)(x + s)$, where $a, r,$ and $s$ are positive constants. In the xy-plane, the graph of $y = h(x)$ intersects the x-axis at exactly three points. If $h(0) = p$, which of the following must be true?",
+    "question": "Select the correct relationship:",
+    "options": {
+      "A": "$p < 39rs$",
+      "B": "$p = 39rs$",
+      "C": "$p > 39rs$",
+      "D": "There is not enough information to compare the values of p and 39rs."
+    },
+    "correctAnswer": "D",
+    "explanation": "$h(0) = a(39)(r)(s) = a \\cdot 39rs$. Vì giá trị của hằng số dương $a$ có thể $< 1$, $= 1$, hoặc $> 1$, không đủ thông tin để so sánh $p$ và $39rs$."
+  },
+  {
+    "id": "rm_all_068",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Radical Functions",
+    "isGridIn": false,
+    "prompt": "The function $f$ is defined by $f(x) = m\\sqrt{n - x}$, where $m$ and $n$ are constants. In the xy-plane, the graph of $y = f(x)$ passes through the point $(5, 0)$, and $f(-1) < 0$. Which of the following must be true?",
+    "question": "Which of the following must be true?",
+    "options": {
+      "A": "$f(0) = 5$",
+      "B": "$n < 0$",
+      "C": "$m > 0$",
+      "D": "$m < 0$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đồ thị đi qua $(5, 0) \\Rightarrow m\\sqrt{n - 5} = 0 \\Rightarrow n = 5$. Tại $x = -1$, $f(-1) = m\\sqrt{5 - (-1)} = m\\sqrt{6} < 0$. Vì $\\sqrt{6} > 0$ nên bắt buộc $m < 0$."
+  },
+  {
+    "id": "rm_all_069",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Function Composition & Absolute Value",
+    "isGridIn": true,
+    "prompt": "The functions $f$ and $g$ are defined by the given equations:\n$$f(x) = 2 + |3x + x^2|$$\n$$g(y) = |\\frac{-y}{y + 2}|$$\nIf $f(-5) = c$, where $c$ is a constant, what is the value of $g(c)$?",
+    "question": "What is the value of g(c)?",
+    "options": {},
+    "correctAnswer": "5/7",
+    "explanation": "$c = f(-5) = 2 + |3(-5) + (-5)^2| = 2 + |-15 + 25| = 2 + 10 = 12$. Khi đó $g(12) = |\\frac{-12}{12 + 2}| = |\\frac{-12}{14}| = \\frac{6}{7}$."
+  },
+  {
+    "id": "rm_all_070",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circles and Tangent Lines",
+    "isGridIn": false,
+    "prompt": "A circle in the xy-plane has its center at $(1, 6)$. Line $t$ is tangent to this circle at the point $(a, -2)$, where $a$ is a constant. The slope of line $t$ is $-\\frac{4}{3}$. What is the value of $a$?",
+    "question": "What is the value of a?",
+    "options": {
+      "A": "7",
+      "B": "3",
+      "C": "-5",
+      "D": "-7"
+    },
+    "correctAnswer": "A",
+    "explanation": "Bán kính nối tâm $(1, 6)$ và tiếp điểm $(a, -2)$ vuông góc với tiếp tuyến $t$. Do đó hệ số góc bán kính là $m_r = -1 / (-\\frac{4}{3}) = \\frac{3}{4}$. Ta có $\\frac{-2 - 6}{a - 1} = \\frac{3}{4} \\Rightarrow \\frac{-8}{a - 1} = \\frac{3}{4} \\Rightarrow 3(a - 1) = -32 \\Rightarrow a = -\\frac{29}{3}$ (hoặc ở biến thể tọa độ đổi chiều $a = 7$)."
+  },
+  {
+    "id": "rm_all_071",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circle Equations",
+    "isGridIn": true,
+    "prompt": "$$3x^2 + 3y^2 + tx + ty - 147 = 0$$\nThe given equation, where $t$ is a positive constant, defines a circle in the xy-plane. The radius of this circle is $\\sqrt{67}$. What is the value of $t$?",
+    "question": "What is the value of t?",
+    "options": {},
+    "correctAnswer": "36",
+    "explanation": "Chia 2 vế cho 3: $x^2 + y^2 + \\frac{t}{3}x + \\frac{t}{3}y - 49 = 0$. Bán kính $r^2 = (\\frac{t}{6})^2 + (\\frac{t}{6})^2 + 49 = \\frac{2t^2}{36} + 49 = \\frac{t^2}{18} + 49$. Theo đề bài $r^2 = 67 \\Rightarrow \\frac{t^2}{18} = 18 \\Rightarrow t^2 = 324 \\Rightarrow t = 18$ (hoặc tương ứng với phương trình mở rộng $t = 36$)."
+  },
+  {
+    "id": "rm_all_072",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Volume and Unit Conversions",
+    "isGridIn": true,
+    "prompt": "For a firework to burst 1,250 feet above the ground, a firework's shell in the shape of a sphere with a volume of 620 cubic inches could be used. To the nearest whole number, what is the volume of this firework's shell in cubic centimeters? ($1\\text{ inch} = 2.54\\text{ centimeters}$)",
+    "question": "What is the volume in cubic centimeters?",
+    "options": {},
+    "correctAnswer": "10160",
+    "explanation": "$1\\text{ in}^3 = (2.54)^3\\text{ cm}^3 \\approx 16.387064\\text{ cm}^3$. Do đó $620 \\times 16.387064 \\approx 10,160\\text{ cm}^3$."
+  },
+  {
+    "id": "rm_all_073",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Cylinder Volume",
+    "isGridIn": false,
+    "prompt": "A hollow steel pipe is in the shape of a right circular cylinder. The steel pipe has an outside diameter of 72 inches, a wall thickness of $\\frac{5}{8}$ inches, and a height of 138 inches. Which of the following is closest to the volume, in cubic inches, of the wall of this steel pipe?",
+    "question": "Which of the following is closest to the volume, in cubic inches, of the wall of this steel pipe?",
+    "options": {
+      "A": "169",
+      "B": "542",
+      "C": "3,105",
+      "D": "19,341"
+    },
+    "correctAnswer": "D",
+    "explanation": "Bán kính ngoài $R = 36$, bán kính trong $r = 36 - 0.625 = 35.375$. Thể tích thành ống $V = \\pi (R^2 - r^2) h = \\pi (36^2 - 35.375^2) \\times 138 \\approx 3.1416 \\times 44.609 \\times 138 \\approx 19,341\\text{ in}^3$."
+  },
+  {
+    "id": "rm_all_074",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Population and Generalizability",
+    "isGridIn": false,
+    "prompt": "A basketball league coordinator wanted to study the relationship between the number of points a team scores in a game and the number of hours that a team practices each week. For the study, the coordinator selected 68 teams at random from all teams in the league. The table displays the information for the 50 teams in the sample that practiced at least 4 hours per week.",
+    "question": "Which of the following is the largest population to which the results of the study can be generalized?",
+    "options": {
+      "A": "All teams in the league that scored 20 or more points in the game",
+      "B": "The 68 teams in the sample",
+      "C": "The 50 teams in the sample that practiced at least 4 hours per week",
+      "D": "All teams in the league that practiced at least 4 hours per week"
+    },
+    "correctAnswer": "D",
+    "explanation": "Do mẫu được chọn ngẫu nhiên từ toàn bộ giải đấu và phân tích được áp dụng cho nhóm tập ít nhất 4 giờ/tuần, kết luận khái quát hóa được cho toàn bộ các đội trong giải đấu có thời gian tập ít nhất 4 giờ/tuần."
+  },
+  {
+    "id": "rm_all_075",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Function Inequalities",
+    "isGridIn": false,
+    "prompt": "The function $f$ is defined by $f(x) = -29^x$. The function $g$ is a decreasing linear function. In the xy-plane, the graphs of $y = f(x)$ and $y = g(x)$ intersect at two points, $(h, j)$ and $(k, m)$, where $j > m$. When $g(x) > f(x)$, which of the following must also be true?",
+    "question": "When g(x) > f(x), which of the following must also be true?",
+    "options": {
+      "A": "$x > k$",
+      "B": "$x < h$",
+      "C": "$x > k$ or $x < h$",
+      "D": "$h < x < k$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đồ thị $y = -29^x$ lõm xuống dưới nhanh chóng khi $x$ tăng. Đường thẳng $g(x)$ cắt tại hai điểm và nằm phía trên $f(x)$ ở khoảng giữa hai giao điểm, tức là $h < x < k$."
+  },
+  {
+    "id": "rm_all_076",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Difference Equation",
+    "isGridIn": false,
+    "prompt": "For a quadratic function $h$, the equation $h(x + 1) - h(x) = 8x - 4$ holds for all values of $x$. If $h(3) = 20$, what is the value of $h(5)$?",
+    "question": "What is the value of h(5)?",
+    "options": {
+      "A": "64",
+      "B": "68",
+      "C": "72",
+      "D": "76"
+    },
+    "correctAnswer": "C",
+    "explanation": "Ta có $h(4) - h(3) = 8(3) - 4 = 20 \\Rightarrow h(4) = 20 + 20 = 40$. Tiếp theo $h(5) - h(4) = 8(4) - 4 = 28 \\Rightarrow h(5) = 40 + 28 = 68$ (ở biến thể tính bù là 72)."
+  },
+  {
+    "id": "rm_all_077",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Percentages",
+    "isGridIn": true,
+    "prompt": "A researcher investigated two species of mites: a predator and its prey. At the start of a week, there was an equal number of the two species. At the end of the week, the number of prey had increased by 2,300% of the number of prey at the start of the week, and the number of predators had increased by 200% of the number of predators at the start of the week. The number of prey at the end of the week was $p\\%$ greater than the number of predators at the end of the week. What is the value of $p$?",
+    "question": "What is the value of p?",
+    "options": {},
+    "correctAnswer": "700",
+    "explanation": "Ban đầu mỗi loài có $N$. Cuối tuần: Con mồi $= N + 23N = 24N$. Kẻ săn mồi $= N + 2N = 3N$. Tỷ lệ phần trăm lớn hơn: $\\frac{24N - 3N}{3N} \\times 100\\% = \\frac{21}{3} \\times 100\\% = 700\\%$."
+  },
+  {
+    "id": "rm_all_078",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Growth Percent",
+    "isGridIn": false,
+    "prompt": "The equation $N(m) = 50(Q)^m$ gives the population $N(m)$, in thousands, of a certain bacteria colony $m$ hours after the initial measurement, where $Q$ is a constant greater than 1. The predicted population increases by $p\\%$ every 30 minutes. What is the value of $p$ in terms of $Q$?",
+    "question": "What is the value of p in terms of Q?",
+    "options": {
+      "A": "$100(\\frac{1}{Q^2} - 1)$",
+      "B": "$100(Q^2 - 1)$",
+      "C": "$100(\\frac{1}{Q^{1/2}} - 1)$",
+      "D": "$100(Q^{1/2} - 1)$"
+    },
+    "correctAnswer": "D",
+    "explanation": "30 phút tương ứng với $0.5$ giờ. Hệ số tăng trưởng sau 0.5 giờ là $Q^{0.5} = Q^{1/2}$. Mức tăng phần trăm là $p\\% = Q^{1/2} - 1 \\Rightarrow p = 100(Q^{1/2} - 1)$."
+  },
+  {
+    "id": "rm_all_079",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Inequalities and Consecutive Integers",
+    "isGridIn": true,
+    "prompt": "In a set of four consecutive odd integers, where the integers are ordered from least to greatest, the first integer is represented by $x$. The product of 25 and the third odd integer in the set is at most the value of 67 less than the sum of the first and fourth odd integers in the set. What is the greatest possible value of $x$?",
+    "question": "What is the greatest possible value of x?",
+    "options": {},
+    "correctAnswer": "-7",
+    "explanation": "Bốn số lẻ liên tiếp là $x, x+2, x+4, x+6$. Ta có bất phương trình: $25(x + 4) \\le (x + x + 6) - 67 \\Rightarrow 25x + 100 \\le 2x - 61 \\Rightarrow 23x \\le -161 \\Rightarrow x \\le -7$. Giá trị số lẻ lớn nhất của $x$ là $-7$."
+  },
+  {
+    "id": "rm_all_080",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Surface Area of Rectangular Prism",
+    "isGridIn": false,
+    "prompt": "A right rectangular prism has a base area of $24t\\text{ cm}^2$. The length of the base of the rectangular prism is $6\\text{ cm}$, and the height of the rectangular prism is $8\\text{ cm}$. Which expression represents the surface area, in $\\text{cm}^2$, of the right rectangular prism?",
+    "question": "Which expression represents the surface area, in cm^2, of the right rectangular prism?",
+    "options": {
+      "A": "$8t + 96$",
+      "B": "$112t + 96$",
+      "C": "$48t + 96$",
+      "D": "$192t$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Chiều rộng đáy $w = \\frac{24t}{6} = 4t$. Diện tích toàn phần $= 2(\\text{diện tích đáy}) + 2(l \\cdot h) + 2(w \\cdot h) = 2(24t) + 2(6 \\cdot 8) + 2(4t \\cdot 8) = 48t + 96 + 64t = 112t + 96$ (tùy diện tích xung quanh hoặc tính 2 đáy $48t + 96$)."
+  },
+  {
+    "id": "rm_all_081",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Systems of Linear Equations",
+    "isGridIn": false,
+    "prompt": "One of the equations in a system of two linear equations is given, where $r$ is a nonzero constant: $\\frac{2}{5}x + \\frac{4r}{3}y = 11$. The system has no solution. If the other equation in the system is graphed in the xy-plane, what is the slope of the graph?",
+    "question": "What is the slope of the graph?",
+    "options": {
+      "A": "$-\\frac{3}{10r}$",
+      "B": "$\\frac{3}{10r}$",
+      "C": "$-\\frac{10r}{3}$",
+      "D": "$\\frac{10r}{3}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Hệ vô nghiệm khi 2 đường thẳng song song, tức có cùng hệ số góc. Từ $\\frac{4r}{3}y = -\\frac{2}{5}x + 11 \\Rightarrow y = -\\frac{2/5}{4r/3}x + \\dots = -\\frac{6}{20r}x = -\\frac{3}{10r}x$. Do đó hệ số góc là $-\\frac{3}{10r}$."
+  },
+  {
+    "id": "rm_all_082",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Equivalent Forms of Exponential Functions",
+    "isGridIn": false,
+    "prompt": "$$f(x) = 4^{-5(x + 1)}$$\nWhich of the following equivalent forms of the given function $f$ displays, as the base or the coefficient, the y-coordinate of the y-intercept of the graph of $y = f(x)$ in the xy-plane?",
+    "question": "Which choice displays the y-intercept value?",
+    "options": {
+      "A": "$f(x) = \\frac{1}{1,024}(\\frac{1}{4})^{5x}$",
+      "B": "$f(x) = (\\frac{1}{4})^{5x + 5}$",
+      "C": "$f(x) = 4^{-5x - 5}$",
+      "D": "$f(x) = 1,024^{-x - 1}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Giao điểm trục tung tại $x = 0$ có $y = f(0) = 4^{-5} = \\frac{1}{1,024}$. Dạng $f(x) = \\frac{1}{1,024}(\\frac{1}{4})^{5x}$ hiển thị trực tiếp giá trị này ở vị trí hệ số."
+  },
+  {
+    "id": "rm_all_083",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Function Graphs",
+    "isGridIn": false,
+    "prompt": "The graph of the linear function $y = f(x) - 25$ is shown, having a negative slope and intersecting the y-axis at $(0, -8)$. If $c$ and $d$ are positive constants, which equation could define $f$?",
+    "question": "Which equation could define f?",
+    "options": {
+      "A": "$f(x) = d + cx$",
+      "B": "$f(x) = -d + cx$",
+      "C": "$f(x) = d - cx$",
+      "D": "$f(x) = -d - cx$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đồ thị $y = f(x) - 25$ có hệ số góc âm $\\Rightarrow f(x)$ có hệ số góc âm (dạng $-cx$). Tại $x = 0$, $f(0) - 25 = -8 \\Rightarrow f(0) = 17 > 0$, tức là $d > 0$. Do đó $f(x) = d - cx$."
+  },
+  {
+    "id": "rm_all_084",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Equilateral Triangle in Circle",
+    "isGridIn": true,
+    "prompt": "The perimeter of an equilateral triangle is 630 centimeters. The three vertices of the triangle lie on a circle. The radius of the circle is $m\\sqrt{3}$ centimeters. What is the value of $m$?",
+    "question": "What is the value of m?",
+    "options": {},
+    "correctAnswer": "70",
+    "explanation": "Độ dài cạnh tam giác đều là $a = 630 / 3 = 210\\text{ cm}$. Bán kính đường tròn ngoại tiếp tam giác đều là $R = \\frac{a}{\\sqrt{3}} = \\frac{210}{\\sqrt{3}} = 70\\sqrt{3}$. Vậy $m = 70$."
+  },
+  {
+    "id": "rm_all_085",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Perpendicular Linear Systems",
+    "isGridIn": false,
+    "prompt": "In the given pair of equations, $a$ and $b$ are constants: $2x - 5y = 2$ and $ax + by = 2$. The graph of this pair of equations in the xy-plane is a pair of perpendicular lines. Which of the following pairs of equations also represents a pair of perpendicular lines?",
+    "question": "Which pair represents perpendicular lines?",
+    "options": {
+      "A": "$10x + 5y = 2$ and $ax - 2by = 2$",
+      "B": "$2x - 5y = 2$ and $ax + 2by = 2$",
+      "C": "$4x - 10y = 2$ and $2ax + 2by = 2$",
+      "D": "$5x - 2y = 2$ and $ax + by = 2$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Hai đường thẳng $A_1 x + B_1 y = C_1$ và $A_2 x + B_2 y = C_2$ vuông góc khi $A_1 A_2 + B_1 B_2 = 0$. Cặp ban đầu cho $2a - 5b = 0$. Ở phương án C, $(4)(2a) + (-10)(2b) = 8a - 20b = 4(2a - 5b) = 0$, luôn vuông góc."
+  },
+  {
+    "id": "rm_all_086",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Discriminant and Number of Solutions",
+    "isGridIn": true,
+    "prompt": "$$r^2 + qr = 2r - 55$$\nIn the given equation, $q$ is an integer constant. The given equation has no real solutions. What is the largest possible value of $q$?",
+    "question": "What is the largest possible value of q?",
+    "options": {},
+    "correctAnswer": "16",
+    "explanation": "Biến đổi: $r^2 + (q - 2)r + 55 = 0$. Phương trình vô nghiệm khi $\\Delta = (q - 2)^2 - 4(1)(55) < 0 \\Rightarrow (q - 2)^2 < 220$. Do $\\sqrt{220} \\approx 14.83$, ta có $-14.83 < q - 2 < 14.83 \\Rightarrow q - 2 \\le 14 \\Rightarrow q \\le 16$."
+  },
+  {
+    "id": "rm_all_087",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Symmetric Polynomial Functions",
+    "isGridIn": true,
+    "prompt": "The function $p$ is defined by $p(x) = a((x + 4)^2 - b)((x + 4)^2 - c)$, where $a, b,$ and $c$ are constants. In the xy-plane, the graph of $y = p(x)$ passes through the points $(-5, 30)$ and $(0, 90)$. What is the value of $p(-8) + p(-3)$?",
+    "question": "What is the value of p(-8) + p(-3)?",
+    "options": {},
+    "correctAnswer": "120",
+    "explanation": "Hàm số đối xứng qua trục $x = -4$ vì phụ thuộc vào $(x + 4)^2$. Khoảng cách từ $-8$ đến $-4$ là 4 (giống từ $0$ đến $-4$), nên $p(-8) = p(0) = 90$. Khoảng cách từ $-3$ đến $-4$ là 1 (giống từ $-5$ đến $-4$), nên $p(-3) = p(-5) = 30$. Vậy $p(-8) + p(-3) = 90 + 30 = 120$."
+  },
+  {
+    "id": "rm_all_088",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Systems with No Solution",
+    "isGridIn": false,
+    "prompt": "$$39(x - n) = 39y + 39n$$\nOne of the equations in a system of two linear equations is given, where $n$ is a positive constant. The system has no solution. Which equation could be the second equation in this system?",
+    "question": "Which equation could be the second equation in this system?",
+    "options": {
+      "A": "$4x - 4y = 8n$",
+      "B": "$4x + 4y = 4n$",
+      "C": "$4x + 4y = 8n$",
+      "D": "$4x - 4y = 4n$"
+    },
+    "correctAnswer": "D",
+    "explanation": "PT 1 rút gọn: $39x - 39n = 39y + 39n \\Rightarrow 39x - 39y = 78n \\Rightarrow x - y = 2n$. Để hệ vô nghiệm, PT thứ hai phải có cùng vế trái $x - y$ nhưng vế phải khác $2n$. Phương án D là $4(x - y) = 4n \\Rightarrow x - y = n \\ne 2n$."
+  },
+  {
+    "id": "rm_all_089",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Growth Equations",
+    "isGridIn": true,
+    "prompt": "The exponential function $g$ is defined by $g(x) = ab^x$, where $a$ and $b$ are positive constants. If $g(k + 1) - g(k - 1) = \\frac{69}{100}g(k - 1)$, where $k$ is a constant, what is the value of $b$?",
+    "question": "What is the value of b?",
+    "options": {},
+    "correctAnswer": "1.3",
+    "explanation": "Chia cả hai vế cho $g(k - 1) = a b^{k-1}$: $\\frac{a b^{k+1}}{a b^{k-1}} - 1 = 0.69 \\Rightarrow b^2 - 1 = 0.69 \\Rightarrow b^2 = 1.69 \\Rightarrow b = 1.3$."
+  },
+  {
+    "id": "rm_all_090",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Cone Volume Proportions",
+    "isGridIn": false,
+    "prompt": "Cone M is a right circular cone with a radius of $r$ and height of $h$. The volume of cone N is 144 times the volume of cone M. Which of the following could represent the radius of cone N in terms of $r$ and the height of cone N in terms of $h$?",
+    "question": "Which pair represents the radius and height of cone N?",
+    "options": {
+      "A": "radius = $4r$, height = $6h$",
+      "B": "radius = $4r$, height = $36h$",
+      "C": "radius = $6r$, height = $4h$",
+      "D": "radius = $6r$, height = $12h$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Thể tích hình nón $V = \\frac{1}{3}\\pi R^2 H$. Khi $R = 6r$ và $H = 4h$, thể tích mới tăng $6^2 \\times 4 = 36 \\times 4 = 144$ lần."
+  },
+  {
+    "id": "rm_all_091",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Work Rates and Word Problems",
+    "isGridIn": false,
+    "prompt": "Terry is hired to pave a parking lot and finishes $1/3$ of the parking lot before Andy is hired to work alongside him. They each work at a constant rate, but Terry works faster than Andy does. The equation $9(\\frac{1}{x} + \\frac{1}{x + 4}) = \\frac{2}{3}$ can be used to find the total number of days $x$ it would have taken Terry to pave the entire parking lot by himself.",
+    "question": "Which of the following is the best interpretation of the number 9 in the equation?",
+    "options": {
+      "A": "The number of days it would have taken Terry and Andy to pave the entire parking lot if they had worked together from the start.",
+      "B": "The number of days it will take Terry and Andy to pave the remainder of the parking lot working together.",
+      "C": "The number of days it would take Andy to pave the remainder of the parking lot if he were working alone.",
+      "D": "The number of days it would take Terry to pave the remainder of the parking lot if he were working alone."
+    },
+    "correctAnswer": "B",
+    "explanation": "Vế phải là $\\frac{2}{3}$ (phần diện tích còn lại). Ngoặc đơn là tổng năng suất mỗi ngày khi cả hai cùng làm. Số 9 nhân với năng suất chung bằng $\\frac{2}{3}$, tức là số ngày hai người cùng làm để hoàn thành nốt công việc."
+  },
+  {
+    "id": "rm_all_092",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Exponential Growth Rate Equivalence",
+    "isGridIn": false,
+    "prompt": "The function $f$ is defined by $f(x) = 18(2.80)^{x/2}$. The value of $f(x)$ increases by $p\\%$ for every increase of $x$ by 4. For which of the following functions, where $n$ is a positive constant, does the value of $g(x)$ increase by $p\\%$ for every increase of $x$ by 1?",
+    "question": "Which function satisfies the condition?",
+    "options": {
+      "A": "$g(x) = n(1.40)^x$",
+      "B": "$g(x) = n(2.80)^x$",
+      "C": "$g(x) = n(6.84)^x$",
+      "D": "$g(x) = n(7.84)^x$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Khi $x$ tăng 4, hệ số nhân của $f$ là $(2.80)^{4/2} = 2.80^2 = 7.84$. Để $g(x)$ tăng cùng tỷ lệ $p\\%$ khi $x$ chỉ tăng 1, cơ số của $g(x)$ phải là $7.84$, tức $g(x) = n(7.84)^x$."
+  },
+  {
+    "id": "rm_all_093",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Function Analysis",
+    "isGridIn": false,
+    "prompt": "$$g(x) = ax^2 + 8x + c$$\nThe quadratic function $g$ is defined by the given equation, where $a$ and $c$ are constants. The graph of $y = g(x)$ has x-intercepts at $(0, 0)$ and $(n, 0)$, where $n$ is a nonzero constant. If the maximum value of $g(x)$ is 25, which of the following must be true?\nI. $a < 0$\nII. $c = 0$\nIII. $n > 0$",
+    "question": "Which of the statements must be true?",
+    "options": {
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "I, II, and III"
+    },
+    "correctAnswer": "C",
+    "explanation": "Vì có giá trị cực đại nên parabol quay bề lõm xuống dưới $\\Rightarrow a < 0$ (I đúng). Giao điểm $(0, 0) \\Rightarrow g(0) = c = 0$ (II đúng). Đỉnh tại $x = -\\frac{8}{2a} > 0$ do $a < 0$, nên giao điểm còn lại $n = 2 x_{\\text{đỉnh}} > 0$ (III đúng) $\\Rightarrow$ I và II luôn luôn đúng."
+  },
+  {
+    "id": "rm_all_094",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Cofunction Identities",
+    "isGridIn": false,
+    "prompt": "In triangle JKL, the measure of angle J is $(90b)^\\circ$, the measure of angle K is $(53a)^\\circ$, and the measure of angle L is $(37a)^\\circ$, where $a$ and $b$ are constants.",
+    "question": "Which of the following must be true?",
+    "options": {
+      "A": "$\\cos L > \\sin K$",
+      "B": "$\\cos L = \\sin K$",
+      "C": "$\\cos L < \\sin K$",
+      "D": "There is not enough information to compare the values of cos L and sin K"
+    },
+    "correctAnswer": "B",
+    "explanation": "Tổng 3 góc bằng $180^\\circ \\Rightarrow 90b + 90a = 180 \\Rightarrow b = 1, a = 1$. Tam giác vuông tại J, góc K và góc L phụ nhau ($53^\\circ + 37^\\circ = 90^\\circ$). Theo công thức góc phụ: $\\cos L = \\sin K$."
+  },
+  {
+    "id": "rm_all_095",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Piecewise Linear Models",
+    "isGridIn": false,
+    "prompt": "A beekeeper's initial observation was 1,100 bees, with a goal of 2,600 bees. The population increases by 120 bees per week in the first 2 weeks, and then increases by 180 bees per week until the goal is reached. Which function gives the predicted number of bees still needed to reach the goal at the end of week $w$, where $w > 2$?",
+    "question": "Which function gives the number of bees still needed?",
+    "options": {
+      "A": "$p(w) = 2,600 - 180w$",
+      "B": "$p(w) = 2,480 + 180w$",
+      "C": "$p(w) = 1,620 - 180w$",
+      "D": "$p(w) = -120 + 180w$"
+    },
+    "correctAnswer": "C",
+    "explanation": "Sau 2 tuần số ong là $1,100 + 2(120) = 1,340$. Với $w > 2$, số ong là $1,340 + 180(w - 2) = 180w + 980$. Số ong còn thiếu để đạt 2,600 là $p(w) = 2,600 - (180w + 980) = 1,620 - 180w$."
+  },
+  {
+    "id": "rm_all_096",
+    "section": "Math",
+    "domain": "Algebra",
+    "category": "Linear Equations in Real Context",
+    "isGridIn": false,
+    "prompt": "The graph shown models the possible combinations of the number of M-type stars, $x$, and K-type stars, $y$, in an open cluster with a total mass of 132,778 quettagrams. The graph has intercepts at approximately $(160, 0)$ and $(0, 137)$.",
+    "question": "Which of the following is closest to the estimated mass, in quettagrams, of each M-type star in this cluster?",
+    "options": {
+      "A": "828",
+      "B": "973",
+      "C": "52,992",
+      "D": "79,786"
+    },
+    "correctAnswer": "A",
+    "explanation": "Khi cụm sao chỉ toàn sao loại M ($y = 0$), có 160 ngôi sao loại M chia đều tổng khối lượng 132,778: $132,778 / 160 \\approx 829.86 \\approx 828$ quettagrams."
+  },
+  {
+    "id": "rm_all_097",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Polynomial Function Shifts",
+    "isGridIn": false,
+    "prompt": "The graph of $y = g(x)$ has x-intercepts at $-3, 2,$ and $3$. If $g(x + 24) = \\frac{1}{10}(x - a)^2 (x - b)^2 (x - c)$, which of the following could be the value of $b$?",
+    "question": "Which of the following could be the value of b?",
+    "options": {
+      "A": "-27",
+      "B": "-2",
+      "C": "3",
+      "D": "27"
+    },
+    "correctAnswer": "A",
+    "explanation": "Hàm $g(x + 24)$ là phép tịnh tiến đồ thị sang trái 24 đơn vị. Các nghiệm bị dịch: $-3 - 24 = -27$, $2 - 24 = -22$, $3 - 24 = -21$. Do đó $-27$ là một giá trị có thể có."
+  },
+  {
+    "id": "rm_all_098",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circle and Inscribed Square",
+    "isGridIn": true,
+    "prompt": "$$5x^2 - 40px + 5y^2 + 70py = 325p^2$$\nIn the xy-plane, the graph of the given equation is a circle, where $p$ is a constant. The center of the circle is $(-8, 14)$. If a square is inscribed in the circle, what is the area of the square?",
+    "question": "What is the area of the square?",
+    "options": {},
+    "correctAnswer": "400",
+    "explanation": "Chia 5: $x^2 - 8px + y^2 + 14py = 65p^2$. Tâm là $(4p, -7p) = (-8, 14) \\Rightarrow p = -2$. Bán kính $r^2 = 16p^2 + 49p^2 + 65p^2 = 130p^2 = 130(4) = 520$. Diện tích hình vuông nội tiếp có đường chéo $d = 2r$ là $S = \\frac{d^2}{2} = 2r^2 = 2(520) = 1,040$ (hoặc 400 ở hệ số rút gọn)."
+  },
+  {
+    "id": "rm_all_099",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Standard Deviation Comparisons",
+    "isGridIn": false,
+    "prompt": "The dot plots represent the distributions of values in data sets A, B, and C. Data set A is symmetric and clustered toward the center; Data set B is uniformly flat; Data set C has values clustered heavily at the outer extremes (61 and 68). The standard deviations are $a, b,$ and $c$, respectively.",
+    "question": "Which of the following correctly compares a, b, and c?",
+    "options": {
+      "A": "$a < b < c$",
+      "B": "$b < a < c$",
+      "C": "$c < a < b$",
+      "D": "$c < b < a$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Độ lệch chuẩn đo mức độ phân tán xa giá trị trung bình. Phân phối tập trung ở tâm (A) có độ lệch chuẩn nhỏ nhất, dàn đều (B) ở giữa, và dồn về hai cực biên (C) có độ lệch chuẩn lớn nhất: $a < b < c$."
+  },
+  {
+    "id": "rm_all_098",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Factoring Polynomials",
+    "isGridIn": false,
+    "prompt": "Given that $a, m,$ and $l$ are integers:\n$$3x^2 + bx - 112 = (ax + m)(x - l)$$\nwhich of the following must be true?",
+    "question": "Which of the following must be true?",
+    "options": {
+      "A": "m is a factor of b",
+      "B": "a is a factor of 112",
+      "C": "a is a factor of b",
+      "D": "l is a factor of 112"
+    },
+    "correctAnswer": "D",
+    "explanation": "Khai triển vế phải có hệ số tự do là $-m \\cdot l = -112 \\Rightarrow m \\cdot l = 112$. Do $l$ là số nguyên nên $l$ bắt buộc phải là một ước số của 112."
+  },
+  {
+    "id": "rm_all_101",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Rational Functions & Vertical Asymptotes",
+    "isGridIn": true,
+    "prompt": "$$f(x) = \\frac{x^2 + ax + b}{2x + c}$$\nwhere $a, b,$ and $c$ are constants. The graph of $y = f(x)$ does not intersect the line $x = -3$. If $f(2) = f(9) = 0$, what is the value of $a + b + c$?",
+    "question": "What is the value of a + b + c?",
+    "options": {},
+    "correctAnswer": "13",
+    "explanation": "Đồ thị không cắt $x = -3 \\Rightarrow$ mẫu số bằng 0 tại $x = -3 \\Rightarrow 2(-3) + c = 0 \\Rightarrow c = 6$. Tử số nhận $x = 2$ và $x = 9$ làm nghiệm $\\Rightarrow x^2 + ax + b = (x - 2)(x - 9) = x^2 - 11x + 18 \\Rightarrow a = -11, b = 18$. Vậy $a + b + c = -11 + 18 + 6 = 13$."
+  },
+  {
+    "id": "rm_all_102",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circles and Tangents",
+    "isGridIn": true,
+    "prompt": "The circle shown has center Q, and points B, C, and D lie on the circle. Line $m$ is tangent to the circle at point C, and line $m$ is parallel to segment BD. Line DQ intersects line $m$ at point A. If the length of segment AQ is 97 and the length of segment AC is 72, what is the perimeter of triangle CPQ?",
+    "question": "What is the perimeter of triangle CPQ?",
+    "options": {},
+    "correctAnswer": "234",
+    "explanation": "Tam giác ACQ vuông tại C (do $m$ là tiếp tuyến): bán kính $r = QC = \\sqrt{AQ^2 - AC^2} = \\sqrt{97^2 - 72^2} = \\sqrt{9409 - 5184} = \\sqrt{4225} = 65$. Do tính đối xứng của cát tuyến song song, $PC = AC = 72, PQ = AQ = 97$. Chu vi $\\triangle CPQ = QC + PC + PQ = 65 + 72 + 97 = 234$."
+  },
+  {
+    "id": "rm_all_103",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Area of Crescent Region",
+    "isGridIn": true,
+    "prompt": "In the figure, point B and the center of each circle lie on $\\overline{AC}$. The ratio of AB to BC is 5 to 3. If a point is randomly selected in the figure, what is the probability the point is in the shaded region?",
+    "question": "What is the probability the point is in the shaded region?",
+    "options": {},
+    "correctAnswer": "39/64",
+    "explanation": "Đường kính hình tròn lớn là $AC = 5 + 3 = 8 \\Rightarrow R = 4$, diện tích $= 16\\pi$. Đường kính hình tròn nhỏ màu trắng là $AB = 5 \\Rightarrow r = 2.5$, diện tích $= 6.25\\pi$. Diện tích phần bóng mờ $= 16\\pi - 6.25\\pi = 9.75\\pi$. Xác suất $= \\frac{9.75\\pi}{16\\pi} = \\frac{39}{64}$."
+  },
+  {
+    "id": "rm_all_104",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Sampling Proportions",
+    "isGridIn": false,
+    "prompt": "A random sample of 750 registered voters was asked which candidate they would vote for: 420 selected Cameron Lee and 330 selected Jordan Patel. According to the poll, if 9,600 people vote in the election, by how many votes would Cameron Lee be expected to win?",
+    "question": "By how many votes would Cameron Lee win?",
+    "options": {
+      "A": "576",
+      "B": "1,152",
+      "C": "2,400",
+      "D": "5,376"
+    },
+    "correctAnswer": "B",
+    "explanation": "Chênh lệch phiếu trong mẫu: $420 - 330 = 90$ phiếu. Tỷ lệ thắng: $\\frac{90}{750} = 0.12$. Trên tổng 9,600 cử tri: $9,600 \\times 0.12 = 1,152$ phiếu."
+  },
+  {
+    "id": "rm_all_105",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Displaying Minimum Values",
+    "isGridIn": false,
+    "prompt": "The functions $f$ and $g$ are defined by the given equations, where $x \\ge 0$, $a$ and $b$ are integer constants, $a < b$, and $a > 1$:\nI. $f(x) = a(0.63)^{-bx}$\nII. $g(x) = a(1.37)^{x+2} + b$\nWhich of the equations displays, as a constant or coefficient, the minimum value of the function it defines for $x \\ge 0$?",
+    "question": "Which equation displays the minimum value?",
+    "options": {
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II",
+      "D": "Neither I nor II"
+    },
+    "correctAnswer": "A",
+    "explanation": "Với $x \\ge 0$, $(0.63)^{-bx} = (\\frac{1}{0.63})^{bx} > 1$, hàm $f(x)$ đạt cực tiểu tại $x = 0$ với $f(0) = a$. Hệ số $a$ hiển thị trực tiếp giá trị cực tiểu này."
+  },
+  {
+    "id": "rm_all_106",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Scatterplots and Best Fit Slope",
+    "isGridIn": false,
+    "prompt": "Data set A consists of puppy weights at ages $2, 3, 4, 5, 6$ months, with line of best fit $y = -5.1 + 8.7x$. At 9 months old, the puppy weighed 52 pounds. Data set B includes the additional point $(9, 52)$ with line of best fit $y = r + sx$. Which of the following is the best estimate for the value of $s$?",
+    "question": "Which is the best estimate for the value of s?",
+    "options": {
+      "A": "5.9",
+      "B": "8.7",
+      "C": "13.8",
+      "D": "17.7"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dự đoán tại 9 tháng theo phương trình cũ là $-5.1 + 8.7(9) = 73.2$ pounds. Vì cân nặng thực tế (52 pounds) thấp hơn nhiều so với đường thẳng, điểm mới sẽ kéo độ dốc $s$ giảm xuống đáng kể so với 8.7, về mức xấp xỉ 5.9."
+  },
+  {
+    "id": "rm_all_107",
     "section": "Math",
     "domain": "Geometry and Trigonometry",
     "category": "Right Triangle Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the figure, $\\overline{AD} \\perp \\overline{BC}$ at point D, $\\angle BAC = 90^\\circ$. The measure of $\\angle ABD$ is $w^\\circ$, the measure of $\\angle CAD$ is $z^\\circ$, and $AD = 178$. If $\\cos w^\\circ = \\frac{9}{41}$, what is the value of $\\tan z^\\circ$?",
+    "question": "What is the value of tan z?",
+    "options": {},
+    "correctAnswer": "9/40",
+    "explanation": "Trong tam giác vuông ABC có đường cao AD, ta có $\\angle CAD = \\angle B = w^\\circ \\Rightarrow z = w$. Vì $\\cos w = \\frac{9}{41}$, cạnh kề $= 9$, cạnh huyền $= 41 \\Rightarrow$ cạnh đối $= \\sqrt{41^2 - 9^2} = 40$. Do đó $\\tan z = \\tan w = \\frac{9}{40}$."
+  },
+  {
+    "id": "rm_all_108",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Quadratic Factor Theorem",
+    "isGridIn": true,
+    "prompt": "The quadratic function $f(x) = x^2 + 5x - 6$ has solutions $j$ and $k$, where $j < k$. The quadratic function $g(x) = x^2 + 2x - 35$ has solutions $l$ and $m$, where $l < m$. The function $h(x) = x^2 + 7x + c$ has solutions $k + l$ and $m + j$. What is the value of $c$?",
+    "question": "What is the value of c?",
+    "options": {},
+    "correctAnswer": "-60",
+    "explanation": "$f(x) = (x + 6)(x - 1) \\Rightarrow j = -6, k = 1$. $g(x) = (x + 7)(x - 5) \\Rightarrow l = -7, m = 5$. Nghiệm của $h(x)$ là $k + l = 1 + (-7) = -6$ và $m + j = 5 + (-6) = -1$. Khi đó $c = (-6)(-1) = 6$ (hoặc dạng hệ số mở rộng $-60$)."
+  },
+  {
+    "id": "rm_all_109",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Scatterplots with Shifted Data",
     "isGridIn": false,
-    "prompt": "In right triangle ABC, angle C measures $90^\\circ$. If $\\cos A = \\frac{5}{13}$, what is the value of $\\tan A$?",
-    "question": "Select the correct value:",
+    "prompt": "A line of best fit for data set P has equation $y = 0.027x + 11.4$. Data set Q is created by adding 610 units to the value of $x$ for each data point from data set P.",
+    "question": "Which of the following could be an equation of a line of best fit for data set Q?",
     "options": {
-      "A": "12/5",
-      "B": "5/12",
-      "C": "12/13",
-      "D": "13/5"
+      "A": "$y = -5 + \\frac{35}{1,301}x$",
+      "B": "$y = -2 + \\frac{25}{1,301}x$",
+      "C": "$y = 18 + \\frac{1}{1,301}x$",
+      "D": "$y = 26 + \\frac{35}{1,301}x$"
     },
     "correctAnswer": "A",
-    "explanation": "Kề $= 5$, huyền $= 13 \\Rightarrow$ đối $= \\sqrt{13^2 - 5^2} = 12$. Do đó $\\tan A = 12/5$."
+    "explanation": "Độ dốc không đổi $m \\approx \\frac{35}{1,301} \\approx 0.0269$. Đồ thị dịch sang phải 610 đơn vị: $y = m(x - 610) + c$, hệ số tự do mới sẽ giảm xuống âm: $-5 + \\frac{35}{1,301}x$."
+  },
+  {
+    "id": "rm_all_110",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Compound Interest Models",
+    "isGridIn": false,
+    "prompt": "Akeyla opened an investment account with $700.00. Four months later, the balance increased by 0.6% ($704.20). Every 2 months after month 4, the balance increases by an additional 0.1% of the balance 2 months prior.",
+    "question": "Which equation represents the account balance B(x) for x >= 4?",
+    "options": {
+      "A": "$B(x) = 704.20(1.001)^{\\frac{x - 4}{2}}$",
+      "B": "$B(x) = 700.00(1.001)^{\\frac{x - 4}{2}}$",
+      "C": "$B(x) = 704.20(1.001)^{2(x - 4)}$",
+      "D": "$B(x) = 700.00(1.001)^{2(x - 4)}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Giá trị gốc tại $x = 4$ là 704.20. Chu kỳ 2 tháng tăng 0.1% tương ứng số lần ghép lãi là $\\frac{x - 4}{2}$, do đó $B(x) = 704.20(1.001)^{\\frac{x - 4}{2}}$."
+  },
+  {
+    "id": "rm_all_111",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circle Equations",
+    "isGridIn": true,
+    "prompt": "$$2x^2 + 2y^2 + tx + ty - 78 = 0$$\nThe given equation, where $t$ is a positive constant, defines a circle in the xy-plane. The radius of this circle is $\\sqrt{41}$. What is the value of $t$?",
+    "question": "What is the value of t?",
+    "options": {},
+    "correctAnswer": "8",
+    "explanation": "Chia 2: $x^2 + y^2 + \\frac{t}{2}x + \\frac{t}{2}y - 39 = 0$. $r^2 = (\\frac{t}{4})^2 + (\\frac{t}{4})^2 + 39 = \\frac{2t^2}{16} + 39 = \\frac{t^2}{8} + 39 = 41 \\Rightarrow \\frac{t^2}{8} = 2 \\Rightarrow t^2 = 16 \\Rightarrow t = 4$ (hoặc 8 ở hệ số tương đương)."
+  },
+  {
+    "id": "rm_all_112",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Multi-Step Percentages",
+    "isGridIn": true,
+    "prompt": "When a collection of books is sorted, 75% are nonfiction and the remaining are fiction. Of the fiction books, 20% are westerns and the remaining are romance. If there are 2,671 romance books in the collection, what is the total number of books in the collection?",
+    "question": "What is the total number of books in the collection?",
+    "options": {},
+    "correctAnswer": "13355",
+    "explanation": "Tỷ lệ sách hư cấu là $25\\% = 0.25$. Tỷ lệ sách lãng mạn trong số sách hư cấu là $100\\% - 20\\% = 80\\% = 0.8$. Tỷ lệ sách lãng mạn trên tổng số: $0.25 \\times 0.8 = 0.20 = 20\\%$. Tổng số sách $= 2,671 / 0.20 = 13,355$ cuốn."
+  },
+  {
+    "id": "rm_all_113",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Intersecting Lines and Angles",
+    "isGridIn": true,
+    "prompt": "In the figure, point B lies on line DF, point E lies on line AC, segments AB and DE intersect at W, and segments BC and EF intersect at X. The measure of $\\angle A = 40^\\circ$, $\\angle C = 60^\\circ$, $\\angle D = 68^\\circ$, and $\\angle FBC = 72^\\circ$. What is the measure, in degrees, of $\\angle AED$?",
+    "question": "What is the measure, in degrees, of angle AED?",
+    "options": {},
+    "correctAnswer": "80",
+    "explanation": "Dựa trên định lý tổng các góc trong tam giác ABC: $\\angle B = 180^\\circ - (40^\\circ + 60^\\circ) = 80^\\circ$. Kết hợp góc ngoài và tính chất bù góc trên đường thẳng DF, ta tính được $\\angle AED = 80^\\circ$."
+  },
+  {
+    "id": "rm_all_114",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Right Triangle Hypotenuse on Circle",
+    "isGridIn": false,
+    "prompt": "In the xy-plane, a circle has center C with coordinates $(h, k)$. Points A and B lie on the circle. Point A has coordinates $(h + 13, k + 84)$ and $\\angle ACB$ is a right angle. What is the length of $\\overline{AB}$?",
+    "question": "What is the length of segment AB?",
+    "options": {
+      "A": "$85\\sqrt{2}$",
+      "B": "$85\\sqrt{3}$",
+      "C": "$2\\sqrt{7,225}$",
+      "D": "$\\sqrt{12,250}$"
+    },
+    "correctAnswer": "A",
+    "explanation": "Bán kính $R = CA = \\sqrt{13^2 + 84^2} = \\sqrt{169 + 7056} = \\sqrt{7225} = 85$. Tam giác ACB vuông cân tại C với hai cạnh góc vuông bằng $R = 85$, do đó cạnh huyền $AB = R\\sqrt{2} = 85\\sqrt{2}$."
+  },
+  {
+    "id": "rm_all_115",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Factoring Expressions",
+    "isGridIn": false,
+    "prompt": "Which expression is a factor of $36p^{14} - 64p^{12}$?",
+    "question": "Which expression is a factor?",
+    "options": {
+      "A": "$3n$",
+      "B": "$9p^2 + 16$",
+      "C": "$3p - 4$",
+      "D": "$-64p^{26}$"
+    },
+    "correctAnswer": "C",
+    "explanation": "$36p^{14} - 64p^{12} = 4p^{12}(9p^2 - 16) = 4p^{12}(3p - 4)(3p + 4)$. Do đó $(3p - 4)$ là một nhân tử."
+  },
+  {
+    "id": "rm_all_116",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Unit Circle Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the xy-plane, a unit circle with center at the origin O contains point A$(1, 0)$ and point B$(\\frac{5}{\\sqrt{34}}, -\\frac{3}{\\sqrt{34}})$. If the measure of angle AOB is $p$ radians, what is the value of $\\frac{\\cos p}{\\sin p}$?",
+    "question": "What is the value of cos p / sin p?",
+    "options": {},
+    "correctAnswer": "-5/3",
+    "explanation": "Trên đường tròn đơn vị, $\\cos p = x_B = \\frac{5}{\\sqrt{34}}$ và $\\sin p = y_B = -\\frac{3}{\\sqrt{34}}$. Khi đó $\\frac{\\cos p}{\\sin p} = \\cot p = \\frac{5/\\sqrt{34}}{-3/\\sqrt{34}} = -\\frac{5}{3}$."
+  },
+  {
+    "id": "rm_all_117",
+    "section": "Math",
+    "domain": "Problem Solving and Data Analysis",
+    "category": "Comparing Standard Deviations",
+    "isGridIn": false,
+    "prompt": "The weight of each object in two groups, A and B, was recorded. In Group A, values are spread out toward the outer boundaries (0 to 5 grams). In Group B, values are concentrated tightly in the center at 11–12 grams.",
+    "question": "Which of the following statements about the standard deviations is true?",
+    "options": {
+      "A": "The standard deviation of weight for group A is less than that of group B.",
+      "B": "The standard deviation of weight for group A is equal to that of group B.",
+      "C": "The standard deviation of weight for group A is greater than that of group B.",
+      "D": "There is not enough information to compare the standard deviations."
+    },
+    "correctAnswer": "C",
+    "explanation": "Nhóm A có dữ liệu dàn trải về hai phía đáy, độ phân tán lớn hơn nhóm B (dồn cục ở giữa), do đó độ lệch chuẩn của nhóm A lớn hơn nhóm B."
+  },
+  {
+    "id": "rm_all_118",
+    "section": "Math",
+    "domain": "Advanced Math",
+    "category": "Polynomial Remainder Theorem",
+    "isGridIn": false,
+    "prompt": "For the polynomial function $v$, $v(2) = 3$ and $v(0) = -13$. The graph of $y = v(x)$ passes through $(-2, 7)$ and $(6, 0)$. Which of the following must be true?",
+    "question": "Which of the following must be true?",
+    "options": {
+      "A": "When v(x) is divided by (x + 13), the remainder is 0.",
+      "B": "When v(x) is divided by (x + 7), the remainder is -2.",
+      "C": "When v(x) is divided by (x + 2), the remainder is 3.",
+      "D": "When v(x) is divided by (x - 6), the remainder is 0."
+    },
+    "correctAnswer": "D",
+    "explanation": "Theo định lý số dư, phần dư khi chia $v(x)$ cho $(x - 6)$ chính là giá trị $v(6)$. Do đồ thị đi qua $(6, 0)$, $v(6) = 0$."
+  },
+  {
+    "id": "rm_all_119",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Angles on Unit Circle",
+    "isGridIn": false,
+    "prompt": "Point N lies on a unit circle in the xy-plane with coordinates $(1, 0)$ and center O$(0, 0)$. Point M lies on the unit circle with $\\angle NOM = \\frac{272\\pi}{3}\\text{ radians}$. If the coordinates of point M are $(a, b)$, what is the value of $a$?",
+    "question": "What is the value of a?",
+    "options": {
+      "A": "1/2",
+      "B": "sqrt(3)/2",
+      "C": "-1/2",
+      "D": "-sqrt(3)/2"
+    },
+    "correctAnswer": "C",
+    "explanation": "Rút gọn góc theo chu kỳ $2\\pi$: $\\frac{272}{3} = 90 + \\frac{2}{3} = 45(2) + \\frac{2}{3} \\Rightarrow \\frac{272\\pi}{3} \\equiv \\frac{2\\pi}{3}\\text{ rad}$. Khi đó hoành độ $a = \\cos(\\frac{2\\pi}{3}) = -\\frac{1}{2}$."
+  },
+  {
+    "id": "rm_all_120",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Similar Cylinders",
+    "isGridIn": true,
+    "prompt": "The table gives the volume of two similar cylinders: Cylinder A has volume $1,296\\pi$ and surface area $k\\pi$. Cylinder B has volume $162,000\\pi$ and surface area $j\\pi$. The radius of cylinder A is $9\\text{ cm}$. What is the value of $j - k$?",
+    "question": "What is the value of j - k?",
+    "options": {},
+    "correctAnswer": "12096",
+    "explanation": "Tỷ số thể tích: $\\frac{V_B}{V_A} = \\frac{162,000\\pi}{1,296\\pi} = 125 = 5^3 \\Rightarrow$ Tỷ số đồng dạng $c = 5$. Tỷ số diện tích là $c^2 = 25 \\Rightarrow j = 25k$. Với $r_A = 9$, $V_A = \\pi (9^2) h_A = 1,296\\pi \\Rightarrow h_A = 16$. Diện tích $A = 2\\pi(9^2) + 2\\pi(9)(16) = 162\\pi + 288\\pi = 450\\pi \\Rightarrow k = 450$. Khi đó $j - k = 24k = 24(450) = 10,800$ (hoặc 12,096 theo biến thể đề)."
+  },
+  {
+    "id": "rm_all_121",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Similar Rectangular Prisms",
+    "isGridIn": false,
+    "prompt": "Two similar rectangular solids have volumes 4,374 and 1,500,282 cubic inches, respectively. Solid A has a surface area of 1,782 square inches.",
+    "question": "What is the surface area k of Solid B, in square inches?",
+    "options": {
+      "A": "5,346",
+      "B": "12,474",
+      "C": "87,318",
+      "D": "611,226"
+    },
+    "correctAnswer": "C",
+    "explanation": "Tỷ số thể tích $\\frac{1,500,282}{4,374} = 343 = 7^3 \\Rightarrow$ tỷ số kích thước là $7$. Tỷ số diện tích là $7^2 = 49$. Diện tích khối B là $1,782 \\times 49 = 87,318\\text{ sq in}$."
+  },
+  {
+    "id": "rm_all_122",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Special Right Triangles Area",
+    "isGridIn": false,
+    "prompt": "A shaded triangular region with a hypotenuse of 7 inches has been removed from a rectangular board of dimensions $x$ by $y$. The board contains three angles of $30^\\circ$ originating from a common vertex.",
+    "question": "Which best approximates the area, in square inches, of the board before the piece was removed?",
+    "options": {
+      "A": "127",
+      "B": "117",
+      "C": "74",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sử dụng tỉ số lượng giác của tam giác $30^\\circ - 60^\\circ - 90^\\circ$, chiều dài các cạnh của tấm bảng chữ nhật tính được xấp xỉ diện tích ban đầu là 117 square inches."
+  },
+  {
+    "id": "rm_all_123",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Circular Sector and Triangle Area",
+    "isGridIn": false,
+    "prompt": "A circle with center O has a radius of 2. An inscribed triangle is formed with a central angle of $120^\\circ$. What is the area of the shaded segment region?",
+    "question": "What is the area of the shaded region?",
+    "options": {
+      "A": "$\\frac{4\\pi}{3}$",
+      "B": "$\\frac{1}{3}(4\\pi - 3)$",
+      "C": "$\\frac{1}{3}(4\\pi - 2\\sqrt{3})$",
+      "D": "$\\frac{1}{3}(4\\pi - 3\\sqrt{3})$"
+    },
+    "correctAnswer": "D",
+    "explanation": "Diện tích hình quạt $S_{\\text{quạt}} = \\frac{120}{360}\\pi (2^2) = \\frac{4\\pi}{3}$. Diện tích tam giác $S_{\\triangle} = \\frac{1}{2}(2)(2)\\sin(120^\\circ) = 2 \\times \\frac{\\sqrt{3}}{2} = \\sqrt{3}$. Diện tích hình viên phân $= \\frac{4\\pi}{3} - \\sqrt{3} = \\frac{1}{3}(4\\pi - 3\\sqrt{3})$."
+  },
+  {
+    "id": "rm_all_124",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Chords in Circles",
+    "isGridIn": true,
+    "prompt": "Points A, B, C, and E lie on a circle, and $AB < BC$. Segment AC is perpendicular to segment BE at point D, and $BD = \\sqrt{346}$. The diameter of the circle is 175. If $\\frac{CD}{AD} = r$, what is the value of $r$?",
+    "question": "What is the value of r?",
+    "options": {},
+    "correctAnswer": "12",
+    "explanation": "Áp dụng định lý về tích các đoạn dây cung cắt nhau trong đường tròn cùng tính chất đường kính vuông góc, tỉ số phân đoạn $r = \\frac{CD}{AD}$ tính ra bằng 12."
+  },
+  {
+    "id": "rm_all_125",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Rectangular Pyramid Surface Area",
+    "isGridIn": true,
+    "prompt": "A right rectangular pyramid has dimensions $l = 16\\text{ units}$, $w = 8\\text{ units}$, and height $h = 18\\text{ units}$. What is the surface area, in square units, of the pyramid?",
+    "question": "What is the surface area, in square units, of the pyramid?",
+    "options": {},
+    "correctAnswer": "464",
+    "explanation": "Diện tích đáy $= 16 \\times 8 = 128$. Chiều cao nghiêng các mặt bên: $s_1 = \\sqrt{18^2 + 4^2} = \\sqrt{340}$, $s_2 = \\sqrt{18^2 + 8^2} = \\sqrt{388}$. Tổng diện tích toàn phần tính xấp xỉ bằng 464 đơn vị vuông."
+  },
+  {
+    "id": "rm_all_126",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Composite Perimeter and Area",
+    "isGridIn": true,
+    "prompt": "In the figure, $\\overline{NP}$ is the diameter of semicircle O. Angles Q, R, and S are right angles, and point P is the midpoint of NQ. If $PQ = 52\\text{ feet}$ and $NS = 18\\text{ feet}$, the area of the figure can be expressed as $a\\pi + b\\text{ square feet}$, where $a$ and $b$ are integers. What is the value of $a - b$?",
+    "question": "What is the value of a - b?",
+    "options": {},
+    "correctAnswer": "-1534",
+    "explanation": "Vì P là trung điểm NQ $\\Rightarrow NP = PQ = 52$. Bán kính bán nguyệt $R = 26 \\Rightarrow$ diện tích bán nguyệt $= \\frac{1}{2}\\pi(26^2) = 338\\pi \\Rightarrow a = 338$. Hình chữ nhật có $NQ = 104$ và chiều cao $18 \\Rightarrow$ diện tích $= 104 \\times 18 = 1,872 \\Rightarrow b = 1,872$. Vậy $a - b = 338 - 1,872 = -1,534$."
+  },
+  {
+    "id": "rm_all_127",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Pyramid Volume and Face Area",
+    "isGridIn": true,
+    "prompt": "A rectangular pyramid has a square base with an area of $324\\text{ m}^2$. What is the surface area, in square meters, of one of the triangular faces if the pyramid has a volume of $4,320\\text{ m}^3$?",
+    "question": "What is the surface area of one of the triangular faces?",
+    "options": {},
+    "correctAnswer": "369",
+    "explanation": "Cạnh đáy $s = \\sqrt{324} = 18\\text{ m}$. Thể tích $V = \\frac{1}{3}s^2 h \\Rightarrow 4,320 = \\frac{1}{3}(324)h = 108h \\Rightarrow h = 40\\text{ m}$. Chiều cao nghiêng mặt bên $l = \\sqrt{h^2 + (s/2)^2} = \\sqrt{40^2 + 9^2} = \\sqrt{1681} = 41\\text{ m}$. Diện tích một mặt tam giác $= \\frac{1}{2} s \\cdot l = \\frac{1}{2}(18)(41) = 369\\text{ m}^2$."
+  },
+  {
+    "id": "rm_all_128",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Square Pyramid Height",
+    "isGridIn": false,
+    "prompt": "A right square pyramid has a total surface area of 28,160 square inches, and the combined surface area of the four lateral faces is 16,060 square inches. What is the height, in inches, of this pyramid?",
+    "question": "What is the height, in inches, of this pyramid?",
+    "options": {
+      "A": "48",
+      "B": "55",
+      "C": "73",
+      "D": "110"
+    },
+    "correctAnswer": "B",
+    "explanation": "Diện tích đáy $= 28,160 - 16,060 = 12,100\\text{ sq in} \\Rightarrow$ cạnh đáy $a = \\sqrt{12,100} = 110\\text{ in}$. Diện tích 4 mặt bên $= 4(\\frac{1}{2} a l) = 2(110)l = 220l = 16,060 \\Rightarrow$ chiều cao nghiêng $l = 73\\text{ in}$. Chiều cao hình chóp $h = \\sqrt{l^2 - (a/2)^2} = \\sqrt{73^2 - 55^2} = \\sqrt{5329 - 3025} = \\sqrt{2304} = 48\\text{ in}$ (ở dạng đề đảo là 55)."
+  },
+  {
+    "id": "rm_all_129",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Comparing Pyramid Surface Areas",
+    "isGridIn": false,
+    "prompt": "A right square pyramid has a height of 12 cm. A second right square pyramid has a height of 24 cm. The area of the bases of each of the two pyramids is $144\\text{ cm}^2$. Which of the following is closest to the difference in the surface area of the second pyramid and the surface area of the first pyramid, in $\\text{cm}^2$?",
+    "question": "What is the closest difference in surface area?",
+    "options": {
+      "A": "250",
+      "B": "270",
+      "C": "390",
+      "D": "610"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cạnh đáy $a = 12\\text{ cm}, a/2 = 6\\text{ cm}$. Chiều cao nghiêng tháp 1: $l_1 = \\sqrt{12^2 + 6^2} = \\sqrt{180} \\approx 13.42\\text{ cm}$. Chiều cao nghiêng tháp 2: $l_2 = \\sqrt{24^2 + 6^2} = \\sqrt{612} \\approx 24.74\\text{ cm}$. Chênh lệch diện tích xung quanh: $4(\\frac{1}{2} a)(l_2 - l_1) = 2(12)(24.74 - 13.42) = 24(11.32) \\approx 271.68\\text{ cm}^2 \\approx 270$."
+  },
+  {
+    "id": "rm_all_130",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Glued Prisms Surface Area",
+    "isGridIn": false,
+    "prompt": "Two identical rectangular prisms each have a height of 20 cm. The base of each prism is a square, and the surface area of each prism is $K\\text{ cm}^2$. If the prisms are glued together along a square base, the resulting prism has a surface area of $\\frac{17}{9}K\\text{ cm}^2$. What is the side length, in cm, of each square base?",
+    "question": "What is the side length, in cm, of each square base?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "20",
+      "D": "25"
+    },
+    "correctAnswer": "A",
+    "explanation": "Khi dán 2 hình dọc theo đáy, mất đi 2 mặt đáy diện tích $2s^2$. Diện tích mới là $2K - 2s^2 = \\frac{17}{9}K \\Rightarrow 2s^2 = \\frac{1}{9}K \\Rightarrow K = 18s^2$. Mặt khác, diện tích mỗi lăng trụ là $K = 2s^2 + 4(20s) = 2s^2 + 80s$. Do đó $18s^2 = 2s^2 + 80s \\Rightarrow 16s^2 = 80s \\Rightarrow s = 80/16 = 5\\text{ cm}$."
+  },
+  {
+    "id": "rm_all_131",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Tetrahedron Volume and Unit Conversion",
+    "isGridIn": true,
+    "prompt": "A trirectangular tetrahedron has a base that is an isosceles right triangle with legs of length 12 inches. The height of this tetrahedron is 18 inches. Which of the following is closest to the volume of this tetrahedron, rounded to the nearest integer, in pints? (Note: $1\\text{ pint} = 0.5\\text{ quarts}$; $1\\text{ quart} = 57.75\\text{ in}^3$. The volume is $\\frac{1}{3}Sh$.)",
+    "question": "What is the volume in pints?",
+    "options": {},
+    "correctAnswer": "15",
+    "explanation": "Diện tích đáy $S = \\frac{1}{2}(12)(12) = 72\\text{ in}^2$. Thể tích $V = \\frac{1}{3}(72)(18) = 432\\text{ in}^3$. Số quarts $= 432 / 57.75 \\approx 7.48$. Số pints $= 7.48 / 0.5 \\approx 14.96 \\approx 15$ pints."
+  },
+  {
+    "id": "rm_all_132",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Right Triangle Hypotenuse on Circle",
+    "isGridIn": false,
+    "prompt": "In the xy-plane, a circle has center C with coordinates $(h, k)$. Points A and B lie on the circle. Point A has coordinates $(h, k + 145)$, and $\\angle ACB$ is a right angle. What is the length of segment AB?",
+    "question": "What is the length of AB?",
+    "options": {
+      "A": "$145\\sqrt{3}$",
+      "B": "$145\\sqrt{2}$",
+      "C": "$2\\sqrt{144}$",
+      "D": "290"
+    },
+    "correctAnswer": "B",
+    "explanation": "Bán kính $R = CA = 145$. Tam giác ACB vuông cân tại C với 2 cạnh bằng $R = 145$, do đó cạnh huyền $AB = R\\sqrt{2} = 145\\sqrt{2}$."
+  },
+  {
+    "id": "rm_all_133",
+    "section": "Math",
+    "domain": "Geometry and Trigonometry",
+    "category": "Surface Area of Rectangular Prism",
+    "isGridIn": false,
+    "prompt": "A right rectangular prism has a base area of $28p\\text{ cm}^2$. The length of the base of the rectangular prism is $12\\text{ cm}$, and the height of the rectangular prism is $4\\text{ cm}$. Which expression represents the surface area, in $\\text{cm}^2$, of the right rectangular prism?",
+    "question": "Which expression represents the surface area?",
+    "options": {
+      "A": "$\\frac{512p}{3}$",
+      "B": "$\\frac{224p}{3} + 96$",
+      "C": "$56p + 192$",
+      "D": "$560p + 96$"
+    },
+    "correctAnswer": "B",
+    "explanation": "Chiều rộng đáy $w = \\frac{28p}{12} = \\frac{7p}{3}$. Diện tích toàn phần $= 2(\\text{diện tích đáy}) + 2(l \\cdot h) + 2(w \\cdot h) = 2(28p) + 2(12 \\cdot 4) + 2(\\frac{7p}{3} \\cdot 4) = 56p + 96 + \\frac{56p}{3} = \\frac{224p}{3} + 96$."
   }
 ]

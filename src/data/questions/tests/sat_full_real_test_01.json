@@ -1,0 +1,1046 @@
+{
+  "id": "full_real_test_oct_2026",
+  "title": "Official SAT Full Test - October 2026 (4 Modules)",
+  "isFullTest": true,
+  "isExam": true,
+  "mode": "exam",
+  "sections": [
+    {
+      "name": "Reading and Writing",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "duration": 1920,
+          "questions": [
+            {
+              "id": "ft1_rw1_q1",
+              "prompt": "The following text is from Jacqueline Woodson's 2018 novel Harbor Me.\n\nI've pulled the voice recorder from my closet and have it sitting on the middle of my bed now. When I press play, Esteban's voice fills my room.",
+              "question": "As used in the text, what does the word \"pulled\" most nearly mean?",
+              "options": { "A": "Developed", "B": "Attracted", "C": "Startled", "D": "Taken" },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q2",
+              "prompt": "__________ the source of a malfunction in a complex electrical system can be a painstaking, time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "Adapting", "B": "Isolating", "C": "Incorporating", "D": "Fabricating" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q3",
+              "prompt": "An effort to raise the toll that drivers must pay to use the Teodoro Moscoso Bridge, which spans the San José Lagoon in Puerto Rico, should explain why a higher toll is necessary; no amount of justification, however, is likely to persuade some drivers who believe the current toll is __________",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "warranted", "B": "exorbitant", "C": "equivocal", "D": "contentious" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q4",
+              "prompt": "While once __________, basic computer security training that only teaches recognition of obvious scams cannot provide enough protection against today's sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "uncommon", "B": "superficial", "C": "sufficient", "D": "affordable" },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q5",
+              "prompt": "The following text is from Yung Wing's 1909 memoir My Life in China and America. Yung Wing was the first person from China to graduate from a US university.\n\nLittle did I realize when in 1845 I wrote, while in the Morrison School, a composition on \"An Imaginary Voyage to New York and the Hudson,\" that I was to see New York in reality. <u>This incident leads me to the reflection that sometimes our imagination foreshadows what lies uppermost in our minds and brings possibilities within the sphere of realities.</u>",
+              "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+              "options": {
+                "A": "It foreshadows Yung's future difficulties in publishing his writings.",
+                "B": "It describes an event in Yung's life that exemplifies a phenomenon.",
+                "C": "It indicates Yung's unwillingness to distinguish between reality and fantasy as a child.",
+                "D": "It illustrates the role that education played in Yung's childhood."
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q6",
+              "prompt": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun's surface. High-resolution images show these eruptions produce thin streams of hot gas moving at speeds between 55 and 200 kilometers per second. Although these are impressive speeds, they are not sufficient to overcome the confining forces of the Sun's gravity and magnetic field, so the material is pulled back down.",
+              "question": "Which choice best describes the function of the sentence as a whole?",
+              "options": {
+                "A": "It describes a natural phenomenon that is explained later in the text.",
+                "B": "It presents a research finding that challenges the view mentioned in the first sentence of the text.",
+                "C": "It acknowledges an exception to the pattern described in the first sentence of the text.",
+                "D": "It discusses a natural occurrence that leads to the consequences explained later in the text."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q7",
+              "prompt": "A student is collecting data about countries with volcanoes that have been active in the time since 1800 and in the time since 1960. The student records that Ethiopia has __________",
+              "question": "Which choice most effectively uses data from the graph to complete the statement?",
+              "options": {
+                "A": "the same number of volcanoes that have been active since 1800 as Tanzania has.",
+                "B": "no volcanoes that have been active since 1800.",
+                "C": "more volcanoes that have been active since 1960 than Tanzania has.",
+                "D": "fewer volcanoes that have been active since 1960 than Tanzania has."
+              },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q8",
+              "prompt": "Arthur Conan Doyle, the author of the 1902 novel The Hound of the Baskervilles, hoped to be remembered chiefly for his historical novels. Although he completed many such works, he became world-famous instead as the creator of Holmes. A student researching popular fiction asserts that <u>even though Doyle grew weary of the character, he ultimately yielded to readers' desire for more Holmes stories.</u>",
+              "question": "Which statement, if true, would best illustrate the student's claim in the underlined text?",
+              "options": {
+                "A": "Doyle had Holmes plunge to his apparent death in an 1893 story in order to free himself to write other kinds of fiction.",
+                "B": "Doyle based Holmes's powers of deduction partly on those of Joseph Bell, a physician who had taught him at the University of Edinburgh.",
+                "C": "Doyle regarded The White Company as one of his finest achievements, even though it is far less widely read today than his Holmes stories.",
+                "D": "After killing off Holmes in 1893 to focus on other writing, Doyle revived the detective a decade later in response to persistent appeals from readers."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q9",
+              "prompt": "The following text is from Hilda Eunice Burgos's 2018 novel Ana María Reyes Does Not Live in a Castle.\n\nThe next day I went to my piano lesson, as I did every Tuesday after school. My piano teacher, Doña Dulce Sánchez, lived two blocks from my school, in the opposite direction from my house.",
+              "question": "According to the text, where did the narrator's piano teacher live?",
+              "options": {
+                "A": "Near the center of town",
+                "B": "Two blocks from the narrator's school",
+                "C": "Across the street from the narrator's home",
+                "D": "One block from the narrator's home"
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q10",
+              "prompt": "Unlike terrestrial and shallow-water ecosystems that rely predominantly on photosynthetic primary producers, hydrothermal vent communities depend on chemolithoautotrophic bacteria. These microscopic organisms derive metabolic energy by oxidizing hydrogen sulfide emitted from geothermal fissures along the ocean floor, forming the bedrock of an abyssal food web isolated from solar radiation.",
+              "question": "Based on the text, what distinguishes hydrothermal vent communities from surface ecosystems?",
+              "options": {
+                "A": "Their reliance on chemical oxidation rather than sunlight for primary energy generation.",
+                "B": "Their complete vulnerability to seasonal shifts in solar radiation levels.",
+                "C": "Their exclusive dependence on plant matter descending from shallow waters.",
+                "D": "Their inability to maintain complex ecological interactions in cold temperatures."
+              },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q11",
+              "prompt": "Hydrologists recently developed a model to forecast how growing water demand will affect streamflow in river basins in the western United States. Unfortunately, when the model is applied to basins fed mainly by melting snowpack, its forecasts of spring streamflow are too low, and when it is applied to basins fed mainly by rainfall, its forecasts of summer streamflow are too high. The Yampa River basin in northwestern Colorado receives most of its water from snowmelt. If used to forecast the effect of growing water demand on the Yampa River basin over the next decade, the model would therefore likely __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "overestimate the basin's actual summer streamflow.",
+                "B": "underestimate the basin's actual spring streamflow.",
+                "C": "exaggerate the effect of growing water demand on rainfall-fed tributaries.",
+                "D": "account for factors affecting streamflow other than growing water demand."
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q12",
+              "prompt": "Brittle stars are sea animals that move along the ocean floor using their five arms. Unlike most animals, brittle stars have 70%–80% of their weight in their arms. To better understand the benefits of this unusual distribution, scientists built a soft robot inspired by the brittle star's body structure. When the scientists made the arms heavier, the arms pressed down more firmly on the ground, allowing the robot to move more effectively across the ocean floor. Based on these results, the scientists hypothesize that __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "brittle stars have most of the weight in their arms because that is where they store nutrients.",
+                "B": "brittle stars have most of their weight in their arms so they can scare off predators.",
+                "C": "having most of their weight in their arms allows brittle stars to climb steep underwater cliffs.",
+                "D": "having most of their weight in their arms helps brittle stars move across the ocean floor."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q13",
+              "prompt": "With an average summer temperature of 67.7 degrees Fahrenheit, Budapest is one European __________ many travelers recommend, especially from June to September.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "city, that", "B": "city that", "C": "city in which,", "D": "city, which" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q14",
+              "prompt": "Rock carvings found on islands around the lower Susquehanna River in Maryland repeatedly feature the same stylized face. Experts are divided on whether the face represents the head of a __________ a human, or a mythical figure.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "fish: a serpent", "B": "fish. A serpent,", "C": "fish a serpent,", "D": "fish, a serpent," },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q15",
+              "prompt": "A multifaceted constellation of environmental factors, including oceanic surface temperatures, tropospheric wind shear, and ambient atmospheric humidity, __________ the developmental trajectory and destructive potential of hurricanes before landfall.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "dictate", "B": "dictates", "C": "are dictating", "D": "have dictated" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q16",
+              "prompt": "In the tapestries Blessing of Rain and Intended Vermillion, Diné textile artist D.Y. Begay uses __________ and yellows extracted from cochineal insects from Peru as well as local hollyhocks, coreopsis, and chamisa plants gathered from her Tsélani homeland in Arizona.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "reds, greens,", "B": "reds greens,", "C": "reds greens", "D": "reds; greens," },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q17",
+              "prompt": "In their 2019 study of butterfly diversity at Rupa Lake in Nepal, researcher Bijaya Neupane and his colleagues counted one bluetail jester __________ to the Nymphalidae family, the bluetail jester (Symbrenthia niphanda) is known to be very rare.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "butterfly. Belonging", "B": "butterfly belonging", "C": "butterfly, belonging", "D": "butterfly and belonging" },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q18",
+              "prompt": "Isotopic analysis of tooth enamel from the grave of the Amesbury Archer, a man buried near Stonehenge around 2300 BCE, has revealed striking evidence of long-distance travel in prehistoric Europe, the oxygen isotope ratios __________ that he spent his childhood in a colder region of central Europe, possibly near the Alps.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "suggest", "B": "suggesting", "C": "which suggest", "D": "have suggested" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q19",
+              "prompt": "Extensive radiocarbon dating of reed samples from Caral confirmed Ruth Shady Solís's hypothesis about the Peruvian site's __________ nearly 5,000 years ago, the ancient city preceded the Olmec civilization to the north by a full millennium, a revelation that fundamentally altered our understanding of urban development in the Western Hemisphere.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "age, built", "B": "age: built", "C": "age and built", "D": "age built" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q20",
+              "prompt": "Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the Airbus A350 XWB jet, __________, helps it glide through wind with relative ease, while a boxy pickup truck encounters more wind resistance, making it less aerodynamic.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "additionally,", "B": "however,", "C": "for example,", "D": "meanwhile," },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q21",
+              "prompt": "As a massive ice sheet advances, its enormous weight presses the underlying crust downward, displacing some of the mantle beneath it. __________, the crust just beyond the ice sheet's margins is pushed slightly upward, forming a broad ridge that geologists call a peripheral bulge.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "Previously,", "B": "Simultaneously,", "C": "In summary,", "D": "For example," },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q22",
+              "prompt": "The Hornbostel-Sachs system classifies musical instruments by how they produce sound. For example, an instrument that is popular in India called the saraswati veena produces sound primarily through the vibration of its strings. __________, under the Hornbostel-Sachs system, the saraswati veena is a chordophone.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "Furthermore,", "B": "Thus,", "C": "Similarly,", "D": "Instead," },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q23",
+              "prompt": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes within the diets of North American ungulates. The researchers did not perform this analysis on all such ungulates; __________, they focused exclusively on elk in Wyoming.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "in other words;", "B": "regardless;", "C": "for instance;", "D": "however;" },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q24",
+              "prompt": "Researchers in France claim that leopards and brown bears are among the twenty most 'charismatic' animals (defined as 'attractive, fascinating, or appealing'). To create their top-twenty list, researchers used survey data from Western Europe. European attitudes toward leopards and brown bears might not be shared around the world, __________",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "in other words.", "B": "for example.", "C": "of course.", "D": "in particular." },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q25",
+              "prompt": "Scientists studying forest restoration have discovered that trees depend on complex partnerships with microscopic organisms for survival. The researchers found that special fungi called endophytes live inside tree leaves and serve as a defense mechanism. __________, these endophytes help by fighting off diseases and boosting the tree's immune system.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": { "A": "In conclusion,", "B": "Nevertheless,", "C": "Alternatively,", "D": "Specifically," },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw1_q26",
+              "prompt": "While researching a topic, a student has taken the following notes:\n• Elizabeth Catlett (1915–2012) was a celebrated African American artist.\n• She is best known for creating sculptures and prints that explore the Black experience.\n• Standing Mother and Child is a 1980 sculpture by Catlett.\n• New Generation is a 1992 print by Catlett.",
+              "question": "The student wants to provide an example of one of Catlett's sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+              "options": {
+                "A": "The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.",
+                "B": "The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.",
+                "C": "Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience.",
+                "D": "Elizabeth Catlett, a celebrated artist, was born in 1915."
+              },
+              "correctAnswer": "B",
+              "isExperimental": true
+            },
+            {
+              "id": "ft1_rw1_q27",
+              "prompt": "While researching a topic, a student has taken the following notes:\n• Cinematographers work with cameras and lighting.\n• They help translate film directors' ideas into visual images.\n• Passengers (2016) was directed by Morten Tyldum.\n• Rodrigo Prieto was the film's cinematographer.",
+              "question": "Which choice most effectively uses information from the given sentences to provide an example of a film Prieto worked on?",
+              "options": {
+                "A": "One example of Rodrigo Prieto's work as a cinematographer is the 2016 film Passengers.",
+                "B": "As cinematographer, Rodrigo Prieto works with cameras and lighting to translate the film director's ideas into visual images.",
+                "C": "Cinematographer Rodrigo Prieto and director Morten Tyldum have worked together.",
+                "D": "In filmmaking, directors work with others to translate their ideas into the visual images that we encounter on the screen."
+              },
+              "correctAnswer": "A",
+              "isExperimental": true
+            }
+          ]
+        },
+        {
+          "moduleNumber": 2,
+          "duration": 1920,
+          "questions": [
+            {
+              "id": "ft1_rw2_q1",
+              "prompt": "In 1970, Maggie Kuhn had to retire from her job as a secretary because the organization she worked for had a mandatory retirement age of sixty-five. Kuhn noted that since her capabilities did not change when she turned sixty-five, such a policy was entirely __________. This observation prompted her to become an advocate for the rights of older people in the United States.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "convoluted", "B": "arbitrary", "C": "inadvertent", "D": "derivative" },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q2",
+              "prompt": "Marine ecologist Priya Natarajan and colleagues __________ aquarium tanks with communities of burrowing invertebrates collected from four estuaries along the Gulf of Maine, including sites dominated by mudflats and by salt marsh. The team then planted eelgrass seedlings in the tanks to determine whether the different invertebrate communities affected the seedlings' root growth.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "decontaminated", "B": "calibrated", "C": "stocked", "D": "supplanted" },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q3",
+              "prompt": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they __________ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes—including salt—in response to external changes. It may be that coastal foraminifera do the same.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "counteract", "B": "elude", "C": "tolerate", "D": "regulate" },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q4",
+              "prompt": "Sperm whales communicate using rapid sequences of sharp, broadband clicks called codas, which differ markedly from the long, low-frequency moans typical of baleen whales. Because these clicks can be readily __________ the calls of other whale species sharing the same waters, researchers using relatively simple underwater microphones have been able to monitor sperm whale groups even in areas where many whale species congregate.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "discerned from", "B": "masked by", "C": "amplified by", "D": "imitated by" },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q5",
+              "prompt": "Recent performances reconstructing the music of ancient Greece, such as those organized by classicist Armand D'Angour, are notable for the __________ of the scholarship behind them: the researchers consulted surviving fragments of musical notation, ancient treatises on rhythm and tuning, and replicas of excavated instruments such as the aulos to make the performances as historically accurate as possible.",
+              "question": "Which choice completes the text with the most logical and precise word or phrase?",
+              "options": { "A": "perfunctoriness", "B": "opacity", "C": "idiosyncrasy", "D": "exhaustiveness" },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q6",
+              "prompt": "Microwave heating, a thermal technology used to preserve food on an industrial scale, is generally considered to be an improvement over more conventional thermal preservation methods. Scientists in Latin America have contributed to a better understanding of this technology, with researchers from Brazil demonstrating its effectiveness in preserving mango peels. As research continues, scientists hope to make advancements in hybrid systems combining multiple food preservation technologies, which would be advantageous over using microwave heating alone, <u>given that it often heats food unevenly.</u>",
+              "question": "Which choice best describes the function of the underlined portion in the text as a whole?",
+              "options": {
+                "A": "It explains why conventional thermal processing methods are popular in commercial applications.",
+                "B": "It identifies a flaw of microwave heating technologies.",
+                "C": "It introduces microwave heating as a food processing technology.",
+                "D": "It suggests an advantage that microwave heating has over conventional thermal processing methods."
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q7",
+              "prompt": "With examples ranging from Dean's Blue Hole in the Bahamas to Watling's Blue Hole near San Salvador Island, blue holes are large underwater sinkholes: pits filled with dark blue water that contrasts with lighter blue shallower waters surrounding them. The formation of blue holes typically involves several natural processes, including the dissolution of limestone or other soluble rocks. Currently, the deepest blue hole on record is the Taam Ja' Blue Hole in Chetumal Bay, Mexico, which is reported by Laura Carrillo and colleagues as extending at least 420 meters below sea level.",
+              "question": "Which choice best describes the overall structure of the text?",
+              "options": {
+                "A": "It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type.",
+                "B": "It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole.",
+                "C": "It explains how a particular sinkhole formed, evaluates that sinkhole's unusual appearance, and names a research team that is studying the sinkhole.",
+                "D": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q8",
+              "prompt": "The following text is adapted from the 1940 novel The Hamlet by William Faulkner. In rural Mississippi, a man is riding a horse toward the residence of someone he intends to meet with about a business matter.\n\nHe was breathing hard but not because he had been galloping. On the contrary, since he had approached near enough to his destination to believe he could have seen smoke if there had been smoke, he had ridden slower and slower. Nevertheless he now sat the horse before the gap in the fence, breathing hard enough through his nose and even sweating a little, looking at the sagging broken-backed cabin set in its inevitable treeless and grassless plot and weathered to the color of an old bee-hive, with that expression of tense and rapid speculation of a man approaching a dud howitzer artillery shell.",
+              "question": "Which choice best states the main purpose of the text?",
+              "options": {
+                "A": "To contrast the man's desire to attend the meeting with his awareness of the risk involved in attending it",
+                "B": "To compare the upcoming meeting to a far more serious experience from earlier in the man's life",
+                "C": "To depict the man's insistence on meeting despite the inconvenience of traveling on horseback",
+                "D": "To portray the man's anxiety about the meeting as reflected by his physical state and demeanor"
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q9",
+              "prompt": "Text 1\nThe novels of Henry James changed stylistically starting in 1902, becoming more demanding and featuring a much more measured pace than his earlier works. This places a burden on readers that they may not be prepared for: <u>James's late novels are some of the best he wrote, but they are not for everyone.</u>\n\nText 2\nThe films of Martin Scorsese released starting in 2016 have the same place in his filmography that the late novels of Henry James have in his bibliography. Both are works by proven masters who began to make demanding works that ask more of their audiences than their earlier works do but give more in return.",
+              "question": "Based on the texts, how would the author of Text 2 most likely respond to the underlined claim in Text 1?",
+              "options": {
+                "A": "By arguing that James's novels cannot be fully understood without also considering Scorsese's films",
+                "B": "By conceding that James's The American is a superior novel to The Wings of the Dove",
+                "C": "By asserting that both James and Scorsese ought to be considered masters of their chosen art forms",
+                "D": "By agreeing that James's late novels are excellent but can be challenging for their readers"
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q10",
+              "prompt": "Primarily encountered by modern readers as inert written texts, the vernacular riddles of early medieval England contain 'implicit vestiges' of an interactive performance context, scholar Jill Frederick argues. Locative phrases scattered throughout the riddles indicate the space shared by their speakers and audiences; the common refrain 'say what I am called' invites a verbalized response; and the conflation of many of the riddles' speakers with their solutions suggests a form of dramatic impersonation perhaps meant to entertain during public gatherings.",
+              "question": "Which choice best states the main idea of the text?",
+              "options": {
+                "A": "It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation is unlikely to exist.",
+                "B": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today.",
+                "C": "People of early medieval England likely found that era's vernacular riddles to be more amusing than modern readers do.",
+                "D": "Scholars once assumed that the vernacular riddles were originally intended to be read silently, but newly uncovered historical documents corroborate that they were for oral performance."
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q11",
+              "prompt": "Philoctetes is a play by Sophocles that was first performed in 409 BCE. In the play, Odysseus and Neoptolemus must retrieve Philoctetes—a master archer who is believed necessary for the Greeks to win the Trojan War—from a cave on a deserted island where Odysseus and others had abandoned him with a debilitating injury earlier in the war. Odysseus suggests that the plan for returning with Philoctetes rests on Neoptolemus not having been part of the group that abandoned him:",
+              "question": "Which quotation from Philoctetes most effectively illustrates the claim?",
+              "options": {
+                "A": "\"Since the prize of victory is so dear, / Endure it—We'll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.\"",
+                "B": "\"No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.\"",
+                "C": "\"Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere...\"",
+                "D": "\"Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.\""
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q12",
+              "prompt": "Cover crops, such as teff, are planted by many farmers between main growing seasons. While these crops are known for increasing biodiversity, Axel Don and his coauthor argued in a 2015 study that cover crops' role in supporting soil carbon sequestration deserves more attention. Cover crops remove carbon dioxide (CO2) from the air and convert it to organic compounds stored in the soil as soil organic carbon (SOC). Based on data from numerous farm fields, Don and his coauthor concluded that cover crops contribute meaningfully to soil carbon sequestration.",
+              "question": "Which finding, if true, would be most consistent with Don and his coauthor's conclusion?",
+              "options": {
+                "A": "Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species.",
+                "B": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions.",
+                "C": "SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced.",
+                "D": "SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q13",
+              "prompt": "Average Annual Growth in Transit Ridership, Five Years Before and After Bus Fare Elimination\n\n| City | Before fare elimination (%) | After fare elimination (%) |\n| :--- | :--- | :--- |\n| Arlen | 1.6 | 7.5 |\n| Brayton | -0.8 | 6.8 |\n| Corvale | 4.2 | 3.4 |\n| Dunmore | 1.9 | 2.1 |\n\nTo determine whether eliminating fares affects public transit use, urban economist Rosa Delgado and colleagues calculated the average annual growth rate in transit ridership for several cities. Consulting the graph, a student claims that eliminating bus fares increases the rate at which a city's transit ridership grows.",
+              "question": "Which choice best describes data from the graph that weaken the student's claim?",
+              "options": {
+                "A": "Ridership in Brayton declined over the five years before fares were eliminated but grew over the five years after.",
+                "B": "Ridership in Dunmore grew only slightly faster over the five years after fares were eliminated than over the five years before.",
+                "C": "Although ridership in Corvale grew over the five years after fares were eliminated, it had grown at an even higher rate over the five years before.",
+                "D": "All four cities had positive ridership growth over the five years after eliminating fares, though their growth rates differed considerably."
+              },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q14",
+              "prompt": "Lakota painter Dyani White Hawk largely eschews the European tradition of figurative painting, with its proportionality of human form and depth between foreground and background; instead, she assembles compositions out of abstract motifs common in the beadwork of her own tribe. Maidu painter Judith Lowry, on the other hand, works in the European figurative mode; however, she draws her subject matter from cultural traditions that predate the European colonization of the lands of her own tribe, thereby __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "casting doubt on the feasibility of developing a new style of painting grounded in traditionally figurative art forms.",
+                "B": "implying her belief that both figurative and abstract art can portray the complexity of tribal identity.",
+                "C": "suggesting that even when practiced by Indigenous artists, abstract forms of art are ill-suited to portraying tribally specific content.",
+                "D": "transmitting her culture through particularities of content rather than through a tribally specific painting technique."
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q15",
+              "prompt": "Louis-Ferdinand Céline's 1932 novel Journey to the End of the Night is regularly described as autobiographical. That characterization is apt—there are many parallels between the experiences of the protagonist and those of Céline—but it should not be taken to mean that every person or event depicted has a real-life analogue. Much of the novel is pure invention, and readers who overlook this fact and instead focus excessively on correspondences between the novel and Céline's life can thus __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "fail to appreciate how much creativity Céline shows in the book.",
+                "B": "overemphasize the extent to which Céline took inspiration from earlier writers.",
+                "C": "refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night.",
+                "D": "misrepresent Journey to the End of the Night as being more widely read than it actually is."
+              },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q16",
+              "prompt": "Last-mile delivery, the final stage in the delivery of products to customers, is subject to increasing pressure as consumers place greater emphasis on convenience and immediacy, often expecting next-day delivery. In response to this challenge, delivery companies are continually looking for ways to make last-mile delivery more efficient. One advance is the use of self-service lockers. This approach, while promising, also introduces new obstacles (e.g., convenient placement of self-service lockers is challenging). It is therefore likely that __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations.",
+                "B": "delivery companies will continue promising next-day delivery out of a desire to meet consumers' expectations.",
+                "C": "advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience.",
+                "D": "innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications."
+              },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q17",
+              "prompt": "Rare species advantage (RSA) describes the situation in which there are few conspecifics in an organism's immediate surroundings, enabling the organism to avoid competition with conspecifics for the same resources; RSA is widely believed to play a crucial role in maintaining ecological stability. Among tree species in tropical forest sites, there is little correlation between conspecific aggregation and abundance, but in temperate forest sites, the aggregation-abundance correlation is strongly negative. Mathematical modeling suggests, however, that ecological niche distinction may mitigate the apparent risk to temperate ecological stability engendered by this pattern: __________",
+              "question": "Which choice most logically completes the text?",
+              "options": {
+                "A": "as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources.",
+                "B": "even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they benefit from RSA more.",
+                "C": "although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.",
+                "D": "while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem."
+              },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q18",
+              "prompt": "During a recent investigation, archaeologists __________ an explanation for the consistent and seemingly deliberate placement of petroglyphs (rock carvings) near water analyzed several sites on Caribbean islands. They discovered that many of the pools near petroglyphs had consistent water levels year-round, creating perfect reflecting surfaces for the carved symbols on the rocks.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "had sought", "B": "sought", "C": "seeking", "D": "were seeking" },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q19",
+              "prompt": "Theoretical physicists have begun to develop novel methods for detecting dark matter. Certain approaches __________ on quantum collective phenomena, like phonons in crystals or excitations in superfluid helium, are likely to face significant challenges, acknowledges physicist Kathryn Zurek, unless researchers can reduce background processes that might mimic the signals they're attempting to detect.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "focusing", "B": "focus", "C": "have focused", "D": "are focused" },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q20",
+              "prompt": "As one of aviation's earliest female stunt performers, Gladys Ingle developed a versatile repertoire of acrobatic feats. Her specialized skills included standing on the wing of a flying aircraft and shooting a bow and arrow at a __________ perfect balance during aerial maneuvers, such as vertical loops; and even walking across the wing as an aircraft flew at full speed beneath a bridge.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": { "A": "target; maintaining", "B": "target maintaining", "C": "target. Maintaining", "D": "target, maintaining" },
+              "correctAnswer": "A",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q21",
+              "prompt": "For his mash-up \"Smells Like Rockin' Robin,\" DJ Mark Vidler layered Kurt Cobain's minor-key vocals from \"Smells Like Teen Spirit\" over the Jackson 5's major-key blues progression from \"Rockin' __________ by inserting the grunge singer's vocal melody as pitch-shifted \"blue notes\" within the pop-soul group's harmonic framework, creates an intensified \"bluesy\" effect and subverts the expectations of listeners familiar with either musical source.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": {
+                "A": "Robin,\" a technique that",
+                "B": "Robin.\" A technique that",
+                "C": "Robin\"; a technique that,",
+                "D": "Robin\"—a technique that,"
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q22",
+              "prompt": "For her 2019 installation Tidelines, Portuguese artist Marta Lobo gathered 1,200 sentences describing the sea from Herman Melville's novel __________ fragile paper boats and setting them afloat on the Tagus River, she drew a connection between the novel's restless ocean imagery and the river's centuries-old role as Lisbon's gateway to the Atlantic.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": {
+                "A": "Moby-Dick, printing each sentence on a strip of rice paper. That she folded into",
+                "B": "Moby-Dick by printing each sentence on a strip of rice paper that she folded into",
+                "C": "Moby-Dick, printing each sentence on a strip of rice paper that she folded into",
+                "D": "Moby-Dick. Printing each sentence on a strip of rice paper that she folded into"
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q23",
+              "prompt": "Dmitri Mendeleev's periodic table arranged the known chemical elements by atomic weight and grouped them by recurring properties, leaving gaps for elements that had yet to be discovered. The table was first published in __________ its publication, chemists had no reliable system for predicting the properties of elements that had not yet been isolated.",
+              "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+              "options": {
+                "A": "1869, transforming the study of chemistry, before",
+                "B": "1869. Transforming the study of chemistry before",
+                "C": "1869, transforming the study of chemistry. Before",
+                "D": "1869, transforming the study of chemistry before"
+              },
+              "correctAnswer": "C",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q24",
+              "prompt": "Some fungi can break down petroleum pollutants in contaminated soil, a process known as mycoremediation. The oyster mushroom Pleurotus ostreatus, for example, secretes enzymes that degrade hydrocarbons into simpler, less harmful compounds. __________ the fungus grows slowly in cold soils and may take years to clean sites with heavy contamination.",
+              "question": "Which choice completes the text with the most logical transition?",
+              "options": {
+                "A": "For this reason, the fungus is the preferred choice for cleanups in cold climates;",
+                "B": "In fact, the fungus works most quickly at heavily contaminated sites;",
+                "C": "Similarly, certain bacteria can also break down petroleum hydrocarbons;",
+                "D": "That said, the fungus may not be practical for every cleanup project;"
+              },
+              "correctAnswer": "D",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q25",
+              "prompt": "While researching a topic, a student has taken the following notes:\n• NASA mission STS-134 took place from May 16, 2011, to June 1, 2011.\n• Astronauts Andrew Feustel and Michael Fincke were crew members of STS-134.\n• May 22, 2011: Feustel and Fincke performed an extravehicular activity (EVA) to refill space station radiators with ammonia.\n• An EVA is an activity done by astronauts outside the spacecraft.\n• The duration of their EVA was 8 hours and 7 minutes.\n• Theirs is counted among the longest completed spacewalks to date.",
+              "question": "The student wants to emphasize the duration of Feustel and Fincke's EVA. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+              "options": {
+                "A": "During their time as crew members of STS-134, Feustel and Fincke completed an EVA.",
+                "B": "Lasting 8 hours and 7 minutes, Feustel and Fincke's EVA is one of the longest spacewalks completed to date.",
+                "C": "Feustel and Fincke completed an EVA, also known as a spacewalk, in which they left the spacecraft to refill radiators.",
+                "D": "The EVA completed by STS-134 crewmembers Feustel and Fincke took place from May 16, 2011, to June 1, 2011."
+              },
+              "correctAnswer": "B",
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_rw2_q26",
+              "prompt": "While researching a topic, a student has taken the following notes:\n• Waiting is a 1987 black-and-white linocut print by Kuwaiti artist Thuraya Al-Baqsami.\n• It depicts a tranquil, everyday scene (a woman in a headscarf looking out a window).\n• ¡Será toda nuestra! ('It will all be ours!') is a 1977 color linocut print by Mexican American artist Carlos Cortéz.\n• It features a scene with an explicitly political point of view (a group of laborers preparing to go on strike).\n• Relief printing is a technique in which an image is carved onto a printing block, covered in ink, and stamped onto paper.\n• Linocut is a type of relief printing that uses linoleum tile as the printing block.",
+              "question": "The student wants to contrast the subject matter of the two prints. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+              "options": {
+                "A": "Cortéz made ¡Será toda nuestra! in 1977, while Al-Baqsami made Waiting later, in 1987.",
+                "B": "The scenes depicted in both works were first carved onto a printing block, then stamped onto paper; however, one work is a linocut, while the other is a relief print.",
+                "C": "Cortéz's print expresses an explicitly political point of view, while Al-Baqsami's depicts a tranquil, everyday scene.",
+                "D": "The print by Cortéz is a color linocut; by contrast, Al-Baqsami's is a relief print."
+              },
+              "correctAnswer": "C",
+              "isExperimental": true
+            },
+            {
+              "id": "ft1_rw2_q27",
+              "prompt": "While researching a topic, a student has taken the following notes:\n• Enhanced rock weathering (ERW) is a method of spreading crushed basalt on farmland to capture carbon dioxide (CO2) and improve soil health.\n• ERW increases crop yields and removes harmful CO2 from the air.\n• ERW offers a low-cost, low-tech alternative to expensive, energy-intensive carbon capture methods.\n• The CO2 captured by ERW becomes stable bicarbonate in soil water, which eventually streams into the ocean to remain safely stored for hundreds of years.\n• ERW can improve rural economies by reducing farmers' need for fertilizers and increasing their earnings from carbon credits.",
+              "question": "The student wants to explain why ERW is a superior method for capturing CO2. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+              "options": {
+                "A": "ERW improves soil health and helps farmers increase their income from selling carbon credits.",
+                "B": "ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies.",
+                "C": "ERW removes CO2 from the air in a way that is both low-cost and low-tech.",
+                "D": "The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years."
+              },
+              "correctAnswer": "C",
+              "isExperimental": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "duration": 2100,
+          "questions": [
+            {
+              "id": "ft1_m1_q1",
+              "prompt": "$$x + y = 92$$\nThe given equation relates the total number of marble queen pothos stems, $x$, and the total number of snow queen pothos stems, $y$, a plant nursery propagates to create pothos plants. If 32 snow queen pothos stems are propagated, how many marble queen pothos stems are propagated?",
+              "question": "Select the correct value of x:",
+              "options": { "A": "92", "B": "60", "C": "32", "D": "28" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q2",
+              "prompt": "A shipment consists of 5-pound boxes and 10-pound boxes with a total weight of 330 pounds. There are 15 10-pound boxes in the shipment. How many 5-pound boxes are in the shipment?",
+              "question": "How many 5-pound boxes are in the shipment?",
+              "options": { "A": "5", "B": "10", "C": "15", "D": "36" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q3",
+              "prompt": "$$y = -\\frac{1}{11}x$$\n$$y = \\frac{1}{4}x$$\nThe solution to the given system of equations is $(x, y)$. What is the value of $x$?",
+              "question": "What is the value of x?",
+              "options": { "A": "-11", "B": "-7", "C": "0", "D": "4" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q4",
+              "prompt": "A model estimates that a glacier moves between 17 and 24 centimeters per day. Which inequality represents possible values of $x$, where $x$ is the total distance, in centimeters, the glacier moves in 2 days?",
+              "question": "Select the correct inequality:",
+              "options": {
+                "A": "$0 \\le x \\le 2$",
+                "B": "$(17)(0.5) \\le x \\le (24)(0.5)$",
+                "C": "$17 \\le x \\le 24$",
+                "D": "$(17)(2) \\le x \\le (24)(2)$"
+              },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q5",
+              "prompt": "$$y \\ge x + 15$$\n$$y \\le -5x - 15$$\nWhich point $(x, y)$ is a solution to the given system of inequalities in the xy-plane?",
+              "question": "Select the correct coordinate pair:",
+              "options": { "A": "(-6, 13)", "B": "(-6, 8)", "C": "(-4, 13)", "D": "(-4, 8)" },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q6",
+              "prompt": "An organization sells tickets to a fundraiser for $50 per person. The organization's expenses are $600 for a rental space and $18 per person for food. The organization's goal is to earn at least $1,500 after paying all expenses. What is the minimum number of tickets that must be sold to meet this goal?",
+              "question": "What is the minimum number of tickets?",
+              "options": { "A": "30", "B": "42", "C": "66", "D": "75" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q7",
+              "prompt": "For the positive values $j$ and $k$, the ratio of $j$ to $k$ is 9 to 5. If $j$ is increased by 36, by how much must $k$ be increased so that the ratio of the new values of $j$ to $k$ is still 9 to 5?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "20",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q8",
+              "prompt": "Which expression is equivalent to $32x^2 + 32$?",
+              "question": "Select the correct option:",
+              "options": {
+                "A": "$32(x^2 + 1)$",
+                "B": "$32(x^2 + 32)$",
+                "C": "$32(32x^2 + 1)$",
+                "D": "$32(x^2 + 1/32)$"
+              },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q9",
+              "prompt": "What is the y-intercept of the graph of $y = (\\frac{2}{17})^{x+1}$ in the xy-plane?",
+              "question": "Select the correct coordinate pair:",
+              "options": { "A": "(2, 17)", "B": "(0, 17)", "C": "(0, 2)", "D": "(0, 2/17)" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q10",
+              "prompt": "$$y = 3,100(a)^x$$\nThe given equation, where $a$ is a positive constant, gives the predicted number of bacteria, $y$, in a growth medium $x$ hours after the number of bacteria was initially measured. According to the equation, what was the predicted number of bacteria initially measured in the growth medium?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "3100",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q11",
+              "prompt": "$$x^2 = -9$$\nHow many distinct real solutions does the given equation have?",
+              "question": "Select the number of solutions:",
+              "options": { "A": "Exactly one", "B": "Exactly two", "C": "Infinitely many", "D": "Zero" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q12",
+              "prompt": "The system of two equations, $y = \\frac{22}{x}$ and $y = 22x$, is graphed in the xy-plane. Which ordered pair is a solution to this system?",
+              "question": "Select the correct ordered pair:",
+              "options": { "A": "(0, 0)", "B": "(0, 22)", "C": "(1, 22)", "D": "(22, 22)" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q13",
+              "prompt": "$$4|x + 3| - 2 = 22$$\nWhat is the sum of the solutions to the given equation?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "-6",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q14",
+              "prompt": "The function $h$ is defined by $h(x) = |x - 8| - |6 - x| + a$, where $a$ is a constant, and $h(-4) = 1$. What is the value of $a$?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "-1",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q15",
+              "prompt": "$$y = x - 1$$\n$$y = 27(x - 1)^2 - 28$$\nA solution to the given system of equations is $(x, y)$. What is one possible value of $x - 1$?",
+              "question": "Select one possible value of x - 1:",
+              "options": { "A": "-2", "B": "-28/27", "C": "-1", "D": "-1/27" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q16",
+              "prompt": "For a project, Kayla recorded the heights of 25 people in her neighborhood. The histogram summarizes the heights, in inches (in), of these 25 people in Kayla's neighborhood. The first bar represents people with a height of at least 51 in but less than 53 in (frequency = 4). The second bar represents people with a height of at least 53 in but less than 55 in (frequency = 6). How many of these 25 people in Kayla's neighborhood had a height of at least 51 in but less than 55 in?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "10",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q17",
+              "prompt": "A commercial water pump drains water from a reservoir at a constant rate of 180 gallons per minute. At this rate, how many hours will it take to drain 32,400 gallons of water?",
+              "question": "Select the correct number of hours:",
+              "options": { "A": "2.5", "B": "3.0", "C": "3.5", "D": "4.0" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q18",
+              "prompt": "The graph shown gives the estimated value, in dollars, of a mountain bike as a function of the number of months since it was purchased. The line has a y-intercept at $(0, 275)$ and passes through $(24, 150)$. What is the best interpretation of the y-intercept of the graph in this context?",
+              "question": "Select the best interpretation:",
+              "options": {
+                "A": "The estimated value of the bike was $275 when it was purchased.",
+                "B": "The estimated value of the bike 24 months after it was purchased was $275.",
+                "C": "The estimated value of the bike had decreased by $275 in the 24 months after it was purchased.",
+                "D": "The estimated value of the bike decreased by approximately 2.75% each year after it was purchased."
+              },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q19",
+              "prompt": "At a hotel, guests used the pool for a total of $t$ hours in March. At the same hotel, guests used the pool for $3.41t$ hours in April. What is the percent increase in the number of hours guests used the pool from March to April?",
+              "question": "Select the percent increase:",
+              "options": { "A": "2.41%", "B": "3.41%", "C": "241%", "D": "341%" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q20",
+              "prompt": "Triangles ABC and A'B'C' are shown. Triangle ABC is dilated by a scale factor of 3 to form triangle A'B'C'. If the length of segment AB is 21, what is the length of segment A'B'?",
+              "question": "Select the length of A'B':",
+              "options": { "A": "3", "B": "7", "C": "24", "D": "63" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m1_q21",
+              "prompt": "In triangle ABC, the measure of angle A is $36^\\circ$ and the measure of angle B is $90^\\circ$. What is the measure, in degrees, of angle C?",
+              "question": "Select the degree measure of angle C:",
+              "options": { "A": "36", "B": "54", "C": "90", "D": "180" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": true
+            },
+            {
+              "id": "ft1_m1_q22",
+              "prompt": "A circle in the xy-plane has equation $(x - 4)^2 + (y + 1)^2 = 49$. What is the radius of the circle?",
+              "question": "Select the radius of the circle:",
+              "options": { "A": "7", "B": "14", "C": "24.5", "D": "49" },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": true
+            }
+          ]
+        },
+        {
+          "moduleNumber": 2,
+          "duration": 2100,
+          "questions": [
+            {
+              "id": "ft1_m2_q1",
+              "prompt": "A store sells two different-sized bottles of a certain shampoo. The store's sales of this shampoo totaled 910.53 dollars last month. The equation $4.59x + 6.09y = 910.53$ represents this situation, where $x$ is the number of smaller bottles sold and $y$ is the number of larger bottles sold. According to the equation, what is the price, in dollars, of each smaller bottle?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "4.59",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q2",
+              "prompt": "For a linear function $f$, the table shows three values of $x$ and their corresponding values of $f(x)$:\n\n| x | f(x) |\n| :--- | :--- |\n| 0 | 7 |\n| 1 | 13 |\n| 2 | 19 |\n\nWhich of the following could define $f$?",
+              "question": "Select the correct equation:",
+              "options": { "A": "$f(x) = 7x + 6$", "B": "$f(x) = 6x + 7$", "C": "$f(x) = x + 7$", "D": "$f(x) = 6x$" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q3",
+              "prompt": "The roofs on the buildings of a public garden are designed to allow water to drain into the garden:\n\n| Area (square feet) | Water (gallons) |\n| :--- | :--- |\n| 1,040 | 2,496 |\n| 1,560 | 3,744 |\n| 2,080 | 4,992 |\n\nWhich equation could define $f(x)$?",
+              "question": "Select the correct equation:",
+              "options": { "A": "$f(x) = 0.6x$", "B": "$f(x) = 2.4x$", "C": "$f(x) = 1,248.0x$", "D": "$f(x) = 2,496.0x$" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q4",
+              "prompt": "$$13x + 325 = a(x + 25)$$\nIn the given equation, $a$ is a constant. If the equation has infinitely many solutions, what is the value of $a$?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "13",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q5",
+              "prompt": "Line $p$ is defined by $2y + 18x = 11$. Line $r$ is perpendicular to line $p$ in the xy-plane. What is the slope of line $r$?",
+              "question": "Select the slope of line r:",
+              "options": { "A": "9", "B": "1/9", "C": "-1/9", "D": "-9" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q6",
+              "prompt": "Line $h$ is defined by $\\frac{1}{3}x + \\frac{1}{2}y - 30 = 0$. Line $j$ is perpendicular to line $h$ in the xy-plane. What is the slope of line $j$?",
+              "question": "Select the slope of line j:",
+              "options": { "A": "-2/3", "B": "-3/2", "C": "2/3", "D": "3/2" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q7",
+              "prompt": "Line $k$ is defined by $4x - 6y = 17$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
+              "question": "Select the slope of line j:",
+              "options": { "A": "2/3", "B": "3/2", "C": "-3/2", "D": "-2/3" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q8",
+              "prompt": "$$18x + 6y = 8y + 9$$\n$$ty = \\frac{1}{5} + 9x$$\nIn the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "1",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q9",
+              "prompt": "The function $f$ is defined by $f(x) = x^2 + x + 53$. What is the value of $f(2)$?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "59",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q10",
+              "prompt": "An exponential function $f$ is defined by $f(x) = k(2)^x$, where $k$ is a positive constant. If $f(-1) = 8$ and $f(2) = 64$, what is the value of $k$?",
+              "question": "Select the value of k:",
+              "options": { "A": "8", "B": "9", "C": "15", "D": "16" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q11",
+              "prompt": "The function $f$ is defined by $f(x) = -2(x - 3)^2 + 8$. What is the maximum value of $f(x)$?",
+              "question": "Select the maximum value of f(x):",
+              "options": { "A": "-2", "B": "3", "C": "6", "D": "8" },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q12",
+              "prompt": "What is the y-coordinate of the y-intercept of the graph of $y = 5(3)^{x+2}$ in the xy-plane?",
+              "question": "Select the y-coordinate:",
+              "options": { "A": "5", "B": "15", "C": "45", "D": "135" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q13",
+              "prompt": "The graph of the polynomial function $f$ in the xy-plane passes through the point $(6, -5)$. The function $g$ is defined by $g(x) = f(x - 2) + 4$. Which of the following points must lie on the graph of $y = g(x)$?",
+              "question": "Select the point that must lie on g(x):",
+              "options": { "A": "(8, -1)", "B": "(4, -1)", "C": "(8, -9)", "D": "(4, -9)" },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q14",
+              "prompt": "What is the x-intercept of the graph of $y = \\frac{21 - x}{ax + b}$ in the xy-plane, where $a$ and $b$ are positive constants?",
+              "question": "Select the coordinate pair:",
+              "options": { "A": "(21, 0)", "B": "(0, -21)", "C": "(0, 21/b)", "D": "(-b/a, 0)" },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q15",
+              "prompt": "$$-14(3x - 4)^2 + 6(3x - 2)^2$$\nThe given expression can be rewritten as $\\frac{a}{4}x^2 + \\frac{b}{4}x + \\frac{c}{4}$, where $a, b,$ and $c$ are constants. What is the value of $a + b + c$?",
+              "question": "Select the value of a + b + c:",
+              "options": { "A": "-32", "B": "-16", "C": "-8", "D": "-2" },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q16",
+              "prompt": "A laboratory culture of bacteria triples in size every 5 hours. The function $P(t) = 150(3)^{t/5}$ gives the approximate number of bacteria in the culture $t$ hours after the culture was started. Which statement is the best interpretation of $P(3 \\cdot 5) = 4,050$ in this context?",
+              "question": "Select the best interpretation:",
+              "options": {
+                "A": "The culture contains approximately 4,050 bacteria 3 hours after it was started.",
+                "B": "The culture contains approximately 3 times 4,050 bacteria 15 hours after it was started.",
+                "C": "The culture contains approximately 4,050 bacteria 3 five-hour periods after it was started.",
+                "D": "The number of bacteria in the culture increases by approximately 4,050 every 5 hours."
+              },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q17",
+              "prompt": "Which of the following equations is the most appropriate linear model for the data shown in the scatterplot passing near $(0, 0.2)$ and rising with slope approximately $2.28$?",
+              "question": "Select the correct equation:",
+              "options": { "A": "$y = 0.2 + 2.28x$", "B": "$y = 0.2 - 2.28x$", "C": "$y = 2.28 + 0.2x$", "D": "$y = 2.28 - 0.2x$" },
+              "correctAnswer": "A",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q18",
+              "prompt": "A researcher conducted a study on melatonin levels of gamers. A total of 127 gamers were selected at random from Sweden (25), South Korea (49), and the United States (53). Which of the following aspects of the study will prevent the results from being generalized to all gamers?",
+              "question": "Select the preventing factor:",
+              "options": {
+                "A": "The melatonin levels were not measured over a long enough period of time.",
+                "B": "The number of selected gamers from each country is different.",
+                "C": "The number of selected gamers is too small.",
+                "D": "The gamers were not selected at random from all gamers."
+              },
+              "correctAnswer": "D",
+              "isGridIn": false,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q19",
+              "prompt": "Container P holds $k$ liters of water. Container Q holds 72% of the amount of water in container P, and container R holds 150% of the amount of water in container Q. The positive difference between container R and container P is 32.4 liters. What is the value of $k$?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "405",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q20",
+              "prompt": "An angle has a measure of $\\frac{7\\pi}{12}$ radians. What is the measure, in degrees, of an angle that is supplementary to this angle?",
+              "question": "Enter your answer below:",
+              "options": {},
+              "correctAnswer": "75",
+              "isGridIn": true,
+              "isExperimental": false
+            },
+            {
+              "id": "ft1_m2_q21",
+              "prompt": "In the figure, $3r > 19s$, where $r$ and $s$ are complementary acute angles ($r + s = 90^\\circ$). Which of the following values must be the greatest?",
+              "question": "Select the greatest value:",
+              "options": {
+                "A": "$\\sin r^\\circ$",
+                "B": "$\\cos r^\\circ$",
+                "C": "$\\frac{\\sin r^\\circ}{\\sin s^\\circ}$",
+                "D": "$\\frac{\\sin r^\\circ}{\\cos s^\\circ}$"
+              },
+              "correctAnswer": "C",
+              "isGridIn": false,
+              "isExperimental": true
+            },
+            {
+              "id": "ft1_m2_q22",
+              "prompt": "In triangle ABC, DE is parallel to AC, $BD = AD$, $BE = 9$, and $AC = 8$. What is the length of BC?",
+              "question": "Select the length of BC:",
+              "options": { "A": "72", "B": "18", "C": "17", "D": "16" },
+              "correctAnswer": "B",
+              "isGridIn": false,
+              "isExperimental": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

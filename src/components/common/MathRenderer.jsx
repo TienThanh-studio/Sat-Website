@@ -2,37 +2,60 @@ import React, { useMemo } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
-// Tự động chuẩn hóa các công thức toán chưa được bọc dấu $
-function autoFormatMathText(input) {
+// Xử lý an toàn biểu thức toán học
+function autoWrapMathExpressions(input) {
   if (!input) return '';
   let str = String(input);
-
-  // Nếu chuỗi đã có dấu $ thì giữ nguyên
   if (str.includes('$')) return str;
 
-  // Nếu là dạng lũy thừa x^(a/b) hoặc x^n -> bọc $x^{...}$
-  if (/^[a-zA-Z0-9\s\+\-\*\/\(\)\^\.\,]+$/.test(str.trim())) {
-    if (str.includes('^') || str.includes('\\sqrt') || (str.includes('/') && /\d+\/\d+/.test(str))) {
-      let formatted = str
-        .replace(/([a-zA-Z0-9]+)\^\(([^)]+)\)/g, '$1^{$2}')
-        .replace(/([a-zA-Z0-9]+)\^([a-zA-Z0-9]+)/g, '$1^{$2}');
-      return `$${formatted}$`;
-    }
+  const trimmed = str.trim();
+  if (
+    trimmed.includes('^') ||
+    trimmed.includes('\\sqrt') ||
+    trimmed.includes('\\frac') ||
+    trimmed.includes('\\cdot') ||
+    (/^[a-zA-Z0-9\s\+\-\*\/\(\)\^\.\,\=]+$/.test(trimmed) && (trimmed.includes('^') || /\d+\/\d+/.test(trimmed)))
+  ) {
+    let formatted = trimmed
+      .replace(/([a-zA-Z0-9]+)\^\(([^)]+)\)/g, '$1^{$2}')
+      .replace(/([a-zA-Z0-9]+)\^([a-zA-Z0-9]+)/g, '$1^{$2}');
+    return `$${formatted}$`;
   }
-
   return str;
+}
+
+// Render chuỗi có KaTeX và gạch chân <u> đơn giản, thanh mảnh
+function renderFormattedSegment(content) {
+  if (!content) return null;
+
+  const underlineParts = content.split(/(<u>[\s\S]*?<\/u>)/gi);
+
+  return underlineParts.map((uPart, uIdx) => {
+    if (!uPart) return null;
+
+    if (uPart.toLowerCase().startsWith('<u>') && uPart.toLowerCase().endsWith('</u>')) {
+      const innerText = uPart.slice(3, -4);
+      return (
+        <span key={`u-${uIdx}`} className="underline underline-offset-4 decoration-1 font-normal text-slate-900">
+          {renderKatexText(innerText)}
+        </span>
+      );
+    }
+
+    return <React.Fragment key={`text-${uIdx}`}>{renderKatexText(uPart)}</React.Fragment>;
+  });
 }
 
 function renderKatexText(content) {
   if (!content) return null;
-  const processed = autoFormatMathText(content);
+  const processed = autoWrapMathExpressions(content);
   const parts = processed.split(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g);
 
   return parts.map((part, index) => {
     if (!part) return null;
 
     if (part.startsWith('$$') && part.endsWith('$$')) {
-      const math = part.slice(2, -2).trim();
+      let math = part.slice(2, -2).trim().replace(/(?<!\\)%/g, '\\%');
       try {
         const html = katex.renderToString(math, { displayMode: true, throwOnError: false });
         return (
@@ -48,7 +71,7 @@ function renderKatexText(content) {
     }
 
     if (part.startsWith('$') && part.endsWith('$')) {
-      const math = part.slice(1, -1).trim();
+      let math = part.slice(1, -1).trim().replace(/(?<!\\)%/g, '\\%');
       try {
         const html = katex.renderToString(math, { displayMode: false, throwOnError: false });
         return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
@@ -61,6 +84,66 @@ function renderKatexText(content) {
   });
 }
 
+// Bóc tách dạng bài 2 đoạn văn Text 1 & Text 2 theo chuẩn Bluebook (không viền, không box)
+function renderCrossTextPassage(text) {
+  // Chỉ phân tách khi văn bản thực sự bắt đầu hoặc chứa tiêu đề đoạn văn "Text 1"
+  const regex = /(?:^|\n)\s*Text\s*2\s*[:\-\n]?\s*/i;
+  const match = text.match(regex);
+  if (!match) return null;
+
+  let t1 = text.slice(0, match.index).replace(/^\s*Text\s*1\s*[:\-\n]?\s*/i, '').trim();
+  let t2 = text.slice(match.index + match[0].length).trim();
+
+  // Bổ sung gạch chân cho bài Henry James nếu dữ liệu gốc bị thiếu
+  if (t1.toLowerCase().includes('james') && !t1.includes('<u>')) {
+    t1 = t1.replace(
+      /(James's late novels are some of the best he wrote, but they are not for everyone\.)/i,
+      '<u>$1</u>'
+    );
+  }
+
+  return (
+    <div className="space-y-5 leading-relaxed text-slate-800">
+      <div>
+        <p className="font-bold text-slate-900 mb-1">Text 1</p>
+        <p>{renderFormattedSegment(t1)}</p>
+      </div>
+      <div>
+        <p className="font-bold text-slate-900 mb-1">Text 2</p>
+        <p>{renderFormattedSegment(t2)}</p>
+      </div>
+    </div>
+  );
+}
+
+// Render ghi chú Rhetorical Synthesis (Bullet points)
+function renderRhetoricalNotes(text) {
+  const parts = text.split(/(•|\n\s*[-*]\s*)/g);
+  const intro = parts[0].trim();
+  const bullets = [];
+
+  for (let i = 1; i < parts.length; i += 2) {
+    const bulletContent = parts[i + 1]?.trim();
+    if (bulletContent) bullets.push(bulletContent);
+  }
+
+  if (bullets.length === 0) return null;
+
+  return (
+    <div className="space-y-3 leading-relaxed text-slate-800">
+      {intro && <p className="font-medium text-slate-700">{renderFormattedSegment(intro)}</p>}
+      <ul className="space-y-2 pl-4 list-disc marker:text-slate-500 text-[15px]">
+        {bullets.map((bullet, idx) => (
+          <li key={idx} className="pl-1">
+            {renderFormattedSegment(bullet)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Render bảng số liệu Markdown
 function renderTableMarkdown(text) {
   const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
   const tableLines = lines.filter(l => l.includes('|'));
@@ -102,32 +185,6 @@ function renderTableMarkdown(text) {
   );
 }
 
-function renderRhetoricalNotes(text) {
-  const parts = text.split(/(•|\n\s*[-*]\s*)/g);
-  const intro = parts[0].trim();
-  const bullets = [];
-
-  for (let i = 1; i < parts.length; i += 2) {
-    const bulletContent = parts[i + 1]?.trim();
-    if (bulletContent) bullets.push(bulletContent);
-  }
-
-  if (bullets.length === 0) return null;
-
-  return (
-    <div className="space-y-3 font-serif leading-relaxed text-slate-800">
-      {intro && <p className="font-sans font-medium text-slate-700">{renderKatexText(intro)}</p>}
-      <ul className="space-y-2 pl-4 list-disc marker:text-slate-500 text-[15px]">
-        {bullets.map((bullet, idx) => (
-          <li key={idx} className="pl-1">
-            {renderKatexText(bullet)}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export default function MathRenderer({ text = '', className = '' }) {
   const cleanContent = useMemo(() => {
     if (!text) return '';
@@ -136,20 +193,43 @@ export default function MathRenderer({ text = '', className = '' }) {
 
     val = val.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
     val = val.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
-    val = val.replace(/\\%/g, '%');
-    val = val.replace(/\\\$/g, '$');
     val = val.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/gi, '');
+
+    // Bổ sung gạch chân cho các câu hỏi function bị thiếu thẻ <u>
+    if (val.includes('The Every') && val.includes('Delaney Wells') && !val.includes('<u>')) {
+      val = val.replace(
+        /(Through this satirical portrayal, Eggers drives home his central message: digital dystopia spreads not through coercion but through willing participation in technologies that promise social change but that encourage self-centered and moralizing behavior rather than collective action to bring about systemic improvements\.)/i,
+        '<u>$1</u>'
+      );
+    }
+
+    if (val.includes('Jared Shurin') && val.includes('Cyberpunk') && !val.includes('<u>')) {
+      val = val.replace(
+        /(cyberpunk is a literary movement that is in (?:large|meo) part aesthetic rather than idea driven\.)/i,
+        '<u>$1</u>'
+      );
+    }
+
     return val;
   }, [text]);
 
   if (!cleanContent) return null;
 
+  // 1. Phân tách Cross-Text: CHỈ kích hoạt khi văn bản bắt đầu bằng Text 1 và có Text 2 (tránh nhận nhầm câu hỏi bên phải)
+  const isPassageWithCrossText = /^\s*Text\s*1\b/i.test(cleanContent) && /\bText\s*2\b/i.test(cleanContent);
+  if (isPassageWithCrossText) {
+    const renderedCross = renderCrossTextPassage(cleanContent);
+    if (renderedCross) return renderedCross;
+  }
+
+  // 2. Câu hỏi dạng ghi chú (Notes)
   const isNotesQuestion = cleanContent.includes('•') || (cleanContent.toLowerCase().includes('notes:') && cleanContent.includes('-'));
   if (isNotesQuestion) {
     const renderedNotes = renderRhetoricalNotes(cleanContent);
     if (renderedNotes) return renderedNotes;
   }
 
+  // 3. Bảng Markdown
   const isTableContent = cleanContent.includes('|') && cleanContent.split('\n').filter(l => l.includes('|')).length >= 2;
   if (isTableContent) {
     const lines = cleanContent.split('\n');
@@ -170,17 +250,29 @@ export default function MathRenderer({ text = '', className = '' }) {
     }
 
     return (
-      <div className={`space-y-3 font-serif leading-relaxed ${className}`}>
-        {introLines.length > 0 && <p>{renderKatexText(introLines.join(' '))}</p>}
+      <div className={`space-y-3 leading-relaxed ${className}`}>
+        {introLines.length > 0 && <p>{renderFormattedSegment(introLines.join(' '))}</p>}
         {renderTableMarkdown(tableLines.join('\n'))}
-        {outroLines.length > 0 && <p>{renderKatexText(outroLines.join(' '))}</p>}
+        {outroLines.length > 0 && <p>{renderFormattedSegment(outroLines.join(' '))}</p>}
+      </div>
+    );
+  }
+
+  // 4. Văn bản đoạn văn thông thường
+  const paragraphs = cleanContent.split(/\n\s*\n/);
+  if (paragraphs.length > 1) {
+    return (
+      <div className={`space-y-4 leading-relaxed ${className}`}>
+        {paragraphs.map((p, pIdx) => (
+          <p key={pIdx}>{renderFormattedSegment(p.trim())}</p>
+        ))}
       </div>
     );
   }
 
   return (
     <span className={`leading-relaxed ${className}`}>
-      {renderKatexText(cleanContent)}
+      {renderFormattedSegment(cleanContent)}
     </span>
   );
 }

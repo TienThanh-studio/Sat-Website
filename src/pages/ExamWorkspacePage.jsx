@@ -5,22 +5,103 @@ import ReferenceModal from '../components/exam/ReferenceModal';
 import ScoreReportModal from '../components/exam/ScoreReportModal';
 import MatrixModal from '../components/exam/MatrixModal';
 import { usePacingTracker } from '../hooks/usePacingTracker';
-import { 
-  normalizeSprAnswer, 
-  isAnswerCorrect, 
-  routeNextModule 
-} from '../services/adaptiveEngine';
-import { calculateSatSectionScore } from '../services/satIrtScoring';
+import { normalizeSprAnswer, isAnswerCorrect } from '../services/adaptiveEngine';
+import { calculateModuleScore } from '../services/satIrtScoring';
 
-// Dữ liệu dự phòng Test 8 Module 2 khi làm đề đơn
+// Dữ liệu dự phòng
 import test8Rw2 from '../data/questions/tests/sat_test_8_rw2.json';
 import test8Math2 from '../data/questions/tests/sat_test_8_math2.json';
 
-// Component tự động dựng biểu đồ cột SVG cho các câu hỏi Verbal đề cập tới biểu đồ
+// =========================================================================
+// 1. COMPONENT DỰNG HÌNH VẼ HỌC & ĐỒ THỊ SVG CHO PHẦN MATH
+// =========================================================================
+function MathFigureRenderer({ question }) {
+  if (!question) return null;
+  const prompt = (question.prompt || question.passage || question.question || '').toLowerCase();
+
+  // 1. Tam giác vuông 45-45-90
+  if (prompt.includes('45°') || prompt.includes('45^\\circ') || (prompt.includes('triangle') && prompt.includes('sin a'))) {
+    return (
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col items-center select-none">
+        <svg viewBox="0 0 240 180" className="w-56 h-auto text-xs font-sans">
+          <polygon points="40,140 180,140 40,30" fill="#f8fafc" stroke="#334155" strokeWidth="2" />
+          <polyline points="40,125 55,125 55,140" fill="none" stroke="#334155" strokeWidth="1.5" />
+          <path d="M 160 140 A 20 20 0 0 1 168 126" fill="none" stroke="#64748b" strokeWidth="1.5" />
+          <text x="145" y="134" fill="#0f172a" fontSize="11" fontWeight="bold">45°</text>
+          <text x="25" y="150" fill="#0f172a" fontSize="13" fontWeight="bold">C</text>
+          <text x="190" y="150" fill="#0f172a" fontSize="13" fontWeight="bold">A</text>
+          <text x="32" y="24" fill="#0f172a" fontSize="13" fontWeight="bold">B</text>
+          <text x="115" y="78" fill="#2563eb" fontSize="12" fontWeight="bold">x = 19</text>
+        </svg>
+        <span className="text-[11px] text-slate-400 italic mt-1 font-sans">Note: Figure not drawn to scale.</span>
+      </div>
+    );
+  }
+
+  // 2. Hai đường thẳng cắt nhau tạo góc kề bù r và s
+  if (prompt.includes('intersect') && (prompt.includes('71') || (prompt.includes('r') && prompt.includes('s')))) {
+    return (
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col items-center select-none">
+        <svg viewBox="0 0 240 140" className="w-56 h-auto text-xs font-sans">
+          <line x1="20" y1="110" x2="220" y2="30" stroke="#334155" strokeWidth="2" />
+          <line x1="40" y1="30" x2="200" y2="110" stroke="#334155" strokeWidth="2" />
+          <text x="115" y="55" fill="#2563eb" fontSize="12" fontWeight="bold">r°</text>
+          <text x="150" y="75" fill="#0f172a" fontSize="12" fontWeight="bold">s°</text>
+        </svg>
+        <span className="text-[11px] text-slate-400 italic mt-1 font-sans">Note: Figure not drawn to scale.</span>
+      </div>
+    );
+  }
+
+  // 3. Tam giác đồng dạng DE song song AC
+  if (prompt.includes('parallel to') && (prompt.includes('ac') || prompt.includes('de'))) {
+    return (
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col items-center select-none">
+        <svg viewBox="0 0 240 180" className="w-56 h-auto text-xs font-sans">
+          <polygon points="120,20 30,160 210,160" fill="#f8fafc" stroke="#334155" strokeWidth="2" />
+          <line x1="75" y1="90" x2="165" y2="90" stroke="#2563eb" strokeWidth="2" strokeDasharray="4 2" />
+          <text x="115" y="15" fill="#0f172a" fontSize="12" fontWeight="bold">B</text>
+          <text x="18" y="168" fill="#0f172a" fontSize="12" fontWeight="bold">A</text>
+          <text x="215" y="168" fill="#0f172a" fontSize="12" fontWeight="bold">C</text>
+          <text x="60" y="88" fill="#2563eb" fontSize="11" fontWeight="bold">D</text>
+          <text x="172" y="88" fill="#2563eb" fontSize="11" fontWeight="bold">E</text>
+          <text x="145" y="55" fill="#64748b" fontSize="10">BE = 9</text>
+          <text x="120" y="175" fill="#64748b" fontSize="10" textAnchor="middle">AC = 8</text>
+        </svg>
+        <span className="text-[11px] text-slate-400 italic mt-1 font-sans">Note: Figure not drawn to scale.</span>
+      </div>
+    );
+  }
+
+  // 4. Biểu đồ giá trị xe đạp leo núi (Mountain bike value)
+  if (prompt.includes('mountain bike') || (prompt.includes('275') && prompt.includes('purchased'))) {
+    return (
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col items-center select-none">
+        <svg viewBox="0 0 280 180" className="w-64 h-auto text-[10px] font-sans">
+          <line x1="40" y1="20" x2="40" y2="150" stroke="#94a3b8" strokeWidth="1.2" />
+          <line x1="40" y1="150" x2="260" y2="150" stroke="#94a3b8" strokeWidth="1.2" />
+          <text x="35" y="28" textAnchor="end" fill="#64748b">350</text>
+          <text x="35" y="65" textAnchor="end" fill="#64748b">275</text>
+          <text x="35" y="150" textAnchor="end" fill="#64748b">0</text>
+          <text x="200" y="165" textAnchor="middle" fill="#64748b">Months (x)</text>
+          <text x="15" y="85" textAnchor="middle" transform="rotate(-90, 15, 85)" fill="#64748b">Value ($)</text>
+          <line x1="40" y1="62" x2="220" y2="115" stroke="#2563eb" strokeWidth="2.5" />
+          <circle cx="40" cy="62" r="3.5" fill="#1d4ed8" />
+        </svg>
+        <span className="text-[11px] text-slate-400 italic mt-1 font-sans">Graph of Estimated Bike Value</span>
+      </div>
+    );
+  }
+
+  return null;
+}
+
+// =========================================================================
+// 2. COMPONENT DỰNG BIỂU ĐỒ CỘT SVG CHO PHẦN VERBAL
+// =========================================================================
 function VerbalChartRenderer({ question }) {
   if (!question) return null;
 
-  // 1. Nếu có file ảnh biểu đồ đính kèm
   const imgSource = question.image || question.imageUrl || question.chart || question.graph;
   if (imgSource) {
     return (
@@ -42,10 +123,10 @@ function VerbalChartRenderer({ question }) {
 
   const promptText = (question.prompt || question.passage || question.content || '').toLowerCase();
 
-  // Biểu đồ cho câu Tax Penalties (Form 4720)
+  // Biểu đồ Tax Penalties (Form 4720)
   if (promptText.includes('form 4720') || promptText.includes('private foundations')) {
     return (
-      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs font-sans">
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs font-sans select-none">
         <div className="text-center font-bold text-xs text-slate-800 mb-3 leading-snug">
           Tax Penalties Assessed on Private Foundations That Filed Form 4720, by Reason, 2003–2005
         </div>
@@ -56,7 +137,6 @@ function VerbalChartRenderer({ question }) {
         </div>
         <div className="overflow-x-auto">
           <svg viewBox="0 0 460 210" className="w-full max-w-lg mx-auto text-[10px] font-sans">
-            {/* Trục Y và đường lưới */}
             <line x1="45" y1="20" x2="45" y2="160" stroke="#94a3b8" strokeWidth="1.2" />
             <line x1="45" y1="160" x2="440" y2="160" stroke="#94a3b8" strokeWidth="1.2" />
             {[0, 20, 40, 60, 80].map((val) => {
@@ -68,25 +148,21 @@ function VerbalChartRenderer({ question }) {
                 </g>
               );
             })}
-            {/* Nhóm 1: Self-dealing (2003: 10%, 2004: 6%, 2005: 40%) */}
             <rect x="75" y={160 - (10/80)*140} width="16" height={(10/80)*140} fill="#64748b" rx="1" />
             <rect x="93" y={160 - (6/80)*140} width="16" height={(6/80)*140} fill="#cbd5e1" rx="1" />
             <rect x="111" y={160 - (40/80)*140} width="16" height={(40/80)*140} fill="#0f172a" rx="1" />
             <text x="101" y="175" textAnchor="middle" fill="#334155" fontWeight="600">self-dealing</text>
 
-            {/* Nhóm 2: Undistributed income (2003: 79%, 2004: 77%, 2005: 55%) */}
             <rect x="165" y={160 - (79/80)*140} width="16" height={(79/80)*140} fill="#64748b" rx="1" />
             <rect x="183" y={160 - (77/80)*140} width="16" height={(77/80)*140} fill="#cbd5e1" rx="1" />
             <rect x="201" y={160 - (55/80)*140} width="16" height={(55/80)*140} fill="#0f172a" rx="1" />
             <text x="191" y="175" textAnchor="middle" fill="#334155" fontWeight="600">undistributed income</text>
 
-            {/* Nhóm 3: Taxable expenditures (2003: 7%, 2004: 14%, 2005: 4%) */}
             <rect x="255" y={160 - (7/80)*140} width="16" height={(7/80)*140} fill="#64748b" rx="1" />
             <rect x="273" y={160 - (14/80)*140} width="16" height={(14/80)*140} fill="#cbd5e1" rx="1" />
             <rect x="291" y={160 - (4/80)*140} width="16" height={(4/80)*140} fill="#0f172a" rx="1" />
             <text x="281" y="175" textAnchor="middle" fill="#334155" fontWeight="600">taxable expenditures</text>
 
-            {/* Nhóm 4: Excess business holdings (2003: 3%, 2004: 4%, 2005: 1%) */}
             <rect x="345" y={160 - (3/80)*140} width="16" height={(3/80)*140} fill="#64748b" rx="1" />
             <rect x="363" y={160 - (4/80)*140} width="16" height={(4/80)*140} fill="#cbd5e1" rx="1" />
             <rect x="381" y={160 - (1/80)*140} width="16" height={(1/80)*140} fill="#0f172a" rx="1" />
@@ -98,10 +174,10 @@ function VerbalChartRenderer({ question }) {
     );
   }
 
-  // Biểu đồ cho câu Núi lửa Tanzania / Ethiopia
-  if (promptText.includes('volcanoes') || promptText.includes('tanzania')) {
+  // Biểu đồ Núi lửa Tanzania / Ethiopia
+  if (promptText.includes('volcanoes') || promptText.includes('tanzania') || promptText.includes('ethiopia')) {
     return (
-      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs font-sans">
+      <div className="my-5 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs font-sans select-none">
         <div className="text-center font-bold text-xs text-slate-800 mb-3 leading-snug">
           Volcanoes Active since 1800 and since 1960 in Two Countries
         </div>
@@ -122,78 +198,26 @@ function VerbalChartRenderer({ question }) {
                 </g>
               );
             })}
-            {/* Active since 1800: Tanzania ~3, Ethiopia ~11 */}
             <rect x="90" y={150 - (3/12)*130} width="24" height={(3/12)*130} fill="#334155" rx="1" />
             <rect x="118" y={150 - (11/12)*130} width="24" height={(11/12)*130} fill="#cbd5e1" rx="1" />
             <text x="116" y="168" textAnchor="middle" fill="#334155" fontWeight="600">active since 1800</text>
 
-            {/* Active since 1960: Tanzania ~2, Ethiopia ~8 */}
             <rect x="210" y={150 - (2/12)*130} width="24" height={(2/12)*130} fill="#334155" rx="1" />
             <rect x="238" y={150 - (8/12)*130} width="24" height={(8/12)*130} fill="#cbd5e1" rx="1" />
             <text x="236" y="168" textAnchor="middle" fill="#334155" fontWeight="600">active since 1960</text>
-            <text x="15" y="85" textAnchor="middle" transform="rotate(-90, 15, 85)" fill="#64748b" fontWeight="500">Number of active volcanoes</text>
+            <text x="15" y="85" textAnchor="middle" transform="rotate(-90, 15, 85)" fill="#64748b" fontWeight="500">Number of volcanoes</text>
           </svg>
         </div>
       </div>
     );
   }
 
-  // Tự động phân tích các câu văn bản mô tả tỷ lệ phần trăm
-  const fullText = `${question.prompt || ''} ${question.passage || ''} ${question.content || ''}`;
-  const chartMatch = fullText.match(/The graph shows[^.]*?:([^.]*?\.\s)/i) || 
-                     fullText.match(/The table shows[^.]*?:([^.]*?\.\s)/i);
-
-  if (chartMatch && chartMatch[1]) {
-    const rawSegments = chartMatch[1].split(/,(?![^(]*\))/);
-    const parsedData = [];
-
-    rawSegments.forEach(seg => {
-      const match = seg.match(/(.+?)\s*\((?:about\s*)?(\d+(?:\.\d+)?)\s*%\)/i);
-      if (match) {
-        let label = match[1].replace(/and\s+/i, '').trim();
-        label = label.charAt(0).toUpperCase() + label.slice(1);
-        const val = parseFloat(match[2]);
-        parsedData.push({ label, val });
-      }
-    });
-
-    if (parsedData.length >= 2) {
-      return (
-        <div className="my-5 p-5 bg-white rounded-2xl border border-slate-200 shadow-xs font-sans">
-          <div className="text-center font-bold text-xs text-slate-800 uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
-            Factors Influencing Behavior (% of Participants)
-          </div>
-          <div className="space-y-3.5 max-w-md mx-auto">
-            {parsedData.map((item, idx) => (
-              <div key={idx} className="space-y-1">
-                <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className="truncate max-w-[240px]">{item.label}</span>
-                  <span className="font-mono font-bold text-blue-600">{item.val}%</span>
-                </div>
-                <div className="w-full h-4 bg-slate-100 rounded-full overflow-hidden flex border border-slate-200/60 p-0.5">
-                  <div 
-                    className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-500"
-                    style={{ width: `${Math.min(100, Math.max(0, item.val))}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 flex justify-between text-[10px] text-slate-400 font-mono">
-            <span>0%</span>
-            <span>25%</span>
-            <span>50%</span>
-            <span>75%</span>
-            <span>100%</span>
-          </div>
-        </div>
-      );
-    }
-  }
-
   return null;
 }
 
+// =========================================================================
+// 3. WORKSPACE PHÒNG THI CHÍNH (TOÀN DIỆN LOGIC 4 MODULES & PRACTICE MODE)
+// =========================================================================
 export default function ExamWorkspacePage({
   sessionConfig,
   currentExam,
@@ -205,273 +229,285 @@ export default function ExamWorkspacePage({
     return sessionConfig || currentExam || category || {};
   }, [sessionConfig, currentExam, category]);
 
-  const examTitle = examConfig.title || examConfig.name || 'SAT Practice Test';
-  const isMathSection = useMemo(() => {
-    const sec = String(examConfig.section || examConfig.domain || examTitle).toLowerCase();
-    return sec.includes('math') || sec.includes('algebra') || sec.includes('geometry');
-  }, [examConfig, examTitle]);
+  // Phân biệt chế độ Full Test 4 Modules hay bài luyện tập thông thường
+  const isFullTest4Modules = useMemo(() => {
+    return Boolean(
+      examConfig.isFullTest ||
+      (Array.isArray(examConfig.sections) && examConfig.sections.length >= 2)
+    );
+  }, [examConfig]);
 
-  // Phân biệt chế độ thi thật / đề tổng hợp với chế độ luyện kỹ năng lẻ
   const isExamMode = useMemo(() => {
-    return examConfig.mode === 'exam' || 
-           examConfig.isExam === true || 
-           Boolean(examConfig.isFullTest) ||
-           examTitle.toLowerCase().includes('test') ||
-           examTitle.toLowerCase().includes('module');
-  }, [examConfig, examTitle]);
+    if (examConfig.mode === 'practice' || examConfig.isExam === false) return false;
+    return Boolean(examConfig.mode === 'exam' || examConfig.isExam === true || examConfig.isFullTest);
+  }, [examConfig]);
 
-  const initialPools = useMemo(() => {
-    if (Array.isArray(examConfig.module1) && examConfig.module1.length > 0) {
-      const m1 = examConfig.module1;
-      const m2 = examConfig.module2 || examConfig.module2Easy || examConfig.module2Hard || (isMathSection ? test8Math2 : test8Rw2);
-      return {
-        hasTwoModules: true,
-        mod1: m1,
-        mod2Easy: examConfig.module2Easy || m2,
-        mod2Hard: examConfig.module2Hard || m2
-      };
-    }
-
-    let rawList = Array.isArray(examConfig.questions) ? examConfig.questions : [];
-    if (rawList.length === 0) {
-      const fallbackList = isMathSection ? test8Math2 : test8Rw2;
-      return { hasTwoModules: true, mod1: fallbackList, mod2Easy: fallbackList, mod2Hard: fallbackList };
-    }
-
-    const m1Explicit = rawList.filter(q => q.stage === 1 || q.module === 1);
-    const m2Explicit = rawList.filter(q => q.stage === 2 || q.module === 2);
-    if (m1Explicit.length > 0 && m2Explicit.length > 0) {
-      const m2H = m2Explicit.filter(q => q.branch === 'hard');
-      const m2E = m2Explicit.filter(q => q.branch === 'easy');
-      return {
-        hasTwoModules: true,
-        mod1: m1Explicit,
-        mod2Easy: m2E.length > 0 ? m2E : m2Explicit,
-        mod2Hard: m2H.length > 0 ? m2H : m2Explicit
-      };
-    }
-
-    if (rawList.length >= 36) {
-      const half = Math.floor(rawList.length / 2);
-      return {
-        hasTwoModules: true,
-        mod1: rawList.slice(0, half),
-        mod2Easy: rawList.slice(half),
-        mod2Hard: rawList.slice(half)
-      };
-    }
-
-    const backupMod2 = isMathSection ? test8Math2 : test8Rw2;
-    return {
-      hasTwoModules: isExamMode,
-      mod1: rawList,
-      mod2Easy: backupMod2,
-      mod2Hard: backupMod2
-    };
-  }, [examConfig, isMathSection, isExamMode]);
-
+  // Section index: 0 = Reading & Writing, 1 = Math
+  const [sectionIndex, setSectionIndex] = useState(0);
   const [currentModule, setCurrentModule] = useState(1);
-  const [module2Branch, setModule2Branch] = useState(null);
-  const [showInstructions, setShowInstructions] = useState(isExamMode);
-  const [showTransitionModal, setShowTransitionModal] = useState(false);
-
-  const activeQuestions = useMemo(() => {
-    if (currentModule === 1) return initialPools.mod1;
-    return module2Branch === 'hard' ? initialPools.mod2Hard : initialPools.mod2Easy;
-  }, [currentModule, module2Branch, initialPools]);
-
   const [currentIndex, setCurrentIndex] = useState(0);
-  const currentQ = activeQuestions[currentIndex] || null;
 
-  const [moduleAnswers, setModuleAnswers] = useState({ 1: {}, 2: {} });
-  const [moduleFlags, setModuleFlags] = useState({ 1: new Set(), 2: new Set() });
+  // Nghỉ giữa giờ (10 phút = 600s)
+  const [isOnBreak, setIsOnBreak] = useState(false);
+  const [breakTimeLeft, setBreakTimeLeft] = useState(600);
+
+  // Quản lý câu trả lời & cờ
+  const [answers, setAnswers] = useState({
+    rw: { 1: {}, 2: {} },
+    math: { 1: {}, 2: {} }
+  });
+  const [flags, setFlags] = useState({
+    rw: { 1: new Set(), 2: new Set() },
+    math: { 1: new Set(), 2: new Set() }
+  });
+
   const [eliminatedOptions, setEliminatedOptions] = useState({});
   const [checkedAnswers, setCheckedAnswers] = useState({});
 
+  // Modals & Công cụ
   const [showDesmos, setShowDesmos] = useState(false);
   const [showReference, setShowReference] = useState(false);
   const [showMatrix, setShowMatrix] = useState(false);
   const [showReport, setShowReport] = useState(false);
   const [finalReportData, setFinalReportData] = useState(null);
 
-  const defaultDuration = isMathSection ? 35 * 60 : 32 * 60;
-  const [timeLeft, setTimeLeft] = useState(defaultDuration);
-  const [isTimerHidden, setIsTimerHidden] = useState(false);
-
-  const endTimeRef = useRef(null);
-  const isAutoSubmittingRef = useRef(false);
-
-  const resetTimerForModule = useCallback((durationInSeconds) => {
-    endTimeRef.current = Date.now() + durationInSeconds * 1000;
-    setTimeLeft(durationInSeconds);
-    isAutoSubmittingRef.current = false;
-  }, []);
-
-  const { questionTimes } = usePacingTracker({
-    currentIndex,
-    isExamRunning: !showInstructions && !showTransitionModal && !showReport,
-    section: isMathSection ? 'Math' : 'Reading & Writing'
-  });
-
+  // Highlight tooltip
   const [highlightTooltip, setHighlightTooltip] = useState(null);
   const passageRef = useRef(null);
 
-  const answersRef = useRef(moduleAnswers);
-  answersRef.current = moduleAnswers;
+  // Lấy danh sách câu hỏi hiện tại
+  const currentQuestionPool = useMemo(() => {
+    if (isFullTest4Modules && examConfig.sections) {
+      const sec = examConfig.sections[sectionIndex];
+      if (sec && Array.isArray(sec.modules)) {
+        const mod = sec.modules.find(m => m.moduleNumber === currentModule);
+        if (mod && Array.isArray(mod.questions)) return mod.questions;
+      }
+    }
 
-  // Hàm chấm và nộp bài toàn diện
-  const finishWholeExam = useCallback(() => {
-    const m1Answers = answersRef.current[1] || {};
-    const m2Answers = answersRef.current[2] || {};
+    if (Array.isArray(examConfig.questions) && examConfig.questions.length > 0) {
+      return examConfig.questions;
+    }
+    return sectionIndex === 0 ? test8Rw2 : test8Math2;
+  }, [isFullTest4Modules, examConfig, sectionIndex, currentModule]);
 
-    const allReviewed = [];
-    let totalCorrect = 0;
+  const currentQ = currentQuestionPool[currentIndex] || null;
 
-    initialPools.mod1.forEach(q => {
-      const uAns = m1Answers[q.id];
-      const correct = isAnswerCorrect(uAns, q);
-      if (correct) totalCorrect += 1;
-      allReviewed.push({ ...q, userAnswer: uAns, isCorrect: correct, module: 1 });
+  const currentSectionName = sectionIndex === 0 ? 'Reading and Writing' : 'Math';
+  const isMathSection = sectionIndex === 1 || String(examConfig.section || '').toLowerCase().includes('math');
+
+  // ================= BỘ ĐẾM THỜI GIAN CHUẨN XÁC =================
+  const defaultDuration = isMathSection ? 35 * 60 : 32 * 60;
+  const [timeLeft, setTimeLeft] = useState(isExamMode ? defaultDuration : 0);
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
+  const endTimeRef = useRef(Date.now() + defaultDuration * 1000);
+  const startTimeRef = useRef(Date.now());
+  const isAutoSubmittingRef = useRef(false);
+
+  const resetTimerForCurrent = useCallback((durationInSecs) => {
+    if (isExamMode) {
+      endTimeRef.current = Date.now() + durationInSecs * 1000;
+      setTimeLeft(durationInSecs);
+    } else {
+      startTimeRef.current = Date.now();
+      setTimeLeft(0);
+    }
+    isAutoSubmittingRef.current = false;
+  }, [isExamMode]);
+
+  // Hook theo dõi thời gian từng câu
+  const { questionTimes } = usePacingTracker({
+    currentIndex,
+    isExamRunning: !isOnBreak && !showReport,
+    section: currentSectionName
+  });
+
+  // ================= KẾT THÚC BÀI THI & TÍNH ĐIỂM =================
+  const finishFullExam = useCallback(() => {
+    let rwM1 = [];
+    let rwM2 = [];
+    let mathM1 = [];
+    let mathM2 = [];
+
+    if (isFullTest4Modules && examConfig.sections) {
+      rwM1 = examConfig.sections[0]?.modules[0]?.questions || [];
+      rwM2 = examConfig.sections[0]?.modules[1]?.questions || [];
+      mathM1 = examConfig.sections[1]?.modules[0]?.questions || [];
+      mathM2 = examConfig.sections[1]?.modules[1]?.questions || [];
+    }
+
+    const rwResult = calculateModuleScore({
+      m1Questions: rwM1,
+      m1Answers: answers.rw[1],
+      m2Questions: rwM2,
+      m2Answers: answers.rw[2]
     });
 
-    const m2List = module2Branch === 'hard' ? initialPools.mod2Hard : initialPools.mod2Easy;
-    if (currentModule === 2 && m2List.length > 0) {
-      m2List.forEach(q => {
-        const uAns = m2Answers[q.id];
-        const correct = isAnswerCorrect(uAns, q);
-        if (correct) totalCorrect += 1;
-        allReviewed.push({ ...q, userAnswer: uAns, isCorrect: correct, module: 2 });
-      });
-    }
+    const mathResult = calculateModuleScore({
+      m1Questions: mathM1,
+      m1Answers: answers.math[1],
+      m2Questions: mathM2,
+      m2Answers: answers.math[2]
+    });
 
-    let scaledScore = 400;
-    try {
-      scaledScore = calculateSatSectionScore({
-        module1Responses: initialPools.mod1.map(q => ({
-          questionId: q.id,
-          correct: isAnswerCorrect(m1Answers[q.id], q),
-          difficulty: q.difficulty || 'medium'
-        })),
-        module2Responses: (m2List || []).map(q => ({
-          questionId: q.id,
-          correct: isAnswerCorrect(m2Answers[q.id], q),
-          difficulty: q.difficulty || 'medium'
-        })),
-        forcedBranch: module2Branch || 'easy'
-      });
-    } catch (e) {
-      const totalQ = allReviewed.length || 1;
-      scaledScore = Math.round(200 + (totalCorrect / totalQ) * 600);
-      scaledScore = Math.min(800, Math.max(200, Math.round(scaledScore / 10) * 10));
-    }
+    const totalScore = rwResult.sectionScore + mathResult.sectionScore;
 
     const report = {
-      score: scaledScore,
-      scaledScore: scaledScore,
-      section: isMathSection ? 'Math' : 'Reading & Writing',
-      module2Path: module2Branch ? (module2Branch === 'hard' ? 'Hard' : 'Easy') : 'Standard',
-      totalQuestions: allReviewed.length,
-      correctCount: totalCorrect,
-      timeSpent: defaultDuration - timeLeft,
-      questionTimes: questionTimes || {},
-      questions: allReviewed
+      score: totalScore,
+      totalScore,
+      scaledScore: totalScore,
+      rwScore: rwResult.sectionScore,
+      mathScore: mathResult.sectionScore,
+      rwCorrect: rwResult.correctCount,
+      mathCorrect: mathResult.correctCount,
+      totalQuestions: rwM1.length + rwM2.length + mathM1.length + mathM2.length,
+      rwDetails: rwResult,
+      mathDetails: mathResult,
+      questionTimes: questionTimes || {}
     };
 
     setFinalReportData(report);
     setShowReport(true);
-  }, [initialPools, module2Branch, currentModule, isMathSection, defaultDuration, timeLeft, questionTimes]);
+  }, [isFullTest4Modules, examConfig, answers, questionTimes]);
 
-  // Xử lý nút Save & Exit: Tự động nộp bài nếu là thi thật / luyện tập đề
-  const handleSaveAndExit = () => {
-    if (isExamMode) {
-      if (window.confirm("Bạn đang làm bài thi. Thoát ra hệ thống sẽ tự động nộp bài và chấm điểm kết quả làm bài hiện tại. Bạn có chắc chắn muốn nộp và thoát?")) {
-        finishWholeExam();
-      }
-    } else {
-      if (onExit) onExit();
-    }
-  };
-
-  const completeModule1 = useCallback(() => {
-    const m1Answers = answersRef.current[1] || {};
-    let correctCount = 0;
-    initialPools.mod1.forEach(q => {
-      if (isAnswerCorrect(m1Answers[q.id], q)) {
-        correctCount += 1;
-      }
-    });
-
-    const branch = routeNextModule(correctCount, initialPools.mod1.length);
-    setModule2Branch(branch);
-    setShowTransitionModal(true);
-  }, [initialPools]);
-
-  const startModule2 = () => {
-    setShowTransitionModal(false);
-    setCurrentModule(2);
-    setCurrentIndex(0);
-    resetTimerForModule(defaultDuration);
-  };
-
-  const handleAutoSubmit = useCallback(() => {
+  const handleAutoNextModule = useCallback(() => {
     if (isAutoSubmittingRef.current) return;
     isAutoSubmittingRef.current = true;
-    if (currentModule === 1 && initialPools.hasTwoModules) {
-      completeModule1();
+
+    if (sectionIndex === 0) {
+      if (currentModule === 1) {
+        setCurrentModule(2);
+        setCurrentIndex(0);
+        resetTimerForCurrent(32 * 60);
+      } else {
+        setIsOnBreak(true);
+        setBreakTimeLeft(600);
+      }
     } else {
-      finishWholeExam();
+      if (currentModule === 1) {
+        setCurrentModule(2);
+        setCurrentIndex(0);
+        resetTimerForCurrent(35 * 60);
+      } else {
+        finishFullExam();
+      }
     }
-  }, [currentModule, initialPools, completeModule1, finishWholeExam]);
+  }, [sectionIndex, currentModule, resetTimerForCurrent, finishFullExam]);
 
+  // Bộ đếm thời gian chính
   useEffect(() => {
-    if (!showInstructions && !endTimeRef.current) {
-      resetTimerForModule(defaultDuration);
-    }
-  }, [showInstructions, defaultDuration, resetTimerForModule]);
+    if (isOnBreak || showReport) return;
 
-  useEffect(() => {
-    if (showInstructions || showTransitionModal || showReport) return;
-
-    const interval = setInterval(() => {
-      if (!endTimeRef.current) return;
+    const timer = setInterval(() => {
       const now = Date.now();
-      const secondsRemaining = Math.max(0, Math.round((endTimeRef.current - now) / 1000));
-      setTimeLeft(secondsRemaining);
+      if (isExamMode) {
+        const remain = Math.max(0, Math.round((endTimeRef.current - now) / 1000));
+        setTimeLeft(remain);
 
-      if (secondsRemaining <= 0) {
-        clearInterval(interval);
-        handleAutoSubmit();
+        if (remain <= 0 && !isAutoSubmittingRef.current) {
+          clearInterval(timer);
+          handleAutoNextModule();
+        }
+      } else {
+        const elapsed = Math.round((now - startTimeRef.current) / 1000);
+        setTimeLeft(elapsed);
       }
     }, 500);
 
-    return () => clearInterval(interval);
-  }, [showInstructions, showTransitionModal, showReport, handleAutoSubmit]);
+    return () => clearInterval(timer);
+  }, [isOnBreak, showReport, isExamMode, handleAutoNextModule]);
 
-  const currentAnswers = moduleAnswers[currentModule] || {};
-  const currentFlags = moduleFlags[currentModule] || new Set();
+  // Bộ đếm thời gian nghỉ 10 phút
+  useEffect(() => {
+    if (!isOnBreak) return;
+    const breakTimer = setInterval(() => {
+      setBreakTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(breakTimer);
+          handleEndBreak();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(breakTimer);
+  }, [isOnBreak]);
+
+  const handleEndBreak = () => {
+    setIsOnBreak(false);
+    setSectionIndex(1); // Chuyển sang Math
+    setCurrentModule(1);
+    setCurrentIndex(0);
+    resetTimerForCurrent(35 * 60);
+  };
+
+  const handleManualNextModule = () => {
+    if (sectionIndex === 0 && currentModule === 1) {
+      if (window.confirm('Bạn có chắc chắn muốn nộp Reading & Writing Module 1 để chuyển sang Module 2?')) {
+        setCurrentModule(2);
+        setCurrentIndex(0);
+        resetTimerForCurrent(32 * 60);
+      }
+    } else if (sectionIndex === 0 && currentModule === 2) {
+      if (window.confirm('Bạn đã hoàn thành phần Reading & Writing. Bắt đầu thời gian nghỉ giải lao 10 phút?')) {
+        setIsOnBreak(true);
+        setBreakTimeLeft(600);
+      }
+    } else if (sectionIndex === 1 && currentModule === 1) {
+      if (window.confirm('Bạn có chắc chắn muốn nộp Math Module 1 để chuyển sang Module 2?')) {
+        setCurrentModule(2);
+        setCurrentIndex(0);
+        resetTimerForCurrent(35 * 60);
+      }
+    } else {
+      if (window.confirm('Bạn có chắc chắn muốn kết thúc và nộp toàn bộ bài thi?')) {
+        finishFullExam();
+      }
+    }
+  };
+
+  // ================= TƯƠNG TÁC ĐÁP ÁN & CỜ =================
+  const activeKey = sectionIndex === 0 ? 'rw' : 'math';
+  const currentAnswersMap = answers[activeKey][currentModule] || {};
+  const currentFlagsSet = flags[activeKey][currentModule] || new Set();
 
   const handleSelectAnswer = (ans) => {
-    setModuleAnswers(prev => ({
+    if (!currentQ) return;
+    setAnswers((prev) => ({
       ...prev,
-      [currentModule]: {
-        ...prev[currentModule],
-        [currentQ.id]: ans
+      [activeKey]: {
+        ...prev[activeKey],
+        [currentModule]: {
+          ...prev[activeKey][currentModule],
+          [currentQ.id]: ans
+        }
       }
     }));
   };
 
   const handleToggleFlag = () => {
     if (!currentQ) return;
-    setModuleFlags(prev => {
-      const nextSet = new Set(prev[currentModule]);
-      nextSet.has(currentQ.id) ? nextSet.delete(currentQ.id) : nextSet.add(currentQ.id);
-      return { ...prev, [currentModule]: nextSet };
+    setFlags((prev) => {
+      const nextSet = new Set(prev[activeKey][currentModule]);
+      if (nextSet.has(currentQ.id)) {
+        nextSet.delete(currentQ.id);
+      } else {
+        nextSet.add(currentQ.id);
+      }
+      return {
+        ...prev,
+        [activeKey]: {
+          ...prev[activeKey],
+          [currentModule]: nextSet
+        }
+      };
     });
   };
 
   const handleToggleEliminate = (optKey) => {
     if (!currentQ) return;
-    setEliminatedOptions(prev => {
+    setEliminatedOptions((prev) => {
       const set = new Set(prev[currentQ.id] || []);
       set.has(optKey) ? set.delete(optKey) : set.add(optKey);
       return { ...prev, [currentQ.id]: set };
@@ -479,13 +515,14 @@ export default function ExamWorkspacePage({
   };
 
   const handleCheckAnswer = () => {
-    if (!currentQ || !currentAnswers[currentQ.id]) return;
-    setCheckedAnswers(prev => ({
+    if (!currentQ || currentAnswersMap[currentQ.id] === undefined) return;
+    setCheckedAnswers((prev) => ({
       ...prev,
       [currentQ.id]: true
     }));
   };
 
+  // ================= BỘ HIGHLIGHT MÀU VĂN BẢN =================
   const handleMouseUpPassage = () => {
     const sel = window.getSelection();
     if (!sel || sel.isCollapsed || !sel.rangeCount) {
@@ -521,15 +558,16 @@ export default function ExamWorkspacePage({
     setHighlightTooltip(null);
   };
 
+  // ================= BỘ PHÍM TẮT BÀN PHÍM =================
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (showInstructions || showTransitionModal || showReport) return;
+      if (isOnBreak || showReport) return;
       const t = e.target;
       if (t instanceof HTMLElement && (t.isContentEditable || ['INPUT', 'TEXTAREA'].includes(t.tagName))) return;
 
       const k = e.key.toLowerCase();
       if (k === 'arrowright') {
-        if (currentIndex < activeQuestions.length - 1) setCurrentIndex(i => i + 1);
+        if (currentIndex < currentQuestionPool.length - 1) setCurrentIndex(i => i + 1);
       } else if (k === 'arrowleft') {
         if (currentIndex > 0) setCurrentIndex(i => i - 1);
       } else if (k === 'f') {
@@ -540,150 +578,45 @@ export default function ExamWorkspacePage({
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, activeQuestions, currentQ, showInstructions, showTransitionModal, showReport]);
+  }, [currentIndex, currentQuestionPool, currentQ, isOnBreak, showReport]);
 
-  const formatTime = (secs) => {
-    const m = Math.floor(Math.abs(secs) / 60);
-    const s = Math.abs(secs) % 60;
+  // SỬA LỖI TRIỆT ĐỂ: Khai báo đầy đủ m và s trong hàm formatTime
+  const formatTime = (totalSeconds) => {
+    const m = Math.floor(Math.abs(totalSeconds) / 60);
+    const s = Math.abs(totalSeconds) % 60;
     return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   };
 
-  const matrixAnswers = useMemo(() => {
-    const res = {};
-    activeQuestions.forEach((q, idx) => {
-      const val = currentAnswers[q.id] ?? currentAnswers[idx];
-      if (val !== undefined && val !== null && val !== '') {
-        res[idx] = val;
-        res[q.id] = val;
-      }
-    });
-    return res;
-  }, [activeQuestions, currentAnswers]);
+  const isAnswered = currentQ ? (currentAnswersMap[currentQ.id] !== undefined && currentAnswersMap[currentQ.id] !== '') : false;
+  const isFlagged = currentQ ? currentFlagsSet.has(currentQ.id) : false;
 
-  const matrixBookmarked = useMemo(() => {
-    const res = {};
-    activeQuestions.forEach((q, idx) => {
-      if (currentFlags.has(q.id) || currentFlags.has(idx)) {
-        res[idx] = true;
-        res[q.id] = true;
-      }
-    });
-    return res;
-  }, [activeQuestions, currentFlags]);
-
-  const answeredCount = useMemo(() => {
-    return activeQuestions.filter(q => {
-      const ans = currentAnswers[q.id];
-      return ans !== undefined && ans !== null && String(ans).trim() !== '';
-    }).length;
-  }, [activeQuestions, currentAnswers]);
-
-  const isModuleFullyCompleted = answeredCount === activeQuestions.length;
-
-  if (showInstructions) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-100 text-slate-800 p-6">
-        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl border border-slate-200 p-8 flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-              {isMathSection ? 'Math Section' : 'Reading and Writing'}
-            </span>
-            <h1 className="text-2xl font-black text-slate-900 mt-3 mb-2">{examTitle}</h1>
-            <p className="text-sm text-slate-500 mb-6">
-              Vui lòng đọc kỹ quy chế trước khi bấm nút Bắt đầu để vào tính giờ làm bài.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">⏱️</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Thời gian quy chuẩn</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    {isMathSection ? '35 phút / Module' : '32 phút / Module'}.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">📊</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Cấu trúc 2 Module</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    Tự động phân nhánh Module 2 theo mô hình thi thích ứng.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">🔒</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Khóa Module 1</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    Chỉ có thể nộp Module 1 khi đã hoàn thành đủ 100% câu hỏi.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3">
-                <span className="text-xl">🧮</span>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800">Công cụ hỗ trợ</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">
-                    {isMathSection ? 'Tích hợp máy tính Desmos & Reference sheet.' : 'Bộ công cụ Highlight màu và gạch đáp án.'}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-dashed border-slate-200 pt-5 flex items-center justify-between">
-            <div className="text-xs text-slate-500 font-medium">
-              Thí sinh: <span className="font-semibold text-slate-800">{currentUser?.name || 'Phan Tiến Thành'}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              {onExit && (
-                <button
-                  onClick={onExit}
-                  className="px-4 py-2 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition cursor-pointer"
-                >
-                  Thoát
-                </button>
-              )}
-              <button
-                onClick={() => {
-                  resetTimerForModule(defaultDuration);
-                  setShowInstructions(false);
-                }}
-                className="px-6 py-2.5 bg-[#b91c1c] hover:bg-red-700 text-white text-sm font-bold rounded-xl transition shadow-md cursor-pointer"
-              >
-                Bắt đầu làm bài
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  const isAnswered = currentQ ? Boolean(currentAnswers[currentQ.id]) : false;
-  const isFlagged = currentQ ? currentFlags.has(currentQ.id) : false;
+  const isCurrentAnswerCorrect = useMemo(() => {
+    if (!currentQ || currentAnswersMap[currentQ.id] === undefined) return false;
+    const userVal = String(currentAnswersMap[currentQ.id]).trim().toUpperCase();
+    const correctVal = String(currentQ.correctAnswer || '').trim().toUpperCase();
+    return userVal === correctVal || isAnswerCorrect(currentAnswersMap[currentQ.id], currentQ);
+  }, [currentQ, currentAnswersMap]);
 
   return (
     <div className="flex flex-col h-screen bg-[#f8fafc] text-slate-800 select-none overflow-hidden font-sans">
-      <header className="h-14 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs z-20">
+      {/* HEADER BẢNG THI */}
+      <header className="h-14 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 z-20">
         <div className="flex items-center gap-2">
           <span className="font-black text-sm tracking-tight text-slate-900">
-            {isMathSection ? 'Math' : 'Reading and Writing'}
+            {currentSectionName}
           </span>
           <span className="text-xs text-slate-400">|</span>
           <span className="text-xs font-semibold text-slate-600 truncate max-w-xs">
-            {examTitle}
+            {examConfig.title || 'Official Digital SAT'}
           </span>
         </div>
 
-        {/* Đồng hồ đếm ngược */}
+        {/* Đồng hồ đếm thời gian */}
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-2">
             {!isTimerHidden ? (
               <span className={`font-mono text-lg font-black tracking-wider ${
-                timeLeft <= 300 ? 'text-red-600 animate-pulse' : 'text-slate-800'
+                isExamMode && timeLeft <= 300 ? 'text-red-600 animate-pulse' : 'text-slate-800'
               }`}>
                 {formatTime(timeLeft)}
               </span>
@@ -694,7 +627,8 @@ export default function ExamWorkspacePage({
             )}
           </div>
           <button
-            onClick={() => setIsTimerHidden(h => !h)}
+            type="button"
+            onClick={() => setIsTimerHidden(!isTimerHidden)}
             className="text-[10px] text-slate-400 hover:text-slate-600 font-semibold underline mt-0.5 cursor-pointer"
           >
             {isTimerHidden ? 'Hiện đồng hồ' : 'Ẩn'}
@@ -705,17 +639,19 @@ export default function ExamWorkspacePage({
           {isMathSection && (
             <>
               <button
+                type="button"
                 onClick={() => setShowDesmos(true)}
                 className="flex flex-col items-center hover:text-blue-600 transition cursor-pointer"
-                title="Graphing Calculator"
+                title="Calculator"
               >
                 <span className="text-base">🧮</span>
                 <span className="text-[10px] mt-0.5">Calculator</span>
               </button>
               <button
+                type="button"
                 onClick={() => setShowReference(true)}
                 className="flex flex-col items-center hover:text-blue-600 transition cursor-pointer"
-                title="Formula Sheet"
+                title="Reference"
               >
                 <span className="text-base">📐</span>
                 <span className="text-[10px] mt-0.5">Reference</span>
@@ -723,31 +659,37 @@ export default function ExamWorkspacePage({
             </>
           )}
 
-          {/* Nút Save & Exit: Tự động nộp bài nếu đang ở phần thi thật */}
           <button
-            onClick={handleSaveAndExit}
-            className="px-3 py-1.5 border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-bold transition shadow-xs ml-2 cursor-pointer"
+            type="button"
+            onClick={() => {
+              if (window.confirm('Bạn có chắc chắn muốn thoát khỏi phòng thi?')) {
+                onExit && onExit();
+              }
+            }}
+            className="px-3 py-1.5 border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-bold transition shadow-xs cursor-pointer"
           >
             Save & Exit
           </button>
         </div>
       </header>
 
+      {/* DẢI TIÊU ĐỀ SUB-HEADER */}
       <div className="h-8 bg-[#11224d] text-white px-6 flex items-center justify-between text-xs font-bold tracking-wide shrink-0">
-        <span>Section: {isMathSection ? 'Math' : 'Reading and Writing'}</span>
+        <span>Section: {currentSectionName}</span>
         <span className="bg-blue-600/40 px-2 py-0.5 rounded text-[11px] font-semibold border border-blue-400/30">
-          Module {currentModule} {module2Branch ? `(${module2Branch.toUpperCase()})` : ''}
+          Module {currentModule}
         </span>
       </div>
 
+      {/* KHU VỰC LÀM BÀI CHÍNH */}
       {currentQ && (
         <main className="flex-1 flex flex-col md:flex-row overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200 bg-white relative">
           
-          {/* Cột đề bài */}
-          <div
+          {/* CỘT ĐỀ BÀI (CÓ HIGHLIGHT TOOLTIP) */}
+          <div 
             ref={passageRef}
             onMouseUp={handleMouseUpPassage}
-            className="flex-1 p-6 md:p-8 overflow-y-auto leading-relaxed text-slate-800 text-[15px] select-text"
+            className="flex-1 p-6 md:p-8 overflow-y-auto leading-relaxed text-slate-800 text-[15px] select-text relative"
           >
             {highlightTooltip && (
               <div
@@ -758,19 +700,19 @@ export default function ExamWorkspacePage({
                   type="button"
                   onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-yellow-200 text-slate-900'); }}
                   className="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white/20"
-                  title="Vàng nhạt"
+                  title="Vàng"
                 />
                 <button
                   type="button"
                   onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-pink-200 text-slate-900'); }}
                   className="w-5 h-5 rounded-full bg-pink-300 hover:scale-110 transition border border-white/20"
-                  title="Hồng pastel"
+                  title="Hồng"
                 />
                 <button
                   type="button"
                   onMouseDown={(e) => { e.preventDefault(); applyHighlightColor('bg-sky-200 text-slate-900'); }}
                   className="w-5 h-5 rounded-full bg-sky-300 hover:scale-110 transition border border-white/20"
-                  title="Xanh ngọc"
+                  title="Xanh"
                 />
                 <div className="w-[1px] h-3.5 bg-slate-700 mx-0.5" />
                 <button
@@ -798,11 +740,14 @@ export default function ExamWorkspacePage({
               )}
             </div>
 
-            {/* Render biểu đồ cho Verbal */}
-            <VerbalChartRenderer question={currentQ} />
+            {/* Dựng biểu đồ cột cho Verbal */}
+            {!isMathSection && <VerbalChartRenderer question={currentQ} />}
+
+            {/* Dựng hình học cho Math */}
+            {isMathSection && <MathFigureRenderer question={currentQ} />}
           </div>
 
-          {/* Cột câu hỏi và phương án */}
+          {/* CỘT CÂU HỎI & ĐÁP ÁN */}
           <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-between bg-slate-50/50">
             <div>
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-slate-200">
@@ -825,7 +770,7 @@ export default function ExamWorkspacePage({
                 </div>
 
                 <div className="text-xs font-bold text-slate-400 tracking-wider">
-                  QUESTION {currentIndex + 1} OF {activeQuestions.length}
+                  QUESTION {currentIndex + 1} OF {currentQuestionPool.length}
                 </div>
               </div>
 
@@ -835,6 +780,7 @@ export default function ExamWorkspacePage({
                 </div>
               )}
 
+              {/* DẠNG ĐIỀN SỐ (SPR / Grid-In) */}
               {currentQ.isGridIn ? (
                 <div className="mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs max-w-sm">
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
@@ -844,19 +790,20 @@ export default function ExamWorkspacePage({
                     type="text"
                     inputMode="decimal"
                     autoComplete="off"
-                    value={currentAnswers[currentQ.id] ?? ''}
+                    value={currentAnswersMap[currentQ.id] ?? ''}
                     onChange={(e) => handleSelectAnswer(normalizeSprAnswer(e.target.value))}
                     placeholder="e.g. 7/4 or 1.75"
-                    className="w-full px-4 py-3 text-lg font-mono font-bold rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+                    className="w-full px-4 py-3 text-lg font-mono font-bold rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
                   />
                   <p className="text-[11px] text-slate-400 mt-2">
                     Nhập phân số (ví dụ 3/2) hoặc số thập phân (ví dụ 1.5).
                   </p>
                 </div>
               ) : (
+                /* DẠNG TRẮC NGHIỆM */
                 <div className="space-y-3">
                   {Object.entries(currentQ.options || {}).map(([key, text]) => {
-                    const isSelected = currentAnswers[currentQ.id] === key;
+                    const isSelected = currentAnswersMap[currentQ.id] === key;
                     const isEliminated = (eliminatedOptions[currentQ.id] || new Set()).has(key);
 
                     return (
@@ -870,13 +817,11 @@ export default function ExamWorkspacePage({
                               : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                           } ${isEliminated ? 'opacity-40 line-through' : ''}`}
                         >
-                          <span
-                            className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 transition-colors ${
-                              isSelected
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-slate-100 text-slate-700 group-hover:bg-slate-200'
-                            }`}
-                          >
+                          <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 transition-colors ${
+                            isSelected
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-slate-100 text-slate-700 group-hover:bg-slate-200'
+                          }`}>
                             {key}
                           </span>
                           <div className="pt-0.5 flex-1 text-sm font-medium text-slate-800 leading-relaxed">
@@ -892,7 +837,7 @@ export default function ExamWorkspacePage({
                               ? 'bg-slate-800 text-white border-slate-800'
                               : 'border-slate-200 text-slate-400 hover:border-slate-400 hover:text-slate-600'
                           }`}
-                          title="Gạch bỏ phương án này"
+                          title="Gạch phương án này"
                         >
                           ✕
                         </button>
@@ -902,16 +847,23 @@ export default function ExamWorkspacePage({
                 </div>
               )}
 
+              {/* Lời giải tức thì khi bấm Check trong chế độ luyện tập */}
               {!isExamMode && checkedAnswers[currentQ.id] && (
-                <div className={`mt-6 p-4 rounded-xl border ${
-                  isAnswerCorrect(currentAnswers[currentQ.id], currentQ)
+                <div className={`mt-6 p-4 rounded-xl border animate-in fade-in zoom-in-95 ${
+                  isCurrentAnswerCorrect
                     ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
                     : 'bg-red-50 border-red-300 text-red-900'
                 }`}>
-                  <div className="font-bold text-sm mb-1">
-                    {isAnswerCorrect(currentAnswers[currentQ.id], currentQ) ? '✓ Chính xác!' : '✗ Chưa chính xác'}
+                  <div className="font-bold text-sm mb-1 flex items-center gap-1.5">
+                    <span>{isCurrentAnswerCorrect ? '✓ Chính xác!' : '✗ Chưa chính xác'}</span>
+                    {!isCurrentAnswerCorrect && currentQ.correctAnswer && (
+                      <span className="text-xs font-semibold ml-2">
+                        (Đáp án đúng: <span className="font-bold">{currentQ.correctAnswer}</span>)
+                      </span>
+                    )}
                   </div>
-                  <div className="text-xs text-slate-700 leading-relaxed mt-2">
+                  <div className="text-xs text-slate-700 leading-relaxed mt-2 pt-2 border-t border-slate-200/60">
+                    <span className="font-bold block mb-1">Giải thích chi tiết:</span>
                     <MathRenderer text={currentQ.explanation || 'Không có giải thích chi tiết cho câu hỏi này.'} />
                   </div>
                 </div>
@@ -921,10 +873,10 @@ export default function ExamWorkspacePage({
         </main>
       )}
 
-      {/* Footer */}
+      {/* FOOTER ĐIỀU HƯỚNG */}
       <footer className="h-16 bg-white border-t border-slate-200 px-6 flex items-center justify-between shrink-0 z-20">
         <div className="text-xs font-semibold text-slate-500">
-          Thí sinh: <span className="text-slate-800 font-bold">{currentUser?.name || 'Phan Tiến Thành'}</span>
+          Thí sinh: <span className="text-slate-800 font-bold">{currentUser?.name || 'Học viên'}</span>
         </div>
 
         <div className="flex items-center gap-3">
@@ -933,7 +885,7 @@ export default function ExamWorkspacePage({
             onClick={() => setShowMatrix(true)}
             className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer"
           >
-            <span>Question {currentIndex + 1} of {activeQuestions.length}</span>
+            <span>Question {currentIndex + 1} of {currentQuestionPool.length}</span>
             <span className="text-[10px]">▲</span>
           </button>
         </div>
@@ -941,107 +893,79 @@ export default function ExamWorkspacePage({
         <div className="flex items-center gap-2.5">
           <button
             type="button"
-            onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
+            onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
             disabled={currentIndex === 0}
             className="px-4 py-2 border border-slate-300 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl text-xs font-bold text-slate-700 transition cursor-pointer"
           >
             Back
           </button>
 
+          {/* Nút Check chỉ xuất hiện ở chế độ luyện tập */}
           {!isExamMode && isAnswered && (
             <button
               type="button"
               onClick={handleCheckAnswer}
-              className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
+              className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer active:scale-95"
             >
               Check
             </button>
           )}
 
-          {currentIndex < activeQuestions.length - 1 ? (
+          {currentIndex < currentQuestionPool.length - 1 ? (
             <button
               type="button"
-              onClick={() => setCurrentIndex(i => Math.min(activeQuestions.length - 1, i + 1))}
+              onClick={() => setCurrentIndex((i) => Math.min(currentQuestionPool.length - 1, i + 1))}
               className="px-6 py-2 bg-[#b91c1c] hover:bg-red-700 text-white rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
             >
               Next
             </button>
           ) : (
-            <div className="relative group">
-              <button
-                type="button"
-                disabled={!isModuleFullyCompleted}
-                onClick={() => {
-                  if (!isModuleFullyCompleted) return;
-                  if (currentModule === 1 && initialPools.hasTwoModules) {
-                    completeModule1();
-                  } else {
-                    finishWholeExam();
-                  }
-                }}
-                className={`px-6 py-2 rounded-xl text-xs font-bold transition shadow-md flex items-center gap-1.5 ${
-                  isModuleFullyCompleted
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white cursor-pointer shadow-blue-200'
-                    : 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
-                }`}
-              >
-                <span>
-                  {currentModule === 1 && initialPools.hasTwoModules
-                    ? 'Nộp Module 1' 
-                    : 'Finish Exam'}
-                </span>
-              </button>
-
-              {!isModuleFullyCompleted && (
-                <div className="absolute bottom-full right-0 mb-2 hidden group-hover:block whitespace-nowrap bg-slate-900 text-white text-[11px] font-medium py-1 px-2.5 rounded-lg shadow-lg z-30">
-                  Cần hoàn thành 100% ({answeredCount}/{activeQuestions.length} câu) để nộp module
-                </div>
-              )}
-            </div>
+            <button
+              type="button"
+              onClick={handleManualNextModule}
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
+            >
+              {sectionIndex === 1 && currentModule === 2 ? 'Finish Full Exam' : `Nộp Module ${currentModule}`}
+            </button>
           )}
         </div>
       </footer>
 
-      {showTransitionModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 text-center animate-in zoom-in-95">
-            <div className="w-14 h-14 mx-auto mb-4 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-2xl">
-              ✓
+      {/* MODAL NGHỈ GIẢI LAO 10 PHÚT (BREAK MODAL) */}
+      {isOnBreak && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-6 font-sans">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-8 text-center shadow-2xl border border-slate-200 space-y-5 animate-in zoom-in-95">
+            <div className="w-16 h-16 mx-auto bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+              ☕
             </div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">Module 1 Completed</h2>
-            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-              Bạn đã hoàn thành 100% câu hỏi của Module 1 ({initialPools.mod1.length} câu). Khi bấm tiếp tục, bạn sẽ bắt đầu <strong>Module 2</strong> ({initialPools.mod2Easy.length} câu) và không thể quay lại chỉnh sửa các câu hỏi của Module 1.
-            </p>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                Official 10-Minute Break
+              </span>
+              <h2 className="text-2xl font-black text-slate-900 mt-3">Thời gian nghỉ giải lao</h2>
+              <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                Bạn đã hoàn thành 2 Modules Reading & Writing. Hãy thư giãn mắt và chuẩn bị bắt đầu phần thi Math.
+              </p>
+            </div>
+
+            <div className="py-4">
+              <span className="font-mono text-5xl font-black text-slate-900 tracking-wider">
+                {Math.floor(breakTimeLeft / 60).toString().padStart(2, '0')}:{(breakTimeLeft % 60).toString().padStart(2, '0')}
+              </span>
+            </div>
+
             <button
               type="button"
-              onClick={startModule2}
-              className="w-full py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition shadow-md cursor-pointer"
+              onClick={handleEndBreak}
+              className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md cursor-pointer"
             >
-              Bắt đầu Module 2
+              Bỏ qua nghỉ & Bắt đầu phần Math ngay
             </button>
           </div>
         </div>
       )}
 
-      <MatrixModal
-        isOpen={showMatrix}
-        onClose={() => setShowMatrix(false)}
-        questions={activeQuestions}
-        totalQuestions={activeQuestions.length}
-        currentIndex={currentIndex}
-        answers={matrixAnswers}
-        bookmarked={matrixBookmarked}
-        flags={currentFlags}
-        onSelectIndex={(idx) => {
-          setCurrentIndex(idx);
-          setShowMatrix(false);
-        }}
-        onSelectQuestion={(idx) => {
-          setCurrentIndex(idx);
-          setShowMatrix(false);
-        }}
-      />
-
+      {/* MODAL MÁY TÍNH DESMOS & BẢNG CÔNG THỨC */}
       {isMathSection && (
         <>
           <DesmosModal isOpen={showDesmos} onClose={() => setShowDesmos(false)} />
@@ -1049,22 +973,30 @@ export default function ExamWorkspacePage({
         </>
       )}
 
+      {/* MODAL BẢNG MATRIX CÂU HỎI */}
+      <MatrixModal
+        isOpen={showMatrix}
+        onClose={() => setShowMatrix(false)}
+        questions={currentQuestionPool}
+        totalQuestions={currentQuestionPool.length}
+        currentIndex={currentIndex}
+        answers={currentAnswersMap}
+        flags={currentFlagsSet}
+        onSelectIndex={(idx) => {
+          setCurrentIndex(idx);
+          setShowMatrix(false);
+        }}
+      />
+
+      {/* MODAL BÁO CÁO KẾT QUẢ THI */}
       {showReport && finalReportData && (
         <ScoreReportModal
           isOpen={showReport}
           onClose={() => {
             setShowReport(false);
-            if (onExit) onExit();
+            onExit && onExit();
           }}
           reportData={finalReportData}
-          onRetry={() => {
-            setShowReport(false);
-            setCurrentModule(1);
-            setCurrentIndex(0);
-            resetTimerForModule(defaultDuration);
-            setModuleAnswers({ 1: {}, 2: {} });
-            setModuleFlags({ 1: new Set(), 2: new Set() });
-          }}
         />
       )}
     </div>

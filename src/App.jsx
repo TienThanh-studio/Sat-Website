@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import DashboardPage from './pages/DashboardPage';
@@ -8,15 +8,14 @@ import VocabularyPage from './pages/VocabularyPage';
 import DocumentsPage from './pages/DocumentsPage';
 import ForumPage from './pages/ForumPage';
 import SettingsPage from './pages/SettingsPage';
+import CosmicLandingPage from './pages/CosmicLandingPage';
 import CodeGenerator from './components/admin/CodeGenerator';
 import QuestionManager from './components/admin/QuestionManager';
-import LoginModal from './components/auth/LoginModal';
-import RegisterModal from './components/auth/RegisterModal';
+import ActivationCodeModal from './components/auth/ActivationCodeModal';
 import MathRenderer from './components/common/MathRenderer';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import { ShieldCheck, BookOpen, Trash2, CheckCircle2, XCircle } from 'lucide-react';
+import { ShieldCheck, BookOpen, Trash2 } from 'lucide-react';
 
-// Component Sổ tay câu sai (Mistakes Notebook View)
 function MistakesNotebookView({ onStartExam }) {
   const [mistakes, setMistakes] = useState(() => {
     try {
@@ -94,7 +93,7 @@ function MistakesNotebookView({ onStartExam }) {
           </div>
           <h3 className="text-sm font-semibold text-slate-800">Sổ tay đang trống</h3>
           <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
-            Khi bạn hoàn thành các bài thi hoặc luyện tập, các câu hỏi chưa chính xác sẽ được tự động hoặc thủ công lưu vào đây để bạn tiện xem lại.
+            Khi bạn hoàn thành các bài thi hoặc luyện tập, các câu hỏi chưa chính xác sẽ được lưu vào đây để bạn tiện xem lại.
           </p>
         </div>
       ) : (
@@ -135,7 +134,6 @@ function MistakesNotebookView({ onStartExam }) {
                   </div>
                 )}
 
-                {/* Các phương án nếu có */}
                 {q.options && typeof q.options === 'object' && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
                     {Object.entries(q.options).map(([k, text]) => {
@@ -158,27 +156,9 @@ function MistakesNotebookView({ onStartExam }) {
                           <span className="flex-1 font-serif">
                             <MathRenderer text={typeof text === 'object' ? text.text : text} />
                           </span>
-                          {isUserAns && (
-                            <span className="text-[10px] uppercase font-bold text-rose-600 ml-auto shrink-0">
-                              Đã chọn
-                            </span>
-                          )}
-                          {isCorrect && (
-                            <span className="text-[10px] uppercase font-bold text-emerald-700 ml-auto shrink-0">
-                              Đáp án đúng
-                            </span>
-                          )}
                         </div>
                       );
                     })}
-                  </div>
-                )}
-
-                {/* Giải thích chi tiết */}
-                {q.explanation && (
-                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700 leading-relaxed font-sans">
-                    <span className="font-bold text-slate-800 block mb-1">Giải thích chi tiết:</span>
-                    <MathRenderer text={q.explanation} />
                   </div>
                 )}
               </div>
@@ -190,7 +170,6 @@ function MistakesNotebookView({ onStartExam }) {
   );
 }
 
-// Component Quản trị đề & mã
 function AdminDashboardView() {
   const [activeAdminTab, setActiveAdminTab] = useState('codes');
 
@@ -238,22 +217,53 @@ function AdminDashboardView() {
 function MainApp() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [currentSession, setCurrentSession] = useState(null);
-  
-  // Trạng thái modal Auth (Đăng nhập / Đăng ký)
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-  
-  const { user } = useAuth();
+  const [showActivationModal, setShowActivationModal] = useState(false);
+  const [isActivated, setIsActivated] = useState(() => {
+    return Boolean(localStorage.getItem('sat_activated_key'));
+  });
+
+  const { user, logout } = useAuth();
+  const [localUser, setLocalUser] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('sat_current_user')) || null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  const currentUser = user || localUser;
+
+  const handleLogout = () => {
+    localStorage.removeItem('sat_current_user');
+    setLocalUser(null);
+    setCurrentSession(null);
+    if (typeof logout === 'function') {
+      logout();
+    }
+  };
 
   const handleStartExam = (sessionData) => {
-    if (sessionData) {
-      setCurrentSession(sessionData);
+    if (!sessionData) return;
+    if (!isActivated) {
+      setShowActivationModal(true);
+      return;
     }
+    setCurrentSession(sessionData);
   };
 
   const handleExitExam = () => {
     setCurrentSession(null);
   };
+
+  if (!currentUser) {
+    return (
+      <CosmicLandingPage
+        onLoginSuccess={(loggedInUser) => {
+          setLocalUser(loggedInUser);
+        }}
+      />
+    );
+  }
 
   if (currentSession) {
     return (
@@ -261,95 +271,54 @@ function MainApp() {
         sessionConfig={currentSession}
         currentExam={currentSession}
         onExit={handleExitExam}
-        currentUser={user}
+        currentUser={currentUser}
       />
     );
   }
 
-  // Khớp hàm mở đăng nhập cho Sidebar và Header
-  const handleOpenLogin = () => {
-    setShowLoginModal(true);
-    setShowRegisterModal(false);
-  };
-
-  const handleOpenRegister = () => {
-    setShowRegisterModal(true);
-    setShowLoginModal(false);
-  };
-
   return (
     <div className="flex h-screen bg-[#f8fafc] text-slate-800 font-sans overflow-hidden">
-      {/* Sidebar có đầy đủ activeTab, setActiveTab và hàm xử lý nút Đăng nhập */}
       <Sidebar 
         activeTab={activeTab} 
         setActiveTab={setActiveTab}
-        currentTab={activeTab}
-        setCurrentTab={setActiveTab}
-        onLoginClick={handleOpenLogin}
-        onOpenLogin={handleOpenLogin}
-        onOpenRegister={handleOpenRegister}
+        onLogout={handleLogout}
       />
       
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Header 
-          activeTab={activeTab} 
-          setActiveTab={setActiveTab}
-          currentTab={activeTab}
-          setCurrentTab={setActiveTab}
-          user={user}
-          onOpenLogin={handleOpenLogin}
-          onOpenRegister={handleOpenRegister}
+          user={currentUser}
+          onLogout={handleLogout}
         />
         
         <main className="flex-1 overflow-y-auto">
           {(activeTab === 'dashboard' || activeTab === 'home') && (
             <DashboardPage 
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
               onNavigate={setActiveTab}
               onStartExam={handleStartExam}
-              onSelectExam={handleStartExam}
             />
           )}
 
           {(activeTab === 'bank' || activeTab === 'practice' || activeTab === 'questions') && (
             <QuestionBankPage 
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
               onNavigate={setActiveTab}
               onStartExam={handleStartExam}
-              onSelectExam={handleStartExam}
             />
           )}
 
-          {activeTab === 'vocab' && <VocabularyPage activeTab={activeTab} setActiveTab={setActiveTab} />}
-          {activeTab === 'documents' && <DocumentsPage activeTab={activeTab} setActiveTab={setActiveTab} />}
-          {activeTab === 'forum' && <ForumPage activeTab={activeTab} setActiveTab={setActiveTab} />}
-
-          {/* SỔ TAY CÂU SAI: Hỗ trợ cả key 'mistakes' lẫn 'notebook' */}
-          {(activeTab === 'mistakes' || activeTab === 'notebook' || activeTab === 'wrong_answers') && (
-            <MistakesNotebookView onStartExam={handleStartExam} />
-          )}
-
+          {activeTab === 'vocab' && <VocabularyPage />}
+          {activeTab === 'documents' && <DocumentsPage />}
+          {activeTab === 'forum' && <ForumPage />}
+          {activeTab === 'mistakes' && <MistakesNotebookView onStartExam={handleStartExam} />}
           {activeTab === 'admin' && <AdminDashboardView />}
-          {activeTab === 'settings' && <SettingsPage activeTab={activeTab} setActiveTab={setActiveTab} />}
+          {activeTab === 'settings' && <SettingsPage />}
         </main>
       </div>
 
-      {/* Modal Đăng nhập / Đăng ký */}
-      {showLoginModal && (
-        <LoginModal 
-          isOpen={showLoginModal} 
-          onClose={() => setShowLoginModal(false)}
-          onSwitchToRegister={handleOpenRegister}
-        />
-      )}
-
-      {showRegisterModal && (
-        <RegisterModal 
-          isOpen={showRegisterModal} 
-          onClose={() => setShowRegisterModal(false)}
-          onSwitchToLogin={handleOpenLogin}
+      {showActivationModal && (
+        <ActivationCodeModal
+          isOpen={showActivationModal}
+          onClose={() => setShowActivationModal(false)}
+          onSuccess={() => setIsActivated(true)}
         />
       )}
     </div>
