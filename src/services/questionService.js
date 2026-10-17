@@ -6,6 +6,7 @@ import commandOfEvidenceQuestions from '../data/questions/commandOfEvidence.json
 import detailsQuestions from '../data/questions/details.json';
 import inferenceQuestions from '../data/questions/inference.json';
 import vocabularyQuestions from '../data/questions/vocabulary.json';
+import novemberSatPrediction from '../data/questions/tests/november_sat_prediction.json';
 
 // Import 2 ngân hàng câu hỏi mới vừa được convert
 import geometryBankData from '../data/questions/geometry_trig_bank.json';
@@ -444,6 +445,21 @@ export const DEFAULT_CATEGORIES = [
     module2Hard: satRealVerbalFull.module2,
     module2Easy: satRealVerbalFull.module2, // fallback nếu phân nhánh
     questions: [...satRealVerbalFull.module1, ...satRealVerbalFull.module2]
+  },
+  {
+    id: 'november-sat-prediction',
+    title: 'November SAT Prediction - Official Verbal Module (27 Qs)',
+    name: 'November SAT Prediction',
+    section: 'Reading & Writing',
+    domain: 'Reading & Writing',
+    description: 'Bộ đề dự đoán bám sát format tháng 11, sắp xếp từ dễ đến khó kèm giải thích chi tiết.',
+    mode: 'exam',
+    isExam: true,
+    isRealExam: true,
+    totalQuestions: novemberSatPrediction.questions ? novemberSatPrediction.questions.length : 27,
+    duration: 1920, // 32 phút
+    questions: Array.isArray(novemberSatPrediction.questions) ? novemberSatPrediction.questions : [],
+    module1: Array.isArray(novemberSatPrediction.questions) ? novemberSatPrediction.questions : []
   }
 ];
 

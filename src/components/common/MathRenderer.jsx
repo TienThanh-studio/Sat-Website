@@ -1,278 +1,245 @@
+// src/components/common/MathRenderer.jsx
 import React, { useMemo } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
-// Xử lý an toàn biểu thức toán học
-function autoWrapMathExpressions(input) {
-  if (!input) return '';
-  let str = String(input);
-  if (str.includes('$')) return str;
+/**
+ * Chuẩn hóa chuỗi đầu vào: sửa các lỗi thoát chuỗi JSON phổ biến trong ngân hàng đề SAT
+ */
+function normalizeRawText(raw) {
+  if (raw === null || raw === undefined) return '';
+  let str = String(raw);
 
-  const trimmed = str.trim();
-  if (
-    trimmed.includes('^') ||
-    trimmed.includes('\\sqrt') ||
-    trimmed.includes('\\frac') ||
-    trimmed.includes('\\cdot') ||
-    (/^[a-zA-Z0-9\s\+\-\*\/\(\)\^\.\,\=]+$/.test(trimmed) && (trimmed.includes('^') || /\d+\/\d+/.test(trimmed)))
-  ) {
-    let formatted = trimmed
-      .replace(/([a-zA-Z0-9]+)\^\(([^)]+)\)/g, '$1^{$2}')
-      .replace(/([a-zA-Z0-9]+)\^([a-zA-Z0-9]+)/g, '$1^{$2}');
-    return `$${formatted}$`;
+  // Chuyển đổi \\n thành xuống dòng thực tế nếu bị double-escaped trong JSON
+  str = str.replace(/\\n/g, '\n');
+
+  // Chuyển \begin{tabular} sang \begin{array} để KaTeX hỗ trợ native
+  if (str.includes('\\begin{tabular}')) {
+    str = str
+      .replace(/\\begin\{tabular\}\{([^}]+)\}/g, '$$\\begin{array}{$1}')
+      .replace(/\\end\{tabular\}/g, '\\end{array}$$');
   }
+
+  // Nếu có \begin{array} hoặc \begin{matrix} mà chưa bọc trong $$...$$
+  if (
+    (str.includes('\\begin{array}') || str.includes('\\begin{matrix}') || str.includes('\\begin{cases}')) &&
+    !str.includes('$$') &&
+    !str.includes('\\[')
+  ) {
+    str = str
+      .replace(/(\\begin\{(?:array|matrix|pmatrix|bmatrix|cases)\}[\s\S]*?\\end\{(?:array|matrix|pmatrix|bmatrix|cases)\})/g, '$$$$$1$$$$');
+  }
+
   return str;
 }
 
-// Render chuỗi có KaTeX và gạch chân <u> đơn giản, thanh mảnh
-function renderFormattedSegment(content) {
-  if (!content) return null;
+/**
+ * Render một biểu thức toán bằng KaTeX an toàn (không bao giờ quăng lỗi đỏ làm vỡ giao diện)
+ */
+function renderKatexSafe(mathExpr, displayMode = false) {
+  const cleanExpr = String(mathExpr || '').trim();
+  if (!cleanExpr) return '';
 
-  const underlineParts = content.split(/(<u>[\s\S]*?<\/u>)/gi);
-
-  return underlineParts.map((uPart, uIdx) => {
-    if (!uPart) return null;
-
-    if (uPart.toLowerCase().startsWith('<u>') && uPart.toLowerCase().endsWith('</u>')) {
-      const innerText = uPart.slice(3, -4);
-      return (
-        <span key={`u-${uIdx}`} className="underline underline-offset-4 decoration-1 font-normal text-slate-900">
-          {renderKatexText(innerText)}
-        </span>
-      );
-    }
-
-    return <React.Fragment key={`text-${uIdx}`}>{renderKatexText(uPart)}</React.Fragment>;
-  });
-}
-
-function renderKatexText(content) {
-  if (!content) return null;
-  const processed = autoWrapMathExpressions(content);
-  const parts = processed.split(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g);
-
-  return parts.map((part, index) => {
-    if (!part) return null;
-
-    if (part.startsWith('$$') && part.endsWith('$$')) {
-      let math = part.slice(2, -2).trim().replace(/(?<!\\)%/g, '\\%');
-      try {
-        const html = katex.renderToString(math, { displayMode: true, throwOnError: false });
-        return (
-          <span
-            key={index}
-            dangerouslySetInnerHTML={{ __html: html }}
-            className="my-2 block text-center overflow-x-auto"
-          />
-        );
-      } catch (e) {
-        return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
-      }
-    }
-
-    if (part.startsWith('$') && part.endsWith('$')) {
-      let math = part.slice(1, -1).trim().replace(/(?<!\\)%/g, '\\%');
-      try {
-        const html = katex.renderToString(math, { displayMode: false, throwOnError: false });
-        return <span key={index} dangerouslySetInnerHTML={{ __html: html }} />;
-      } catch (e) {
-        return <span key={index} className="text-rose-500 font-mono text-xs">{part}</span>;
-      }
-    }
-
-    return <span key={index}>{part}</span>;
-  });
-}
-
-// Bóc tách dạng bài 2 đoạn văn Text 1 & Text 2 theo chuẩn Bluebook (không viền, không box)
-function renderCrossTextPassage(text) {
-  // Chỉ phân tách khi văn bản thực sự bắt đầu hoặc chứa tiêu đề đoạn văn "Text 1"
-  const regex = /(?:^|\n)\s*Text\s*2\s*[:\-\n]?\s*/i;
-  const match = text.match(regex);
-  if (!match) return null;
-
-  let t1 = text.slice(0, match.index).replace(/^\s*Text\s*1\s*[:\-\n]?\s*/i, '').trim();
-  let t2 = text.slice(match.index + match[0].length).trim();
-
-  // Bổ sung gạch chân cho bài Henry James nếu dữ liệu gốc bị thiếu
-  if (t1.toLowerCase().includes('james') && !t1.includes('<u>')) {
-    t1 = t1.replace(
-      /(James's late novels are some of the best he wrote, but they are not for everyone\.)/i,
-      '<u>$1</u>'
-    );
+  try {
+    return katex.renderToString(cleanExpr, {
+      displayMode,
+      throwOnError: false,
+      strict: false,
+      trust: true,
+      output: 'htmlAndMathml',
+    });
+  } catch (err) {
+    console.warn('[MathRenderer] KaTeX fallback:', err);
+    return `<span class="font-mono text-indigo-700 bg-indigo-50 px-1 rounded">${cleanExpr}</span>`;
   }
-
-  return (
-    <div className="space-y-5 leading-relaxed text-slate-800">
-      <div>
-        <p className="font-bold text-slate-900 mb-1">Text 1</p>
-        <p>{renderFormattedSegment(t1)}</p>
-      </div>
-      <div>
-        <p className="font-bold text-slate-900 mb-1">Text 2</p>
-        <p>{renderFormattedSegment(t2)}</p>
-      </div>
-    </div>
-  );
 }
 
-// Render ghi chú Rhetorical Synthesis (Bullet points)
-function renderRhetoricalNotes(text) {
-  const parts = text.split(/(•|\n\s*[-*]\s*)/g);
-  const intro = parts[0].trim();
-  const bullets = [];
+/**
+ * Chuyển đổi Markdown Table (| A | B |) thành bảng HTML chuẩn học thuật College Board
+ */
+function parseMarkdownTableToHtml(block) {
+  const lines = block
+    .trim()
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l.startsWith('|') && l.endsWith('|'));
 
-  for (let i = 1; i < parts.length; i += 2) {
-    const bulletContent = parts[i + 1]?.trim();
-    if (bulletContent) bullets.push(bulletContent);
-  }
+  if (lines.length < 2) return null;
 
-  if (bullets.length === 0) return null;
+  // Kiểm tra dòng phân cách |---|---|
+  const separatorLine = lines[1];
+  if (!/^\|[\s\-:|]+\|$/.test(separatorLine)) return null;
 
-  return (
-    <div className="space-y-3 leading-relaxed text-slate-800">
-      {intro && <p className="font-medium text-slate-700">{renderFormattedSegment(intro)}</p>}
-      <ul className="space-y-2 pl-4 list-disc marker:text-slate-500 text-[15px]">
-        {bullets.map((bullet, idx) => (
-          <li key={idx} className="pl-1">
-            {renderFormattedSegment(bullet)}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+  const parseRow = (line) =>
+    line
+      .slice(1, -1)
+      .split('|')
+      .map((cell) => renderInlineMixedText(cell.trim()));
 
-// Render bảng số liệu Markdown
-function renderTableMarkdown(text) {
-  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-  const tableLines = lines.filter(l => l.includes('|'));
-  if (tableLines.length < 2) return null;
+  const headers = parseRow(lines[0]);
+  const rows = lines.slice(2).map(parseRow);
 
-  const nonDividerLines = tableLines.filter(l => !l.match(/^[|\s\-:]+$/));
-  if (nonDividerLines.length === 0) return null;
-
-  const headers = nonDividerLines[0].split('|').map(s => s.trim()).filter(Boolean);
-  const rows = nonDividerLines.slice(1).map(row => 
-    row.split('|').map(s => s.trim()).filter(Boolean)
-  );
-
-  return (
-    <div className="my-4 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-xs">
-      <table className="min-w-full divide-y divide-slate-200 text-left text-xs font-sans">
-        <thead className="bg-slate-50 text-slate-800 font-bold uppercase tracking-wider">
+  return `
+    <div class="my-4 overflow-x-auto rounded-xl border border-slate-300 shadow-2xs bg-white">
+      <table class="min-w-full divide-y divide-slate-200 text-xs sm:text-sm font-sans">
+        <thead class="bg-slate-100/90 text-slate-900 font-bold">
           <tr>
-            {headers.map((h, i) => (
-              <th key={i} className="px-4 py-3 border-r border-slate-200 last:border-r-0">
-                {renderKatexText(h)}
-              </th>
-            ))}
+            ${headers.map((h) => `<th class="px-4 py-2.5 text-center border-r last:border-r-0 border-slate-200">${h}</th>`).join('')}
           </tr>
         </thead>
-        <tbody className="divide-y divide-slate-100 font-medium text-slate-800">
-          {rows.map((row, rIdx) => (
-            <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
-              {row.map((cell, cIdx) => (
-                <td key={cIdx} className="px-4 py-2.5 border-r border-slate-100 last:border-r-0 text-[13px]">
-                  {renderKatexText(cell)}
-                </td>
-              ))}
-            </tr>
-          ))}
+        <tbody class="divide-y divide-slate-200 text-slate-800">
+          ${rows
+            .map(
+              (r) => `
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              ${r.map((c) => `<td class="px-4 py-2 text-center border-r last:border-r-0 border-slate-200 font-mono">${c}</td>`).join('')}
+            </tr>`
+            )
+            .join('')}
         </tbody>
       </table>
     </div>
-  );
+  `;
 }
 
-export default function MathRenderer({ text = '', className = '' }) {
-  const cleanContent = useMemo(() => {
-    if (!text) return '';
-    let val = String(text);
-    try { val = val.normalize('NFC'); } catch (e) {}
+/**
+ * Xử lý văn bản inline kết hợp công thức toán ($...$, \(...\), hoặc lệnh LaTeX rời như \frac, \sqrt)
+ */
+function renderInlineMixedText(input) {
+  if (!input) return '';
 
-    val = val.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
-    val = val.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
-    val = val.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/gi, '');
+  // Bước 1: Bảo vệ các thẻ HTML hợp lệ (<svg>, <table>, <img>, <u>, <b>, <i>, <strong>, <em>, <mark>, <br>, <sup>, <sub>)
+  const htmlPlaceholders = [];
+  let text = input.replace(
+    /(<svg[\s\S]*?<\/svg>|<table[\s\S]*?<\/table>|<img\b[^>]*>|<\/?(?:u|b|i|strong|em|mark|br|sup|sub|span|div|p|ul|ol|li|blockquote)\b[^>]*>)/gi,
+    (match) => {
+      const token = `@@HTML_TOKEN_${htmlPlaceholders.length}@@`;
+      htmlPlaceholders.push(match);
+      return token;
+    }
+  );
 
-    // Bổ sung gạch chân cho các câu hỏi function bị thiếu thẻ <u>
-    if (val.includes('The Every') && val.includes('Delaney Wells') && !val.includes('<u>')) {
-      val = val.replace(
-        /(Through this satirical portrayal, Eggers drives home his central message: digital dystopia spreads not through coercion but through willing participation in technologies that promise social change but that encourage self-centered and moralizing behavior rather than collective action to bring about systemic improvements\.)/i,
-        '<u>$1</u>'
-      );
+  // Bước 2: Hỗ trợ cú pháp ảnh Markdown ![alt](url)
+  text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, url) => {
+    const imgHtml = `<div class="my-3 flex justify-center"><img src="${url}" alt="${alt || 'SAT Figure'}" class="max-h-72 w-auto rounded-xl border border-slate-200 shadow-xs object-contain bg-white p-2" loading="lazy" /></div>`;
+    const token = `@@HTML_TOKEN_${htmlPlaceholders.length}@@`;
+    htmlPlaceholders.push(imgHtml);
+    return token;
+  });
+
+  // Bước 3: Tách các cụm toán học chuẩn: $$...$$, \[...\], $...$, \(...\)
+  const mathRegex = /(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\$(?!\s)[^$\n]+?(?<!\s)\$|\\\([\s\S]+?\\\))/g;
+
+  const segments = text.split(mathRegex);
+
+  const processedSegments = segments.map((seg) => {
+    if (!seg) return '';
+
+    // Display Math: $$...$$ hoặc \[...\]
+    if ((seg.startsWith('$$') && seg.endsWith('$$')) || (seg.startsWith('\\[') && seg.endsWith('\\]'))) {
+      const inner = seg.slice(2, -2);
+      return `<div class="my-3 overflow-x-auto py-1 text-center">${renderKatexSafe(inner, true)}</div>`;
     }
 
-    if (val.includes('Jared Shurin') && val.includes('Cyberpunk') && !val.includes('<u>')) {
-      val = val.replace(
-        /(cyberpunk is a literary movement that is in (?:large|meo) part aesthetic rather than idea driven\.)/i,
-        '<u>$1</u>'
-      );
+    // Inline Math: $...$
+    if (seg.startsWith('$') && seg.endsWith('$') && seg.length > 2) {
+      const inner = seg.slice(1, -1);
+      return renderKatexSafe(inner, false);
     }
 
-    return val;
-  }, [text]);
+    // Inline Math: \(...\)
+    if (seg.startsWith('\\(') && seg.endsWith('\\)')) {
+      const inner = seg.slice(2, -2);
+      return renderKatexSafe(inner, false);
+    }
 
-  if (!cleanContent) return null;
+    // Bước 4: Tự động cứu các lệnh LaTeX bị quên bọc dấu $ trong dữ liệu JSON (VD: \frac{3}{4}, \sqrt{2x}, \pi, \theta)
+    let plain = seg.replace(
+      /(\\(?:frac|dfrac|tfrac)\{[^{}]*\}\{[^{}]*\}|\\sqrt(?:\[[^\]]*\])?\{[^{}]*\}|\\(?:pi|theta|alpha|beta|gamma|delta|leq|geq|neq|approx|times|div|pm|mp|infty|triangle|angle|perp|parallel)\b)/g,
+      (latexMatch) => renderKatexSafe(latexMatch, false)
+    );
 
-  // 1. Phân tách Cross-Text: CHỈ kích hoạt khi văn bản bắt đầu bằng Text 1 và có Text 2 (tránh nhận nhầm câu hỏi bên phải)
-  const isPassageWithCrossText = /^\s*Text\s*1\b/i.test(cleanContent) && /\bText\s*2\b/i.test(cleanContent);
-  if (isPassageWithCrossText) {
-    const renderedCross = renderCrossTextPassage(cleanContent);
-    if (renderedCross) return renderedCross;
-  }
+    // Format bold **text** và italic *text* nhẹ nhàng
+    plain = plain
+      .replace(/\*\*([^*]+)\*\*/g, '<strong class="font-bold text-slate-900">$1</strong>')
+      .replace(/__([^_]+)__/g, '<u class="underline decoration-slate-700 underline-offset-4">$1</u>');
 
-  // 2. Câu hỏi dạng ghi chú (Notes)
-  const isNotesQuestion = cleanContent.includes('•') || (cleanContent.toLowerCase().includes('notes:') && cleanContent.includes('-'));
-  if (isNotesQuestion) {
-    const renderedNotes = renderRhetoricalNotes(cleanContent);
-    if (renderedNotes) return renderedNotes;
-  }
+    return plain;
+  });
 
-  // 3. Bảng Markdown
-  const isTableContent = cleanContent.includes('|') && cleanContent.split('\n').filter(l => l.includes('|')).length >= 2;
-  if (isTableContent) {
-    const lines = cleanContent.split('\n');
-    const introLines = [];
-    const tableLines = [];
-    const outroLines = [];
-    let state = 'intro';
+  let finalHtml = processedSegments.join('');
 
-    for (const l of lines) {
-      if (l.includes('|')) {
-        state = 'table';
-        tableLines.push(l);
-      } else {
-        if (state === 'table') state = 'outro';
-        if (state === 'intro') introLines.push(l);
-        if (state === 'outro') outroLines.push(l);
+  // Bước 5: Khôi phục các thẻ HTML / SVG / Image đã bảo vệ
+  htmlPlaceholders.forEach((originalHtml, idx) => {
+    finalHtml = finalHtml.replace(`@@HTML_TOKEN_${idx}@@`, originalHtml);
+  });
+
+  return finalHtml;
+}
+
+export default function MathRenderer({
+  text,
+  content,
+  children,
+  className = '',
+  image,
+  svg,
+  figure,
+}) {
+  const rawInput = text ?? content ?? children ?? '';
+
+  const renderedHtml = useMemo(() => {
+    const normalized = normalizeRawText(rawInput);
+    if (!normalized) return '';
+
+    // Tách theo đoạn văn (paragraph) để bắt Markdown Table nếu có
+    const blocks = normalized.split(/\n{2,}/);
+
+    const htmlBlocks = blocks.map((block) => {
+      const trimmed = block.trim();
+      if (!trimmed) return '';
+
+      // Nếu cả khối là một Markdown Table
+      if (trimmed.includes('|') && trimmed.split('\n').length >= 2) {
+        const tableHtml = parseMarkdownTableToHtml(trimmed);
+        if (tableHtml) return tableHtml;
       }
-    }
 
-    return (
-      <div className={`space-y-3 leading-relaxed ${className}`}>
-        {introLines.length > 0 && <p>{renderFormattedSegment(introLines.join(' '))}</p>}
-        {renderTableMarkdown(tableLines.join('\n'))}
-        {outroLines.length > 0 && <p>{renderFormattedSegment(outroLines.join(' '))}</p>}
-      </div>
-    );
-  }
+      // Xử lý xuống dòng đơn trong đoạn
+      const lines = block.split('\n').map((line) => renderInlineMixedText(line));
+      return `<div class="mb-2.5 last:mb-0">${lines.join('<br />')}</div>`;
+    });
 
-  // 4. Văn bản đoạn văn thông thường
-  const paragraphs = cleanContent.split(/\n\s*\n/);
-  if (paragraphs.length > 1) {
-    return (
-      <div className={`space-y-4 leading-relaxed ${className}`}>
-        {paragraphs.map((p, pIdx) => (
-          <p key={pIdx}>{renderFormattedSegment(p.trim())}</p>
-        ))}
-      </div>
-    );
-  }
+    return htmlBlocks.join('');
+  }, [rawInput]);
 
   return (
-    <span className={`leading-relaxed ${className}`}>
-      {renderFormattedSegment(cleanContent)}
-    </span>
+    <div className={`math-renderer-container leading-relaxed break-words ${className}`}>
+      {/* Nếu câu hỏi truyền riêng prop svg hoặc figure */}
+      {svg && (
+        <div
+          className="my-4 flex justify-center overflow-x-auto rounded-2xl border border-slate-200/80 bg-white p-4 shadow-2xs"
+          dangerouslySetInnerHTML={{ __html: svg }}
+        />
+      )}
+
+      {/* Nếu câu hỏi truyền riêng prop image hoặc figure URL */}
+      {(image || figure) && (
+        <div className="my-4 flex justify-center">
+          <img
+            src={image || figure}
+            alt="Question Diagram"
+            className="max-h-72 w-auto rounded-2xl border border-slate-200/80 bg-white p-3 shadow-xs object-contain"
+            loading="lazy"
+          />
+        </div>
+      )}
+
+      {/* Nội dung văn bản + KaTeX + bảng/biểu đồ nhúng */}
+      <div
+        className="[&_svg]:mx-auto [&_svg]:my-3 [&_svg]:max-w-full [&_svg]:h-auto [&_table]:my-3 [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-300 [&_th]:bg-slate-100 [&_th]:px-3 [&_th]:py-2 [&_td]:border [&_td]:border-slate-200 [&_td]:px-3 [&_td]:py-2"
+        dangerouslySetInnerHTML={{ __html: renderedHtml }}
+      />
+    </div>
   );
 }

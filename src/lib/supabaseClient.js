@@ -1,16 +1,29 @@
+// src/lib/supabaseClient.js
 import { createClient } from '@supabase/supabase-js';
 
-const url = import.meta.env.VITE_SUPABASE_URL;
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const rawUrl = import.meta.env?.VITE_SUPABASE_URL || '';
+const rawKey = import.meta.env?.VITE_SUPABASE_ANON_KEY || '';
 
-if (!url || !anonKey) {
-  console.warn('Chưa cấu hình VITE_SUPABASE_URL hoặc VITE_SUPABASE_ANON_KEY trong file .env');
-}
+// Chặn domain Supabase đã ngưng hoạt động (opgallumeavzruxqqbyt) và key publishable không hợp lệ để tránh lỗi đỏ WebSocket
+const isDeadHost =
+  rawUrl.includes('opgallumeavzruxqqbyt') ||
+  rawKey.startsWith('sb_publishable_') ||
+  rawKey === 'your-anon-key';
 
-export const supabase = createClient(url || '', anonKey || '', {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true,
-  },
-});
+export const isSupabaseConfigured = Boolean(
+  rawUrl &&
+  rawKey &&
+  rawUrl.startsWith('https://') &&
+  !isDeadHost
+);
+
+export const supabase = isSupabaseConfigured
+  ? createClient(rawUrl, rawKey, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: false,
+      },
+    })
+  : null;
+
+export default supabase;
