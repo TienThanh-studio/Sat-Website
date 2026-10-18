@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "nov_v_01",
+    "questionNumber": 1,
+    "domain": "Information and Ideas",
+    "passage": "Immanuel Wallerstein and other historians of capitalism rarely discuss domestic capitalism in Africa before the period of European colonization, implicitly presenting capitalism as external to and imposed on Africa. Crislayne Alfagali and other Africanist scholars have shown, however, that in parts of Africa, wage labor competition, the manufacture of surplus goods for monetized sale, and other features of capitalism predated colonization. One reason for this discrepancy is that historians of capitalism tend to focus on longitudinal economic data drawn from archival records, which do not exist for much of precolonial Africa.",
+    "question": "Which statement about Alfagali and other Africanist scholars is best supported by information in the text?",
+    "options": {
+      "A": "They likely differ from historians of capitalism in the methods they use to derive longitudinal economic data from archival records.",
+      "B": "They likely make use of different types of evidence than historians of capitalism typically rely on.",
+      "C": "They likely view capitalism as having been more beneficial for Africa than historians of capitalism do.",
+      "D": "They likely have a different view about which activities should be considered capitalist in nature than historians of capitalism do."
+    },
+    "correctAnswer": "B",
+    "explanation": "Hồ sơ lưu trữ dài hạn (archival records) không tồn tại ở châu Phi tiền thuộc địa, do đó để chứng minh các yếu tố tư bản đã tồn tại từ trước, Alfagali và các học giả châu Phi học buộc phải sử dụng các dạng bằng chứng khác."
+  },
+  {
+    "id": "nov_v_02",
+    "questionNumber": 2,
+    "domain": "Information and Ideas",
+    "passage": "The Arapaho language of the Plains region in the United States has 16 vowel and consonant sounds. In contrast, the Hadza language of eastern Africa has 70. Why would languages differ in this way? One researcher has hypothesized that when modern humans arose in Africa, they spoke a single language, but as humans gradually spread throughout Africa and then around the globe, that language developed into new languages. Those developed into still more languages as small bands of humans spread even farther, with each new language retaining fewer sounds from humanity's original language.",
+    "question": "Which finding, if true, would best support the researcher's hypothesis?",
+    "options": {
+      "A": "Languages that emerged in northwestern North America tend to have more sounds than languages that emerged in East Asia do, even though northwestern North America is farther away from Africa than East Asia is.",
+      "B": "Languages that emerged in Eastern Europe tend to have more sounds than languages that emerged in East Asia do, and Eastern Europe is closer to Africa than East Asia is.",
+      "C": "Languages that emerged in Western Europe tend to have fewer sounds than languages that emerged in East Asia do, and Western Europe is closer to Africa than East Asia is.",
+      "D": "Languages that emerged in South Asia tend to have more sounds than languages that emerged in East Asia do, even though the two regions are roughly the same distance from Africa."
+    },
+    "correctAnswer": "B",
+    "explanation": "Càng di cư xa khỏi châu Phi thì số lượng âm vị của ngôn ngữ càng giảm dần theo giả thuyết. Do đó vùng ở gần châu Phi hơn (Đông Âu) có nhiều âm thanh hơn vùng ở xa hơn (Đông Á)."
+  },
+  {
+    "id": "nov_v_03",
+    "questionNumber": 3,
+    "domain": "Information and Ideas",
+    "passage": "Simulated Change in Annual Aquifer Input and Irrigation Output if Precipitation Concentration Increases as Climate Models Predict\n\n| Baseline concentration of annual precipitation | % change in water entering aquifers | % change in surface water used for irrigation | % change in groundwater used for irrigation |\n| :--- | :---: | :---: | :---: |\n| Precipitation is currently somewhat concentrated | 4.9 | 0.4 | 0.9 |\n| Precipitation is currently evenly distributed | 11.0 | 9.0 | 7.9 |\n\nSome climate models for the western United States predict that while total annual precipitation may remain unchanged from the present level, precipitation will become concentrated into fewer but more intense rain and snow events. University of Texas climate scientist Geeta Persad and her colleagues simulated how the amount of water entering aquifers and the amount being used for irrigation purposes would change if this were to occur. Persad and her colleagues concluded that concentration of precipitation into fewer events would result in a higher number of dry days, triggering more irrigation, but that this change in irrigation output is highly sensitive to the baseline concentration of precipitation that currently exists in an area.",
+    "question": "Which choice best describes data from the table that support Persad and her colleagues' conclusion?",
+    "options": {
+      "A": "If baseline precipitation is somewhat concentrated, the amount of water being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater, whereas the amount of water entering aquifers will increase 11.0% if baseline precipitation is evenly distributed.",
+      "B": "If baseline precipitation is somewhat concentrated, water use for irrigation will increase only slightly, whereas it will increase 9.0% for surface water and 7.9% for groundwater if baseline precipitation is evenly distributed.",
+      "C": "If baseline precipitation is somewhat concentrated, the amount of water entering aquifers will increase 4.9%, while the amount being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater.",
+      "D": "If baseline precipitation is somewhat concentrated, water use for irrigation will decline by a small amount, whereas it will increase 11.0% for surface water and 9.0% for groundwater if baseline precipitation is evenly distributed."
+    },
+    "correctAnswer": "B",
+    "explanation": "Số liệu bảng minh họa mức độ tưới tiêu tăng rất nhạy cảm với lượng mưa cơ sở: nếu đã tập trung từ trước thì tăng không đáng kể (0.4% và 0.9%), trong khi nếu phân bổ đều thì tăng mạnh (9.0% và 7.9%)."
+  },
+  {
+    "id": "nov_v_04",
+    "questionNumber": 4,
+    "domain": "Craft and Structure",
+    "passage": "In a study by Mika R. Moran, Daniel A. Rodríguez, and colleagues, residents of Panama City, Panama, and Caracas, Venezuela, were surveyed about parks in their cities. Of the 318 respondents from Panama City, 53.5% indicated that they use the city's parks, and of the 1,043 respondents from Caracas, 44.7% indicated using city parks. Given that the percentage of Panama City respondents who reported having access to desired nonpark amenities near parks was much lower than that reported by Caracas respondents, the difference in park use can't be explained by Panama City residents having more access to desired nonpark amenities near parks.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "An unexpected finding is described, and then that finding is attributed to the method used to collect survey data in Panama City and Caracas.",
+      "B": "An unresolved question about park planning is described, and then examples from a study of Panama City and Caracas are used to answer that question.",
+      "C": "A study involving surveys in Panama City and Caracas is introduced, and then a possible explanation for some of the results is considered.",
+      "D": "A study of park use in Panama City is described, and then a similar study of park use in Caracas is analyzed to corroborate the findings of the Panama City study."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn giới thiệu cuộc khảo sát tại hai thành phố, sau đó cân nhắc và bác bỏ một khả năng giải thích dựa trên các tiện ích lân cận công viên."
+  },
+  {
+    "id": "nov_v_05",
+    "questionNumber": 5,
+    "domain": "Information and Ideas",
+    "passage": "Sheffield United Football Club won more than half its home matches between 1947 and 2003, helping to distinguish the team as a top British professional soccer club. Additionally, Sheffield United, whose home uniform color is mainly red, was more successful in home matches than was Cardiff City Football Club, whose home uniform color is not red. Research has shown that many people associate the color red with power and dominance. Past experiences with red objects such as stop signs can even cause people to respond to the color red with caution and hesitation. These findings, if applicable in the context of athletic competitions, could suggest that in matches played at Sheffield United's home stadium, opponents may have",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "been unaffected by the red clothing worn by fans in the stadium.",
+      "B": "played more aggressively than they would have if their own uniforms were red.",
+      "C": "been influenced by the color of Sheffield United's uniforms.",
+      "D": "been aware that Sheffield United's uniform color affected their own performance."
+    },
+    "correctAnswer": "C",
+    "explanation": "Màu đỏ kích hoạt tâm lý cẩn trọng và ngần ngại ở con người, gợi ý rằng các đối thủ thi đấu trên sân của Sheffield United có thể đã chịu ảnh hưởng tâm lý từ màu áo đỏ của đội này."
+  },
+  {
+    "id": "nov_v_06",
+    "questionNumber": 6,
+    "domain": "Craft and Structure",
+    "passage": "Scholars cite Men of Maize, the 1949 novel by Guatemalan author Miguel Ángel Asturias, as a foundational text of magical realism, the Latin American style of fiction in which antirealistic plot devices often borrowed from the folkloric traditions of Indigenous and colonial societies in the Americas are deployed in an otherwise realistic mode of representation typical of the modern novel. This style has exerted a decisive influence on authors around the world, including José Saramago, whose 1982 novel Baltasar and Blimunda resembles classic magical realist novels in its juxtaposition of literary realism with folklore namely, that of Portugal.",
+    "question": "Which quotation from a literary scholar would most directly support the claim in the underlined portion of the text?",
+    "options": {
+      "A": "\"Although Portuguese folklore clearly informs the style and occasionally antirealistic plot of Baltasar and Blimunda, the novel also shows the inarguable influence of the magical realist tradition of Latin America.\"",
+      "B": "\"Like many works in the Latin American magical realist tradition, Baltasar and Blimunda is indebted to antirealistic elements in the folkloric tradition of Portugal.\"",
+      "C": "\"The logic of the realistic plot of Baltasar and Blimunda is repeatedly and productively disrupted by the presence of characters and situations drawn from Portuguese folklore.\"",
+      "D": "\"While Baltasar and Blimunda alternates between realistic and antirealistic modes of representation, details suggesting the influence of Portuguese folklore nevertheless occur throughout the novel.\""
+    },
+    "correctAnswer": "C",
+    "explanation": "Câu trích dẫn chỉ ra sự đan cài hiệu quả giữa cấu trúc hiện thực với các yếu tố dân gian Bồ Đào Nha, bổ trợ trực tiếp cho luận điểm về sự đối sánh nghệ thuật hiện thực và văn hóa dân gian."
+  },
+  {
+    "id": "nov_v_07",
+    "questionNumber": 7,
+    "domain": "Information and Ideas",
+    "passage": "Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagitsuru, Otar Akanyeti, and James C. Liao using models of three head shapes narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length) showed that for large vortices, fish with intermediate heads would be better able than wide-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than wide-headed fish to detect obstructions that create large vortices.",
+    "question": "Which finding, if true, would most directly support the second research team's hypothesis?",
+    "options": {
+      "A": "A study using obstructions that created large vortices in low-visibility conditions found that the intermediate-headed black sea bass (Centropristis striata) bumped into the obstructions just as often as the wide-headed Synodontis macropunctata did.",
+      "B": "A study using obstructions that created large vortices in low-visibility conditions found that the wide-headed Synodontis macropunctata bumped into obstructions more often than the intermediate-headed black sea bass (Centropristis striata) did.",
+      "C": "A study using obstructions that created large vortices in low-visibility conditions found that some specimens of the intermediate-headed black sea bass (Centropristis striata) bumped into the obstructions more often than other specimens of the same fish did.",
+      "D": "A study using obstructions that created large vortices in low-visibility conditions found that the Synodontis macropunctata, which has a relatively wide head, bumped into more than half of the obstructions."
+    },
+    "correctAnswer": "B",
+    "explanation": "Nếu cá đầu trung bình phát hiện chướng ngại vật tốt hơn trong điều kiện thiếu sáng thì loài cá đầu to (S. macropunctata) sẽ va chạm với chướng ngại vật nhiều lần hơn loài cá đầu trung bình (C. striata)."
+  },
+  {
+    "id": "nov_v_08",
+    "questionNumber": 8,
+    "domain": "Craft and Structure",
+    "passage": "Like all species of baleen whales, the humpback whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the humpback whale small it can have a mass as high as 30,000 kg-it is one of the smaller baleen whales and is much smaller than the northern right whale, which can weigh a whopping 80,000 kg and consume as much as 24,000 kg of krill per day.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It describes a characteristic shared by all baleen whales and then illustrates a difference between the humpback whale and the northern right whale that is relevant to that characteristic.",
+      "B": "It discusses a unique feature of the humpback whale and how the lack of that feature in the northern right whale explains differences in the two species' behavior.",
+      "C": "It draws a distinction between the sizes of the humpback whale and the northern right whale and then presents a feature that the two species share.",
+      "D": "It details a relationship between humpback and northern right whales and krill and then discusses an unexpected consequence of a change in baleen whale populations."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu đặc điểm chung (lọc nhuyễn thể qua tấm sừng), sau đó so sánh kích thước và mức tiêu thụ thức ăn giữa cá voi lưng gù và cá voi đầu bò phương bắc."
+  },
+  {
+    "id": "nov_v_09",
+    "questionNumber": 9,
+    "domain": "Information and Ideas",
+    "passage": "The following text is from George Eliot's 1857 short story \"The Sad Fortunes of the Rev. Amos Barton.\" In the text, the narrator addresses the reader directly and alludes to a discussion among Rev. Amos Barton's neighbors.\n\nIt was happy for the Rev. Amos Barton that he did not, like us, overhear the conversation recorded in the last chapter. Indeed, what mortal is there of us, who would find his satisfaction enhanced by an opportunity of comparing the picture he presents to himself of his own doings, with the picture they make on the mental retina of his neighbours? We are poor plants buoyed up by the air-vessels of our own conceit: alas for us, if we get a few pinches that empty us of that windy self-subsistence! The very capacity for good would go out of us.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Although people seek to be viewed as virtuous, the most insignificant setbacks will often inhibit them from being so.",
+      "B": "People tend to fixate more often than they should on whether their acquaintances think highly of them.",
+      "C": "People are better off not knowing about the discrepancy between their own self-image and what others think of them.",
+      "D": "Although people appreciate the value of being truthful, they are generally unwilling to point out others' failings."
+    },
+    "correctAnswer": "C",
+    "explanation": "Tác giả chỉ ra rằng con người duy trì lòng tự tin nhờ ảo tưởng tích cực về bản thân; nếu nghe thấy người khác đánh giá thực sự về mình thì niềm tin đó sẽ sụp đổ, do đó tốt hơn hết là không biết."
+  },
+  {
+    "id": "nov_v_10",
+    "questionNumber": 10,
+    "domain": "Information and Ideas",
+    "passage": "Text 1\nIn separate studies, Marine Fernandez and colleagues and Hualiang Zhang and colleagues examined whether plants transfer nutrients to one another using a common mycorrhizal network (CMN)-a lattice of fungal strands in the soil. Fernandez and colleagues excluded all pathways other than the CMN by using barriers to keep the plants' root systems separate while allowing mycorrhizal strands through a crucial step Zhang and colleagues' study did not take.\n\nText 2\nFernandez and colleagues took the necessary precaution of separating the plants' root systems (thereby excluding root-to-root transmission). However, any barrier used must allow the thread-like hyphae of a CMN to pass through, and this permeability would also allow liquids through. Thus, the researchers' experimental design cannot ensure that any nutrient transfer observed can be attributed to a CMN and not to some other pathway.",
+    "question": "Based on the texts, the author of Text 1 and the author of Text 2 would most likely give the same answer to which question?",
+    "options": {
+      "A": "Is there an available barrier material that can block roots and liquids while allowing fungal strands through?",
+      "B": "Did Zhang and colleagues' study effectively exclude any nutrient pathway other than a CMN?",
+      "C": "Are the barriers used in Fernandez and colleagues' study sufficient to ensure that nutrient transfer could only occur via a CMN?",
+      "D": "Do plants that transfer nutrients through a root-to-root pathway also transmit nutrients via a CMN?"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cả hai tác giả đều thống nhất rằng nghiên cứu của Zhang không ngăn chặn rễ chạm nhau nên hoàn toàn không loại trừ được các con đường trao đổi chất dinh dưỡng ngoài mạng lưới nấm CMN."
+  },
+  {
+    "id": "nov_v_11",
+    "questionNumber": 11,
+    "domain": "Information and Ideas",
+    "passage": "The bird species Myiobius barbatus (the bearded flycatcher), which forages in relatively dense vegetation, and Platyrinchus saturatus (the cinnamon-crested spadebill), which forages in open areas or low-density vegetation, share territory in French Guiana with Thamnomanes caesius (the cinereous antshrike), which emits a loud alarm call when it detects predators. Biologist Ari Martinez and colleagues, who studied the ecological community the species share, hypothesized that there is an inverse relationship between birds' field of vision while foraging and their sensitivity to alarm calls from neighboring species.",
+    "question": "Which finding, if true, would most directly support Martinez and colleagues' hypothesis?",
+    "options": {
+      "A": "When Martinez and colleagues played T. caesius alarm calls, M. barbatus and P. saturatus displayed no reaction, whereas T. caesius displayed predator-avoidance behavior.",
+      "B": "Many local bird species with similar foraging habits to those of M. barbatus displayed no reaction when Martinez and colleagues played T. caesius alarm calls, whereas M. barbatus displayed predator-avoidance behavior.",
+      "C": "Some individuals of P. saturatus displayed predator-avoidance behavior when Martinez and colleagues played T. caesius alarm calls, whereas nearly all did when M. barbatus alarm calls were played.",
+      "D": "P. saturatus displayed no reaction when Martinez and colleagues played T. caesius alarm calls, whereas M. barbatus displayed predator-avoidance behavior in response to the calls."
+    },
+    "correctAnswer": "D",
+    "explanation": "Loài M. barbatus kiếm ăn ở thảm thực vật rậm rạp (tầm nhìn hẹp hơn) phản ứng cảnh giác trước tiếng kêu báo động, trong khi loài P. saturatus ở nơi thoáng đãng (tầm nhìn rộng) không phản ứng, minh chứng mối quan hệ nghịch đảo giữa tầm nhìn và độ nhạy cảnh báo."
+  },
+  {
+    "id": "nov_v_12",
+    "questionNumber": 12,
+    "domain": "Craft and Structure",
+    "passage": "Lisbon has high pedestrian traffic, but simply replicating a feature of Lisbon associated with walkability-e.g., its high number of relatively short blocks may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals' decision-making about whether to walk is insufficiently robust: some studies emphasize the role of neighborhood type, others the role of individual physical fitness, and so on, but walking decisions are made in complex contexts in which multiple conditions and needs inform individuals' choices.",
+    "question": "Which choice best describes the function of the references to \"neighborhood type\" and \"individual physical fitness\" in the text as a whole?",
+    "options": {
+      "A": "They are examples of factors that studies suggest are important in people's decision-making about walking but that the text claims most people rarely consider when making walking decisions.",
+      "B": "They represent factors that have been identified as important influences on walking decisions but that the text suggests are merely some of the many factors that may contribute to people's decision-making about walking.",
+      "C": "They illustrate factors that researchers believe people consider when making walking decisions in most contexts but that the text argues are unique to walking decisions made by people in Lisbon.",
+      "D": "They identify factors that Alfonzo argues have been overemphasized in studies of walking decision-making but that the text asserts are relevant to most people's walking decisions."
+    },
+    "correctAnswer": "B",
+    "explanation": "Hai yếu tố này được viện dẫn như những khía cạnh từng được nghiên cứu riêng lẻ xem xét, nhưng tác giả nhấn mạnh chúng chỉ là một phần nhỏ trong số vô vàn yếu tố chi phối hành vi đi bộ."
+  },
+  {
+    "id": "nov_v_13",
+    "questionNumber": 13,
+    "domain": "Information and Ideas",
+    "passage": "For its 1974 work Instant Mural, the Chicano art collective Asco taped members Patssi Valdez and Humberto Sandoval to an outdoor wall in East Los Angeles. The work is manifestly a commentary on constraint, but many critics focus on Valdez and the social constraints women faced at the time, which is understandable but leaves the presence of Valdez's male collaborator Sandoval unexplained. We should instead consider that in 1974, the art establishment's recognition of Chicano artists was (and had long been) restricted to sociohistorical muralists, leaving nonmuralist Chicano artists like Asco's members struggling to even exhibit their work; attending to this context opens an interpretation that accounts for all the evidence, allowing us to conclude that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "while Valdez's presence in Instant Mural represents the social constraints placed on women at the time, Sandoval's presence represents Chicano muralists' frustration at their lack of recognition by the art establishment.",
+      "B": "the main subject of Instant Mural is female Chicano artists' experience of being doubly constrained by gender-role expectations and the art establishment's marginalization of certain types of art.",
+      "C": "Instant Mural is best understood not as a critique of the social constraints placed on women but rather as a critique of sociohistorical muralists' depictions of Chicano culture.",
+      "D": "Instant Mural is a reflection on the constraining aesthetic expectations placed on Chicano artists in general rather than on the social constraints placed on women specifically."
+    },
+    "correctAnswer": "D",
+    "explanation": "Sự xuất hiện của cả thành viên nam và nữ trong bối cảnh các nghệ sĩ Chicano phi bích họa bị giới nghệ thuật phớt lờ cho thấy tác phẩm phản ánh sự gò bó về thẩm mỹ chung lên toàn thể nghệ sĩ Chicano."
+  },
+  {
+    "id": "nov_v_14",
+    "questionNumber": 14,
+    "domain": "Information and Ideas",
+    "passage": "As complex life cycle parasites, Anisakis sp. and Capillaria parophrysi require multiple host species throughout their development. Extrapolating from parasite counts on walleye pollock and seven other fish species collected from Puget Sound from 1880 to 2019, Chelsea Wood et al. found that the abundance of three-host parasites, such as Anisakis sp., negatively correlated with rising average annual sea temperatures, while the abundance of two-host parasites, such as C. parophrysi, was largely stable. Noting that fish and other marine vertebrates are especially vulnerable to climate change, Wood et al. observed that all three-host parasites in the study depend on at least two vertebrate species, while all two-host parasites depend on only one, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the population size and density of the eight fish species examined in the study were likely largely unaffected by rising sea temperatures.",
+      "B": "although Anisakis sp. and C. parophrysi both require walleye pollock as a host, C. parophrysi was more adversely affected by warming-driven changes in the walleye pollock population than Anisakis sp. was.",
+      "C": "a parasite's sensitivity to warming-induced population changes among Puget Sound vertebrates may be positively correlated with the number of unique vertebrate species it depends on throughout its life cycle.",
+      "D": "warming-induced population changes among Puget Sound vertebrates may have suppressed some parasite populations, but there were no changes among the eight studied host species that affected two-host parasite abundance."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ký sinh trùng cần từ 2 vật chủ có xương sống trở lên suy giảm số lượng rõ rệt khi nước biển ấm lên, chứng tỏ độ nhạy cảm của ký sinh trùng tỷ lệ thuận với số lượng loài có xương sống mà nó lệ thuộc."
+  },
+  {
+    "id": "nov_v_15",
+    "questionNumber": 15,
+    "domain": "Information and Ideas",
+    "passage": "An analysis by Josette Elayi and colleagues of coins minted in Sidon in the fifth and fourth centuries BCE reveals a change in their composition over time. While a coin from circa 450 BCE contains about 98% silver and 1% copper, a coin from 367 BCE (the end of Baʻalšillem II's reign) contains 74.2% silver and 24.7% copper, giving it a relatively yellowish appearance that traders would have noticed. Because coins with a silver content below 80% were widely considered unsuitable for trade, Elayi et al. speculate that a crisis in confidence in the currency occurred in Sidon around 367 BCE, which was likely relieved despite Sidon's persistent oppressive financial obligations as a result of Ba'alšillem II's successor 'Abd'aštart I's decision to",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "keep the amount of silver in Sidonian coins consistent with that in coins minted in 367 BCE but decrease their weight.",
+      "B": "proclaim that the percentage of silver in coins suitable for trade would be raised to a threshold higher than 80%.",
+      "C": "fund the mining of some copper deposits that were not available to Baʻalšillem II.",
+      "D": "begin minting heavier coins with a proportion of silver to copper similar to that in coins minted in 367 BCE."
+    },
+    "correctAnswer": "A",
+    "explanation": "Bằng cách giảm trọng lượng tổng thể của đồng xu trong khi giữ nguyên lượng bạc tuyệt đối, tỷ lệ phần trăm bạc trong hợp kim được tăng trở lại ngưỡng chấp nhận cho giao thương mà không gây tốn kém thêm bạc."
+  },
+  {
+    "id": "nov_v_16",
+    "questionNumber": 16,
+    "domain": "Information and Ideas",
+    "passage": "Meredith F. Protas and colleagues have explored how convergent evolution-a phenomenon that occurs when the same trait evolves independently in two reproductively separate lineages can result from a genetic mechanism shared by both lineages. Meanwhile, Cynthia C. Steiner and colleagues have investigated how convergence occurs through different genetic mechanisms, but the relative prevalence of convergence through shared and different genetic processes is still poorly understood. This motivated biologists Delbert A. Green II and Cassandra G. Extavour to evaluate both types of convergence via a single study for their 2012 paper.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Green and Extavour's study was conducted using data from the studies by Protas and colleagues and Steiner and colleagues.",
+      "B": "Green and Extavour's study addresses convergent evolution more comprehensively than the studies by Protas and colleagues and Steiner and colleagues did.",
+      "C": "Both the study by Protas and colleagues and that by Green and Extavour compare convergence through shared genetic mechanisms to convergence through different genetic mechanisms.",
+      "D": "Prior to Green and Extavour's study, convergent evolution was assumed to require a shared genetic mechanism between two lineages that share the trait."
+    },
+    "correctAnswer": "B",
+    "explanation": "Trong khi hai nghiên cứu trước chỉ khảo sát riêng rẽ cơ chế di truyền tương đồng hoặc khác biệt, nghiên cứu của Green và Extavour đánh giá đồng thời cả hai loại hình hội tụ trong cùng một công trình."
+  },
+  {
+    "id": "nov_v_17",
+    "questionNumber": 17,
+    "domain": "Information and Ideas",
+    "passage": "Periods of subfreezing temperatures in Alaska have been growing shorter in response to climate warming, potentially enabling increased carbon dioxide (CO2) absorption through greater productivity of creeping dogwood (Cornus canadensis) plants and other vegetation, but also potentially enabling increased CO2 output through greater heterotrophic respiration (CO2 generated by the activity of soil microorganisms). Hydrologist Yonghong Yi and her colleagues developed a model incorporating numerous inputs years of solar radiation and snow cover data among them to evaluate the effects of warming on the CO2 balance in Alaska, concluding that net CO2 output is likely to increase if warming hastens spring snow melt.",
+    "question": "Which finding, if true, would most directly support the researchers' conclusion?",
+    "options": {
+      "A": "Early snow melt reduces the amount of soil moisture available for the growth of plant species such as C. canadensis, and it raises the rate of heterotrophic respiration.",
+      "B": "Early snow melt extends the period in which plant species such as C. canadensis can absorb CO2 but has no effect on the rate of heterotrophic respiration.",
+      "C": "Early snow melt slows the growth of plant species such as C. canadensis by reducing soil insulation, and it suppresses heterotrophic respiration.",
+      "D": "Early snow melt amplifies the effect of solar radiation on the growth of plant species such as C. canadensis and on the rate of heterotrophic respiration."
+    },
+    "correctAnswer": "A",
+    "explanation": "Tuyết tan sớm làm giảm độ ẩm đất (kìm hãm thực vật hấp thụ CO2) và thúc đẩy vi sinh vật giải phóng CO2, trực tiếp dẫn đến việc tăng lượng phát thải CO2 ròng."
+  },
+  {
+    "id": "nov_v_18",
+    "questionNumber": 18,
+    "domain": "Information and Ideas",
+    "passage": "Why do some people with high incomes vote for politicians supporting higher taxes on those with high incomes like themselves? Economists Benjamin Enke et al. propose that values are a luxury good: that is, the higher one's income, the more weight one has the liberty to assign to one's values when voting. Thus, Enke et al. suggest that although the behavior of high-income earners who advocate for higher taxes may seem counterintuitive, such people likely do so because they feel enabled by their economic security to take a stance they think is morally correct.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "A group of economists asserts that people with relatively high incomes are consequently enabled to take certain considerations into account when voting.",
+      "B": "A team of economists finds that people who vote for higher taxes on those with high incomes are likely to think their moral values coincide with their material interests.",
+      "C": "According to a group of economists, politicians who support higher taxes on those with high incomes must convince a sufficient number of people with such incomes to vote against their material interest if the politicians are to be elected.",
+      "D": "According to a team of economists, the higher a voter's income, the more likely that voter's values are to conflict with their material interests."
+    },
+    "correctAnswer": "A",
+    "explanation": "Trọng tâm bài viết nêu luận điểm rằng mức thu nhập cao tạo điều kiện cho cử tri ưu tiên các giá trị đạo đức phi vật chất khi đưa ra quyết định bỏ phiếu."
+  },
+  {
+    "id": "nov_v_19",
+    "questionNumber": 19,
+    "domain": "Information and Ideas",
+    "passage": "The Socio-Economic Panel (SOEP) is a longitudinal study surveying approximately 12,000 individuals in Germany to glean extended trends in childhood development. To carry out the necessary sampling of the population over many years, SOEP needs extensive financial support, but this method provides valuable insights into causal relationships. However, when questions of causation are irrelevant, as with a transportation study seeking only to reveal the number of people per day who use a city's public transportation system, longitudinal methods are unnecessary, and so",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the expense of SOEP is likely greater than the cost of longitudinal studies of transportation.",
+      "B": "conclusions drawn from SOEP are likely to be more authoritative than those from the transportation study.",
+      "C": "longitudinal methods are suitable for studies of childhood development but ought to be avoided for those of transportation.",
+      "D": "the success of the transportation study likely requires significantly less financial outlay than that needed for SOEP."
+    },
+    "correctAnswer": "D",
+    "explanation": "Nghiên cứu giao thông chỉ cần đếm số lượt người mà không cần theo dõi nguyên nhân dài hạn tốn kém như SOEP, do đó kinh phí thực hiện nghiên cứu giao thông sẽ ít hơn đáng kể."
+  },
+  {
+    "id": "nov_v_20",
+    "questionNumber": 20,
+    "domain": "Information and Ideas",
+    "passage": "Optimal foraging theory (OFT) holds that animals' foraging behaviors reflect cost-benefit trade-offs that vary by species and with dynamic ecological circumstances. One such circumstance is lunar intensity, which Nathan Upham and John Hafner found to be negatively associated with foraging by desert kangaroo rats but Eduardo Fernández-Duque and colleagues found to be positively associated with foraging by Azara's night monkeys. This discrepancy is explicable in terms of OFT: the monkeys' greater reliance on vision means that higher lunar intensity benefits them more than it benefits the kangaroo rats.",
+    "question": "According to the text, the difference between Upham and Hafner's findings and Fernández-Duque and colleagues' findings can be attributed to which difference between desert kangaroo rats and Azara's night monkeys?",
+    "options": {
+      "A": "The kangaroo rats decrease their foraging activity as lunar intensity increases, whereas the monkeys increase their foraging activity.",
+      "B": "The kangaroo rats are more vulnerable to predators than the monkeys are.",
+      "C": "The kangaroo rats are less reliant on vision than the monkeys are.",
+      "D": "The kangaroo rats encounter different levels of lunar intensity than the monkeys do."
+    },
+    "correctAnswer": "C",
+    "explanation": "Khỉ đêm dựa nhiều vào thị giác hơn khi kiếm ăn, đồng nghĩa với việc chuột kangaroo sa mạc ít phụ thuộc vào thị giác hơn so với khỉ đêm."
+  },
+  {
+    "id": "nov_v_21",
+    "questionNumber": 21,
+    "domain": "Information and Ideas",
+    "passage": "Data collected by the Mars rover Curiosity at the Gale Crater's Murray Formation are suggestive of hydrological deposition of sediment in the distant past. To characterize the nature of the depositional environment, Frances Rivera-Hernández et al. analyzed the grain size of Murray Formation sediment, finding that although there are intervals of coarse grains, most of the sediment consists of fine grains that show signs of cracking due to episodic desiccation. Rivera-Hernández et al. concluded that the coarse grains are sandstone, which tends to be deposited by flowing water, whereas the fine grains are mudstone, which is slowly deposited by settling out of suspension in low-flow water, leading the researchers to posit that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "a lake existed at the Murray Formation for a prolonged period, though the lake occasionally experienced drying and there were periods in which one or more streams were present.",
+      "B": "a stream-fed lake was present at the Murray Formation for an extended period, and although the streams experienced occasional drying, the lake did not.",
+      "C": "one or more streams existed at the Murray Formation for an extended period until being replaced by a lake that persisted for only a brief period before permanently drying.",
+      "D": "although the area of the Murray Formation experienced a prolonged period of dryness that prevented a lake from forming, water flowing from a distant source was present."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đá bùn hạt mịn chiếm phần lớn chứng tỏ có hồ nước tồn tại lâu dài (từng có đợt khô hạn tạo vết nứt), xen kẽ đá sa thạch hạt thô hình thành do các dòng suối chảy qua."
+  },
+  {
+    "id": "nov_v_22",
+    "questionNumber": 22,
+    "domain": "Information and Ideas",
+    "passage": "Elaine Ostrander led an international collaboration with Greger Larson and other researchers to study the evolutionary history of size differences in modern dogs, including very small breeds such as Pomeranians. The researchers determined that among dogs as a whole, there are many different variations of the gene that regulates the production of IGF-1 (insulin growth factor 1), a hormone that promotes growth. After reviewing the study, a student concludes that these variations must account for the observed variance in body size among dog breeds.",
+    "question": "Which quotation from a scientist not involved in the study would most directly undermine the student's conclusion?",
+    "options": {
+      "A": "\"The researchers' conclusions regarding the IGF-1 gene may not apply to other species given that dogs vary in size more than any other group of land mammals does.\"",
+      "B": "\"The gene that regulates IGF-1 production is one of multiple genes known to affect the size of dogs.\"",
+      "C": "\"In fact, only one-third of the most prevalent dog breeds carry the same variant of the gene regulating IGF-1 production.\"",
+      "D": "\"Variations of the IGF-1 gene not only result in substantial body size variance among dog breeds and may influence additional characteristics as well.\""
+    },
+    "correctAnswer": "B",
+    "explanation": "Luận điểm của học sinh cho rằng biến thể gen IGF-1 quyết định toàn bộ sự khác biệt về kích thước bị suy yếu khi có thêm nhiều gen khác cùng tác động lên kích cỡ của chó."
+  },
+  {
+    "id": "nov_v_23",
+    "questionNumber": 23,
+    "domain": "Information and Ideas",
+    "passage": "Zooarchaeologist Ophélie Lebrasseur and her team examined a fox skeleton discovered in 1991 at an archaeological site alongside artifacts of human habitation (like spear points) in central Argentina. Lebrasseur et al. determined that the fox was Dusicyon avus, an extinct species resembling a jackal, and radiocarbon dating placed the fox at the site at the same time as human inhabitants. (Indeed, the inhabitants may have deliberately buried the fox.) In addition, while wild foxes have a diet entirely made of meat, isotopic signatures of the skeleton's teeth indicated that the fox's diet, like that of the humans, was partly composed of plant material. Lebrasseur et al. therefore concluded that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the humans who were alive at the same time as the fox most likely ate more meat than the fox did.",
+      "B": "the fox had a diet more similar to that of jackals than to that of wild foxes.",
+      "C": "the humans who were alive at the same time as the fox hunted using the spears whose points were also found at the site.",
+      "D": "the fox was a companion animal of the humans who inhabited the site at the same time."
+    },
+    "correctAnswer": "D",
+    "explanation": "Cáo được con người chôn cất và ăn chế độ có thực vật tương đồng với người cổ đại cho thấy nó được nuôi dưỡng như một loài vật gắn bó với con người."
+  },
+  {
+    "id": "nov_v_24",
+    "questionNumber": 24,
+    "domain": "Information and Ideas",
+    "passage": "In Armenia, use of solid fuel (e.g., coal, wood) as a share of total household fuel use fell by approximately 90 percent between 2000 and 2018. Such shifts are typically explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high-technology fuels displace solid fuels as incomes rise). Boukary Ouedraogo's study of fuel use in Burkina Faso shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the frequency with which certain dishes are cooked, influenced decisions.",
+    "question": "Based on the text, the author would most likely agree with which statement about household income?",
+    "options": {
+      "A": "It constrains the amount of fuel households use but not the type of fuel they use.",
+      "B": "It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+      "C": "It can explain some but not all of the differences in fuel choice across households.",
+      "D": "It is often said to influence household fuel choice but actually does not."
+    },
+    "correctAnswer": "C",
+    "explanation": "Tác giả thừa nhận thu nhập có chi phối việc lựa chọn nhiên liệu nhưng mô hình bậc thang năng lượng quá đơn giản hóa vì còn nhiều yếu tố văn hóa ẩm thực khác cùng tác động."
+  },
+  {
+    "id": "nov_v_25",
+    "questionNumber": 25,
+    "domain": "Craft and Structure",
+    "passage": "Asteroid 6478 Gault has experienced intermittent mass loss since at least 2013, but in contrast to some other asteroids with repeated mass-loss episodes, 6478 Gault has not lost mass at its perihelion (the closest point of its orbit to the Sun), and thus the loss is not attributable to solar energy-driven ice vaporization. And as Jane X. Luu et al. point out, the singular nature of impact ejection makes it untenable as an account of multiple loss episodes of similar duration over several years. Instead, Luu et al. are likely correct that 6478 Gault is shedding mass due to rotational instability.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It describes an astronomical finding, discusses competing theories about that finding that the author regards as flawed, and then describes new evidence that supports an alternative theory.",
+      "B": "It presents a scientific observation, describes a contrast between that observation and other observations, and then explains why those other observations should not be considered credible.",
+      "C": "It introduces a natural phenomenon, refutes two potential explanations for that phenomenon, and then presents a third explanation for the phenomenon that the author regards as plausible.",
+      "D": "It discusses a physical process, evaluates possible causes of that process, and then states that a persuasive account of the process has yet to be put forward."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn giới thiệu hiện tượng hao hụt khối lượng của tiểu hành tinh, lần lượt bác bỏ 2 giả thuyết (bốc hơi băng và va chạm), sau đó ủng hộ giả thuyết thứ ba (mất ổn định tự quay)."
+  },
+  {
+    "id": "nov_v_26",
+    "questionNumber": 26,
+    "domain": "Information and Ideas",
+    "passage": "Text 1\nA conservation group representing 11 tribal nations in the Great Lakes region reported to various state and federal natural resources agencies operating in the region that the firefly (waawaatesi in the Ojibwe language) will likely fare significantly worse than the black bear (makwa in Ojibwe) due to rising temperatures over the next 50 years. This collaborative approach has helped build trust between government and tribal groups, which will likely improve the quality of any joint conservation projects.\n\nText 2\nState and federal natural resources agencies are increasingly incorporating traditional ecological knowledge from tribal groups in the agencies' plans to address threats to natural resources due to increasing temperatures. This approach has helped build positive relationships between tribal groups and these agencies and furthermore tends to lead to better conservation outcomes.",
+    "question": "Based on the texts, both authors would most likely agree with which statement?",
+    "options": {
+      "A": "Natural resources conservation projects are likely to benefit from collaboration between tribal and government groups.",
+      "B": "A collaborative approach to conservation is likely to help reduce the predicted temperature increases in the Great Lakes region.",
+      "C": "In the Great Lakes region, it is more important to focus conservation efforts on the firefly than it is to focus on the black bear.",
+      "D": "In the Great Lakes region, conservation efforts focused on the firefly are likely to be more effective than those focused on the black bear."
+    },
+    "correctAnswer": "A",
+    "explanation": "Cả hai tác giả đều đi đến kết luận rằng sự phối hợp giữa các cộng đồng bộ lạc bản địa và các cơ quan quản lý nhà nước đem lại kết quả tích cực cho các dự án bảo tồn."
+  },
+  {
+    "id": "nov_v_27",
+    "questionNumber": 27,
+    "domain": "Information and Ideas",
+    "passage": "Over 600 languages are spoken in New York City in addition to English one can find Bambara spoken in the neighborhood of Kingsbridge, for example, or Ghale in Jackson Heights. English is the most common, with 65% of New Yorkers speaking it at home; Spanish is second, at 20%. A linguist hypothesizes that a Spanish dialect a variation differing from the parent language in some of its vocabulary, pronunciation, and grammar-has developed in New York City, partly due to its linguistic interaction with English. Previous research shows that younger speakers of nonmajority languages are more likely to borrow words from the majority language of a region than are older speakers. If the linguist's hypothesis is correct, it is therefore likely to be the case that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the proportion of younger speakers who use a Spanish dialect specific to New York City is higher in neighborhoods where many languages are spoken than in neighborhoods where Spanish and English predominate.",
+      "B": "both the number of languages spoken in New York City and the number of dialects of each of those languages will increase over time.",
+      "C": "Spanish used by younger speakers in New York City tends to have more words borrowed from other nonmajority languages than borrowed from English.",
+      "D": "younger speakers of Spanish in New York City would be more likely to use a dialect specific to New York City than older speakers living in the same neighborhood would be."
+    },
+    "correctAnswer": "D",
+    "explanation": "Vì phương ngữ tiếng Tây Ban Nha mới này hình thành do tiếp xúc và vay mượn tiếng Anh, và người trẻ tuổi có xu hướng vay mượn từ ngữ nhiều hơn người lớn tuổi, nên người trẻ sẽ sử dụng phương ngữ đặc thù này nhiều hơn."
+  },
+  {
+    "id": "nov_v_28",
+    "questionNumber": 28,
+    "domain": "Information and Ideas",
+    "passage": "To understand how temperature change affects microorganism-mediated cycling of soil nutrients in alpine ecosystems, Eva Kaštovská et al. collected plant-soil cores in the Tatra Mountains at elevations around 2,100 meters and transplanted them to elevations of 1,700-1,400 meters, where the mean air temperature was warmer by 2°C. Microorganism-mediated nutrient cycling was accelerated in the transplanted cores; crucially, microorganism community composition was unchanged, allowing Kaštovská et al. to attribute the acceleration to temperature-induced increases in microorganism activity.",
+    "question": "It can most reasonably be inferred from the text that the finding about the microorganism community composition was important for which reason?",
+    "options": {
+      "A": "It provided preliminary evidence that microorganism-mediated nutrient cycling was accelerated in the transplanted cores.",
+      "B": "It suggested that temperature-induced changes in microorganism activity may be occurring at increasingly high elevations.",
+      "C": "It ruled out a potential alternative explanation for the acceleration in microorganism-mediated nutrient cycling.",
+      "D": "It demonstrated that microorganism activity levels in the plant-soil cores varied depending on which microorganisms comprised the community."
+    },
+    "correctAnswer": "C",
+    "explanation": "Việc giữ nguyên thành phần các loài vi sinh vật giúp loại trừ khả năng chu trình dinh dưỡng tăng là do xuất hiện các chủng loài mới chứ không phải do nhiệt độ làm tăng hoạt tính."
+  },
+  {
+    "id": "nov_v_29",
+    "questionNumber": 29,
+    "domain": "Information and Ideas",
+    "passage": "Text 1\nIn western Arkansas, many buildings and other structures rest on soil that is expansive, meaning that it swells or shrinks as its moisture level changes. Civil engineer Jay X. Wang has noted that the effects of expansive soil appear slowly in the form of gradually growing cracks in foundations, walls, and pavements. Because these effects are incremental and can generally be repaired (though at some cost), structures in western Arkansas are typically not built to resist them.\n\nText 2\nIn a 2021 study, Rubayet Bin Mostafiz and colleagues calculated that in the state of Louisiana alone, the annual cost of damage caused by expansive soils reaches nearly $90 million. But they note that this damage can be mitigated: building vapor barriers between structural foundations and the soil can significantly reduce the effects of soil swelling and shrinking.",
+    "question": "Based on the texts, how would Rubayet Bin Mostafiz and colleagues (Text 2) most likely respond to the information presented in Text 1?",
+    "options": {
+      "A": "They would encourage engineers in western Arkansas to insert vapor barriers between new structures' foundations and the surrounding soil.",
+      "B": "They would recommend that engineers in western Arkansas measure the moisture level in the soil beneath proposed structures before beginning construction.",
+      "C": "They would argue that engineers in western Arkansas have misjudged the effectiveness of the techniques they use to reduce the effects of expansive soil.",
+      "D": "They would suggest that engineers in western Arkansas consider the cost of reinforcing the vapor barriers between existing structural foundations and the soil."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nhóm tác giả ở Văn bản 2 chỉ ra việc lắp màng ngăn hơi ẩm giảm đáng kể thiệt hại nền đất giãn nở, do đó họ sẽ khuyến nghị các kỹ sư ở Arkansas áp dụng giải pháp này cho các công trình mới."
+  },
+  {
+    "id": "nov_v_30",
+    "questionNumber": 30,
+    "domain": "Information and Ideas",
+    "passage": "Arthurian legends (tales related to the character of King Arthur) derive from many sources, such as Annales Cambriae, composed around 970, and the Mabinogion from the 12th and 13th centuries. One of the most significant sources, Geoffrey of Monmouth's History of the Kings of Britain, was written in Latin in the 1130s; some material from it was later adapted by the Norman poet Wace into the Roman de Brut in 1155. But while no source before 1155 includes references to the famous Round Table at which Arthur's knights assembled, both the Roman de Brut and Sir Thomas Malory's 15th-century compilation of Arthurian legends, Le Morte d'Arthur, do. It can therefore be inferred that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "Malory did not use Annales Cambriae as a source for the information he presented about the Round Table.",
+      "B": "Geoffrey of Monmouth's accounts of Arthurian legends in his History are more similar overall in content to the accounts in the Mabinogion than they are to the accounts in Roman de Brut.",
+      "C": "Geoffrey of Monmouth was unaware of stories of the Round Table when composing his History, though historians know that works containing such stories were available to him.",
+      "D": "Le Morte d'Arthur is more historically accurate than Geoffrey of Monmouth's History, because the Mabinogion had not been written when Geoffrey composed his History."
+    },
+    "correctAnswer": "A",
+    "explanation": "Tác phẩm Annales Cambriae ra đời trước năm 1155 nên không hề chứa bất kỳ ghi chép nào về Chiếc Bàn Tròn, vì vậy Malory không thể lấy tư liệu về Bàn Tròn từ nguồn này."
+  },
+  {
+    "id": "nov_v_31",
+    "questionNumber": 31,
+    "domain": "Information and Ideas",
+    "passage": "Text 1\nIn 2017 Buenaventura, Colombia, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among residents of the city as well as tourists who visit. It's obvious that the selection of Buenaventura by UNESCO has brought awareness to local recipes, cooking practices, and chefs and has provided a boost to the city's tourism industry.\n\nText 2\nMany people in Buenaventura's restaurant industry hoped that food tourism would increase after the city was chosen as a City of Gastronomy in 2017. However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully from being named a City of Gastronomy. Without an intentional effort to promote the city's food scene, many current and potential visitors to Buenaventura may not even be aware that it's home to uniquely delicious food.",
+    "question": "Based on the texts, what would the author of Text 2 most likely say in response to the underlined claim in Text 1?",
+    "options": {
+      "A": "A city that UNESCO officially names as a City of Gastronomy should still make deliberate efforts to attract visitors in order to boost tourism.",
+      "B": "Many people worked together to help Buenaventura be recognized by UNESCO, but chefs deserve the most credit for Buenaventura's selection as a City of Gastronomy.",
+      "C": "There are other benefits to being named a UNESCO City of Gastronomy besides increased tourism.",
+      "D": "The naming of Buenaventura as a City of Gastronomy was long overdue, given the city's delicious food."
+    },
+    "correctAnswer": "A",
+    "explanation": "Tác giả Văn bản 2 cho rằng danh hiệu quốc tế không tự động đem lại khách du lịch nếu thiếu các chiến dịch quảng bá chủ động và có chủ đích."
+  },
+  {
+    "id": "nov_v_32",
+    "questionNumber": 32,
+    "domain": "Information and Ideas",
+    "passage": "Rafael Núñez and colleagues studied how members of the Yupno, an Indigenous group in Papua New Guinea, conceptualize time. The researchers recorded Yupno speakers explaining certain temporal words and phrases, such as abjuk, a present-oriented expression that translates to \"now,\" and coded each speaker's manual gestures. Previous research has found a tendency in many cultures to make temporal distinctions using spatial concepts and gestures, particularly along egocentric axes (i.e., relative to the orientation of the speaker): for instance, English speakers often refer to the front/back axis to describe events in time. In an anthropology paper, a student claims that the tendency toward ego-based conceptualizations of time is universal.",
+    "question": "Which finding, if true, would most directly weaken the student's claim?",
+    "options": {
+      "A": "Some Yupno grammatical structures used when talking about time are also used in English.",
+      "B": "When Yupno speakers who are outdoors use gestures to refer to the past, they point downhill from the current location regardless of which way they are facing.",
+      "C": "A Yupno speaker points in opposite directions when indicating a past event versus a future event.",
+      "D": "Although Yupno speakers and English speakers both use gestures to indicate orientation in time, Yupno speakers tend to use fewer gestures overall when speaking than English speakers do."
+    },
+    "correctAnswer": "B",
+    "explanation": "Việc người Yupno chỉ về phía chân đồi bất kể hướng mặt chứng minh nhận thức thời gian của họ gắn với địa hình tự nhiên bên ngoài chứ không dựa vào vị trí cơ thể của cá nhân."
+  },
+  {
+    "id": "nov_v_33",
+    "questionNumber": 33,
+    "domain": "Craft and Structure",
+    "passage": "At over a thousand pages across two volumes, The Fifty-Year Mission, compiled by Edward Gross and Mark A. Altman, is presented as the \"complete, uncensored, unauthorized oral history\" as told by the people behind the media franchise Star Trek. The work aspires to be comprehensive by, for example, including accounts from cast and crew members of every Star Trek television series and film to date. But while The Fifty-Year Mission is clearly a unique and valuable resource, it has a shortcoming common among oral histories: it lacks a clear authorial point of view that could otherwise unite the various accounts into a cohesive whole.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The Fifty-Year Mission includes more accounts from people involved with Star Trek television shows than it does from people involved with Star Trek films.",
+      "B": "The compilers of The Fifty-Year Mission had lofty goals for their oral history of the Star Trek franchise, but the published work lacks information about many key events in the franchise's history.",
+      "C": "The large amount of material compiled into The Fifty-Year Mission is surprising given that many of the people involved in the Star Trek franchise did not participate in the oral history project.",
+      "D": "The Fifty-Year Mission represents a worthwhile attempt to thoroughly recount the history of the franchise, but its approach has an important limitation."
+    },
+    "correctAnswer": "D",
+    "explanation": "Bài viết khẳng định bộ sách là một công trình lịch sử truyền miệng đồ sộ, có giá trị nhưng tồn tại khuyết điểm lớn là thiếu góc nhìn tác giả gắn kết."
+  },
+  {
+    "id": "nov_v_34",
+    "questionNumber": 34,
+    "domain": "Craft and Structure",
+    "passage": "Eighteenth-century economist Adam Smith is famed for his metaphor of the invisible hand, which he putatively used to illustrate a robust model of how individuals produce aggregate benefits by pursuing their own economic interests. Note \"putatively\": as Gavin Kennedy has shown, Smith deploys this metaphor only once in his economic writings to make a narrow point about the then-dominant economic theory of mercantilism and it was largely ignored until some twentieth-century economists eager to secure an intellectual pedigree for their views elevated it to a fully-fledged paradigm.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The reputation of Smith's metaphor of the invisible hand is not due to the importance of the metaphor in Smith's work but rather to the promotion of the metaphor by some later economists for their own ends.",
+      "B": "Smith's metaphor of the invisible hand has been interpreted as a model of how individuals acting in their own interest produce aggregate benefits, but it was intended as a subtle critique of the economic theory of mercantilism.",
+      "C": "Some twentieth-century economists attributed to Smith's metaphor of the invisible hand a significance it does not have in Smith's work, but it is nevertheless a useful model of how individuals produce aggregate benefits by pursuing their own economic interests.",
+      "D": "Although Smith is famed for his metaphor of the invisible hand, the metaphor was largely ignored until economists in the twentieth century came to realize that the metaphor was a robust model that anticipated their own views."
+    },
+    "correctAnswer": "A",
+    "explanation": "Danh tiếng của ẩn dụ 'bàn tay vô hình' không xuất phát từ vai trò thực tế của nó trong trước tác của Smith, mà do các nhà kinh tế thế kỷ 20 đề cao nhằm phục vụ mục đích học thuật của họ."
+  },
+  {
+    "id": "nov_v_35",
+    "questionNumber": 35,
+    "domain": "Information and Ideas",
+    "passage": "Biologists Rebecca M. Calisi-Rodríguez and George E. Bentley examined research on white-throated sparrows and degus, both of which have been studied in the laboratory as well as in the wild, to see how studies' settings might have affected their results. Lab studies are useful because they make it easy to control important variables, but white-throated sparrows' surroundings can significantly affect their hormone levels. Therefore, it's not altogether surprising that when Calisi-Rodríguez and Bentley examined studies of white-throated sparrows, they found that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "hormone levels were higher in wild males than in captive male degus.",
+      "B": "captive sparrows and wild sparrows usually exhibited very similar hormone levels.",
+      "C": "significant differences in hormone levels between individuals were found for both captive sparrows and wild sparrows.",
+      "D": "baseline levels of the hormone corticosterone are higher in captive sparrows than they are in wild sparrows."
+    },
+    "correctAnswer": "D",
+    "explanation": "Vì môi trường sống tác động mạnh tới nồng độ hormone của chim sẻ, việc chim sẻ nuôi nhốt trong phòng thí nghiệm có nồng độ hormone stress (corticosterone) cơ bản khác biệt (cao hơn) chim hoang dã là điều hoàn toàn hợp lý."
+  },
+  {
+    "id": "nov_v_36",
+    "questionNumber": 36,
+    "domain": "Craft and Structure",
+    "passage": "The following text is from Anthony Trollope's 1855 novel The Warden. The narrator is describing a rectory, the residence of a clergyperson.\n\nThere was an air of heaviness about the rooms which might have been avoided without any sacrifice of propriety; colours might have been better chosen and lights more perfectly diffused: but perhaps in doing so the thorough clerical aspect of the whole might have been somewhat marred; at any rate, it was not without ample consideration that those thick, dark, costly carpets were put down; those embossed, but sombre [wallpapers] hung up; those heavy curtains draped so as to half exclude the light of the sun.",
+    "question": "What does the text most strongly suggest about the rooms in the rectory?",
+    "options": {
+      "A": "They are meant to feel comfortable but are in reality uninviting.",
+      "B": "They have been furnished with the intention of maintaining a sense of appropriateness.",
+      "C": "They are decorated in a style that strikes the narrator as too extravagant.",
+      "D": "They have many decorations that the narrator finds good looking, but they are not particularly practical."
+    },
+    "correctAnswer": "B",
+    "explanation": "Các phòng ốc trong giáo xứ được bài trí trầm tối nhằm mục đích giữ gìn sự trang nghiêm và chuẩn mực đạo đức phù hợp với giới tăng lữ."
+  },
+  {
+    "id": "nov_v_37",
+    "questionNumber": 37,
+    "domain": "Craft and Structure",
+    "passage": "Text 1\nIsaac Asimov, author of Robots and Empire and I, Robot, is highly regarded despite his mediocre writing style. His prose is workmanlike; his characters are flat and discuss ideas rather than emotions. That his work is enjoyable despite this is a testament to his prodigious imagination even if people read his books only for the ideas, they will have plenty to consider.\n\nText 2\nAsimov is critiqued for his style, but it is wrong to fault a writer for failing to do what he never intended to do. For example, although most of his novel Foundation consists of people discussing science and politics and we find out little about his characters' lives, Asimov wanted to convey the vast sweep of human history over centuries, and one of his points is that at such a timescale, individuals don't matter. Thus his lack of characterization is central to his thematic aims.",
+    "question": "Based on the texts, how would the author of Text 2 most likely respond to the description of Asimov's characters in the underlined portion of Text 1?",
+    "options": {
+      "A": "The flatness of Asimov's characters is a feature of Robots and Empire and I, Robot but not of Foundation.",
+      "B": "Asimov's characterizations would have been more believable if his writing had discussed fewer ideas.",
+      "C": "Asimov's characterizations would have been richer if he had possessed a deeper understanding of history.",
+      "D": "The flatness of Asimov's characters should not necessarily be considered a flaw in his writings."
+    },
+    "correctAnswer": "D",
+    "explanation": "Tác giả Văn bản 2 cho rằng sự đơn điệu của nhân vật là chủ ý nghệ thuật có tính toán nhằm phục vụ chủ đề dòng chảy lịch sử vĩ mô, do đó không nên xem đây là khuyết điểm."
+  },
+  {
+    "id": "nov_v_38",
+    "questionNumber": 38,
+    "domain": "Information and Ideas",
+    "passage": "Hypothesizing that lullabies, characterized by their slow tempos, are universally calming to infants, Constance M. Bainbridge and colleagues played a lullaby sung in the Scottish Gaelic language and a non-lullaby sung in the Seri language to a group of infants. The team found that the infants' heart rates decreased more during the lullaby than during the non-lullaby. Since a decrease in heart rate is associated with relaxation, the team concluded that the lullaby relaxed the infants. Noting that reduced heart rate can also be associated with increased attention, one critic argues that instead, the lullaby simply attracted the infants' attention. Bainbridge and colleagues also measured pupil size, as pupils typically become larger when a stimulus captures a person's attention.",
+    "question": "Which finding, if true, would most directly weaken the critic's claim?",
+    "options": {
+      "A": "Blinking, which indicates attention, was equally frequent whether infants were listening to the song in Scottish Gaelic or the song in Seri.",
+      "B": "Neither the Scottish Gaelic language nor the melody of the traditional Scots lullaby was familiar to infants in the study.",
+      "C": "The infants' pupils were smaller when infants were listening to lullabies than when they were listening to non-lullabies.",
+      "D": "Parents of infants in the study chose the lullaby over the non-lullaby as the song they would use to calm their child."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đồng tử mở to là dấu hiệu của sự tập trung chú ý; nếu đồng tử của trẻ thu nhỏ lại khi nghe hát ru thì luận điểm cho rằng bài hát chỉ đơn thuần thu hút sự chú ý bị bác bỏ."
+  },
+  {
+    "id": "nov_v_39",
+    "questionNumber": 39,
+    "domain": "Information and Ideas",
+    "passage": "Biologist Rosanna Alegado believes that we might learn how multicellular organisms developed from single-celled ones if we understand why the single-celled organism Salpingoeca rosetta, the oldest living relative of animals, sometimes forms colonies of cells. Alegado and colleagues reviewed data from many studies of how S. rosetta responds when exposed to another type of single-celled organism, bacteria, including John P. Bowman's work with Algoriphagus ratkowskyi bacteria and Iftikhar Ahmed's work with Algoriphagus boritolerans bacteria. Alegado and colleagues concluded that both A. ratkowskyi and A. boritolerans might have played a role in the development of multicellular organisms.",
+    "question": "Which finding, if true, would most directly support Alegado and colleagues' conclusion?",
+    "options": {
+      "A": "Bowman and Ahmed found that S. rosetta tended to form colonies after bacterial exposure.",
+      "B": "Bowman found that S. rosetta tended to form colonies after bacterial exposure, but Ahmed did not.",
+      "C": "Ahmed found that S. rosetta tended to form colonies after bacterial exposure, but Bowman did not.",
+      "D": "Neither Bowman nor Ahmed found that S. rosetta tended to form colonies after bacterial exposure."
+    },
+    "correctAnswer": "A",
+    "explanation": "Cả hai nhà nghiên cứu đều nhận thấy loài đơn bào này có xu hướng kết tụ thành cụm tế bào khi tiếp xúc với hai chủng vi khuẩn, chứng minh vai trò kích thích tiến hóa đa bào của chúng."
+  },
+  {
+    "id": "nov_v_40",
+    "questionNumber": 40,
+    "domain": "Information and Ideas",
+    "passage": "Vancouver, Canada, has installed engineered structures along 75% of its shoreline to protect infrastructure from storm surges and other hazards, a practice known as shoreline hardening. To evaluate the responses of waterbirds to two types of hardening structures-riprap and bulkheads-Diann Prosser et al. surveyed waterbird communities consisting of the mallard, the common loon, and 62 other species at different sites in the Chesapeake Bay on the US East Coast. Utilizing the Index of Waterbird Community Integrity (IWCI), on which a high score corresponds to high community integrity, the researchers found that bulkheads are more strongly negatively correlated with waterbird community integrity than is riprap.",
+    "question": "Which finding, if true, would most directly illustrate the researchers' finding?",
+    "options": {
+      "A": "Waterbird communities at Curtis, a site with a high percentage of shoreline consisting of bulkheads and riprap, had lower average IWCI scores than did waterbird communities at Onancock, a site with a low percentage of shoreline consisting of bulkheads and riprap.",
+      "B": "The difference in average IWCI scores for waterbird communities at Stony and Old Road, two sites with a higher percentage of shoreline consisting of bulkheads than of riprap, was statistically insignificant.",
+      "C": "Waterbird communities at Old Road, a site with a relatively high percentage of shoreline consisting of bulkheads, had lower average IWCI scores than did waterbird communities at Miles, a site with a relatively high percentage of shoreline consisting of riprap.",
+      "D": "Waterbird communities at Curtis, a site with equal percentages of shoreline consisting of bulkheads and riprap, had higher average IWCI scores than did waterbird communities at sites with different percentages of shoreline consisting of bulkheads and riprap."
+    },
+    "correctAnswer": "C",
+    "explanation": "Khu vực có bờ kè chắn đứng (bulkheads) ghi nhận điểm toàn vẹn quần thể chim nước IWCI thấp hơn khu vực sử dụng đá xếp dốc (riprap), chứng minh tác động tiêu cực mạnh hơn của bulkheads."
+  },
+  {
+    "id": "nov_v_41",
+    "questionNumber": 41,
+    "domain": "Information and Ideas",
+    "passage": "Joel Brown and colleagues showed that high moonlight intensity inhibits the activity of the Arizona pocket mouse (Perognathus amplus), a finding explicable in terms of benefits and costs: greater lunar intensity may not enable the mice to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Though many other nocturnal mammals respond to lunar intensity variations similarly to Arizona pocket mice, Azara's night monkeys (Aotus azarae) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.",
+    "question": "Based on the text, why do Azara's night monkeys respond to high lunar intensity differently than Arizona pocket mice do?",
+    "options": {
+      "A": "In such conditions, the chance of detection by predators declines for Azara's night monkeys but rises for Arizona pocket mice.",
+      "B": "Although the risks of activity in such conditions are greater for Azara's night monkeys than they are for Arizona pocket mice, the rewards are also greater for Azara's night monkeys.",
+      "C": "In such conditions, the costs of activity are lower relative to the benefits of activity for Azara's night monkeys than they are for Arizona pocket mice.",
+      "D": "Because of their heavy reliance on visual foraging, Azara's night monkeys experience a reduction in their foraging success in such conditions, whereas Arizona pocket mice experience no change in their foraging success."
+    },
+    "correctAnswer": "C",
+    "explanation": "Thị giác tốt giúp khỉ đêm tận dụng ánh trăng để kiếm ăn hiệu quả hơn, khiến tỷ lệ lợi ích thu được cao hơn chi phí rủi ro so với loài chuột."
+  },
+  {
+    "id": "nov_v_42",
+    "questionNumber": 42,
+    "domain": "Information and Ideas",
+    "passage": "Ranking of Environmental and Sociocultural Benefits of Urban Agriculture (scale of 1 to 25; 1= highest)\n\n| Social or ecological service | Project leaders | Stakeholders | General public |\n| :--- | :---: | :---: | :---: |\n| improvement of attitudes and outlooks | 8 | 1 | 4 |\n| provision of food | 4 | 15 | 8 |\n| provision of raw materials | 22 | 25 | 15 |\n| improvement of physical health | 5 | 4 | 7 |\n| enhancement of pollination | 1 | 7 | 12 |\n\nEsther Sanyé-Mengual, Kathrin Specht, and their team surveyed three groups of people in Bologna, Italy leaders of urban agriculture projects, stakeholders in urban agriculture (e.g., food researchers and urban farming associations), and the general public to compare their views about the extent to which urban agriculture contributes to 25 social or ecological services that the team identified. The researchers used these ratings to rank the services for each group, with a conclusion that both stakeholders and the general public regard the improvement of attitudes and outlooks as an important benefit of urban agriculture.",
+    "question": "Which choice best describes data in the table that support the researchers' conclusion?",
+    "options": {
+      "A": "The improvement of physical health was ranked lower for the general public than it was for project leaders.",
+      "B": "The provision of raw materials was ranked higher for the general public than was the improvement of attitudes and outlooks.",
+      "C": "The improvement of attitudes and outlooks was ranked higher for stakeholders than it was for the general public.",
+      "D": "The improvement of attitudes and outlooks was ranked higher for the general public than were the other four services."
+    },
+    "correctAnswer": "C",
+    "explanation": "Bảng số liệu cho thấy tiêu chí cải thiện thái độ và triển vọng sống được các bên liên quan xếp hạng 1 (cao hơn công chúng vốn xếp hạng 4), minh chứng đây là lợi ích được đánh giá rất cao."
+  },
+  {
+    "id": "nov_v_43",
+    "questionNumber": 43,
+    "domain": "Information and Ideas",
+    "passage": "Many Indian snack foods, such as bhatoora and paneer pakora, acquire their flavor from being fried in oil; some are also coated in batter beforehand. Chemists Marc A. Meyers and Andrew Grazela studied the mass and heat transfer processes that occur when foods are fried in batters containing hydrocolloids, polymers that become viscous or gel-like in water. During frying, water in the food evaporates, leaving voids that oil (a pure fat) can fill. As the process continues, water from the food's center moves to the crust as long as the crust remains permeable. However, hydrocolloids can create structures in the crust that reduce the transfer of moisture out of the food's core during frying. Therefore, a food fried without a hydrocolloid batter coating will likely",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "have a more viscous crust when frying is completed than it would have if it were fried with a coating of hydrocolloid batter.",
+      "B": "have a higher fat content than it would have if it were fried with a coating of hydrocolloid batter.",
+      "C": "need to be cooked more quickly at a higher temperature than it would need to be cooked if it were fried with a coating of hydrocolloid batter.",
+      "D": "need to be cooked in a different oil than it would need to be cooked in if it were fried with a coating of hydrocolloid batter."
+    },
+    "correctAnswer": "B",
+    "explanation": "Không có màng hydrocolloid giữ ẩm, nước trong thực phẩm thoát ra nhiều hơn tạo ra nhiều khoảng trống cho dầu ngấm vào, dẫn đến hàm lượng chất béo cao hơn."
+  },
+  {
+    "id": "nov_v_44",
+    "questionNumber": 44,
+    "domain": "Craft and Structure",
+    "passage": "In what is now Washington state, the Tulalip Tribes operate the Hibulb Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution presents Tulalip history and culture to the tribes' citizens. The Comanche Nation, a tribe in Oklahoma, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren't Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Eurocentric strategies for designing exhibits.",
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+    "options": {
+      "A": "It suggests improvements to a particular tribal cultural center.",
+      "B": "It encourages tribal citizens to attend their local cultural center.",
+      "C": "It explains how one tribal cultural center differs from other tribal cultural centers.",
+      "D": "It provides a basic description of a particular tribal cultural center."
+    },
+    "correctAnswer": "D",
+    "explanation": "Câu gạch chân cung cấp mô tả cơ bản về trung tâm văn hóa Hibulb và cách thức cơ quan này vận hành dựa trên tri thức bản địa."
+  },
+  {
+    "id": "nov_v_45",
+    "questionNumber": 45,
+    "domain": "Information and Ideas",
+    "passage": "Monthly Temperatures and Wing Centroid Sizes of Fruit Fly Specimens\n\n| Month | Average high (°F) | Average low (°F) | Average male wing centroid size (mm) | Average female wing centroid size (mm) |\n| :--- | :---: | :---: | :---: | :---: |\n| October | 67 | 44 | 1.98 | 2.29 |\n| May | 73 | 50 | 1.98 | 2.27 |\n| July | 87 | 62 | 2.02 | 2.31 |\n| September | 80 | 54 | 1.98 | 2.27 |\n\nDrosophila (fruit flies) have generation times of 10-12 days, so seasonal changes in humidity and other environmental conditions can drive seasonal fluctuations in chromosome rearrangements in species such as D. persimilis and D. subobscura. Drosophila body size (for which wing centroid size serves as a proxy measure) correlates with reproductive fitness. Banu Şebnem Önder and Cansu Fidan Aksoy measured the wing sizes of members of a D. melanogaster population in Yeşilöz, Turkey, that were collected monthly between May and October over three years. Their research suggests that Drosophila collected in relatively warmer months should tend to have greater reproductive fitness, as is illustrated by the finding that",
+    "question": "Which choice most effectively uses data from the table to complete the assertion?",
+    "options": {
+      "A": "the average male wing centroid size was 1.98 mm in September but was 2.31 mm in July.",
+      "B": "the average female wing centroid size was consistently larger than the average male wing centroid size in all four months in the table.",
+      "C": "the average monthly low temperature was higher in September than in May.",
+      "D": "the average female wing centroid size was larger in July than in May."
+    },
+    "correctAnswer": "D",
+    "explanation": "Tháng 7 có nhiệt độ cao hơn tháng 5 và ghi nhận kích thước cánh ruồi giấm cái lớn hơn (2.31 mm so với 2.27 mm), chứng minh nhận định ruồi ở tháng ấm có thể trạng sinh sản tốt hơn."
+  },
+  {
+    "id": "nov_v_46",
+    "questionNumber": 46,
+    "domain": "Craft and Structure",
+    "passage": "The following text is adapted from Guy de Maupassant's 1884 short story \"A Recollection,\" from the collection Guy de Maupassant Short Stories (translated by Albert M. C. McMaster et al. in 1903). The narrator is taking a boat down the Seine river from Paris, France, to the surrounding countryside.\n\nI took up a position in the bows [front of the boat], standing up and looking at the quays, the trees, the houses and the bridges disappearing behind us. And suddenly I perceived the great viaduct of Point du Jour which blocked the river. It was the end of Paris, the beginning of the country, and behind the double row of arches the Seine, suddenly spreading out as though it had regained space and liberty, became all at once the peaceful river which flows through the plains, alongside the wooded hills, amid the meadows, along the edge of the forests.",
+    "question": "Based on the text, which choice best expresses the narrator's characterization of the Seine?",
+    "options": {
+      "A": "As the journey progressed from Paris to the countryside, the waters of the Seine gradually cleared.",
+      "B": "The Seine is similar to Paris in that it is beautiful and slow to change.",
+      "C": "The waters of the Seine are more confined and rough in Paris than they are in the countryside.",
+      "D": "The current under the arches of the Point du Jour contrasts starkly with the otherwise calm flow of the Seine throughout the journey."
+    },
+    "correctAnswer": "C",
+    "explanation": "Tác giả miêu tả dòng sông khi ra khỏi Paris như tìm lại được không gian và sự tự do để trở nên êm ả, ngụ ý rằng khúc sông trong lòng thành phố bị gò bó và xáo động hơn."
+  },
+  {
+    "id": "nov_v_47",
+    "questionNumber": 47,
+    "domain": "Information and Ideas",
+    "passage": "Early Earth is thought to have been characterized by a stagnant lid tectonic regime, in which the upper lithosphere (the outer rocky layer) was essentially immobile and there was no interaction between the lithosphere and the underlying mantle. Researchers investigated the timing of the transition from a stagnant lid regime to a tectonic plate regime, in which the lithosphere is fractured into dynamic plates that in turn allow lithospheric and mantle material to mix. Examining chemical data from lithospheric and mantle-derived rocks ranging from 285 million to 3.8 billion years old, the researchers dated the transition to 3.2 billion years ago.",
+    "question": "Which finding, if true, would most directly support the researchers' conclusion?",
+    "options": {
+      "A": "Mantle-derived rocks older than 3.2 billion years show significantly more compositional diversity than lithospheric rocks older than 3.2 billion years do.",
+      "B": "There is a positive correlation between the age of lithospheric rocks and their chemical similarity to mantle-derived rocks, and that correlation increases significantly in strength at around 3.2 billion years old.",
+      "C": "Among rocks known to be older than 3.2 billion years, significantly more are mantle derived than lithospheric, but the opposite is true for rocks younger than 3.2 billion years.",
+      "D": "Mantle-derived rocks younger than 3.2 billion years contain some material that is not found in older mantle-derived rocks but is found in older and contemporaneous lithospheric rocks."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đá manti trẻ hơn 3.2 tỷ năm chứa vật chất thạch quyển cổ chứng minh sự xáo trộn vật chất giữa hai tầng bắt đầu diễn ra từ mốc thời gian này."
+  },
+  {
+    "id": "nov_v_48",
+    "questionNumber": 48,
+    "domain": "Information and Ideas",
+    "passage": "The morphological novelty of echinoderms-marine invertebrates with radial symmetry, usually starlike, around a central point-impedes comparisons with most other animals, in which bilateral symmetry on an anterior-posterior (head to tail) axis through a trunk is typical. Particularly puzzling are sea stars, thought to have evolved a headless layout from a known bilateral origin. Applying genomic knowledge of Saccoglossus kowalevskii acorn worms (close relatives of sea stars, and thus expected to have similar markers for corresponding anatomical regions) to the body patterning genes of Patiria miniata sea stars, Laurent Formery et al. observed activity only in anterior genes across P. miniata's entire body and some posterior genes limited to the edges, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "despite the greater prevalence of anterior genes in sea stars' genetic makeup, posterior genes active at the body's perimeter are primarily responsible for the starlike layout that distinguishes sea stars' radial symmetry from that of other echinoderms.",
+      "B": "although the two species are closely related, there is minimal correspondence in the genetic markers for head, tail, and trunk development in P. miniata sea stars and S. kowalevskii acorn worms.",
+      "C": "rather than undergoing changes resulting in the eventual elimination of a head region in their radial body plan, as previously assumed, sea stars' morphology evolved to completely lack a trunk and consist primarily of a head region.",
+      "D": "contrary to the belief that they evolved from early ancestors with the bilateral form typical of many other animals, sea stars instead originated with an atypical body layout that was neither bilaterally nor radially symmetrical."
+    },
+    "correctAnswer": "C",
+    "explanation": "Gen quy định phần đầu hoạt động trên toàn bộ cơ thể sao biển chứng minh sao biển không hề tiêu biến đầu, mà thực chất đã tiêu biến phần thân và toàn bộ cơ thể chính là một cái đầu mở rộng."
+  },
+  {
+    "id": "nov_v_49",
+    "questionNumber": 49,
+    "domain": "Information and Ideas",
+    "passage": "Quasars such as APM 08279+5255, located in the Lynx constellation are extremely luminous galactic nuclei powered by supermassive black holes, some of which are known to have developed within the first billion years of the formation of the universe. Based on simulations they conducted, astrophysicists Daniel Whalen, Muhammad Latif, and colleagues concluded that these early quasars developed partly as a result of rare convergences of gases in space without the need for ultraviolet backgrounds or other extreme and implausible environmental conditions that models of the early universe have included to account for the presence of these quasars. If this conclusion is correct, it suggests that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "future models of the early universe may not need to include conditions that explain early quasars since those quasars may not have actually existed at the time.",
+      "B": "it may be possible to develop models of the early universe that rest on more credible assumptions than previous models have.",
+      "C": "factors that previous models of the early universe assumed were necessary for the formation of quasars may have actually been consequences of the formation of quasars.",
+      "D": "previous models of the early universe may have underemphasized the importance of ultraviolet backgrounds to quasar formation."
+    },
+    "correctAnswer": "B",
+    "explanation": "Không cần viện dẫn đến các điều kiện cực đoan thiếu thực tế để giải thích sự hình thành quasar, các nhà khoa học có thể xây dựng mô hình vũ trụ sơ khai dựa trên các giả định đáng tin cậy hơn."
+  },
+  {
+    "id": "nov_v_50",
+    "questionNumber": 50,
+    "domain": "Information and Ideas",
+    "passage": "The bird species Saltator grossus (the slate-colored grosbeak), which weighs about 45 grams, and Microbates collaris (the collared gnatwren), which weighs about 10 grams, share territory in French Guiana with Thamnomanes caesius (the cinereous antshrike), which emits a loud alarm call when it detects predators. Biologist Ari Martinez and colleagues, who studied the ecological community these species share, hypothesized that since there is an inverse relationship between body size and vulnerability to predation, there will also be an inverse relationship between body size and sensitivity to predator warning signals from neighboring species.",
+    "question": "Which finding, if true, would most directly support Martinez and colleagues' hypothesis?",
+    "options": {
+      "A": "When Martinez and colleagues played T. caesius alarm calls, only bird species larger than S. grossus displayed predator-avoidance behavior.",
+      "B": "M. collaris displayed predator-avoidance behavior when Martinez and colleagues played T. caesius alarm calls as well as when the researchers played control sounds of random noise.",
+      "C": "Many bird species smaller than S. grossus displayed predator-avoidance behavior in response to T. caesius alarm calls played by Martinez and colleagues, but none smaller than M. collaris did.",
+      "D": "M. collaris displayed predator-avoidance behavior in response to T. caesius alarm calls played by Martinez and colleagues, whereas S. grossus did not."
+    },
+    "correctAnswer": "D",
+    "explanation": "Loài chim nhỏ hơn (M. collaris) dễ bị săn mồi hơn nên có phản ứng tránh kẻ thù trước tiếng kêu cảnh báo, trong khi loài lớn hơn (S. grossus) không phản ứng, củng cố giả thuyết tương quan nghịch."
+  },
+  {
+    "id": "nov_v_51",
+    "questionNumber": 51,
+    "domain": "Information and Ideas",
+    "passage": "Michael G. Campana and colleagues relied on historical DNA (hDNA)-genomic data incidentally preserved in specimens housed in natural history collections to investigate the evolutionary origins of a fungal pathogen affecting bats. Although this approach offers unique benefits, such as access to genomic data from extirpated populations, it remains a relatively underutilized resource because hDNA is often to some extent degraded, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.",
+    "question": "Information in the text best supports which statement about hDNA?",
+    "options": {
+      "A": "It may yield insights that other types of genomic data cannot.",
+      "B": "It has thus far proved valuable mainly to researchers studying pathogens.",
+      "C": "It may be underused because of its controversial status among scientists.",
+      "D": "It tends to be much more degraded than other types of DNA of comparable age."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu rõ hDNA mang lại những lợi ích độc nhất (unique benefits) như cho phép tiếp cận dữ liệu bộ gen từ các quần thể đã tuyệt chủng cục bộ mà nguồn gen khác không có được."
+  },
+  {
+    "id": "nov_v_52",
+    "questionNumber": 52,
+    "domain": "Information and Ideas",
+    "passage": "Neurobiologists Laura Cuaya, Raúl Hernández-Pérez, and colleagues investigated the language detection abilities of eighteen dogs. The researchers monitored the brain activity of Kun-kun (a border collie), Bingo (a mixed breed), and other dogs while the animals listened to three recordings: one of The Little Prince being read in Spanish, the second in Hungarian, and a third made up of short, randomly selected fragments of the first two, scrambled so that they didn't resemble human speech. Each dog was familiar with either Spanish or Hungarian, but not both. The team concluded that differences in dogs' anatomical features may affect their ability to distinguish speech from nonspeech.",
+    "question": "Which finding from the study, if true, would most directly support the team's conclusion?",
+    "options": {
+      "A": "Compared with longer-headed dogs, shorter-headed dogs showed less difference in brain activity when hearing either Spanish or Hungarian than when hearing the scrambled recording.",
+      "B": "Compared with longer-headed dogs, shorter-headed dogs showed a greater difference in brain activity when hearing the language they were accustomed to than when hearing the other language.",
+      "C": "The pattern of brain activity that longer-headed dogs showed when hearing the scrambled recording was different from the pattern of brain activity that short-headed dogs showed when hearing the language they were accustomed to.",
+      "D": "Long-headed dogs accustomed to hearing Spanish tended to show more brain activity when hearing Spanish than long-headed dogs accustomed to hearing Hungarian showed when hearing Hungarian."
+    },
+    "correctAnswer": "A",
+    "explanation": "Sự khác biệt về hoạt động não khi phân biệt tiếng người với âm thanh xáo trộn giữa các giống chó có hình dạng hộp sọ khác nhau (đầu ngắn so với đầu dài) chứng minh yếu tố giải phẫu ảnh hưởng đến thính giác ngôn ngữ."
+  },
+  {
+    "id": "nov_v_53",
+    "questionNumber": 53,
+    "domain": "Information and Ideas",
+    "passage": "Some pharmaceuticals contain titanium dioxide nanoparticles (TiO2-NPs), which can leach into waterways and soils via wastewater. In a 2014 study, Cheng Tan and Wen-Xiong Wang found that TiO2-NPs can accumulate in the bodies of water fleas (Daphnia magna). While bioaccumulation of manufactured nanoparticles may be inherently worrisome, it has been hypothesized that TiO2-NP bioaccumulation in invertebrates like D. magna could serve a valuable proxy role, obviating the need for manufacturers to conduct costly and intrusive sampling of vertebrate species-such as Chinook salmon (Oncorhynchus tshawytscha), commonly used in regulatory compliance testing-for nanoparticle bioaccumulation, as environmental protection laws currently require.",
+    "question": "Which finding, if true, would most directly support the hypothesis presented in the text?",
+    "options": {
+      "A": "In comparable environments, D. magna and O. tshawytscha display comparable rates of TiO2-NP uptake.",
+      "B": "Compared with O. tshawytscha, D. magna can tolerate significantly higher TiO2-NP concentrations without displaying any negative effects.",
+      "C": "It is easier to detect low and harmless concentrations of TiO2-NPs in D. magna than it is to detect high and harmful concentrations of TiO2-NPs in O. tshawytscha.",
+      "D": "TiO2-NP concentrations in D. magna tend to vary more from individual to individual than do TiO2-NP concentrations in O. tshawytscha when the species are exposed to similar levels of TiO2-NPs."
+    },
+    "correctAnswer": "A",
+    "explanation": "Để một loài không xương sống đóng vai trò đại diện tin cậy thay cho cá hồi thì tỷ lệ tích lũy hạt nano của hai loài trong cùng môi trường phải tương đương nhau."
+  },
+  {
+    "id": "nov_v_54",
+    "questionNumber": 54,
+    "domain": "Craft and Structure",
+    "passage": "The following text is from Nathaniel Hawthorne's 1830 short story \"Sir William Phips.\"\n\nFew of the personages of past times (except such as have gained renown in fireside legends as well as in written history) are anything more than mere names to their successors. They seldom stand up in our imaginations like men. The knowledge, communicated by the historian and biographer, is analogous to that which we acquire of a country by the map, minute, perhaps, and accurate, and available for all necessary purposes, but cold and naked, and wholly destitute of the mimic charm produced by landscape painting.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Historians and biographers should write about little-known people as well as famous people.",
+      "B": "The lives of historical figures are usually documented as a collection of facts, rather than as a representation of their personalities.",
+      "C": "Historians should record fictional stories about famous figures as well as stories that are strictly truthful.",
+      "D": "Paintings may be more beautiful than maps, but maps are more useful than paintings."
+    },
+    "correctAnswer": "B",
+    "explanation": "Tác giả so sánh kiến thức lịch sử như bản đồ khô khan, ghi lại các sự kiện một cách chính xác nhưng thiếu đi linh hồn và nét cá tính sinh động của con người thời xưa."
+  },
+  {
+    "id": "nov_v_55",
+    "questionNumber": 55,
+    "domain": "Information and Ideas",
+    "passage": "Exclusively inhabiting tropical countries such as Sierra Leone, wild chimpanzees lack adaptations to seasonal variations in ultraviolet B (UVB) irradiance from sunlight; since UVB exposure enables vertebrates to synthesize vitamin D, this raises questions about how chimpanzees in midlatitude zoos are affected by the lower and more variable UVB irradiance in those locations. In a study of zoo chimpanzees in Sweden and other midlatitude countries, Sophie Moittié and colleagues found not only that chimpanzees' vitamin D levels correlate with UVB irradiance but also that vitamin D levels show no evidence of plateauing as UVB irradiance reaches its highest local levels, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "averaged across seasons, vitamin D levels in zoo chimpanzees in midlatitude countries such as Sweden tend to be comparable to those in wild chimpanzees in tropical countries such as Sierra Leone.",
+      "B": "adaptations to seasonal variations in UVB irradiance may be emerging in zoo chimpanzees in Sweden and other midlatitude countries.",
+      "C": "providing supplemental vitamin D to chimpanzees in zoos in Sweden and other midlatitude countries would likely not be beneficial.",
+      "D": "zoo chimpanzees in Sweden and other midlatitude countries tend to synthesize less vitamin D than they are inherently capable of synthesizing."
+    },
+    "correctAnswer": "D",
+    "explanation": "Nồng độ vitamin D không đạt ngưỡng bão hòa ngay cả ở mức nắng cao nhất tại vĩ độ trung bình cho thấy lượng vitamin D mà chúng tổng hợp được ở đây vẫn thấp hơn công suất tối đa của cơ thể."
+  },
+  {
+    "id": "nov_v_56",
+    "questionNumber": 56,
+    "domain": "Information and Ideas",
+    "passage": "Prolonged exposure to anthropogenic noise (sounds from human sources like traffic or mining) can affect animals, as Graeme Shannon and colleagues found in a 2014 study of black-tailed prairie dogs. Researchers conducted a meta-analysis of studies of how such noise affects animals and found that, for every study, relevant traits or behaviors of the animals were observably different between the exposed group and the otherwise similar but unexposed group. Although, on average, studies of mammals showed larger differences than studies of fish did, for every class of animals examined, there were individual studies showing differences well above the average for mammals. Therefore, the results of the meta-analysis suggest that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "some studies of fish found larger effects of exposure to anthropogenic noise than some studies of mammals did.",
+      "B": "the differences that studies attribute to exposure to anthropogenic noise are likely to be more pronounced for fish than they are for mammals.",
+      "C": "the difference found in the study conducted by Graeme Shannon and colleagues was likely larger than the average difference across studies of black-tailed prairie dogs included in the meta-analysis.",
+      "D": "the studies in the meta-analysis that examined mammals were more likely than those that examined fish to speculate about whether the observed effects were detrimental."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dù mức trung bình của động vật có vú cao hơn cá, việc có những nghiên cứu về cá ghi nhận tác động vượt mức trung bình của động vật có vú đồng nghĩa với việc tồn tại một số nghiên cứu về cá có tác động lớn hơn một số nghiên cứu về động vật có vú."
+  },
+  {
+    "id": "nov_v_57",
+    "questionNumber": 57,
+    "domain": "Information and Ideas",
+    "passage": "In a 2012 study in the United States, Michael E. Berndt and Travis K. Bavin found a positive association between levels of dissolved organic carbon and mercury in bodies of fresh water. Many other studies have yielded similar results, suggesting to some scientists that this association is true for all bodies of fresh water, but much of that research has been conducted at broadly similar sites in North America, and when Seam Noh and colleagues examined bodies of fresh water in South Korea, they found a negative association between dissolved organic carbon levels and mercury levels. If similar findings emerge from other locations outside North America, that could suggest that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the mercury levels reported in Noh and colleagues' study were much higher than those reported in the study by Berndt and Bavin even though the dissolved organic carbon levels reported in the two studies were approximately the same.",
+      "B": "Berndt and Bavin may have inadvertently measured a different characteristic of bodies of fresh water than their levels of dissolved organic carbon and mercury.",
+      "C": "the relationship between dissolved organic carbon and mercury reported by Berndt and Bavin reflects conditions that are characteristic of certain kinds of ecosystems in North America rather than universal conditions.",
+      "D": "most of the studies conducted in North America have measured dissolved organic carbon and mercury levels at a higher level of precision than was the case in Noh and colleagues' study."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mối tương quan đổi chiều ở Hàn Quốc cho thấy mối liên hệ thuận chiều ở Bắc Mỹ không phải quy luật phổ quát toàn cầu mà chỉ phản ánh đặc thù sinh thái khu vực."
+  },
+  {
+    "id": "nov_v_58",
+    "questionNumber": 58,
+    "domain": "Information and Ideas",
+    "passage": "Over time, marine mollusks called nautilids continually add segments to their shells, and the chemical composition of each segment is influenced by the available materials in the surrounding water when the segment forms. Paleontologist Amane Tajika and colleagues analyzed the septa (the walls between shell chambers) of one male (samples labeled \"M\") and one female (samples labeled \"F\") nautilid, finding that sample M06 had the same concentration of oxygen-18 as did water approximately 120 meters deep and that the oxygen-18 concentration in sample F14 matched that of water at approximately 385 meters deep. Tajika et al. concluded that sample M06 formed at a higher point in the water column than did F14.",
+    "question": "Which finding, if true, would most directly support the researchers' conclusion?",
+    "options": {
+      "A": "In nautilids, sex predicts septa growth rate more strongly than does oxygen-18 concentration in the surrounding water.",
+      "B": "Regardless of sex, nautilids spend most of their lives at depths of 50 meters or greater, where oxygen-18 concentrations typically differ from those higher in the water column.",
+      "C": "Male nautilids tend to show higher concentrations of oxygen-18 than do female nautilids inhabiting the same point in the water column.",
+      "D": "Among nautilids, there is no effect of sex on the uptake of oxygen-18 from water or its deposition in septa."
+    },
+    "correctAnswer": "D",
+    "explanation": "Việc giới tính không ảnh hưởng đến khả năng hấp thụ oxy-18 đảm bảo sự khác biệt về oxy-18 giữa mẫu M06 và F14 phản ánh đúng độ sâu nước biển nơi vỏ hình thành."
+  },
+  {
+    "id": "nov_v_59",
+    "questionNumber": 59,
+    "domain": "Craft and Structure",
+    "passage": "President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal, a convoluted tale of criminality and eroded ethics involving a constellation of associates such as White House Counsel Chuck Colson and White House Counsel John Dean. But Nixon's legacy is complex: he has been praised for his role in creating the Environmental Protection Agency, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act, which became law during the Barack Obama administration.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Chuck Colson and John Dean were significant figures in the presidency of Richard Nixon.",
+      "B": "Richard Nixon is commonly linked with an infamous historical event, but this overshadows some of his notable achievements.",
+      "C": "Some of Richard Nixon's policies influenced the policies of later presidential administrations.",
+      "D": "Richard Nixon's reputation is primarily due to the actions of his associates."
+    },
+    "correctAnswer": "B",
+    "explanation": "Bê bối Watergate làm lu mờ những di sản tích cực của Nixon như việc thành lập Cơ quan Bảo vệ Môi trường EPA và các cải cách chính sách y tế."
+  },
+  {
+    "id": "nov_v_60",
+    "questionNumber": 60,
+    "domain": "Information and Ideas",
+    "passage": "Poetry in Classical Nahuatl, the language of the Aztec Empire, relies on difrasismo, or a parallel noun construction that conventionally operates as a single metaphor. For example, the common difrasismo in cuauhtli in ocelotl (literally, \"the eagle, the jaguar\") signifies \"warrior.\" The device's function is both formal-providing structure to lines of verse-and ritual: semantic relations among the two nouns and the concept they signify can be tenuous, as in the previous example, such that difrasismos are often only intelligible according to the conceptual associations observed in Aztec ceremonial culture.",
+    "question": "Which statement about the difrasismo in cuauhtli in ocelotl is most strongly supported by the text?",
+    "options": {
+      "A": "Its frequency in Classical Nahuatl poetry confirms its intelligibility to the Aztec audience.",
+      "B": "Its unintelligibility may cause its formal function within a line of verse to go unnoticed by present-day readers.",
+      "C": "Its apparent obscurity can be resolved when considered in the proper cultural context.",
+      "D": "Its metaphorical significance derives from the semantic equivalence of the two nouns constituting the difrasismo."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mối liên hệ giữa 'đại bàng, báo đốm' và 'chiến binh' có vẻ mơ hồ nhưng sẽ trở nên sáng tỏ và dễ hiểu khi đặt trong bối cảnh nghi lễ văn hóa của đế chế Aztec."
+  },
+  {
+    "id": "nov_v_61",
+    "questionNumber": 61,
+    "domain": "Craft and Structure",
+    "passage": "Though John Crowley, author of Endless Things, is not as well known as the most widely read American writers of the past fifty years, his work has had several influential champions, including the poet James Merrill and the literary critic Harold Bloom. In his afterword to Crowley's book Little, Big, Bloom argues that the novel adroitly blends what playwright Friedrich Schiller termed the naive and sentimental modes while Schiller thought works could be classified as either naive (seeking to describe reality) or sentimental (seeking to develop ideas), Little, Big fuses both modes of writing.",
+    "question": "Which choice best describes the overall structure of the text?",
+    "options": {
+      "A": "It accounts for a writer's lack of popular appeal, cites a literary figure who appreciates that writer, and summarizes the qualities that make the writer's work unique.",
+      "B": "It describes a writer's successful career, presents two literary figures who were supporters of that writer's career, and explains why the writer was able to achieve what he did.",
+      "C": "It mentions a writer whose work is not widely known, presents two people who hold a positive opinion of that writer, and gives a reason why one of those people holds that opinion.",
+      "D": "It identifies a writer whose work is regarded as difficult to read, brings up two admirers of the writer's work, and presents information that may make the writer's work more accessible to new readers."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn giới thiệu một tác giả ít tên tuổi, nhắc tới 2 học giả mến mộ ông (Merrill và Bloom) và trình bày phân tích chi tiết của Bloom về tác phẩm Little, Big."
+  },
+  {
+    "id": "nov_v_62",
+    "questionNumber": 62,
+    "domain": "Craft and Structure",
+    "passage": "The following text is from Mary Shelley's 1818 novel Frankenstein. Victor Frankenstein, who narrates this portion of text, describes the state of scientific knowledge as he began his own study of the natural world.\n\nThe untaught peasant beheld the elements around him and was acquainted with their practical uses. The most learned philosopher knew little more. He had partially unveiled the face of Nature, but her immortal lineaments were still a wonder and a mystery. He might dissect, anatomize, and give names; but, not to speak of a final cause, causes in their secondary and tertiary grades were utterly unknown to him. I had gazed upon the fortifications and impediments that seemed to keep human beings from entering the citadel of nature, and rashly and ignorantly I had repined.",
+    "question": "Which choice best describes the main idea of the text?",
+    "options": {
+      "A": "Victor became disappointed in science when he realized that the practical knowledge laypeople have of nature is often deeper than the scientific understanding.",
+      "B": "Victor was impressed by the layperson's practical understanding of nature but thought science provided a clearer understanding.",
+      "C": "Victor was immediately impressed by the advantages of the scientific approach to understanding natural phenomena.",
+      "D": "Victor thinks that conventional scientific approaches to understanding natural phenomena will not yield the answers he seeks."
+    },
+    "correctAnswer": "D",
+    "explanation": "Victor nhận định khoa học đương thời chỉ dừng lại ở việc gọi tên, mổ xẻ bề mặt chứ không thể thâm nhập vào bản chất căn nguyên sâu xa của tự nhiên."
+  },
+  {
+    "id": "nov_v_63",
+    "questionNumber": 63,
+    "domain": "Information and Ideas",
+    "passage": "Geneticist Elaine Ostrander led an international collaboration in which Mietje Germonpré and other researchers investigated the evolutionary history of size variation in modern dogs. The researchers identified multiple versions of the gene regulating the production of IGF-1 (insulin-like growth factor 1) in dogs and found that dogs of the same breed consistently share the same version of the gene. In a discussion of the study, a student hypothesizes that small breeds of dogs (for example, chihuahuas) must share a version that represses IGF-1 production that would otherwise confer larger body size.",
+    "question": "Which finding, if true, would most directly weaken the student's claim?",
+    "options": {
+      "A": "The degree of size variation among dogs is greater than that of any other land-based mammal.",
+      "B": "The majority of the most prevalent dog breeds have limited activity in the gene that regulates IGF-1 production.",
+      "C": "Some breeds with small body sizes and low IGF-1 concentrations have a different version of the gene regulating IGF-1 production than do chihuahuas.",
+      "D": "The gene that regulates IGF-1 production is not the only gene that influences body size in dogs but is the only such gene that shows within-breed version consistency."
+    },
+    "correctAnswer": "C",
+    "explanation": "Giả thuyết rằng tất cả các giống chó nhỏ đều chung một biến thể gen ức chế IGF-1 bị bác bỏ khi các giống chó nhỏ khác sở hữu các biến thể gen hoàn toàn khác biệt so với chihuahua."
+  },
+  {
+    "id": "nov_v_64",
+    "questionNumber": 64,
+    "domain": "Craft and Structure",
+    "passage": "The following text is from Sarojini Naidu's 1896 poem \"Alabaster.\"\n\nLike this alabaster box whose art\nIs frail as a cassia-flower, is my heart,\nCarven with delicate dreams and wrought\nWith many a subtle and exquisite thought.",
+    "question": "Which choice best describes the function of the two underlined portions in the text as a whole?",
+    "options": {
+      "A": "They indicate potential reactions, one hoped for and one feared, to a decision the speaker considers throughout the text.",
+      "B": "They provide examples, one literal and one figurative, of a change that the speaker describes throughout the text.",
+      "C": "They describe the subjects, one physical and one abstract, of a comparison that extends throughout the text.",
+      "D": "They symbolize two viewpoints, one cautious and one impulsive, that are contrasted throughout the text."
+    },
+    "correctAnswer": "C",
+    "explanation": "Chiếc hộp thạch cao (vật thể hữu hình) được dùng làm đối tượng so sánh với trái tim của nhân vật trữ tình (khái niệm trừu tượng) xuyên suốt bài thơ."
+  },
+  {
+    "id": "nov_v_65",
+    "questionNumber": 65,
+    "domain": "Information and Ideas",
+    "passage": "In a 2018 study, Deepak Jaiswal and Rishi Kant found that consumers' knowledge of environmental issues had no effect on the likelihood that the consumers would purchase environmentally friendly products. Since this study was based on fewer than 400 young adults in India, however, doubts have been raised about how reliable and representative the findings are. To better understand the issue, Wencan Zhuang and colleagues analyzed the results of 54 studies of eco-friendly consumer behavior, such as a 2018 study from Indonesia that included 916 participants and a 2018 study from India with 202 participants. Taking all 54 studies together, Zhuang and colleagues found a significant positive effect of environmental knowledge on eco-friendly purchasing decisions, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "a sample size of 202 may be sufficient to make reliable conclusions about the relationship between knowledge of environmental issues and purchasing decisions.",
+      "B": "concerns about the broad applicability of Jaiswal and Kant's conclusion were justified.",
+      "C": "the number of participants in Jaiswal and Kant's study was far below the number of participants in most studies of purchasing decisions.",
+      "D": "Jaiswal and Kant's methodology was more precise than the methodology used in the 2018 study from Indonesia."
+    },
+    "correctAnswer": "B",
+    "explanation": "Kết quả tổng hợp từ 54 nghiên cứu chứng minh hiểu biết môi trường thực sự thúc đẩy mua sắm xanh, chứng tỏ sự nghi ngờ ban đầu về tính đại diện hạn hẹp của nghiên cứu Jaiswal & Kant là hoàn toàn có cơ sở."
+  },
+  {
+    "id": "nov_v_66",
+    "questionNumber": 66,
+    "domain": "Information and Ideas",
+    "passage": "The state of Wisconsin has classified the walnut twig beetle as an invasive species that could harm some of the state's native species. But researchers Alejandro Camacho and Jason McLachlan have pointed out that \"invasive\" and \"native\" are labels that describe temporary circumstances. Changes in Earth's climate may force animals from their current ranges. Climate changes may also create good habitats in areas where a species couldn't live previously. In the case of Wisconsin, these observations suggest that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "the state was previously home to some walnut twig beetles but they were outcompeted by invading species.",
+      "B": "it's useful at present for the state to distinguish between invasive and native species in some instances but not in the case of the walnut twig beetle.",
+      "C": "even if Earth's climate doesn't change in the ways scientists predict, the walnut twig beetle will likely establish itself in the state.",
+      "D": "the state's designation of the walnut twig beetle as invasive may be appropriate now but not in the future."
+    },
+    "correctAnswer": "D",
+    "explanation": "Danh xưng sinh vật xâm lấn chỉ có tính chất tạm thời theo biến đổi khí hậu; do đó việc phân loại bọ cành óc chó là loài xâm lấn tại Wisconsin có thể phù hợp hiện tại nhưng sẽ thay đổi trong tương lai."
+  },
+  {
+    "id": "nov_v_67",
+    "questionNumber": 67,
+    "domain": "Craft and Structure",
+    "passage": "The following text is from Jerome K. Jerome's 1889 novel Three Men in a Boat (To Say Nothing of the Dog). The narrator and two friends are taking a boat down the River Thames in England.\n\nIn a boat, I have always noticed that it is the fixed idea of each member of the crew that he is doing everything. Harris's notion was, that it was he alone who had been working, and that both George and I had been imposing upon him. George, on the other hand, ridiculed the idea of Harris's having done anything more than eat and sleep, and had a cast-iron opinion that it was he-George himself-who had done all the labour worth speaking of.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To address a particular situation that the narrator finds unexpected",
+      "B": "To convey the narrator's confidence that he understands the role expected of him in a group",
+      "C": "To examine how the narrator and his friends each contributed to navigating a challenge",
+      "D": "To present the narrator's generalization along with supporting examples from a specific situation"
+    },
+    "correctAnswer": "D",
+    "explanation": "Người kể chuyện đưa ra nhận định khái quát (mọi thành viên trên thuyền luôn nghĩ mình làm hết mọi việc) và minh họa bằng ví dụ thực tế của hai người bạn Harris và George."
+  },
+  {
+    "id": "nov_v_68",
+    "questionNumber": 68,
+    "domain": "Information and Ideas",
+    "passage": "Some toothpastes contain titanium dioxide nanoparticles (TiO2-NPs), which can leach into waterways and soils via wastewater. In a 2015 study, Adeline Bourgeault and colleagues found that TiO2-NPs can accumulate in the bodies of zebra mussels (Dreissena polymorpha). While bioaccumulation of manufactured nanoparticles may be inherently worrisome, it has been hypothesized that TiO2-NP bioaccumulation in invertebrates like D. polymorpha could serve a valuable proxy role, obviating the need for manufacturers to conduct costly and intrusive sampling of vertebrate species such as common carp (Cyprinus carpio), commonly used in regulatory compliance testing for nanoparticle bioaccumulation, as environmental protection laws currently require.",
+    "question": "Which finding, if true, would most directly support the hypothesis presented in the text?",
+    "options": {
+      "A": "In comparable environments, D. polymorpha and C. carpio display comparable rates of TiO2-NP uptake.",
+      "B": "Compared with C. carpio, D. polymorpha can tolerate significantly higher TiO2-NP concentrations without displaying any negative effects.",
+      "C": "It is easier to detect low and harmless concentrations of TiO2-NPs in D. polymorpha than it is to detect high and harmful concentrations of TiO2-NPs in C. carpio.",
+      "D": "TiO2-NP concentrations in D. polymorpha tend to vary more from individual to individual than do TiO2-NP concentrations in C. carpio when the species are exposed to similar levels of TiO2-NPs."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nếu vẹm D. polymorpha có tỷ lệ hấp thụ hạt nano tương đương cá chép C. carpio thì nó hoàn toàn có thể đóng vai trò sinh vật chỉ thị đại diện thay thế cho loài cá này."
+  },
+  {
+    "id": "nov_v_69",
+    "questionNumber": 69,
+    "domain": "Information and Ideas",
+    "passage": "Mongolia, which, according to international indices, has relatively strong democratic institutions and low intranational income inequality, experienced an inflation rate of 4.30% in 2017, whereas Cameroon, which shows the opposite pattern on such indices, had an inflation rate of only 0.64% that year. Such comparisons have engendered speculation that by diluting control over the economy, democratic institutions inhibit states' ability to counteract inflationary pressures. To test this possibility systematically, Raj Desai et al. examined democratic strength, intranational inequality, and inflation in more than 100 countries, finding that democratic strength, if associated with low inequality, restrains inflationary pressures, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "it would be a mistake to treat the relative inflation rates of Mongolia and Cameroon as indicative of an inherent shortcoming in democratic institutions with regard to control over inflation.",
+      "B": "speculations about the relative inability of democratic institutions to counteract inflation are based on measures that tend to exaggerate the true level of inflation in strongly democratic countries such as Mongolia.",
+      "C": "the factors that contributed to Mongolia's elevated inflation rate relative to Cameroon's have less to do with the countries' political institutions than with the countries' levels of income inequality.",
+      "D": "the difference between Mongolia and Cameroon with regard to democratic institutional strength may have been greater in 2017 than was represented by international indices."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nghiên cứu trên 100 quốc gia cho thấy dân chủ đi kèm bình đẳng giúp kiềm chế lạm phát; do đó so sánh riêng lẻ giữa Mông Cổ và Cameroon không thể dùng để quy chụp rằng thể chế dân chủ kém kiểm soát lạm phát."
+  },
+  {
+    "id": "nov_v_70",
+    "questionNumber": 70,
+    "domain": "Information and Ideas",
+    "passage": "Neurobiologists Laura Cuaya, Raúl Hernández-Pérez, and colleagues investigated the language detection abilities of eighteen dogs of various ages. The researchers monitored the brain activity of Maverick (a 117-month-old border collie), Mini (a 126-month-old mixed breed), and other dogs while the animals listened to three recordings: one of The Little Prince being read in Spanish, the second in Hungarian, and a third made up of short, randomly selected fragments of the first two, scrambled so that they didn't resemble human speech. Each of the dogs was familiar with either Spanish or Hungarian, but not both. The team concluded that the younger the dog, the worse it may be at differentiating between familiar and unfamiliar languages.",
+    "question": "Which finding from the study, if true, would most directly support the team's conclusion?",
+    "options": {
+      "A": "As the age of the dog scanned decreased, so did the amount of brain activity in response to hearing the language the dog was accustomed to or the other language, but not in response to hearing the scrambled recording.",
+      "B": "The similarity between the pattern of brain activity a dog showed in response to hearing the scrambled recording and the pattern it showed in response to hearing the language it was not accustomed to was lowest among younger dogs.",
+      "C": "Dogs showed a different pattern of brain activity when hearing the language they were accustomed to than when hearing the other language, and the difference in brain activity decreased as the age of the dog scanned decreased.",
+      "D": "Although the dogs' general hearing sensitivity declined with age, dogs of all ages showed more brain activity in response to hearing the language they were accustomed to than in response to hearing the other language."
+    },
+    "correctAnswer": "C",
+    "explanation": "Độ tuổi của chó càng nhỏ thì sự khác biệt về sóng não giữa ngôn ngữ quen thuộc và ngôn ngữ lạ càng giảm dần, chứng tỏ chó càng non thì khả năng phân biệt ngôn ngữ càng kém."
+  },
+  {
+    "id": "nov_v_71",
+    "questionNumber": 71,
+    "domain": "Information and Ideas",
+    "passage": "Designed by Young Projects, Six Square House demonstrates the increasing focus among architects on developing eco-conscious and sustainable buildings. One way to accomplish this goal is through biophilic design, which incorporates elements that establish a coherent physical and emotional relationship among nature, human biology, and the building. Architects dedicated to this approach carefully contemplate every aspect of their projects, from location characteristics and initial materials selection to ultimate interior design choices and building installation. Thus,",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "biophilic design considerations are exercised during both the conception and execution of a new project.",
+      "B": "architecture firms like Young Projects typically work with large crews in order to expedite the time it takes to build a new project.",
+      "C": "architecture firms like Young Projects aim to use unique building materials for each project that they design.",
+      "D": "biophilic design prioritizes the emotional effects on inhabitants rather than the physical state of the natural surroundings."
+    },
+    "correctAnswer": "A",
+    "explanation": "Việc cân nhắc kỹ lưỡng từ khâu chọn địa điểm, vật liệu ban đầu đến thiết kế nội thất và lắp đặt hoàn thiện chứng minh nguyên lý sinh thái được áp dụng trong cả quá trình lên ý tưởng lẫn thi công dự án."
+  },
+  {
+    "id": "nov_v_72",
+    "questionNumber": 72,
+    "domain": "Information and Ideas",
+    "passage": "Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagitsuru, Otar Akanyeti, and James C. Liao using models of three head shapes narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length) showed that for large vortices, fish with intermediate heads would be better able than narrow-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than narrow-headed fish to detect obstructions that create large vortices.",
+    "question": "Which finding, if true, would most directly support the second research team's hypothesis?",
+    "options": {
+      "A": "A study using obstructions that created large vortices in low-visibility conditions found that the narrow-headed lake sturgeon (Acipenser fulvescens) bumped into obstructions more often than the intermediate-headed dusky smooth-hound (Mustelus canis) did.",
+      "B": "A study using obstructions that created large vortices in low-visibility conditions found that the lake sturgeon (Acipenser fulvescens), which has a relatively narrow head, bumped into more than half of the obstructions.",
+      "C": "A study using obstructions that created large vortices in low-visibility conditions found that some specimens of the intermediate-headed dusky smooth-hound (Mustelus canis) bumped into the obstructions more often than other specimens of the same fish did.",
+      "D": "A study using obstructions that created large vortices in low-visibility conditions found that the intermediate-headed dusky smooth-hound (Mustelus canis) avoided more than half of the obstructions."
+    },
+    "correctAnswer": "A",
+    "explanation": "Loài cá đầu hẹp (cá tầm A. fulvescens) va chạm với vật cản nhiều hơn loài cá đầu trung bình (cá mập M. canis) trong điều kiện thiếu sáng, minh chứng trực tiếp cho giả thuyết."
+  },
+  {
+    "id": "nov_v_73",
+    "questionNumber": 73,
+    "domain": "Craft and Structure",
+    "passage": "Master and Commander, first published in 1969, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty completed books. Some critics have found fault with the abrupt endings of Master and Commander and other books in the series, saying that they do not finish conclusively but arbitrarily stop. Other critics, however, argue that the books should not be thought of as discrete texts with traditional beginnings and endings but as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "The unusual structure that O'Brian uses for Master and Commander makes it one of his most intricate books.",
+      "B": "Critics have differing views regarding the efficacy of the structures of the novels in the Aubrey/Maturin series.",
+      "C": "Some critics think the Aubrey/Maturin series should have the literary renown of The Forsyte Saga, while others disagree.",
+      "D": "Many critics judge the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích chính của đoạn trích là trình bày hai luồng ý kiến trái chiều giữa các nhà phê bình về kết cấu kết thúc của loạt tiểu thuyết này."
+  },
+  {
+    "id": "nov_v_74",
+    "questionNumber": 74,
+    "domain": "Information and Ideas",
+    "passage": "In a college course on urban affairs, a student asserts that increased traffic congestion in the 1990s in the United States was present both in very large cities such as New York City, New York, and smaller areas such as Albuquerque, New Mexico, Jacksonville, Florida, and Boise, Idaho; though those smaller areas may have been less affected by traffic congestion than very large cities, this congestion also worsened in them over time.",
+    "question": "Which choice most effectively uses data from the graph to support the student's claim?",
+    "options": {
+      "A": "In at least one of the four areas shown, the amount of traffic delay was less than 20 hours per commuter per year at one point between 1990 and 2000.",
+      "B": "While the annual number of hours of traffic delay per commuter was always lower in the Boise, Idaho, area than in the New York City, New York, area for each year between 1990 and 2000, the amount of traffic delay rose in both areas during this period.",
+      "C": "Even though the amount of traffic delay per commuter per year was greater in the Albuquerque, New Mexico, area than in the New York City, New York, area throughout the period from 1990 to 2000, the amounts were nearly identical in 1996.",
+      "D": "In 1992, the amount of traffic delay in the New York City, New York, area was less than 30 hours per commuter per year."
+    },
+    "correctAnswer": "B",
+    "explanation": "Lựa chọn B nêu chính xác cả hai vế so sánh của học sinh: thành phố nhỏ (Boise) có thời gian trễ do tắc đường thấp hơn New York nhưng mức độ tắc đường ở cả hai nơi đều gia tăng trong giai đoạn 1990-2000."
+  },
+  {
+    "id": "nov_v_75",
+    "questionNumber": 75,
+    "domain": "Information and Ideas",
+    "passage": "In June of 1986, India liberalized its stock market, meaning that it began allowing foreign individuals and businesses to invest money in Indian companies. This was part of a wave of stock market liberalizations from the mid-1980s through the mid-1990s-Colombia in 1991, Nigeria in 1995, and so on. In an analysis of economic data from 1976 to 1993, Ross Levine and Sara Zervos found that liberalization did not lead to enduring increases in investment in companies based in countries that liberalized. Peter Blair Henry, however, found that, on average, investment in companies in liberalized countries increased significantly in the three years following liberalization. Taken together, these results suggest that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "liberalization may provide a boost to investment that fades over time.",
+      "B": "economists' expectations about the effect of liberalization on investment were largely correct.",
+      "C": "companies typically do not benefit from liberalization until at least three years after liberalization occurs.",
+      "D": "investment growth is likely to be more consistent in countries that liberalize than in countries that do not."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đầu tư tăng vọt trong 3 năm đầu nhưng không duy trì được mức tăng bền vững trong dài hạn, chứng tỏ việc tự do hóa thị trường tạo ra cú hích ban đầu rồi suy giảm dần theo thời gian."
+  },
+  {
+    "id": "nov_v_76",
+    "questionNumber": 76,
+    "domain": "Information and Ideas",
+    "passage": "Psychologists Gregory Bryant, Dorsa Amir, and colleagues investigated cross-cultural perceptions of spontaneous (real) laughter and volitional (fake or forced) laughter. Study participants from 21 societies, including those in Japan and South Africa, listened to randomized recordings of 18 spontaneous laughs taken from natural conversations between pairs of women and 18 volitional laughs produced separately by 18 different women in response to an experimenter's instruction to laugh. Analysis of the participants' evaluations of the laughs prompted the team to conclude that the ability to distinguish between spontaneous and volitional laughter appears to be universal across cultures.",
+    "question": "Which quotation from a psychologist not involved in the team's study would most directly weaken the team's conclusion?",
+    "options": {
+      "A": "\"When an individual chooses to produce volitional laughter in a natural social context, the laughter often shares certain acoustic qualities, such as pitch and fluctuation of intensity, with spontaneous laughter.\"",
+      "B": "\"Although the team considered the average group size or density in each society in the study, that demographic factor was found to have had no effect on listeners' identifications of laughter as spontaneous or volitional.\"",
+      "C": "\"Recent studies in communications have shown that certain acoustic features of spontaneous laughter, such as pitch and intensity, are consistent both within and across societies.\"",
+      "D": "\"Evaluations of spontaneous laughter are often associated with acoustic features such as greater intensity variability and higher pitch.\""
+    },
+    "correctAnswer": "A",
+    "explanation": "Nếu tiếng cười gượng gạo ngoài đời thực có đặc điểm âm học tương tự tiếng cười tự nhiên, việc người tham gia phân biệt được trong phòng thí nghiệm (vốn thu âm theo chỉ thị cứng nhắc) không phản ánh đúng năng lực phân biệt ngoài đời thực."
+  },
+  {
+    "id": "nov_v_77",
+    "questionNumber": 77,
+    "domain": "Information and Ideas",
+    "passage": "Although the language of the Olmec civilization, which flourished in southern Mexico circa 1500 BCE-400 BCE, hasn't been identified, it likely belonged to the Mixe-Zoquean family, a group of related languages whose present-day representatives are spoken in an area corresponding to ancient Olmec sites. The family can be subdivided into a Zoque branch, which includes Francisco León Zoque, and a Mixe branch, which includes North Central Mixe. Many words in the Mayan languages-languages spoken in the region but otherwise unrelated to the Mixe-Zoquean family are Mixe-Zoquean in origin and were likely borrowed during the period when the Olmecs dominated the entire area. Tellingly, all those words derive from the Zoque branch, suggesting that",
+    "question": "Which choice most logically completes the text?",
+    "options": {
+      "A": "North Central Mixe and the other languages of the Mixe branch likely supplanted the languages of the Zoque branch sometime before 1500 BCE.",
+      "B": "the language of the Olmec civilization was likely the founding language of the family that includes Mayan languages.",
+      "C": "the language of the Olmec civilization contributed words not only to Mayan languages but also to other languages in the Mixe-Zoquean family.",
+      "D": "the ancestral Mixe-Zoquean language had already diverged into the Mixe and Zoque branches by the time the Olmecs became the dominant power in the region."
+    },
+    "correctAnswer": "D",
+    "explanation": "Toàn bộ từ ngữ mà nền văn minh Olmec truyền sang ngữ hệ Maya đều thuộc nhánh Zoque, chứng tỏ tại thời điểm người Olmec thống trị khu vực, ngữ hệ Mixe-Zoquean cổ xưa đã phân tách thành hai nhánh riêng biệt."
+  }
+]

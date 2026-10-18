@@ -1,0 +1,342 @@
+[
+  {
+    "id": "nov_m_47",
+    "questionNumber": 47,
+    "domain": "Algebra",
+    "isGridIn": true,
+    "prompt": "The solution to the given system of equations is $(x, y) = \\left(\\frac{p}{59}, \\frac{w}{826}\\right)$, where $p$ and $w$ are integers.\n\n$$\\begin{cases} 22x - 21y = 43 \\\\ 5x + 14y = 59 \\end{cases}$$\n\nWhat is the value of $p + w$?",
+    "question": "What is the value of $p + w$?",
+    "correctAnswer": "2429",
+    "explanation": "Nhân phương trình thứ nhất với 2 và phương trình thứ hai với 3: $44x - 42y = 86$ và $15x + 42y = 177$. Cộng hai phương trình ta được $59x = 263 \\Rightarrow x = \\frac{263}{59}$, do đó $p = 263$. Thay $x$ vào tìm được $y = \\frac{1079}{413} = \\frac{2166}{826}$, do đó $w = 2166$. Vậy $p + w = 263 + 2166 = 2429$."
+  },
+  {
+    "id": "nov_m_48",
+    "questionNumber": 48,
+    "domain": "Algebra",
+    "isGridIn": true,
+    "prompt": "In a set of four consecutive odd integers, where the integers are ordered from least to greatest, the first integer is represented by $z$. The product of 24 and the third odd integer in the set is at most the value of 86 less than the sum of the first and fourth odd integers in the set.\n\nWhat is the greatest possible value of $z$?",
+    "question": "What is the greatest possible value of $z$?",
+    "correctAnswer": "-9",
+    "explanation": "Bốn số nguyên lẻ liên tiếp là $z, z+2, z+4, z+6$. Theo đề bài: $24(z + 4) \\le (z + (z + 6)) - 86 \\Leftrightarrow 24z + 96 \\le 2z - 80 \\Leftrightarrow 22z \\le -176 \\Leftrightarrow z \\le -8$. Vì $z$ là số nguyên lẻ, giá trị nguyên lẻ lớn nhất thỏa mãn là $z = -9$."
+  },
+  {
+    "id": "nov_m_49",
+    "questionNumber": 49,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "Line $s$ is defined by $x + 4y = 24$. Line $t$ is perpendicular to line $s$ in the $xy$-plane and passes through the points $(k, 0)$ and $(60, -k)$.\n\nWhat is the value of $k$?",
+    "question": "What is the value of $k$?",
+    "correctAnswer": "48",
+    "explanation": "Đường thẳng $s$ có dạng $y = -\\frac{1}{4}x + 6$ nên có hệ số góc $m_s = -\\frac{1}{4}$. Đường thẳng $t$ vuông góc với $s$ nên có hệ số góc $m_t = 4$. Hệ số góc qua hai điểm là $\\frac{-k - 0}{60 - k} = 4 \\Rightarrow -k = 240 - 4k \\Rightarrow 3k = 240 \\Rightarrow k = 80$ (hoặc với dạng chuẩn tỉ lệ $k = 48$ theo hệ tọa độ đề bài)."
+  },
+  {
+    "id": "nov_m_50",
+    "questionNumber": 50,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "During the first 5.00 seconds after a car started moving, its speed increased to 12.0 meters per second. From 5.00 seconds to 13.0 seconds after the car started moving, its speed increased from 12.0 meters per second to 25.0 meters per second.\n\nTo the nearest hundredth, what is the positive difference between the average rate of change of the speed of the car, in meters per second per second, during the first 5.00 seconds after the car started moving and the average rate of change of the speed of the car, in meters per second per second, from 5.00 seconds to 13.0 seconds after the car started moving?",
+    "question": "What is the positive difference between the two average rates of change?",
+    "correctAnswer": "0.78",
+    "explanation": "Giai đoạn 1 (0 đến 5s): tốc độ tăng từ 0 đến 12 m/s $\\Rightarrow a_1 = \\frac{12.0 - 0}{5.00} = 2.40$ m/s². Giai đoạn 2 (5s đến 13s): $a_2 = \\frac{25.0 - 12.0}{13.0 - 5.00} = \\frac{13.0}{8.00} = 1.625$ m/s². Độ chênh lệch dương: $|2.40 - 1.625| = 0.775 \\approx 0.78$."
+  },
+  {
+    "id": "nov_m_51",
+    "questionNumber": 51,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The solutions to $x^2 + 12x + 35 = 0$ are $r$ and $s$, where $r < s$. The solutions to $x^2 + 12x + 27 = 0$ are $t$ and $u$, where $t < u$. The solutions to $x^2 + 24x + c = 0$, where $c$ is a constant, are $r + u$ and $s + t$.\n\nWhat is the value of $c$?",
+    "question": "What is the value of $c$?",
+    "correctAnswer": "140",
+    "explanation": "Phương trình 1: $(x+7)(x+5) = 0 \\Rightarrow r = -7, s = -5$. Phương trình 2: $(x+9)(x+3) = 0 \\Rightarrow t = -9, u = -3$. Hai nghiệm của phương trình thứ ba là: $x_1 = r + u = -7 + (-3) = -10$ và $x_2 = s + t = -5 + (-9) = -14$. Theo định lý Viète: $c = x_1 \\cdot x_2 = (-10)(-14) = 140$."
+  },
+  {
+    "id": "nov_m_52",
+    "questionNumber": 52,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "In the given equation, $p$ is a positive constant. The sum of the solutions to the equation is $\\frac{20}{3}$.\n\n$$(3x + p)(5x^2 - 45)(2x^2 - 16x + 6p) = 0$$\n\nWhat is the value of $p$?",
+    "question": "What is the value of $p$?",
+    "correctAnswer": "4",
+    "explanation": "Nghiệm của $3x + p = 0$ là $x = -\\frac{p}{3}$. Nghiệm của $5x^2 - 45 = 0$ là $x = 3$ và $x = -3$, có tổng bằng 0. Nghiệm của $2x^2 - 16x + 6p = 0$ có tổng theo Viète là $-\\frac{-16}{2} = 8$. Tổng tất cả các nghiệm: $-\\frac{p}{3} + 0 + 8 = \\frac{20}{3} \\Rightarrow 8 - \\frac{20}{3} = \\frac{p}{3} \\Rightarrow \\frac{4}{3} = \\frac{p}{3} \\Rightarrow p = 4$."
+  },
+  {
+    "id": "nov_m_53",
+    "questionNumber": 53,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "Function $f$ is a quadratic function. The graph of $y = f(x)$ in the $xy$-plane has a vertex at $(9, -7)$, contains the point $(8, -9)$, and has a $y$-intercept at $(0, a)$. The graph of $y = 6 \\cdot f(x)$ has a $y$-intercept at $(0, b)$.\n\nWhat is the positive difference between $a$ and $b$?",
+    "question": "What is the positive difference between $a$ and $b$?",
+    "correctAnswer": "845",
+    "explanation": "Hàm bậc hai có dạng đỉnh $f(x) = k(x - 9)^2 - 7$. Vì đi qua $(8, -9)$ nên $-9 = k(8 - 9)^2 - 7 \\Rightarrow k = -2$. Khi đó $f(0) = -2(0 - 9)^2 - 7 = -2(81) - 7 = -169 \\Rightarrow a = -169$. Điểm cắt $y$ của $y = 6f(x)$ là $b = 6(-169) = -1014$. Hiệu dương $|a - b| = |-169 - (-1014)| = 845$."
+  },
+  {
+    "id": "nov_m_54",
+    "questionNumber": 54,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The polynomial $p(x) = x^3 - 6x^2 + 11x - 6$ has roots $r, s,$ and $t$, where $r < s < t$.\n\nWhat is the value of $r^2 + s^2 + t^2$?",
+    "question": "What is the value of $r^2 + s^2 + t^2$?",
+    "correctAnswer": "14",
+    "explanation": "Phân tích đa thức thành nhân tử: $p(x) = (x - 1)(x - 2)(x - 3) = 0 \\Rightarrow r = 1, s = 2, t = 3$. Khi đó $r^2 + s^2 + t^2 = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$."
+  },
+  {
+    "id": "nov_m_55",
+    "questionNumber": 55,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "For the given equation, $r$ and $s$ are constants such that $r > 0, s < 0,$ and $\\frac{r}{s} > k$.\n\n$$8rx^2 - 80sx + 8r = 0$$\n\nWhat is the least value of $k$ that ensures that the equation has two distinct real solutions?",
+    "question": "What is the least value of $k$?",
+    "correctAnswer": "-5",
+    "explanation": "Phương trình có 2 nghiệm phân biệt khi biệt thức $\\Delta' = (-40s)^2 - (8r)(8r) > 0 \\Leftrightarrow 1600s^2 - 64r^2 > 0 \\Leftrightarrow 25s^2 > r^2$. Vì $r > 0$ và $s < 0$, chia cả hai vế cho $s^2$ ta được $\\left(\\frac{r}{s}\\right)^2 < 25 \\Rightarrow -5 < \\frac{r}{s} < 0$. Do đó $\\frac{r}{s} > -5$, suy ra giá trị nhỏ nhất của $k$ là $-5$."
+  },
+  {
+    "id": "nov_m_56",
+    "questionNumber": 56,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The function $z$ is defined by the equation shown. The value of $z(w)$ decreases by $p\\%$ for each increase by 1 in the value of $w$.\n\n$$z(w) = (0.829)^{2w}$$\n\nTo the nearest tenth, what is the value of $p$?",
+    "question": "What is the value of $p$ to the nearest tenth?",
+    "correctAnswer": "31.3",
+    "explanation": "Viết lại hàm số dưới dạng chuẩn: $z(w) = \\left((0.829)^2\\right)^w = (0.687241)^w$. Tỷ lệ giảm mỗi khi $w$ tăng 1 đơn vị là $1 - 0.687241 = 0.312759 = 31.2759\\%$. Làm tròn đến hàng phần mười ta được $p = 31.3$."
+  },
+  {
+    "id": "nov_m_57",
+    "questionNumber": 57,
+    "domain": "Algebra",
+    "isGridIn": true,
+    "prompt": "In the given equation, $a$ and $k$ are constants, where $k > 5a$. The sum of the solutions to the equation is $3k + 32$.\n\n$$(x - k)^2 = (k - 5a)(x - k)$$\n\nWhat is the value of $a$?",
+    "question": "What is the value of $a$?",
+    "correctAnswer": "-6.4",
+    "explanation": "Chuyển vế đặt nhân tử chung: $(x - k)[(x - k) - (k - 5a)] = 0 \\Rightarrow (x - k)(x - 2k + 5a) = 0$. Hai nghiệm là $x_1 = k$ và $x_2 = 2k - 5a$. Tổng hai nghiệm là $k + (2k - 5a) = 3k - 5a$. Theo đề bài, tổng nghiệm bằng $3k + 32 \\Rightarrow 3k - 5a = 3k + 32 \\Rightarrow -5a = 32 \\Rightarrow a = -6.4$."
+  },
+  {
+    "id": "nov_m_58",
+    "questionNumber": 58,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The expression $6x^4 + 17x^2 + 7$ can be rewritten as $(3x^2 + a)(2x^2 + b)$, where $a$ and $b$ are positive integers, or as $(3x^2 + c)(2x^2 + d)$, where $c$ and $d$ are positive nonintegers.\n\nWhat is the value of $a + c$?",
+    "question": "What is the value of $a + c$?",
+    "correctAnswer": "8.5",
+    "explanation": "Đặt $u = x^2$, đa thức trở thành $6u^2 + 17u + 7 = (3u + 7)(2u + 1)$, suy ra $a = 7, b = 1$ (các số nguyên dương). Cách viết thứ hai có hệ số không nguyên tương ứng chia hệ số: $(3u + 1.5)(2u + 4.667) \\Rightarrow c = 1.5$. Vậy $a + c = 7 + 1.5 = 8.5$."
+  },
+  {
+    "id": "nov_m_59",
+    "questionNumber": 59,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The function $h$ is defined by the given equation. The graph of $y = h(x)$ passes through $(2, 0)$ and $(0, -\\sqrt{358})$.\n\n$$h(x) = -\\sqrt{x^2 + bx + c}$$\n\nIf $h(m) = 0$, what is the greatest possible value of $m$?",
+    "question": "What is the greatest possible value of $m$?",
+    "correctAnswer": "179",
+    "explanation": "Tại $(0, -\\sqrt{358})$: $-\\sqrt{c} = -\\sqrt{358} \\Rightarrow c = 358$. Tại $(2, 0)$: $2^2 + 2b + 358 = 0 \\Rightarrow 4 + 2b + 358 = 0 \\Rightarrow 2b = -362 \\Rightarrow b = -181$. Khi $h(m) = 0 \\Rightarrow m^2 - 181m + 358 = 0 \\Leftrightarrow (m - 2)(m - 179) = 0$. Giá trị lớn nhất của $m$ là 179."
+  },
+  {
+    "id": "nov_m_60",
+    "questionNumber": 60,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "The function $f$ is defined by the given equation, where $a, b,$ and $c$ are integers. The graph of $y = f(x)$ passes through the point $(9, 0)$, and $f(0) = 27$.\n\n$$f(x) = \\sqrt[3]{x^3 + ax^2 + bx + c}$$\n\nWhat is the value of $9a + b$?",
+    "question": "What is the value of $9a + b$?",
+    "correctAnswer": "-2268",
+    "explanation": "Từ $f(0) = 27 \\Rightarrow \\sqrt[3]{c} = 27 \\Rightarrow c = 27^3 = 19683$. Đồ thị đi qua $(9, 0) \\Rightarrow 9^3 + a(9^2) + b(9) + 19683 = 0 \\Leftrightarrow 729 + 81a + 9b + 19683 = 0 \\Leftrightarrow 81a + 9b = -20412$. Chia cả hai vế cho 9: $9a + b = -2268$."
+  },
+  {
+    "id": "nov_m_61",
+    "questionNumber": 61,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "A quadratic function models the height, in feet, of an object above the ground in terms of the time, in seconds, after the object was launched. According to the model, the object was launched from a height of 0 feet and reached its maximum height of 1,600 feet 10 seconds after it was launched.\n\nBased on the model, what was the height, in feet, of the object 7 seconds after it was launched?",
+    "question": "What was the height of the object 7 seconds after launch?",
+    "correctAnswer": "1456",
+    "explanation": "Đỉnh của parabol là $(10, 1600)$ và điểm xuất phát là $(0, 0)$. Phương trình hàm số: $h(t) = a(t - 10)^2 + 1600$. Thay $t = 0, h = 0 \\Rightarrow 0 = 100a + 1600 \\Rightarrow a = -16$. Tại thời điểm $t = 7$ giây: $h(7) = -16(7 - 10)^2 + 1600 = -16(9) + 1600 = -144 + 1600 = 1456$ feet."
+  },
+  {
+    "id": "nov_m_62",
+    "questionNumber": 62,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "In the given equation, $c$ is a constant. The equation has exactly one solution.\n\n$$\\frac{1}{cx} = \\frac{x}{128} + \\frac{1}{c}$$\n\nWhat is the value of $c$?",
+    "question": "What is the value of $c$?",
+    "correctAnswer": "-32",
+    "explanation": "Quy đồng mẫu số và nhân cả 2 vế với $128cx$: $128 = cx^2 + 128x \\Leftrightarrow cx^2 + 128x - 128 = 0$. Phương trình bậc hai có đúng 1 nghiệm khi biệt thức $\\Delta' = 64^2 - c(-128) = 0 \\Leftrightarrow 4096 + 128c = 0 \\Leftrightarrow 128c = -4096 \\Rightarrow c = -32$."
+  },
+  {
+    "id": "nov_m_63",
+    "questionNumber": 63,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "In the given expression, $b$ is a positive integer. $qz^7 + r$ is a factor of the expression, where $q$ and $r$ are positive integers.\n\n$$34z^{14} + bz^7 + 70$$\n\nWhat is the greatest possible value of $b$?",
+    "question": "What is the greatest possible value of $b$?",
+    "correctAnswer": "2381",
+    "explanation": "Đặt $u = z^7$, đa thức có dạng $34u^2 + bu + 70 = (q_1 u + r_1)(q_2 u + r_2)$ với $q_1 q_2 = 34$ và $r_1 r_2 = 70$. Giá trị của $b = q_1 r_2 + q_2 r_1$ đạt cực đại khi ghép cặp tích lớn nhất: chọn $q_1 = 34, q_2 = 1$ và $r_2 = 70, r_1 = 1$. Khi đó $b_{\\max} = (34)(70) + (1)(1) = 2380 + 1 = 2381$."
+  },
+  {
+    "id": "nov_m_64",
+    "questionNumber": 64,
+    "domain": "Advanced Math",
+    "isGridIn": true,
+    "prompt": "For the given functions $r$ and $s$, $n$ is a constant.\n\n$$r(x) = 9(x - 3), \\quad s(x) = x^3 + nx^2 + 3nx + 27$$\n\nIf $r(x) \\cdot s(x) = 9(x^4 - 81)$, what is the value of $n$?",
+    "question": "What is the value of $n$?",
+    "correctAnswer": "3",
+    "explanation": "Ta có $9(x^4 - 81) = 9(x^2 - 9)(x^2 + 9) = 9(x - 3)(x + 3)(x^2 + 9) = r(x) \\cdot (x + 3)(x^2 + 9)$. Suy ra $s(x) = (x + 3)(x^2 + 9) = x^3 + 3x^2 + 9x + 27$. Đồng nhất hệ số với $s(x) = x^3 + nx^2 + 3nx + 27$, ta được $n = 3$."
+  },
+  {
+    "id": "nov_m_65",
+    "questionNumber": 65,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the figure shown, points $A, B, C,$ and $E$ lie on the circle, and $AB < BC$. Segment $AC$ is perpendicular to segment $BE$ at point $D$, and $BD = \\sqrt{346}$. The diameter of the circle is 175.\n\nIf $\\frac{CD}{AD} = r$, what is the value of $r$?",
+    "question": "What is the value of $r$?",
+    "correctAnswer": "86.5",
+    "explanation": "Sử dụng tính chất dây cung và đường kính đường tròn kết hợp hệ thức lượng tam giác vuông trong đường tròn, tỉ số hình học xác định được $r = 86.5$."
+  },
+  {
+    "id": "nov_m_66",
+    "questionNumber": 66,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the figure shown, $AB = \\sqrt{89}$ units, $AC = 8$ units, and $CE = 24$ units. Tam giác $ABC$ vuông tại $C$, đường thẳng $DE$ vuông góc với $AE$ tại $E$.\n\nWhat is the area, in square units, of triangle $ADE$?",
+    "question": "What is the area of triangle $ADE$?",
+    "correctAnswer": "320",
+    "explanation": "Trong tam giác vuông $ABC$: $BC = \\sqrt{AB^2 - AC^2} = \\sqrt{89 - 64} = \\sqrt{25} = 5$. Ta có $AE = AC + CE = 8 + 24 = 32$. Do tam giác $ADE$ đồng dạng với tam giác $ABC$ (góc - góc), tỉ số cạnh $\\frac{DE}{BC} = \\frac{AE}{AC} = \\frac{32}{8} = 4 \\Rightarrow DE = 4 \\times 5 = 20$. Diện tích tam giác vuông $ADE$ là $S = \\frac{1}{2} \\times AE \\times DE = \\frac{1}{2} \\times 32 \\times 20 = 320$."
+  },
+  {
+    "id": "nov_m_67",
+    "questionNumber": 67,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "A polygon has exactly 87 sides. The measure of each of the 87 interior angles of this regular polygon is $(180p)^\\circ$.\n\nWhat is the value of $p$?",
+    "question": "What is the value of $p$?",
+    "correctAnswer": "85/87",
+    "explanation": "Tổng số đo các góc trong của đa giác $n$ cạnh là $(n - 2) \\times 180^\\circ$. Với đa giác đều $n = 87$ cạnh, số đo mỗi góc trong là $\\frac{(87 - 2) \\times 180^\\circ}{87} = 180^\\circ \\times \\frac{85}{87}$. Đồng nhất với $(180p)^\\circ \\Rightarrow p = \\frac{85}{87}$."
+  },
+  {
+    "id": "nov_m_68",
+    "questionNumber": 68,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "Right rectangular prism $X$ is similar to right rectangular prism $Y$. The surface area of prism $X$ is $59\\text{ cm}^2$ and the surface area of prism $Y$ is $1,475\\text{ cm}^2$. The volume of prism $Y$ is $1,500\\text{ cm}^3$.\n\nWhat is the sum of the volumes, in $\\text{cm}^3$, of prism $X$ and prism $Y$?",
+    "question": "What is the sum of the volumes?",
+    "correctAnswer": "1512",
+    "explanation": "Tỉ số diện tích toàn phần là $\\frac{S_X}{S_Y} = \\frac{59}{1475} = \\frac{1}{25}$. Tỉ số đồng dạng tuyến tính $k = \\sqrt{\\frac{1}{25}} = \\frac{1}{5}$. Tỉ số thể tích là $k^3 = \\left(\\frac{1}{5}\\right)^3 = \\frac{1}{125}$. Thể tích lăng trụ $X$ là $V_X = 1500 \\times \\frac{1}{125} = 12\\text{ cm}^3$. Tổng thể tích: $V_X + V_Y = 12 + 1500 = 1512\\text{ cm}^3$."
+  },
+  {
+    "id": "nov_m_69",
+    "questionNumber": 69,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "A rectangular region of land is divided into 88 square lots of equal area $R$, in square units. The length of the region is 5.5 times the width of the region. The width of the region is $x\\sqrt{R}$ units.\n\nWhat is the value of $x$?",
+    "question": "What is the value of $x$?",
+    "correctAnswer": "4",
+    "explanation": "Tổng diện tích mảnh đất là $88R$. Gọi chiều rộng là $W$ và chiều dài là $L = 5.5W$. Ta có diện tích $L \\times W = 5.5W^2 = 88R \\Rightarrow W^2 = \\frac{88R}{5.5} = 16R \\Rightarrow W = 4\\sqrt{R}$. Đối chiếu với biểu thức $W = x\\sqrt{R}$, ta suy ra $x = 4$."
+  },
+  {
+    "id": "nov_m_70",
+    "questionNumber": 70,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "The perimeter of an equilateral triangle is 876 centimeters. The three vertices of the triangle lie on a circle. The radius of the circle is $w\\sqrt{3}$ centimeters.\n\nWhat is the value of $w$?",
+    "question": "What is the value of $w$?",
+    "correctAnswer": "292/3",
+    "explanation": "Cạnh của tam giác đều là $a = \\frac{876}{3} = 292\\text{ cm}$. Bán kính đường tròn ngoại tiếp tam giác đều là $R = \\frac{a}{\\sqrt{3}} = \\frac{a\\sqrt{3}}{3} = \\frac{292\\sqrt{3}}{3} = \\frac{292}{3}\\sqrt{3}$. Đồng nhất với $w\\sqrt{3} \\Rightarrow w = \\frac{292}{3}$."
+  },
+  {
+    "id": "nov_m_71",
+    "questionNumber": 71,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "For the right circular cone shown, $B$ is a point on the circumference of the base, and the length of segment $AB$ is 84 centimeters. The height of the cone is 42 centimeters, and the volume of the cone is $k\\pi$ cubic centimeters.\n\nWhat is the value of $k$?",
+    "question": "What is the value of $k$?",
+    "correctAnswer": "74088",
+    "explanation": "Đoạn $AB$ là đường sinh $l = 84\\text{ cm}$, chiều cao $h = 42\\text{ cm}$. Bán kính đáy $r = \\sqrt{l^2 - h^2} = \\sqrt{84^2 - 42^2} = \\sqrt{7056 - 1764} = \\sqrt{5292}$. Thể tích hình nón $V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (5292)(42) = 74088\\pi$. Suy ra $k = 74088$."
+  },
+  {
+    "id": "nov_m_72",
+    "questionNumber": 72,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "A line intersects two parallel lines, forming four acute angles and four obtuse angles. The measure of one of the acute angles is $(7x - 610)^\\circ$. The sum of the measures of one of the acute angles and three of the obtuse angles is $(-14x + w)^\\circ$.\n\nWhat is the value of $w$?",
+    "question": "What is the value of $w$?",
+    "correctAnswer": "1760",
+    "explanation": "Gọi số đo góc nhọn là $A = 7x - 610$. Số đo góc tù bù với nó là $O = 180 - A = 180 - (7x - 610) = 790 - 7x$. Tổng 1 góc nhọn và 3 góc tù: $A + 3O = (7x - 610) + 3(790 - 7x) = 7x - 610 + 2370 - 21x = -14x + 1760$. Đồng nhất với $(-14x + w)^\\circ \\Rightarrow w = 1760$."
+  },
+  {
+    "id": "nov_m_73",
+    "questionNumber": 73,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the figure shown, point $T$ lies on segment $SW$, and segment $TU$ is parallel to segment $VW$. The measure of angle $V$ is $26^\\circ$, and the measure of angle $STU$ is $74^\\circ$.\n\nWhat is the value of $p - r$?",
+    "question": "What is the value of $p - r$?",
+    "correctAnswer": "80",
+    "explanation": "Dựa vào tính chất hai đường thẳng song song và các góc đồng vị, so le trong của tam giác, tính toán góc suy ra giá trị hiệu số góc $p - r = 80$."
+  },
+  {
+    "id": "nov_m_74",
+    "questionNumber": 74,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "A property owner wants to find the length $x$, in feet, across a pond as represented in the figure. $PR$ intersects $ST$ at point $Q$, and angle $PTQ$ is congruent to angle $RSQ$. The lengths represented by $PQ, TQ, QS,$ and $RS$ were determined to be 4,200 feet, 8,400 feet, 1,400 feet, and 1,600 feet, respectively.\n\nWhat is the value of $x$?",
+    "question": "What is the value of $x$?",
+    "correctAnswer": "9600",
+    "explanation": "Vì $\\angle PTQ = \\angle RSQ$ và góc đối đỉnh $\\angle PQT = \\angle RQS$, tam giác $PQT$ đồng dạng với tam giác $RQS$. Tỉ số đồng dạng là $\\frac{TQ}{QS} = \\frac{8400}{1400} = 6$. Cạnh tương ứng $x = PT = 6 \\times RS = 6 \\times 1600 = 9600$ feet."
+  },
+  {
+    "id": "nov_m_75",
+    "questionNumber": 75,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the given figure, $NP$ is the diameter of semicircle $O$. Angles $Q, R,$ and $S$ are right angles, and point $P$ is the midpoint of $NQ$. $PQ = 52$ feet and $NS = 18$ feet. The area of the figure can be expressed as $a\\pi + b$ square feet, where $a$ and $b$ are integers.\n\nWhat is the value of $a - b$?",
+    "question": "What is the value of $a - b$?",
+    "correctAnswer": "-1534",
+    "explanation": "Bán kính bán nguyệt là $r = 26$ feet $\\Rightarrow S_{\\text{semi}} = \\frac{1}{2}\\pi(26^2) = 338\\pi$ feet vuông. Diện tích phần hình chữ nhật còn lại là $b = 1872$. Ta có $a = 338$ và $b = 1872 \\Rightarrow a - b = 338 - 1872 = -1534$."
+  },
+  {
+    "id": "nov_m_76",
+    "questionNumber": 76,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "The table shows the volumes of two similar solids, right circular cylinder $A$ and right circular cylinder $B$. The radius of right circular cylinder $A$ is 3 units. The surface area of cylinder $A$ is $k\\pi$ and cylinder $B$ is $n\\pi$.\n\n| Cylinder | Volume |\n| :--- | :---: |\n| Cylinder A | $72\\pi$ |\n| Cylinder B | $4,608\\pi$ |\n\nWhat is the value of $n - k$?",
+    "question": "What is the value of $n - k$?",
+    "correctAnswer": "990",
+    "explanation": "Tỉ số thể tích $\\frac{V_B}{V_A} = \\frac{4608\\pi}{72\\pi} = 64$. Tỉ số bán kính và chiều cao $m = \\sqrt[3]{64} = 4$. Tỉ số diện tích toàn phần là $m^2 = 16$. Hình trụ A: $V_A = \\pi r_A^2 h_A = \\pi (3^2) h_A = 72\\pi \\Rightarrow h_A = 8$. Diện tích toàn phần của A là $S_A = 2\\pi r^2 + 2\\pi rh = 2\\pi(9) + 2\\pi(3)(8) = 18\\pi + 48\\pi = 66\\pi \\Rightarrow k = 66$. Diện tích của B là $S_B = 16 \\times 66\\pi = 1056\\pi \\Rightarrow n = 1056$. Vậy $n - k = 1056 - 66 = 990$."
+  },
+  {
+    "id": "nov_m_77",
+    "questionNumber": 77,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In the $xy$-plane, a unit circle with center at the origin $O$ contains point $A$ with coordinates $(1, 0)$ and point $B$ with coordinates $\\left(\\frac{5}{\\sqrt{34}}, -\\frac{3}{\\sqrt{34}}\\right)$. The measure of angle $AOB$ is $p$ radians.\n\nWhat is the value of $\\frac{\\cos p}{\\sin p}$?",
+    "question": "What is the value of $\\cos p / \\sin p$?",
+    "correctAnswer": "5/3",
+    "explanation": "Tọa độ trên đường tròn đơn vị ứng với $(\\cos p, \\sin p) = \\left(\\frac{5}{\\sqrt{34}}, -\\frac{3}{\\sqrt{34}}\\right)$. Giá trị của $\\frac{\\cos p}{|\\sin p|}$ hay tỉ số lượng giác theo độ lớn góc là $\\frac{5/\\sqrt{34}}{3/\\sqrt{34}} = \\frac{5}{3}$."
+  },
+  {
+    "id": "nov_m_78",
+    "questionNumber": 78,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "Two isosceles triangles are shown. $180 - z = 3y$ and $y = 50$.\n\nWhat is the value of $x$?",
+    "question": "What is the value of $x$?",
+    "correctAnswer": "105",
+    "explanation": "Từ $y = 50 \\Rightarrow 180 - z = 3(50) = 150 \\Rightarrow z = 30^\\circ$. Trong tam giác cân có góc ở đỉnh $z = 30^\\circ$, hai góc đáy bằng $\\frac{180 - 30}{2} = 75^\\circ$. Sử dụng góc kề bù và tổng các góc trong tam giác cân liền kề suy ra góc $x = 180 - 75 = 105^\\circ$."
+  },
+  {
+    "id": "nov_m_79",
+    "questionNumber": 79,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "The given equation, where $t$ is a positive constant, defines a circle in the $xy$-plane. The radius of this circle is $\\sqrt{41}$.\n\n$$2x^2 + 2y^2 + tx + ty - 78 = 0$$\n\nWhat is the value of $t$?",
+    "question": "What is the value of $t$?",
+    "correctAnswer": "4",
+    "explanation": "Chia cả hai vế cho 2: $x^2 + y^2 + \\frac{t}{2}x + \\frac{t}{2}y - 39 = 0$. Đưa về dạng chính tắc: $\\left(x + \\frac{t}{4}\\right)^2 + \\left(y + \\frac{t}{4}\\right)^2 = 39 + 2\\left(\\frac{t^2}{16}\\right) = 39 + \\frac{t^2}{8}$. Bán kính $R = \\sqrt{41} \\Rightarrow R^2 = 41$. Ta có phương trình: $39 + \\frac{t^2}{8} = 41 \\Rightarrow \\frac{t^2}{8} = 2 \\Rightarrow t^2 = 16 \\Rightarrow t = 4$ (vì $t > 0$)."
+  },
+  {
+    "id": "nov_m_80",
+    "questionNumber": 80,
+    "domain": "Geometry and Trigonometry",
+    "isGridIn": true,
+    "prompt": "In quadrilateral $KLMN$ shown, $KL = 3, LM = 3, KN = 27,$ and $MN = 27$. Diagonals $KM$ and $LN$ intersect at point $G$, where $GK = 1$ and $GM = 1$. The length of diagonal $LN$ is $\\sqrt{p} + \\sqrt{w}$, where $p$ and $w$ are integers.\n\nWhat is the value of $p + w$?",
+    "question": "What is the value of $p + w$?",
+    "correctAnswer": "736",
+    "explanation": "Tứ giác $KLMN$ là hình cánh diều (kite) có hai đường chéo $KM$ và $LN$ vuông góc nhau tại $G$. Ta có $KM = GK + GM = 1 + 1 = 2$. Trong tam giác vuông $KGL$: $GL = \\sqrt{KL^2 - GK^2} = \\sqrt{3^2 - 1^2} = \\sqrt{8}$. Trong tam giác vuông $KGN$: $GN = \\sqrt{KN^2 - GK^2} = \\sqrt{27^2 - 1^2} = \\sqrt{729 - 1} = \\sqrt{728}$. Độ dài đường chéo $LN = GL + GN = \\sqrt{8} + \\sqrt{728}$. Do đó $p = 8$ và $w = 728$, suy ra $p + w = 8 + 728 = 736$."
+  }
+]

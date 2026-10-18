@@ -1,0 +1,17 @@
+{
+  "name": "SAT Platform - Cosmic Bluebook Edition",
+  "short_name": "SAT Cosmic",
+  "description": "Trạm luyện thi Digital SAT thích ứng IRT & Phòng Lab Desmos 800 Math",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "orientation": "landscape-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

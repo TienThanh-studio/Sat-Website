@@ -7,6 +7,8 @@ import detailsQuestions from '../data/questions/details.json';
 import inferenceQuestions from '../data/questions/inference.json';
 import vocabularyQuestions from '../data/questions/vocabulary.json';
 import novemberSatPrediction from '../data/questions/tests/november_sat_prediction.json';
+import verbalNovemberPrediction from '../data/questions/tests/verbal_november_prediction.json';
+import mathNovemberPrediction from '../data/questions/tests/math_november_prediction.json';
 
 // Import 2 ngân hàng câu hỏi mới vừa được convert
 import geometryBankData from '../data/questions/geometry_trig_bank.json';
@@ -460,6 +462,40 @@ export const DEFAULT_CATEGORIES = [
     duration: 1920, // 32 phút
     questions: Array.isArray(novemberSatPrediction.questions) ? novemberSatPrediction.questions : [],
     module1: Array.isArray(novemberSatPrediction.questions) ? novemberSatPrediction.questions : []
+  },
+  {
+    id: 'verbal-november-prediction',
+    title: 'November SAT Prediction - Official Verbal Test (77 Qs)',
+    name: 'November SAT Verbal Prediction',
+    section: 'Reading & Writing',
+    domain: 'Reading & Writing',
+    description: 'Bộ 77 câu hỏi dự đoán Verbal bám sát ma trận đề thi tháng 11, gồm 4 dạng bài trọng điểm kèm lời giải chi tiết.',
+    mode: 'practice',
+    isExam: true,
+    isRealExam: false,
+    totalQuestions: verbalNovemberPrediction.length,
+    duration: 3240,
+    questions: verbalNovemberPrediction,
+    module1: verbalNovemberPrediction.slice(0, 27),
+    module2Hard: verbalNovemberPrediction.slice(27, 54),
+    module2Easy: verbalNovemberPrediction.slice(54, 77)
+  },
+  {
+    id: 'math-november-prediction',
+    title: 'November SAT Prediction - Official Math Test (34 Qs)',
+    name: 'November SAT Math Prediction',
+    section: 'Mathematics',
+    domain: 'Mathematics',
+    description: 'Bộ câu hỏi dự đoán SAT Math tháng 11 bám sát độ khó Module 2 Hard, gồm Đại số nâng cao và Hình học lượng giác kèm hướng dẫn giải chi tiết.',
+    mode: 'practice',
+    isExam: true,
+    isRealExam: false,
+    totalQuestions: mathNovemberPrediction.length,
+    duration: 2100, // 35 phút
+    questions: mathNovemberPrediction,
+    module1: mathNovemberPrediction.slice(0, 17),
+    module2Hard: mathNovemberPrediction.slice(17, 34),
+    module2Easy: mathNovemberPrediction.slice(17, 34)
   }
 ];
 
