@@ -7,7 +7,6 @@ import {
   XCircle,
   Clock,
   RotateCcw,
-  Home,
   Sparkles,
   TrendingUp,
   ChevronLeft,
@@ -17,6 +16,7 @@ import {
   Bot,
   BarChart3,
   ListChecks,
+  Download,
 } from 'lucide-react';
 import MathRenderer from '../common/MathRenderer';
 
@@ -27,7 +27,6 @@ export default function ScoreReportModal({
   onHome,
   reportData,
 }) {
-  // Mặc định mở thẳng vào giao diện Xem lại chi tiết từng câu như ảnh mẫu, có nút chuyển sang Tổng quan điểm
   const [activeView, setActiveView] = useState('review'); // 'review' | 'overview'
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -45,7 +44,6 @@ export default function ScoreReportModal({
     }
   }, [isOpen, reportData]);
 
-  // Hiệu ứng chạy số điểm ở tab Tổng quan
   useEffect(() => {
     if (!isOpen || !reportData || activeView !== 'overview') return;
     let startTimestamp = null;
@@ -64,7 +62,6 @@ export default function ScoreReportModal({
     return () => window.cancelAnimationFrame(animId);
   }, [isOpen, targetScore, reportData, activeView]);
 
-  // Hỗ trợ bấm phím mũi tên Trái / Phải trên bàn phím để lướt nhanh qua các câu
   useEffect(() => {
     if (!isOpen || activeView !== 'review') return;
     const handleKeyDown = (e) => {
@@ -122,6 +119,113 @@ export default function ScoreReportModal({
     return `${m}m ${s}s`;
   };
 
+  // HÀM XUẤT BẢNG ĐIỂM THÀNH ẢNH THẺ PHI HÀNH GIA (.PNG 1200x630)
+  const handleExportScoreCard = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1200;
+    canvas.height = 630;
+    const ctx = canvas.getContext('2d');
+
+    // 1. Nền dải ngân hà Deep Space
+    const bgGrad = ctx.createLinearGradient(0, 0, 1200, 630);
+    bgGrad.addColorStop(0, '#050814');
+    bgGrad.addColorStop(0.5, '#0f172a');
+    bgGrad.addColorStop(1, '#1e1b4b');
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, 1200, 630);
+
+    // 2. Vẽ các ngôi sao lấp lánh
+    for (let i = 0; i < 120; i++) {
+      ctx.fillStyle = i % 3 === 0 ? '#38bdf8' : '#ffffff';
+      ctx.globalAlpha = Math.random() * 0.7 + 0.2;
+      ctx.beginPath();
+      ctx.arc(Math.random() * 1200, Math.random() * 630, Math.random() * 2 + 0.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // 3. Khung viền Neon
+    ctx.strokeStyle = '#22d3ee';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(36, 36, 1128, 558);
+
+    // 4. Tiêu đề Trạm Vũ Trụ
+    ctx.fillStyle = '#22d3ee';
+    ctx.font = 'bold 20px monospace';
+    ctx.fillText('★ UNITED GALACTIC SAT AUTHORITY • OFFICIAL SCORE CERTIFICATE', 75, 95);
+
+    const candidateName =
+      localStorage.getItem('sat_custom_display_name') || 'COMMANDER ASTRONAUT';
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '900 44px sans-serif';
+    ctx.fillText(candidateName.toUpperCase(), 75, 155);
+
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = 'bold 22px sans-serif';
+    ctx.fillText(
+      `Bài thi: ${reportData.section || 'Digital SAT Practice Test'}  •  Ngày: ${new Date().toLocaleDateString('vi-VN')}`,
+      75,
+      198
+    );
+
+    // 5. Khối Điểm Scaled Score Khổng Lồ
+    ctx.fillStyle = 'rgba(6, 182, 212, 0.12)';
+    ctx.fillRect(75, 240, 440, 230);
+    ctx.strokeStyle = 'rgba(34, 211, 238, 0.5)';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(75, 240, 440, 230);
+
+    ctx.fillStyle = '#38bdf8';
+    ctx.font = 'bold 18px monospace';
+    ctx.fillText('SCALED SCORE (200 - 800)', 105, 285);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '900 110px monospace';
+    ctx.fillText(String(targetScore), 105, 405);
+
+    ctx.fillStyle = '#34d399';
+    ctx.font = 'bold 20px monospace';
+    ctx.fillText(
+      `ADAPTIVE ROUTE: ${(reportData.module2Path || 'HARD').toUpperCase()} MODULE`,
+      105,
+      445
+    );
+
+    // 6. Các chỉ số thống kê bên phải
+    const statsList = [
+      {
+        label: 'ĐỘ CHÍNH XÁC (ACCURACY)',
+        val: `${accuracy}% (${correctCount}/${totalCount} câu đúng)`,
+      },
+      { label: 'THỜI GIAN HOÀN THÀNH', val: formatDuration(reportData.timeSpent) },
+      { label: 'MỤC TIÊU ĐẠI HỌC', val: 'HUST (IT1 / IT-E10) • TARGET 1580+' },
+      { label: 'MÃ XÁC THỰC (VERIFY ID)', val: examCode },
+    ];
+
+    statsList.forEach((st, idx) => {
+      const yPos = 265 + idx * 55;
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = 'bold 15px monospace';
+      ctx.fillText(st.label, 560, yPos);
+
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = 'bold 22px sans-serif';
+      ctx.fillText(st.val, 560, yPos + 26);
+    });
+
+    // 7. Chân trang
+    ctx.fillStyle = '#fbbf24';
+    ctx.font = 'bold 18px monospace';
+    ctx.fillText('VERIFIED BY SAT COSMIC IRT 3PL ENGINE  •  CONGRATULATIONS!', 75, 545);
+
+    // Xuất file PNG tải về máy
+    const dataUrl = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.download = `SAT_Cosmic_Score_${targetScore}_${Date.now()}.png`;
+    link.href = dataUrl;
+    link.click();
+  };
+
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 bg-[#060913] text-slate-100 flex flex-col font-sans select-none overflow-hidden">
@@ -139,10 +243,9 @@ export default function ScoreReportModal({
         />
 
         {/* ================================================================= */}
-        {/* 1. TOP HEADER BAR (CHUẨN BỐ CỤC MẪU + CONCEPT VŨ TRỤ) */}
+        {/* 1. TOP HEADER BAR */}
         {/* ================================================================= */}
         <header className="relative z-20 h-16 px-5 lg:px-8 bg-[#090D1A]/95 backdrop-blur-xl border-b border-indigo-500/25 flex items-center justify-between shrink-0">
-          {/* Góc trái: Tên đề thi + Câu X/Y + Breadcrumb */}
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <h1 className="text-sm sm:text-base font-extrabold text-white tracking-tight truncate">
@@ -161,15 +264,13 @@ export default function ScoreReportModal({
             </p>
           </div>
 
-          {/* Chính giữa: Tên Module */}
-          <div className="hidden lg:flex flex-col items-center">
+          <div className="hidden xl:flex flex-col items-center">
             <span className="text-base font-black text-white tracking-wide">
               Module {reportData.module2Path ? `2 (${reportData.module2Path})` : '1'}
             </span>
           </div>
 
-          {/* Góc phải: Chuyển đổi Xem Câu Hỏi / Tổng Quan Điểm & Nút Quay lại */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2">
             <div className="flex bg-slate-900/90 p-1 rounded-xl border border-white/10 text-xs font-bold">
               <button
                 type="button"
@@ -197,6 +298,17 @@ export default function ScoreReportModal({
               </button>
             </div>
 
+            {/* NÚT TẢI THẺ ĐIỂM (.PNG) */}
+            <button
+              type="button"
+              onClick={handleExportScoreCard}
+              className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 text-xs font-black flex items-center gap-1.5 transition cursor-pointer shadow-md"
+              title="Tải ảnh thẻ chứng nhận điểm số về máy"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">Tải Thẻ Điểm (.PNG)</span>
+            </button>
+
             {onRetry && (
               <button
                 type="button"
@@ -219,7 +331,7 @@ export default function ScoreReportModal({
         </header>
 
         {/* ================================================================= */}
-        {/* 2. DẢI SUB-HEADER MÃ ĐỀ (DARK NAVY PILL BAR GIỐNG ẢNH MẪU) */}
+        {/* 2. DẢI SUB-HEADER MÃ ĐỀ */}
         {/* ================================================================= */}
         <div className="relative z-20 px-4 pt-2 pb-1.5 bg-[#060913]">
           <div className="w-full py-1.5 px-6 rounded-full bg-gradient-to-r from-[#0f1d3a] via-[#162a52] to-[#0f1d3a] border border-cyan-400/25 text-center shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
@@ -230,17 +342,16 @@ export default function ScoreReportModal({
         </div>
 
         {/* ================================================================= */}
-        {/* 3. KHU VỰC CHÍNH: CHẾ ĐỘ XEM CHI TIẾT TỪNG CÂU (GIỐNG ẢNH MẪU) */}
+        {/* 3. KHU VỰC CHÍNH: CHẾ ĐỘ XEM CHI TIẾT TỪNG CÂU */}
         {/* ================================================================= */}
         {activeView === 'review' ? (
           <div className="relative z-10 flex-1 flex overflow-hidden">
-            {/* CỘT TRÁI: BẢNG ĐIỀU HƯỚNG CÂU HỎI (QUESTION MATRIX SIDEBAR) */}
+            {/* CỘT TRÁI: BẢNG ĐIỀU HƯỚNG CÂU HỎI */}
             <aside
               className={`${
                 isSidebarOpen ? 'w-60' : 'w-12'
               } h-full bg-[#090E1C]/90 backdrop-blur-xl border-r border-indigo-500/20 flex flex-col transition-all duration-200 shrink-0`}
             >
-              {/* Tiêu đề cột Câu hỏi + Nút đóng gọn « */}
               <div className="p-3.5 border-b border-white/10 flex items-center justify-between">
                 {isSidebarOpen && (
                   <span className="text-xs font-extrabold text-slate-200 tracking-wide">
@@ -263,7 +374,6 @@ export default function ScoreReportModal({
 
               {isSidebarOpen && (
                 <div className="p-3.5 space-y-4 overflow-y-auto flex-1">
-                  {/* Hộp tổng kết Module: Đúng (Xanh) / Sai (Đỏ) / Tổng (Xám) */}
                   <div className="p-3 rounded-xl bg-slate-950/90 border border-cyan-400/35 shadow-inner flex items-center justify-between text-xs font-bold">
                     <span className="text-slate-200">Module 1</span>
                     <div className="font-mono text-xs tracking-tight">
@@ -275,7 +385,6 @@ export default function ScoreReportModal({
                     </div>
                   </div>
 
-                  {/* Bộ lọc nhanh: Tất cả / Câu sai / Câu đúng */}
                   <div className="grid grid-cols-3 gap-1 bg-slate-950 p-1 rounded-xl border border-white/10 text-[10px] font-bold">
                     {[
                       { id: 'all', label: 'Tất cả' },
@@ -297,7 +406,6 @@ export default function ScoreReportModal({
                     ))}
                   </div>
 
-                  {/* Lưới 4 cột các nút số câu hỏi (Xanh lá = Đúng, Đỏ = Sai) */}
                   <div className="grid grid-cols-4 gap-2">
                     {questions.map((q, idx) => {
                       if (statusFilter === 'wrong' && q.isCorrect) return null;
@@ -330,9 +438,8 @@ export default function ScoreReportModal({
               )}
             </aside>
 
-            {/* VÙNG NỘI DUNG 2 CỘT: ĐOẠN VĂN BÊN TRÁI & CÂU HỎI BÊN PHẢI */}
+            {/* VÙNG NỘI DUNG 2 CỘT */}
             <div className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
-              {/* NÚT TRÒN ĐỎ CHUYỂN CÂU TRƯỚC (<) NỔI BÊN MÉP TRÁI */}
               <button
                 type="button"
                 disabled={currentIdx === 0}
@@ -347,7 +454,6 @@ export default function ScoreReportModal({
                 <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
               </button>
 
-              {/* NÚT TRÒN ĐỎ CHUYỂN CÂU TIẾP (>) NỔI BÊN MÉP PHẢI */}
               <button
                 type="button"
                 disabled={currentIdx >= totalCount - 1}
@@ -362,10 +468,9 @@ export default function ScoreReportModal({
                 <ChevronRight className="w-5 h-5 stroke-[2.5]" />
               </button>
 
-              {/* CỘT GIỮA (TRÁI): ĐOẠN VĂN BÀI ĐỌC (PASSAGE) */}
+              {/* CỘT GIỮA (TRÁI): PASSAGE */}
               <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto px-8 py-6 lg:px-12 lg:py-8 border-b md:border-b-0 md:border-r border-indigo-500/20 bg-[#070B16]/75">
                 <div className="max-w-xl mx-auto space-y-4">
-                  {/* Dòng Breadcrumb đỏ/cam nhỏ phía trên đoạn văn giống ảnh mẫu */}
                   <div className="flex items-center gap-2 text-[11px] font-mono text-rose-400/90">
                     <span>{reportData.section || 'SAT Review'}</span>
                     <span>•</span>
@@ -380,7 +485,6 @@ export default function ScoreReportModal({
                     )}
                   </div>
 
-                  {/* Nội dung đoạn văn bản */}
                   <div className="text-[15.5px] text-slate-100 leading-[1.85] font-serif select-text">
                     <MathRenderer
                       text={questionPassage || 'Đề bài câu hỏi hiển thị ở cột bên phải.'}
@@ -391,10 +495,9 @@ export default function ScoreReportModal({
                 </div>
               </div>
 
-              {/* CỘT PHẢI: TRẠNG THÁI CORRECT/INCORRECT + CÂU HỎI + 4 ĐÁP ÁN + GIẢI THÍCH */}
+              {/* CỘT PHẢI: CÂU HỎI + 4 ĐÁP ÁN + GIẢI THÍCH */}
               <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto px-8 py-6 lg:px-12 lg:py-8 bg-[#0A1020]/80">
                 <div className="max-w-xl mx-auto space-y-5">
-                  {/* THANH TRẠNG THÁI: [1] ✔ CORRECT / ✖ INCORRECT + NÚT [ChatbotAI] */}
                   <div
                     className={`p-2 rounded-xl border flex items-center justify-between ${
                       currentQ.isCorrect
@@ -432,20 +535,16 @@ export default function ScoreReportModal({
                     </button>
                   </div>
 
-                  {/* Mã đề dưới thanh trạng thái */}
                   <div className="text-xs font-mono text-slate-400">
                     Mã đề: <span className="text-slate-200 font-semibold">{examCode}</span>
                   </div>
 
-                  {/* Câu hỏi chính (Question Stem) */}
                   <div className="text-[15.5px] text-white font-serif leading-relaxed">
                     <MathRenderer text={questionStem} />
                   </div>
 
-                  {/* Đường kẻ nét đứt ngăn cách giống ảnh mẫu */}
                   <div className="border-t border-dashed border-slate-700/80 my-2" />
 
-                  {/* DANH SÁCH 4 ĐÁP ÁN A, B, C, D */}
                   {optionsEntries.length > 0 ? (
                     <div className="space-y-3">
                       {optionsEntries.map(([letter, text]) => {
@@ -494,7 +593,6 @@ export default function ScoreReportModal({
                               </div>
                             </div>
 
-                            {/* Huy chương ruy-băng xanh ở góc phải đáp án đúng giống hệt ảnh mẫu */}
                             {isCorrectOption && (
                               <Award className="w-5 h-5 text-emerald-400 shrink-0" />
                             )}
@@ -506,7 +604,6 @@ export default function ScoreReportModal({
                       })}
                     </div>
                   ) : (
-                    /* Trường hợp câu trả lời điền khuyết (Grid-in Math) */
                     <div className="grid grid-cols-2 gap-3 text-xs">
                       <div className="p-3.5 rounded-xl bg-slate-900 border border-white/10">
                         <span className="text-slate-400 block mb-1">Câu trả lời của bạn:</span>
@@ -523,7 +620,6 @@ export default function ScoreReportModal({
                     </div>
                   )}
 
-                  {/* HỘP GIẢI THÍCH CHI TIẾT CỦA AI CO-PILOT */}
                   <AnimatePresence>
                     {showAiExplanation && currentQ.explanation && (
                       <motion.div

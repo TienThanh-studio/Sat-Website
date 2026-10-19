@@ -9,6 +9,8 @@ import vocabularyQuestions from '../data/questions/vocabulary.json';
 import novemberSatPrediction from '../data/questions/tests/november_sat_prediction.json';
 import verbalNovemberPrediction from '../data/questions/tests/verbal_november_prediction.json';
 import mathNovemberPrediction from '../data/questions/tests/math_november_prediction.json';
+import rhetoricalSynthesisBank from '../data/questions/rhetorical_synthesis.json';
+import mainIdeaBank from '../data/questions/main_idea.json';
 
 // Import 2 ngân hàng câu hỏi mới vừa được convert
 import geometryBankData from '../data/questions/geometry_trig_bank.json';
@@ -496,6 +498,34 @@ export const DEFAULT_CATEGORIES = [
     module1: mathNovemberPrediction.slice(0, 17),
     module2Hard: mathNovemberPrediction.slice(17, 34),
     module2Easy: mathNovemberPrediction.slice(17, 34)
+  },
+  {
+    id: 'rhetorical_synthesis_bank',
+    title: 'Rhetorical Synthesis (140 câu)',
+    description: 'Rèn luyện kỹ năng tổng hợp thông tin từ ghi chú để hoàn thành mục tiêu tu từ (Audience, Contrast, Similarity, Definition).',
+    section: 'Reading & Writing',
+    domain: 'Expression of Ideas',
+    skill: 'Rhetorical Synthesis',
+    totalQuestions: (rhetoricalSynthesisBank || []).length,
+    badge: '140 CÂU CHUẨN',
+    color: 'from-sky-500 to-indigo-600',
+    questions: (rhetoricalSynthesisBank || []).map((q, idx) =>
+      normalizeQuestionItem(q, 'Expression of Ideas', 'Rhetorical Synthesis', idx)
+    ),
+  },
+  {
+    id: 'main_idea_central_ideas_bank',
+    title: 'Central Ideas & Main Purpose (151 câu)',
+    description: 'Chinh phục dạng bài tìm ý chính (Central Idea), chủ đề bao quát (Main Topic) và mục đích văn bản (Main Purpose).',
+    section: 'Reading & Writing',
+    domain: 'Information and Ideas',
+    skill: 'Central Ideas and Details',
+    totalQuestions: (mainIdeaBank || []).length,
+    badge: '151 CÂU HOT',
+    color: 'from-amber-500 to-rose-600',
+    questions: (mainIdeaBank || []).map((q, idx) =>
+      normalizeQuestionItem(q, 'Information and Ideas', 'Central Ideas and Details', idx)
+    ),
   }
 ];
 

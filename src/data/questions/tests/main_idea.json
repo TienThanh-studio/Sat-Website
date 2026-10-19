@@ -1,0 +1,2098 @@
+[
+  {
+    "id": "mi_01",
+    "questionNumber": 1,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A common assumption among art historians is that the invention of photography in the mid-nineteenth century displaced the painted portrait in the public consciousness. The diminishing popularity of the portrait miniature, which coincided with the rise of photography, seems to support this claim. However, photography's impact on the portrait miniature may be overstated. Although records from art exhibitions in the Netherlands from 1820 to 1892 show a decrease in the number of both full-sized and miniature portraits submitted, this trend was established before the invention of photography.",
+    "question": "Based on the text, what can be concluded about the diminishing popularity of the portrait miniature in the nineteenth century?",
+    "options": {
+      "A": "Factors other than the rise of photography may be more directly responsible for the portrait miniature's decline.",
+      "B": "Although portrait miniatures became less common than photographs, they were widely regarded as having more artistic merit.",
+      "C": "The popularity of the portrait miniature likely persisted for longer than art historians have assumed.",
+      "D": "As demand for portrait miniatures decreased, portrait artists likely shifted their creative focus to photography."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn chỉ ra rằng xu hướng suy giảm tranh chân dung thu nhỏ đã bắt đầu từ trước khi nhiếp ảnh ra đời, vì vậy các yếu tố khác ngoài nhiếp ảnh có thể mới là nguyên nhân trực tiếp dẫn tới sự suy thoái này."
+  },
+  {
+    "id": "mi_02",
+    "questionNumber": 2,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Paleontologists searching for signs of ancient life have found many fossilized specimens of prehistoric human ancestors, including several from the Pleistocene era discovered in a geological formation in the Minatogawa quarry in Japan. However, to study the emergence of the earliest multicellular organisms to appear on Earth, researchers must turn elsewhere, such as to the Ediacaran geological formation at Mistaken Point in Canada. A UNESCO World Heritage Site, the 146-hectare reserve contains more than 10,000 fossils that together document a critical moment in evolutionary history.",
+    "question": "What does the text indicate about the geological formation at Mistaken Point?",
+    "options": {
+      "A": "It holds a greater number of fossils but from a smaller variety of species than the formation in the Minatogawa quarry does.",
+      "B": "It has provided evidence that the earliest human species may have emerged before the Pleistocene era.",
+      "C": "It is widely considered by paleontologists to be the most valuable source of information about prehistoric life forms.",
+      "D": "It contains specimens from an older time period than those found in the formation in the Minatogawa quarry."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mỏ đá Minatogawa chứa hóa thạch tổ tiên loài người thời Canh Tân (Pleistocene), trong khi Mistaken Point chứa hóa thạch của các sinh vật đa bào đầu tiên trên Trái Đất (kỷ Ediacaran), thuộc niên đại cổ xưa hơn rất nhiều."
+  },
+  {
+    "id": "mi_03",
+    "questionNumber": 3,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "To dye wool, Navajo (Diné) weaver Lillie Taylor uses plants and vegetables from Arizona, where she lives. For example, she achieved the deep reds and browns featured in her 2003 rug In the Path of the Four Seasons by using Arizona dock roots, drying and grinding them before mixing the powder with water to create a dye bath. To intensify the appearance of certain colors, Taylor also sometimes mixes in clay obtained from nearby soil.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Reds and browns are not commonly featured in most of Taylor's rugs.",
+      "B": "Taylor draws on local resources in the approach she uses to dye wool.",
+      "C": "Taylor finds it difficult to locate Arizona dock root in the desert.",
+      "D": "In the Path of the Four Seasons is widely acclaimed for its many colors and innovative weaving techniques."
+    },
+    "correctAnswer": "B",
+    "explanation": "Ý chính của đoạn văn là nghệ nhân Lillie Taylor tận dụng triệt để các nguồn nguyên liệu tự nhiên tại địa phương (rễ cây bản địa Arizona, đất sét gần nhà) để nhuộm len."
+  },
+  {
+    "id": "mi_04",
+    "questionNumber": 4,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In many of his sculptures, artist Richard Hunt uses broad forms rather than extreme accuracy to hint at specific people or ideas. In his first major work, Arachne (1956), Hunt constructed the mythical character Arachne, a weaver who was changed into a spider, by welding bits of steel together into something that, although vaguely human, is strange and machine-like. And his large bronze sculpture The Light of Truth (2021) commemorates activist and journalist Ida B. Wells using mainly flowing, curved pieces of metal that create stylized flame.",
+    "question": "Which choice best states the text's main idea about Hunt?",
+    "options": {
+      "A": "He often depicts the subjects of his sculptures using an unrealistic style.",
+      "B": "He uses different kinds of materials depending on what kind of sculpture he plans to create.",
+      "C": "He tends to base his art on important historical figures rather than on fictional characters.",
+      "D": "He has altered his approach to sculpture over time, and his works have become increasingly abstract."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nhấn mạnh Hunt dùng các hình khối khái quát thay vì mô tả chính xác thực tế (\"broad forms rather than extreme accuracy\"), tạo ra các tác phẩm kỳ dị như máy móc hoặc ngọn lửa cách điệu mang phong cách phi hiện thực."
+  },
+  {
+    "id": "mi_05",
+    "questionNumber": 5,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Robert Louis Stevenson's 1883 novel Treasure Island. Bill is a sailor staying at the Admiral Benbow, an inn run by the narrator's parents.\nEvery day when [Bill] came back from his stroll he would ask if any seafaring men had gone by along the road. At first we thought it was the want of company of his own kind that made him ask this question, but at last we began to see he was desirous to avoid them. When a seaman did [stay] at the Admiral Benbow (as now and then some did) he would look in at him through the curtained door before he entered the parlour; and he was always sure to be as silent as a mouse when any such was present.",
+    "question": "According to the text, why does Bill regularly ask about \"seafaring men\"?",
+    "options": {
+      "A": "He's hoping to find an old friend and fellow sailor.",
+      "B": "He's trying to secure a job as part of the crew on a new ship.",
+      "C": "He isn't sure that other guests at the inn will be welcoming of sailors.",
+      "D": "He doesn't want to encounter any other sailor unexpectedly."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn nêu rõ Bill hỏi thăm về những người đi biển vì ông ta muốn né tránh họ (\"desirous to avoid them\"), quan sát qua rèm và giữ im lặng tuyệt đối khi có thủy thủ xuất hiện để tránh chạm mặt bất ngờ."
+  },
+  {
+    "id": "mi_06",
+    "questionNumber": 6,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The ice melted on a Norwegian mountain during a particularly warm summer in 2019, revealing a 1,700-year-old sandal to a mountaineer looking for artifacts. The sandal would normally have degraded quickly, but it was instead well preserved for centuries by the surrounding ice. According to archaeologist Espen Finstad and his team, the sandal, like those worn by imperial Romans, wouldn't have offered any protection from the cold in the mountains, so some kind of insulation, like fabric or animal skin, would have needed to be worn on the feet with the sandal.",
+    "question": "What does the text indicate about the discovery of the sandal?",
+    "options": {
+      "A": "Temperatures contributed to both protecting and revealing the sandal.",
+      "B": "The discovery revealed that the Roman Empire had more influence on Norway than archaeologists previously assumed.",
+      "C": "Archaeologists would have found the sandal eventually without help from the general public.",
+      "D": "The sandal would have degraded if it hadn't been removed from the ice."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nhiệt độ đóng băng giá lạnh giúp bảo quản chiếc dép nguyên vẹn suốt nhiều thế kỷ, và đợt nhiệt độ ấm áp bất thường vào mùa hè năm 2019 làm tan băng đã làm lộ ra chiếc dép."
+  },
+  {
+    "id": "mi_07",
+    "questionNumber": 7,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Businesses selling clothing and other fashion items face obstacles in trying to forecast how much product to order: tastes and styles change quickly, while manufacturing clothing takes a significant amount of time. Researchers Youran Fu and Marshall Fisher have found that combining sellers' own data with information gathered from social media can dramatically improve the accuracy of such forecasts by 24 to 57 percent in the cases they directly studied. Better predictions mean demand is easier to meet without retailers becoming overstocked.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Using multiple data sources can enhance the ability of sellers in the fashion industry to anticipate demand.",
+      "B": "Social media is revolutionizing how both sellers and researchers view the fashion industry.",
+      "C": "Becoming overstocked is the main preoccupation of sellers trying to forecast demand for fashion items.",
+      "D": "Retailers can use their own data to accurately predict how tastes and styles are evolving."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của bài viết là việc kết hợp nhiều nguồn dữ liệu (dữ liệu nội bộ của người bán cùng dữ liệu mạng xã hội) giúp cải thiện đáng kể khả năng dự báo nhu cầu trong ngành thời trang."
+  },
+  {
+    "id": "mi_08",
+    "questionNumber": 8,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The Great Barrier Reef, a massive coral system off Australia's coast, is considered one of the world's most diverse marine ecosystems. Composed of thousands of individual reefs and islands, its health has become a major concern for marine biologists. The deterioration is largely attributed to rising sea temperatures, which cause a phenomenon known as coral bleaching. It is believed that significant global efforts to reduce carbon emissions are crucial for the reef to begin its recovery.",
+    "question": "According to the text, why are marine biologists concerned about the Great Barrier Reef?",
+    "options": {
+      "A": "Its condition is worsening due to increased ocean warmth.",
+      "B": "It is no longer capable of supporting new coral.",
+      "C": "It is being damaged by efforts to reduce carbon emissions.",
+      "D": "Its thousands of individual reefs are starting to break apart."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu rõ sự suy thoái của rạn san hô phần lớn là do nhiệt độ nước biển tăng cao gây ra hiện tượng tẩy trắng san hô (\"deterioration is largely attributed to rising sea temperatures\")."
+  },
+  {
+    "id": "mi_09",
+    "questionNumber": 9,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In the mid-1970s, the punk rock movement emerged, characterized by its raw, minimalist sound and anti-establishment lyrics. Bands often utilized fast tempos, distorted guitars, and a confrontational stage presence. The movement was initially met with widespread criticism from the mainstream media, which often dismissed it as noisy and lacking musical talent. However, cultural critics offer a different perspective. They posit that punk rock was a significant artistic response to the period's social and economic instability, acting as a powerful outlet for alienated youth to challenge the polished, corporate nature of contemporary rock music.",
+    "question": "According to the text, what is the perspective of cultural critics on the punk rock movement?",
+    "options": {
+      "A": "They believe it was a popular movement that continues to dominate the music industry in the present day.",
+      "B": "They see it as an important cultural expression that reacted against societal issues and the music industry's norms.",
+      "C": "They think the movement was praised by the mainstream for its technical musical skill and talent.",
+      "D": "They argue that its sound was largely indistinguishable from the popular corporate rock of the same era."
+    },
+    "correctAnswer": "B",
+    "explanation": "Các nhà phê bình văn hóa xem punk rock là phản ứng nghệ thuật quan trọng trước những bất ổn kinh tế - xã hội đương thời và là công cụ thách thức các quy chuẩn thương mại của nền âm nhạc."
+  },
+  {
+    "id": "mi_10",
+    "questionNumber": 10,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A contraction of \"you all,\" the pronoun \"y'all\" has long been used as a plural version of \"you\" in the South and in Black communities around the US. In recent decades, most other English-speaking communities in the US have begun to use \"y'all.\" What explains its rise in popularity? Many varieties of English have no pronoun that specifically addresses more than one person and instead must use \"you\" to address both one person and more than one. But \"y'all\" always refers to two or more people. As a result, it conveys the speaker's meaning more precisely than \"you\" can.",
+    "question": "According to the text, what is the main reason for the growing popularity of \"y'all\"?",
+    "options": {
+      "A": "Its historical usage in the South and in Black communities has made it more fashionable nationwide.",
+      "B": "It provides a clear distinction between addressing a single person and multiple people, which standard \"you\" does not.",
+      "C": "The phrase \"you all\" from which it is contracted is considered too formal for modern conversation.",
+      "D": "It has been officially recognized as the standard plural pronoun for \"you\" across the United States."
+    },
+    "correctAnswer": "B",
+    "explanation": "Nguyên nhân đại từ \"y'all\" ngày càng phổ biến là vì nó luôn chỉ từ 2 người trở lên, giúp phân biệt rõ ràng giữa ngôi thứ hai số ít và số nhiều mà từ \"you\" thông thường không làm được."
+  },
+  {
+    "id": "mi_11",
+    "questionNumber": 11,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Astronomer Evelyn Reed and her team analyzed data from a recently launched space telescope. Their analysis confirmed the existence of a celestial body in a distant galaxy, which was identified as a previously unrecorded type of exoplanet. The researchers noted that this exoplanet, XO-2b, is a gas giant that orbits its star so closely that its year is equivalent to only two Earth days, a characteristic not seen in our solar system's planets.",
+    "question": "Based on the text, which choice best describes the newly identified exoplanet?",
+    "options": {
+      "A": "It is frequently observed by many different astronomers.",
+      "B": "It completes a full orbit around its star in a very short amount of time.",
+      "C": "It is smaller than any of the planets that exist in our solar system.",
+      "D": "It is located within our own solar system."
+    },
+    "correctAnswer": "B",
+    "explanation": "Hành tinh khí khổng lồ XO-2b quay quanh ngôi sao chủ ở cự ly rất gần đến mức một chu kỳ quay (một năm) của nó chỉ kéo dài tương đương 2 ngày trên Trái Đất."
+  },
+  {
+    "id": "mi_12",
+    "questionNumber": 12,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "To support local food banks, Maria Flores established the Green Sprouts Community Garden, which cultivates a wide range of organic produce, including everything from hardy root vegetables to delicate herbs. Through the garden's 'Soil to Supper' initiative, Flores offers workshops where volunteers can learn fundamental gardening skills before being given the opportunity to manage their own plot and harvest the crops.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The Green Sprouts garden focuses primarily on growing delicate herbs rather than common vegetables for local food banks.",
+      "B": "Maria Flores started the 'Soil to Supper' program to teach professional farmers how to grow organic produce.",
+      "C": "The Green Sprouts garden provides a way for community members to both contribute to a local cause and actively participate in food production.",
+      "D": "Volunteers are asked to manage a garden plot to demonstrate the challenges of large-scale farming."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của bài viết là khu vườn cộng đồng Green Sprouts tạo cơ hội cho người dân địa phương vừa đóng góp từ thiện cho các ngân hàng thực phẩm, vừa trực tiếp tham gia trải nghiệm trồng trọt sản xuất."
+  },
+  {
+    "id": "mi_13",
+    "questionNumber": 13,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In coastal regions, lighthouses have historically served as crucial beacons for maritime navigation, guiding ships safely to shore. Their keepers were responsible not only for maintaining the light but also for providing aid to vessels in distress. While modern technologies like GPS have largely supplanted their primary function, lighthouses remain highly valued as historical landmarks that preserve the maritime heritage of their communities.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Despite their role in navigation becoming less critical, lighthouses continue to be important as symbols of cultural heritage.",
+      "B": "Although lighthouses had many functions, their keepers were best known for providing aid.",
+      "C": "Lighthouses have been guiding ships safely within their communities for centuries.",
+      "D": "Modern technology can now perform the tasks that lighthouse keepers were once responsible for."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nhấn mạnh rằng dù công nghệ GPS đã thay thế vai trò dẫn đường của hải đăng, chúng vẫn giữ vị trí đặc biệt như những di tích lịch sử bảo tồn di sản văn hóa hàng hải."
+  },
+  {
+    "id": "mi_14",
+    "questionNumber": 14,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The technique of linear perspective, which creates an illusion of three-dimensional space on a two-dimensional surface, was a major innovation in early Renaissance painting. The first known treatise on the subject was written by Leon Battista Alberti around 1435. For a long time, this development was seen as a purely Renaissance invention, a rediscovery of classical principles. However, some art historians now theorize that Renaissance painters may have been influenced by the advanced spatial concepts used by medieval Islamic artists, whose works on optics and geometry were being translated in Europe at the time.",
+    "question": "According to the text, what do some art historians theorize about early Renaissance painting?",
+    "options": {
+      "A": "Renaissance painting may have drawn inspiration for its spatial techniques from Islamic art.",
+      "B": "Renaissance painting was valued more by its creators than by its patrons.",
+      "C": "Renaissance painting was a guarded secret among a small group of artists.",
+      "D": "Renaissance painting was developed to be taught in art schools across Europe."
+    },
+    "correctAnswer": "A",
+    "explanation": "Các nhà sử học nghệ thuật đưa ra giả thuyết rằng các họa sĩ thời kỳ Phục hưng có thể đã chịu ảnh hưởng và lấy cảm hứng về kỹ thuật không gian từ nghệ thuật và các công trình quang học, hình học Hồi giáo thời Trung cổ."
+  },
+  {
+    "id": "mi_15",
+    "questionNumber": 15,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is an excerpt from a review of a new restaurant, \"The Gilded Spoon.\" When critics noted that the city's culinary scene had become predictable and overly reliant on fleeting trends, many chefs were quick to defend their establishments, pointing to their fresh ingredients and loyal customer bases. Yet, the critics consistently highlighted The Gilded Spoon as a refreshing exception, a place that masterfully blended traditional techniques with bold, inventive flavors.",
+    "question": "What does the text suggest about The Gilded Spoon?",
+    "options": {
+      "A": "It is a very new restaurant that has not yet developed a loyal customer base.",
+      "B": "It is considered a notable standard-bearer in the city's culinary scene.",
+      "C": "It has been openly criticized for its reliance on fleeting trends.",
+      "D": "It is one of many restaurants that follows traditional cooking techniques exclusively."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn miêu tả The Gilded Spoon như một ngoại lệ sáng giá, đứng ra làm chuẩn mực tiêu biểu cho ẩm thực thành phố nhờ sự kết hợp tài tình giữa kỹ thuật cổ truyền và hương vị sáng tạo."
+  },
+  {
+    "id": "mi_16",
+    "questionNumber": 16,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The chemist Rosalind Franklin made a critical contribution to the understanding of DNA's molecular structure in the twentieth century, yet her work has often been underappreciated outside of scientific circles. One reason for Franklin's relative obscurity is the profound fame of her contemporaries. Specifically, the scientists James Watson and Francis Crick have so captured the public's imagination for their discovery of the double helix that Franklin and other researchers from the period are frequently overshadowed, despite the foundational importance of their experimental work.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Franklin's vital work is not as recognized as it ought to be because Watson and Crick receive most of the public's credit.",
+      "B": "Throughout her career, Franklin's findings were published in scientific journals much more regularly than the findings of Watson and Crick.",
+      "C": "Franklin studied some of the same molecular structures as Watson and Crick but used different laboratory equipment than they did.",
+      "D": "Few of Franklin's research findings are cited today because she only worked in the field for a short period of time."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản là những đóng góp nền tảng của Rosalind Franklin chưa được công chúng ghi nhận xứng tầm do ánh hào quang quá lớn của Watson và Crick đã làm lu mờ bà."
+  },
+  {
+    "id": "mi_17",
+    "questionNumber": 17,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Since its launch last year, the \"AquaRenew\" water filter-a portable device designed to purify water using a novel bio-enzyme process-has become a celebrated example of sustainable technology. Its inventor, Dr. Aris Thorne, intended the design, which requires no electricity, to be a model for providing clean water in remote areas. However, the concept has met with some skepticism; researchers note that although the bio-enzymes were specifically engineered for the device, it is not yet certain if they will remain effective over prolonged, continuous use in varied water conditions.",
+    "question": "According to the text, why are some researchers skeptical of the concept behind AquaRenew?",
+    "options": {
+      "A": "Certain crucial components of AquaRenew's design are challenging to manufacture outside of a laboratory.",
+      "B": "The variety of contaminants the AquaRenew filter can remove is less than what Dr. Thorne had initially claimed.",
+      "C": "The production of AquaRenew was no more sustainable than the production of conventional water filters.",
+      "D": "It is uncertain whether AquaRenew can maintain its purification ability over the long term."
+    },
+    "correctAnswer": "D",
+    "explanation": "Các nhà nghiên cứu còn hoài nghi vì chưa thể chắc chắn liệu các enzyme sinh học có duy trì được hiệu quả lọc nước sau thời gian dài sử dụng liên tục trong các điều kiện nguồn nước khác nhau hay không."
+  },
+  {
+    "id": "mi_18",
+    "questionNumber": 18,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Long a subject of scientific study, the glowing lure of the deep-sea anglerfish illuminates the ocean depths. Biologists now theorize that the lure's light-production mechanism is analogous to that of a firefly. In fireflies, an internal chemical reaction produces the glow. While the anglerfish also utilizes a biochemical process to create light, it cannot do so on its own. The light is instead generated by a colony of symbiotic, bioluminescent bacteria that the fish hosts in its lure.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Biologists think that the light from an anglerfish's lure and the glow from a firefly are created by a similar process even though the anglerfish, unlike the firefly, uses bacteria to produce light.",
+      "B": "The primary difference between the anglerfish's light and the firefly's light is that unlike the anglerfish's lure, the firefly's glow is produced by a chemical reaction.",
+      "C": "The symbiotic bacteria found in an anglerfish's lure appear to have developed their glowing ability long before the light-producing mechanism in fireflies appeared.",
+      "D": "Biologists don't understand how the anglerfish's lure glows when the fish doesn't have the internal ability to generate its own light through a chemical reaction."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản: cơ chế phát quang của cá vây chân và đom đóm tương tự nhau về mặt hóa sinh, điểm khác biệt duy nhất là cá vây chân phải nhờ cậy vào vi khuẩn cộng sinh trú ngụ trên mồi nhử để tạo ra ánh sáng."
+  },
+  {
+    "id": "mi_19",
+    "questionNumber": 19,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Using deep-sea submersibles, a team of marine biologists studied the bioluminescent patterns of the crystal jellyfish (Aequorea victoria), a species known for its unique light-emitting properties. Surprisingly, the study revealed a light display with no repeating sequence or predictable rhythm. The researchers had expected the patterns to be similar to the regular, consistent flashes observed in other bioluminescent marine species.",
+    "question": "According to the text, what was surprising about the researchers' study of the crystal jellyfish's bioluminescence?",
+    "options": {
+      "A": "It showed a dimmer light display than expected.",
+      "B": "It proved that previous studies of the light display were flawed.",
+      "C": "It produced light patterns similar to those of other bioluminescent species.",
+      "D": "It revealed a light display that wasn't predictable."
+    },
+    "correctAnswer": "D",
+    "explanation": "Điều bất ngờ đối với các nhà nghiên cứu là các xung ánh sáng của sứa pha lê không hề có chu kỳ lặp lại hay nhịp điệu có thể dự đoán trước được như ở các loài sinh vật biển phát quang khác."
+  },
+  {
+    "id": "mi_20",
+    "questionNumber": 20,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Paleontologists have unearthed a fossilized skeleton in Argentina that could be the oldest known specimen of a giant marine reptile. Geological analysis of the surrounding rock strata indicated the fossil likely dates to the late Jurassic period. Lead paleontologist Dr. Elena Ramirez stated that the find will be crucial for understanding the evolution of large marine predators in the Southern Hemisphere.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "Predators of the Jurassic period",
+      "B": "A fossil discovery in Argentina",
+      "C": "A method for analyzing rock strata",
+      "D": "The scientific work of Dr. Elena Ramirez"
+    },
+    "correctAnswer": "B",
+    "explanation": "Chủ đề bao quát xuyên suốt đoạn văn là phát hiện hóa thạch bò sát biển khổng lồ cổ xưa tại Argentina."
+  },
+  {
+    "id": "mi_21",
+    "questionNumber": 21,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Environmental scientist Rachel Carson is remembered for her distinguished career as a government biologist, but her 1962 book Silent Spring is arguably her most significant work. The book, which details the ecological dangers of widespread pesticide use, was novel in its approach for the era. It blended meticulous scientific research with compelling, lyrical prose and a direct call for social action, challenging the established norms of objective science communication. Widely credited with sparking the modern environmental movement, the book and its author have profoundly influenced modern methods of writing about science and environmental advocacy.",
+    "question": "Which choice best describes the main idea of the text?",
+    "options": {
+      "A": "Carson's groundbreaking book Silent Spring is an important contribution to environmental writing and advocacy.",
+      "B": "Carson held many different jobs throughout her career, including government biologist and author.",
+      "C": "Carson's influential book Silent Spring did not receive the attention it deserved when it was published in 1962.",
+      "D": "Carson was a talented writer whose work inspired many people to become professional scientists."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu bật cuốn sách 'Silent Spring' của Rachel Carson là công trình đột phá, kết hợp nghiên cứu khoa học với văn phong truyền cảm và lời kêu gọi hành động xã hội, tạo tiền đề và đóng góp to lớn cho phong trào bảo vệ môi trường hiện đại."
+  },
+  {
+    "id": "mi_22",
+    "questionNumber": 22,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Asphalt shingles are common dark-colored roofing materials. Urban areas with a high density of these roofs often exhibit higher air temperatures, a phenomenon known as the urban heat island effect. A study by Lena Petrova and her team found that the heat absorbed by the dark surface of the shingles cannot be the sole reason for this temperature increase, as the level of absorption required to produce the observed effect is much higher than what is measured in these areas. However, they discovered that volatile organic compounds (VOCs), chemicals frequently released from heated asphalt, are emitted into the air from the shingles and have a much more potent heat-trapping effect.",
+    "question": "According to the text, what did Petrova and her team discover about volatile organic compounds (VOCs)?",
+    "options": {
+      "A": "Their impact on increasing local warmth is greater than that of the roofing material's heat-absorbing properties.",
+      "B": "They are substances that are primarily made of water.",
+      "C": "They are useful in lowering the surface temperature of the asphalt.",
+      "D": "They function as a tool to determine the solar absorption rates of roofing."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nghiên cứu chỉ ra các hợp chất hữu cơ dễ bay hơi (VOCs) bốc lên từ mái ngói nhựa đường bị nung nóng có khả năng giữ nhiệt mạnh hơn nhiều so với việc chỉ hấp thụ nhiệt bề mặt của vật liệu lợp mái[cite: 10]."
+  },
+  {
+    "id": "mi_23",
+    "questionNumber": 23,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Recently, marine biologists analyzed acoustic data gathered by a new deep-ocean hydrophone network to study the songs of a specific humpback whale population. The recordings indicate that all the new, complex song patterns originated from a single pod of whales. This finding was unexpected for the researchers, who had assumed that song innovation would be a decentralized process occurring throughout the entire population. Now, the team posits that this particular pod may function as the primary cultural source for the population's vocalizations.",
+    "question": "According to the text, what was unexpected for researchers studying the acoustic data from the hydrophone network?",
+    "options": {
+      "A": "The ocean's ambient noise levels have been increasing.",
+      "B": "There were several distinct dialects being sung simultaneously.",
+      "C": "The new hydrophone network recorded fewer songs than the biologists had anticipated.",
+      "D": "The creation of new song patterns was confined to a small group of whales."
+    },
+    "correctAnswer": "D",
+    "explanation": "Điều bất ngờ đối với các nhà nghiên cứu là các giai điệu bài hát mới và phức tạp chỉ bắt nguồn từ một đàn cá voi duy nhất thay vì được sáng tạo rải rác trong toàn bộ quần thể như dự đoán ban đầu[cite: 10]."
+  },
+  {
+    "id": "mi_24",
+    "questionNumber": 24,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from a biography of the avant-garde composer Julian Vance. Vance was an artist of uncompromising vision. His compositions, whether for solo piano or full orchestra, were marked by a harmonic dissonance that was, for many listeners, no less than unsettling. This characteristic led to his work being frequently sidestepped by concert programmers. Vance was well aware of this reaction from the musical establishment, and he seemed to revel in it.",
+    "question": "Based on the text, what is true about the concert programmers?",
+    "options": {
+      "A": "They try to avoid including pieces that Vance would find disagreeable.",
+      "B": "They lack sufficient opportunity to schedule performances of Vance's work.",
+      "C": "They are too absorbed in their own compositions to feature Vance's music.",
+      "D": "They probably consider Vance's musical style unsuitable for their audiences."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn nêu rõ âm nhạc của Vance mang sự bất hòa âm và gây cảm giác khó chịu cho nhiều thính giả, khiến những người lập chương trình hòa nhạc thường xuyên né tránh tác phẩm của ông vì cho rằng không phù hợp với thị hiếu khán giả[cite: 10]."
+  },
+  {
+    "id": "mi_25",
+    "questionNumber": 25,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Dogs can identify their owners by scent alone. To test the precision of this ability, researcher Mei Lin and her team presented dogs with two fabric samples. They determined the dogs' level of interest by timing how long each dog sniffed at the fabric. The dogs showed minimal interest when presented with two samples from the same unwashed shirt belonging to their owner, but they spent a significantly longer time sniffing when one of the samples was from a different person's shirt.",
+    "question": "According to the text, how did the researchers determine the level of interest displayed by the dogs in the study?",
+    "options": {
+      "A": "They measured the amount of time each dog spent smelling a fabric sample.",
+      "B": "They observed how each dog reacted to the scent of another dog.",
+      "C": "They recorded whether each dog tried to play with its owner.",
+      "D": "They counted how many times each dog wagged its tail."
+    },
+    "correctAnswer": "A",
+    "explanation": "Văn bản nêu rõ nhóm nghiên cứu đo lường mức độ quan tâm của chó bằng cách bấm giờ xem mỗi con ngửi mẫu vải trong bao lâu ('timing how long each dog sniffed at the fabric')[cite: 10]."
+  },
+  {
+    "id": "mi_26",
+    "questionNumber": 26,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Believing that living in an impractical space can heighten awareness and even improve health, conceptual artists Madeline Gins and Shusaku Arakawa designed an apartment building in Japan to be more fanciful than functional. A kitchen counter is chest-high on one side and knee-high on the other; a ceiling has a door to nowhere. The effect is disorienting but invigorating: after four years there, filmmaker Nobu Yamaoka reported significant health benefits.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Although inhabiting a home surrounded by fanciful features such as those designed by Gins and Arakawa can be rejuvenating, it is unsustainable.",
+      "B": "Designing disorienting spaces like those in the Gins and Arakawa building is the most effective way to create a physically stimulating environment.",
+      "C": "As a filmmaker, Yamaoka has long supported the designs of conceptual artists such as Gins and Arakawa.",
+      "D": "Although impractical, the design of the apartment building by Gins and Arakawa may improve the well-being of the building's residents."
+    },
+    "correctAnswer": "D",
+    "explanation": "Ý chính của văn bản là dù thiết kế căn hộ của Gins và Arakawa phi thực tế và kỳ dị, nó lại mang lại tác động tích cực đến nhận thức và sức khỏe thể chất/tinh thần của cư dân sinh sống[cite: 10]."
+  },
+  {
+    "id": "mi_27",
+    "questionNumber": 27,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Biologists have predicted that birds' feather structures vary with habitat temperature, but this hadn't been tested in mountain environments. Ornithologist Sahas Barve studied feathers from 249 songbird species inhabiting different elevations—and thus experiencing different temperatures in the Himalaya Mountains. He found that feathers of high-elevation species not only have a greater proportion of warming downy sections to flat and smooth sections than do feathers of low-elevation species, but high-elevation species' feathers also tend to be longer, providing a thicker layer of insulation.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Barve's investigation shows that some species of Himalayan songbirds have evolved feathers that better regulate body temperature than do the feathers of other species, contradicting previous predictions.",
+      "B": "Barve found an association between habitat temperature and feather structure among Himalayan songbirds, lending new support to a general prediction.",
+      "C": "Barve discovered that songbirds have adapted to their environment by growing feathers without flat and smooth sections, complicating an earlier hypothesis.",
+      "D": "The results of Barve's study suggest that the ability of birds to withstand cold temperatures is determined more strongly by feather length than feather structure, challenging an established belief."
+    },
+    "correctAnswer": "B",
+    "explanation": "Nghiên cứu của Barve trên các loài chim ở dãy Himalaya đã tìm thấy mối liên hệ rõ rệt giữa nhiệt độ môi trường sống (theo độ cao) và cấu trúc lông, bổ sung bằng chứng ủng hộ giả thuyết chung trước đó[cite: 10]."
+  },
+  {
+    "id": "mi_28",
+    "questionNumber": 28,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "During a pedestrian trip last summer, through one or two of the river counties of New York, I found myself, as the day declined, somewhat embarrassed about the road I was pursuing. The land undulated very remarkably; and my path, for the last hour, had wound about and about so confusedly, in its effort to keep in the valleys, that I no longer knew in what direction lay the sweet village of B--, where I had determined to stop for the night.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The narrator remembers a trip he took and admits to getting lost.",
+      "B": "The narrator recalls fond memories of a journey that he took through some beautiful river counties.",
+      "C": "The narrator describes what he saw during a long trip through a frequently visited location.",
+      "D": "The narrator explains the difficulties he encountered on a trip and how he overcame them."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn miêu tả người kể chuyện nhớ lại chuyến đi bộ mùa hè năm ngoái và thừa nhận bản thân đã bị lạc đường khi trời dần tối, không còn xác định được phương hướng đến ngôi làng định nghỉ đêm[cite: 10]."
+  },
+  {
+    "id": "mi_29",
+    "questionNumber": 29,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A contraction of \"you all,\" the pronoun \"y'all\" has long been used as a plural version of \"you\" in the South and in Black communities around the US. In recent decades, most other English-speaking communities in the US have begun to use \"y'all.\" What explains its rise in popularity? Many varieties of English have no pronoun that specifically addresses more than one person and instead must use \"you\" to address both one person and more than one. But \"y'all\" always refers to two or more people. As a result, it conveys the speaker's meaning more precisely than \"you\" can.",
+    "question": "Which question does the text most directly attempt to answer?",
+    "options": {
+      "A": "How many other plural versions of the pronoun \"you\" are there in English, besides \"y'all\"?",
+      "B": "Why has the pronoun \"y'all\" become more widely used in the US?",
+      "C": "When was the first recorded use of the pronoun \"y'all\" in the English language?",
+      "D": "Is \"y'all\" commonly used in English-speaking regions of the world besides the US?"
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn đặt ra câu hỏi trực tiếp: 'What explains its rise in popularity?' và tập trung làm sáng tỏ lý do vì sao đại từ 'y'all' lại ngày càng được sử dụng rộng rãi khắp nước Mỹ[cite: 10]."
+  },
+  {
+    "id": "mi_30",
+    "questionNumber": 30,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In 1934 physicist Eugene Wigner posited the existence of a crystal consisting entirely of electrons in a honeycomb-like structure. The so-called Wigner crystal remained largely conjecture, however, until Feng Wang and colleagues announced in 2021 that they had captured an image of one. The researchers trapped electrons between two semiconductors and then cooled the apparatus, causing the electrons to settle into a crystalline structure. By inserting an ultrathin sheet of graphene above the crystal, the researchers obtained an impression—the first visual confirmation of the Wigner crystal.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Researchers have obtained the most definitive evidence to date of the existence of the Wigner crystal.",
+      "B": "Researchers have identified an innovative new method for working with unusual crystalline structures.",
+      "C": "Graphene is the most important of the components required to capture an image of a Wigner crystal.",
+      "D": "It's difficult to acquire an image of a Wigner crystal because of the crystal's honeycomb structure."
+    },
+    "correctAnswer": "A",
+    "explanation": "Văn bản nêu bật thành tựu năm 2021 của nhóm nghiên cứu khi lần đầu tiên ghi lại được hình ảnh trực quan, cung cấp bằng chứng rõ ràng và xác thực nhất từ trước đến nay về sự tồn tại của tinh thể Wigner[cite: 10]."
+  },
+  {
+    "id": "mi_31",
+    "questionNumber": 31,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Philadelphia's Black Pearl Chamber Orchestra, founded by Jeri Lynne Johnson, performs classical music, from well-known compositions by Beethoven to contemporary works by Jessie Montgomery. For the orchestra's iConduct! program, Johnson invites community members to learn some basic elements of conducting and then experience conducting the Black Pearl orchestra themselves.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The Black Pearl orchestra performs music from all over the world but mostly performs music composed by Philadelphians.",
+      "B": "Johnson founded the Black Pearl orchestra to perform classical music by contemporary artist Jessie Montgomery.",
+      "C": "The Black Pearl orchestra gives community members the chance to both listen to and participate in classical music performance.",
+      "D": "Johnson has community members conduct an orchestra to demonstrate how difficult the task is."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn trình bày việc dàn nhạc Black Pearl không chỉ biểu diễn âm nhạc cổ điển cho công chúng thưởng thức mà còn mở chương trình iConduct! giúp người dân trải nghiệm tự tay chỉ huy dàn nhạc[cite: 10]."
+  },
+  {
+    "id": "mi_32",
+    "questionNumber": 32,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In West Africa, jalis have traditionally been keepers of information about family histories and records of important events. They have often served as teachers and advisers, too. New technologies may have changed some aspects of the role today, but jalis continue to be valued for knowing and protecting their peoples' stories.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Even though there have been some changes in their role, jalis continue to preserve their communities' histories.",
+      "B": "Although jalis have many roles, many of them like teaching best.",
+      "C": "Jalis have been entertaining the people within their communities for centuries.",
+      "D": "Technology can now do some of the things jalis used to be responsible for."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản là mặc dù thời đại và công nghệ mới có làm thay đổi một số khía cạnh, các jali ở Tây Phi vẫn giữ trọn vai trò truyền thống được coi trọng là lưu giữ lịch sử và các câu chuyện của cộng đồng[cite: 10]."
+  },
+  {
+    "id": "mi_33",
+    "questionNumber": 33,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "To dye wool, Navajo (Diné) weaver Lillie Taylor uses plants and vegetables from Arizona, where she lives. For example, she achieved the deep reds and browns featured in her 2003 rug In the Path of the Four Seasons by using Arizona dock roots, drying and grinding them before mixing the powder with water to create a dye bath. To intensify the appearance of certain colors, Taylor also sometimes mixes in clay obtained from nearby soil.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Reds and browns are not commonly featured in most of Taylor's rugs.",
+      "B": "Taylor draws on local resources in the approach she uses to dye wool.",
+      "C": "Taylor finds it difficult to locate Arizona dock root in the desert.",
+      "D": "In the Path of the Four Seasons is widely acclaimed for its many colors and innovative weaving techniques."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn khẳng định cách tiếp cận của Lillie Taylor là khai thác các nguồn tài nguyên thiên nhiên sẵn có tại địa phương (rễ cây bản địa Arizona, đất sét gần nhà) để nhuộm màu cho len[cite: 10]."
+  },
+  {
+    "id": "mi_34",
+    "questionNumber": 34,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "At over a thousand pages across two volumes, The Fifty-Year Mission, compiled by Edward Gross and Mark A. Altman, is presented as the \"complete, uncensored, unauthorized oral history\" as told by the people behind the media franchise Star Trek. The work aspires to be comprehensive by, for example, including accounts from cast and crew members of every Star Trek television series and film to date. But while The Fifty-Year Mission is clearly a unique and valuable resource, it has a shortcoming common among oral histories: it lacks a clear authorial point of view that could otherwise unite the various accounts into a cohesive whole.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The compilers of The Fifty-Year Mission had lofty goals for their oral history of the Star Trek franchise, but the published work lacks information about many key events in the franchise's history.",
+      "B": "The Fifty-Year Mission includes more accounts from people involved with Star Trek television shows than it does from people involved with Star Trek films.",
+      "C": "The large amount of material compiled into The Fifty-Year Mission is surprising given that many of the people involved in the Star Trek franchise did not participate in the oral history project.",
+      "D": "The Fifty-Year Mission represents a worthwhile attempt to thoroughly recount the history of the Star Trek franchise, but its approach has an important limitation."
+    },
+    "correctAnswer": "D",
+    "explanation": "Ý chính của văn bản: cuốn sách là nỗ lực ghi chép lịch sử thương hiệu Star Trek đồ sộ và đáng giá, nhưng cách tiếp cận lịch sử truyền miệng của nó bộc lộ nhược điểm lớn là thiếu góc nhìn tác giả gắn kết[cite: 10]."
+  },
+  {
+    "id": "mi_35",
+    "questionNumber": 35,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In present-day Chiapas, Mexico, archaeologist Robert Rosenswig, remote-sensing specialist Ricardo López-Torrijos, and colleagues have located 41 smaller settlements surrounding the ancient Mesoamerican city of Izapa. The researchers have concluded that these settlements were culturally linked to Izapa because each of the settlements is the same age and configured in the same manner as Izapa, with a pyramid to the north and a plaza to the south. Their shared structural orientation suggests that residents of the settlements likely performed some of the same cultural ceremonies as residents in Izapa did.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Researchers have determined that the arrangement of Izapa's structures was based on those of other nearby settlements.",
+      "B": "Cultural ceremonies in Izapa seem to have played a more important role for its residents than those in smaller, surrounding settlements did.",
+      "C": "Although archaeologists have learned much about Izapa over years of research, they have only recently found the smaller settlements that surrounded it.",
+      "D": "Researchers have inferred that Izapa was related to the smaller settlements that surrounded it based in part on the similarity of their construction."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn trình bày kết luận của các nhà khảo cổ học rằng thành phố cổ Izapa có mối liên hệ văn hóa chặt chẽ với 41 khu định cư lân cận dựa trên sự tương đồng về niên đại và cấu trúc quy hoạch kiến trúc[cite: 10]."
+  },
+  {
+    "id": "mi_36",
+    "questionNumber": 36,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The painter María Izquierdo played an important role in the development of twentieth-century Mexican art, but her work has never been well-known in the United States except among art historians. One reason for Izquierdo's relative obscurity is the enormous popularity of some of her peers. In particular, the painters Frida Kahlo and Diego Rivera have so captivated the interest of US audiences that Izquierdo and other Mexican artists from the period often get overlooked, despite the high quality of their work.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Izquierdo's work is not as well-known in the United States as it should be because Kahlo and Rivera draw so much of the public's attention.",
+      "B": "During Izquierdo's lifetime, her paintings were displayed in galleries in the United States much more frequently than paintings by Kahlo and Rivera were.",
+      "C": "Izquierdo painted some of the same subjects that Kahlo and Rivera painted but used different techniques than they used.",
+      "D": "Few of Izquierdo's works are in galleries today because she produced only a small number of paintings."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản: danh tiếng của María Izquierdo chưa được công chúng Mỹ biết đến đúng tầm là do sự nổi tiếng lấn át của những đồng nghiệp cùng thời như Frida Kahlo và Diego Rivera[cite: 10]."
+  },
+  {
+    "id": "mi_37",
+    "questionNumber": 37,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Choctaw/Cherokee artist Jeffrey Gibson turns punching bags used by boxers into art by decorating them with beadwork and elements of Native dressmaking. These elements include leather fringe and jingles, the metal cones that cover the dresses worn in the jingle dance, a women's dance of the Ojibwe people. Thus, Gibson combines an object commonly associated with masculinity (a punching bag) with art forms traditionally practiced by women in most Native communities (beadwork and dressmaking). In this way, he rejects the division of male and female gender roles.",
+    "question": "Which choice best describes Gibson's approach to art, as presented in the text?",
+    "options": {
+      "A": "He draws from traditional Native art forms to create his original works.",
+      "B": "He has been influenced by Native and non-Native artists equally.",
+      "C": "He finds inspiration from boxing in designing the dresses he makes.",
+      "D": "He rejects expectations about color and pattern when incorporating beadwork."
+    },
+    "correctAnswer": "A",
+    "explanation": "Phương pháp sáng tác của Gibson được nêu rõ là kế thừa các loại hình nghệ thuật bản địa truyền thống (đính cườm, may trang phục, gắn chuông kim loại) để sáng tạo nên những tác phẩm điêu khắc độc đáo[cite: 10]."
+  },
+  {
+    "id": "mi_38",
+    "questionNumber": 38,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "I may be the most humble and absurd man in the world and, as my wife says, the most slovenly creature you may ever meet—that is, before the founding of our institute—but I did come to know a truly great man who possessed a natural genius for invention. I spent years at his side. I watched the way he worked. I witnessed how an idea would suddenly catch fire in his mind and take shape, like a tree sprouting shoots and branches, before coming into being.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "A person was fortunate enough to have found love despite his obvious shortcomings.",
+      "B": "An exceptionally talented person professes humility to avoid intimidating others.",
+      "C": "A person appreciates the extensive time he passed in the company of someone he deeply admired.",
+      "D": "A truly brilliant person lets ideas mature in his mind before expressing them aloud."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn trích thể hiện sự trân trọng và biết ơn sâu sắc của người kể chuyện khi từng có nhiều năm kề cận, quan sát quá trình làm việc và sáng tạo của một thiên tài phát minh mà ông vô cùng ngưỡng mộ[cite: 10]."
+  },
+  {
+    "id": "mi_39",
+    "questionNumber": 39,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A subject of much speculation, distinctive sets of parallel ridges mark the icy crust of Europa, Jupiter's smallest moon. Researchers now claim that the ridges' formation mechanism mirrors that of a strikingly similar pair on Greenland's ice sheet. There, surface water seeped through fissures in the sheet and formed a water pocket that subsequently disrupted the overlying ice, forcing fragments of it upward and outward into peaks, as the pocket froze and expanded. Although Europa lacks liquid surface water, the same process could be driven by the moon's subsurface ocean.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Researchers think that the ridges on Europa and the ridges in Greenland may have been formed by the same process even though Europa, unlike Greenland, doesn't have liquid water on its surface.",
+      "B": "The primary difference between the ridges on Europa and the ridges in Greenland is that unlike the Europa ridges, the Greenland ridges are parallel.",
+      "C": "The pair of ridges found on Greenland's ice sheet appear to have formed long before the recently discovered sets of ridges on Europa formed.",
+      "D": "Researchers don't understand why Europa is marked by so many sets of ridges when the moon doesn't have any liquid water on its surface that could have collected and expanded under the icy crust."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của đoạn văn: các nhà khoa học nhận định các rặng sườn song song trên mặt trăng Europa và ở Greenland có thể hình thành từ cùng một cơ chế nước đóng băng giãn nở đẩy lớp băng trồi lên, dù Europa không có nước lỏng trên bề mặt mà nhận nước từ đại dương ngầm[cite: 10]."
+  },
+  {
+    "id": "mi_40",
+    "questionNumber": 40,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "NASA's Aspera mission, led by Carlos Vargas, will investigate the circumgalactic medium (CGM), the huge swaths of low-density gas that fill and surround galaxies. Specifically, the team will focus on portions of the gas that exist in a \"warm-hot\" phase: these portions haven't previously been observable but are thought to fuel new star formation and hold most of the mass that makes up a galaxy. Using a telescope capable of revealing these parts of the CGM, the Aspera mission should help answer long-standing questions about how galaxies emerge, change, and even interact.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "As the leader of NASA's Aspera mission, Vargas will be the first person to investigate the makeup of the CGM.",
+      "B": "Although galaxies that are surrounded by the CGM have been studied, researchers have been unable to directly observe low-density gas in the CGM in the \"warm-hot\" phase.",
+      "C": "Researchers don't yet have a complete understanding of the process of galaxy evolution but have raised the possibility that galaxies interact with each other at times.",
+      "D": "The Aspera mission is expected to produce the first direct observations of CGM gas in the \"warm-hot\" phase, which likely has an important role in the evolution of galaxies."
+    },
+    "correctAnswer": "D",
+    "explanation": "Lựa chọn D tóm lược mục tiêu cốt lõi của sứ mệnh Aspera: lần đầu tiên quan sát trực tiếp các dải khí ở trạng thái 'ấm-nóng' của môi trường quanh thiên hà (CGM), từ đó giải đáp các câu hỏi quan trọng về sự tiến hóa của các thiên hà[cite: 10]."
+  },
+  {
+    "id": "mi_61",
+    "questionNumber": 61,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "When does a story become a novel? The answer depends on who is counting. Most publishers and prize committees draw the line at a word count, but they do not agree on where it falls: one major award treats anything above 40,000 words as a novel, while other organizations set the bar at 50,000. A few skip length altogether and ask instead about other qualities, such as how many separate plots a book carries.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "What some readers enjoy about novels",
+      "B": "The number of novels published each year",
+      "C": "How different organizations decide what counts as a novel",
+      "D": "The work of prize committees"
+    },
+    "correctAnswer": "C",
+    "explanation": "Chủ đề bao quát của đoạn văn là cách các tổ chức, nhà xuất bản và hội đồng giải thưởng khác nhau đưa ra tiêu chí riêng (dựa trên số lượng từ hoặc số tuyến cốt truyện) để xác định một tác phẩm thế nào thì được coi là tiểu thuyết."
+  },
+  {
+    "id": "mi_62",
+    "questionNumber": 62,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The Papunya Tula movement began in 1971, when men at a settlement in Australia's Western Desert started painting in acrylic on board. What they painted was not new: the designs had been made on the ground in sand for ceremonies long before. Water Dreaming at Kalipinypa, finished by Johnny Warangkula Tjupurrula in 1972, is one such work.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "The text argues against putting ceremonial designs on canvas.",
+      "B": "The text describes the rewards of working as a painter.",
+      "C": "The text provides information about the Papunya Tula movement.",
+      "D": "The text describes the popularity of art galleries in the 1970s."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích chính của đoạn văn là cung cấp thông tin lịch sử về phong trào nghệ thuật Papunya Tula tại Úc (thời gian bắt đầu, chất liệu, nguồn gốc từ các nghi lễ cát truyền thống và tác phẩm tiêu biểu)[cite: 10]."
+  },
+  {
+    "id": "mi_63",
+    "questionNumber": 63,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Only a small share of adults in most large American cities had gone to see a live play in the previous year, according to a 2017 survey of arts participation. In Phoenix, Arizona, for instance, the figure was 6.4% of adults, and in Cleveland, Ohio, it was 2.1%. Those cities hold so many people, though, that even shares that small add up to audiences numbering in the tens of thousands.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "Going to the theater in large US cities",
+      "B": "How a play is written",
+      "C": "Types of entertainment available in the US",
+      "D": "The weather in Phoenix, Arizona"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn tập trung vào tỷ lệ và số lượng thực tế của người trưởng thành đến rạp xem kịch trực tiếp tại các thành phố lớn ở Mỹ[cite: 10]."
+  },
+  {
+    "id": "mi_64",
+    "questionNumber": 64,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A fresco is painted directly onto a wall while its plaster is still damp. The name comes from the Italian word fresco, meaning \"fresh.\" As the plaster dries, the pigment is pulled into the surface and locked there, becoming part of the wall itself rather than a layer resting on top of it. That is why frescoes can survive for centuries. It also explains why a painter has to finish a section in a single day, before the plaster sets.",
+    "question": "What is the main topic of the text?",
+    "options": {
+      "A": "Different kinds of wall painting",
+      "B": "Characteristics of frescoes",
+      "C": "The Italian origins of art terms",
+      "D": "How museums restore damaged paintings"
+    },
+    "correctAnswer": "B",
+    "explanation": "Toàn bộ đoạn văn miêu tả các đặc điểm kỹ thuật và bản chất của tranh bích họa fresco (vẽ trên vữa ướt, màu thấm vào tường, độ bền qua hàng thế kỷ và yêu cầu thời gian hoàn thiện)[cite: 10]."
+  },
+  {
+    "id": "mi_65",
+    "questionNumber": 65,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The Papunya Tula movement began in 1971, when men at a settlement in Australia's Western Desert started painting in acrylic on board. What they painted was not new: the designs had been made on the ground in sand for ceremonies long before. Clifford Possum Tjapaltjarri's Warlugulong, finished in 1976, maps a fire story across a wide stretch of country.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "The text describes the rewards of working as a painter.",
+      "B": "The text argues against putting ceremonial designs on canvas.",
+      "C": "The text describes the popularity of art galleries in the 1970s.",
+      "D": "The text provides information about the Papunya Tula movement."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của văn bản là giới thiệu thông tin nền tảng về phong trào Papunya Tula và tác phẩm Warlugulong của Clifford Possum Tjapaltjarri[cite: 10]."
+  },
+  {
+    "id": "mi_66",
+    "questionNumber": 66,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Ask why the Wyeths are known as America's first family of art, and the answer sits in one household. The illustrator N. C. Wyeth taught his children to draw, and three of them made careers of it: the painters Henriette, Carolyn, and Andrew. Andrew went on to receive the Presidential Medal of Freedom in 1963, the first painter given that honor.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To explain why a family of artists became known by a nickname.",
+      "B": "To compare the artistic achievements of several painters.",
+      "C": "To show why a particular painter received a major honor.",
+      "D": "To emphasize why artists should teach their children."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn giải thích lý do vì sao gia đình Wyeth lại được mệnh danh là 'gia đình nghệ thuật đầu tiên của nước Mỹ' (America's first family of art) nhờ nhiều thế hệ liên tiếp đạt thành tựu hội họa lớn[cite: 10]."
+  },
+  {
+    "id": "mi_67",
+    "questionNumber": 67,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Who owned this painting before the museum did? Provenance research is one way to find out. A researcher gathers sale records, letters, and old exhibition catalogs, lines the documents up by date, and works out where the picture sat in each decade. The method helps us learn a work's history and answer questions, such as the one about the museum's painting.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To summarize two sides of a scholarly debate",
+      "B": "To describe the career of a famous curator",
+      "C": "To explain one way to answer the question about the museum's painting",
+      "D": "To criticize research that scholars conducted about the museum's painting"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn nêu ra câu hỏi về chủ sở hữu trước đây của bức tranh và giới thiệu phương pháp nghiên cứu lai lịch/nguồn gốc (provenance research) như một cách giải đáp câu hỏi đó[cite: 10]."
+  },
+  {
+    "id": "mi_68",
+    "questionNumber": 68,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Printers set individual letters into a frame, ink them, and press them onto paper, a method that lets one page be copied over and over. The idea is usually credited to Johannes Gutenberg alone. Printers in East Asia, though, had broken that story long before: Bi Sheng was arranging characters cut in clay in the 1040s, and Korean foundries were casting them in bronze two centuries before Gutenberg was born.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To establish that printing with movable type does not require skill",
+      "B": "To compare Gutenberg's press with the presses used in Korea",
+      "C": "To question the belief that Chinese printers were inventive",
+      "D": "To argue that printers in a variety of places developed movable type"
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của tác giả là bác bỏ quan niệm cho rằng chỉ một mình Gutenberg phát minh ra kỹ thuật in chữ rời, chỉ ra rằng các thợ in ở nhiều nơi (Trung Quốc, Triều Tiên) đã độc lập phát triển công nghệ này từ nhiều thế kỷ trước[cite: 10]."
+  },
+  {
+    "id": "mi_69",
+    "questionNumber": 69,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is Emily Dickinson's circa 1873 poem \"There is no Frigate like a Book.\" A frigate is a light, fast ship; coursers are swift horses.\nThere is no Frigate like a Book\nTo take us Lands away\nNor any Coursers like a Page\nOf prancing Poetry—\nThis Traverse may the poorest take\nWithout oppress of Toll—\nHow frugal is the Chariot\nThat bears the Human soul.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "People can learn more about distant places by reading books than by traveling to those places.",
+      "B": "Reading is a way of defying the modern world's emphasis on money.",
+      "C": "Literature can metaphorically transport people to new places regardless of their means.",
+      "D": "Poetry helps people recognize their similarities despite cultural differences."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của bài thơ là văn chương và thi ca có thể đưa tâm hồn con người du hành tới những vùng đất mới một cách diệu kỳ mà không đòi hỏi bất kỳ chi phí vật chất nào, ai cũng có thể tiếp cận[cite: 10]."
+  },
+  {
+    "id": "mi_70",
+    "questionNumber": 70,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "I have often been utterly astonished, since I came to the north, to find persons who could speak of the singing, among slaves, as evidence of their contentment and happiness. It is impossible to conceive of a greater mistake. Slaves sing most when they are most unhappy. The songs of the slave represent the sorrows of his heart; and he is relieved by them, only as an aching heart is relieved by its tears.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe the musical structure of slave spirituals.",
+      "B": "To correct a misconception by Northerners regarding why enslaved people sang.",
+      "C": "To argue that music has the power to heal deep emotional trauma.",
+      "D": "To express gratitude to the Northerners who listened to and recorded the songs of the enslaved."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích của người viết là đính chính một nhận thức sai lầm nghiêm trọng của người miền Bắc, những người nhầm tưởng tiếng hát của người nô lệ biểu thị sự hài lòng, trong khi thực tế họ hát nhiều nhất khi đau khổ cùng cực[cite: 10]."
+  },
+  {
+    "id": "mi_71",
+    "questionNumber": 71,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "A famous song rarely stays with one performer. Jeff Buckley's 1994 recording of Leonard Cohen's \"Hallelujah,\" for instance, sent listeners hunting for a track that had drawn little notice when Cohen released it a decade earlier. Whether that pattern holds more widely was the question Ingrid Halvorsen put to more than three thousand streaming subscribers. Most of those who answered said they had gone back to an original recording after hearing someone else's version of it, and many said they had stayed with the older track.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "Songs that have been recorded by other performers",
+      "B": "Listeners hoping to become musicians",
+      "C": "Leonard Cohen's career as a songwriter",
+      "D": "Films about people who work in record shops"
+    },
+    "correctAnswer": "A",
+    "explanation": "Chủ đề chính là hiện tượng các bài hát được nhiều nghệ sĩ khác nhau thể hiện (cover) và cách người nghe tìm về bản thu âm gốc sau khi nghe bản thể hiện của nghệ sĩ khác[cite: 10]."
+  },
+  {
+    "id": "mi_72",
+    "questionNumber": 72,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from Edith Wharton's 1917 novel Summer.\nEagle County is located in a region where summer weather can be quite cool. There had never been such a June in Eagle County. Usually it was a month of moods, with abrupt alternations of belated frost and mid-summer heat; this year, day followed day in a sequence of temperate beauty. Every morning a breeze blew steadily from the hills. Toward noon it built up great canopies of white cloud that threw a cool shadow over fields and woods; then before sunset the clouds dissolved again, and the western light rained its unobstructed brightness on the valley.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To portray a setting",
+      "B": "To depict a problem",
+      "C": "To explain a conflict",
+      "D": "To introduce a character"
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích duy nhất của đoạn văn là khắc họa khung cảnh bối cảnh thiên nhiên (setting) tuyệt đẹp và khác thường của tháng Sáu tại hạt Eagle[cite: 10]."
+  },
+  {
+    "id": "mi_73",
+    "questionNumber": 73,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from Anne Spencer's 1922 poem \"Translation.\"\nWe trekked into a far country,\nMy friend and I.\nOur deeper content was never spoken,\nBut each knew all the other said.\nHe told me how calm his soul was laid\nBy the lack of anvil and strife.\n\"The wooing kestrel,\" I said, \"mutes his mating-note\nTo please the harmony of this sweet silence.\"",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It depicts a feeling of unspoken connection between the speaker and her friend.",
+      "B": "It describes differences between the speaker's translation of a literary work and another translation of the same work.",
+      "C": "It lists the sights that the speaker and her friend encounter while on a long hike.",
+      "D": "It conveys the speaker's sense that nature is both grand and frightening."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn thơ thể hiện sự đồng điệu tâm hồn sâu sắc không cần diễn đạt bằng lời ('content was never spoken, but each knew all the other said') giữa người nói và người bạn đồng hành trong sự tĩnh lặng của thiên nhiên[cite: 10]."
+  },
+  {
+    "id": "mi_74",
+    "questionNumber": 74,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In a Renaissance bottega, or workshop, a painting was rarely the work of one hand. The master drew the design and finished the faces; assistants filled in drapery, backgrounds, and the gold ground; an apprentice ground the pigments. Because each person repeated the same task on panel after panel, the work went quickly and the quality stayed even from one commission to the next. The arrangement is one reason a busy shop in Florence could deliver altarpieces to several churches at once.",
+    "question": "What is the main topic of the text?",
+    "options": {
+      "A": "How workshops trained new apprentices",
+      "B": "The future of the altarpiece",
+      "C": "How the workshop system made painting more efficient",
+      "D": "The invention of gold-ground painting"
+    },
+    "correctAnswer": "C",
+    "explanation": "Chủ đề chính của bài viết là mô hình phân công lao động chuyên môn hóa trong xưởng vẽ thời Phục hưng đã giúp nâng cao năng suất và hiệu quả vẽ tranh như thế nào[cite: 10]."
+  },
+  {
+    "id": "mi_75",
+    "questionNumber": 75,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from Angeline Boulley's 2021 novel Firekeeper's Daughter. The narrator is an Ojibwe teenager who runs in the morning before going to school. Levi is her younger brother.\nMy brother complains about my lengthy warm-up routine whenever he runs with me. I keep telling Levi that my longer, bigger, and therefore vastly superior muscles require more intensive preparation for peak performance. The real reason, which he would think is dorky, is that I recite the correct anatomical name for each muscle as I stretch.",
+    "question": "What is the main topic of the text?",
+    "options": {
+      "A": "A popular teacher at the narrator's high school",
+      "B": "The narrator's warm-up routine before running",
+      "C": "The narrator's feelings about moving to a new town",
+      "D": "The job that the narrator's brother wishes to have in the future"
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn trích tập trung miêu tả thói quen khởi động dài trước khi chạy của người kể chuyện và lý do thực sự đằng sau thói quen đó (đọc tên giải phẫu từng nhóm cơ khi kéo giãn)[cite: 10]."
+  },
+  {
+    "id": "mi_76",
+    "questionNumber": 76,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Visitors climb the stairs of the Casa Azul in Coyoacán, Mexico City, hoping to stand closer to the painter who lived and worked there. The house belonged to Frida Kahlo for most of her life, and it has been a museum since 1958. Its keepers have arranged the rooms around what she actually owned—her paint jars, her corsets, the bed with a mirror fixed above it—so that a visitor can picture the ordinary hours behind the pictures.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe a museum devoted to Kahlo's life and work",
+      "B": "To explain why viewers admire Kahlo's paintings",
+      "C": "To summarize Kahlo's biography",
+      "D": "To compare the Casa Azul with other house museums"
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích của đoạn văn là giới thiệu bảo tàng Casa Azul (Ngôi nhà Xanh) ở Mexico City, nơi trưng bày các hiện vật đời thường để người tham quan hiểu rõ hơn về cuộc đời và nghệ thuật của Frida Kahlo[cite: 10]."
+  },
+  {
+    "id": "mi_77",
+    "questionNumber": 77,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Kenneth Grahame's 1908 novel The Wind in the Willows. The Mole has been found by a friend after getting lost in the woods. It is beginning to snow.\nThe Mole saw the wood that had been so dreadful to him in quite a changed aspect. Holes, hollows, pools, pitfalls, and other menaces to the wayfarer were vanishing fast, and a gleaming carpet was springing up everywhere, that looked too delicate to be trodden upon by rough feet.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The Mole feels sad that his adventure in the woods is over.",
+      "B": "After being found by his friend, the Mole is embarrassed about getting lost.",
+      "C": "As the landscape gets covered in snow, it no longer seems threatening to the Mole.",
+      "D": "The Mole prefers warm and dry weather to cold and snowy weather."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của văn bản: khi tuyết rơi phủ trắng xóa che lấp các hố sâu và hiểm nguy, khu rừng từng khiến Chuột Chũi khiếp sợ đã biến thành một cảnh quan êm đềm, không còn vẻ đe dọa[cite: 10]."
+  },
+  {
+    "id": "mi_78",
+    "questionNumber": 78,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Ice Age painters left hundreds of animals on cave walls in southern Europe, and archaeologists agree the images were made with care. Why they were made is another matter. The hunting-magic hypothesis holds that the paintings were never pictures of the world as it was: a painter who covered a bison with spear marks was not recording a hunt but trying to bring one about, the way a gesture might be aimed at a result rather than at an audience.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "What happens when people make gestures",
+      "B": "What an archaeologist does",
+      "C": "A list of animals painted on cave walls",
+      "D": "A possible explanation for a practice among Ice Age painters"
+    },
+    "correctAnswer": "D",
+    "explanation": "Chủ đề bao quát là giả thuyết 'ma thuật săn bắn' (hunting-magic hypothesis) - một lời giải thích khả dĩ về lý do người thời Kỷ Băng Hà vẽ tranh động vật trên vách hang[cite: 10]."
+  },
+  {
+    "id": "mi_79",
+    "questionNumber": 79,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "A dramaturg is often the first person besides the director to study a script closely. Rehearsals leave little time for research, so the dramaturg supplies it: what a word meant in 1600, how a courtroom of that era was arranged, which of the play's references an audience will miss. The dramaturg does not rewrite the playwright's lines. The job is to give the company the background it needs to stage them well, which makes the dramaturg a quiet but useful part of putting on a play.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe the history of the theater",
+      "B": "To explain what a dramaturg does when a play is being staged",
+      "C": "To analyze the themes of an important play",
+      "D": "To discuss how playwrights come up with ideas before they begin writing"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích của đoạn văn là giải thích vai trò và các công việc cụ thể của một cố vấn kịch bản (dramaturg) trong quá trình dàn dựng một vở kịch trên sân khấu[cite: 10]."
+  },
+  {
+    "id": "mi_80",
+    "questionNumber": 80,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The wood behind a picture can be read as closely as the paint on its front. Because oak lays down a ring each year, the rings in a panel give the earliest date its picture could have been painted; the pattern in the panel of Hans Memling's Portrait of a Man, for instance, places the felling of its tree in the 1470s. Ring patterns can also point to where the timber grew, marking a board as Baltic oak shipped west.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To suggest that tree-ring dating is not used often enough in the study of paintings",
+      "B": "To indicate how the trade in Baltic oak benefited painters",
+      "C": "To describe how tree-ring dating contributes to the study of paintings",
+      "D": "To discuss the wood used in a single portrait by Memling"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích chính của đoạn văn là giải thích cách phương pháp định tuổi bằng vòng năm của gỗ (tree-ring dating / dendrochronology) hỗ trợ nghiên cứu hội họa trong việc xác định niên đại sớm nhất và nguồn gốc địa lý của tấm gỗ vẽ tranh[cite: 10]."
+  },
+  {
+    "id": "mi_81",
+    "questionNumber": 81,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "When does a story become a novel? The answer depends on who is counting. Most publishers and prize committees draw the line at a word count, but they do not agree on where it falls: one major award treats anything above 40,000 words as a novel, while other organizations set the bar at 50,000. A few skip length altogether and ask instead about other qualities, such as how many separate plots a book carries.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To compare how many novels one organization has recognized with how many another has.",
+      "B": "To explain that what counts as a \"novel\" differs from group to group and has no single definition.",
+      "C": "To show why one book meets the criteria for being a novel while another does not.",
+      "D": "To recommend adopting one standard definition of a novel and give reasons for that recommendation."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích của đoạn văn là giải thích rằng tiêu chuẩn để một tác phẩm được xem là 'tiểu thuyết' có sự khác biệt giữa các nhóm/tổ chức và không có một định nghĩa thống nhất duy nhất."
+  },
+  {
+    "id": "mi_82",
+    "questionNumber": 82,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Counting the little words an author cannot help repeating—and, of, that—is a standard way of testing who wrote a disputed text. In 2014 Renata Salvi and colleagues reported that the method sorted anonymous Elizabethan plays by author with striking accuracy. Their test, though, drew on an average of only ten plays per writer. Reviewing such claims in 2022, Douglas Whitmore and colleagues warn that samples this small tilt an analysis toward bias, and biased analysis is how overstated results reach print.",
+    "question": "What is the main topic of the research discussed in the text?",
+    "options": {
+      "A": "Reading habits among Elizabethan audiences",
+      "B": "Loss of plays written in the Elizabethan period",
+      "C": "Changes in the technology used to print plays",
+      "D": "Using word frequencies to identify the author of a text"
+    },
+    "correctAnswer": "D",
+    "explanation": "Chủ đề bao quát của nghiên cứu được thảo luận trong bài là việc phân tích tần suất sử dụng các từ ngữ nhỏ/chức năng để xác định danh tính tác giả của một văn bản gây tranh cãi[cite: 10]."
+  },
+  {
+    "id": "mi_83",
+    "questionNumber": 83,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from John Manuel Arias's 2023 novel Where There Was Fire. Teresa lives in Barrio Ávila, a neighborhood in a Costa Rican city.\nObservant clouds gathered over Barrio Ávila. Teresa sat up in her bed, startled by a flashing news report on television. She wasn't sure when she'd fallen asleep. Four in the morning, maybe. On most nights, sleep came quickly to her. Violently. But last night, Teresa felt as if she had waded into it slowly, almost willingly. As one does when playful moonlight splashes in the receding tide and invites you to join it. ©2023 by John Manuel Arias",
+    "question": "What is the main topic of the text?",
+    "options": {
+      "A": "How Teresa has awakened and how she fell asleep earlier",
+      "B": "Why Teresa only watches television news before going to bed",
+      "C": "How Teresa is enjoying the change in the weather",
+      "D": "What Teresa expects to do the following day"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn tập trung miêu tả khoảnh khắc Teresa giật mình tỉnh giấc bởi bản tin truyền hình và hồi tưởng lại cách cô chìm vào giấc ngủ êm đềm khác thường đêm trước[cite: 10]."
+  },
+  {
+    "id": "mi_84",
+    "questionNumber": 84,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Contact borrowing is the passing of words and grammar between languages that are not related as parent and daughter. It is ordinary wherever neighbors talk (Finnish and Swedish, for instance, or Wutun and Tibetan). The process can make unrelated languages look like relatives; for that reason, learning to spot borrowed material might make the family trees historical linguists draw far more reliable.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "A common perception of contact borrowing is inaccurate.",
+      "B": "New research into contact borrowing casts doubt on earlier findings.",
+      "C": "The study of contact borrowing may produce findings with useful applications.",
+      "D": "Contact borrowing is more common than was once thought."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của đoạn văn là việc nghiên cứu và nhận diện hiện tượng vay mượn qua tiếp xúc ngôn ngữ (contact borrowing) đem lại ứng dụng hữu ích giúp việc phác thảo cây phả hệ ngôn ngữ của các nhà ngôn ngữ học lịch sử chuẩn xác hơn[cite: 10]."
+  },
+  {
+    "id": "mi_85",
+    "questionNumber": 85,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from Maria Amparo Ruiz de Burton's 1885 novel The Squatter and the Don. In the novel, Clarence and Mercedes develop a romantic relationship.\nMercedes, being not quite seventeen, her grief at parting from Clarence was wild, vehement and all-absorbing. But she had been trained to obedience, and her battles with the spirit always took place after she carefully locked her bedroom door. Then Clarence was wildly apostrophized, and a torrent of tears relieved the overcharged, aching heart.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It emphasizes Mercedes's extreme insecurity.",
+      "B": "It suggests that the magnitude of Mercedes's feelings are unusual for her age.",
+      "C": "It provides background explaining why Clarence has left Mercedes.",
+      "D": "It conveys how Mercedes handles her intense feelings about being separated from Clarence."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của đoạn văn là thể hiện cách Mercedes kiềm chế nỗi đau chia cách với Clarence trước mặt người khác và chỉ bộc lộ cảm xúc mãnh liệt khi đã khóa chặt cửa phòng ngủ một mình[cite: 10]."
+  },
+  {
+    "id": "mi_86",
+    "questionNumber": 86,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Beatrix Potter's 1913 story Winter at Pine Hollow. The Mole has just been found by a companion after wandering in the forest. Snow is beginning to fall.\nThe Mole looked at the wood that had seemed so frightening to him and saw it in a very different way. Holes, dips, puddles, traps, and other dangers to a traveler were quickly disappearing, and a bright blanket was spreading everywhere, looking too delicate for heavy feet to step on.",
+    "question": "Which choice most accurately expresses the main idea of the text?",
+    "options": {
+      "A": "The Mole prefers warm, dry weather to cold, snowy weather.",
+      "B": "As the ground becomes covered in snow, the landscape no longer appears dangerous to the Mole.",
+      "C": "After being found by his companion, the Mole feels embarrassed about getting lost.",
+      "D": "The Mole is saddened that his time wandering in the forest has ended."
+    },
+    "correctAnswer": "B",
+    "explanation": "Ý chính của đoạn trích: khi màn tuyết trắng phủ lên mặt đất che khuất mọi cạm bẫy và hố sâu, khu rừng từng gây sợ hãi không còn vẻ hiểm nguy đối với Chuột Chũi nữa[cite: 10]."
+  },
+  {
+    "id": "mi_87",
+    "questionNumber": 87,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "In a boat, I have always noticed that it is the fixed idea of each member of the crew that he is doing everything. Harris's notion now, was that it was he alone who had been working, and that both George and I had been imposing upon him. George, on the other hand, ridiculed the idea of Harris having done anything more than eat and sleep, and had a cast-iron opinion that it was he—George himself—who had done all the labour worth speaking of.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To address a particular situation that the narrator finds unexpected",
+      "B": "To convey the narrator's confidence that he understands the role of each of them in a group",
+      "C": "To examine how the narrator and his friends each contributed to navigating a challenge",
+      "D": "To present the narrator's generalization along with supporting examples from a specific situation"
+    },
+    "correctAnswer": "D",
+    "explanation": "Người kể chuyện đưa ra một nhận định khái quát (mọi thành viên trên thuyền luôn đinh ninh mình làm hết mọi việc) và minh họa bằng tình huống cụ thể của Harris và George[cite: 10]."
+  },
+  {
+    "id": "mi_88",
+    "questionNumber": 88,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "A raku tea bowl is shaped by hand, not turned on a wheel, and its walls are left a little uneven; a bowl that sits slightly off center is held to suit the tea ceremony better than a perfect one would. The form took hold in Kyoto in the late sixteenth century. Each bowl is pulled from the kiln while it still glows and cooled in open air, which leaves the dark, crackled surface the ware is known for. Potters still take it up: Paul Soldner smoked his glazes by dropping red-hot bowls into sawdust.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To provide an overview of a type of traditional pottery",
+      "B": "To present a history of Japanese pottery since the sixteenth century",
+      "C": "To discuss a collection of works by a contemporary potter",
+      "D": "To explain the philosophy that inspired an ancient artistic practice"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn cung cấp cái nhìn tổng quan về một loại đồ gốm truyền thống (bát trà raku): kỹ thuật nặn tay không dùng bàn xoay, nguồn gốc tại Kyoto thế kỷ 16 và phương pháp nung tráng men đặc trưng[cite: 10]."
+  },
+  {
+    "id": "mi_89",
+    "questionNumber": 89,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from D.A. Lozano's 1844 poem A Remembrance of Puerto Cabello—The Mangle (translated by Agnes Blake Poor in 1918). The poem is a dedication to Puerto Cabello, a town on the northern coast of Venezuela.\nAnd while outside the tempest is raving o'er the ocean,\nAnd the ship is madly driving on some lone and desert shore;\nThy warm and land-locked waters swell with an easy motion,\nAnd gently glides the light pirogue [canoe] at dipping of the oar.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It describes the speaker's attitude towards the day-to-day life in Puerto Cabello.",
+      "B": "It contrasts the tranquility of the waters near Puerto Cabello with the roughness of waters elsewhere.",
+      "C": "It emphasizes the severity of a storm that is expected to arrive soon in Puerto Cabello.",
+      "D": "It compares the appearance of two types of boats."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích của đoạn thơ là tạo sự đối lập giữa cơn bão cuồng nộ và sóng biển dữ dội ngoài khơi xa với vùng nước ấm áp, êm đềm được đất liền che chở tại Puerto Cabello[cite: 10]."
+  },
+  {
+    "id": "mi_90",
+    "questionNumber": 90,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The string quartets Beethoven wrote at the end of his life puzzled the players and critics who first met them; the deafness of their composer was offered as an explanation, and the music was filed away as the work of a mind past its best. Scholars now hear those quartets differently—not as a falling-off from the symphonies that had made him famous, but as a deliberate step past the limits of the forms he had spent thirty years perfecting.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "challenge the prevailing opinion about the artistic merit of Beethoven's late quartets.",
+      "B": "compare the stylistic differences between Beethoven's early and late works.",
+      "C": "describe the critical reception of Beethoven's music throughout his entire career.",
+      "D": "argue that chamber music is a more demanding form than the symphony."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn thách thức góc nhìn tiêu cực ban đầu của giới phê bình về các bản tứ tấu cuối đời của Beethoven, khẳng định giới học giả ngày nay đánh giá chúng là bước đột phá nghệ thuật vượt qua mọi giới hạn hình thức[cite: 10]."
+  },
+  {
+    "id": "mi_91",
+    "questionNumber": 91,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Among the best-known American institutions devoted to preserving film is the George Eastman Museum, opened in Rochester, New York, in 1949; its vaults now hold more than 28,000 titles. The Academy Museum of Motion Pictures, which opened in Los Angeles in 2021 and concentrates on how movies are made, ranks among the most prominent.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To emphasize that the George Eastman Museum has gathered more than 28,000 titles since 1949.",
+      "B": "To argue that most US museums have lately turned toward film in response to growing public interest.",
+      "C": "To introduce and analyze two institutions devoted to preserving film",
+      "D": "To claim that one institution has overtaken the other in importance because it deals only with how movies are made."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích chính của văn bản là giới thiệu và điểm qua đặc điểm của hai bảo tàng hàng đầu tại Mỹ dành cho việc lưu giữ và trưng bày điện ảnh[cite: 10]."
+  },
+  {
+    "id": "mi_92",
+    "questionNumber": 92,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Opened in Berkeley, California, in 1971, the Pacific Film Archive collects and screens work by filmmakers from Japan, the Soviet Union, and the American avant-garde; its holdings run to some 16,000 titles. More recently founded American institutions built around film include the Nitrate Vault. Located in Pittsburgh, Pennsylvania, it takes as its subject the newsreels shot in the region's mill towns.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To trace a historical development that encouraged the founding of two institutions",
+      "B": "To trace the founding of two institutions, including how they raised the money to buy prints",
+      "C": "To present information about two institutions, including each institution's area of focus",
+      "D": "To draw a contrast between the collection sizes of two institutions"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn cung cấp thông tin về hai viện lưu trữ phim ảnh (Pacific Film Archive và Nitrate Vault), nêu rõ địa điểm và lĩnh vực trọng tâm lưu trữ riêng biệt của từng nơi[cite: 10]."
+  },
+  {
+    "id": "mi_93",
+    "questionNumber": 93,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from Eugene O'Neill's 1920 play Beyond the Horizon. Andrew and Robert Mayo are brothers who grew up on their family's farm.\nANDREW: Farming ain't your nature. There's all the difference shown in just the way us two feel about the farm. You—well, you like the home part of it, I expect; but as a place to work and grow things, you hate it. Ain't that right?\nROBERT: Yes, I suppose it is. For you it's different. You're a Mayo through and through. You're wedded to the soil. You're as much a product of it as an ear of corn is, or a tree. Father is the same. This farm is his life-work.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It illustrates that two characters share a goal.",
+      "B": "It shows how two characters solved a mystery.",
+      "C": "It describes a place two characters visited on vacation.",
+      "D": "It emphasizes a difference between two characters."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn đối thoại làm nổi bật sự khác biệt sâu sắc giữa hai anh em: Andrew gắn bó máu thịt với đất đai nông trại, trong khi Robert ghét công việc trồng trọt nơi đây[cite: 10]."
+  },
+  {
+    "id": "mi_94",
+    "questionNumber": 94,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "In its first week on Broadway, the 2024 revival of a 1959 drama took in more than $2 million—a strong start for a play few people under thirty had heard of. The producers had spent the previous month getting them acquainted with it. On a video app popular with teenagers, they posted the 1961 film version in 23 short pieces, free to watch. The whole film was viewed at least 750,000 times in a single day, and the show's account gained 100,000 followers.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To explain the success of the advertising for a Broadway revival",
+      "B": "To compare Broadway theaters with theaters elsewhere in the United States",
+      "C": "To praise the actors who appeared in the 1961 film version",
+      "D": "To criticize the cost of mounting a play in the United States"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn giải thích sự thành công vượt trội về doanh thu của vở kịch phục dựng trên sân khấu Broadway nhờ vào chiến dịch quảng bá thông minh trên mạng xã hội nhắm vào giới trẻ[cite: 10]."
+  },
+  {
+    "id": "mi_95",
+    "questionNumber": 95,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from George Marion McClellan's 1895 poem \"Eternity\":\nMy spirit swoons, and all my senses cry\nFor Ocean's breast and covering of the sky.\nRock me to sleep, ye waves, and outward bound,\nJust let me drift far out from toil and care,\nWhere lapping of the waves shall be the sound,\nWhich mingled with the winds that gently bear\nMe on between a peaceful sea and sky,\nTo make my soothing slumberous lullaby.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To justify the speaker's qualms about being transported by the ocean to a quiet destination",
+      "B": "To contrast the demands of the speaker's everyday life with the serenity of being rocked to sleep by the ocean",
+      "C": "To illustrate the increasing intensity of the speaker's desire to escape ongoing hardship by gliding on the ocean",
+      "D": "To convey the speaker's longing for the ocean to impart a sense of inner tranquility"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn thơ bộc lộ khát khao của người nói muốn được đại dương vỗ về, tìm kiếm sự an yên tuyệt đối và thoát khỏi những nhọc nhằn, lo toan của cuộc sống[cite: 10]."
+  },
+  {
+    "id": "mi_96",
+    "questionNumber": 96,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Printers set individual letters into a frame, ink them, and press them onto paper, a method that lets a page be copied again and again, quickly and cheaply. Credit for the idea is usually given to Johannes Gutenberg alone. Printers in East Asia, though, had already worked it out. Bi Sheng was arranging characters cut in clay in the 1040s. Korean foundries went further and cast their characters in bronze; a court office in Goryeo was printing with such type by 1234, two centuries before Gutenberg.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Unlike Gutenberg, Korean printers were exceptionally skillful at casting metal type.",
+      "B": "There are many stories about early printing that historians are starting to challenge.",
+      "C": "Contrary to long-held beliefs, Gutenberg was not the only printer to develop movable type.",
+      "D": "Printers found it difficult to work with movable type."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của văn bản: trái ngược với quan niệm phổ biến lâu nay, Gutenberg không phải là người duy nhất phát minh ra kỹ thuật in chữ rời khi Đông Á đã đi trước từ nhiều thế kỷ[cite: 10]."
+  },
+  {
+    "id": "mi_97",
+    "questionNumber": 97,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from Yung Wing's 1909 memoir My Life in China and America.\nWe landed in New York on the 12th of April, 1847, after a passage of ninety-eight days of unprecedented fair weather. The New York of 1847 was altogether a different city from the New York of 1909. It was a city of only 250,000 or 300,000 inhabitants; now it is a metropolis rivaling London in population, wealth and commerce. The whole of Manhattan Island is turned into a city of skyscrapers, churches and palatial residences.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The journey to New York City was extremely demanding for Yung.",
+      "B": "New York City has become more developed and populated since Yung's arrival in 1847.",
+      "C": "The architecture in New York City is more beautiful than that in London.",
+      "D": "Yung has experienced significant personal growth in the time since his arrival to New York City in 1847."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn hồi ký làm nổi bật sự phát triển vượt bậc về quy mô dân số, độ thịnh vượng và mật độ nhà chọc trời của thành phố New York năm 1909 so với thời điểm tác giả mới đặt chân đến vào năm 1847[cite: 10]."
+  },
+  {
+    "id": "mi_98",
+    "questionNumber": 98,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The nocturne owes its existence to John Field, an Irish pianist working in the early nineteenth century. Sonatas and concertos were what serious composers were expected to produce then; the kind of short, singing, slow piece Field began publishing in 1812 had no name in the language of concert music at all. It caught on across Europe anyway, and so completely that later composers who wrote in the same vein were said to be writing after Field.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "John Field was an important figure in the development of a musical form.",
+      "B": "John Field made significant contributions to several musical forms.",
+      "C": "John Field introduced the term \"nocturne\" to European concert music.",
+      "D": "Some pieces credited to John Field may have been written by composers who imitated him."
+    },
+    "correctAnswer": "A",
+    "explanation": "Nghệ sĩ dương cầm John Field là nhân vật tiên phong có đóng góp quyết định trong việc khai sinh và phát triển thể loại âm nhạc dạ khúc (nocturne) tại châu Âu đầu thế kỷ 19[cite: 10]."
+  },
+  {
+    "id": "mi_99",
+    "questionNumber": 99,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Ada Merriweather's novels have never sold in the numbers that the best-known American writers of the past half century command, yet the readers she does have include some formidable ones—among them the poet Louise Trask and the critic Edmund Hare. Hare told an interviewer that he had gone through her novel The Long Field forty-six times, and the afterword he left for its 2022 reissue puts a question to the reader: which living writer of romance still speaks to everyone? His answer was Merriweather alone.",
+    "question": "What is the main topic of the text?",
+    "options": {
+      "A": "The similarities between Ada Merriweather's prose and Louise Trask's poetry",
+      "B": "The qualities of Ada Merriweather's novels that let them speak to everyone",
+      "C": "The reason Ada Merriweather's books have not sold as well as they deserve to",
+      "D": "The reception of Ada Merriweather's work"
+    },
+    "correctAnswer": "D",
+    "explanation": "Chủ đề bao quát là cách giới chuyên môn và độc giả đón nhận các tác phẩm của Ada Merriweather: tuy lượng bán ra khiêm tốn nhưng lại nhận được sự sùng kính từ những nhà phê bình và thi sĩ lỗi lạc[cite: 10]."
+  },
+  {
+    "id": "mi_100",
+    "questionNumber": 100,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The share of new buildings in Lisbon finished with hand-painted azulejo tile fell by more than 90 percent between 2000 and 2015; shifts of this kind are usually put down to the craft ladder, a model holding that builders choose their finishes mainly by cost (specifically, that cheap industrial surfaces displace hand-work as wages rise). Ana Ferreira and Luís Tavares's study of façades in Porto shows the model to be too crude, however: choices there were mixed and changeable, and turned on several things at once, among them whether a tile workshop still operated nearby.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To contrast patterns in building decoration in two cities",
+      "B": "To account for the effect of building costs on wages",
+      "C": "To critique a frequently used model of changes in the price of tile",
+      "D": "To challenge a common explanation for builders' choices of finish"
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của đoạn văn là bác bỏ/thách thức lời giải thích phổ biến (mô hình bậc thang thủ công dựa trên giá thành) về lý do các nhà thầu lựa chọn vật liệu hoàn thiện bề mặt công trình[cite: 10]."
+  },
+  {
+    "id": "mi_101",
+    "questionNumber": 101,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from Ralph Waldo Emerson's 1841 essay \"The Method of Nature.\"\nThe scholars are the priests of that thought which establishes the foundations of the earth. No matter what is their special work or profession, they stand for the spiritual interest of the world, and it is a common calamity if they neglect their post in a country where the material interest is so predominant as it is in America.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "In a country whose citizens are largely preoccupied with tangible gains, it is crucial that some people work to foster and preserve ideas.",
+      "B": "Military experience encourages Americans to contemplate aspects of human life that they would not choose to otherwise.",
+      "C": "Many descriptions of the role of scholars in society unfairly diminish their importance.",
+      "D": "It is unfortunate that so many intellectuals are concerned with material things rather than ideas."
+    },
+    "correctAnswer": "A",
+    "explanation": "Emerson nhấn mạnh rằng ở một đất nước mà lợi ích vật chất chiếm ưu thế áp đảo như nước Mỹ, việc các học giả kiên định giữ vững cương vị và nuôi dưỡng các giá trị tinh thần/tư tưởng là điều vô cùng hệ trọng."
+  },
+  {
+    "id": "mi_102",
+    "questionNumber": 102,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Studying a limestone slab recovered from a Bronze Age house, Aikaterini Sarris and her team recorded the expected: rows of neat, repeated marks, plainly a script. What caught their attention was something rarer—a possible determinative, a sign that carries no sound of its own and instead tells a reader what kind of word comes next. The stakes are high. Without a determinative, there is no telling how this script stands in relation to Linear A, cuneiform, or any other early writing.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To question whether the slab the team studied was really inscribed with a script",
+      "B": "To argue that the script may be more closely related to cuneiform than to Linear A",
+      "C": "To discuss a significant feature that may have been found in a study of an inscribed slab",
+      "D": "To describe the slab and the way its rows of marks were arranged"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích của đoạn văn là bàn luận về một đặc điểm mang tính bước ngoặt tiềm năng (dấu hạn định nghĩa/determinative) được phát hiện trên phiến đá vôi thời Đồ Đồng, yếu tố quyết định để xác định mối liên hệ của văn tự này với các hệ chữ cổ khác[cite: 10]."
+  },
+  {
+    "id": "mi_103",
+    "questionNumber": 103,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from Matthew Arnold's 1869 nonfiction book Culture and Anarchy.\nThe Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behaviour of the English abroad, urges that the English ideal is that every one should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like, the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It makes a claim about one of the principal effects of culture.",
+      "B": "It asserts that what is beautiful is a matter of objective truth rather than subjective perception.",
+      "C": "It implies that opinions regarding culture evolve over time.",
+      "D": "It explains differences in matters of taste between the English and others."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn đưa ra một luận điểm về tác động căn bản của văn hóa: không để mỗi cá nhân tự do làm theo sở thích bản năng thô mộc, mà hướng con người dần tiệm cận và yêu thích những chuẩn mực thực sự tao nhã, chuẩn mực và đẹp đẽ[cite: 10]."
+  },
+  {
+    "id": "mi_104",
+    "questionNumber": 104,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from Nathaniel Hawthorne's 1830 short story \"Sir William Phips.\"\nThe knowledge, communicated by the historian and biographer, is analogous to that which we acquire of a country by the map,—minute, perhaps, and accurate, and available for all necessary purposes, but cold and naked, and wholly destitute of the mimic charm produced by landscape painting. These defects are partly remediable, and even without an absolute violation of literal truth, although by methods rightfully interdicted to professors of biographical exactness.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Historians should not worry if their readers believe they are embellishing the truth.",
+      "B": "Historians' fidelity to the truth often results in work that is less engaging than it could be.",
+      "C": "Historians do not agree among themselves about the best methods of recording history.",
+      "D": "Maps are more practical to own than paintings."
+    },
+    "correctAnswer": "B",
+    "explanation": "Hawthorne nhận định rằng việc các nhà sử học và viết tiểu sử quá mực bám sát tính chính xác của sự thật trần trụi thường khiến tác phẩm của họ khô khan, thiếu đi sự lôi cuốn sinh động như tranh vẽ phong cảnh[cite: 10]."
+  },
+  {
+    "id": "mi_105",
+    "questionNumber": 105,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Installed in 1932, the Laura Spelman Rockefeller Memorial Carillon hangs in a tower at the University of Chicago and is played almost nothing like a piano. The performer sits below the bells and strikes a keyboard of wooden batons with the side of the fist; each baton pulls a wire that swings a clapper against the inside of a bell that never moves. Seventy-two bells hang overhead, the largest of them weighing 18.5 tons—a single instrument heavy enough that its lowest note carries for miles across the South Side.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To discuss the benefits of a recently built instrument",
+      "B": "To point out the differences between two kinds of keyboard instrument",
+      "C": "To explain the basics of how a particular instrument works",
+      "D": "To encourage universities to install carillons of their own"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích chính của đoạn văn là giải thích nguyên lý vận hành cơ bản của một nhạc cụ cụ thể: dàn chuông hòa âm (carillon) tại Đại học Chicago (cách nghệ sĩ dùng nắm đấm gõ phím gỗ kéo dây giật chuông phát ra âm thanh vang xa)[cite: 10]."
+  },
+  {
+    "id": "mi_106",
+    "questionNumber": 106,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Matthew Arnold's 1869 nonfiction book Culture and Anarchy.\nThe Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behaviour of the English abroad, urges that the English ideal is that everyone should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like, the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "The process of determining what should be considered beautiful is likely to lead to disagreement.",
+      "B": "The English are unjustly derided for their sense of taste.",
+      "C": "Culture's duty is to use scientific methods to determine what is beautiful.",
+      "D": "One of the functions of culture is to create a consensus about matters of good taste."
+    },
+    "correctAnswer": "D",
+    "explanation": "Ý chính của văn bản: một trong những sứ mệnh cốt lõi của văn hóa là định hướng và tạo lập sự đồng thuận xã hội về những chuẩn mực thế nào là cái đẹp và thị hiếu tao nhã[cite: 10]."
+  },
+  {
+    "id": "mi_107",
+    "questionNumber": 107,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Counting the little words an author repeats without noticing—and, of, that—is a standard way of testing who wrote a disputed text. In 2016 Helena Brück and colleagues reported that the method assigned anonymous eighteenth-century pamphlets to their authors with striking accuracy. Their test, though, rested on an average of about fifteen pamphlets per writer. Reviewing such claims in 2022, Douglas Whitmore and colleagues warn that samples this small tilt an analysis toward bias, and biased analysis is how overstated results reach print.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To discuss a feature of eighteenth-century pamphlets that scholars often overlook",
+      "B": "To note a potential concern about the findings of a study",
+      "C": "To present a debate between two research teams about who wrote a pamphlet",
+      "D": "To explain how one writer's style changed over time"
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn nêu ra một mối quan ngại tiềm tàng (cỡ mẫu quá nhỏ dẫn đến sai lệch kết quả) đối với độ tin cậy của phương pháp xác định tác giả bằng tần suất từ ngữ[cite: 10]."
+  },
+  {
+    "id": "mi_108",
+    "questionNumber": 108,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Formula is the charge most often laid against the jukebox musical. Mamma Mia! (1999) does little to answer it: the plot bends wherever the next ABBA song needs it to bend, and audiences know as much going in. Being built to a pattern, though, is not the same as being worthless. Reviewers put Mamma Mia! well down the list of what the form can do, and they are right about that—but the form is not the dead end its critics describe. American Idiot (2010) came out of it, and there is nothing tired about that show.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To outline one show's story and note its connection to later productions.",
+      "B": "To present both favorable and unfavorable opinions about a particular show.",
+      "C": "To contrast general audience response with critical commentary on a particular show.",
+      "D": "To challenge a commonly held view about jukebox musicals."
+    },
+    "correctAnswer": "D",
+    "explanation": "Tác giả phản bác định kiến phổ biến cho rằng nhạc kịch jukebox rập khuôn và sáo rỗng, đưa ra dẫn chứng từ vở kịch American Idiot để chứng minh thể loại này không hề là một ngõ cụt nghệ thuật[cite: 10]."
+  },
+  {
+    "id": "mi_109",
+    "questionNumber": 109,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Italian and Dutch painters of the seventeenth century built their pictures on a vanishing point, the device that makes a flat panel read as depth. Persian and Mughal painters are thought to have worked without one, and many scholars assumed the same of the Japanese print, but Haruko Emura and her team wanted to test that assumption. The team measured the receding lines in more than four hundred prints made between 1730 and 1780. The lines converged, print after print, on a single point, suggesting that these printmakers had more in common with Italian and Dutch painters than with Persian or Mughal ones.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Scholars have long known that Italian and Dutch painters used a vanishing point.",
+      "B": "Japanese prints are surprisingly similar in composition to Persian and Mughal painting.",
+      "C": "Contrary to what many scholars had assumed, Japanese printmakers may have used a vanishing point.",
+      "D": "The use of a vanishing point allows painters in many traditions to suggest depth."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của đoạn văn: trái ngược với giả định lâu nay của giới học giả, các nghệ nhân tranh khắc gỗ Nhật Bản giai đoạn 1730-1780 thực sự đã sử dụng điểm tụ (vanishing point) để tạo chiều sâu không gian giống các họa sĩ phương Tây[cite: 10]."
+  },
+  {
+    "id": "mi_110",
+    "questionNumber": 110,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from María Amparo Ruiz de Burton's 1885 novel The Squatter and the Don.\n\"Sounds of laughter, music and dancing came from the parlor; the young people were entertaining friends from town with their usual gay hospitality, and enjoying themselves heartily. Don Mariano, though already in his fiftieth year, was as fond of dancing as his sons and daughters, and not to see him come in and join the quadrille was so singular that his wife thought she must come out and inquire what could detain him. He was so absorbed in his thoughts that he did not hear her voice calling him.\"",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It conveys that Don Mariano's children are talented dancers and musicians.",
+      "B": "It suggests that Don Mariano's home is usually quiet.",
+      "C": "It emphasizes Don Mariano's tendency to avoid dancing in front of strangers.",
+      "D": "It depicts a contrast between Don Mariano's current state and his usual behavior."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn làm nổi bật sự tương phản giữa tâm trạng trầm ngâm suy tư bất thường hiện tại của Don Mariano với sở thích khiêu vũ hoạt bát thường ngày của ông[cite: 10]."
+  },
+  {
+    "id": "mi_111",
+    "questionNumber": 111,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is from Ralph Waldo Emerson's 1841 essay \"The Method of Nature\"\nThe rapid wealth which hundreds of the community acquire in trade, or by the incessant expansions of our population and arts, enchants the eyes of all the rest; the luck of one is the hope of thousands, and the bribe acts like the neighborhood of a gold mine to impoverish the farm, the school, the church, the house, and the very body and feature of man.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Those who wish to accumulate wealth can do so more quickly by engaging in trade than in other activities such as teaching and farming.",
+      "B": "Participating in a variety of activities is important for one's physical health.",
+      "C": "When a few people in a society become rich, the rest of the society will benefit in turn, given enough time.",
+      "D": "Observing the success of a few people can lead many to abandon important parts of their lives in the pursuit of similar success."
+    },
+    "correctAnswer": "D",
+    "explanation": "Emerson chỉ ra rằng việc chứng kiến một số ít người phất lên nhanh chóng từ buôn bán đã mê hoặc đám đông, khiến hàng ngàn người bỏ bê những nền tảng quan trọng trong đời sống (nông trại, trường học, giáo hội, gia đình) để mù quáng săn đuổi sự giàu sang[cite: 10]."
+  },
+  {
+    "id": "mi_112",
+    "questionNumber": 112,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The dust that settles in a manuscript library carries many of the microbes found in dust anywhere else, and conservators found that levels of Aspergillus restrictus fungal spores and Bacillus subtilis bacteria in reading-room dust were not concerning when relative humidity (RH) was kept within the archive's standard range (45%-55%). When exposed to constant RH of 70% and above (which can happen in a basement store after a leak), however, these microbial populations expanded rapidly.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe an effect of RH on the growth of one fungal species and one bacterial species in library dust",
+      "B": "To explain why RH in an archive can reach levels high enough to promote bacterial and fungal growth",
+      "C": "To outline the methods conservators use to monitor RH levels and microbial growth in an archive",
+      "D": "To demonstrate that A. restrictus and B. subtilis respond differently to elevated RH in an archive than they do elsewhere"
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích của đoạn văn là miêu tả tác động của độ ẩm tương đối (RH) lên tốc độ phát triển của một loài nấm và một loài vi khuẩn trong bụi thư viện bản thảo[cite: 10]."
+  },
+  {
+    "id": "mi_113",
+    "questionNumber": 113,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Known for Nutcracker! and Cinderella, the choreographer Matthew Bourne has worked again and again with the designer Lez Brotherston. Their 1995 Swan Lake holds on to Tchaikovsky's score and to almost nothing else from the 1895 production. Audiences arriving for the steps they knew were not accommodated. Long stretches of Petipa and Ivanov's choreography are dropped, and what survives tends only to glance at the shapes the older version had made familiar. Yet the liberties the two took with the ballet produced the piece that has outlasted everything else Bourne has staged.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To explain why the works critics praise most are the ones that break with tradition",
+      "B": "To give reasons that one work deserves to be ranked above another",
+      "C": "To describe how two artists remade a work that was not theirs",
+      "D": "To summarize the history of a long partnership between two artists"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn miêu tả cách thức biên đạo múa Matthew Bourne và nhà thiết kế Lez Brotherston tái cấu trúc và làm mới hoàn toàn vở ballet Hồ Thiên Nga kinh điển (bỏ gần hết các động tác múa cũ và chỉ giữ lại nhạc Tchaikovsky)[cite: 10]."
+  },
+  {
+    "id": "mi_114",
+    "questionNumber": 114,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Rapa Nui is one of about thirty Polynesian languages, spoken nowhere but on the islands of the central and eastern Pacific, that together illustrate divergence, or the splitting of a single ancestral tongue into many related ones. No two of them sound alike: Hawaiian has dropped consonants that Tongan keeps, and word order shifts from island to island. All of them, though, come down from Proto-Polynesian, their differences accumulating as small groups of settlers spread across the water and stayed put.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "All Polynesian languages sound much alike.",
+      "B": "The islands of the Pacific are home to many distinct communities and languages.",
+      "C": "Most languages spoken in the Pacific descend from a single ancestral tongue.",
+      "D": "Polynesian languages are good examples of divergence in the Pacific."
+    },
+    "correctAnswer": "D",
+    "explanation": "Ý chính của văn bản: các ngôn ngữ Polynesia là minh chứng tiêu biểu cho hiện tượng phân tách ngôn ngữ (divergence), từ một tiếng mẹ chung (Proto-Polynesian) chia tách thành nhiều ngôn ngữ khác nhau khi các nhóm dân cư định cư biệt lập trên các hòn đảo[cite: 10]."
+  },
+  {
+    "id": "mi_115",
+    "questionNumber": 115,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Known for The Car Man and Edward Scissorhands, the choreographer Matthew Bourne has worked again and again with the designer Lez Brotherston. Their 1995 Swan Lake keeps Tchaikovsky's score and little else from the 1895 production. Audiences who came for the steps they knew went unaccommodated. Whole passages of Petipa and Ivanov's choreography are gone, and what remains often only glances at the shapes the older version had made familiar. Still, the freedom the two took with the ballet has kept the piece alive longer than anything else Bourne has staged.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To summarize the history of a long partnership between two artists",
+      "B": "To describe how two artists remade a work that was not theirs",
+      "C": "To explain why the works critics praise most are the ones that break with tradition",
+      "D": "To give reasons that one work deserves to be ranked above another"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích của văn bản là thuật lại cách Bourne và Brotherston cải biên tự do một tác phẩm ballet kinh điển từ thế kỷ 19 để tạo nên một kiệt tác sống mãi với thời gian[cite: 10]."
+  },
+  {
+    "id": "mi_116",
+    "questionNumber": 116,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Ada Merriweather's readership has never rivaled that of the most widely read American novelists of the past fifty years, but the admirers she has are hard to dismiss—the poet Louise Trask and the critic Edmund Hare among them. What Hare praises, in his afterword to her novel The Long Field, is its handling of what the novelist E. M. Forster called flat and round characters: Forster took a character to be either flat (built around one idea and never departing from it) or round (able to surprise us and still convince), while Merriweather's Aunt Rose, Hare argues, manages to be both at once.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To present a reason why a literary critic admires a certain novel",
+      "B": "To explain what led a novelist to write a particular book",
+      "C": "To compare a novelist's work with the work of a poet who admired her",
+      "D": "To argue that every character in fiction must belong to one of two categories"
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích của bài viết là trình bày lý do nhà phê bình Edmund Hare ca ngợi cuốn tiểu thuyết The Long Field: nhờ nghệ thuật xây dựng nhân vật độc đáo kết hợp được cả tính phẳng (flat) lẫn tính tròn (round)[cite: 10]."
+  },
+  {
+    "id": "mi_117",
+    "questionNumber": 117,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Crowdsourced transcription puts historians and volunteers to work on the same archive, whether to open a collection to the public or to give students a reason to handle real documents. It's also effective because it greatly increases the amount of material that can be read, such as when the historian Ada Reyes traced how weather was recorded aboard nineteenth-century whaling ships and drew on logbook entries keyed in by hundreds of volunteers.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe some of the benefits of a particular approach to historical research.",
+      "B": "To argue that a particular approach to research may not suit certain fields of study.",
+      "C": "To summarize the results of the logbook research done by Ada Reyes.",
+      "D": "To emphasize that crowdsourced transcription is often more rewarding for volunteers than it is for professional historians."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn nêu ra những lợi ích thiết thực của phương pháp huy động cộng đồng chép lại tài liệu (crowdsourced transcription) trong nghiên cứu sử học[cite: 10]."
+  },
+  {
+    "id": "mi_118",
+    "questionNumber": 118,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Ask literary scholars what a genre is and the answers scatter. The term runs through the field's writing, yet Helena Brandt has observed that it stands for \"a crowd of ideas that rarely agree.\" Does genre live in a book's subject, in the expectations its readers bring, in the shelf a bookseller puts it on—or in all three? Readers can afford the vagueness; we know a mystery when we meet one. Scholars cannot, not if the study of literature is to move forward.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "There is no widely agreed-upon definition of the word \"genre,\" though the study of literature would benefit if there were.",
+      "B": "In her work, Brandt gave reasons why literary scholars disagree about how to analyze \"genre.\"",
+      "C": "Ordinary readers and scholars have different ideas of what the word \"genre\" means.",
+      "D": "Subject and readers' expectations are the key parts of what ordinary readers call \"genre.\""
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản: hiện chưa có một định nghĩa thống nhất về 'thể loại' (genre) trong giới học thuật, và việc làm sáng tỏ khái niệm này là rất cần thiết cho sự tiến bộ của ngành nghiên cứu văn học[cite: 10]."
+  },
+  {
+    "id": "mi_119",
+    "questionNumber": 119,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Editing—the craft of choosing shots and setting their order—was shaped early on by women like Margaret Booth. Booth was cutting features at MGM in the 1920s, and in 1939 the studio made her its supervising editor, giving her the last word on nearly every picture it released. In this way, Booth and others like her opened the room to the women who came after—such as Thelma Schoonmaker, who has cut Martin Scorsese's films since the 1980s.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Editing is a craft that is concerned primarily with the order of shots.",
+      "B": "Women such as Margaret Booth and Thelma Schoonmaker have contributed to the craft of film editing.",
+      "C": "Margaret Booth and Thelma Schoonmaker worked together on an important film.",
+      "D": "Editing should be taught more often in schools to encourage more women to take it up."
+    },
+    "correctAnswer": "B",
+    "explanation": "Đoạn văn làm nổi bật những đóng góp tiên phong và to lớn của các nữ biên tập viên điện ảnh như Margaret Booth và Thelma Schoonmaker đối với nghệ thuật dựng phim[cite: 10]."
+  },
+  {
+    "id": "mi_120",
+    "questionNumber": 120,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Nnedi Okorafor is a novelist who writes science fiction and a daughter of Igbo parents who left Nigeria for the American Midwest. Critics and fellow writers have praised the way she folds Igbo storytelling into a genre built elsewhere. But Okorafor is not the only Nigerian writer to blend inherited stories with popular literature. In the 1991 novel The Famished Road, Ben Okri took the abiku child of Yoruba tradition—a spirit born to die and return—and set it loose in a book that reads like a dream.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Recent Nigerian novelists are mixing traditional stories with popular literary genres.",
+      "B": "Several well-known Nigerian novelists sold more books once they began drawing on traditional stories.",
+      "C": "Novelists from outside Nigeria should consider what Nigerian readers expect.",
+      "D": "The success of Nnedi Okorafor has influenced novelists outside Nigeria who write in popular genres."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản: các tiểu thuyết gia gốc Nigeria gần đây (như Nnedi Okorafor và Ben Okri) đang khéo léo kết hợp văn hóa dân gian truyền thống của dân tộc mình với các thể loại văn học đại chúng phương Tây[cite: 10]."
+  },
+  {
+    "id": "mi_121",
+    "questionNumber": 121,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "How a first-time visitor moves through a gallery matters to anyone designing one. Regular museumgoers have been watched closely; the newcomer's first hour has not. To learn about it, researchers gave trackers to six people visiting a museum for the first time and left them to wander. Most of them, the data showed, drifted along the route the floor plan suggested, stopping where the crowd stopped. Two did not: they cut against the flow of traffic, perhaps hunting for one painting they had come to see.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To summarize research on a little-studied kind of museum visitor",
+      "B": "To suggest reasons why some first-time visitors move against the flow of traffic",
+      "C": "To compare the behavior of regular museumgoers and first-time visitors",
+      "D": "To describe successful approaches to designing galleries"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn tóm tắt một nghiên cứu theo dõi hành vi di chuyển của nhóm khách lần đầu đến bảo tàng—một đối tượng ít khi được khảo sát so với những người đi bảo tàng thường xuyên."
+  },
+  {
+    "id": "mi_122",
+    "questionNumber": 122,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The Yamato line is treated by historians as central to the making of the Japanese state, though not every name on it is handled the same way. Emperor Kinmei, who ruled in the sixth century CE, is one thing; Jimmu, said to have taken the throne in 660 BCE, is another, and whether he existed at all is disputed. Jimmu is named in the Nihon Shoki, a genuine chronicle of early Japan compiled in 720. But what the chronicle has to say about him came down by word of mouth, which is not true of its account of later reigns.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "It compares the reign of Jimmu favorably with the reign of Kinmei.",
+      "B": "It describes a process that was used to establish that a Japanese chronicle is genuine.",
+      "C": "It presents evidence in support of a particular claim about Kinmei.",
+      "D": "It explains why historians differ in their treatment of an aspect of Japanese history."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của bài viết là giải thích lý do tại sao các nhà sử học tiếp cận và nhìn nhận các vị vua trong hoàng tộc Yamato khác nhau (như Kinmei có dữ liệu lịch sử xác thực, còn Jimmu chỉ dựa vào truyền miệng dân gian và tính có thực vẫn gây tranh cãi)[cite: 4]."
+  },
+  {
+    "id": "mi_123",
+    "questionNumber": 123,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from L.M. Montgomery's 1923 novel Emily of New Moon. Emily, a young girl who lives on a farm run by her aunt Elizabeth, wants to be a published writer someday.\nOne of the things they [argued] about was the fact that Emily, as Aunt Elizabeth discovered one day, was in the habit of using more of her egg money to buy paper than Aunt Elizabeth approved of. What did Emily do with so much paper? They had a little tiff about this morning. Emily had been writing stories all winter under Aunt Elizabeth's very nose and Aunt Elizabeth had never suspected it. She had fondly supposed that Emily was writing school compositions.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Emily forgot to buy eggs when she was supposed to.",
+      "B": "Aunt Elizabeth thinks Emily should spend more time at school.",
+      "C": "Aunt Elizabeth is surprised to find out that Emily has been writing stories.",
+      "D": "Emily is relieved to learn that Aunt Elizabeth enjoys reading Emily's stories."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của văn bản là Dì Elizabeth rất bất ngờ khi phát hiện ra Emily đã lén dùng tiền bán trứng mua giấy để viết truyện suốt cả mùa đông, điều mà trước đó bà cứ ngỡ là cháu mình viết bài luận ở trường[cite: 4]."
+  },
+  {
+    "id": "mi_124",
+    "questionNumber": 124,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from Adib Khorram's 2018 novel Darius the Great Is Not Okay. Darius, a teenager from the United States, is visiting his grandparents, Babou and Mamou, in Iran. They are preparing for a holiday celebration.\nI felt like a tourist.\nBut Babou fussed with my cap a little more, even though Mamou had already gotten it settled. He looked me in the eye from time to time, like he was looking for something, and thought maybe—just maybe—I had it in me after all.\nBabou hummed to himself as he smoothed out my shoulder seams and rested his hands on them.\n\"I am glad you are here to see this, Darius-jan.\"\nMaybe I wasn't such a tourist.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To emphasize that Darius has been looking forward to an event",
+      "B": "To demonstrate that Darius and Babou would prefer not to travel",
+      "C": "To show that Babou affects the way Darius thinks of himself",
+      "D": "To suggest that Babou and Mamou will visit Darius in the United States soon"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn thể hiện hành động ân cần và lời nói ấm áp của người ông (Babou) đã thay đổi nhận thức của Darius về bản thân—từ cảm giác xa lạ như một người khách du lịch chuyển sang cảm giác thuộc về nơi này[cite: 4]."
+  },
+  {
+    "id": "mi_125",
+    "questionNumber": 125,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Why can a piano be played softly or loudly while a harpsichord cannot? Researchers point to what the key sets in motion. In a harpsichord, the key raises a wooden jack, and a small quill fixed to the jack plucks the string as it passes; pressing harder only lifts the jack faster, and the pluck comes out the same either way. A piano key instead throws a felt hammer at the string and lets go of it, so the force behind the key decides how hard the string is struck. That release is also why the hammer does not rest against the string and kill the note it has just made.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "The text summarizes information about the keyboards of pianos and other instruments.",
+      "B": "The text describes how two instruments are played together.",
+      "C": "The text provides a possible explanation for a difference between two instruments.",
+      "D": "The text argues that some features of an instrument matter more than others."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích của đoạn văn là đưa ra lời giải thích chi tiết về mặt cơ học cho sự khác biệt giữa đàn piano (có thể chơi to/nhỏ tùy lực nhấn búa gõ) và đàn harpsichord (chỉ có một mức âm lượng do cơ chế gảy dây)[cite: 4]."
+  },
+  {
+    "id": "mi_126",
+    "questionNumber": 126,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm.\nIf I judge right, 'tis the duty of an historian to set everything in its own light, and to convey matter of fact upon its legitimate authority, and no other: I mean thus, (for I would be as explicit as I can) that where a story is vouched to him with sufficient authority, he ought to give the world the special testimonial of its proper voucher, or else he is not just to the story: and where it comes without such sufficient authority, he ought to say so; otherwise he is not just to himself.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It asserts that some historical documents are more trustworthy than others.",
+      "B": "It points out what Defoe thinks of as a widespread problem with historical research.",
+      "C": "It presents Defoe's view of the appropriate ethical practice when engaging in historical research.",
+      "D": "It argues that a historical event that some people find implausible did in fact occur."
+    },
+    "correctAnswer": "C",
+    "explanation": "Defoe trình bày quan điểm về đạo đức nghề nghiệp của người làm công tác nghiên cứu lịch sử: phải trung thực dẫn chứng nguồn tài liệu xác thực có căn cứ rõ ràng, còn nếu thông tin chưa đủ chứng cứ thì phải nói rõ như vậy[cite: 4]."
+  },
+  {
+    "id": "mi_127",
+    "questionNumber": 127,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Anyone trying to count the world's museums runs into a definition problem. Most national surveys start from the idea of a permanent collection open to the public. However, the threshold moves from one country to the next: France requires that a collection be held in trust and never sold off, while other registries admit any site that charges admission and puts objects on display. Some add conditions of another kind, like whether a curator is on staff. This variation makes it difficult for researchers to set a figure from one country beside a figure from another.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To explain why researchers are interested in counting the world's museums",
+      "B": "To object to a method that some countries use to classify their museums",
+      "C": "To compare the number of museums in two different countries",
+      "D": "To illustrate a problem faced by researchers who study museums"
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích là làm sáng tỏ khó khăn của các nhà nghiên cứu: tiêu chuẩn định nghĩa về 'bảo tàng' khác nhau giữa các quốc gia, khiến cho việc thống kê và so sánh số lượng bảo tàng trên thế giới trở nên phức tạp[cite: 4]."
+  },
+  {
+    "id": "mi_128",
+    "questionNumber": 128,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Weathered gravestones, worn coins, and other objects have lost the surfaces their letters were cut into and must be read some other way. Kanako Ide and colleagues investigated how a Roman inscription can still be recovered from a slab whose face has flaked away entirely, taking every visible stroke with it. Photographing the slab under light raked across it from dozens of angles, the researchers found that the letters reappeared wherever the stone had been compressed beneath the chisel—damage that lies below the surface and outlives it.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To explain the role of raking light in reading inscriptions of many kinds",
+      "B": "To contrast how a Roman slab is read with how gravestones and worn coins are read",
+      "C": "To outline a study designed to identify the mechanism that makes a lost inscription readable",
+      "D": "To compare the functions of two parts of an inscribed slab"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn phác thảo nghiên cứu của Kanako Ide nhằm tìm ra cơ chế giúp khôi phục các ký tự La Mã đã bị bào mòn trên mặt đá: lớp đá bị nén chặt dưới nhát đục vẫn lưu giữ dấu vết nằm sâu dưới bề mặt[cite: 4]."
+  },
+  {
+    "id": "mi_129",
+    "questionNumber": 129,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Concert halls have a reverberation time, the tail of sound that hangs on after the players stop, which affects how full or how muddy a chord seems. That tail runs longest when the seats are empty, conferring the greatest effect at a rehearsal. Conversely, when the seats are full, coats and bodies swallow much of the tail and leave less; thus, a piece scored with dense, close chords will sound as its composer intended on a sold-out night but may turn to soup at the dress rehearsal.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To suggest changes to the way some pieces are scored to account for the halls they are meant for",
+      "B": "To indicate why some chords sound fuller than others no matter how full the hall is",
+      "C": "To discuss how a particular temporary condition of a hall affects perceptions of sound",
+      "D": "To explain how findings about reverberation might change the hours at which concerts are held"
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích là bàn luận về việc điều kiện tạm thời của khán phòng (ghế trống lúc tổng duyệt hay kín chỗ lúc diễn chính thức) làm thay đổi độ vang âm (reverberation) và nhận thức âm thanh của bản nhạc[cite: 4]."
+  },
+  {
+    "id": "mi_130",
+    "questionNumber": 130,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Though the shows the company Rimini Protokoll builds are staged and scripted, the people onstage are not actors: a truck driver plays a truck driver, a call-center worker plays herself. The company also asks each of them, whether they are teenagers from a housing estate or retirees who have never seen a play, to put as much of their own lives into the part as it can hold. Real events are worked into the script, the staging borrows the plainness of a documentary, and what results is theater about work, home, and leaving—subjects that gain their weight from the fact that the person saying the lines has lived them.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To summarize how Rimini Protokoll's approach to theater has changed over the years",
+      "B": "To discuss how the company's roots in documentary have shaped the way it tells stories",
+      "C": "To argue that the company's shows are best understood as documentaries",
+      "D": "To emphasize that the company's choices during rehearsal reinforce the themes of its work"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn nhấn mạnh phương pháp của Rimini Protokoll (sử dụng người thật với trải nghiệm sống thật trên sân khấu mang phong cách tài liệu) giúp gia tăng sức nặng và làm nổi bật chủ đề các vở kịch[cite: 4]."
+  },
+  {
+    "id": "mi_131",
+    "questionNumber": 131,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm.\nThe sermon is a sound of words spoken to the ear, and prepared only for present meditation, and extends no farther than the strength of memory can convey it; a book printed is a record; remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It recounts why the works of some artists are still discussed by critics after the artists' deaths while others are not.",
+      "B": "It analyzes the contributions to society of two different groups of scholars.",
+      "C": "It demonstrates that one form of communication is more commonly used than another.",
+      "D": "It describes differences in the characteristics of two kinds of communication."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn so sánh đặc điểm đối lập giữa hai hình thức truyền thông: lời thuyết giáo nói ra chỉ lưu giữ theo trí nhớ ngắn hạn, còn cuốn sách in là bản ghi chép trường tồn qua nhiều thế hệ[cite: 4]."
+  },
+  {
+    "id": "mi_132",
+    "questionNumber": 132,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm.\nThe sermon is a sound of words spoken to the ear, and prepared only for present meditation, and extends no farther than the strength of memory can convey it; a book printed is a record; remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Words committed to print have a greater permanence than messages that are merely spoken aloud.",
+      "B": "People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
+      "C": "Unless a spoken message is delivered by an expert, it can be safely ignored.",
+      "D": "Most authors have little hope of being remembered well past their lifetimes."
+    },
+    "correctAnswer": "A",
+    "explanation": "Ý chính của văn bản: chữ viết được in ấn có tính bền vững và lâu dài vượt trội hơn hẳn so với những lời nói miệng vốn chỉ phụ thuộc vào trí nhớ chóng phai[cite: 4]."
+  },
+  {
+    "id": "mi_133",
+    "questionNumber": 133,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Publishers deciding how many copies of a novel to print face obstacles: what readers want shifts within months, while printing and shipping a book takes a long time. Researchers Priya Raghavan and Tomás Egan have found that setting a publisher's own order history beside what readers say online can dramatically sharpen those decisions—by 24 to 57 percent in the cases they directly studied. Better predictions mean fewer warehouses filled with books nobody asked for.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Filling a warehouse with unsold copies is the main preoccupation of publishers trying to forecast demand.",
+      "B": "Social media is revolutionizing how publishers and researchers alike view the book trade.",
+      "C": "Drawing on more than one source of data can enhance a publisher's ability to anticipate demand.",
+      "D": "Publishers can use their own order histories to predict accurately how readers' tastes are changing."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của bài viết: việc kết hợp nhiều nguồn dữ liệu (lịch sử đơn hàng nội bộ cùng các đánh giá trực tuyến của độc giả) giúp các nhà xuất bản dự đoán chính xác hơn nhu cầu in ấn và tránh tồn kho[cite: 4]."
+  },
+  {
+    "id": "mi_134",
+    "questionNumber": 134,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Birch-bark letters, documents scratched into peeled bark rather than written on parchment, turn up in quantity in only two places: the medieval town of Novgorod in Russia and the Buddhist monasteries of ancient Gandhara, in what is now Pakistan. Scholars aren't entirely sure why the practice took hold there and nowhere between (the two traditions are separated by more than a thousand years), but the material appears to be very selective: bark peels in usable sheets from only a few birch species, and those trees grow thickly in exactly these regions.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe where a particular writing material is found and the specific conditions it seems to require.",
+      "B": "To argue that the way bark must be peeled explains why such letters are rare.",
+      "C": "To compare how people in two regions made economic use of birch trees.",
+      "D": "To claim that the practice arose only recently, despite evidence to the contrary."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn miêu tả nơi tìm thấy các bức thư bằng vỏ cây bạch dương (ở Novgorod và Gandhara) đồng thời giải thích điều kiện tự nhiên cần thiết (chỉ vài loài bạch dương vỏ mới tách thành tấm dùng được)[cite: 4]."
+  },
+  {
+    "id": "mi_135",
+    "questionNumber": 135,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from Louise Erdrich's 1986 novel The Beet Queen. Celestine takes her infant daughter with her to the butcher shop where she makes sausages.\nSometimes Celestine turned around and met the direct gaze of her daughter, a look so penetrating that Celestine's breath caught. She dropped the spice, the string, the knife she was using, and took the girl up in her arms, ready for her to speak as if a spell had suddenly lifted. When the baby flexed her entire body and struggled to free herself, Celestine put her down. No matter how thorough Celestine's exhaustion, no matter how little sleep she'd had, there was a nerve of excitement running through each hour. ©1986 by Louise Erdrich",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To show that Celestine enjoys imagining her daughter's future life.",
+      "B": "To explain how Celestine's coworkers bond with her daughter.",
+      "C": "To portray Celestine's excitement about her daughter.",
+      "D": "To imply that Celestine is dissatisfied with her job."
+    },
+    "correctAnswer": "C",
+    "explanation": "Mục đích của đoạn văn là khắc họa cảm giác xúc động, say mê và nguồn năng lượng dâng trào của Celestine bên cô con gái nhỏ, bất chấp sự mệt mỏi và thiếu ngủ trong công việc hàng ngày[cite: 4]."
+  },
+  {
+    "id": "mi_136",
+    "questionNumber": 136,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Cabinets of curiosities in seventeenth-century Europe belonged, for the most part, to wealthy men who decided for themselves who was let in to see them. That changed on paper in 1683, when the Ashmolean opened its doors in Oxford, and again in 1759, when the British Museum admitted its first visitors. As modern scholar Paulo Cardoso notes, however, the break is less sharp than it looks, as trustees and private owners alike treated a collection as an extension of the standing of the man behind it, just at vastly differing scales.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To call into question the notion that private cabinets disappeared during the eighteenth century",
+      "B": "To contend that the first museum trustees held too much sway over what was displayed",
+      "C": "To give a brief overview of who could see a collection in seventeenth-century Europe",
+      "D": "To assert that private cabinets and the first public museums in Europe had an essential similarity."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đoạn văn khẳng định rằng các phòng trưng bày kỳ vật cá nhân và các bảo tàng công cộng đầu tiên ở châu Âu có một điểm tương đồng bản chất: đều được coi như công cụ phô diễn vị thế và tầm vóc của người đứng sau[cite: 4]."
+  },
+  {
+    "id": "mi_137",
+    "questionNumber": 137,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "In her book The Borrowed Past, philosopher Nadia Kroll criticizes rules that let museums keep whatever their collecting brings in while leaving the public to settle the bill when a claim is made. As an example she cites the 2015 restitution program in which a dozen institutions including the Kellerman Museum and the Vandermeer Collection drew a combined €300 million in state funds to compensate the families of former owners. Had the government previously exercised stricter rules on acquisition, Kroll argues, this outlay would not have been necessary.",
+    "question": "Which choice best states the main topic of the text?",
+    "options": {
+      "A": "Techniques of judging the risks of particular ways of acquiring objects",
+      "B": "Consequences of the 2015 restitution program for the Kellerman Museum and the Vandermeer Collection",
+      "C": "How one government used money received from taxation to help institutions settle claims arising from a period of disputed collecting",
+      "D": "Why a scholar believes it would be beneficial for certain government policies to be reconsidered"
+    },
+    "correctAnswer": "D",
+    "explanation": "Chủ đề chính là lý do học giả Nadia Kroll cho rằng các chính sách của chính phủ liên quan đến quy định mua và lưu giữ hiện vật của bảo tàng cần phải được xem xét lại để tránh gây tổn thất ngân sách công[cite: 4]."
+  },
+  {
+    "id": "mi_138",
+    "questionNumber": 138,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Can a fifteenth-century recipe for green paint be followed today? Can one for red lake? You might think the answer to these questions is obviously no, but researchers in Amsterdam recently showed that most recipes in old artists' manuals do work, as long as the wording is read the way a workshop hand would have read it. In fact, some pigments came out better than their modern equivalents: 30 percent of the verdigris mixed to a manual's directions survived a year on the panel without darkening, compared with 4 percent of a modern batch.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To settle long-standing questions about how old artists' manuals ought to be translated",
+      "B": "To present a surprising finding about paints mixed according to old recipes",
+      "C": "To discuss an unexpected result about the role of wording in the reconstruction of old recipes",
+      "D": "To explain an important study of the differences between old pigments and modern ones"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích là công bố một phát hiện đáng kinh ngạc: các công thức pha màu trong sách hướng dẫn thế kỷ 15 hoàn toàn sử dụng được tốt ngày nay, thậm chí một số sắc tố còn giữ màu bền hơn phiên bản hiện đại[cite: 4]."
+  },
+  {
+    "id": "mi_139",
+    "questionNumber": 139,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "The following text is adapted from Jerome K. Jerome's 1889 novel Three Men in a Boat (To Say Nothing of the Dog). The narrator is traveling by boat with Harris and another friend.\n[Harris] told us anecdotes of how he had gone across the [English] Channel when it was so rough that the passengers had to be tied into their [beds], and he and the captain were the only two living souls on board who were not ill. Sometimes it was he and the second mate who were not ill; but it was generally he and one other man. If not he and another man, then it was he by himself.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Harris is worried that the captain will start to feel sick during this boat trip.",
+      "B": "Harris has a hard time remembering his first trip across the English Channel when his friends ask about it.",
+      "C": "When Harris speaks of an earlier trip, he often changes the details but always brags about his own wellness.",
+      "D": "Harris spent most of his time with a particular passenger during a previous boat trip."
+    },
+    "correctAnswer": "C",
+    "explanation": "Ý chính của đoạn văn là mỗi khi kể về chuyến đi biển trước đây, Harris luôn thay đổi các chi tiết nhưng lúc nào cũng khoe khoang rằng bản thân là người duy nhất (hoặc hiếm hoi) không bị say sóng[cite: 4]."
+  },
+  {
+    "id": "mi_140",
+    "questionNumber": 140,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Caravaggio is remembered first for the killing that drove him out of Rome in 1606, a murky business of a wager, a debt, and a knife that drew in figures such as the swordsman Ranuccio Tomassoni and the painter's patron Ciriaco Mattei. But what he left behind is not so easily filed: he has been credited with teaching European painting to build a scene out of a single shaft of light, and his habit of taking beggars and street women as models for saints is arguably a precursor to the realism that Courbet made a program two centuries later.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "It catalogs the most notable achievements of a historical figure.",
+      "B": "It explains how a historical figure's reputation has improved significantly with the passage of time.",
+      "C": "It argues that the seeming prominence of a historical figure is largely due to the actions of others.",
+      "D": "It assesses a historical figure's significance by considering both his achievements and his failings."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích của bài viết là đánh giá tầm vóc lịch sử của Caravaggio bằng cách nhìn nhận cả hai mặt: vụ giết người tai tiếng khiến ông phải bỏ trốn khỏi Rome và những di sản nghệ thuật tiên phong xuất chúng mà ông để lại[cite: 4]."
+  },
+  {
+    "id": "mi_141",
+    "questionNumber": 141,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from José Rizal's 1891 novel The Reign of Greed (translated by Charles Derbyshire in 1912).\nA lady accompanied by her husband entered at that moment and took her place in one of the two vacant boxes. She had the air of a queen and gazed disdainfully at the whole house, as if to say, \"I've come later than all of you, you crowd of upstarts and provincials, I've come later than you!\" There are persons who go to the theater like the contestants in a mule-race: the last one in, wins, and we know very sensible men who would ascend the scaffold rather than enter a theater before the first act.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To critique the social pretensions and dramatic entrances of certain theatergoers",
+      "B": "To describe the behavior of a woman who disrespects theater traditions",
+      "C": "To emphasize the differences between urban and provincial attitudes toward theater etiquette",
+      "D": "To suggest that arriving late to the theater demonstrates superiority and sophistication"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn châm biếm và phê phán thói phô trương, kệch cỡm của một số khán giả cố tình đến rạp kịch muộn nhằm tạo sự chú ý và tỏ vẻ thượng đẳng hơn đám đông."
+  },
+  {
+    "id": "mi_142",
+    "questionNumber": 142,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Caravaggio is remembered first for the killing that drove him out of Rome in 1606, a murky business of a wager, a debt, and a knife that drew in figures such as the swordsman Ranuccio Tomassoni and the architect Onorio Longhi. But what he left behind is not so easily filed: he has been credited with teaching European painting to build a scene out of a single shaft of light, and his habit of taking beggars and street women as models for saints is arguably a precursor to the realism that Courbet made a program two centuries later.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Ranuccio Tomassoni and Onorio Longhi were significant figures in the life of Caravaggio.",
+      "B": "Caravaggio is commonly linked with a notorious crime, but this overshadows some of his notable achievements.",
+      "C": "Some of Caravaggio's methods shaped the work of painters who came after him.",
+      "D": "Caravaggio's reputation is primarily due to the actions of his associates."
+    },
+    "correctAnswer": "B",
+    "explanation": "Ý chính của văn bản: Caravaggio thường bị dư luận nhớ tới trước tiên vì vụ án mạng tai tiếng năm 1606, song vết nhơ này đã phần nào làm lu mờ những đột phá nghệ thuật kiệt xuất mà ông cống hiến cho hội họa châu Âu[cite: 4]."
+  },
+  {
+    "id": "mi_143",
+    "questionNumber": 143,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Say that a singer's voice has been \"Auto-Tuned\" and most listeners will hear a description of an effect rather than a claim about whose software produced it. As legal experts note, this may pose a problem for Antares, the firm that owns the name. In the US, courts can strike a trademark from the register once its meaning stops pointing to one maker's goods. If \"Auto-Tune\" were judged to have become a generic term, as \"escalator\" was, any rival would be free to print it on a competing plug-in, making it harder for Antares to stand out on a crowded shelf.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To discuss the legal difficulties Antares faces in holding on to the trademark \"Auto-Tune.\"",
+      "B": "To explain how the genericizing of trademarks can affect brand exclusivity and market competition.",
+      "C": "To compare the trademark troubles faced by \"Auto-Tune\" and \"escalator\" in the US market.",
+      "D": "To argue that people should use brand names precisely rather than as generic terms."
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích của đoạn văn là bàn luận về nguy cơ pháp lý mà công ty Antares phải đối mặt trong việc duy trì quyền bảo hộ nhãn hiệu 'Auto-Tune' khi từ này dần bị đại chúng hóa thành một danh từ chung[cite: 4]."
+  },
+  {
+    "id": "mi_144",
+    "questionNumber": 144,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Researchers have long hypothesized that the bluestones of Stonehenge were floated to the site from Wales on rafts. One team set out to test this hypothesis using a replica; they lashed a three-ton block to a raft of the kind Neolithic builders could have made and towed it out of the estuary. The raft rode the sheltered water well enough and then, in the first real swell, went under—and water like that lies across the whole of the proposed route. This led the team to conclude that a sea passage likely wasn't how the stones travelled.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To argue for the significance of new findings amid an ongoing debate among researchers.",
+      "B": "To discuss the advantages and disadvantages of the method used in an experiment.",
+      "C": "To summarize two competing hypotheses and a major finding associated with each one.",
+      "D": "To describe an experiment whose results cast doubt on an established hypothesis."
+    },
+    "correctAnswer": "D",
+    "explanation": "Mục đích là miêu tả một thí nghiệm mô phỏng bằng bè chở đá nặng 3 tấn, qua đó kết quả bè bị chìm khi gặp sóng lớn đã phủ định giả thuyết truyền thống cho rằng các phiến đá Stonehenge được vận chuyển bằng đường biển[cite: 4]."
+  },
+  {
+    "id": "mi_145",
+    "questionNumber": 145,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "German and Venetian painters of the seventeenth century built their pictures on a vanishing point, the device that makes a flat panel read as depth. Persian and Mughal painters are thought to have worked without one. Many scholars assumed the same of the Japanese print, but Haruko Emura and her team wanted to test whether that assumption was true. The team measured the receding lines in more than four hundred prints made between 1730 and 1780. The lines converged, print after print, on a single point, suggesting that these printmakers worked more like German and Venetian painters than like Persian or Mughal ones.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Emura's team measured the receding lines in Persian and Mughal painting.",
+      "B": "Before completing their study, Emura's team showed that German painters used a vanishing point, but Venetian painters may not have.",
+      "C": "The findings of Emura's team's study suggest that, like German and Venetian painters, Japanese printmakers may have used a vanishing point.",
+      "D": "Japanese prints are far more intricate than either German or Venetian paintings."
+    },
+    "correctAnswer": "C",
+    "explanation": "Kết quả nghiên cứu của nhóm Emura chỉ ra rằng, tương tự như các họa sĩ Đức và Venice, các nghệ nhân tranh khắc gỗ Nhật Bản giai đoạn 1730-1780 nhiều khả năng đã áp dụng kỹ thuật điểm tụ (vanishing point) trong tranh[cite: 4]."
+  },
+  {
+    "id": "mi_146",
+    "questionNumber": 146,
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "passage": "Florentine and Venetian painters of the seventeenth century built their pictures on a vanishing point, the device that makes a flat panel read as depth. Persian and Mughal painters are thought to have worked without one. Many scholars assumed the same of the Japanese print, but Haruko Emura and her team wanted to test whether that assumption was true. The team measured the receding lines in more than four hundred prints made between 1730 and 1780. The lines converged, print after print, on a single point, suggesting that these printmakers worked more like Florentine and Venetian painters than like Persian or Mughal ones.",
+    "question": "Which choice best states the main idea of the text?",
+    "options": {
+      "A": "Japanese prints are far more intricate than either Florentine or Venetian paintings.",
+      "B": "Before completing their study, Emura's team showed that Florentine painters used a vanishing point, but Venetian painters may not have.",
+      "C": "Emura's team measured the receding lines in Persian and Mughal painting.",
+      "D": "The findings of Emura's team's study suggest that, like Florentine and Venetian painters, Japanese printmakers may have used a vanishing point."
+    },
+    "correctAnswer": "D",
+    "explanation": "Ý chính của đoạn văn: các đường thẳng song song lùi xa trong hơn 400 bức tranh in Nhật Bản đều hội tụ về một điểm, cho thấy các nghệ nhân Nhật Bản có thể đã dùng điểm tụ giống các họa sĩ thành Florence và Venice[cite: 4]."
+  },
+  {
+    "id": "mi_147",
+    "questionNumber": 147,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Cato's Letters ran in the London Journal and, later, the British Journal between 1720 and 1723: 144 essays signed with the name of a Roman republican who had died seventeen centuries earlier. Behind the name were John Trenchard and Thomas Gordon, who used the letters to argue that English liberties would not outlast a government nobody was watching. Which man wrote which letter is mostly settled, though not entirely: while No. 15, \"Of Freedom of Speech,\" is firmly Gordon's, No. 62, on the character of a free people, has been claimed for Trenchard and for Gordon by turns.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To summarize an argument that made a collection of essays controversial.",
+      "B": "To describe a collection of essays and set out what is known about who wrote them.",
+      "C": "To point out that some essays in a notable collection had a single author while others had two.",
+      "D": "To lay out where and when a collection of essays first appeared."
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích là giới thiệu tập tiểu luận nổi tiếng Cato's Letters và phân tích những thông tin đã được làm sáng tỏ (cũng như những tranh cãi còn lại) về tác giả thực sự của từng lá thư giữa Trenchard và Gordon[cite: 4]."
+  },
+  {
+    "id": "mi_148",
+    "questionNumber": 148,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "A study by Dr. Paula Hensley and colleagues concluded that readers are gentler toward a difficult poem if they hear it before they see it. Study participants were assigned to one of two groups. The experimental group listened to a recording of the poem read straight through, once, before opening the page. And the control group spent a few minutes reading a note about the paper the poem was printed on before opening the same page. Both groups then wrote a paragraph judging the poem, and Hensley and colleagues found that the paragraphs from the listeners were markedly less dismissive than the paragraphs from the control group.",
+    "question": "Which choice best describes the main purpose of the text?",
+    "options": {
+      "A": "To explain a study's conclusion and how a research team arrived at that conclusion",
+      "B": "To argue that researchers were surprised by the results of a certain study",
+      "C": "To suggest ways to improve a certain study's experimental design",
+      "D": "To describe a widely held belief and how a study's results support that belief"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đoạn văn trình bày kết luận của nghiên cứu (người đọc đón nhận thơ khó cởi mở hơn nếu được nghe đọc trước) và giải thích chi tiết quy trình bố trí hai nhóm thực nghiệm/đối chứng để đi đến kết luận đó[cite: 4]."
+  },
+  {
+    "id": "mi_149",
+    "questionNumber": 149,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Concert halls in Vienna fill in a way few others do, but simply importing a feature of Vienna associated with that—e.g., its cheap standing-room tickets, sold an hour before curtain—may be insufficient to fill a hall in another city. As musicologist Marta Kovač argues, our understanding of individuals' decision-making about how to spend an evening is insufficiently robust: some studies emphasize what a household earns, others how late the trains run, and so on, but such decisions are made in complex contexts in which multiple conditions and needs inform individuals' choices.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To discuss the difficulty of identifying a reliable way to increase concert attendance in any given city",
+      "B": "To explain why it is challenging to compare concert attendance in different cities",
+      "C": "To describe the effect of cheap standing-room tickets on any given city's concert attendance",
+      "D": "To present a claim about how individuals' decision-making about concerts can be improved"
+    },
+    "correctAnswer": "A",
+    "explanation": "Mục đích là thảo luận về sự phức tạp và khó khăn khi tìm kiếm một giải pháp chắc chắn nhằm tăng lượng khán giả đến rạp hòa nhạc, do việc sao chép chính sách vé rẻ của Vienna không thể tự động mang lại hiệu quả ở các thành phố khác[cite: 4]."
+  },
+  {
+    "id": "mi_150",
+    "questionNumber": 150,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "Verse in Old Norse turns on the kenning, or a compound that names a thing by way of two others. For example, the common kenning for the sea, the whale's road, yields at once. Others do not, and that is the point. The device's function is both formal—supplying the alliteration a line demands—and ritual: semantic relations between the two nouns and the thing meant can be tenuous, such that a kenning like Kvasir's blood, meaning poetry, is intelligible only to a listener who has heard the story of how the mead of poetry was made.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To illustrate the use of metaphor in Old Norse verse through a specific example.",
+      "B": "To argue that the primary purpose of all Old Norse verse was ceremonial.",
+      "C": "To characterize a specific literary device by explaining its function and cultural basis.",
+      "D": "To analyze the symbolic meaning of blood in Norse myth."
+    },
+    "correctAnswer": "C",
+    "explanation": "Đoạn văn làm rõ bản chất của một biện pháp tu từ đặc thù trong thơ ca Bắc Âu cổ (kenning), giải thích cả chức năng hình thức (tạo điệp âm) lẫn nền tảng văn hóa/thần thoại để người nghe hiểu được nghĩa[cite: 4]."
+  },
+  {
+    "id": "mi_151",
+    "questionNumber": 151,
+    "domain": "Craft and Structure",
+    "skill": "Main Purpose",
+    "passage": "The following text is from José Rizal's 1891 novel The Reign of Greed (translated by Charles Derbyshire in 1912).\nA lady accompanied by her husband entered at that moment and took her place in one of the two vacant boxes. She had the air of a queen and gazed disdainfully at the whole house, as if to say, \"I've come later than all of you, you crowd of upstarts and provincials, I've come later than you!\" There are persons who go to the theater like the contestants in a mule-race: the last one in, wins, and we know very sensible men who would ascend the scaffold rather than enter a theater before the first act.",
+    "question": "Which choice best states the main purpose of the text?",
+    "options": {
+      "A": "To describe the physical appearance and demeanor of a particular lady at the theater.",
+      "B": "To criticize the pretentious behavior of certain theatergoers who view themselves as superior.",
+      "C": "To illustrate the competitive nature of attending the theater, likening it to a race.",
+      "D": "To compare different attitudes toward theater etiquette among various social groups"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mục đích là đả kích và châm biếm thái độ kệch cỡm, tự cao tự đại của những khán giả đi xem kịch muộn để phô diễn sự thượng đẳng trước những người đến sớm[cite: 4]."
+  }
+]

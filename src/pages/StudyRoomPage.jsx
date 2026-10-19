@@ -7,7 +7,6 @@ import {
   Trophy,
   Play,
   RotateCcw,
-  Zap,
   MessageSquare,
   Crown,
   Gauge,
@@ -19,8 +18,8 @@ import {
 } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient';
 import { authService } from '../services/authService';
+import { securityGuard } from '../utils/securityGuard';
 
-// Câu hỏi Turbo nhanh hiện ngay trên HUD kính lái để kích hoạt Siêu Nitro
 const QUICK_TURBO_QUESTIONS = [
   { q: '"Ubiquitous" = ?', options: ['Everywhere', 'Rare', 'Hidden', 'Weak'], ans: 0 },
   { q: '2x + 6 = 14 => x = ?', options: ['3', '4', '5', '6'], ans: 1 },
@@ -44,7 +43,7 @@ const INITIAL_CHAT = [
   { id: 'c2', author: 'Hoàng Nam', text: 'Lách trái/phải ăn vạch sáng xanh trên đường với bấm Space xả Nitro là lên Top 1 ngay!', time: 'Vừa xong' },
 ];
 
-const TOTAL_RACE_DISTANCE = 4500; // Chiều dài chặng đua
+const TOTAL_RACE_DISTANCE = 4500;
 
 export default function StudyRoomPage({ currentUser }) {
   const userProfile = currentUser || authService.getCurrentUser() || {
@@ -56,9 +55,6 @@ export default function StudyRoomPage({ currentUser }) {
   const myDisplayName =
     localStorage.getItem('sat_custom_display_name') || userProfile.name || 'Commander';
 
-  // =========================================================================
-  // 1. STATE CHẾ ĐỘ TOÀN MÀN HÌNH (FULLSCREEN MODE)
-  // =========================================================================
   const [isFullscreen, setIsFullscreen] = useState(false);
   const gameContainerRef = useRef(null);
   const canvasRef = useRef(null);
@@ -75,29 +71,13 @@ export default function StudyRoomPage({ currentUser }) {
     });
   }, []);
 
-  useEffect(() => {
-    const onFsChange = () => {
-      if (!document.fullscreenElement && isFullscreen) {
-        // Vẫn giữ chế độ phóng to khung cửa sổ nếu người dùng không bấm Esc
-      }
-    };
-    document.addEventListener('fullscreenchange', onFsChange);
-    return () => document.removeEventListener('fullscreenchange', onFsChange);
-  }, [isFullscreen]);
-
-  // =========================================================================
-  // 2. STATE PHÒNG TỰ HỌC & CHAT
-  // =========================================================================
   const [onlineMembers] = useState(INITIAL_ONLINE_STUDENTS);
   const [chatMessages, setChatMessages] = useState(INITIAL_CHAT);
   const [chatInput, setChatInput] = useState('');
   const [floatingEmojis, setFloatingEmojis] = useState([]);
   const channelRef = useRef(null);
 
-  // =========================================================================
-  // 3. STATE & REF CHO ENGINE ĐUA XE 3D 5 NGƯỜI CHƠI
-  // =========================================================================
-  const [raceStatus, setRaceStatus] = useState('idle'); // 'idle' | 'countdown' | 'racing' | 'finished'
+  const [raceStatus, setRaceStatus] = useState('idle');
   const [countdown, setCountdown] = useState(3);
   const [hudStats, setHudStats] = useState({
     speedKmh: 0,
@@ -109,7 +89,6 @@ export default function StudyRoomPage({ currentUser }) {
   const [quizIndex, setQuizIndex] = useState(0);
   const [turboToast, setTurboToast] = useState('');
 
-  // Dữ liệu vật lý thời gian thực của 5 xe đua trong Canvas 60FPS
   const raceDataRef = useRef({
     roadOffset: 0,
     keys: { left: false, right: false, boost: false },
@@ -133,7 +112,6 @@ export default function StudyRoomPage({ currentUser }) {
     ],
   });
 
-  // Kết nối Supabase Realtime nếu có
   useEffect(() => {
     if (!isSupabaseConfigured || !supabase) return;
     const channel = supabase.channel('sat_study_room_race');
@@ -153,9 +131,12 @@ export default function StudyRoomPage({ currentUser }) {
   }, []);
 
   const triggerEmoji = (emoji) => {
+    const check = securityGuard.checkRateLimit('study_emoji', 250);
+    if (!check.allowed) return;
+
     const id = `${Date.now()}_${Math.random()}`;
     const x = Math.floor(Math.random() * 240) - 120;
-    setFloatingEmojis((prev) => [...prev, { id, emoji, x }]);
+    setFloatingEmojis((prev) => [...prev.slice(-18), { id, emoji, x }]);
     setTimeout(() => {
       setFloatingEmojis((prev) => prev.filter((item) => item.id !== id));
     }, 2000);
@@ -163,11 +144,19 @@ export default function StudyRoomPage({ currentUser }) {
 
   const handleSendChat = (e) => {
     e.preventDefault();
-    if (!chatInput.trim()) return;
+    const cleanText = securityGuard.sanitizeInput(chatInput, 500);
+    if (!cleanText) return;
+
+    const check = securityGuard.checkRateLimit('study_chat');
+    if (!check.allowed) {
+      alert(check.reason);
+      return;
+    }
+
     const newMsg = {
       id: `msg_${Date.now()}`,
-      author: myDisplayName,
-      text: chatInput.trim(),
+      author: securityGuard.sanitizeInput(myDisplayName, 50),
+      text: cleanText,
       time: 'Vừa xong',
     };
     setChatMessages((prev) => [newMsg, ...prev.slice(0, 29)]);
@@ -177,7 +166,6 @@ export default function StudyRoomPage({ currentUser }) {
     }
   };
 
-  // Khởi tạo chặng đua mới
   const handleStartRace = () => {
     const state = raceDataRef.current;
     state.finishOrder = [];
@@ -194,7 +182,6 @@ export default function StudyRoomPage({ currentUser }) {
     setTurboToast('');
   };
 
-  // Đếm ngược 3 - 2 - 1
   useEffect(() => {
     if (raceStatus !== 'countdown') return;
     if (countdown <= 0) {
@@ -205,7 +192,6 @@ export default function StudyRoomPage({ currentUser }) {
     return () => clearTimeout(t);
   }, [raceStatus, countdown]);
 
-  // Chuyển làn xe của người chơi (5 làn: 0, 1, 2, 3, 4)
   const steerMyCar = useCallback((dir) => {
     const me = raceDataRef.current.cars[0];
     if (!me) return;
@@ -214,7 +200,6 @@ export default function StudyRoomPage({ currentUser }) {
     me.tilt = dir * 12;
   }, []);
 
-  // Kích hoạt xung lực Nitro tức thời
   const triggerManualNitro = useCallback((bonusNitro = 18, speedSurge = 5.5) => {
     const me = raceDataRef.current.cars[0];
     if (!me) return;
@@ -228,7 +213,6 @@ export default function StudyRoomPage({ currentUser }) {
     }, 650);
   }, []);
 
-  // Lắng nghe bàn phím điều khiển xe (Trái/Phải/Space/W/F)
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -272,7 +256,6 @@ export default function StudyRoomPage({ currentUser }) {
     };
   }, [raceStatus, isFullscreen, steerMyCar, triggerManualNitro, toggleFullscreen]);
 
-  // Trả lời đúng câu hỏi Turbo trên kính lái => Phóng tên lửa Siêu Tốc
   const handleAnswerTurboQuiz = (idx) => {
     if (raceStatus !== 'racing') return;
     const q = QUICK_TURBO_QUESTIONS[quizIndex];
@@ -287,9 +270,6 @@ export default function StudyRoomPage({ currentUser }) {
     setTimeout(() => setTurboToast(''), 1200);
   };
 
-  // =========================================================================
-  // 4. VÒNG LẶP ĐỒ HỌA 3D PERSPECTIVE RACING CANVAS (60 FPS)
-  // =========================================================================
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -297,7 +277,6 @@ export default function StudyRoomPage({ currentUser }) {
     let animId;
     let frameCount = 0;
 
-    // Hàm vẽ một chiếc siêu xe 3D góc nhìn từ phía sau đuôi xe
     const draw3DSportsCar = (x, y, scale, car, isPlayer) => {
       ctx.save();
       ctx.translate(x, y);
@@ -306,13 +285,11 @@ export default function StudyRoomPage({ currentUser }) {
 
       const boosting = car.isBoosting || (isPlayer && raceDataRef.current.keys.boost && car.nitro > 2);
 
-      // Bóng đổ gầm xe
       ctx.fillStyle = 'rgba(0, 0, 0, 0.65)';
       ctx.beginPath();
       ctx.ellipse(0, 14, 46, 14, 0, 0, Math.PI * 2);
       ctx.fill();
 
-      // Luồng lửa Nitro đôi từ ống xả khi tăng tốc
       if (boosting && car.speed > 2) {
         const flameLen = 28 + Math.random() * 24;
         const flameGrad = ctx.createLinearGradient(0, 12, 0, 12 + flameLen);
@@ -322,14 +299,13 @@ export default function StudyRoomPage({ currentUser }) {
         flameGrad.addColorStop(1, 'transparent');
 
         ctx.fillStyle = flameGrad;
-        // Pô trái
         ctx.beginPath();
         ctx.moveTo(-20, 10);
         ctx.lineTo(-10, 10);
         ctx.lineTo(-15, 12 + flameLen);
         ctx.closePath();
         ctx.fill();
-        // Pô phải
+
         ctx.beginPath();
         ctx.moveTo(10, 10);
         ctx.lineTo(20, 10);
@@ -338,12 +314,10 @@ export default function StudyRoomPage({ currentUser }) {
         ctx.fill();
       }
 
-      // Bánh xe sau bản rộng (Trái & Phải)
       ctx.fillStyle = '#090d16';
       ctx.fillRect(-44, -6, 12, 20);
       ctx.fillRect(32, -6, 12, 20);
 
-      // Thân dưới xe thể thao (Widebody Chassis)
       ctx.fillStyle = car.color;
       ctx.shadowColor = car.glow;
       ctx.shadowBlur = isPlayer ? 18 : 10;
@@ -356,7 +330,6 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.fill();
       ctx.shadowBlur = 0;
 
-      // Kính sau & Nóc buồng lái khí động học
       ctx.fillStyle = '#0f172a';
       ctx.strokeStyle = car.glow;
       ctx.lineWidth = 1.5;
@@ -369,14 +342,12 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.fill();
       ctx.stroke();
 
-      // Cánh gió sau Carbon (GT Rear Wing)
       ctx.fillStyle = '#020617';
       ctx.fillRect(-38, -20, 76, 5);
       ctx.fillStyle = car.glow;
       ctx.fillRect(-38, -20, 6, 8);
       ctx.fillRect(32, -20, 6, 8);
 
-      // Cụm đèn hậu LED Neon ngang chuẩn Cyberpunk
       ctx.fillStyle = boosting ? '#38bdf8' : '#ff1e56';
       ctx.shadowColor = boosting ? '#38bdf8' : '#ff1e56';
       ctx.shadowBlur = 12;
@@ -384,7 +355,6 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.fillRect(10, -3, 22, 4);
       ctx.shadowBlur = 0;
 
-      // Biển tên tay đua nổi phía trên nóc xe
       ctx.font = 'bold 12px Inter, sans-serif';
       ctx.textAlign = 'center';
       const label = isPlayer ? `★ ${car.name} (Bạn)` : car.name;
@@ -410,13 +380,10 @@ export default function StudyRoomPage({ currentUser }) {
 
       const W = canvas.width;
       const H = canvas.height;
-      const horizonY = H * 0.36; // Đường chân trời
+      const horizonY = H * 0.36;
       const state = raceDataRef.current;
       const me = state.cars[0];
 
-      // ---------------------------------------------------------------------
-      // A. CẬP NHẬT VẬT LÝ CHẶNG ĐUA
-      // ---------------------------------------------------------------------
       if (raceStatus === 'racing') {
         state.cars.forEach((car) => {
           if (car.z >= TOTAL_RACE_DISTANCE) {
@@ -436,10 +403,9 @@ export default function StudyRoomPage({ currentUser }) {
               car.nitro = Math.min(100, car.nitro + 0.22);
             }
           } else {
-            // AI điều khiển 4 đối thủ tự động tăng tốc, chuyển làn và bật Nitro đầy kịch tính
             const rubberBand = me.z - car.z;
             let aiTarget = car.baseMaxSpeed + Math.sin(frameCount * 0.03 + car.lane) * 0.8;
-            if (rubberBand > 180) aiTarget += 1.6; // Bám đuổi gay cấn
+            if (rubberBand > 180) aiTarget += 1.6;
             if (rubberBand < -220) aiTarget -= 1.1;
 
             if (Math.random() < 0.012) {
@@ -451,12 +417,10 @@ export default function StudyRoomPage({ currentUser }) {
             car.speed += ((car.isBoosting ? aiTarget * 1.18 : aiTarget) - car.speed) * 0.06;
           }
 
-          // Nội suy chuyển làn mượt
           const laneDiff = car.targetLane - car.lane;
           car.lane += laneDiff * 0.14;
           car.tilt = laneDiff * 22;
 
-          // Kiểm tra ăn vạch tăng tốc (Boost Pads) trên đường
           state.boostPads.forEach((pad) => {
             if (Math.abs(car.z - pad.z) < 28 && Math.abs(car.lane - pad.lane) < 0.55) {
               car.speed = Math.min(18.5, car.speed + 4.5);
@@ -475,28 +439,28 @@ export default function StudyRoomPage({ currentUser }) {
 
         state.roadOffset += me.speed * 3.2;
 
-        // Kiểm tra kết thúc khi cả 5 xe về đích hoặc người chơi đã về đích
         const allDone = state.cars.every((c) => c.z >= TOTAL_RACE_DISTANCE);
         if (allDone || (me.z >= TOTAL_RACE_DISTANCE && state.finishOrder.length >= 3)) {
-          // Gán nốt thứ hạng cho các xe còn lại theo vị trí z
           const remaining = [...state.cars]
             .filter((c) => !c.rank)
             .sort((a, b) => b.z - a.z);
           remaining.forEach((c) => {
             state.finishOrder.push(c.id);
-            c.rank = state.finishOrder.length;
+            carRankAssign(c, state.finishOrder.length);
           });
           setRaceStatus('finished');
         }
       } else {
-        // Khi ở màn hình chờ (Idle), đường vẫn trôi nhẹ tạo hiệu ứng sống động
         state.roadOffset += 6;
         state.cars.forEach((c) => {
           c.tilt *= 0.9;
         });
       }
 
-      // Cập nhật HUD mỗi 6 frames
+      function carRankAssign(c, r) {
+        c.rank = r;
+      }
+
       if (frameCount % 6 === 0) {
         const sorted = [...state.cars].sort((a, b) => {
           if (a.rank && b.rank) return a.rank - b.rank;
@@ -521,9 +485,6 @@ export default function StudyRoomPage({ currentUser }) {
         });
       }
 
-      // ---------------------------------------------------------------------
-      // B. VẼ BẦU TRỜI VŨ TRỤ SYNTHWAVE & CHÂN TRỜI NEON
-      // ---------------------------------------------------------------------
       const skyGrad = ctx.createLinearGradient(0, 0, 0, horizonY);
       skyGrad.addColorStop(0, '#030614');
       skyGrad.addColorStop(0.55, '#131138');
@@ -531,7 +492,6 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.fillStyle = skyGrad;
       ctx.fillRect(0, 0, W, horizonY);
 
-      // Mặt trời Synthwave khổng lồ ở tâm chân trời
       const sunRadius = Math.min(W, H) * 0.14;
       const sunGrad = ctx.createLinearGradient(W / 2, horizonY - sunRadius * 1.4, W / 2, horizonY);
       sunGrad.addColorStop(0, '#fde047');
@@ -542,7 +502,6 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.arc(W / 2, horizonY - sunRadius * 0.15, sunRadius, Math.PI, 0, false);
       ctx.fill();
 
-      // Dãy núi Cyberpunk ở đường chân trời
       ctx.fillStyle = '#090919';
       ctx.beginPath();
       ctx.moveTo(0, horizonY);
@@ -554,9 +513,6 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.closePath();
       ctx.fill();
 
-      // ---------------------------------------------------------------------
-      // C. VẼ CAO TỐC 3D 5 LÀN ĐUA (3D PERSPECTIVE HIGHWAY)
-      // ---------------------------------------------------------------------
       ctx.fillStyle = '#060814';
       ctx.fillRect(0, horizonY, W, H - horizonY);
 
@@ -564,7 +520,6 @@ export default function StudyRoomPage({ currentUser }) {
       const roadBottomWidth = W * 0.92;
       const centerX = W / 2;
 
-      // Mặt nhựa đường 3D hình thang
       const roadGrad = ctx.createLinearGradient(0, horizonY, 0, H);
       roadGrad.addColorStop(0, '#0f172a');
       roadGrad.addColorStop(1, '#1e293b');
@@ -577,23 +532,19 @@ export default function StudyRoomPage({ currentUser }) {
       ctx.closePath();
       ctx.fill();
 
-      // Vạch kẻ ngang mặt đường tạo cảm giác lao về phía trước với tốc độ cao
       const numStripes = 16;
       for (let i = 0; i < numStripes; i++) {
         const rawProgress = ((i / numStripes) + (state.roadOffset % 120) / (120 * numStripes)) % 1;
-        // Hàm mũ tạo độ sâu phối cảnh 3D chuẩn xác
         const p = Math.pow(rawProgress, 2.4);
         const y = horizonY + p * (H - horizonY);
         const currentRoadW = roadTopWidth + p * (roadBottomWidth - roadTopWidth);
 
-        // Đèn viền lề đường (Curb Lights) đổi màu Đỏ - Cyan
         const curbW = Math.max(3, p * 18);
         const curbH = Math.max(2, p * 12);
         ctx.fillStyle = i % 2 === 0 ? '#22d3ee' : '#f43f5e';
         ctx.fillRect(centerX - currentRoadW / 2 - curbW, y, curbW, curbH);
         ctx.fillRect(centerX + currentRoadW / 2, y, curbW, curbH);
 
-        // Vạch đứt phân 5 làn đường
         if (i % 2 === 0) {
           ctx.fillStyle = 'rgba(148, 163, 184, 0.45)';
           for (let laneDiv = 1; laneDiv < 5; laneDiv++) {
@@ -605,13 +556,9 @@ export default function StudyRoomPage({ currentUser }) {
         }
       }
 
-      // ---------------------------------------------------------------------
-      // D. VẼ CÁC TẤM TĂNG TỐC (BOOST PADS) & VẠCH ĐÍCH TRÊN ĐƯỜNG
-      // ---------------------------------------------------------------------
       state.boostPads.forEach((pad) => {
         const relZ = pad.z - me.z;
         if (relZ > -40 && relZ < 450) {
-          // Chuyển đổi khoảng cách Z thành tọa độ màn hình Y theo phối cảnh
           const depthNorm = 1 - Math.max(0, Math.min(1, relZ / 450));
           const p = Math.pow(depthNorm, 1.8);
           const padY = horizonY + p * (H * 0.82 - horizonY);
@@ -637,7 +584,6 @@ export default function StudyRoomPage({ currentUser }) {
         }
       });
 
-      // Vẽ Cổng Đích (Finish Arch) khi gần về đích
       const distToFinish = TOTAL_RACE_DISTANCE - me.z;
       if (distToFinish > -60 && distToFinish < 500) {
         const depthNorm = 1 - Math.max(0, Math.min(1, distToFinish / 500));
@@ -649,21 +595,18 @@ export default function StudyRoomPage({ currentUser }) {
         ctx.fillRect(centerX - roadWAtY / 2, finY - 8 * p, roadWAtY, Math.max(4, 14 * p));
       }
 
-      // ---------------------------------------------------------------------
-      // E. VẼ CẢ 5 XE ĐUA TRÊN CAO TỐC 3D (SẮP XẾP THEO ĐỘ SÂU Z-ORDER)
-      // ---------------------------------------------------------------------
       const drawableCars = state.cars
         .map((car) => {
-          const relZ = car.z - me.z; // Khoảng cách tương đối so với xe của bạn
+          const relZ = car.z - me.z;
           return { car, relZ };
         })
         .filter(({ car, relZ }) => car.isMe || (relZ > -140 && relZ < 460))
-        .sort((a, b) => b.relZ - a.relZ); // Vẽ xe ở xa trước, xe ở gần sau
+        .sort((a, b) => b.relZ - a.relZ);
 
       drawableCars.forEach(({ car, relZ }) => {
         let p;
         if (car.isMe) {
-          p = 0.76; // Xe của bạn luôn ở vị trí camera lý tưởng phía dưới màn hình
+          p = 0.76;
         } else {
           const clampedRel = Math.max(-120, Math.min(440, relZ));
           const norm = 1 - (clampedRel + 120) / 560;
@@ -690,7 +633,6 @@ export default function StudyRoomPage({ currentUser }) {
 
   return (
     <div className="min-h-full bg-[#060913] text-slate-100 p-4 sm:p-6 lg:p-8 space-y-8 select-none font-sans relative overflow-hidden">
-      {/* Pháo hoa Emoji bay */}
       <div className="pointer-events-none fixed bottom-20 right-1/3 z-50">
         <AnimatePresence>
           {floatingEmojis.map((item) => (
@@ -708,7 +650,6 @@ export default function StudyRoomPage({ currentUser }) {
         </AnimatePresence>
       </div>
 
-      {/* HEADER PHÒNG HỌC TẬP */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-indigo-500/20 pb-5">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-widest mb-2">
@@ -740,9 +681,6 @@ export default function StudyRoomPage({ currentUser }) {
         </div>
       </div>
 
-      {/* ===================================================================== */}
-      {/* KHUNG GAME ĐUA XE 3D (HỖ TRỢ FULLSCREEN FIT 100% MÀN HÌNH) */}
-      {/* ===================================================================== */}
       <div
         ref={gameContainerRef}
         className={`${
@@ -751,12 +689,9 @@ export default function StudyRoomPage({ currentUser }) {
             : 'relative w-full h-[540px] sm:h-[600px] rounded-3xl border border-cyan-400/40 shadow-[0_20px_60px_rgba(0,0,0,0.85)]'
         } bg-[#040611] overflow-hidden flex flex-col justify-between transition-all duration-200`}
       >
-        {/* CANVAS 3D HIGHWAY */}
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
 
-        {/* TOP HUD OVERLAY: ĐỒNG HỒ TỐC ĐỘ, XẾP HẠNG 5 XE & NÚT PHÓNG TO TOÀN MÀN HÌNH */}
         <div className="relative z-20 p-4 sm:p-5 flex flex-wrap items-start justify-between gap-3 bg-gradient-to-b from-slate-950/90 via-slate-950/40 to-transparent">
-          {/* Cụm Đồng hồ Công-tơ-mét & Thanh Nitro */}
           <div className="flex items-center gap-3 bg-slate-950/85 backdrop-blur-md border border-cyan-400/35 px-4 py-2.5 rounded-2xl shadow-lg">
             <Gauge className="w-7 h-7 text-cyan-400 shrink-0" />
             <div>
@@ -769,7 +704,6 @@ export default function StudyRoomPage({ currentUser }) {
                   HẠNG {hudStats.myRank}/5
                 </span>
               </div>
-              {/* Thanh năng lượng Nitro */}
               <div className="w-36 h-2 rounded-full bg-slate-800 overflow-hidden mt-1 border border-white/10">
                 <div
                   style={{ width: `${hudStats.nitro}%` }}
@@ -779,7 +713,6 @@ export default function StudyRoomPage({ currentUser }) {
             </div>
           </div>
 
-          {/* Bảng xếp hạng trực tiếp 5 tay đua (Live Mini Leaderboard) */}
           <div className="hidden md:flex items-center gap-2 bg-slate-950/80 backdrop-blur-md border border-white/15 px-3.5 py-2 rounded-2xl">
             {hudStats.leaderboard.map((r, i) => (
               <div
@@ -797,7 +730,6 @@ export default function StudyRoomPage({ currentUser }) {
             ))}
           </div>
 
-          {/* Cụm Nút Bắt Đầu & Nút PHÓNG TO TOÀN MÀN HÌNH */}
           <div className="flex items-center gap-2">
             {(raceStatus === 'idle' || raceStatus === 'finished') && (
               <motion.button
@@ -835,7 +767,6 @@ export default function StudyRoomPage({ currentUser }) {
           </div>
         </div>
 
-        {/* GIỮA MÀN HÌNH: ĐẾM NGƯỢC 3 - 2 - 1 HOẶC BẢNG TRAO GIẢI PODIUM */}
         <div className="relative z-20 flex-1 flex items-center justify-center pointer-events-none px-4">
           <AnimatePresence mode="wait">
             {raceStatus === 'idle' && (
@@ -932,9 +863,7 @@ export default function StudyRoomPage({ currentUser }) {
           </AnimatePresence>
         </div>
 
-        {/* BOTTOM HUD: CÂU HỎI TURBO NHANH & NÚT ĐIỀU KHIỂN TRÁI / NITRO / PHẢI TRÊN MÀN HÌNH */}
         <div className="relative z-20 p-4 sm:p-5 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-transparent flex flex-col lg:flex-row items-center justify-between gap-3">
-          {/* Hộp câu hỏi Turbo nạp đầy bình Nitro */}
           <div className="w-full lg:w-auto flex-1 bg-slate-900/90 backdrop-blur-md border border-indigo-400/30 rounded-2xl px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2">
@@ -962,7 +891,6 @@ export default function StudyRoomPage({ currentUser }) {
             </div>
           </div>
 
-          {/* Cụm vô-lăng nút bấm trực tiếp trên màn hình (Dành cho cả chuột & cảm ứng) */}
           <div className="flex items-center gap-2 shrink-0">
             <motion.button
               whileTap={{ scale: 0.9 }}
@@ -1003,9 +931,6 @@ export default function StudyRoomPage({ currentUser }) {
         </div>
       </div>
 
-      {/* ===================================================================== */}
-      {/* KHU VỰC PHÒNG TỰ HỌC & KÊNH CHAT BÊN DƯỚI */}
-      {/* ===================================================================== */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="lg:col-span-5 p-6 rounded-3xl bg-slate-900/85 border border-white/10 space-y-4">
           <div className="flex items-center justify-between border-b border-white/10 pb-3">
@@ -1066,7 +991,7 @@ export default function StudyRoomPage({ currentUser }) {
                 Kênh Tín Hiệu & Trao Đổi Nhanh
               </h3>
             </div>
-            <span className="text-[10px] font-mono text-slate-400">Realtime Broadcast</span>
+            <span className="text-[10px] font-mono text-slate-400">WAF Protected • Realtime</span>
           </div>
 
           <div className="space-y-2.5 max-h-60 overflow-y-auto pr-1">

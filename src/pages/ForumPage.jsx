@@ -100,7 +100,6 @@ const DEFAULT_FORUM_POSTS = [
 
 const CATEGORIES = ['Tất cả', 'Reading & Writing', 'Math', 'Kinh nghiệm thi', 'Hỏi đáp đề khó'];
 
-// Hàm đọc/lưu an toàn tuyệt đối (không lo lỗi thiếu hàm trong storageService)
 function loadForumPostsSafely() {
   try {
     if (storageService && typeof storageService.getForumPosts === 'function') {
@@ -158,7 +157,7 @@ export default function ForumPage({ currentUser }) {
   };
 
   const handleToggleLike = (postId) => {
-    const check = securityGuard.checkRateLimit(`forum_like_${postId}`, 600);
+    const check = securityGuard.checkRateLimit(`forum_like_${postId}`, 500);
     if (!check.allowed) return;
 
     const next = posts.map((p) => {
@@ -173,7 +172,6 @@ export default function ForumPage({ currentUser }) {
     updatePosts(next);
   };
 
-  // CHỨC NĂNG XÓA BÀI ĐĂNG TRÊN DIỄN ĐÀN
   const handleDeletePost = (e, postId) => {
     e.stopPropagation();
     if (!window.confirm('Bạn có chắc chắn muốn xóa bài viết này khỏi diễn đàn?')) {
@@ -183,7 +181,6 @@ export default function ForumPage({ currentUser }) {
     updatePosts(next);
   };
 
-  // CHỨC NĂNG XÓA BÌNH LUẬN
   const handleDeleteReply = (postId, replyId) => {
     const next = posts.map((p) => {
       if (p.id !== postId) return p;
@@ -196,8 +193,15 @@ export default function ForumPage({ currentUser }) {
   };
 
   const handleAddReply = (postId) => {
-    const text = (replyInputs[postId] || '').trim();
+    const rawText = replyInputs[postId] || '';
+    const text = securityGuard.sanitizeInput(rawText, 1200);
     if (!text) return;
+
+    const check = securityGuard.checkRateLimit('forum_reply');
+    if (!check.allowed) {
+      alert(check.reason);
+      return;
+    }
 
     const userName =
       localStorage.getItem('sat_custom_display_name') ||
@@ -205,7 +209,7 @@ export default function ForumPage({ currentUser }) {
       'Học viên SAT';
     const newReply = {
       id: `rep-${Date.now()}`,
-      author: userName,
+      author: securityGuard.sanitizeInput(userName, 60),
       avatar: userName.charAt(0).toUpperCase(),
       content: text,
       createdAt: 'Vừa xong',
@@ -228,8 +232,9 @@ export default function ForumPage({ currentUser }) {
     if (!files.length) return;
 
     files.forEach((file) => {
-      if (file.size > 4 * 1024 * 1024) {
-        alert(`Tệp "${file.name}" vượt quá 4MB. Vui lòng chọn ảnh hoặc tệp nhỏ hơn!`);
+      const validation = securityGuard.validateAttachment(file, 4);
+      if (!validation.valid) {
+        alert(validation.error);
         return;
       }
 
@@ -262,7 +267,15 @@ export default function ForumPage({ currentUser }) {
 
   const handleCreatePost = (e) => {
     e.preventDefault();
-    if (!newPost.title.trim() || !newPost.content.trim()) return;
+    const cleanTitle = securityGuard.sanitizeInput(newPost.title, 180);
+    const cleanContent = securityGuard.sanitizeInput(newPost.content, 4000);
+    if (!cleanTitle || !cleanContent) return;
+
+    const check = securityGuard.checkRateLimit('forum_post');
+    if (!check.allowed) {
+      alert(check.reason);
+      return;
+    }
 
     const userName =
       localStorage.getItem('sat_custom_display_name') ||
@@ -270,12 +283,12 @@ export default function ForumPage({ currentUser }) {
       'Học viên SAT';
     const created = {
       id: `post-${Date.now()}`,
-      author: userName,
+      author: securityGuard.sanitizeInput(userName, 60),
       avatar: userName.charAt(0).toUpperCase(),
       avatarColor: 'bg-blue-600',
       category: newPost.category,
-      title: newPost.title.trim(),
-      content: newPost.content.trim(),
+      title: cleanTitle,
+      content: cleanContent,
       attachments: newPost.attachments || [],
       createdAt: 'Vừa xong',
       likes: 0,
@@ -307,7 +320,6 @@ export default function ForumPage({ currentUser }) {
 
   return (
     <div className="p-6 lg:p-8 max-w-6xl mx-auto space-y-6 select-none font-sans">
-      {/* Header Banner */}
       <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-6 lg:p-8 text-white shadow-lg border border-indigo-500/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-400/30 px-3 py-1 rounded-full text-xs font-semibold text-indigo-300">
@@ -332,7 +344,6 @@ export default function ForumPage({ currentUser }) {
         </button>
       </div>
 
-      {/* Bộ lọc chuyên mục & Tìm kiếm */}
       <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between bg-slate-900/90 p-4 rounded-xl border border-indigo-500/20 shadow-sm">
         <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0">
           {CATEGORIES.map((cat) => (
@@ -363,7 +374,6 @@ export default function ForumPage({ currentUser }) {
         </div>
       </div>
 
-      {/* Danh sách bài viết */}
       <div className="space-y-4">
         {filteredPosts.length === 0 ? (
           <div className="bg-slate-900/85 rounded-2xl border border-white/10 p-12 text-center space-y-3">
@@ -410,7 +420,6 @@ export default function ForumPage({ currentUser }) {
                       </div>
                     </div>
 
-                    {/* NÚT XÓA BÀI ĐĂNG */}
                     <button
                       type="button"
                       onClick={(e) => handleDeletePost(e, post.id)}
@@ -568,7 +577,6 @@ export default function ForumPage({ currentUser }) {
         )}
       </div>
 
-      {/* Modal tạo bài viết mới */}
       {isNewPostOpen && (
         <div className="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-slate-900 rounded-2xl max-w-xl w-full p-6 space-y-5 shadow-2xl border border-indigo-500/30 text-white">
