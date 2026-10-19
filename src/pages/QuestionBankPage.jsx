@@ -1,384 +1,530 @@
-import React, { useState, useMemo } from 'react';
-import { Search, BookOpen, Clock, Play, Zap, HelpCircle, Calculator, Sparkles } from 'lucide-react';
-import { DEFAULT_CATEGORIES, createAdaptiveExamSession } from '../services/questionService';
-import CustomQuizModal from '../components/exam/CustomQuizModal';
+// src/pages/QuestionBankPage.jsx
+import React, { useState, useMemo, useEffect } from 'react';
+import {
+  BookOpen,
+  Play,
+  Search,
+  Sparkles,
+  CheckCircle2,
+  CircleDot,
+  Layers,
+  Clock,
+  RotateCcw,
+  Filter,
+  Zap,
+  SlidersHorizontal,
+} from 'lucide-react';
+import {
+  DEFAULT_CATEGORIES,
+  createAdaptiveExamSession,
+} from '../services/questionService';
+import { storageService } from '../services/storageService';
 
-// Tải bộ câu hỏi Real-test từ file dữ liệu
-import realVerbalQuestions from '../data/questions/real_verbal_bank.json';
-import realMathQuestions from '../data/questions/real_math_bank.json';
+export default function QuestionBankPage({
+  onStartPractice,
+  onStartExam,
+  onSelectCategory,
+}) {
+  const [selectedSectionTab, setSelectedSectionTab] = useState('all');
+  const [completionFilter, setCompletionFilter] = useState('unanswered'); // 'all' | 'unanswered' | 'answered'
+  const [searchQuery, setSearchQuery] = useState('');
+  const [completedIds, setCompletedIds] = useState(() => storageService.getCompletedSet());
 
-export default function QuestionBankPage(props) {
-  // Quản lý tab: 'all' | 'exam' | 'practice' | 'real_verbal' | 'real_math' | 'math' | 'rw'
-  const [activeTab, setActiveTab] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [isCustomQuizOpen, setIsCustomQuizOpen] = useState(false);
-
-  // Kích hoạt bài thi / buổi luyện tập
-  const launchExamSession = (rawItem) => {
-    const questionsList = Array.isArray(rawItem.questions) && rawItem.questions.length > 0
-      ? rawItem.questions
-      : Array.isArray(rawItem.module1) && rawItem.module1.length > 0
-      ? rawItem.module1
-      : [];
-
-    const examConfig = {
-      ...rawItem,
-      id: rawItem.id || `session_${Date.now()}`,
-      title: rawItem.title || 'SAT Practice Session',
-      section: rawItem.section || 'Reading and Writing',
-      questions: questionsList,
-      module1: rawItem.module1 || questionsList,
-      module2: rawItem.module2 || questionsList,
-      isRealExam: rawItem.isExam === true,
-      mode: rawItem.isExam ? 'exam' : 'practice',
-      duration: rawItem.duration || (rawItem.section === 'Math' ? 35 : 32)
+  // Đồng bộ lại danh sách câu đã làm mỗi khi mở trang
+  useEffect(() => {
+    const syncCompleted = () => {
+      setCompletedIds(storageService.getCompletedSet());
     };
-
-    if (typeof props.onStartExam === 'function') {
-      props.onStartExam(examConfig);
-    } else if (typeof props.onStartPractice === 'function') {
-      props.onStartPractice(examConfig);
-    } else if (typeof props.onStartRealExam === 'function') {
-      props.onStartRealExam(examConfig);
-    } else if (typeof props.onSelectCategory === 'function') {
-      props.onSelectCategory(examConfig);
-    }
-  };
-
-  // Danh mục đầy đủ: Gộp cả DEFAULT_CATEGORIES gốc và 2 danh mục Real-test mới
-  const allMergedCategories = useMemo(() => {
-    const realItems = [
-      {
-        id: 'real_test_verbal_bank',
-        title: 'Real-test Verbal (Đề thi thật trích xuất)',
-        domain: 'Reading & Writing',
-        section: 'Reading and Writing',
-        description: 'Tổng hợp 27 câu hỏi Reading & Writing trích xuất trực tiếp từ đề thi thật Digital SAT chuẩn College Board.',
-        questions: realVerbalQuestions,
-        isExam: false,
-        isRealTest: true,
-        categoryType: 'real_verbal'
-      },
-      {
-        id: 'real_test_math_bank',
-        title: 'Real-test Math (Đề thi thật trích xuất)',
-        domain: 'Math',
-        section: 'Math',
-        description: 'Tổng hợp 22 câu hỏi Toán học trích xuất trực tiếp từ đề thi thật Digital SAT kèm công thức KaTeX và biểu đồ số liệu.',
-        questions: realMathQuestions,
-        isExam: false,
-        isRealTest: true,
-        categoryType: 'real_math'
-      }
-    ];
-
-    return [...realItems, ...DEFAULT_CATEGORIES];
+    syncCompleted();
+    window.addEventListener('focus', syncCompleted);
+    return () => window.removeEventListener('focus', syncCompleted);
   }, []);
 
-  // Bộ lọc theo Tab và từ khóa tìm kiếm
-  const filteredCategories = useMemo(() => {
-    return allMergedCategories.filter((item) => {
-      const matchSearch =
-        (item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (item.domain && item.domain.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (item.description && item.description.toLowerCase().includes(searchTerm.toLowerCase()));
+  // Tính toán thống kê tổng quát toàn bộ ngân hàng câu hỏi
+  const globalStats = useMemo(() => {
+    let total = 0;
+    let done = 0;
+    const seen = new Set();
 
-      if (!matchSearch) return false;
+    DEFAULT_CATEGORIES.forEach((cat) => {
+      (cat.questions || []).forEach((q) => {
+        if (!q?.id || seen.has(q.id)) return;
+        seen.add(q.id);
+        total++;
+        if (completedIds.has(String(q.id))) {
+          done++;
+        }
+      });
+    });
 
-      // 1. Tab Đề thi thật: Chỉ hiện các đề Full 2 Modules
-      if (activeTab === 'exam') {
-        return item.isExam === true;
+    return {
+      total,
+      done,
+      unanswered: Math.max(0, total - done),
+    };
+  }, [completedIds]);
+
+  // Danh sách các bộ câu hỏi đã gắn kèm thông tin lọc Chưa làm / Đã làm
+  const enrichedCategories = useMemo(() => {
+    return DEFAULT_CATEGORIES.map((cat) => {
+      const allQs = Array.isArray(cat.questions) ? cat.questions : [];
+      const answeredQs = allQs.filter((q) => completedIds.has(String(q.id)));
+      const unansweredQs = allQs.filter((q) => !completedIds.has(String(q.id)));
+
+      let activeQuestions = allQs;
+      if (completionFilter === 'unanswered') {
+        activeQuestions = unansweredQs;
+      } else if (completionFilter === 'answered') {
+        activeQuestions = answeredQs;
       }
 
-      // 2. Tab Luyện tập tự do
-      if (activeTab === 'practice') {
-        return item.isExam !== true;
+      const progressPct =
+        allQs.length > 0 ? Math.round((answeredQs.length / allQs.length) * 100) : 0;
+
+      return {
+        ...cat,
+        allCount: allQs.length,
+        answeredCount: answeredQs.length,
+        unansweredCount: unansweredQs.length,
+        activeQuestions,
+        progressPct,
+      };
+    });
+  }, [completedIds, completionFilter]);
+
+  // Lọc các thẻ bộ đề theo Tab chuyên mục & Ô tìm kiếm & Trạng thái hoàn thành
+  const displayedCategories = useMemo(() => {
+    return enrichedCategories.filter((cat) => {
+      // 1. Lọc theo từ khóa tìm kiếm
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase();
+        const matchText =
+          (cat.title || '').toLowerCase().includes(q) ||
+          (cat.description || '').toLowerCase().includes(q) ||
+          (cat.domain || '').toLowerCase().includes(q) ||
+          (cat.skill || '').toLowerCase().includes(q);
+        if (!matchText) return false;
       }
 
-      // 3. Tab Real-test Verbal
-      if (activeTab === 'real_verbal') {
-        return item.categoryType === 'real_verbal';
+      // 2. Lọc theo tab phân mục
+      if (selectedSectionTab === 'real_verbal') {
+        return (
+          cat.id === 'real_verbal_advanced_bank' ||
+          cat.id === 'rhetorical_synthesis_bank' ||
+          cat.id === 'main_idea_central_ideas_bank'
+        );
       }
-
-      // 4. Tab Real-test Math
-      if (activeTab === 'real_math') {
-        return item.categoryType === 'real_math';
+      if (selectedSectionTab === 'real_math') {
+        return cat.id === 'real_math_advanced_800';
       }
-
-      // 5. Tab Math chung
-      if (activeTab === 'math') {
-        return item.section === 'Math' && item.isExam !== true;
+      if (selectedSectionTab === 'full_exam') {
+        return Boolean(cat.isExam);
       }
-
-      // 6. Tab R&W chung
-      if (activeTab === 'rw') {
-        return item.section === 'Reading and Writing' && item.isExam !== true;
+      if (selectedSectionTab === 'practice') {
+        return !cat.isExam;
+      }
+      if (selectedSectionTab === 'math') {
+        return String(cat.section).toLowerCase().includes('math');
+      }
+      if (selectedSectionTab === 'rw') {
+        return (
+          String(cat.section).toLowerCase().includes('reading') ||
+          String(cat.section).toLowerCase().includes('verbal')
+        );
       }
 
       return true;
     });
-  }, [allMergedCategories, activeTab, searchTerm]);
+  }, [enrichedCategories, selectedSectionTab, searchQuery]);
 
-  const handleLaunchAdaptive = (section) => {
-    const session = createAdaptiveExamSession(section);
-    launchExamSession(session);
+  // Hàm khởi chạy bài luyện tập với đúng danh sách câu hỏi đã lọc (Chưa làm / Đã làm / Tất cả)
+  const handleLaunchCategory = (cat) => {
+    let targetQuestions = cat.activeQuestions;
+
+    if (targetQuestions.length === 0) {
+      if (completionFilter === 'unanswered') {
+        if (
+          window.confirm(
+            `Tuyệt vời! Bạn đã hoàn thành toàn bộ ${cat.allCount} câu trong bộ "${cat.title}". Bạn có muốn mở lại toàn bộ ${cat.allCount} câu để ôn tập không?`
+          )
+        ) {
+          targetQuestions = cat.questions;
+        } else {
+          return;
+        }
+      } else if (completionFilter === 'answered') {
+        alert(`Bạn chưa làm câu nào trong bộ "${cat.title}". Hãy chuyển sang bộ lọc "Chưa làm" hoặc "Tất cả" nhé!`);
+        return;
+      }
+    }
+
+    const payload = {
+      ...cat,
+      questions: targetQuestions,
+      totalQuestions: targetQuestions.length,
+      filterMode: completionFilter,
+    };
+
+    if (typeof onStartPractice === 'function') {
+      onStartPractice(payload);
+    } else if (typeof onSelectCategory === 'function') {
+      onSelectCategory(payload);
+    } else if (typeof onStartExam === 'function') {
+      onStartExam(payload);
+    }
+  };
+
+  // Khởi chạy nhanh đề thi Thích ứng R&W hoặc Math ở Banner trên cùng
+  const handleQuickAdaptiveExam = (sectionName) => {
+    const session = createAdaptiveExamSession({ section: sectionName });
+    // Ưu tiên lấy các câu chưa làm nếu đang bật lọc "Chưa làm"
+    if (completionFilter === 'unanswered') {
+      const filteredPool = (session.questions || []).filter(
+        (q) => !completedIds.has(String(q.id))
+      );
+      if (filteredPool.length >= 10) {
+        session.questions = filteredPool;
+      }
+    }
+
+    if (typeof onStartExam === 'function') {
+      onStartExam(session);
+    } else if (typeof onStartPractice === 'function') {
+      onStartPractice(session);
+    }
+  };
+
+  const handleResetCategoryProgress = (e, cat) => {
+    e.stopPropagation();
+    if (
+      !window.confirm(
+        `Bạn có muốn đặt lại trạng thái "Chưa làm" cho toàn bộ ${cat.answeredCount} câu đã làm trong bộ "${cat.title}" không?`
+      )
+    ) {
+      return;
+    }
+    const ids = (cat.questions || []).map((q) => q.id);
+    storageService.resetCompletedQuestions(ids);
+    setCompletedIds(storageService.getCompletedSet());
+  };
+
+  const handleResetAllProgress = () => {
+    if (
+      !window.confirm(
+        'Bạn có chắc chắn muốn đặt lại trạng thái "Chưa làm" cho toàn bộ ngân hàng câu hỏi không?'
+      )
+    ) {
+      return;
+    }
+    storageService.resetCompletedQuestions();
+    setCompletedIds(new Set());
   };
 
   return (
-    <div className="flex-1 bg-slate-50 overflow-y-auto p-6 md:p-10 select-none font-sans">
-      <div className="max-w-6xl mx-auto space-y-8">
-        
-        {/* BANNER THI THỬ THÍCH ỨNG 2 MODULES GỐC */}
-        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-xl border border-slate-800">
-          <div className="max-w-xl space-y-3 relative z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
-              <Zap className="w-3.5 h-3.5 text-indigo-400" />
-              Digital SAT Multistage Adaptive Engine
-            </span>
-            <h1 className="text-2xl md:text-3xl font-black tracking-tight">
-              Thi thử thích ứng chuẩn College Board
+    <div className="p-6 lg:p-8 max-w-7xl mx-auto space-y-7 select-none font-sans text-slate-100">
+      {/* =================================================================== */}
+      {/* 1. BANNER THI THỬ THÍCH ỨNG NHANH                                   */}
+      {/* =================================================================== */}
+      <div className="relative rounded-3xl bg-gradient-to-r from-[#0c142c] via-[#131d42] to-[#0c142c] border border-indigo-500/30 p-6 lg:p-8 shadow-2xl overflow-hidden">
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 text-xs font-bold">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>BLUEBOOK ADAPTIVE SIMULATOR • DIGITAL SAT</span>
+            </div>
+            <h1 className="text-2xl lg:text-3xl font-black text-white tracking-tight">
+              Trung Tâm Ngân Hàng Câu Hỏi & Đề Thi Thực Chiến
             </h1>
-            <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-              Mô phỏng đầy đủ 2 chặng: Module 1 định tuyến tự động sang Module 2 (Hard / Easy) theo tỷ lệ chính xác. Bấm giờ chuẩn và chấm điểm IRT 200 - 800.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Đã tích hợp bộ lọc thông minh giúp bạn chỉ làm những câu <strong>Chưa làm</strong>, tránh lặp lại các câu cũ và theo dõi sát sao tiến độ chinh phục 1550+ SAT.
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-3">
-              <button
-                type="button"
-                onClick={() => handleLaunchAdaptive('Reading and Writing')}
-                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-md flex items-center gap-2 cursor-pointer"
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={() => handleQuickAdaptiveExam('Reading & Writing')}
+              className="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-blue-600/30 transition cursor-pointer"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              <span>Thi R&W (32 phút)</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleQuickAdaptiveExam('Math')}
+              className="px-5 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-400/30 font-extrabold text-xs sm:text-sm flex items-center gap-2 transition cursor-pointer"
+            >
+              <Zap className="w-4 h-4 fill-current" />
+              <span>Thi Math (35 phút)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* =================================================================== */}
+      {/* 2. THANH BỘ LỌC TRẠNG THÁI: CHƯA LÀM | ĐÃ LÀM | TẤT CẢ              */}
+      {/* =================================================================== */}
+      <div className="bg-[#0b1021]/95 border border-indigo-500/25 rounded-2xl p-4 sm:p-5 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 shadow-lg">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="flex items-center gap-2 text-xs font-extrabold text-cyan-300 uppercase tracking-wider">
+            <Filter className="w-4 h-4 text-cyan-400" />
+            <span>Trạng thái câu hỏi:</span>
+          </div>
+
+          <div className="inline-flex bg-slate-950 p-1.5 rounded-xl border border-white/10 gap-1.5">
+            <button
+              type="button"
+              onClick={() => setCompletionFilter('unanswered')}
+              className={`px-4 py-2 rounded-lg text-xs font-extrabold flex items-center gap-2 transition cursor-pointer ${
+                completionFilter === 'unanswered'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              <CircleDot className="w-3.5 h-3.5" />
+              <span>Chưa làm</span>
+              <span
+                className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
+                  completionFilter === 'unanswered'
+                    ? 'bg-slate-950/40 text-cyan-100'
+                    : 'bg-slate-800 text-slate-300'
+                }`}
               >
-                <Play className="w-4 h-4 fill-white" />
-                <span>Thi R&W (32 phút)</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleLaunchAdaptive('Math')}
-                className="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition border border-slate-700 flex items-center gap-2 cursor-pointer"
+                {globalStats.unanswered}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setCompletionFilter('answered')}
+              className={`px-4 py-2 rounded-lg text-xs font-extrabold flex items-center gap-2 transition cursor-pointer ${
+                completionFilter === 'answered'
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 shadow-md'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Đã làm</span>
+              <span
+                className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
+                  completionFilter === 'answered'
+                    ? 'bg-slate-950/30 text-white'
+                    : 'bg-slate-800 text-emerald-300'
+                }`}
               >
-                <Zap className="w-4 h-4 text-amber-400 fill-amber-400" />
-                <span>Thi Math (35 phút)</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsCustomQuizOpen(true)}
-                className="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold transition border border-white/10 flex items-center gap-1.5 cursor-pointer"
+                {globalStats.done}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setCompletionFilter('all')}
+              className={`px-4 py-2 rounded-lg text-xs font-extrabold flex items-center gap-2 transition cursor-pointer ${
+                completionFilter === 'all'
+                  ? 'bg-indigo-600 text-white shadow-md'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>Tất cả</span>
+              <span
+                className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
+                  completionFilter === 'all'
+                    ? 'bg-slate-950/40 text-indigo-100'
+                    : 'bg-slate-800 text-slate-300'
+                }`}
               >
-                <HelpCircle className="w-3.5 h-3.5" />
-                <span>Tùy chỉnh đề</span>
-              </button>
-            </div>
+                {globalStats.total}
+              </span>
+            </button>
           </div>
         </div>
 
-        {/* BỘ LỌC TÌM KIẾM & PHÂN LOẠI TAB */}
-        <div className="space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">
-                  Ngân hàng Đề thi & Luyện tập ({filteredCategories.length})
-                </h2>
-                {activeTab.startsWith('real_') && (
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-amber-600" />
-                    Đề thi thật
+        {/* Ô tìm kiếm + Nút Reset toàn bộ */}
+        <div className="flex items-center gap-3">
+          <div className="relative flex-1 sm:w-72">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Tìm đề hoặc chủ đề (VD: Rhetorical, Main Idea)..."
+              className="w-full pl-9 pr-4 py-2.5 text-xs bg-slate-950 border border-slate-700/80 rounded-xl focus:outline-none focus:border-cyan-400 text-white"
+            />
+          </div>
+
+          {globalStats.done > 0 && (
+            <button
+              type="button"
+              onClick={handleResetAllProgress}
+              className="px-3 py-2.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/30 text-rose-300 text-xs font-bold flex items-center gap-1.5 transition cursor-pointer shrink-0"
+              title="Đặt lại toàn bộ câu hỏi về trạng thái Chưa làm"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Reset đã làm</span>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* =================================================================== */}
+      {/* 3. CÁC TAB DANH MỤC CHUYÊN ĐỀ                                       */}
+      {/* =================================================================== */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-lg font-extrabold text-white flex items-center gap-2">
+              <span>Ngân hàng Đề thi & Luyện tập ({displayedCategories.length})</span>
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30">
+                ✨ Đề thi thật & PDF Mới
+              </span>
+            </h2>
+            <p className="text-xs text-slate-400 mt-0.5">
+              {completionFilter === 'unanswered'
+                ? 'Đang lọc: Chỉ khởi tạo bài làm với những câu hỏi bạn CHƯA LÀM.'
+                : completionFilter === 'answered'
+                ? 'Đang lọc: Chỉ hiển thị những câu hỏi bạn ĐÃ LÀM để ôn tập lại.'
+                : 'Đang hiển thị: Toàn bộ câu hỏi (bao gồm cả câu đã làm và chưa làm).'}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 overflow-x-auto pb-2">
+          {[
+            { id: 'all', label: 'Tất cả chuyên đề' },
+            { id: 'rw', label: 'Reading & Writing (Full)' },
+            { id: 'math', label: 'Math (Full)' },
+            { id: 'real_verbal', label: 'Real-test & PDF Verbal' },
+            { id: 'real_math', label: 'Real-test Math' },
+            { id: 'full_exam', label: 'Đề thi thật (Full Tests)' },
+            { id: 'practice', label: 'Luyện tập theo Dạng' },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setSelectedSectionTab(tab.id)}
+              className={`px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition cursor-pointer border ${
+                selectedSectionTab === tab.id
+                  ? 'bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/25'
+                  : 'bg-slate-900/90 text-slate-300 border-white/10 hover:bg-slate-800 hover:text-white'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* =================================================================== */}
+      {/* 4. LƯỚI THẺ BỘ CÂU HỎI (QUESTION BANK CARDS)                        */}
+      {/* =================================================================== */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {displayedCategories.map((cat) => {
+          const activeCount = cat.activeQuestions.length;
+          const isAllDone = cat.allCount > 0 && cat.unansweredCount === 0;
+
+          return (
+            <div
+              key={cat.id}
+              className="group relative bg-[#0c1224]/95 hover:bg-[#101830] rounded-3xl border border-indigo-500/20 hover:border-cyan-400/50 p-6 flex flex-col justify-between transition-all duration-200 shadow-lg"
+            >
+              <div className="space-y-4">
+                {/* Hàng badge trên cùng */}
+                <div className="flex items-center justify-between gap-2">
+                  <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-black uppercase tracking-wider bg-amber-500/15 text-amber-300 border border-amber-400/30">
+                    {cat.badge || 'SAT BANK'}
                   </span>
-                )}
-              </div>
-              <p className="text-xs text-slate-500 mt-0.5">
-                {activeTab === 'exam' && 'Chỉ hiển thị các đề thi thử thật Full 2 Modules bắt buộc.'}
-                {activeTab === 'practice' && 'Chỉ hiển thị bài luyện tập chuyên đề tự do và module lẻ.'}
-                {activeTab === 'real_verbal' && 'Chỉ hiển thị câu hỏi Reading & Writing trích xuất từ đề thi thật.'}
-                {activeTab === 'real_math' && 'Chỉ hiển thị câu hỏi Math trích xuất từ đề thi thật.'}
-                {activeTab === 'math' && 'Chỉ hiển thị bài luyện tập môn Math.'}
-                {activeTab === 'rw' && 'Chỉ hiển thị bài luyện tập môn Reading & Writing.'}
-                {activeTab === 'all' && 'Toàn bộ danh sách đề thi, bài luyện tập và câu hỏi thi thật.'}
-              </p>
-            </div>
+                  <span className="text-[11px] font-bold text-slate-400">
+                    {cat.section}
+                  </span>
+                </div>
 
-            {/* Ô TÌM KIẾM */}
-            <div className="relative w-full sm:w-72">
-              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Tìm đề hoặc chủ đề..."
-                className="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-blue-600 shadow-xs"
-              />
-            </div>
-          </div>
-
-          {/* CÁC NÚT TAB ĐIỀU HƯỚNG */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
-            <button
-              type="button"
-              onClick={() => setActiveTab('all')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
-                activeTab === 'all'
-                  ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              Tất cả
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('real_verbal')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                activeTab === 'real_verbal'
-                  ? 'bg-blue-600 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Real-test Verbal ({realVerbalQuestions.length})</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('real_math')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                activeTab === 'real_math'
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              <Calculator className="w-3.5 h-3.5" />
-              <span>Real-test Math ({realMathQuestions.length})</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('exam')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
-                activeTab === 'exam'
-                  ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              Đề thi thật (Full)
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('practice')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
-                activeTab === 'practice'
-                  ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              Luyện tập
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('math')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
-                activeTab === 'math'
-                  ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              Math
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('rw')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
-                activeTab === 'rw'
-                  ? 'bg-slate-900 text-white shadow-xs'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              R&W
-            </button>
-          </div>
-        </div>
-
-        {/* LƯỚI DANH SÁCH BÀI THI / DANH MỤC */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCategories.map((item) => {
-            const isExam = item.isExam === true;
-            const isReal = item.isRealTest === true;
-            const qCount = item.questions ? item.questions.length : 0;
-            const isMath = item.section === 'Math';
-
-            return (
-              <div
-                key={item.id}
-                className="bg-white rounded-2xl border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-lg transition group relative overflow-hidden"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase border ${
-                      isReal
-                        ? 'bg-amber-50 text-amber-800 border-amber-300'
-                        : isExam
-                        ? 'bg-rose-50 text-rose-700 border-rose-200'
-                        : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    }`}>
-                      {isReal ? 'REAL-TEST DATABASE' : isExam ? 'THI THẬT DIGITAL SAT' : 'LUYỆN TẬP TỰ DO'}
-                    </span>
-                    <span className="text-[11px] font-bold text-slate-400">
-                      {isMath ? 'Math' : 'Reading & Writing'}
-                    </span>
-                  </div>
-
-                  <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-600 transition">
-                    {item.title}
+                {/* Tiêu đề & Mô tả */}
+                <div>
+                  <h3 className="text-base font-extrabold text-white group-hover:text-cyan-300 transition leading-snug">
+                    {cat.title}
                   </h3>
-
-                  <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
-                    {item.description}
+                  <p className="text-xs text-slate-400 mt-1.5 line-clamp-2 leading-relaxed">
+                    {cat.description}
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 mt-6 space-y-4">
-                  <div className="flex items-center justify-between text-xs text-slate-500 font-semibold">
-                    <span className="flex items-center gap-1.5">
-                      <BookOpen className="w-3.5 h-3.5 text-slate-400" />
-                      {isExam ? 'Đủ 2 Modules' : `${qCount} câu hỏi`}
+                {/* Thanh Tiến Độ Đã Làm / Chưa Làm */}
+                <div className="pt-2 space-y-2">
+                  <div className="flex items-center justify-between text-[11px] font-semibold">
+                    <span className="text-slate-300 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Đã làm:{' '}
+                      <strong className="text-emerald-400">{cat.answeredCount}</strong>/
+                      {cat.allCount} câu
                     </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-slate-400" />
-                      {isExam ? (isMath ? '35 phút / mod' : '32 phút / mod') : 'Đếm tăng tự do'}
+                    <span className="text-cyan-300 font-mono">
+                      Còn {cat.unansweredCount} câu mới
                     </span>
                   </div>
 
+                  <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden p-0.5">
+                    <div
+                      style={{ width: `${cat.progressPct}%` }}
+                      className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Chân thẻ: Số câu khả dụng & Nút bấm */}
+              <div className="pt-5 mt-5 border-t border-white/10 space-y-3">
+                <div className="flex items-center justify-between text-xs text-slate-400">
+                  <span className="flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-indigo-400" />
+                    <span>Tổng {cat.allCount} câu</span>
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Đếm tăng tự do</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2">
                   <button
                     type="button"
-                    onClick={() => launchExamSession(item)}
-                    className={`w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-xs cursor-pointer ${
-                      isReal
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                        : isExam
-                        ? 'bg-[#b91c1c] hover:bg-red-700 text-white'
-                        : 'bg-slate-900 hover:bg-slate-800 text-white'
+                    onClick={() => handleLaunchCategory(cat)}
+                    className={`flex-1 py-3 px-4 rounded-xl font-extrabold text-xs flex items-center justify-center gap-2 transition cursor-pointer shadow-md ${
+                      completionFilter === 'unanswered' && isAllDone
+                        ? 'bg-emerald-600/25 hover:bg-emerald-600/35 text-emerald-200 border border-emerald-400/40'
+                        : 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-600/20'
                     }`}
                   >
                     <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>
-                      {isReal
-                        ? `Luyện tập ngay (${qCount} câu)`
-                        : isExam
-                        ? 'Vào thi thật (2 Modules)'
-                        : 'Bắt đầu luyện tập ngay'}
-                    </span>
+                    {completionFilter === 'unanswered' ? (
+                      isAllDone ? (
+                        <span>Đã hoàn thành 100% (Ôn lại)</span>
+                      ) : (
+                        <span>Làm {cat.unansweredCount} câu chưa làm</span>
+                      )
+                    ) : completionFilter === 'answered' ? (
+                      <span>Ôn lại ({cat.answeredCount} câu đã làm)</span>
+                    ) : (
+                      <span>Luyện tập ngay ({cat.allCount} câu)</span>
+                    )}
                   </button>
+
+                  {cat.answeredCount > 0 && (
+                    <button
+                      type="button"
+                      onClick={(e) => handleResetCategoryProgress(e, cat)}
+                      className="p-3 rounded-xl bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-300 border border-white/10 hover:border-rose-400/40 transition cursor-pointer"
+                      title="Reset tiến độ đã làm của riêng bộ đề này"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
-
-        {/* MODAL TỰ TẠO ĐỀ */}
-        <CustomQuizModal
-          isOpen={isCustomQuizOpen}
-          onClose={() => setIsCustomQuizOpen(false)}
-          onStartQuiz={(cfg) => {
-            setIsCustomQuizOpen(false);
-            launchExamSession(cfg);
-          }}
-        />
-
+            </div>
+          );
+        })}
       </div>
     </div>
   );

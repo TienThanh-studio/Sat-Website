@@ -1,204 +1,185 @@
 // src/services/storageService.js
-import { authService } from './authService';
 
 const KEYS = {
-  EXAM_HISTORY: 'sat_exam_history_v2',
-  MISTAKES: 'sat_mistakes',
-  VOCAB_PROGRESS: 'sat_vocab_progress',
+  EXAM_HISTORY: 'sat_exam_history_v1',
+  MISTAKE_LOG: 'sat_mistake_log_v1',
+  COMPLETED_QUESTIONS: 'sat_completed_question_ids_v1',
+  BOOKMARKED_QUESTIONS: 'sat_bookmarked_questions_v1',
+  VOCAB_PROGRESS: 'sat_vocab_progress_v1',
+  USER_SETTINGS: 'sat_user_settings_v1',
+  FORUM_POSTS: 'sat_forum_posts_v1',
 };
 
-const safeRead = (key, fallback = []) => {
+function safeRead(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
-    return parsed ?? fallback;
+    return raw ? JSON.parse(raw) : fallback;
   } catch {
     return fallback;
   }
-};
+}
 
-const safeWrite = (key, value) => {
+function safeWrite(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
-    return true;
   } catch {
-    return false;
+    // Ignore quota errors
   }
-};
+}
 
 export const storageService = {
-  /**
-   * Lưu kết quả bài thi kèm toàn bộ chi tiết câu hỏi & đáp án để người dùng Xem lại (Review) bất cứ lúc nào
-   */
-  saveExamResult(reportData) {
-    if (!reportData) return null;
-
-    const currentUser = authService.getCurrentUser();
-    const history = safeRead(KEYS.EXAM_HISTORY, []);
-
-    const totalQ = Number(reportData.totalQuestions) || (reportData.questions ? reportData.questions.length : 0);
-    const correctQ = Number(reportData.correctCount) || 0;
-    const accuracy = totalQ > 0 ? Math.round((correctQ / totalQ) * 100) : 0;
-
-    // Đảm bảo điểm số chuẩn xác: 0 câu đúng = 200 điểm
-    let safeScore = Number(reportData.scaledScore) || 200;
-    if (correctQ === 0) {
-      safeScore = 200;
-    } else {
-      safeScore = Math.max(200, Math.min(800, Math.round(safeScore / 10) * 10));
-    }
-
-    const record = {
-      id: reportData.id || `exam_${Date.now()}`,
-      userId: currentUser?.id || 'guest',
-      title: reportData.section || reportData.title || 'Digital SAT Practice',
-      section: reportData.section || 'Reading & Writing',
-      scaledScore: safeScore,
-      correctCount: correctQ,
-      totalQuestions: totalQ,
-      accuracy,
-      timeSpent: Number(reportData.timeSpent) || 0,
-      module2Path: correctQ / Math.max(1, totalQ) >= 0.6 ? 'Hard' : 'Easy',
-      domainPerformance: reportData.domainPerformance || {},
-      skillPerformance: reportData.skillPerformance || {},
-      questionTimes: reportData.questionTimes || {},
-      questions: Array.isArray(reportData.questions) ? reportData.questions : [],
-      completedAt: new Date().toISOString(),
-    };
-
-    const updatedHistory = [record, ...(Array.isArray(history) ? history : [])].slice(0, 50);
-    safeWrite(KEYS.EXAM_HISTORY, updatedHistory);
-
-    if (Array.isArray(reportData.questions)) {
-      this.saveMistakesFromQuestions(reportData.questions, record.section);
-    }
-
-    return record;
+  // =========================================================================
+  // 1. QUẢN LÝ CÂU HỎI ĐÃ LÀM / CHƯA LÀM (COMPLETED QUESTIONS TRACKER)
+  // =========================================================================
+  getCompletedQuestionIds() {
+    const list = safeRead(KEYS.COMPLETED_QUESTIONS, []);
+    return Array.isArray(list) ? list : [];
   },
 
-  /**
-   * Lấy danh sách lịch sử thi
-   */
+  getCompletedSet() {
+    return new Set(this.getCompletedQuestionIds());
+  },
+
+  isQuestionCompleted(questionId) {
+    if (!questionId) return false;
+    return this.getCompletedSet().has(String(questionId));
+  },
+
+  markQuestionsCompleted(questionIds = []) {
+    if (!Array.isArray(questionIds) || questionIds.length === 0) return;
+    const currentSet = this.getCompletedSet();
+    questionIds.forEach((id) => {
+      if (id) currentSet.add(String(id));
+    });
+    safeWrite(KEYS.COMPLETED_QUESTIONS, Array.from(currentSet));
+  },
+
+  markSingleQuestionCompleted(questionId) {
+    if (!questionId) return;
+    this.markQuestionsCompleted([String(questionId)]);
+  },
+
+  resetCompletedQuestions(questionIdsToRemove = null) {
+    if (!questionIdsToRemove) {
+      safeWrite(KEYS.COMPLETED_QUESTIONS, []);
+      return;
+    }
+    const removeSet = new Set(questionIdsToRemove.map(String));
+    const remaining = this.getCompletedQuestionIds().filter((id) => !removeSet.has(String(id)));
+    safeWrite(KEYS.COMPLETED_QUESTIONS, remaining);
+  },
+
+  // =========================================================================
+  // 2. LỊCH SỬ THI & BÁO CÁO ĐIỂM (EXAM HISTORY)
+  // =========================================================================
   getExamHistory() {
-    const list = safeRead(KEYS.EXAM_HISTORY, []);
-    return Array.isArray(list) ? list : [];
+    return safeRead(KEYS.EXAM_HISTORY, []);
   },
 
-  /**
-   * Xóa 1 bài làm khỏi lịch sử
-   */
-  deleteExamResult(examId) {
-    const list = this.getExamHistory().filter((item) => item.id !== examId);
-    safeWrite(KEYS.EXAM_HISTORY, list);
-    return list;
-  },
-
-  /**
-   * Xóa toàn bộ lịch sử làm bài
-   */
-  clearAllExamHistory() {
-    safeWrite(KEYS.EXAM_HISTORY, []);
-    return [];
-  },
-
-  /**
-   * Thống kê tổng hợp cho Dashboard & MissionLog
-   */
-  getDashboardStats() {
+  saveExamResult(report) {
+    if (!report) return;
     const history = this.getExamHistory();
-    if (history.length === 0) {
-      return {
-        totalTests: 0,
-        highestScore: 0,
-        averageScore: 0,
-        latestScore: 0,
-        totalQuestionsSolved: 0,
-        overallAccuracy: 0,
-        recentHistory: [],
-      };
-    }
-
-    const scores = history.map((h) => Number(h.scaledScore) || 200);
-    const highestScore = scores.length > 0 ? Math.max(...scores) : 0;
-    const averageScore =
-      scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length / 10) * 10 : 0;
-    const latestScore = scores[0] || 0;
-
-    const totalQuestionsSolved = history.reduce((sum, h) => sum + (Number(h.totalQuestions) || 0), 0);
-    const totalCorrect = history.reduce((sum, h) => sum + (Number(h.correctCount) || 0), 0);
-    const overallAccuracy =
-      totalQuestionsSolved > 0 ? Math.round((totalCorrect / totalQuestionsSolved) * 100) : 0;
-
-    return {
-      totalTests: history.length,
-      highestScore,
-      averageScore,
-      latestScore,
-      totalQuestionsSolved,
-      overallAccuracy,
-      recentHistory: history,
+    const entry = {
+      id: report.id || `exam_${Date.now()}`,
+      timestamp: report.timestamp || new Date().toISOString(),
+      ...report,
     };
-  },
+    safeWrite(KEYS.EXAM_HISTORY, [entry, ...history.slice(0, 99)]);
 
-  saveMistakesFromQuestions(questions = [], sectionName = '') {
-    const mistakes = questions.filter((q) => q && q.isCorrect === false);
-    if (mistakes.length === 0) return 0;
+    // Tự động ghi nhận các câu hỏi đã trả lời vào danh sách "Đã làm"
+    if (Array.isArray(report.questions)) {
+      const answeredIds = report.questions
+        .filter((q) => q && q.userAnswer !== undefined && String(q.userAnswer).trim() !== '')
+        .map((q) => q.id);
+      this.markQuestionsCompleted(answeredIds);
 
-    const existing = safeRead(KEYS.MISTAKES, []);
-    const existingArr = Array.isArray(existing) ? existing : [];
-    const existingIds = new Set(existingArr.map((item) => item.id));
-
-    const newEntries = mistakes
-      .filter((q) => q.id && !existingIds.has(q.id))
-      .map((q) => ({
-        id: q.id,
-        prompt: q.prompt || q.passage || q.content || '',
-        question: q.question || '',
-        options: q.options || {},
-        userAnswer: q.userAnswer,
-        correctAnswer: q.correctAnswer,
-        domain: q.domain || sectionName || 'Reading & Writing',
-        skill: q.skill || q.category || 'Inference',
-        difficulty: q.difficulty || 'medium',
-        explanation: q.explanation || '',
-        section: sectionName,
-        savedAt: new Date().toISOString(),
-      }));
-
-    if (newEntries.length > 0) {
-      safeWrite(KEYS.MISTAKES, [...newEntries, ...existingArr].slice(0, 300));
+      // Tự động lưu các câu làm sai vào Sổ tay câu sai
+      const wrongQuestions = report.questions.filter((q) => q && !q.isCorrect && q.userAnswer);
+      wrongQuestions.forEach((wq) => this.addMistake(wq));
     }
-    return newEntries.length;
+    return entry;
   },
 
+  // =========================================================================
+  // 3. SỔ TAY CÂU SAI (MISTAKE LOG)
+  // =========================================================================
   getMistakes() {
-    const list = safeRead(KEYS.MISTAKES, []);
-    return Array.isArray(list) ? list : [];
+    return safeRead(KEYS.MISTAKE_LOG, []);
+  },
+
+  addMistake(questionObj) {
+    if (!questionObj || !questionObj.id) return;
+    const current = this.getMistakes();
+    const filtered = current.filter((item) => String(item.id) !== String(questionObj.id));
+    const updated = [
+      {
+        ...questionObj,
+        savedAt: new Date().toISOString(),
+      },
+      ...filtered,
+    ];
+    safeWrite(KEYS.MISTAKE_LOG, updated.slice(0, 300));
   },
 
   removeMistake(questionId) {
-    const list = this.getMistakes().filter((item) => item.id !== questionId);
-    safeWrite(KEYS.MISTAKES, list);
-    return list;
+    const current = this.getMistakes();
+    safeWrite(
+      KEYS.MISTAKE_LOG,
+      current.filter((item) => String(item.id) !== String(questionId))
+    );
+  },
+
+  clearMistakes() {
+    safeWrite(KEYS.MISTAKE_LOG, []);
+  },
+
+  // =========================================================================
+  // 4. ĐÁNH DẤU CÂU HỎI & TIẾN ĐỘ TỪ VỰNG
+  // =========================================================================
+  getBookmarks() {
+    return safeRead(KEYS.BOOKMARKED_QUESTIONS, []);
+  },
+
+  toggleBookmark(questionObj) {
+    if (!questionObj?.id) return [];
+    const current = this.getBookmarks();
+    const exists = current.some((q) => String(q.id) === String(questionObj.id));
+    const next = exists
+      ? current.filter((q) => String(q.id) !== String(questionObj.id))
+      : [questionObj, ...current];
+    safeWrite(KEYS.BOOKMARKED_QUESTIONS, next);
+    return next;
   },
 
   getVocabProgress() {
     return safeRead(KEYS.VOCAB_PROGRESS, {});
   },
 
-  saveVocabWordStatus(wordId, statusData) {
-    const current = this.getVocabProgress();
-    const updated = {
-      ...current,
-      [wordId]: {
-        ...current[wordId],
-        ...statusData,
-        updatedAt: new Date().toISOString(),
-      },
-    };
-    safeWrite(KEYS.VOCAB_PROGRESS, updated);
-    return updated;
+  saveVocabProgress(progress) {
+    safeWrite(KEYS.VOCAB_PROGRESS, progress || {});
+  },
+
+  // =========================================================================
+  // 5. DIỄN ĐÀN & CÀI ĐẶT NGƯỜI DÙNG
+  // =========================================================================
+  getForumPosts() {
+    return safeRead(KEYS.FORUM_POSTS, []);
+  },
+
+  saveForumPosts(posts) {
+    safeWrite(KEYS.FORUM_POSTS, Array.isArray(posts) ? posts : []);
+  },
+
+  getUserSettings() {
+    return safeRead(KEYS.USER_SETTINGS, {
+      targetScore: 1550,
+      soundEnabled: true,
+      timerVisible: true,
+    });
+  },
+
+  saveUserSettings(settings) {
+    safeWrite(KEYS.USER_SETTINGS, settings || {});
   },
 };
 

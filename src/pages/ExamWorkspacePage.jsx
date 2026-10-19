@@ -1,735 +1,660 @@
 // src/pages/ExamWorkspacePage.jsx
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import {
-  Calculator,
-  BookOpen,
-  Bookmark,
   ChevronLeft,
   ChevronRight,
-  HelpCircle,
+  Clock,
+  Calculator,
+  BookOpen,
+  Flag,
+  CheckCircle2,
+  XCircle,
+  Sparkles,
+  Bot,
+  Send,
+  RotateCcw,
   Eye,
   EyeOff,
-  CheckCircle2,
-  Highlighter,
-  Clock,
-  X,
-  LogOut,
-  Trash2,
-  StickyNote,
-  Award,
-  FileText,
-  ChevronDown,
   Check,
-  Sparkles,
-  GripVertical,
-  RotateCcw,
-  Play,
-  Filter,
+  ListFilter,
 } from 'lucide-react';
 import MathRenderer from '../components/common/MathRenderer';
 import DesmosModal from '../components/exam/DesmosModal';
 import ReferenceModal from '../components/exam/ReferenceModal';
-import MatrixModal from '../components/exam/MatrixModal';
 import ScoreReportModal from '../components/exam/ScoreReportModal';
-import { calculateSatScaledScore, isAnswerCorrect } from '../services/adaptiveEngine';
+import AiTutorModal from '../components/exam/AiTutorModal';
+import { questionService } from '../services/questionService';
 import { storageService } from '../services/storageService';
+import { calculateIrtScore } from '../services/satIrtScoring';
 
-function checkAnswerSafely(question, userAnswer) {
-  if (!question || userAnswer === undefined || userAnswer === null || userAnswer === '') {
-    return false;
-  }
-  try {
-    if (typeof isAnswerCorrect === 'function') {
-      const res1 = isAnswerCorrect(userAnswer, question);
-      if (typeof res1 === 'boolean' && res1 === true) return true;
-      const res2 = isAnswerCorrect(question, userAnswer);
-      if (typeof res2 === 'boolean' && res2 === true) return true;
+export default function ExamWorkspacePage({
+  activeCategory,
+  examConfig,
+  onExit,
+  onComplete,
+}) {
+  // Lấy danh sách câu hỏi từ bộ đề được chọn (đã được lọc Chưa làm / Đã làm từ QuestionBankPage)
+  const initialQuestions = useMemo(() => {
+    const source = activeCategory || examConfig;
+    if (source?.questions && Array.isArray(source.questions) && source.questions.length > 0) {
+      return source.questions;
     }
-  } catch {
-    // ignore
-  }
-  const cleanUser = String(userAnswer).trim().toUpperCase();
-  const cleanCorrect = String(question.correctAnswer || '').trim().toUpperCase();
-  return cleanUser !== '' && cleanUser === cleanCorrect;
-}
+    if (source?.id) {
+      const cat = questionService.getCategoryById(source.id);
+      return cat?.questions || [];
+    }
+    return questionService.getCategories()[0]?.questions || [];
+  }, [activeCategory, examConfig]);
 
-export default function ExamWorkspacePage({ sessionConfig, currentExam, onExit, currentUser }) {
-  const activeConfig = sessionConfig || currentExam || {};
+  // Bộ lọc phụ ngay trong phòng làm bài nếu muốn chuyển nhanh giữa Tất cả / Chưa làm
+  const [inAppFilter, setInAppFilter] = useState('all'); // 'all' | 'unanswered'
+  const [completedSet, setCompletedSet] = useState(() => storageService.getCompletedSet());
 
-  const questions = Array.isArray(activeConfig?.questions) && activeConfig.questions.length > 0
-    ? activeConfig.questions
-    : Array.isArray(activeConfig?.module1)
-    ? activeConfig.module1
-    : [];
+  const questions = useMemo(() => {
+    if (inAppFilter === 'unanswered') {
+      const remaining = initialQuestions.filter((q) => !completedSet.has(String(q.id)));
+      return remaining.length > 0 ? remaining : initialQuestions;
+    }
+    return initialQuestions;
+  }, [initialQuestions, inAppFilter, completedSet]);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState(1);
-  const [answers, setAnswers] = useState({});
-  const [bookmarked, setBookmarked] = useState({});
-  const [eliminatedOptions, setEliminatedOptions] = useState({});
-  const [checkedQuestions, setCheckedQuestions] = useState({});
-  const [isEliminatorMode, setIsEliminatorMode] = useState(false);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [userAnswers, setUserAnswers] = useState({});
+  const [checkedMap, setCheckedMap] = useState({});
+  const [flaggedMap, setFlaggedMap] = useState({});
+  const [eliminatedMap, setEliminatedMap] = useState({});
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [showTimer, setShowTimer] = useState(true);
 
-  // Bộ lọc trạng thái câu hỏi trong MatrixModal / Question Navigator: 'all' | 'unanswered' | 'answered'
-  const [questionFilter, setQuestionFilter] = useState('all');
-
-  const [leftPaneWidth, setLeftPaneWidth] = useState(50);
-  const [desmosCurrentWidth, setDesmosCurrentWidth] = useState(0);
-  const isResizingRef = useRef(false);
-
-  const currentQ = questions[currentIndex] || {};
-  const isMathSection = Boolean(
-    currentQ?.section?.toLowerCase()?.includes('math') ||
-    activeConfig?.section?.toLowerCase()?.includes('math') ||
-    activeConfig?.category?.toLowerCase()?.includes('algebra')
-  );
-
-  // Nhận diện phần thi thật 2 modules hoặc đề thi chuẩn (Real Exam)
-  const isRealExam = Boolean(
-    activeConfig?.isRealExam ||
-    activeConfig?.isFullTest ||
-    activeConfig?.isAdaptive ||
-    activeConfig?.section === 'Full Test' ||
-    activeConfig?.mode === 'real' ||
-    activeConfig?.mode === 'exam' ||
-    (activeConfig?.title && /test|exam|official|module|prediction|hard|full/i.test(activeConfig.title))
-  );
-
-  const [showInstructions, setShowInstructions] = useState(isRealExam);
-
-  const standardLimitSeconds = isMathSection ? 35 * 60 : 32 * 60;
-  const rawDur = Number(activeConfig?.duration);
-  const initialDuration =
-    rawDur > 0
-      ? rawDur <= 180
-        ? rawDur * 60
-        : rawDur
-      : standardLimitSeconds;
-
-  const [isTimerHidden, setIsTimerHidden] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(initialDuration);
-  const [elapsedTime, setElapsedTime] = useState(0);
-  const [timeSpent, setTimeSpent] = useState(0);
-
-  const [questionTimes, setQuestionTimes] = useState({});
-  const [timeOnCurrentQuestion, setTimeOnCurrentQuestion] = useState(0);
-
+  // Trạng thái các Modal công cụ hỗ trợ
   const [isDesmosOpen, setIsDesmosOpen] = useState(false);
   const [isReferenceOpen, setIsReferenceOpen] = useState(false);
-  const [isMatrixOpen, setIsMatrixOpen] = useState(false);
-  const [isReportOpen, setIsReportOpen] = useState(false);
-  const [reportData, setReportData] = useState(null);
+  const [isAiTutorOpen, setIsAiTutorOpen] = useState(false);
+  const [isPaletteOpen, setIsPaletteOpen] = useState(false);
+  const [scoreReport, setScoreReport] = useState(null);
 
-  const [highlightPopup, setHighlightPopup] = useState(null);
-  const readingColRef = useRef(null);
-
-  // YÊU CẦU 2: BẮT BUỘC FULLSCREEN KHI THI THẬT & TỰ NỘP BÀI KHI THOÁT FULLSCREEN HOẶC ẤN EXIT
-  useEffect(() => {
-    if (!isRealExam || showInstructions || isReportOpen) return;
-
-    // Yêu cầu bật chế độ Fullscreen
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen().catch(() => {});
-    }
-
-    const handleFullscreenChange = () => {
-      if (!document.fullscreenElement) {
-        // Thí sinh vừa thoát toàn màn hình => Tự động nộp bài ngay lập tức
-        alert('Cảnh báo: Bạn vừa thoát khỏi chế độ toàn màn hình trong bài thi thật. Hệ thống sẽ tự động nộp bài!');
-        handleFinishExam(true);
-      }
-    };
-
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-    };
-  }, [isRealExam, showInstructions, isReportOpen]);
+  // Theo dõi thời gian làm từng câu
+  const questionTimesRef = useRef({});
+  const lastTickRef = useRef(Date.now());
 
   useEffect(() => {
-    setTimeOnCurrentQuestion(questionTimes[currentIndex] || 0);
-  }, [currentIndex]);
+    setCurrentIdx(0);
+    setUserAnswers({});
+    setCheckedMap({});
+    setFlaggedMap({});
+    setElapsedSeconds(0);
+  }, [activeCategory, examConfig]);
 
-  // YÊU CẦU 3: CƠ CHẾ TÍNH THỜI GIAN
-  // - Thi thật (isRealExam): Đếm ngược từ thời gian quy định (College Board timer)
-  // - Luyện tập / Bài đơn: Đếm từ 0 lên vô hạn (elapsedTime)
+  // Bộ đếm thời gian
   useEffect(() => {
-    if (isReportOpen || showInstructions) return;
+    if (scoreReport) return;
     const timer = setInterval(() => {
-      setTimeSpent((prev) => prev + 1);
-      setTimeOnCurrentQuestion((prev) => {
-        const nextSec = prev + 1;
-        setQuestionTimes((map) => ({ ...map, [currentIndex]: nextSec }));
-        return nextSec;
-      });
-
-      if (isRealExam) {
-        setTimeLeft((prev) => {
-          if (prev <= 1) {
-            clearInterval(timer);
-            handleFinishExam(true);
-            return 0;
-          }
-          return prev - 1;
-        });
-      } else {
-        setElapsedTime((prev) => prev + 1);
-      }
+      setElapsedSeconds((prev) => prev + 1);
+      questionTimesRef.current[currentIdx] =
+        (questionTimesRef.current[currentIdx] || 0) + 1;
     }, 1000);
     return () => clearInterval(timer);
-  }, [isRealExam, isReportOpen, showInstructions, currentIndex]);
+  }, [currentIdx, scoreReport]);
 
+  // Điều hướng nhanh bằng phím mũi tên Trái / Phải
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!isResizingRef.current) return;
-      const newWidth = (e.clientX / window.innerWidth) * 100;
-      if (newWidth >= 28 && newWidth <= 72) {
-        setLeftPaneWidth(newWidth);
+    const handleKeyDown = (e) => {
+      if (scoreReport || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return;
+      }
+      if (e.key === 'ArrowRight' && currentIdx < questions.length - 1) {
+        setCurrentIdx((i) => i + 1);
+      } else if (e.key === 'ArrowLeft' && currentIdx > 0) {
+        setCurrentIdx((i) => i - 1);
       }
     };
-    const handleMouseUp = () => {
-      if (isResizingRef.current) {
-        isResizingRef.current = false;
-        document.body.style.cursor = 'default';
-      }
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, []);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIdx, questions.length, scoreReport]);
 
-  const formatClock = (totalSecs) => {
-    const safeSecs = Math.max(0, Number(totalSecs) || 0);
-    const m = Math.floor(safeSecs / 60);
-    const s = safeSecs % 60;
-    return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="p-12 text-center text-slate-300 space-y-4">
+        <p className="text-lg font-bold">Không tìm thấy câu hỏi nào trong bộ đề này.</p>
+        <button
+          type="button"
+          onClick={onExit}
+          className="px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-bold text-xs cursor-pointer"
+        >
+          Quay lại Ngân hàng câu hỏi
+        </button>
+      </div>
+    );
+  }
+
+  const currentQ = questions[currentIdx] || questions[0];
+  const qId = currentQ.id || `q_${currentIdx}`;
+  const selectedAnswer = userAnswers[qId] || '';
+  const isChecked = Boolean(checkedMap[qId]);
+  const isAlreadyCompletedBefore = completedSet.has(String(qId));
+
+  const rawOptions = currentQ.options || {};
+  const optionEntries = Array.isArray(rawOptions)
+    ? rawOptions.map((opt, idx) => [
+        String.fromCharCode(65 + idx),
+        typeof opt === 'object' ? opt.text || opt.value || '' : String(opt),
+      ])
+    : Object.entries(rawOptions);
+
+  const handleSelectOption = (letter) => {
+    setUserAnswers((prev) => ({
+      ...prev,
+      [qId]: letter,
+    }));
   };
 
-  const handleSelectOption = (key) => {
-    if (isEliminatorMode) {
-      toggleEliminate(key);
-      return;
-    }
-    setAnswers((prev) => ({ ...prev, [currentIndex]: key }));
-  };
-
-  const toggleBookmark = () => {
-    setBookmarked((prev) => ({ ...prev, [currentIndex]: !prev[currentIndex] }));
-  };
-
-  const toggleEliminate = (key) => {
-    setEliminatedOptions((prev) => {
-      const cur = prev[currentIndex] || [];
-      return {
-        ...prev,
-        [currentIndex]: cur.includes(key) ? cur.filter((k) => k !== key) : [...cur, key],
-      };
+  const handleToggleEliminate = (e, letter) => {
+    e.stopPropagation();
+    setEliminatedMap((prev) => {
+      const currentList = prev[qId] || [];
+      const nextList = currentList.includes(letter)
+        ? currentList.filter((item) => item !== letter)
+        : [...currentList, letter];
+      return { ...prev, [qId]: nextList };
     });
   };
 
-  const handleJump = (idx) => {
-    if (idx >= 0 && idx < questions.length && idx !== currentIndex) {
-      setSlideDirection(idx > currentIndex ? 1 : -1);
-      setCurrentIndex(idx);
-      setHighlightPopup(null);
+  // Khi bấm nút Check đáp án từng câu -> Đánh dấu câu đó vào danh sách "Đã làm" ngay lập tức!
+  const handleCheckCurrentAnswer = () => {
+    if (!selectedAnswer) return;
+    setCheckedMap((prev) => ({ ...prev, [qId]: true }));
+    storageService.markSingleQuestionCompleted(qId);
+    setCompletedSet(storageService.getCompletedSet());
+
+    const isRight =
+      String(selectedAnswer).trim().toUpperCase() ===
+      String(currentQ.correctAnswer).trim().toUpperCase();
+    if (!isRight) {
+      storageService.addMistake({
+        ...currentQ,
+        userAnswer: selectedAnswer,
+      });
     }
   };
 
-  const handleCheckAnswer = () => {
-    if (isRealExam) return;
-    setCheckedQuestions((prev) => ({ ...prev, [currentIndex]: true }));
-  };
-
-  const handleFinishExam = (isAuto = false) => {
-    if (!isAuto && !window.confirm('Bạn có chắc chắn muốn nộp bài và xem phân tích kết quả?')) {
-      return;
-    }
-
-    // Thoát chế độ toàn màn hình khi nộp bài xong
-    if (document.fullscreenElement && document.exitFullscreen) {
-      document.exitFullscreen().catch(() => {});
-    }
-
-    const reviewedQuestions = questions.map((q, idx) => {
-      const uAns = answers[idx] !== undefined ? String(answers[idx]).trim() : '';
-      const cAns = String(q.correctAnswer || '').trim();
-      const isCorrect = checkAnswerSafely(q, uAns);
+  // Nộp bài & Chấm điểm toàn bộ những câu đã làm
+  const handleSubmitExam = () => {
+    const detailedQuestions = questions.map((q, idx) => {
+      const id = q.id || `q_${idx}`;
+      const uAns = String(userAnswers[id] || '').trim().toUpperCase();
+      const cAns = String(q.correctAnswer || 'A').trim().toUpperCase();
+      const isCorrect = uAns !== '' && uAns === cAns;
 
       return {
         ...q,
-        id: q.id || `q_${idx + 1}`,
+        id,
         userAnswer: uAns,
         correctAnswer: cAns,
-        isCorrect: isCorrect,
-        domain: q.domain || (isMathSection ? 'Math Domain' : 'Reading & Writing'),
-        difficulty: q.difficulty || 'medium',
-        explanation: q.explanation || 'Đáp án chính xác được xác nhận theo tiêu chuẩn College Board.',
+        isCorrect,
       };
     });
 
-    const correctCount = reviewedQuestions.filter((q) => q.isCorrect).length;
-    const totalCount = Math.max(1, reviewedQuestions.length);
+    // Lưu tất cả các câu có chọn đáp án vào bộ nhớ "Đã làm"
+    const answeredIds = detailedQuestions
+      .filter((q) => q.userAnswer !== '')
+      .map((q) => q.id);
+    storageService.markQuestionsCompleted(answeredIds);
+    setCompletedSet(storageService.getCompletedSet());
 
-    const fakeSessionState = {
-      module1: { questions: reviewedQuestions, answers: answers, timeSpent: timeSpent },
-      module2: { path: 'Hard', questions: [], answers: {}, timeSpent: 0 },
-    };
+    const totalCount = detailedQuestions.length;
+    const correctCount = detailedQuestions.filter((q) => q.isCorrect).length;
 
-    let calculatedScore = 500;
+    // Tính thống kê theo từng Domain
+    const domainPerformance = {};
+    detailedQuestions.forEach((q) => {
+      const dom = q.domain || 'Reading & Writing';
+      if (!domainPerformance[dom]) {
+        domainPerformance[dom] = { correct: 0, total: 0, percentage: 0 };
+      }
+      domainPerformance[dom].total += 1;
+      if (q.isCorrect) domainPerformance[dom].correct += 1;
+    });
+    Object.keys(domainPerformance).forEach((dom) => {
+      const item = domainPerformance[dom];
+      item.percentage =
+        item.total > 0 ? Math.round((item.correct / item.total) * 100) : 0;
+    });
+
+    let scaledScore = 200 + Math.round((correctCount / Math.max(1, totalCount)) * 600);
     try {
-      const scoreRes = calculateSatScaledScore(fakeSessionState);
-      calculatedScore = scoreRes?.scaledScore || Math.round((correctCount / totalCount) * 600 + 200);
-      calculatedScore = Math.round(calculatedScore / 10) * 10;
+      if (typeof calculateIrtScore === 'function') {
+        const irt = calculateIrtScore(detailedQuestions);
+        if (irt && Number(irt.scaledScore) >= 200) {
+          scaledScore = irt.scaledScore;
+        }
+      }
     } catch {
-      calculatedScore = Math.round((correctCount / totalCount) * 600 + 200);
-      calculatedScore = Math.round(calculatedScore / 10) * 10;
+      // Fallback linear scale
     }
 
-    const domainStats = {};
-    reviewedQuestions.forEach((q) => {
-      const d = q.domain || 'General';
-      if (!domainStats[d]) {
-        domainStats[d] = { correct: 0, total: 0, percentage: 0 };
-      }
-      domainStats[d].total += 1;
-      if (q.isCorrect) domainStats[d].correct += 1;
-    });
-
-    Object.keys(domainStats).forEach((d) => {
-      const st = domainStats[d];
-      st.percentage = st.total > 0 ? Math.round((st.correct / st.total) * 100) : 0;
-    });
-
-    const finalReport = {
-      scaledScore: calculatedScore,
-      section: activeConfig?.title || (isMathSection ? 'Math Section' : 'Reading & Writing'),
-      module2Path: correctCount / totalCount >= 0.6 ? 'Hard' : 'Easy',
-      totalQuestions: reviewedQuestions.length,
-      correctCount: correctCount,
-      timeSpent: timeSpent,
-      questionTimes: questionTimes || {},
-      domainPerformance: domainStats,
-      questions: reviewedQuestions,
+    const report = {
+      id: `rep_${Date.now()}`,
+      section: activeCategory?.title || examConfig?.title || 'Digital SAT Practice',
+      scaledScore,
+      totalQuestions: totalCount,
+      correctCount,
+      timeSpent: elapsedSeconds,
+      module2Path: scaledScore >= 600 ? 'Hard' : 'Standard',
+      domainPerformance,
+      questionTimes: questionTimesRef.current,
+      questions: detailedQuestions,
     };
 
-    try {
-      if (storageService && typeof storageService.saveExamResult === 'function') {
-        storageService.saveExamResult(finalReport);
-      }
-    } catch (err) {
-      console.warn(err);
+    storageService.saveExamResult(report);
+    setScoreReport(report);
+    if (typeof onComplete === 'function') {
+      onComplete(report);
     }
-
-    setReportData(finalReport);
-    setIsReportOpen(true);
   };
 
-const userName =
-    localStorage.getItem('sat_custom_display_name') ||
-    currentUser?.name ||
-    'Student Candidate';
-
-  const warningThreshold = isMathSection ? 120 : 90;
-  const isTimeWarning = timeOnCurrentQuestion > warningThreshold;
-
-  const questionTransitionVariants = {
-    initial: (dir) => ({ opacity: 0, x: dir > 0 ? 14 : -14 }),
-    animate: { opacity: 1, x: 0, transition: { duration: 0.18, ease: [0.22, 1, 0.36, 1] } },
-    exit: (dir) => ({ opacity: 0, x: dir > 0 ? -14 : 14, transition: { duration: 0.12, ease: 'easeIn' } }),
+  const formatTimer = (secs) => {
+    const m = Math.floor(secs / 60);
+    const s = secs % 60;
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   };
 
-  if (showInstructions) {
-    return (
-      <div className="h-screen w-screen flex flex-col bg-slate-50 font-sans select-none overflow-y-auto relative text-slate-900">
-        <div className="flex-1 flex items-center justify-center p-4 sm:p-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-xl border border-slate-200 space-y-5 my-auto"
-          >
-            <div className="text-center space-y-1.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-rose-50 text-rose-700 border border-rose-200">
-                <Sparkles className="w-3 h-3" /> Official Exam Mode (Strict Fullscreen)
-              </span>
-              <h1 className="text-lg sm:text-xl font-extrabold text-slate-900">
-                {activeConfig?.title || 'SAT Real Exam Session'}
-              </h1>
-            </div>
+  const isCurrentCorrect =
+    String(selectedAnswer).trim().toUpperCase() ===
+    String(currentQ.correctAnswer).trim().toUpperCase();
 
-            <div className="space-y-2.5 text-xs text-slate-600">
-              <div className="p-3 rounded-2xl bg-rose-50 border border-rose-200 text-rose-900 font-medium">
-                ⚠️ <strong>Quy chế thi thật:</strong> Bài thi yêu cầu bắt buộc ở chế độ toàn màn hình. Nếu bạn thoát chế độ toàn màn hình hoặc ấn Exit, hệ thống sẽ <strong>tự động nộp bài thi ngay lập tức</strong>.
-              </div>
-            </div>
-
-            <div className="pt-2 flex items-center gap-3">
-              <button
-                type="button"
-                onClick={onExit}
-                className="px-4 py-3 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition cursor-pointer"
-              >
-                Hủy bỏ
-              </button>
-              <motion.button
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
-                type="button"
-                onClick={() => {
-                  setShowInstructions(false);
-                  if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen().catch(() => {});
-                  }
-                }}
-                className="flex-1 py-3 px-6 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-rose-600 hover:bg-rose-700 transition shadow-lg cursor-pointer flex items-center justify-center gap-2"
-              >
-                <Play className="w-4 h-4 fill-white" />
-                <span>Đồng ý & Bắt đầu thi thật</span>
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    );
-  }
-
-  if (questions.length === 0) {
-    return (
-      <div className="h-screen flex flex-col items-center justify-center bg-slate-50 gap-4 font-sans text-slate-900">
-        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl text-center space-y-4 max-w-sm">
-          <p className="text-slate-700 font-bold text-sm">Không tìm thấy câu hỏi cho đề thi này.</p>
+  return (
+    <div className="fixed inset-0 z-40 bg-[#060913] text-slate-100 flex flex-col font-sans select-none overflow-hidden">
+      {/* =================================================================== */}
+      {/* 1. TOP BLUEBOOK HEADER BAR                                          */}
+      {/* =================================================================== */}
+      <header className="h-16 px-4 lg:px-8 bg-[#090D1A] border-b border-indigo-500/25 flex items-center justify-between shrink-0">
+        <div className="flex items-center gap-3 min-w-0">
           <button
             type="button"
             onClick={onExit}
-            className="w-full px-4 py-2.5 bg-slate-900 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+            className="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/15 text-xs font-bold text-slate-200 flex items-center gap-1.5 transition cursor-pointer shrink-0"
           >
-            Quay lại
+            <ChevronLeft className="w-4 h-4" />
+            <span>Thoát</span>
           </button>
-        </div>
-      </div>
-    );
-  }
 
-  const questionPrompt =
-    currentQ?.passage ||
-    currentQ?.prompt ||
-    currentQ?.content ||
-    currentQ?.text ||
-    currentQ?.stimulus ||
-    (typeof currentQ?.questionText === 'string' ? currentQ.questionText : '') ||
-    '';
-
-  const rawOpts = currentQ?.options || {};
-  const optionsEntries = Array.isArray(rawOpts)
-    ? rawOpts.map((opt, i) => [
-        String.fromCharCode(65 + i),
-        typeof opt === 'object' ? opt.text || opt.value || '' : opt,
-      ])
-    : Object.entries(rawOpts);
-
-  const hasAnsweredCurrent = answers[currentIndex] !== undefined && answers[currentIndex] !== '';
-  const isCurrentChecked = !isRealExam && checkedQuestions[currentIndex];
-  const isCurrentCorrect = checkAnswerSafely(currentQ, answers[currentIndex]);
-  const isLowTime = isRealExam && timeLeft <= 300;
-  const progressPercent = ((currentIndex + 1) / questions.length) * 100;
-
-  // Tính toán style tự động chừa khoảng trống cho Desmos khi đang mở bên phải
-  const rightOffsetStyle = isDesmosOpen ? `${desmosCurrentWidth}px` : '0px';
-
-  return (
-    <div className="h-screen w-screen flex flex-col bg-slate-50/50 select-none overflow-hidden font-sans relative text-slate-900 exam-light-mode">
-      {/* 1. TOP BAR */}
-      <header className="h-14 px-4 lg:px-6 flex items-center justify-between bg-white border-b border-slate-200 shrink-0 z-20">
-        <div className="flex items-center gap-2.5">
-          <div className="w-1.5 h-7 rounded-full bg-indigo-600" />
-          <h2 className="text-xs sm:text-sm font-extrabold text-slate-900 tracking-tight truncate max-w-md">
-            {activeConfig?.title || (isMathSection ? 'Math Module' : 'Reading & Writing')}
-          </h2>
-        </div>
-
-        {/* TIMER */}
-        <div className="flex items-center gap-2">
-          <div
-            className={`font-mono text-base sm:text-lg font-black tracking-wider px-2.5 py-0.5 rounded-xl ${
-              isLowTime ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-900'
-            }`}
-          >
-            {isRealExam ? formatClock(timeLeft) : formatClock(elapsedTime)}
+          <div className="min-w-0">
+            <h1 className="text-xs sm:text-sm font-extrabold text-white truncate">
+              {activeCategory?.title || examConfig?.title || 'Digital SAT Practice'}
+            </h1>
+            <div className="flex items-center gap-2 text-[11px] text-slate-400">
+              <span>{currentQ.domain || 'Reading & Writing'}</span>
+              <span>•</span>
+              <span className="text-cyan-300 font-semibold">{currentQ.skill}</span>
+            </div>
           </div>
-          <button
-            type="button"
-            onClick={() => setIsTimerHidden(!isTimerHidden)}
-            className="flex items-center gap-1 border border-slate-200 bg-white px-2 py-1 rounded-lg text-[10px] font-bold text-slate-600 hover:bg-slate-100 cursor-pointer"
-          >
-            {isTimerHidden ? <Eye className="w-3 h-3" /> : <EyeOff className="w-3 h-3" />}
-            <span>{isTimerHidden ? 'Show' : 'Hide'}</span>
-          </button>
         </div>
 
-        {/* CÔNG CỤ & NÚT EXIT (KÍCH HOẠT TỰ NỘP BÀI) */}
-        <div className="flex items-center gap-1.5">
-          {isMathSection && (
-            <>
-              <button
-                type="button"
-                onClick={() => setIsDesmosOpen(!isDesmosOpen)}
-                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
-                  isDesmosOpen ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-100 hover:bg-indigo-50 text-slate-700 border-slate-200'
-                }`}
-              >
-                <Calculator className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Calculator</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsReferenceOpen(true)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-amber-50 text-slate-700 border border-slate-200 cursor-pointer"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-                <span className="hidden sm:inline">Reference</span>
-              </button>
-            </>
-          )}
+        {/* Đồng hồ đếm giờ ở giữa */}
+        <div className="flex items-center gap-2">
+          <div className="px-3.5 py-1.5 rounded-xl bg-slate-900 border border-white/10 flex items-center gap-2 font-mono text-xs sm:text-sm font-bold text-cyan-300">
+            <Clock className="w-4 h-4 text-cyan-400" />
+            {showTimer ? <span>{formatTimer(elapsedSeconds)}</span> : <span>••:••</span>}
+            <button
+              type="button"
+              onClick={() => setShowTimer(!showTimer)}
+              className="text-slate-400 hover:text-white ml-1 cursor-pointer"
+              title={showTimer ? 'Ẩn đồng hồ' : 'Hiện đồng hồ'}
+            >
+              {showTimer ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Cụm công cụ: Lọc câu chưa làm + Máy tính Desmos + Bảng công thức + AI Tutor */}
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() =>
+              setInAppFilter((prev) => (prev === 'unanswered' ? 'all' : 'unanswered'))
+            }
+            className={`hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
+              inAppFilter === 'unanswered'
+                ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300'
+                : 'bg-slate-900 border-white/10 text-slate-300 hover:text-white'
+            }`}
+            title="Chỉ hiển thị những câu hỏi bạn chưa từng làm trước đây"
+          >
+            <ListFilter className="w-3.5 h-3.5" />
+            <span>{inAppFilter === 'unanswered' ? 'Đang lọc: Chưa làm' : 'Lọc chưa làm'}</span>
+          </button>
 
           <button
             type="button"
-            onClick={() => handleFinishExam(false)}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 transition cursor-pointer shadow-xs"
-            title="Thoát và nộp bài"
+            onClick={() => setIsDesmosOpen(true)}
+            className="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-xs font-bold text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
           >
-            <LogOut className="w-3.5 h-3.5" />
-            <span>Exit & Submit</span>
+            <Calculator className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="hidden sm:inline">Calculator</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsReferenceOpen(true)}
+            className="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-xs font-bold text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+            <span className="hidden sm:inline">Reference</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleSubmitExam}
+            className="px-4 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-xs font-extrabold flex items-center gap-1.5 shadow-md cursor-pointer"
+          >
+            <Send className="w-3.5 h-3.5" />
+            <span>Nộp bài</span>
           </button>
         </div>
       </header>
 
-      {/* 2. SUB-HEADER */}
-      <div className="bg-[#0f172a] text-white py-1 px-6 flex items-center justify-between text-[11px] font-semibold tracking-wide shrink-0 relative overflow-hidden">
-        <div className="flex items-center gap-2 z-10">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-slate-300">Câu hỏi:</span>
-          <strong className="text-white">{currentIndex + 1} / {questions.length}</strong>
+      {/* =================================================================== */}
+      {/* 2. VÙNG LÀM BÀI CHIA 2 CỘT CHUẨN BLUEBOOK                           */}
+      {/* =================================================================== */}
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+        {/* CỘT TRÁI: ĐOẠN VĂN / ĐỀ BÀI (PASSAGE) */}
+        <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-6 lg:p-10 border-b md:border-b-0 md:border-r border-indigo-500/20 bg-[#070B16]">
+          <div className="max-w-xl mx-auto space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+                Passage / Stimulus
+              </span>
+              {isAlreadyCompletedBefore && (
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-400/30">
+                  <CheckCircle2 className="w-3 h-3" /> Đã làm
+                </span>
+              )}
+            </div>
+
+            <div className="text-[15.5px] text-slate-100 leading-[1.85] font-serif whitespace-pre-line select-text">
+              <MathRenderer
+                text={currentQ.passage || currentQ.prompt || 'Đọc câu hỏi ở cột bên phải.'}
+                image={currentQ.image || currentQ.figure}
+                svg={currentQ.svg}
+              />
+            </div>
+          </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-slate-800">
-          <motion.div
-            className="h-full bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400"
-            animate={{ width: `${progressPercent}%` }}
-          />
+
+        {/* CỘT PHẢI: CÂU HỎI & LỰA CHỌN ĐÁP ÁN */}
+        <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-6 lg:p-10 bg-[#0A1020]">
+          <div className="max-w-xl mx-auto space-y-5">
+            {/* Thanh số thứ tự câu + Mark for Review */}
+            <div className="flex items-center justify-between bg-slate-900/90 px-3.5 py-2 rounded-xl border border-white/10">
+              <div className="flex items-center gap-2.5">
+                <span className="w-7 h-7 rounded-lg bg-cyan-500 text-slate-950 font-mono text-xs font-black flex items-center justify-center">
+                  {currentIdx + 1}
+                </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setFlaggedMap((prev) => ({ ...prev, [qId]: !prev[qId] }))
+                  }
+                  className={`text-xs font-bold flex items-center gap-1.5 cursor-pointer transition ${
+                    flaggedMap[qId] ? 'text-amber-400' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  <Flag
+                    className={`w-3.5 h-3.5 ${flaggedMap[qId] ? 'fill-amber-400' : ''}`}
+                  />
+                  <span>Mark for Review</span>
+                </button>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsAiTutorOpen(true)}
+                className="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/30 text-cyan-300 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+              >
+                <Bot className="w-3.5 h-3.5" />
+                <span>Hỏi AI Tutor</span>
+              </button>
+            </div>
+
+            {/* Câu hỏi (Question Stem) */}
+            <div className="text-[15.5px] font-serif text-white leading-relaxed">
+              <MathRenderer text={currentQ.question} />
+            </div>
+
+            {/* Danh sách 4 đáp án A, B, C, D */}
+            {optionEntries.length > 0 ? (
+              <div className="space-y-3">
+                {optionEntries.map(([letter, text]) => {
+                  const isSelected = selectedAnswer === letter;
+                  const isEliminated = (eliminatedMap[qId] || []).includes(letter);
+                  const isCorrectOpt =
+                    String(letter).trim().toUpperCase() ===
+                    String(currentQ.correctAnswer).trim().toUpperCase();
+
+                  let cardStyle =
+                    'border-slate-700/80 bg-slate-900/75 text-slate-200 hover:border-cyan-400/50';
+                  if (isSelected) {
+                    cardStyle =
+                      'border-2 border-cyan-400 bg-cyan-500/15 text-white shadow-[0_0_20px_rgba(34,211,238,0.15)]';
+                  }
+                  if (isChecked) {
+                    if (isCorrectOpt) {
+                      cardStyle =
+                        'border-2 border-emerald-400 bg-emerald-950/40 text-white';
+                    } else if (isSelected && !isCorrectOpt) {
+                      cardStyle = 'border-2 border-rose-500 bg-rose-950/40 text-rose-100';
+                    }
+                  }
+
+                  return (
+                    <div
+                      key={letter}
+                      onClick={() => !isEliminated && handleSelectOption(letter)}
+                      className={`p-3.5 rounded-xl border flex items-center justify-between gap-3 transition cursor-pointer ${cardStyle} ${
+                        isEliminated ? 'opacity-40 line-through' : ''
+                      }`}
+                    >
+                      <div className="flex items-center gap-3.5 min-w-0">
+                        <span
+                          className={`w-7 h-7 rounded-full border text-xs font-bold flex items-center justify-center shrink-0 ${
+                            isSelected
+                              ? 'bg-cyan-400 text-slate-950 border-cyan-300 font-black'
+                              : 'border-slate-500 text-slate-300 bg-slate-950'
+                          }`}
+                        >
+                          {letter}
+                        </span>
+                        <div className="text-[14.5px] font-serif leading-relaxed">
+                          <MathRenderer text={text} />
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={(e) => handleToggleEliminate(e, letter)}
+                        className="px-2 py-0.5 rounded text-[10px] font-mono font-bold border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 shrink-0 cursor-pointer"
+                        title="Gạch loại trừ đáp án này"
+                      >
+                        {isEliminated ? 'Bỏ gạch' : 'ABC'}
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              /* Ô nhập đáp án tự luận (Grid-in Math) */
+              <div className="space-y-2">
+                <label className="block text-xs font-bold text-slate-300 uppercase">
+                  Nhập đáp án số hoặc phân số:
+                </label>
+                <input
+                  type="text"
+                  value={selectedAnswer}
+                  onChange={(e) => handleSelectOption(e.target.value)}
+                  placeholder="VD: 14, -3/4, 2.5..."
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-cyan-400/40 text-white font-mono text-base focus:outline-none focus:border-cyan-400"
+                />
+              </div>
+            )}
+
+            {/* Giải thích chi tiết hiện ra sau khi bấm Check */}
+            {isChecked && (
+              <div
+                className={`p-5 rounded-2xl border space-y-2 ${
+                  isCurrentCorrect
+                    ? 'bg-emerald-950/35 border-emerald-400/40'
+                    : 'bg-rose-950/35 border-rose-400/40'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5">
+                    {isCurrentCorrect ? (
+                      <>
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                        <span className="text-emerald-300">Chính xác! (Đã lưu vào danh sách Đã làm)</span>
+                      </>
+                    ) : (
+                      <>
+                        <XCircle className="w-4 h-4 text-rose-400" />
+                        <span className="text-rose-300">
+                          Chưa chính xác • Đáp án đúng là: {currentQ.correctAnswer}
+                        </span>
+                      </>
+                    )}
+                  </span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-200 font-serif leading-relaxed pt-2 border-t border-white/10">
+                  <MathRenderer text={currentQ.explanation} />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* 3. KHU VỰC LÀM BÀI 2 CỘT (TỰ ĐỘNG CHỪA KHOẢNG TRỐNG CHO DESMOS BÊN PHẢI) */}
-      <main
-        style={{ marginRight: rightOffsetStyle, transition: 'margin-right 0.15s ease-out' }}
-        className="flex-1 flex flex-col md:flex-row overflow-hidden bg-white relative exam-light-mode"
-      >
-        {/* CỘT TRÁI: PASSAGE */}
-        <div
-          style={{ width: `${leftPaneWidth}%` }}
-          className="h-1/2 md:h-full overflow-y-auto px-6 py-5 md:px-10 md:py-7 border-b md:border-b-0 border-slate-200 bg-white"
-        >
-          <div className="max-w-2xl mx-auto">
-            <AnimatePresence mode="wait" custom={slideDirection}>
-              <motion.div
-                key={`passage-${currentIndex}`}
-                custom={slideDirection}
-                variants={questionTransitionVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                ref={readingColRef}
-                className="space-y-4"
-              >
-                <div className="text-[15.5px] text-slate-800 leading-[1.8] font-serif select-text">
-                  <MathRenderer
-                    text={questionPrompt}
-                    image={currentQ?.image || currentQ?.figure || currentQ?.imageUrl}
-                    svg={currentQ?.svg || currentQ?.chart}
-                  />
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+      {/* =================================================================== */}
+      {/* 3. BOTTOM NAVIGATION BAR (BACK / CHECK / NEXT)                      */}
+      {/* =================================================================== */}
+      <footer className="h-16 px-4 lg:px-8 bg-[#090D1A] border-t border-indigo-500/25 flex items-center justify-between shrink-0">
+        <div className="text-xs font-bold text-slate-400 hidden sm:block">
+          Đã làm trong phiên:{' '}
+          <strong className="text-cyan-300">{Object.keys(userAnswers).length}</strong> /{' '}
+          {questions.length} câu
         </div>
 
-        {/* RESIZER */}
-        <div
-          onMouseDown={() => {
-            isResizingRef.current = true;
-            document.body.style.cursor = 'col-resize';
-          }}
-          className="hidden md:flex w-2 bg-slate-100 hover:bg-indigo-100 border-x border-slate-200 items-center justify-center cursor-col-resize transition-colors shrink-0 z-10"
-        >
-          <GripVertical className="w-3.5 h-3.5 text-slate-500" />
-        </div>
-
-        {/* CỘT PHẢI: QUESTIONS & OPTIONS */}
-        <div
-          style={{ width: `${100 - leftPaneWidth}%` }}
-          className="h-1/2 md:h-full overflow-y-auto px-6 py-5 md:px-10 md:py-7 bg-slate-50/40"
-        >
-          <div className="max-w-xl mx-auto">
-            <AnimatePresence mode="wait" custom={slideDirection}>
-              <motion.div
-                key={`question-${currentIndex}`}
-                custom={slideDirection}
-                variants={questionTransitionVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className="space-y-4"
-              >
-                <div className="flex items-center justify-between bg-slate-100 border border-slate-200 rounded-xl px-3.5 py-2">
-                  <div className="flex items-center gap-3">
-                    <span className="min-w-[28px] h-7 px-2 bg-slate-900 text-white font-mono font-bold text-xs flex items-center justify-center rounded-lg">
-                      {currentIndex + 1}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={toggleBookmark}
-                      className={`flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-lg transition cursor-pointer ${
-                        bookmarked[currentIndex] ? 'text-amber-800 bg-amber-100 border border-amber-300' : 'text-slate-600 hover:bg-white'
-                      }`}
-                    >
-                      <Bookmark className={`w-3.5 h-3.5 ${bookmarked[currentIndex] ? 'fill-amber-500 text-amber-500' : ''}`} />
-                      <span>{bookmarked[currentIndex] ? 'Marked' : 'Mark for Review'}</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div className="text-[15px] font-semibold text-slate-900 leading-relaxed font-serif">
-                  <MathRenderer text={currentQ?.question || 'Chọn đáp án phù hợp nhất:'} />
-                </div>
-
-                <div className="space-y-2.5 pt-1">
-                  {optionsEntries.map(([letter, text]) => {
-                    const isSelected = answers[currentIndex] === letter;
-                    const isCorrectChoice = String(currentQ?.correctAnswer || '').trim().toUpperCase() === letter;
-
-                    let cardStyle = 'border-slate-200 bg-white hover:border-indigo-300';
-                    let badgeStyle = 'border-slate-300 text-slate-700 bg-slate-50';
-
-                    if (isSelected) {
-                      cardStyle = 'border-indigo-600 bg-indigo-50/60 ring-2 ring-indigo-600/20';
-                      badgeStyle = 'bg-indigo-600 text-white border-indigo-600';
-                    }
-
-                    if (isCurrentChecked && isCorrectChoice) {
-                      cardStyle = 'border-emerald-500 bg-emerald-50 text-emerald-950';
-                      badgeStyle = 'bg-emerald-600 text-white border-emerald-600';
-                    }
-
-                    return (
-                      <div key={letter} className="flex items-center gap-2">
-                        <div
-                          onClick={() => handleSelectOption(letter)}
-                          className={`flex-1 p-3.5 rounded-2xl border flex items-center justify-between cursor-pointer transition-all ${cardStyle}`}
-                        >
-                          <div className="flex items-start gap-3 pr-2">
-                            <span className={`w-6 h-6 rounded-full border-2 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 ${badgeStyle}`}>
-                              {letter}
-                            </span>
-                            <div className="text-[14px] leading-relaxed font-serif text-slate-800">
-                              <MathRenderer text={text} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-      </main>
-
-      {/* 4. FOOTER */}
-      <footer className="h-14 px-4 lg:px-8 flex items-center justify-between bg-white border-t border-slate-200 shrink-0 z-20">
         <button
           type="button"
-          onClick={() => setIsMatrixOpen(true)}
-          className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2 cursor-pointer"
+          onClick={() => setIsPaletteOpen(!isPaletteOpen)}
+          className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/15 text-xs font-extrabold text-white cursor-pointer"
         >
-          <span>Question {currentIndex + 1} of {questions.length}</span>
-          <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+          Question {currentIdx + 1} of {questions.length} ▴
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <button
             type="button"
-            disabled={currentIndex === 0}
-            onClick={() => handleJump(currentIndex - 1)}
-            className="px-4 py-2 rounded-xl text-xs font-bold border bg-white text-slate-700 border-slate-200 cursor-pointer disabled:opacity-40"
+            disabled={currentIdx === 0}
+            onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))}
+            className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-xs font-extrabold text-white cursor-pointer transition"
           >
-            <ChevronLeft className="w-3.5 h-3.5" />
-            <span>Back</span>
+            Back
           </button>
 
-          {currentIndex === questions.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => handleFinishExam(false)}
-              className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1"
-            >
-              <Check className="w-3.5 h-3.5" />
-              <span>Submit</span>
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={() => handleJump(currentIndex + 1)}
-              className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1"
-            >
-              <span>Next</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          )}
+          <button
+            type="button"
+            disabled={!selectedAnswer}
+            onClick={handleCheckCurrentAnswer}
+            className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 disabled:opacity-40 text-slate-950 text-xs font-black flex items-center gap-1.5 cursor-pointer transition shadow-md"
+          >
+            <Check className="w-3.5 h-3.5 stroke-[3]" />
+            <span>Check</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              if (currentIdx < questions.length - 1) {
+                setCurrentIdx((i) => i + 1);
+              } else {
+                handleSubmitExam();
+              }
+            }}
+            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-xs font-extrabold text-white cursor-pointer transition shadow-md"
+          >
+            {currentIdx < questions.length - 1 ? 'Next' : 'Finish'}
+          </button>
         </div>
       </footer>
 
-      {/* MODALS */}
-      <MatrixModal
-        isOpen={isMatrixOpen}
-        onClose={() => setIsMatrixOpen(false)}
-        questions={questions}
-        currentIndex={currentIndex}
-        answers={answers}
-        bookmarked={bookmarked}
-        onSelectIndex={(idx) => handleJump(idx)}
-        filterMode={questionFilter}
-        onFilterChange={setQuestionFilter}
+      {/* Bảng chọn câu hỏi nhanh (Question Palette Popover) */}
+      {isPaletteOpen && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-end sm:items-center justify-center p-4">
+          <div className="bg-slate-900 border border-indigo-500/30 rounded-3xl max-w-lg w-full p-6 space-y-4 max-h-[80vh] flex flex-col">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 className="text-sm font-extrabold text-white">
+                Danh sách câu hỏi ({questions.length} câu)
+              </h3>
+              <button
+                type="button"
+                onClick={() => setIsPaletteOpen(false)}
+                className="text-xs font-bold text-slate-400 hover:text-white cursor-pointer"
+              >
+                Đóng ✕
+              </button>
+            </div>
+
+            <div className="grid grid-cols-6 sm:grid-cols-8 gap-2 overflow-y-auto p-1">
+              {questions.map((q, idx) => {
+                const id = q.id || `q_${idx}`;
+                const answered = Boolean(userAnswers[id]);
+                const doneBefore = completedSet.has(String(id));
+                const isCurr = idx === currentIdx;
+
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      setCurrentIdx(idx);
+                      setIsPaletteOpen(false);
+                    }}
+                    className={`h-10 rounded-xl font-mono text-xs font-bold border flex items-center justify-center cursor-pointer transition ${
+                      isCurr
+                        ? 'ring-2 ring-cyan-400 border-cyan-300 bg-cyan-500/25 text-white'
+                        : answered || doneBefore
+                        ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
+                        : 'bg-slate-950 border-white/10 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    {idx + 1}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Các Modal phụ trợ */}
+      <DesmosModal isOpen={isDesmosOpen} onClose={() => setIsDesmosOpen(false)} />
+      <ReferenceModal isOpen={isReferenceOpen} onClose={() => setIsReferenceOpen(false)} />
+      <AiTutorModal
+        isOpen={isAiTutorOpen}
+        onClose={() => setIsAiTutorOpen(false)}
+        question={currentQ}
       />
-
-      {isReportOpen && (
-        <ScoreReportModal
-          isOpen={isReportOpen}
-          onClose={() => setIsReportOpen(false)}
-          onRetry={() => {
-            setIsReportOpen(false);
-            setCurrentIndex(0);
-            setAnswers({});
-            setCheckedQuestions({});
-            setTimeLeft(initialDuration);
-          }}
-          onHome={onExit}
-          reportData={reportData}
-        />
-      )}
-
-      {isMathSection && (
-        <>
-          <DesmosModal
-            isOpen={isDesmosOpen}
-            onClose={() => setIsDesmosOpen(false)}
-            onWidthChange={(w) => setDesmosCurrentWidth(w)}
-          />
-          <ReferenceModal isOpen={isReferenceOpen} onClose={() => setIsReferenceOpen(false)} />
-        </>
-      )}
+      <ScoreReportModal
+        isOpen={Boolean(scoreReport)}
+        reportData={scoreReport}
+        onClose={() => setScoreReport(null)}
+        onHome={onExit}
+        onRetry={() => {
+          setScoreReport(null);
+          setCurrentIdx(0);
+          setUserAnswers({});
+          setCheckedMap({});
+        }}
+      />
     </div>
   );
 }
