@@ -12,7 +12,6 @@ import {
   RotateCcw,
   Filter,
   Zap,
-  SlidersHorizontal,
 } from 'lucide-react';
 import {
   DEFAULT_CATEGORIES,
@@ -25,12 +24,12 @@ export default function QuestionBankPage({
   onStartExam,
   onSelectCategory,
 }) {
-  const [selectedSectionTab, setSelectedSectionTab] = useState('all');
-  const [completionFilter, setCompletionFilter] = useState('unanswered'); // 'all' | 'unanswered' | 'answered'
+  // Mặc định mở thẳng mục Đề thi thật (bao gồm toàn bộ đề CB đủ 2 modules + Real Tests)
+  const [selectedSectionTab, setSelectedSectionTab] = useState('full_exam');
+  const [completionFilter, setCompletionFilter] = useState('unanswered'); // 'unanswered' | 'answered' | 'all'
   const [searchQuery, setSearchQuery] = useState('');
   const [completedIds, setCompletedIds] = useState(() => storageService.getCompletedSet());
 
-  // Đồng bộ lại danh sách câu đã làm mỗi khi mở trang
   useEffect(() => {
     const syncCompleted = () => {
       setCompletedIds(storageService.getCompletedSet());
@@ -40,33 +39,13 @@ export default function QuestionBankPage({
     return () => window.removeEventListener('focus', syncCompleted);
   }, []);
 
-  // Tính toán thống kê tổng quát toàn bộ ngân hàng câu hỏi
-  const globalStats = useMemo(() => {
-    let total = 0;
-    let done = 0;
-    const seen = new Set();
-
-    DEFAULT_CATEGORIES.forEach((cat) => {
-      (cat.questions || []).forEach((q) => {
-        if (!q?.id || seen.has(q.id)) return;
-        seen.add(q.id);
-        total++;
-        if (completedIds.has(String(q.id))) {
-          done++;
-        }
-      });
-    });
-
-    return {
-      total,
-      done,
-      unanswered: Math.max(0, total - done),
-    };
-  }, [completedIds]);
-
   // Danh sách các bộ câu hỏi đã gắn kèm thông tin lọc Chưa làm / Đã làm
   const enrichedCategories = useMemo(() => {
-    return DEFAULT_CATEGORIES.map((cat) => {
+    return DEFAULT_CATEGORIES.filter((cat) => {
+      // Ẩn các đề CB lẻ chỉ có 1 module (như Test 11 RW1), chỉ giữ lại các đề CB đủ 2 modules
+      if (cat.id === 'cb_test_11_rw1') return false;
+      return true;
+    }).map((cat) => {
       const allQs = Array.isArray(cat.questions) ? cat.questions : [];
       const answeredQs = allQs.filter((q) => completedIds.has(String(q.id)));
       const unansweredQs = allQs.filter((q) => !completedIds.has(String(q.id)));
@@ -92,52 +71,81 @@ export default function QuestionBankPage({
     });
   }, [completedIds, completionFilter]);
 
-  // Lọc các thẻ bộ đề theo Tab chuyên mục & Ô tìm kiếm & Trạng thái hoàn thành
+  // Đếm số lượng cho từng tab
+  const tabCounts = useMemo(() => {
+    return {
+      full_exam: enrichedCategories.filter((c) => Boolean(c.isExam)).length,
+      rw: enrichedCategories.filter(
+        (c) =>
+          !c.isExam &&
+          (String(c.section).toLowerCase().includes('reading') ||
+            String(c.section).toLowerCase().includes('verbal'))
+      ).length,
+      math: enrichedCategories.filter(
+        (c) => !c.isExam && String(c.section).toLowerCase().includes('math')
+      ).length,
+    };
+  }, [enrichedCategories]);
+
+  // Lọc các thẻ bộ đề theo Tab & Ô tìm kiếm
   const displayedCategories = useMemo(() => {
     return enrichedCategories.filter((cat) => {
-      // 1. Lọc theo từ khóa tìm kiếm
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchText =
           (cat.title || '').toLowerCase().includes(q) ||
           (cat.description || '').toLowerCase().includes(q) ||
           (cat.domain || '').toLowerCase().includes(q) ||
-          (cat.skill || '').toLowerCase().includes(q);
+          (cat.skill || '').toLowerCase().includes(q) ||
+          (cat.badge || '').toLowerCase().includes(q);
         if (!matchText) return false;
       }
 
-      // 2. Lọc theo tab phân mục
-      if (selectedSectionTab === 'real_verbal') {
-        return (
-          cat.id === 'real_verbal_advanced_bank' ||
-          cat.id === 'rhetorical_synthesis_bank' ||
-          cat.id === 'main_idea_central_ideas_bank'
-        );
-      }
-      if (selectedSectionTab === 'real_math') {
-        return cat.id === 'real_math_advanced_800';
-      }
+      // Đề thi thật (Gồm toàn bộ đề CB đủ 2 modules + Đề Real Test / Prediction)
       if (selectedSectionTab === 'full_exam') {
         return Boolean(cat.isExam);
       }
-      if (selectedSectionTab === 'practice') {
-        return !cat.isExam;
-      }
-      if (selectedSectionTab === 'math') {
-        return String(cat.section).toLowerCase().includes('math');
-      }
+      // Luyện tập theo dạng Reading & Writing
       if (selectedSectionTab === 'rw') {
         return (
-          String(cat.section).toLowerCase().includes('reading') ||
-          String(cat.section).toLowerCase().includes('verbal')
+          !cat.isExam &&
+          (String(cat.section).toLowerCase().includes('reading') ||
+            String(cat.section).toLowerCase().includes('verbal'))
         );
+      }
+      // Luyện tập theo dạng Math
+      if (selectedSectionTab === 'math') {
+        return !cat.isExam && String(cat.section).toLowerCase().includes('math');
       }
 
       return true;
     });
   }, [enrichedCategories, selectedSectionTab, searchQuery]);
 
-  // Hàm khởi chạy bài luyện tập với đúng danh sách câu hỏi đã lọc (Chưa làm / Đã làm / Tất cả)
+  // Thống kê số câu hỏi (Chưa làm / Đã làm / Tất cả) của riêng tab đang mở
+  const currentTabStats = useMemo(() => {
+    let total = 0;
+    let done = 0;
+    const seen = new Set();
+
+    displayedCategories.forEach((cat) => {
+      (cat.questions || []).forEach((q) => {
+        if (!q?.id || seen.has(q.id)) return;
+        seen.add(q.id);
+        total++;
+        if (completedIds.has(String(q.id))) {
+          done++;
+        }
+      });
+    });
+
+    return {
+      total,
+      done,
+      unanswered: Math.max(0, total - done),
+    };
+  }, [displayedCategories, completedIds]);
+
   const handleLaunchCategory = (cat) => {
     let targetQuestions = cat.activeQuestions;
 
@@ -153,7 +161,9 @@ export default function QuestionBankPage({
           return;
         }
       } else if (completionFilter === 'answered') {
-        alert(`Bạn chưa làm câu nào trong bộ "${cat.title}". Hãy chuyển sang bộ lọc "Chưa làm" hoặc "Tất cả" nhé!`);
+        alert(
+          `Bạn chưa làm câu nào trong bộ "${cat.title}". Hãy chuyển sang bộ lọc "Chưa làm" hoặc "Tất cả" nhé!`
+        );
         return;
       }
     }
@@ -174,10 +184,8 @@ export default function QuestionBankPage({
     }
   };
 
-  // Khởi chạy nhanh đề thi Thích ứng R&W hoặc Math ở Banner trên cùng
   const handleQuickAdaptiveExam = (sectionName) => {
     const session = createAdaptiveExamSession({ section: sectionName });
-    // Ưu tiên lấy các câu chưa làm nếu đang bật lọc "Chưa làm"
     if (completionFilter === 'unanswered') {
       const filteredPool = (session.questions || []).filter(
         (q) => !completedIds.has(String(q.id))
@@ -236,7 +244,7 @@ export default function QuestionBankPage({
               Trung Tâm Ngân Hàng Câu Hỏi & Đề Thi Thực Chiến
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Đã tích hợp bộ lọc thông minh giúp bạn chỉ làm những câu <strong>Chưa làm</strong>, tránh lặp lại các câu cũ và theo dõi sát sao tiến độ chinh phục 1550+ SAT.
+              Tích hợp toàn bộ đề thi thật College Board đủ 2 Modules (Test 4, 5, 6, 7, 8) cùng ngân hàng câu hỏi phân loại theo kỹ năng.
             </p>
           </div>
 
@@ -269,7 +277,7 @@ export default function QuestionBankPage({
         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
           <div className="flex items-center gap-2 text-xs font-extrabold text-cyan-300 uppercase tracking-wider">
             <Filter className="w-4 h-4 text-cyan-400" />
-            <span>Trạng thái câu hỏi:</span>
+            <span>Bộ lọc câu hỏi:</span>
           </div>
 
           <div className="inline-flex bg-slate-950 p-1.5 rounded-xl border border-white/10 gap-1.5">
@@ -291,7 +299,7 @@ export default function QuestionBankPage({
                     : 'bg-slate-800 text-slate-300'
                 }`}
               >
-                {globalStats.unanswered}
+                {currentTabStats.unanswered}
               </span>
             </button>
 
@@ -313,7 +321,7 @@ export default function QuestionBankPage({
                     : 'bg-slate-800 text-emerald-300'
                 }`}
               >
-                {globalStats.done}
+                {currentTabStats.done}
               </span>
             </button>
 
@@ -335,7 +343,7 @@ export default function QuestionBankPage({
                     : 'bg-slate-800 text-slate-300'
                 }`}
               >
-                {globalStats.total}
+                {currentTabStats.total}
               </span>
             </button>
           </div>
@@ -349,12 +357,12 @@ export default function QuestionBankPage({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Tìm đề hoặc chủ đề (VD: Rhetorical, Main Idea)..."
+              placeholder="Tìm đề hoặc chủ đề..."
               className="w-full pl-9 pr-4 py-2.5 text-xs bg-slate-950 border border-slate-700/80 rounded-xl focus:outline-none focus:border-cyan-400 text-white"
             />
           </div>
 
-          {globalStats.done > 0 && (
+          {completedIds.size > 0 && (
             <button
               type="button"
               onClick={handleResetAllProgress}
@@ -369,42 +377,29 @@ export default function QuestionBankPage({
       </div>
 
       {/* =================================================================== */}
-      {/* 3. CÁC TAB DANH MỤC CHUYÊN ĐỀ                                       */}
+      {/* 3. THANH 3 TAB GỌN GÀNG: ĐỀ THI THẬT | READING & WRITING | MATH     */}
       {/* =================================================================== */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-lg font-extrabold text-white flex items-center gap-2">
-              <span>Ngân hàng Đề thi & Luyện tập ({displayedCategories.length})</span>
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30">
-                ✨ Đề thi thật & PDF Mới
-              </span>
-            </h2>
-            <p className="text-xs text-slate-400 mt-0.5">
-              {completionFilter === 'unanswered'
-                ? 'Đang lọc: Chỉ khởi tạo bài làm với những câu hỏi bạn CHƯA LÀM.'
-                : completionFilter === 'answered'
-                ? 'Đang lọc: Chỉ hiển thị những câu hỏi bạn ĐÃ LÀM để ôn tập lại.'
-                : 'Đang hiển thị: Toàn bộ câu hỏi (bao gồm cả câu đã làm và chưa làm).'}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 overflow-x-auto pb-2">
+        <div className="flex items-center gap-2.5 overflow-x-auto pb-2">
           {[
-            { id: 'all', label: 'Tất cả chuyên đề' },
-            { id: 'rw', label: 'Reading & Writing (Full)' },
-            { id: 'math', label: 'Math (Full)' },
-            { id: 'real_verbal', label: 'Real-test & PDF Verbal' },
-            { id: 'real_math', label: 'Real-test Math' },
-            { id: 'full_exam', label: 'Đề thi thật (Full Tests)' },
-            { id: 'practice', label: 'Luyện tập theo Dạng' },
+            {
+              id: 'full_exam',
+              label: `Đề thi thật (Full 2 Modules) (${tabCounts.full_exam})`,
+            },
+            {
+              id: 'rw',
+              label: `Luyện tập Reading & Writing (${tabCounts.rw})`,
+            },
+            {
+              id: 'math',
+              label: `Luyện tập Math (${tabCounts.math})`,
+            },
           ].map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setSelectedSectionTab(tab.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition cursor-pointer border ${
+              className={`px-5 py-2.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition cursor-pointer border ${
                 selectedSectionTab === tab.id
                   ? 'bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/25'
                   : 'bg-slate-900/90 text-slate-300 border-white/10 hover:bg-slate-800 hover:text-white'
@@ -421,7 +416,6 @@ export default function QuestionBankPage({
       {/* =================================================================== */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {displayedCategories.map((cat) => {
-          const activeCount = cat.activeQuestions.length;
           const isAllDone = cat.allCount > 0 && cat.unansweredCount === 0;
 
           return (
@@ -430,7 +424,6 @@ export default function QuestionBankPage({
               className="group relative bg-[#0c1224]/95 hover:bg-[#101830] rounded-3xl border border-indigo-500/20 hover:border-cyan-400/50 p-6 flex flex-col justify-between transition-all duration-200 shadow-lg"
             >
               <div className="space-y-4">
-                {/* Hàng badge trên cùng */}
                 <div className="flex items-center justify-between gap-2">
                   <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-black uppercase tracking-wider bg-amber-500/15 text-amber-300 border border-amber-400/30">
                     {cat.badge || 'SAT BANK'}
@@ -440,7 +433,6 @@ export default function QuestionBankPage({
                   </span>
                 </div>
 
-                {/* Tiêu đề & Mô tả */}
                 <div>
                   <h3 className="text-base font-extrabold text-white group-hover:text-cyan-300 transition leading-snug">
                     {cat.title}
@@ -473,7 +465,6 @@ export default function QuestionBankPage({
                 </div>
               </div>
 
-              {/* Chân thẻ: Số câu khả dụng & Nút bấm */}
               <div className="pt-5 mt-5 border-t border-white/10 space-y-3">
                 <div className="flex items-center justify-between text-xs text-slate-400">
                   <span className="flex items-center gap-1.5">
@@ -482,7 +473,7 @@ export default function QuestionBankPage({
                   </span>
                   <span className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Đếm tăng tự do</span>
+                    <span>{cat.isExam ? 'Full 2 Modules' : 'Đếm tăng tự do'}</span>
                   </span>
                 </div>
 

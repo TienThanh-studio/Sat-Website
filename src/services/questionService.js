@@ -1,6 +1,6 @@
 // src/services/questionService.js
 
-// 1. Nhập các bộ câu hỏi Reading & Writing hiện có
+// 1. Nhập các bộ câu hỏi Reading & Writing theo kỹ năng
 import grammarBank from '../data/questions/grammar.json';
 import transitionBank from '../data/questions/transition.json';
 import wordsInContextBank from '../data/questions/wordInContext.json';
@@ -11,13 +11,13 @@ import inferenceBank from '../data/questions/inference.json';
 import rhetoricalSynthesisBank from '../data/questions/tests/rhetorical_synthesis.json';
 import mainIdeaBank from '../data/questions/tests/main_idea.json';
 
-// 2. Nhập các bộ câu hỏi Math hiện có
+// 2. Nhập các bộ câu hỏi Math theo kỹ năng
 import algebraBank from '../data/questions/algebra.json';
 import dataAnalysisBank from '../data/questions/data_analysis_bank.json';
 import geometryTrigBank from '../data/questions/geometry_trig_bank.json';
 import realMathBank from '../data/questions/real_math_bank.json';
 
-// 3. Nhập các đề thi thử Full Tests & Prediction
+// 3. Nhập các đề thi thử Real Test & Prediction
 import novemberSatPrediction from '../data/questions/tests/november_sat_prediction.json';
 import mathNovemberPrediction from '../data/questions/tests/math_november_prediction.json';
 import verbalNovemberPrediction from '../data/questions/tests/verbal_november_prediction.json';
@@ -26,27 +26,32 @@ import satRealVerbalFull from '../data/questions/tests/sat_real_verbal_full.json
 import verbalHardTest1 from '../data/questions/tests/verbal_hard_test1.json';
 import verbalHardTest2 from '../data/questions/tests/verbal_hard_test2.json';
 
-// Các đề Practice Tests 4, 5, 6, 7, 8, 11
-import satTest4Math1 from '../data/questions/tests/sat_test_4_math1.json';
-import satTest4Math2 from '../data/questions/tests/sat_test_4_math2.json';
+// 4. Nhập toàn bộ các đề College Board Bluebook Practice Tests (4, 5, 6, 7, 8, 11)
 import satTest4Rw1 from '../data/questions/tests/sat_test_4_rw1.json';
 import satTest4Rw2 from '../data/questions/tests/sat_test_4_rw2.json';
-import satTest5Math1 from '../data/questions/tests/sat_test_5_math1.json';
-import satTest5Math2 from '../data/questions/tests/sat_test_5_math2.json';
+import satTest4Math1 from '../data/questions/tests/sat_test_4_math1.json';
+import satTest4Math2 from '../data/questions/tests/sat_test_4_math2.json';
+
 import satTest5Rw1 from '../data/questions/tests/sat_test_5_rw1.json';
 import satTest5Rw2 from '../data/questions/tests/sat_test_5_rw2.json';
-import satTest6Math1 from '../data/questions/tests/sat_test_6_math1.json';
-import satTest6Math2 from '../data/questions/tests/sat_test_6_math2.json';
+import satTest5Math1 from '../data/questions/tests/sat_test_5_math1.json';
+import satTest5Math2 from '../data/questions/tests/sat_test_5_math2.json';
+
 import satTest6Rw1 from '../data/questions/tests/sat_test_6_rw1.json';
 import satTest6Rw2 from '../data/questions/tests/sat_test_6_rw2.json';
-import satTest7Math1 from '../data/questions/tests/sat_test_7_math1.json';
-import satTest7Math2 from '../data/questions/tests/sat_test_7_math2.json';
+import satTest6Math1 from '../data/questions/tests/sat_test_6_math1.json';
+import satTest6Math2 from '../data/questions/tests/sat_test_6_math2.json';
+
 import satTest7Rw1 from '../data/questions/tests/sat_test_7_rw1.json';
 import satTest7Rw2 from '../data/questions/tests/sat_test_7_rw2.json';
-import satTest8Math1 from '../data/questions/tests/sat_test_8_math1.json';
-import satTest8Math2 from '../data/questions/tests/sat_test_8_math2.json';
+import satTest7Math1 from '../data/questions/tests/sat_test_7_math1.json';
+import satTest7Math2 from '../data/questions/tests/sat_test_7_math2.json';
+
 import satTest8Rw1 from '../data/questions/tests/sat_test_8_rw1.json';
 import satTest8Rw2 from '../data/questions/tests/sat_test_8_rw2.json';
+import satTest8Math1 from '../data/questions/tests/sat_test_8_math1.json';
+import satTest8Math2 from '../data/questions/tests/sat_test_8_math2.json';
+
 import satTest11Rw1 from '../data/questions/tests/sat_test_11_rw1.json';
 
 function extractArray(raw) {
@@ -54,18 +59,56 @@ function extractArray(raw) {
   if (Array.isArray(raw)) return raw;
   if (Array.isArray(raw.questions)) return raw.questions;
   if (Array.isArray(raw.data)) return raw.data;
+  if (Array.isArray(raw.items)) return raw.items;
+
+  // Tự động gom câu hỏi nếu file JSON chia theo mảng modules hoặc sections
+  if (Array.isArray(raw.modules)) {
+    return raw.modules.flatMap((m) => extractArray(m));
+  }
+  if (Array.isArray(raw.sections)) {
+    return raw.sections.flatMap((s) => extractArray(s));
+  }
+
+  // Tự động gom nếu file JSON chia theo các key con (module1, module2, rw1, rw2, math1, math2...)
+  if (typeof raw === 'object') {
+    const collected = [];
+    Object.values(raw).forEach((val) => {
+      if (Array.isArray(val)) {
+        val.forEach((item) => {
+          if (item && (item.question || item.stem || item.passage || item.prompt || item.options)) {
+            collected.push(item);
+          } else if (item && typeof item === 'object') {
+            collected.push(...extractArray(item));
+          }
+        });
+      } else if (val && typeof val === 'object') {
+        collected.push(...extractArray(val));
+      }
+    });
+    if (collected.length > 0) return collected;
+  }
+
   return [];
 }
 
 /**
  * Chuẩn hóa từng câu hỏi để tương thích với mọi giao diện trong dự án
  */
-export function normalizeQuestionItem(q, defaultDomain = 'Reading & Writing', defaultSkill = 'General', idx = 0, defaultSection = 'Reading & Writing') {
+export function normalizeQuestionItem(
+  q,
+  defaultDomain = 'Reading & Writing',
+  defaultSkill = 'General',
+  idx = 0,
+  defaultSection = 'Reading & Writing',
+  idPrefix = ''
+) {
   if (!q) return null;
 
-  const id =
+  const baseId =
     q.id ||
     `q_${String(defaultSkill).toLowerCase().replace(/[^a-z0-9]/g, '_')}_${idx + 1}`;
+  const id = idPrefix ? `${idPrefix}_${baseId}` : String(baseId);
+
   const prompt = q.passage || q.prompt || q.stimulus || q.context || q.text || '';
   const question =
     q.question ||
@@ -110,9 +153,16 @@ export function normalizeQuestionItem(q, defaultDomain = 'Reading & Writing', de
   };
 }
 
+// Helper tạo bộ câu hỏi đã chuẩn hóa kèm prefix ID riêng để không trùng lặp khi theo dõi Đã làm / Chưa làm
+function buildQuestionList(rawList, domain, skill, section, prefix) {
+  return extractArray(rawList).map((q, idx) =>
+    normalizeQuestionItem(q, domain, skill, idx, section, prefix)
+  );
+}
+
 export const DEFAULT_CATEGORIES = [
   // =========================================================================
-  // READING & WRITING MODULES (BAO GỒM 2 BỘ MỚI)
+  // 1. CHUYÊN ĐỀ LUYỆN TẬP READING & WRITING (THEO DẠNG BÀI)
   // =========================================================================
   {
     id: 'rhetorical_synthesis_bank',
@@ -123,12 +173,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Expression of Ideas',
     skill: 'Rhetorical Synthesis',
-    count: extractArray(rhetoricalSynthesisBank).length,
-    totalQuestions: extractArray(rhetoricalSynthesisBank).length,
     badge: '140 CÂU MỚI',
     color: 'from-sky-500 to-indigo-600',
-    questions: extractArray(rhetoricalSynthesisBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Expression of Ideas', 'Rhetorical Synthesis', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      rhetoricalSynthesisBank,
+      'Expression of Ideas',
+      'Rhetorical Synthesis',
+      'Reading & Writing',
+      'rs'
     ),
   },
   {
@@ -140,12 +192,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Information and Ideas',
     skill: 'Central Ideas and Details',
-    count: extractArray(mainIdeaBank).length,
-    totalQuestions: extractArray(mainIdeaBank).length,
     badge: '151 CÂU MỚI',
     color: 'from-amber-500 to-rose-600',
-    questions: extractArray(mainIdeaBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Information and Ideas', 'Central Ideas and Details', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      mainIdeaBank,
+      'Information and Ideas',
+      'Central Ideas and Details',
+      'Reading & Writing',
+      'mi'
     ),
   },
   {
@@ -157,12 +211,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Standard English Conventions',
     skill: 'Form, Structure, and Sense',
-    count: extractArray(grammarBank).length,
-    totalQuestions: extractArray(grammarBank).length,
     badge: 'CORE GRAMMAR',
     color: 'from-blue-500 to-indigo-600',
-    questions: extractArray(grammarBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Standard English Conventions', 'Boundaries & Structure', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      grammarBank,
+      'Standard English Conventions',
+      'Boundaries & Structure',
+      'Reading & Writing',
+      'gram'
     ),
   },
   {
@@ -174,12 +230,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Expression of Ideas',
     skill: 'Transitions',
-    count: extractArray(transitionBank).length,
-    totalQuestions: extractArray(transitionBank).length,
     badge: 'TRANSITIONS',
     color: 'from-emerald-500 to-teal-600',
-    questions: extractArray(transitionBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Expression of Ideas', 'Transitions', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      transitionBank,
+      'Expression of Ideas',
+      'Transitions',
+      'Reading & Writing',
+      'trans'
     ),
   },
   {
@@ -191,12 +249,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Craft and Structure',
     skill: 'Words in Context',
-    count: extractArray(wordsInContextBank).length,
-    totalQuestions: extractArray(wordsInContextBank).length,
     badge: 'VOCAB 800',
     color: 'from-purple-500 to-pink-600',
-    questions: extractArray(wordsInContextBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Craft and Structure', 'Words in Context', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      wordsInContextBank,
+      'Craft and Structure',
+      'Words in Context',
+      'Reading & Writing',
+      'wic'
     ),
   },
   {
@@ -208,12 +268,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Information and Ideas',
     skill: 'Inferences',
-    count: extractArray(inferenceBank).length,
-    totalQuestions: extractArray(inferenceBank).length,
     badge: 'INFERENCE',
     color: 'from-violet-500 to-purple-700',
-    questions: extractArray(inferenceBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Information and Ideas', 'Inferences', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      inferenceBank,
+      'Information and Ideas',
+      'Inferences',
+      'Reading & Writing',
+      'inf'
     ),
   },
   {
@@ -225,17 +287,19 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Reading & Writing Mastery',
     skill: 'Full Verbal Hard',
-    count: extractArray(realVerbalBank).length,
-    totalQuestions: extractArray(realVerbalBank).length,
     badge: '700+ VERBAL',
     color: 'from-rose-600 to-red-700',
-    questions: extractArray(realVerbalBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Reading & Writing Mastery', 'Full Verbal Hard', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      realVerbalBank,
+      'Reading & Writing Mastery',
+      'Full Verbal Hard',
+      'Reading & Writing',
+      'rvb'
     ),
   },
 
   // =========================================================================
-  // MATHEMATICS MODULES
+  // 2. CHUYÊN ĐỀ LUYỆN TẬP MATH (THEO DẠNG BÀI)
   // =========================================================================
   {
     id: 'algebra_advanced_math',
@@ -246,12 +310,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Math',
     domain: 'Algebra',
     skill: 'Linear & Nonlinear Equations',
-    count: extractArray(algebraBank).length,
-    totalQuestions: extractArray(algebraBank).length,
     badge: 'ALGEBRA 800',
     color: 'from-cyan-500 to-blue-600',
-    questions: extractArray(algebraBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Algebra', 'Linear & Nonlinear Equations', idx, 'Math')
+    questions: buildQuestionList(
+      algebraBank,
+      'Algebra',
+      'Linear & Nonlinear Equations',
+      'Math',
+      'alg'
     ),
   },
   {
@@ -263,12 +329,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Math',
     domain: 'Problem-Solving and Data Analysis',
     skill: 'Statistics & Probability',
-    count: extractArray(dataAnalysisBank).length,
-    totalQuestions: extractArray(dataAnalysisBank).length,
     badge: 'DATA & STATS',
     color: 'from-teal-500 to-emerald-600',
-    questions: extractArray(dataAnalysisBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Problem-Solving and Data Analysis', 'Statistics & Models', idx, 'Math')
+    questions: buildQuestionList(
+      dataAnalysisBank,
+      'Problem-Solving and Data Analysis',
+      'Statistics & Models',
+      'Math',
+      'data'
     ),
   },
   {
@@ -280,12 +348,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Math',
     domain: 'Geometry and Trigonometry',
     skill: 'Circles & Right Triangles',
-    count: extractArray(geometryTrigBank).length,
-    totalQuestions: extractArray(geometryTrigBank).length,
     badge: 'GEOMETRY',
     color: 'from-amber-500 to-orange-600',
-    questions: extractArray(geometryTrigBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Geometry and Trigonometry', 'Circles & Trigonometry', idx, 'Math')
+    questions: buildQuestionList(
+      geometryTrigBank,
+      'Geometry and Trigonometry',
+      'Circles & Trigonometry',
+      'Math',
+      'geo'
     ),
   },
   {
@@ -297,17 +367,213 @@ export const DEFAULT_CATEGORIES = [
     section: 'Math',
     domain: 'Advanced Math',
     skill: 'Hard Module 2 Specialist',
-    count: extractArray(realMathBank).length,
-    totalQuestions: extractArray(realMathBank).length,
     badge: '800 MATH',
     color: 'from-fuchsia-600 to-rose-600',
-    questions: extractArray(realMathBank).map((q, idx) =>
-      normalizeQuestionItem(q, 'Advanced Math', 'Hard Module 2 Math', idx, 'Math')
+    questions: buildQuestionList(
+      realMathBank,
+      'Advanced Math',
+      'Hard Module 2 Math',
+      'Math',
+      'rmb'
     ),
   },
 
   // =========================================================================
-  // FULL MOCK EXAMS & PREDICTIONS
+  // 3. CÁC BỘ ĐỀ COLLEGE BOARD BLUEBOOK PRACTICE TESTS (4, 5, 6, 7, 8, 11)
+  // =========================================================================
+  // --- CB PRACTICE TEST 4 ---
+  {
+    id: 'cb_test_4_rw_full',
+    name: 'CB Practice Test 4 - Reading & Writing (Full 2 Modules)',
+    title: 'CB Practice Test 4: Reading & Writing (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 4.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 4 RW',
+    badge: 'CB TEST 4 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest4Rw1, 'Reading & Writing', 'CB Test 4 RW M1', 'Reading & Writing', 'cb4_rw1'),
+      ...buildQuestionList(satTest4Rw2, 'Reading & Writing', 'CB Test 4 RW M2', 'Reading & Writing', 'cb4_rw2'),
+    ],
+  },
+  {
+    id: 'cb_test_4_math_full',
+    name: 'CB Practice Test 4 - Math (Full 2 Modules)',
+    title: 'CB Practice Test 4: Mathematics (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 4.',
+    section: 'Math',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 4 Math',
+    badge: 'CB TEST 4 • MATH',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest4Math1, 'Math', 'CB Test 4 Math M1', 'Math', 'cb4_m1'),
+      ...buildQuestionList(satTest4Math2, 'Math', 'CB Test 4 Math M2', 'Math', 'cb4_m2'),
+    ],
+  },
+
+  // --- CB PRACTICE TEST 5 ---
+  {
+    id: 'cb_test_5_rw_full',
+    name: 'CB Practice Test 5 - Reading & Writing (Full 2 Modules)',
+    title: 'CB Practice Test 5: Reading & Writing (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 5.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 5 RW',
+    badge: 'CB TEST 5 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest5Rw1, 'Reading & Writing', 'CB Test 5 RW M1', 'Reading & Writing', 'cb5_rw1'),
+      ...buildQuestionList(satTest5Rw2, 'Reading & Writing', 'CB Test 5 RW M2', 'Reading & Writing', 'cb5_rw2'),
+    ],
+  },
+  {
+    id: 'cb_test_5_math_full',
+    name: 'CB Practice Test 5 - Math (Full 2 Modules)',
+    title: 'CB Practice Test 5: Mathematics (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 5.',
+    section: 'Math',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 5 Math',
+    badge: 'CB TEST 5 • MATH',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest5Math1, 'Math', 'CB Test 5 Math M1', 'Math', 'cb5_m1'),
+      ...buildQuestionList(satTest5Math2, 'Math', 'CB Test 5 Math M2', 'Math', 'cb5_m2'),
+    ],
+  },
+
+  // --- CB PRACTICE TEST 6 ---
+  {
+    id: 'cb_test_6_rw_full',
+    name: 'CB Practice Test 6 - Reading & Writing (Full 2 Modules)',
+    title: 'CB Practice Test 6: Reading & Writing (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 6.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 6 RW',
+    badge: 'CB TEST 6 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest6Rw1, 'Reading & Writing', 'CB Test 6 RW M1', 'Reading & Writing', 'cb6_rw1'),
+      ...buildQuestionList(satTest6Rw2, 'Reading & Writing', 'CB Test 6 RW M2', 'Reading & Writing', 'cb6_rw2'),
+    ],
+  },
+  {
+    id: 'cb_test_6_math_full',
+    name: 'CB Practice Test 6 - Math (Full 2 Modules)',
+    title: 'CB Practice Test 6: Mathematics (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 6.',
+    section: 'Math',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 6 Math',
+    badge: 'CB TEST 6 • MATH',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest6Math1, 'Math', 'CB Test 6 Math M1', 'Math', 'cb6_m1'),
+      ...buildQuestionList(satTest6Math2, 'Math', 'CB Test 6 Math M2', 'Math', 'cb6_m2'),
+    ],
+  },
+
+  // --- CB PRACTICE TEST 7 ---
+  {
+    id: 'cb_test_7_rw_full',
+    name: 'CB Practice Test 7 - Reading & Writing (Full 2 Modules)',
+    title: 'CB Practice Test 7: Reading & Writing (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 7.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 7 RW',
+    badge: 'CB TEST 7 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest7Rw1, 'Reading & Writing', 'CB Test 7 RW M1', 'Reading & Writing', 'cb7_rw1'),
+      ...buildQuestionList(satTest7Rw2, 'Reading & Writing', 'CB Test 7 RW M2', 'Reading & Writing', 'cb7_rw2'),
+    ],
+  },
+  {
+    id: 'cb_test_7_math_full',
+    name: 'CB Practice Test 7 - Math (Full 2 Modules)',
+    title: 'CB Practice Test 7: Mathematics (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 7.',
+    section: 'Math',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 7 Math',
+    badge: 'CB TEST 7 • MATH',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest7Math1, 'Math', 'CB Test 7 Math M1', 'Math', 'cb7_m1'),
+      ...buildQuestionList(satTest7Math2, 'Math', 'CB Test 7 Math M2', 'Math', 'cb7_m2'),
+    ],
+  },
+
+  // --- CB PRACTICE TEST 8 ---
+  {
+    id: 'cb_test_8_rw_full',
+    name: 'CB Practice Test 8 - Reading & Writing (Full 2 Modules)',
+    title: 'CB Practice Test 8: Reading & Writing (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 8.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 8 RW',
+    badge: 'CB TEST 8 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest8Rw1, 'Reading & Writing', 'CB Test 8 RW M1', 'Reading & Writing', 'cb8_rw1'),
+      ...buildQuestionList(satTest8Rw2, 'Reading & Writing', 'CB Test 8 RW M2', 'Reading & Writing', 'cb8_rw2'),
+    ],
+  },
+  {
+    id: 'cb_test_8_math_full',
+    name: 'CB Practice Test 8 - Math (Full 2 Modules)',
+    title: 'CB Practice Test 8: Mathematics (M1 + M2)',
+    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 8.',
+    section: 'Math',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 8 Math',
+    badge: 'CB TEST 8 • MATH',
+    isExam: true,
+    isCB: true,
+    questions: [
+      ...buildQuestionList(satTest8Math1, 'Math', 'CB Test 8 Math M1', 'Math', 'cb8_m1'),
+      ...buildQuestionList(satTest8Math2, 'Math', 'CB Test 8 Math M2', 'Math', 'cb8_m2'),
+    ],
+  },
+
+  // --- CB PRACTICE TEST 11 ---
+  {
+    id: 'cb_test_11_rw1',
+    name: 'CB Practice Test 11 - Reading & Writing Module 1',
+    title: 'CB Practice Test 11: Reading & Writing (M1)',
+    description: 'Đề luyện tập Reading & Writing Module 1 trích xuất từ đề College Board Practice Test 11.',
+    section: 'Reading & Writing',
+    domain: 'College Board Bluebook',
+    skill: 'CB Test 11 RW M1',
+    badge: 'CB TEST 11 • R&W',
+    isExam: true,
+    isCB: true,
+    questions: buildQuestionList(
+      satTest11Rw1,
+      'Reading & Writing',
+      'CB Test 11 RW M1',
+      'Reading & Writing',
+      'cb11_rw1'
+    ),
+  },
+
+  // =========================================================================
+  // 4. ĐỀ THI THẬT & DỰ ĐOÁN (PREDICTION & REAL TESTS)
   // =========================================================================
   {
     id: 'full_sat_prediction_november',
@@ -318,13 +584,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Full Real Test',
     domain: 'Full Adaptive SAT',
     skill: 'Adaptive Exam (Module 1 + 2)',
-    count: extractArray(novemberSatPrediction).length || 54,
-    totalQuestions: extractArray(novemberSatPrediction).length || 54,
     badge: 'OFFICIAL MOCK',
-    color: 'from-indigo-600 via-purple-600 to-pink-600',
     isExam: true,
-    questions: extractArray(novemberSatPrediction).map((q, idx) =>
-      normalizeQuestionItem(q, 'Full Adaptive SAT', 'Official Simulation', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      novemberSatPrediction,
+      'Full Adaptive SAT',
+      'Official Simulation',
+      'Reading & Writing',
+      'nov_pred'
     ),
   },
   {
@@ -336,13 +603,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Math',
     domain: 'Math Practice Exam',
     skill: 'Math Module 1 & 2',
-    count: extractArray(mathNovemberPrediction).length || 44,
-    totalQuestions: extractArray(mathNovemberPrediction).length || 44,
     badge: 'MATH EXAM',
-    color: 'from-cyan-600 to-blue-700',
     isExam: true,
-    questions: extractArray(mathNovemberPrediction).map((q, idx) =>
-      normalizeQuestionItem(q, 'Math Practice Exam', 'Prediction Math', idx, 'Math')
+    questions: buildQuestionList(
+      mathNovemberPrediction,
+      'Math Practice Exam',
+      'Prediction Math',
+      'Math',
+      'math_pred'
     ),
   },
   {
@@ -354,13 +622,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Reading & Writing Exam',
     skill: 'RW Module 1 & 2',
-    count: extractArray(verbalNovemberPrediction).length || 54,
-    totalQuestions: extractArray(verbalNovemberPrediction).length || 54,
     badge: 'VERBAL EXAM',
-    color: 'from-rose-600 to-purple-700',
     isExam: true,
-    questions: extractArray(verbalNovemberPrediction).map((q, idx) =>
-      normalizeQuestionItem(q, 'Reading & Writing Exam', 'Prediction Verbal', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      verbalNovemberPrediction,
+      'Reading & Writing Exam',
+      'Prediction Verbal',
+      'Reading & Writing',
+      'verb_pred'
     ),
   },
   {
@@ -371,13 +640,14 @@ export const DEFAULT_CATEGORIES = [
     section: 'Full Real Test',
     domain: 'Full Adaptive SAT',
     skill: 'Full Real Exam',
-    count: extractArray(satFullRealTest01).length,
-    totalQuestions: extractArray(satFullRealTest01).length,
     badge: 'REAL TEST 01',
-    color: 'from-emerald-600 to-cyan-700',
     isExam: true,
-    questions: extractArray(satFullRealTest01).map((q, idx) =>
-      normalizeQuestionItem(q, 'Full Adaptive SAT', 'Real Test 01', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      satFullRealTest01,
+      'Full Adaptive SAT',
+      'Real Test 01',
+      'Reading & Writing',
+      'real_01'
     ),
   },
   {
@@ -388,30 +658,32 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Reading & Writing Exam',
     skill: 'Real Verbal Full',
-    count: extractArray(satRealVerbalFull).length,
-    totalQuestions: extractArray(satRealVerbalFull).length,
     badge: 'REAL VERBAL',
-    color: 'from-orange-500 to-rose-600',
     isExam: true,
-    questions: extractArray(satRealVerbalFull).map((q, idx) =>
-      normalizeQuestionItem(q, 'Reading & Writing Exam', 'Real Verbal Full', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      satRealVerbalFull,
+      'Reading & Writing Exam',
+      'Real Verbal Full',
+      'Reading & Writing',
+      'real_v_full'
     ),
   },
   {
     id: 'verbal_hard_test1',
     name: 'Verbal Hard Module Test 1',
     title: 'Verbal Hard Module Test 1',
-    description: 'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing.',
+    description: 'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing (Đề số 1).',
     section: 'Reading & Writing',
     domain: 'Reading & Writing Mastery',
     skill: 'Verbal Hard Test 1',
-    count: extractArray(verbalHardTest1).length,
-    totalQuestions: extractArray(verbalHardTest1).length,
     badge: 'HARD VERBAL 1',
-    color: 'from-red-600 to-rose-800',
     isExam: true,
-    questions: extractArray(verbalHardTest1).map((q, idx) =>
-      normalizeQuestionItem(q, 'Reading & Writing Mastery', 'Verbal Hard Test 1', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      verbalHardTest1,
+      'Reading & Writing Mastery',
+      'Verbal Hard Test 1',
+      'Reading & Writing',
+      'vh1'
     ),
   },
   {
@@ -422,19 +694,24 @@ export const DEFAULT_CATEGORIES = [
     section: 'Reading & Writing',
     domain: 'Reading & Writing Mastery',
     skill: 'Verbal Hard Test 2',
-    count: extractArray(verbalHardTest2).length,
-    totalQuestions: extractArray(verbalHardTest2).length,
     badge: 'HARD VERBAL 2',
-    color: 'from-purple-600 to-indigo-800',
     isExam: true,
-    questions: extractArray(verbalHardTest2).map((q, idx) =>
-      normalizeQuestionItem(q, 'Reading & Writing Mastery', 'Verbal Hard Test 2', idx, 'Reading & Writing')
+    questions: buildQuestionList(
+      verbalHardTest2,
+      'Reading & Writing Mastery',
+      'Verbal Hard Test 2',
+      'Reading & Writing',
+      'vh2'
     ),
   },
-];
+].map((cat) => ({
+  ...cat,
+  count: cat.questions.length,
+  totalQuestions: cat.questions.length,
+}));
 
 // =========================================================================
-// CÁC HÀM EXPORT TRỰC TIẾP (NAMED EXPORTS) CHO QUESTIONBANKPAGE & EXAMWORKSPACE
+// CÁC HÀM EXPORT TRỰC TIẾP (NAMED EXPORTS)
 // =========================================================================
 
 export function getCategories() {
@@ -565,9 +842,6 @@ export function getRandomQuiz(categoryId, count = 10) {
   return pool.slice(0, Math.min(count, pool.length));
 }
 
-/**
- * Hàm khởi tạo phiên thi Thích Ứng (Adaptive Exam Session) được gọi bởi QuestionBankPage.jsx
- */
 export function createAdaptiveExamSession(options = {}) {
   const section = options.section || options.type || 'Reading & Writing';
   const testId = options.testId || options.categoryId || null;

@@ -66,6 +66,36 @@ export function calculateModuleScore({
   };
 }
 
+export function calculateIrtScore(questions = []) {
+  if (!Array.isArray(questions) || questions.length === 0) {
+    return { scaledScore: 200, correctCount: 0, totalQuestions: 0 };
+  }
+  const total = questions.length;
+  let weightedEarned = 0;
+  let weightedMax = 0;
+  let correctCount = 0;
+
+  questions.forEach((q) => {
+    const diff = String(q.difficulty || 'Medium').toLowerCase();
+    const weight = diff === 'hard' ? 1.25 : diff === 'easy' ? 0.85 : 1.0;
+    weightedMax += weight;
+    if (q.isCorrect) {
+      correctCount += 1;
+      weightedEarned += weight;
+    }
+  });
+
+  const ratio = weightedMax > 0 ? weightedEarned / weightedMax : 0;
+  const rawScaled = Math.round((200 + ratio * 600) / 10) * 10;
+  const scaledScore = Math.max(200, Math.min(800, rawScaled));
+
+  return {
+    scaledScore,
+    correctCount,
+    totalQuestions: total,
+  };
+}
+
 export function calculateSatSectionScore(params) {
   // Hàm fallback tương thích với các bài thi module đơn cũ
   const totalCorrect = params?.totalCorrect || 0;
