@@ -24,11 +24,12 @@ export default function QuestionBankPage({
   onStartExam,
   onSelectCategory,
 }) {
-  // Mặc định mở thẳng mục Đề thi thật (bao gồm toàn bộ đề CB đủ 2 modules + Real Tests)
   const [selectedSectionTab, setSelectedSectionTab] = useState('full_exam');
-  const [completionFilter, setCompletionFilter] = useState('unanswered'); // 'unanswered' | 'answered' | 'all'
+  const [completionFilter, setCompletionFilter] = useState('unanswered');
   const [searchQuery, setSearchQuery] = useState('');
-  const [completedIds, setCompletedIds] = useState(() => storageService.getCompletedSet());
+  const [completedIds, setCompletedIds] = useState(() =>
+    storageService.getCompletedSet()
+  );
 
   useEffect(() => {
     const syncCompleted = () => {
@@ -39,10 +40,8 @@ export default function QuestionBankPage({
     return () => window.removeEventListener('focus', syncCompleted);
   }, []);
 
-  // Danh sách các bộ câu hỏi đã gắn kèm thông tin lọc Chưa làm / Đã làm
   const enrichedCategories = useMemo(() => {
     return DEFAULT_CATEGORIES.filter((cat) => {
-      // Ẩn các đề CB lẻ chỉ có 1 module (như Test 11 RW1), chỉ giữ lại các đề CB đủ 2 modules
       if (cat.id === 'cb_test_11_rw1') return false;
       return true;
     }).map((cat) => {
@@ -58,7 +57,9 @@ export default function QuestionBankPage({
       }
 
       const progressPct =
-        allQs.length > 0 ? Math.round((answeredQs.length / allQs.length) * 100) : 0;
+        allQs.length > 0
+          ? Math.round((answeredQs.length / allQs.length) * 100)
+          : 0;
 
       return {
         ...cat,
@@ -71,7 +72,6 @@ export default function QuestionBankPage({
     });
   }, [completedIds, completionFilter]);
 
-  // Đếm số lượng cho từng tab
   const tabCounts = useMemo(() => {
     return {
       full_exam: enrichedCategories.filter((c) => Boolean(c.isExam)).length,
@@ -87,7 +87,6 @@ export default function QuestionBankPage({
     };
   }, [enrichedCategories]);
 
-  // Lọc các thẻ bộ đề theo Tab & Ô tìm kiếm
   const displayedCategories = useMemo(() => {
     return enrichedCategories.filter((cat) => {
       if (searchQuery.trim()) {
@@ -101,11 +100,9 @@ export default function QuestionBankPage({
         if (!matchText) return false;
       }
 
-      // Đề thi thật (Gồm toàn bộ đề CB đủ 2 modules + Đề Real Test / Prediction)
       if (selectedSectionTab === 'full_exam') {
         return Boolean(cat.isExam);
       }
-      // Luyện tập theo dạng Reading & Writing
       if (selectedSectionTab === 'rw') {
         return (
           !cat.isExam &&
@@ -113,16 +110,16 @@ export default function QuestionBankPage({
             String(cat.section).toLowerCase().includes('verbal'))
         );
       }
-      // Luyện tập theo dạng Math
       if (selectedSectionTab === 'math') {
-        return !cat.isExam && String(cat.section).toLowerCase().includes('math');
+        return (
+          !cat.isExam && String(cat.section).toLowerCase().includes('math')
+        );
       }
 
       return true;
     });
   }, [enrichedCategories, selectedSectionTab, searchQuery]);
 
-  // Thống kê số câu hỏi (Chưa làm / Đã làm / Tất cả) của riêng tab đang mở
   const currentTabStats = useMemo(() => {
     let total = 0;
     let done = 0;
@@ -146,6 +143,7 @@ export default function QuestionBankPage({
     };
   }, [displayedCategories, completedIds]);
 
+  // Mở chính xác bộ câu hỏi được chọn (Lưu đồng bộ vào sessionStorage để tránh mất dữ liệu qua App.jsx)
   const handleLaunchCategory = (cat) => {
     let targetQuestions = cat.activeQuestions;
 
@@ -170,17 +168,28 @@ export default function QuestionBankPage({
 
     const payload = {
       ...cat,
+      categoryId: cat.id,
+      testId: cat.id,
       questions: targetQuestions,
       totalQuestions: targetQuestions.length,
       filterMode: completionFilter,
     };
 
-    if (typeof onStartPractice === 'function') {
+    try {
+      sessionStorage.setItem(
+        'sat_active_exam_payload',
+        JSON.stringify(payload)
+      );
+    } catch {
+      // ignore storage quota
+    }
+
+    if (typeof onStartExam === 'function') {
+      onStartExam(payload);
+    } else if (typeof onStartPractice === 'function') {
       onStartPractice(payload);
     } else if (typeof onSelectCategory === 'function') {
       onSelectCategory(payload);
-    } else if (typeof onStartExam === 'function') {
-      onStartExam(payload);
     }
   };
 
@@ -193,6 +202,15 @@ export default function QuestionBankPage({
       if (filteredPool.length >= 10) {
         session.questions = filteredPool;
       }
+    }
+
+    try {
+      sessionStorage.setItem(
+        'sat_active_exam_payload',
+        JSON.stringify(session)
+      );
+    } catch {
+      // ignore
     }
 
     if (typeof onStartExam === 'function') {
@@ -230,9 +248,6 @@ export default function QuestionBankPage({
 
   return (
     <div className="p-6 lg:p-8 max-w-7xl mx-auto space-y-7 select-none font-sans text-slate-100">
-      {/* =================================================================== */}
-      {/* 1. BANNER THI THỬ THÍCH ỨNG NHANH                                   */}
-      {/* =================================================================== */}
       <div className="relative rounded-3xl bg-gradient-to-r from-[#0c142c] via-[#131d42] to-[#0c142c] border border-indigo-500/30 p-6 lg:p-8 shadow-2xl overflow-hidden">
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
@@ -244,7 +259,8 @@ export default function QuestionBankPage({
               Trung Tâm Ngân Hàng Câu Hỏi & Đề Thi Thực Chiến
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Tích hợp toàn bộ đề thi thật College Board đủ 2 Modules (Test 4, 5, 6, 7, 8) cùng ngân hàng câu hỏi phân loại theo kỹ năng.
+              Tích hợp toàn bộ đề thi thật College Board đủ 2 Modules (Test 4,
+              5, 6, 7, 8) cùng ngân hàng câu hỏi phân loại theo kỹ năng.
             </p>
           </div>
 
@@ -270,9 +286,6 @@ export default function QuestionBankPage({
         </div>
       </div>
 
-      {/* =================================================================== */}
-      {/* 2. THANH BỘ LỌC TRẠNG THÁI: CHƯA LÀM | ĐÃ LÀM | TẤT CẢ              */}
-      {/* =================================================================== */}
       <div className="bg-[#0b1021]/95 border border-indigo-500/25 rounded-2xl p-4 sm:p-5 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 shadow-lg">
         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
           <div className="flex items-center gap-2 text-xs font-extrabold text-cyan-300 uppercase tracking-wider">
@@ -349,7 +362,6 @@ export default function QuestionBankPage({
           </div>
         </div>
 
-        {/* Ô tìm kiếm + Nút Reset toàn bộ */}
         <div className="flex items-center gap-3">
           <div className="relative flex-1 sm:w-72">
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -376,9 +388,6 @@ export default function QuestionBankPage({
         </div>
       </div>
 
-      {/* =================================================================== */}
-      {/* 3. THANH 3 TAB GỌN GÀNG: ĐỀ THI THẬT | READING & WRITING | MATH     */}
-      {/* =================================================================== */}
       <div className="space-y-3">
         <div className="flex items-center gap-2.5 overflow-x-auto pb-2">
           {[
@@ -411,9 +420,6 @@ export default function QuestionBankPage({
         </div>
       </div>
 
-      {/* =================================================================== */}
-      {/* 4. LƯỚI THẺ BỘ CÂU HỎI (QUESTION BANK CARDS)                        */}
-      {/* =================================================================== */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {displayedCategories.map((cat) => {
           const isAllDone = cat.allCount > 0 && cat.unansweredCount === 0;
@@ -442,14 +448,15 @@ export default function QuestionBankPage({
                   </p>
                 </div>
 
-                {/* Thanh Tiến Độ Đã Làm / Chưa Làm */}
                 <div className="pt-2 space-y-2">
                   <div className="flex items-center justify-between text-[11px] font-semibold">
                     <span className="text-slate-300 flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                       Đã làm:{' '}
-                      <strong className="text-emerald-400">{cat.answeredCount}</strong>/
-                      {cat.allCount} câu
+                      <strong className="text-emerald-400">
+                        {cat.answeredCount}
+                      </strong>
+                      /{cat.allCount} câu
                     </span>
                     <span className="text-cyan-300 font-mono">
                       Còn {cat.unansweredCount} câu mới
@@ -473,7 +480,9 @@ export default function QuestionBankPage({
                   </span>
                   <span className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-slate-400" />
-                    <span>{cat.isExam ? 'Full 2 Modules' : 'Đếm tăng tự do'}</span>
+                    <span>
+                      {cat.isExam ? 'Full 2 Modules' : 'Đếm tăng tự do'}
+                    </span>
                   </span>
                 </div>
 

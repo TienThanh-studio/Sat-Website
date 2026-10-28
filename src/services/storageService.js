@@ -1,4 +1,5 @@
 // src/services/storageService.js
+import { supabase } from '../lib/supabaseClient';
 
 const KEYS = {
   EXAM_HISTORY: 'sat_exam_history_v1',
@@ -29,7 +30,7 @@ function safeWrite(key, value) {
 
 export const storageService = {
   // =========================================================================
-  // 1. QUẢN LÝ CÂU HỎI ĐÃ LÀM / CHƯA LÀM (COMPLETED QUESTIONS TRACKER)
+  // 1. QUẢN LÝ CÂU HỎI ĐÃ LÀM / CHƯA LÀM
   // =========================================================================
   getCompletedQuestionIds() {
     const list = safeRead(KEYS.COMPLETED_QUESTIONS, []);
@@ -65,12 +66,14 @@ export const storageService = {
       return;
     }
     const removeSet = new Set(questionIdsToRemove.map(String));
-    const remaining = this.getCompletedQuestionIds().filter((id) => !removeSet.has(String(id)));
+    const remaining = this.getCompletedQuestionIds().filter(
+      (id) => !removeSet.has(String(id))
+    );
     safeWrite(KEYS.COMPLETED_QUESTIONS, remaining);
   },
 
   // =========================================================================
-  // 2. LỊCH SỬ THI & BÁO CÁO ĐIỂM (EXAM HISTORY)
+  // 2. LỊCH SỬ THI & BÁO CÁO ĐIỂM
   // =========================================================================
   getExamHistory() {
     return safeRead(KEYS.EXAM_HISTORY, []);
@@ -86,22 +89,27 @@ export const storageService = {
     };
     safeWrite(KEYS.EXAM_HISTORY, [entry, ...history.slice(0, 99)]);
 
-    // Tự động ghi nhận các câu hỏi đã trả lời vào danh sách "Đã làm"
     if (Array.isArray(report.questions)) {
       const answeredIds = report.questions
-        .filter((q) => q && q.userAnswer !== undefined && String(q.userAnswer).trim() !== '')
+        .filter(
+          (q) =>
+            q &&
+            q.userAnswer !== undefined &&
+            String(q.userAnswer).trim() !== ''
+        )
         .map((q) => q.id);
       this.markQuestionsCompleted(answeredIds);
 
-      // Tự động lưu các câu làm sai vào Sổ tay câu sai
-      const wrongQuestions = report.questions.filter((q) => q && !q.isCorrect && q.userAnswer);
+      const wrongQuestions = report.questions.filter(
+        (q) => q && !q.isCorrect && q.userAnswer
+      );
       wrongQuestions.forEach((wq) => this.addMistake(wq));
     }
     return entry;
   },
 
   // =========================================================================
-  // 3. SỔ TAY CÂU SAI (MISTAKE LOG)
+  // 3. SỔ TAY CÂU SAI
   // =========================================================================
   getMistakes() {
     return safeRead(KEYS.MISTAKE_LOG, []);
@@ -110,7 +118,9 @@ export const storageService = {
   addMistake(questionObj) {
     if (!questionObj || !questionObj.id) return;
     const current = this.getMistakes();
-    const filtered = current.filter((item) => String(item.id) !== String(questionObj.id));
+    const filtered = current.filter(
+      (item) => String(item.id) !== String(questionObj.id)
+    );
     const updated = [
       {
         ...questionObj,
@@ -134,7 +144,7 @@ export const storageService = {
   },
 
   // =========================================================================
-  // 4. ĐÁNH DẤU CÂU HỎI & TIẾN ĐỘ TỪ VỰNG
+  // 4. ĐÁNH DẤU CÂU HỎI & TIẾN ĐỘ TỪ VỰNG SRS
   // =========================================================================
   getBookmarks() {
     return safeRead(KEYS.BOOKMARKED_QUESTIONS, []);
@@ -172,6 +182,7 @@ export const storageService = {
 
   getUserSettings() {
     return safeRead(KEYS.USER_SETTINGS, {
+      studentName: 'Phan Tiến Thành',
       targetScore: 1550,
       soundEnabled: true,
       timerVisible: true,
@@ -179,7 +190,128 @@ export const storageService = {
   },
 
   saveUserSettings(settings) {
-    safeWrite(KEYS.USER_SETTINGS, settings || {});
+    safeWrite(KEYS.USER_SETTINGS, {
+      ...this.getUserSettings(),
+      ...(settings || {}),
+    });
+  },
+
+  // =========================================================================
+  // 6. SAO LƯU / KHÔI PHỤC FILE JSON & ĐỒNG BỘ CLOUD (MỤC 5)
+  // =========================================================================
+  exportAllDataPayload() {
+    return {
+      version: '2.0',
+      exportedAt: new Date().toISOString(),
+      completedQuestions: this.getCompletedQuestionIds(),
+      vocabProgress: this.getVocabProgress(),
+      examHistory: this.getExamHistory(),
+      mistakes: this.getMistakes(),
+      bookmarks: this.getBookmarks(),
+      userSettings: this.getUserSettings(),
+    };
+  },
+
+  downloadBackupJson() {
+    const data = this.exportAllDataPayload();
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
+      type: 'application/json',
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    const dateStr = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = `sat_progress_backup_${dateStr}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  },
+
+  importDataPayload(payload, mergeMode = true) {
+    if (!payload || typeof payload !== 'object') {
+      throw new Error('File sao lưu không hợp lệ!');
+    }
+
+    if (Array.isArray(payload.completedQuestions)) {
+      if (mergeMode) {
+        this.markQuestionsCompleted(payload.completedQuestions);
+      } else {
+        safeWrite(KEYS.COMPLETED_QUESTIONS, payload.completedQuestions);
+      }
+    }
+
+    if (payload.vocabProgress && typeof payload.vocabProgress === 'object') {
+      const currentVocab = mergeMode ? this.getVocabProgress() : {};
+      safeWrite(KEYS.VOCAB_PROGRESS, {
+        ...currentVocab,
+        ...payload.vocabProgress,
+      });
+    }
+
+    if (Array.isArray(payload.examHistory)) {
+      const currentHist = mergeMode ? this.getExamHistory() : [];
+      const seenIds = new Set(currentHist.map((h) => h.id));
+      const mergedHist = [
+        ...currentHist,
+        ...payload.examHistory.filter((h) => h && !seenIds.has(h.id)),
+      ];
+      safeWrite(KEYS.EXAM_HISTORY, mergedHist.slice(0, 150));
+    }
+
+    if (Array.isArray(payload.mistakes)) {
+      const currentMistakes = mergeMode ? this.getMistakes() : [];
+      const seenM = new Set(currentMistakes.map((m) => m.id));
+      const mergedM = [
+        ...currentMistakes,
+        ...payload.mistakes.filter((m) => m && !seenM.has(m.id)),
+      ];
+      safeWrite(KEYS.MISTAKE_LOG, mergedM.slice(0, 300));
+    }
+
+    if (payload.userSettings && typeof payload.userSettings === 'object') {
+      this.saveUserSettings(payload.userSettings);
+    }
+
+    return true;
+  },
+
+  async syncToSupabaseCloud(syncKey) {
+    const cleanKey = String(syncKey || '').trim();
+    if (!cleanKey) throw new Error('Vui lòng nhập Mã đồng bộ cá nhân (Sync Key)!');
+    if (!supabase) throw new Error('Chưa cấu hình kết nối Supabase!');
+
+    const payload = this.exportAllDataPayload();
+    const { error } = await supabase.from('user_backups').upsert(
+      {
+        sync_key: cleanKey,
+        payload,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: 'sync_key' }
+    );
+
+    if (error) throw error;
+    return true;
+  },
+
+  async restoreFromSupabaseCloud(syncKey) {
+    const cleanKey = String(syncKey || '').trim();
+    if (!cleanKey) throw new Error('Vui lòng nhập Mã đồng bộ cá nhân (Sync Key)!');
+    if (!supabase) throw new Error('Chưa cấu hình kết nối Supabase!');
+
+    const { data, error } = await supabase
+      .from('user_backups')
+      .select('payload, updated_at')
+      .eq('sync_key', cleanKey)
+      .single();
+
+    if (error || !data?.payload) {
+      throw new Error('Không tìm thấy bản sao lưu nào với mã này trên Cloud!');
+    }
+
+    this.importDataPayload(data.payload, true);
+    return data.updated_at;
   },
 };
 

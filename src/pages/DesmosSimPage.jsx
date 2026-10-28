@@ -451,7 +451,7 @@ export default function DesmosSimPage() {
             <Sparkles className="w-3 h-3" /> DESMOS HACK - KEY (44 PAGES) & SCORE SIMULATOR
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-            Bí Kíp Giải Desmos Chinh Phục 800 SAT Math
+              Desmos Chinh Phục SAT Math
           </h1>
           <p className="text-xs text-slate-400 mt-0.5">
             Đọc trực tiếp tài liệu PDF bên trái và thực hành bấm máy Desmos ngay bên phải màn hình.

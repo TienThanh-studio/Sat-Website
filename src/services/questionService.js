@@ -6,10 +6,9 @@ import transitionBank from '../data/questions/transition.json';
 import wordsInContextBank from '../data/questions/wordInContext.json';
 import realVerbalBank from '../data/questions/real_verbal_bank.json';
 import inferenceBank from '../data/questions/inference.json';
-
-// Nhập 2 bộ câu hỏi mới (140 câu Rhetorical Synthesis + 151 câu Main Idea)
 import rhetoricalSynthesisBank from '../data/questions/tests/rhetorical_synthesis.json';
 import mainIdeaBank from '../data/questions/tests/main_idea.json';
+import actualWicQuestionsBank from '../data/questions/actual_wic.json';
 
 // 2. Nhập các bộ câu hỏi Math theo kỹ năng
 import algebraBank from '../data/questions/algebra.json';
@@ -61,7 +60,6 @@ function extractArray(raw) {
   if (Array.isArray(raw.data)) return raw.data;
   if (Array.isArray(raw.items)) return raw.items;
 
-  // Tự động gom câu hỏi nếu file JSON chia theo mảng modules hoặc sections
   if (Array.isArray(raw.modules)) {
     return raw.modules.flatMap((m) => extractArray(m));
   }
@@ -69,13 +67,19 @@ function extractArray(raw) {
     return raw.sections.flatMap((s) => extractArray(s));
   }
 
-  // Tự động gom nếu file JSON chia theo các key con (module1, module2, rw1, rw2, math1, math2...)
   if (typeof raw === 'object') {
     const collected = [];
     Object.values(raw).forEach((val) => {
       if (Array.isArray(val)) {
         val.forEach((item) => {
-          if (item && (item.question || item.stem || item.passage || item.prompt || item.options)) {
+          if (
+            item &&
+            (item.question ||
+              item.stem ||
+              item.passage ||
+              item.prompt ||
+              item.options)
+          ) {
             collected.push(item);
           } else if (item && typeof item === 'object') {
             collected.push(...extractArray(item));
@@ -92,8 +96,57 @@ function extractArray(raw) {
 }
 
 /**
- * Chuẩn hóa từng câu hỏi để tương thích với mọi giao diện trong dự án
+ * Tự động gạch chân từ vựng được hỏi trong đoạn văn đối với dạng bài:
+ * - As used in the text, what does the word "X" most nearly mean?
+ * - As used in the text, what do the words "X" and "Y" both most nearly mean?
+ * - Based on the text, when the narrator describes herself as "X", what does she most likely mean?
  */
+function autoUnderlineTargetWordsInPassage(passageText, questionText) {
+  if (!passageText || !questionText) return passageText;
+  // Nếu đoạn văn đã có sẵn thẻ <u> thì giữ nguyên
+  if (/<u\b/i.test(passageText)) return passageText;
+
+  const qLower = questionText.toLowerCase();
+  const isWordMeaningQuestion =
+    qLower.includes('most nearly mean') ||
+    qLower.includes('most likely mean');
+
+  if (!isWordMeaningQuestion) return passageText;
+
+  // Trích xuất tất cả các từ nằm trong dấu ngoặc kép "..." hoặc “...” của câu hỏi
+  const targetWords = [];
+  const quoteRegex = /["“”']([^"“”']+)["“”']/g;
+  let match;
+  while ((match = quoteRegex.exec(questionText)) !== null) {
+    const word = match[1].trim();
+    if (word && word.length >= 2 && word.length <= 35) {
+      targetWords.push(word);
+    }
+  }
+
+  if (targetWords.length === 0) return passageText;
+
+  let updatedPassage = passageText;
+  targetWords.forEach((target) => {
+    const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Tìm từ nguyên vẹn (không phân biệt hoa/thường) và gạch chân lần xuất hiện trong đoạn văn
+    const wordRegex = new RegExp(`\\b(${escaped})\\b`, 'i');
+    if (wordRegex.test(updatedPassage)) {
+      updatedPassage = updatedPassage.replace(
+        wordRegex,
+        '<u class="underline decoration-2 underline-offset-4 font-semibold">$1</u>'
+      );
+    }
+  });
+
+  return updatedPassage;
+}
+
+function cleanUnicodeString(str) {
+  if (typeof str !== 'string') return '';
+  return str.normalize('NFC').replace(/\[cite:\s*[\d,\s]+\]/gi, '');
+}
+
 export function normalizeQuestionItem(
   q,
   defaultDomain = 'Reading & Writing',
@@ -106,25 +159,42 @@ export function normalizeQuestionItem(
 
   const baseId =
     q.id ||
-    `q_${String(defaultSkill).toLowerCase().replace(/[^a-z0-9]/g, '_')}_${idx + 1}`;
+    `q_${String(defaultSkill)
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, '_')}_${idx + 1}`;
   const id = idPrefix ? `${idPrefix}_${baseId}` : String(baseId);
 
-  const prompt = q.passage || q.prompt || q.stimulus || q.context || q.text || '';
-  const question =
+  const rawPrompt = cleanUnicodeString(
+    q.passage || q.prompt || q.stimulus || q.context || q.text || ''
+  );
+  const question = cleanUnicodeString(
     q.question ||
-    q.stem ||
-    'Which choice completes the text so that it conforms to the conventions of Standard English?';
+      q.stem ||
+      'Which choice completes the text with the most logical and precise word or phrase?'
+  );
+
+  // Tự động gạch chân từ cần tìm nghĩa trong đoạn văn
+  const prompt = autoUnderlineTargetWordsInPassage(rawPrompt, question);
 
   let options = q.options || q.choices;
   if (Array.isArray(options)) {
     const optsObj = {};
     options.forEach((opt, oIdx) => {
       const letter = String.fromCharCode(65 + oIdx);
-      optsObj[letter] =
-        typeof opt === 'object' ? opt.text || opt.value || opt.content || '' : String(opt);
+      const val =
+        typeof opt === 'object'
+          ? opt.text || opt.value || opt.content || ''
+          : String(opt);
+      optsObj[letter] = cleanUnicodeString(val);
     });
     options = optsObj;
-  } else if (!options || typeof options !== 'object') {
+  } else if (options && typeof options === 'object') {
+    const cleanedOpts = {};
+    Object.entries(options).forEach(([k, v]) => {
+      cleanedOpts[k] = cleanUnicodeString(String(v ?? ''));
+    });
+    options = cleanedOpts;
+  } else {
     options = {};
   }
 
@@ -141,26 +211,120 @@ export function normalizeQuestionItem(
     skill: q.skill || defaultSkill,
     category: q.category || defaultSkill,
     difficulty: q.difficulty || 'Medium',
+    testDate: q.testDate || null,
     passage: prompt,
     prompt: prompt,
     question,
     options,
     correctAnswer,
     answer: correctAnswer,
-    explanation:
+    explanation: cleanUnicodeString(
       q.explanation ||
-      'Đáp án chính xác được xác thực theo chuẩn cấu trúc bài thi Digital SAT.',
+        'Đáp án chính xác được xác thực theo chuẩn cấu trúc bài thi Digital SAT.'
+    ),
   };
 }
 
-// Helper tạo bộ câu hỏi đã chuẩn hóa kèm prefix ID riêng để không trùng lặp khi theo dõi Đã làm / Chưa làm
 function buildQuestionList(rawList, domain, skill, section, prefix) {
   return extractArray(rawList).map((q, idx) =>
     normalizeQuestionItem(q, domain, skill, idx, section, prefix)
   );
 }
 
+/**
+ * Helper khởi tạo Đề Thi Thực Chiến Toàn Phần 4 Modules (2h14m + Nghỉ giữa giờ 10 phút) chuẩn College Board
+ */
+function buildFull4ModuleCBExam(testNum, rw1Raw, rw2Raw, m1Raw, m2Raw) {
+  const rw1 = buildQuestionList(
+    rw1Raw,
+    'Reading & Writing',
+    `CB Test ${testNum} RW M1`,
+    'Reading & Writing',
+    `cb${testNum}_rw1`
+  );
+  const rw2 = buildQuestionList(
+    rw2Raw,
+    'Reading & Writing',
+    `CB Test ${testNum} RW M2`,
+    'Reading & Writing',
+    `cb${testNum}_rw2`
+  );
+  const m1 = buildQuestionList(
+    m1Raw,
+    'Math',
+    `CB Test ${testNum} Math M1`,
+    'Math',
+    `cb${testNum}_m1`
+  );
+  const m2 = buildQuestionList(
+    m2Raw,
+    'Math',
+    `CB Test ${testNum} Math M2`,
+    'Math',
+    `cb${testNum}_m2`
+  );
+
+  return {
+    id: `cb_test_${testNum}_full_4modules`,
+    name: `Bluebook Practice Test ${testNum} (Full 4 Modules - 2h14m)`,
+    title: `🔥 CB Practice Test ${testNum}: Full-Length Exam (4 Modules)`,
+    description: `Thi thực chiến trọn vẹn 4 Modules chuẩn College Board: RW M1 (32p) → RW M2 (32p) → Nghỉ giải lao 10p → Math M1 (35p) → Math M2 (35p). Chấm điểm thang 1600.`,
+    section: 'Full Real Test (4 Modules)',
+    domain: 'College Board Bluebook',
+    skill: `CB Full Test ${testNum}`,
+    badge: `FULL 1600 • TEST ${testNum}`,
+    isExam: true,
+    isCB: true,
+    isFull4ModuleExam: true,
+    modules: [
+      {
+        id: 'rw_m1',
+        title: 'Section 1, Module 1: Reading and Writing',
+        shortTitle: 'RW Module 1',
+        section: 'Reading & Writing',
+        durationSeconds: 32 * 60,
+        questions: rw1,
+      },
+      {
+        id: 'rw_m2',
+        title: 'Section 1, Module 2: Reading and Writing',
+        shortTitle: 'RW Module 2',
+        section: 'Reading & Writing',
+        durationSeconds: 32 * 60,
+        questions: rw2,
+        breakAfterSeconds: 10 * 60, // Nghỉ giải lao 10 phút sau khi hoàn thành Section 1
+      },
+      {
+        id: 'math_m1',
+        title: 'Section 2, Module 1: Math',
+        shortTitle: 'Math Module 1',
+        section: 'Math',
+        durationSeconds: 35 * 60,
+        questions: m1,
+      },
+      {
+        id: 'math_m2',
+        title: 'Section 2, Module 2: Math',
+        shortTitle: 'Math Module 2',
+        section: 'Math',
+        durationSeconds: 35 * 60,
+        questions: m2,
+      },
+    ],
+    questions: [...rw1, ...rw2, ...m1, ...m2],
+  };
+}
+
 export const DEFAULT_CATEGORIES = [
+  // =========================================================================
+  // 0. THI THỰC CHIẾN TOÀN PHẦN 4 MODULES (2 GIỜ 14 PHÚT + NGHỈ 10 PHÚT)
+  // =========================================================================
+  buildFull4ModuleCBExam(4, satTest4Rw1, satTest4Rw2, satTest4Math1, satTest4Math2),
+  buildFull4ModuleCBExam(5, satTest5Rw1, satTest5Rw2, satTest5Math1, satTest5Math2),
+  buildFull4ModuleCBExam(6, satTest6Rw1, satTest6Rw2, satTest6Math1, satTest6Math2),
+  buildFull4ModuleCBExam(7, satTest7Rw1, satTest7Rw2, satTest7Math1, satTest7Math2),
+  buildFull4ModuleCBExam(8, satTest8Rw1, satTest8Rw2, satTest8Math1, satTest8Math2),
+
   // =========================================================================
   // 1. CHUYÊN ĐỀ LUYỆN TẬP READING & WRITING (THEO DẠNG BÀI)
   // =========================================================================
@@ -297,6 +461,24 @@ export const DEFAULT_CATEGORIES = [
       'rvb'
     ),
   },
+  {
+    id: 'actual_wic_questions_bank',
+    name: 'Actual WIC Questions (183 câu)',
+    title: 'Actual WIC Questions (Dự đoán từ đề thi thật 2023–2025)',
+    description: 'Trọn bộ 183 câu hỏi Words in Context từ đề thi thật (có gắn nhãn đợt thi, phân loại độ khó Easy/Medium/Hard và giải thích chi tiết).',
+    section: 'Reading & Writing',
+    domain: 'Craft and Structure',
+    skill: 'Words in Context',
+    badge: 'ACTUAL WIC (183 CÂU)',
+    color: 'from-amber-500 to-orange-600',
+    questions: buildQuestionList(
+      actualWicQuestionsBank,
+      'Craft and Structure',
+      'Words in Context',
+      'Reading & Writing',
+      'wic_act'
+    ),
+  },
 
   // =========================================================================
   // 2. CHUYÊN ĐỀ LUYỆN TẬP MATH (THEO DẠNG BÀI)
@@ -379,14 +561,14 @@ export const DEFAULT_CATEGORIES = [
   },
 
   // =========================================================================
-  // 3. CÁC BỘ ĐỀ COLLEGE BOARD BLUEBOOK PRACTICE TESTS (4, 5, 6, 7, 8, 11)
+  // 3. CÁC BỘ ĐỀ COLLEGE BOARD THEO TỪNG SECTION (R&W HOẶC MATH)
   // =========================================================================
-  // --- CB PRACTICE TEST 4 ---
   {
     id: 'cb_test_4_rw_full',
     name: 'CB Practice Test 4 - Reading & Writing (Full 2 Modules)',
     title: 'CB Practice Test 4: Reading & Writing (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 4.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 4.',
     section: 'Reading & Writing',
     domain: 'College Board Bluebook',
     skill: 'CB Test 4 RW',
@@ -394,15 +576,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest4Rw1, 'Reading & Writing', 'CB Test 4 RW M1', 'Reading & Writing', 'cb4_rw1'),
-      ...buildQuestionList(satTest4Rw2, 'Reading & Writing', 'CB Test 4 RW M2', 'Reading & Writing', 'cb4_rw2'),
+      ...buildQuestionList(
+        satTest4Rw1,
+        'Reading & Writing',
+        'CB Test 4 RW M1',
+        'Reading & Writing',
+        'cb4_rw1'
+      ),
+      ...buildQuestionList(
+        satTest4Rw2,
+        'Reading & Writing',
+        'CB Test 4 RW M2',
+        'Reading & Writing',
+        'cb4_rw2'
+      ),
     ],
   },
   {
     id: 'cb_test_4_math_full',
     name: 'CB Practice Test 4 - Math (Full 2 Modules)',
     title: 'CB Practice Test 4: Mathematics (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 4.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 4.',
     section: 'Math',
     domain: 'College Board Bluebook',
     skill: 'CB Test 4 Math',
@@ -410,17 +605,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest4Math1, 'Math', 'CB Test 4 Math M1', 'Math', 'cb4_m1'),
-      ...buildQuestionList(satTest4Math2, 'Math', 'CB Test 4 Math M2', 'Math', 'cb4_m2'),
+      ...buildQuestionList(
+        satTest4Math1,
+        'Math',
+        'CB Test 4 Math M1',
+        'Math',
+        'cb4_m1'
+      ),
+      ...buildQuestionList(
+        satTest4Math2,
+        'Math',
+        'CB Test 4 Math M2',
+        'Math',
+        'cb4_m2'
+      ),
     ],
   },
-
-  // --- CB PRACTICE TEST 5 ---
   {
     id: 'cb_test_5_rw_full',
     name: 'CB Practice Test 5 - Reading & Writing (Full 2 Modules)',
     title: 'CB Practice Test 5: Reading & Writing (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 5.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 5.',
     section: 'Reading & Writing',
     domain: 'College Board Bluebook',
     skill: 'CB Test 5 RW',
@@ -428,15 +634,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest5Rw1, 'Reading & Writing', 'CB Test 5 RW M1', 'Reading & Writing', 'cb5_rw1'),
-      ...buildQuestionList(satTest5Rw2, 'Reading & Writing', 'CB Test 5 RW M2', 'Reading & Writing', 'cb5_rw2'),
+      ...buildQuestionList(
+        satTest5Rw1,
+        'Reading & Writing',
+        'CB Test 5 RW M1',
+        'Reading & Writing',
+        'cb5_rw1'
+      ),
+      ...buildQuestionList(
+        satTest5Rw2,
+        'Reading & Writing',
+        'CB Test 5 RW M2',
+        'Reading & Writing',
+        'cb5_rw2'
+      ),
     ],
   },
   {
     id: 'cb_test_5_math_full',
     name: 'CB Practice Test 5 - Math (Full 2 Modules)',
     title: 'CB Practice Test 5: Mathematics (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 5.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 5.',
     section: 'Math',
     domain: 'College Board Bluebook',
     skill: 'CB Test 5 Math',
@@ -444,17 +663,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest5Math1, 'Math', 'CB Test 5 Math M1', 'Math', 'cb5_m1'),
-      ...buildQuestionList(satTest5Math2, 'Math', 'CB Test 5 Math M2', 'Math', 'cb5_m2'),
+      ...buildQuestionList(
+        satTest5Math1,
+        'Math',
+        'CB Test 5 Math M1',
+        'Math',
+        'cb5_m1'
+      ),
+      ...buildQuestionList(
+        satTest5Math2,
+        'Math',
+        'CB Test 5 Math M2',
+        'Math',
+        'cb5_m2'
+      ),
     ],
   },
-
-  // --- CB PRACTICE TEST 6 ---
   {
     id: 'cb_test_6_rw_full',
     name: 'CB Practice Test 6 - Reading & Writing (Full 2 Modules)',
     title: 'CB Practice Test 6: Reading & Writing (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 6.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 6.',
     section: 'Reading & Writing',
     domain: 'College Board Bluebook',
     skill: 'CB Test 6 RW',
@@ -462,15 +692,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest6Rw1, 'Reading & Writing', 'CB Test 6 RW M1', 'Reading & Writing', 'cb6_rw1'),
-      ...buildQuestionList(satTest6Rw2, 'Reading & Writing', 'CB Test 6 RW M2', 'Reading & Writing', 'cb6_rw2'),
+      ...buildQuestionList(
+        satTest6Rw1,
+        'Reading & Writing',
+        'CB Test 6 RW M1',
+        'Reading & Writing',
+        'cb6_rw1'
+      ),
+      ...buildQuestionList(
+        satTest6Rw2,
+        'Reading & Writing',
+        'CB Test 6 RW M2',
+        'Reading & Writing',
+        'cb6_rw2'
+      ),
     ],
   },
   {
     id: 'cb_test_6_math_full',
     name: 'CB Practice Test 6 - Math (Full 2 Modules)',
     title: 'CB Practice Test 6: Mathematics (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 6.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 6.',
     section: 'Math',
     domain: 'College Board Bluebook',
     skill: 'CB Test 6 Math',
@@ -478,17 +721,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest6Math1, 'Math', 'CB Test 6 Math M1', 'Math', 'cb6_m1'),
-      ...buildQuestionList(satTest6Math2, 'Math', 'CB Test 6 Math M2', 'Math', 'cb6_m2'),
+      ...buildQuestionList(
+        satTest6Math1,
+        'Math',
+        'CB Test 6 Math M1',
+        'Math',
+        'cb6_m1'
+      ),
+      ...buildQuestionList(
+        satTest6Math2,
+        'Math',
+        'CB Test 6 Math M2',
+        'Math',
+        'cb6_m2'
+      ),
     ],
   },
-
-  // --- CB PRACTICE TEST 7 ---
   {
     id: 'cb_test_7_rw_full',
     name: 'CB Practice Test 7 - Reading & Writing (Full 2 Modules)',
     title: 'CB Practice Test 7: Reading & Writing (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 7.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 7.',
     section: 'Reading & Writing',
     domain: 'College Board Bluebook',
     skill: 'CB Test 7 RW',
@@ -496,15 +750,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest7Rw1, 'Reading & Writing', 'CB Test 7 RW M1', 'Reading & Writing', 'cb7_rw1'),
-      ...buildQuestionList(satTest7Rw2, 'Reading & Writing', 'CB Test 7 RW M2', 'Reading & Writing', 'cb7_rw2'),
+      ...buildQuestionList(
+        satTest7Rw1,
+        'Reading & Writing',
+        'CB Test 7 RW M1',
+        'Reading & Writing',
+        'cb7_rw1'
+      ),
+      ...buildQuestionList(
+        satTest7Rw2,
+        'Reading & Writing',
+        'CB Test 7 RW M2',
+        'Reading & Writing',
+        'cb7_rw2'
+      ),
     ],
   },
   {
     id: 'cb_test_7_math_full',
     name: 'CB Practice Test 7 - Math (Full 2 Modules)',
     title: 'CB Practice Test 7: Mathematics (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 7.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 7.',
     section: 'Math',
     domain: 'College Board Bluebook',
     skill: 'CB Test 7 Math',
@@ -512,17 +779,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest7Math1, 'Math', 'CB Test 7 Math M1', 'Math', 'cb7_m1'),
-      ...buildQuestionList(satTest7Math2, 'Math', 'CB Test 7 Math M2', 'Math', 'cb7_m2'),
+      ...buildQuestionList(
+        satTest7Math1,
+        'Math',
+        'CB Test 7 Math M1',
+        'Math',
+        'cb7_m1'
+      ),
+      ...buildQuestionList(
+        satTest7Math2,
+        'Math',
+        'CB Test 7 Math M2',
+        'Math',
+        'cb7_m2'
+      ),
     ],
   },
-
-  // --- CB PRACTICE TEST 8 ---
   {
     id: 'cb_test_8_rw_full',
     name: 'CB Practice Test 8 - Reading & Writing (Full 2 Modules)',
     title: 'CB Practice Test 8: Reading & Writing (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 8.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Reading & Writing của đề College Board Bluebook Practice Test 8.',
     section: 'Reading & Writing',
     domain: 'College Board Bluebook',
     skill: 'CB Test 8 RW',
@@ -530,15 +808,28 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest8Rw1, 'Reading & Writing', 'CB Test 8 RW M1', 'Reading & Writing', 'cb8_rw1'),
-      ...buildQuestionList(satTest8Rw2, 'Reading & Writing', 'CB Test 8 RW M2', 'Reading & Writing', 'cb8_rw2'),
+      ...buildQuestionList(
+        satTest8Rw1,
+        'Reading & Writing',
+        'CB Test 8 RW M1',
+        'Reading & Writing',
+        'cb8_rw1'
+      ),
+      ...buildQuestionList(
+        satTest8Rw2,
+        'Reading & Writing',
+        'CB Test 8 RW M2',
+        'Reading & Writing',
+        'cb8_rw2'
+      ),
     ],
   },
   {
     id: 'cb_test_8_math_full',
     name: 'CB Practice Test 8 - Math (Full 2 Modules)',
     title: 'CB Practice Test 8: Mathematics (M1 + M2)',
-    description: 'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 8.',
+    description:
+      'Trọn bộ Module 1 & Module 2 phần Toán của đề College Board Bluebook Practice Test 8.',
     section: 'Math',
     domain: 'College Board Bluebook',
     skill: 'CB Test 8 Math',
@@ -546,30 +837,21 @@ export const DEFAULT_CATEGORIES = [
     isExam: true,
     isCB: true,
     questions: [
-      ...buildQuestionList(satTest8Math1, 'Math', 'CB Test 8 Math M1', 'Math', 'cb8_m1'),
-      ...buildQuestionList(satTest8Math2, 'Math', 'CB Test 8 Math M2', 'Math', 'cb8_m2'),
+      ...buildQuestionList(
+        satTest8Math1,
+        'Math',
+        'CB Test 8 Math M1',
+        'Math',
+        'cb8_m1'
+      ),
+      ...buildQuestionList(
+        satTest8Math2,
+        'Math',
+        'CB Test 8 Math M2',
+        'Math',
+        'cb8_m2'
+      ),
     ],
-  },
-
-  // --- CB PRACTICE TEST 11 ---
-  {
-    id: 'cb_test_11_rw1',
-    name: 'CB Practice Test 11 - Reading & Writing Module 1',
-    title: 'CB Practice Test 11: Reading & Writing (M1)',
-    description: 'Đề luyện tập Reading & Writing Module 1 trích xuất từ đề College Board Practice Test 11.',
-    section: 'Reading & Writing',
-    domain: 'College Board Bluebook',
-    skill: 'CB Test 11 RW M1',
-    badge: 'CB TEST 11 • R&W',
-    isExam: true,
-    isCB: true,
-    questions: buildQuestionList(
-      satTest11Rw1,
-      'Reading & Writing',
-      'CB Test 11 RW M1',
-      'Reading & Writing',
-      'cb11_rw1'
-    ),
   },
 
   // =========================================================================
@@ -636,7 +918,8 @@ export const DEFAULT_CATEGORIES = [
     id: 'sat_full_real_test_01',
     name: 'SAT Full Real Test 01',
     title: 'SAT Full Real Test 01',
-    description: 'Đề thi thực chiến tổng hợp đầy đủ các kỹ năng Reading & Writing và Math.',
+    description:
+      'Đề thi thực chiến tổng hợp đầy đủ các kỹ năng Reading & Writing và Math.',
     section: 'Full Real Test',
     domain: 'Full Adaptive SAT',
     skill: 'Full Real Exam',
@@ -654,7 +937,8 @@ export const DEFAULT_CATEGORIES = [
     id: 'sat_real_verbal_full',
     name: 'SAT Real Verbal Full Test',
     title: 'SAT Real Verbal Full Test',
-    description: 'Đề thi chuyên sâu kỹ năng Đọc & Viết (Reading & Writing) thực chiến.',
+    description:
+      'Đề thi chuyên sâu kỹ năng Đọc & Viết (Reading & Writing) thực chiến.',
     section: 'Reading & Writing',
     domain: 'Reading & Writing Exam',
     skill: 'Real Verbal Full',
@@ -672,7 +956,8 @@ export const DEFAULT_CATEGORIES = [
     id: 'verbal_hard_test1',
     name: 'Verbal Hard Module Test 1',
     title: 'Verbal Hard Module Test 1',
-    description: 'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing (Đề số 1).',
+    description:
+      'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing (Đề số 1).',
     section: 'Reading & Writing',
     domain: 'Reading & Writing Mastery',
     skill: 'Verbal Hard Test 1',
@@ -690,7 +975,8 @@ export const DEFAULT_CATEGORIES = [
     id: 'verbal_hard_test2',
     name: 'Verbal Hard Module Test 2',
     title: 'Verbal Hard Module Test 2',
-    description: 'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing (Đề số 2).',
+    description:
+      'Bộ đề luyện nâng cao chuyên trị các câu hỏi mức độ Hard của Reading & Writing (Đề số 2).',
     section: 'Reading & Writing',
     domain: 'Reading & Writing Mastery',
     skill: 'Verbal Hard Test 2',
@@ -709,10 +995,6 @@ export const DEFAULT_CATEGORIES = [
   count: cat.questions.length,
   totalQuestions: cat.questions.length,
 }));
-
-// =========================================================================
-// CÁC HÀM EXPORT TRỰC TIẾP (NAMED EXPORTS)
-// =========================================================================
 
 export function getCategories() {
   return DEFAULT_CATEGORIES;
@@ -755,7 +1037,7 @@ export function getQuestionsByCategory(categoryId) {
 export function getAllQuestions() {
   const all = [];
   DEFAULT_CATEGORIES.forEach((cat) => {
-    if (Array.isArray(cat.questions)) {
+    if (!cat.isFull4ModuleExam && Array.isArray(cat.questions)) {
       all.push(...cat.questions);
     }
   });
@@ -766,9 +1048,14 @@ export function getQuestionsBySection(section) {
   if (!section || section === 'all') return getAllQuestions();
   const sLower = String(section).toLowerCase();
   const matchedCats = DEFAULT_CATEGORIES.filter((c) => {
+    if (c.isFull4ModuleExam) return false;
     const catSec = String(c.section || '').toLowerCase();
     if (sLower.includes('math')) return catSec.includes('math');
-    if (sLower.includes('read') || sLower.includes('verbal') || sLower.includes('rw')) {
+    if (
+      sLower.includes('read') ||
+      sLower.includes('verbal') ||
+      sLower.includes('rw')
+    ) {
       return catSec.includes('read') || catSec.includes('verbal');
     }
     return catSec === sLower;
@@ -802,12 +1089,16 @@ export function getQuestionsByFilter(filters = {}) {
 
   if (filters.skill && filters.skill !== 'all') {
     const skLower = String(filters.skill).toLowerCase();
-    pool = pool.filter((q) => String(q.skill || '').toLowerCase().includes(skLower));
+    pool = pool.filter((q) =>
+      String(q.skill || '').toLowerCase().includes(skLower)
+    );
   }
 
   if (filters.difficulty && filters.difficulty !== 'all') {
     const diffLower = String(filters.difficulty).toLowerCase();
-    pool = pool.filter((q) => String(q.difficulty || '').toLowerCase() === diffLower);
+    pool = pool.filter(
+      (q) => String(q.difficulty || '').toLowerCase() === diffLower
+    );
   }
 
   if (filters.search) {
@@ -878,7 +1169,10 @@ export function createAdaptiveExamSession(options = {}) {
     currentModule: 1,
     timeLimitSeconds: timeMinutes * 60,
     module1: module1Questions,
-    module2Hard: module2HardQuestions.length > 0 ? module2HardQuestions : module1Questions,
+    module2Hard:
+      module2HardQuestions.length > 0
+        ? module2HardQuestions
+        : module1Questions,
     module2Easy: module2EasyQuestions,
     questions: module1Questions,
   };
