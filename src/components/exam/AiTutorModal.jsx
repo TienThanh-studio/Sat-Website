@@ -351,6 +351,289 @@ function lookupSatOptionMeaning(rawText) {
   return null;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Kho nội dung phân tích (TRAPS, DIFFICULTY_NOTES, STRATEGIES)               */
+/* -------------------------------------------------------------------------- */
+const TRAPS = {
+  sign: {
+    tag: 'Bẫy quên đổi dấu',
+    body: [
+      'Giá trị bạn chọn đúng bằng số đối của đáp án chính thức. Đây là dấu vết điển hình của việc quên đổi dấu khi chuyển vế, hoặc khi nhân/chia hai vế cho một số âm.',
+      'Người ra đề biết lỗi này rất phổ biến nên thường đặt sẵn một phương án "trái dấu" để bắt những ai làm nhanh mà không kiểm tra lại.',
+    ],
+    takeaway:
+      'Mỗi lần chuyển vế hoặc nhân/chia với số âm, hãy khoanh tròn dấu rồi thay đáp án vào đề để kiểm tra trước khi chọn.',
+  },
+  forgotHalf: {
+    tag: 'Bẫy thiếu bước chia đôi',
+    body: [
+      String.raw`Giá trị bạn chọn gấp đôi đáp án đúng. Lỗi này thường gặp khi dừng ở đường kính thay vì bán kính, hoặc quên nhân với $\frac{1}{2}$ trong các công thức như diện tích tam giác $A = \frac{1}{2}bh$.`,
+    ],
+    takeaway:
+      'Trước khi chốt, tự hỏi: đề cho bán kính hay đường kính, và mình đã nhân hoặc chia $2$ đủ số lần chưa?',
+  },
+  forgotDouble: {
+    tag: 'Bẫy thiếu bước nhân đôi',
+    body: [
+      'Giá trị bạn chọn bằng một nửa đáp án đúng. Có thể bạn đã bỏ sót hệ số $2$ (ví dụ khi khai triển $(x + a)^2 = x^2 + 2ax + a^2$), hoặc nhầm đường kính với bán kính.',
+    ],
+    takeaway:
+      'Trước khi chốt, tự hỏi: đề cho bán kính hay đường kính, và mình đã nhân hoặc chia $2$ đủ số lần chưa?',
+  },
+  reciprocal: {
+    tag: 'Bẫy đảo ngược tỉ lệ',
+    body: [
+      String.raw`Giá trị bạn chọn là nghịch đảo của đáp án đúng. Lỗi này hay xảy ra khi đặt tỉ lệ ngược (ví dụ $\frac{a}{b}$ thay vì $\frac{b}{a}$), tức là nhầm đại lượng nào là tử, đại lượng nào là mẫu.`,
+    ],
+    takeaway:
+      'Nói thành lời tỉ lệ cần lập ("A trên B") rồi mới viết phân số; tử và mẫu phải đúng thứ tự mà đề nêu.',
+  },
+  rounding: {
+    tag: 'Bẫy làm tròn sớm',
+    body: [
+      'Đáp án của bạn rất gần đáp án đúng, nghĩa là hướng giải đúng nhưng sai số phát sinh ở bước cuối. Nguyên nhân thường là làm tròn giữa chừng hoặc đổi phân số sang số thập phân quá sớm.',
+    ],
+    takeaway: 'Giữ nguyên phân số hoặc căn thức đến bước cuối cùng; chỉ làm tròn khi đề yêu cầu.',
+  },
+  offByOne: {
+    tag: 'Bẫy lệch một đơn vị',
+    body: [
+      'Đáp án của bạn lệch đúng $1$ so với đáp án chính thức. Đây là dấu hiệu của lỗi đếm mút (đếm thừa hoặc thiếu một phần tử), hoặc nhầm giữa "lớn hơn" và "lớn hơn hoặc bằng".',
+    ],
+    takeaway:
+      'Gặp bài đếm số hạng hoặc bất đẳng thức, hãy thử lại với một ví dụ nhỏ (như $n = 2$) để kiểm tra có bị lệch $1$ hay không.',
+  },
+  algebra: {
+    tag: 'Bẫy dừng giữa chừng',
+    body: [
+      'Đề Algebra thường đặt sẵn các phương án ứng với kết quả trung gian, ví dụ bạn giải ra $x$ nhưng câu hỏi lại hỏi giá trị của $2x + 1$. Rất có thể bạn đã trả lời cho một đại lượng khác với đại lượng đề yêu cầu.',
+      'Một lỗi khác cũng hay gặp là bỏ sót điều kiện của đề (ví dụ "$x$ là số nguyên dương") nên chọn nghiệm không hợp lệ.',
+    ],
+    common:
+      'Ở dạng Algebra, đề thường đặt sẵn phương án cho kết quả trung gian (ví dụ giải ra $x$ nhưng câu hỏi hỏi $2x + 1$) và kèm điều kiện dễ bỏ sót.',
+    takeaway:
+      'Khoanh tròn đại lượng cần tìm ngay từ đầu, và trước khi chọn đáp án hãy đọc lại câu hỏi một lần nữa để chắc mình trả lời đúng đại lượng đó.',
+  },
+  advanced: {
+    tag: 'Bẫy khai triển và lũy thừa',
+    body: [
+      'Ở dạng Advanced Math, phương án sai thường là hệ quả của việc khai triển sai $(x + a)^2$ thành $x^2 + a^2$, bỏ sót nghiệm âm khi lấy căn, hoặc đọc ngược dấu của đỉnh parabol $y = a(x - h)^2 + k$ (đỉnh là $(h, k)$, không phải $(-h, k)$).',
+    ],
+    common:
+      'Ở dạng Advanced Math, các bẫy quen thuộc là khai triển sai $(x + a)^2$, bỏ sót nghiệm âm khi lấy căn và đọc ngược dấu của đỉnh parabol.',
+    takeaway:
+      'Với hàm bậc hai và hàm mũ, hãy kiểm tra kết quả bằng cách thay một giá trị $x$ cụ thể (hoặc vẽ Desmos) thay vì tin vào chuỗi biến đổi đại số dài.',
+  },
+  psda: {
+    tag: 'Bẫy mẫu số và dữ kiện',
+    body: [
+      'Các phương án sai ở dạng này thường đến từ việc lấy nhầm mẫu số (toàn bộ so với nhóm con), nhầm phần trăm với phần trăm thay đổi, hoặc đọc sai đơn vị và trục của bảng, biểu đồ.',
+    ],
+    common:
+      'Ở dạng Problem-Solving and Data Analysis, các bẫy quen thuộc là lấy nhầm mẫu số, nhầm phần trăm với phần trăm thay đổi và đọc sai đơn vị hoặc trục biểu đồ.',
+    takeaway:
+      'Trước khi tính, hãy nói thành lời "phần" là gì và "tổng" là gì; sau đó kiểm tra đơn vị và tiêu đề trục.',
+  },
+  geometry: {
+    tag: 'Bẫy đơn vị và công thức hình học',
+    body: [
+      String.raw`Các phương án sai thường ứng với việc nhầm bán kính với đường kính, diện tích với chu vi, độ với radian, hoặc dùng ngược tỉ số lượng giác ($\sin$ thay cho $\cos$).`,
+    ],
+    common:
+      'Ở dạng Geometry and Trigonometry, các bẫy quen thuộc là nhầm bán kính với đường kính, diện tích với chu vi, và độ với radian.',
+    takeaway: String.raw`Vẽ hình và ghi số đo lên hình trước; sau khi có kết quả, kiểm tra độ hợp lý (cạnh huyền dài nhất, tổng ba góc bằng $180^\circ$).`,
+  },
+  mathGeneral: {
+    tag: 'Bẫy đọc lướt đề',
+    body: [
+      'Đáp án bạn chọn rất có thể là kết quả của một bước trung gian, hoặc trả lời cho đại lượng khác với đại lượng đề yêu cầu. SAT Math luôn đặt sẵn các phương án như vậy để bắt lỗi đọc lướt.',
+    ],
+    common:
+      'Ở SAT Math, bẫy quen thuộc là phương án ứng với kết quả trung gian hoặc với một đại lượng khác đề yêu cầu.',
+    takeaway: 'Đọc câu hỏi cuối cùng hai lần và gạch chân đại lượng cần tìm trước khi tính.',
+  },
+  negation: {
+    tag: 'Bẫy từ khóa phủ định',
+    body: [
+      'Câu hỏi chứa từ khóa phủ định (NOT, EXCEPT hoặc LEAST), nghĩa là ba phương án đúng với đoạn văn và chỉ một phương án sai. Khi đọc lướt, não tự động tìm phương án "đúng", và phương án bạn chọn rất có thể là một phương án đúng với đoạn văn.',
+    ],
+    takeaway:
+      'Thấy NOT, EXCEPT hoặc LEAST, hãy ghi ngay chữ T/F cạnh từng phương án; đáp án là phương án duy nhất khác loại với ba phương án còn lại.',
+  },
+  extreme: {
+    tag: 'Bẫy phương án cực đoan',
+    body: [
+      'Phương án bạn chọn chứa từ mang tính tuyệt đối (như always, never, only, all). Đoạn văn hiếm khi khẳng định mạnh đến mức đó, nên đây là kiểu nhiễu quen thuộc của College Board.',
+      'Chỉ cần một ngoại lệ trong đoạn văn là phương án cực đoan sai hoàn toàn, dù phần còn lại nghe rất hợp lý.',
+    ],
+    takeaway:
+      'Phương án chứa always, never, only hoặc all thường sai, trừ khi đoạn văn khẳng định đúng mức độ đó.',
+  },
+  echo: {
+    tag: 'Bẫy lặp từ trong đoạn văn',
+    body: [
+      'Phương án bạn chọn dùng lại nhiều từ giống hệt đoạn văn nên tạo cảm giác "có bằng chứng". Đây là mồi nhử: nội dung có thể bị đảo ý, sai phạm vi, hoặc chỉ nhắc chi tiết mà không trả lời câu hỏi.',
+      'Đáp án đúng thường diễn đạt lại ý bằng từ khác (paraphrase) chứ không sao chép nguyên văn.',
+    ],
+    takeaway:
+      'Đừng chọn phương án chỉ vì nó lặp từ trong đoạn văn; hãy kiểm tra xem nó có trả lời đúng câu hỏi hay không.',
+  },
+  craft: {
+    tag: 'Bẫy nghĩa quen thuộc và sắc thái',
+    body: [
+      'Ở dạng Craft and Structure, phương án sai thường là từ có nghĩa quen thuộc nhưng sai sắc thái (tích cực hay tiêu cực) hoặc sai ngữ cảnh, hoặc một chức năng nghe hợp lý nhưng không đúng vai trò của phần được hỏi trong đoạn.',
+    ],
+    common:
+      'Ở dạng Craft and Structure, bẫy quen thuộc là từ có nghĩa quen thuộc nhưng sai sắc thái hoặc sai ngữ cảnh.',
+    takeaway:
+      'Đoán trước ý nghĩa cần điền hoặc chức năng của phần được hỏi rồi mới nhìn đáp án; đừng để phương án dẫn dắt bạn.',
+  },
+  info: {
+    tag: 'Bẫy ngoài phạm vi và suy diễn quá đà',
+    body: [
+      'Ở dạng Information and Ideas, phương án sai thường đúng về kiến thức chung nhưng không có bằng chứng trong đoạn, hoặc suy diễn đi xa hơn những gì tác giả nói.',
+    ],
+    common:
+      'Ở dạng Information and Ideas, bẫy quen thuộc là phương án đúng về kiến thức chung nhưng không có bằng chứng trong đoạn văn.',
+    takeaway:
+      'Không chỉ ra được câu bằng chứng trong đoạn văn thì không chọn, dù phương án nghe hợp lý đến đâu.',
+  },
+  conventions: {
+    tag: 'Bẫy "nghe có vẻ đúng"',
+    body: [
+      'Ở dạng Standard English Conventions, phương án sai thường "nghe xuôi tai" khi đọc thầm vì cách nói đời thường khác với quy tắc viết chuẩn, đặc biệt là dấu phẩy nối hai mệnh đề độc lập, hoặc chủ ngữ và động từ bị ngăn cách bởi một cụm xen giữa.',
+    ],
+    common:
+      'Ở dạng Standard English Conventions, bẫy quen thuộc là phương án "nghe xuôi tai" nhưng vi phạm quy tắc dấu câu hoặc hòa hợp chủ-vị.',
+    takeaway:
+      'Chọn theo quy tắc, không chọn theo cảm giác: xác định ranh giới mệnh đề rồi áp dụng quy tắc dấu câu hoặc hòa hợp chủ-vị.',
+  },
+  expression: {
+    tag: 'Bẫy sai quan hệ logic hoặc mục tiêu',
+    body: [
+      'Ở dạng Expression of Ideas, phương án sai thường đúng về thông tin nhưng không phục vụ mục tiêu mà đề yêu cầu, hoặc dùng từ nối chỉ sai quan hệ (tương phản thay vì bổ sung, nguyên nhân thay vì kết quả).',
+    ],
+    common:
+      'Ở dạng Expression of Ideas, bẫy quen thuộc là phương án đúng thông tin nhưng sai mục tiêu diễn đạt hoặc sai quan hệ logic.',
+    takeaway: 'Gọi tên quan hệ logic hoặc mục tiêu diễn đạt trước, rồi mới chọn phương án khớp với nó.',
+  },
+  verbalGeneral: {
+    tag: 'Bẫy nghe hợp lý',
+    body: [
+      'Phương án bạn chọn nghe hợp lý nhưng không được đoạn văn hỗ trợ đầy đủ. Reading and Writing thường đặt phương án "đúng một nửa" để bắt lỗi chọn theo cảm giác.',
+    ],
+    common:
+      'Ở phần Reading and Writing, bẫy quen thuộc là phương án nghe hợp lý nhưng không có bằng chứng đầy đủ trong đoạn văn.',
+    takeaway: 'Mỗi lựa chọn phải chỉ ra được bằng chứng cụ thể trong đoạn; không có bằng chứng thì loại.',
+  },
+  skipped: {
+    tag: 'Chưa chọn đáp án',
+    body: [
+      'Bạn chưa chọn đáp án cho câu này. Digital SAT không trừ điểm khi trả lời sai, nên bỏ trống luôn kém hơn một lần đoán có cơ sở.',
+      'Nếu sắp hết thời gian, hãy loại hai phương án sai rõ ràng rồi chọn một trong hai phương án còn lại.',
+    ],
+    takeaway:
+      'Digital SAT không trừ điểm sai: luôn chọn một đáp án, ít nhất là sau khi đã loại được phương án sai.',
+  },
+};
+
+const DIFFICULTY_NOTES = {
+  easy: 'Đây là câu dễ nên sai ở đây thường do đọc vội hoặc chủ quan chứ không phải thiếu kiến thức; hãy dành thêm vài giây kiểm tra lại trước khi chuyển câu.',
+  medium:
+    'Câu ở mức trung bình thường chứa đúng một "cái bẫy" được thiết kế sẵn, đủ để đánh lừa người làm nhanh.',
+  hard: 'Câu khó thường có ít nhất một phương án được thiết kế riêng cho đúng lỗi này, nên việc mắc bẫy ở đây là bình thường và hoàn toàn khắc phục được.',
+};
+
+const STRATEGIES = {
+  algebra: {
+    headline: 'Dùng đồ thị hoặc thay ngược thay cho biến đổi dài',
+    tips: [
+      'Nhập từng phương trình vào Desmos: giao điểm của hai đồ thị cho nghiệm của hệ ngay lập tức.',
+      'Nếu đề hỏi giá trị của một biểu thức (ví dụ $2x + 1$), hãy thay nghiệm vào biểu thức thay vì dừng ở $x$.',
+    ],
+  },
+  advanced: {
+    headline: 'Để Desmos tìm nghiệm và đỉnh giúp bạn',
+    tips: [
+      'Nhập hàm vào Desmos: nghiệm là giao điểm với trục $x$, đỉnh parabol là điểm cực trị mà Desmos tự đánh dấu.',
+      'Khi các phương án là biểu thức, gán một giá trị nhỏ như $x = 2$ vào đề và từng phương án, rồi loại phương án cho kết quả khác.',
+    ],
+  },
+  psda: {
+    headline: 'Xác định mẫu số trước, tính sau',
+    tips: [
+      'Gạch chân nhóm mà đề hỏi (đó chính là mẫu số) trước khi tính bất cứ thứ gì.',
+      'Đọc tiêu đề trục và đơn vị của bảng, biểu đồ; ước lượng bằng mắt để loại phương án phi lý.',
+      'Với dữ liệu hai biến, nhập bảng vào Desmos để lấy đường hồi quy thay vì tính tay.',
+    ],
+  },
+  geometry: {
+    headline: 'Vẽ hình, ghi số đo, kiểm tra độ hợp lý',
+    tips: [
+      'Vẽ nhanh hình và ghi số đo đã cho lên hình; phần lớn lỗi hình học bắt nguồn từ việc không vẽ.',
+      'Với đường tròn hoặc đường thẳng trên mặt phẳng tọa độ, nhập phương trình vào Desmos để kiểm tra giao điểm và khoảng cách.',
+      String.raw`Kiểm tra tính hợp lý của kết quả: cạnh huyền dài nhất, tổng ba góc bằng $180^\circ$.`,
+    ],
+  },
+  mathGeneral: {
+    headline: 'Đồ thị và thay ngược trước, đại số sau',
+    tips: [
+      'Nhập phương trình hoặc hàm số vào Desmos để tìm nghiệm bằng đồ thị thay vì biến đổi dài.',
+      'Gán thử một giá trị nhỏ cho biến để kiểm tra nhanh các phương án dạng biểu thức.',
+    ],
+  },
+  craft: {
+    headline: 'Đoán trước nghĩa trong ngữ cảnh, rồi đối chiếu 4 phương án',
+    tips: [
+      'Che các đáp án, tự đoán từ cần điền dựa vào mệnh đề sau dấu hai chấm (:), dấu gạch ngang (—) hoặc từ nối chuyển hướng.',
+      'Khoanh các từ nối (however, therefore, although, while, instead): chúng quyết định từ cần điền cùng chiều hay ngược chiều với vế còn lại.',
+      'Xem bảng giải nghĩa 4 đáp án A, B, C, D bên trên để loại ngay các phương án sai sắc thái (tích cực/tiêu cực) hoặc không khớp nghĩa.',
+    ],
+  },
+  info: {
+    headline: 'Quay lại đoạn văn để tìm bằng chứng',
+    tips: [
+      'Đọc câu hỏi trước rồi mới đọc đoạn văn, để biết mình đang tìm bằng chứng cho điều gì.',
+      'Mỗi phương án phải chỉ ra được một câu trong đoạn làm bằng chứng; không chỉ ra được thì loại.',
+      'Loại hai phương án nói quá, ngoài phạm vi hoặc đảo ngược ý của tác giả.',
+    ],
+  },
+  conventions: {
+    headline: 'Chọn theo quy tắc, không chọn theo cảm giác',
+    tips: [
+      'Chỉ đọc câu chứa chỗ trống và xác định ranh giới mệnh đề trước khi nhìn đáp án.',
+      'Nhớ ba nhóm lỗi hay gặp: dấu câu nối mệnh đề, hòa hợp chủ-vị, và thì của động từ.',
+      'Loại hai phương án vi phạm cùng một quy tắc, thường chỉ còn hai phương án để so sánh.',
+    ],
+  },
+  expression: {
+    headline: 'Gọi tên mục tiêu trước khi nhìn đáp án',
+    tips: [
+      'Xác định mục tiêu mà đề yêu cầu (nối ý, tóm tắt, nhấn mạnh, so sánh) rồi chọn phương án phục vụ đúng mục tiêu đó.',
+      'Với câu chuyển tiếp, gọi tên quan hệ (tương phản, nguyên nhân, bổ sung) trước khi nhìn từ nối.',
+      'Chỉ dùng thông tin có trong ghi chú của đề; loại phương án thêm thông tin ngoài.',
+    ],
+  },
+  verbalGeneral: {
+    headline: 'Loại hai phương án sai rõ ràng trước',
+    tips: [
+      'Loại ngay các phương án sai phạm vi, sai sắc thái hoặc không có bằng chứng trong đoạn.',
+      'Khi còn hai phương án, chọn phương án bám sát đoạn văn hơn, không phải phương án nghe hay hơn.',
+    ],
+  },
+};
+
+const GRID_IN_TIP =
+  'Câu điền số không có phương án để thử, nên hãy thay kết quả ngược lại vào đề. Digital SAT nhận cả phân số lẫn số thập phân, tối đa 5 ký tự (6 ký tự nếu là số âm).';
+const BACKSOLVE_TIP =
+  'Bốn phương án đều là số, nên bạn có thể thay ngược từng phương án vào đề, bắt đầu từ B hoặc C, để loại nhanh.';
+const NEGATION_TIP =
+  'Câu hỏi có NOT, EXCEPT hoặc LEAST: ghi T/F cạnh từng phương án, đáp án là phương án duy nhất khác loại với ba phương án còn lại.';
+const HARD_TIP =
+  'Câu khó: nếu sau khoảng 1 đến 1,5 phút vẫn chưa có hướng, hãy đánh dấu (flag) và quay lại sau để không mất thời gian của cả module.';
+const EASY_TIP =
+  'Câu dễ: mục tiêu là làm nhanh và chắc; đừng nghi ngờ quá mức đáp án đã kiểm tra được.';
+
 const toText = (value) => (value === null || value === undefined ? '' : String(value).trim());
 const normalizeKey = (value) => toText(value).toLowerCase().replace(/[\s$]/g, '');
 
