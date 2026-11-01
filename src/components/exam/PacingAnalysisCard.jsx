@@ -11,8 +11,8 @@ import {
 } from 'lucide-react';
 
 const SECTION_CONFIG = {
-  'Reading & Writing': { official: 71, standard: 75, warning: 90 },
-  Math: { official: 95, standard: 95, warning: 120 },
+  'Reading & Writing': { official: 71, standard: 71, warning: 85 },
+  Math: { official: 95, standard: 95, warning: 105 },
 };
 
 const RUSHING_THRESHOLD = 25; // giây

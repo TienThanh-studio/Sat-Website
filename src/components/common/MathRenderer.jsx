@@ -1,5 +1,6 @@
 // src/components/common/MathRenderer.jsx
 import React, { useMemo } from 'react';
+import katex from 'katex';
 import * as latexModule from '../../services/latexParser';
 
 /**
@@ -52,11 +53,12 @@ export const MathRenderer = ({
     // Bộ render dự phòng xử lý công thức toán và xuống dòng nếu không qua parser
     let processed = cleanStr;
 
-    if (typeof window !== 'undefined' && window.katex) {
+    const katexInstance = katex || (typeof window !== 'undefined' ? window.katex : null);
+    if (katexInstance && typeof katexInstance.renderToString === 'function') {
       processed = processed
         .replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => {
           try {
-            return window.katex.renderToString(math.trim(), {
+            return katexInstance.renderToString(math.trim(), {
               displayMode: true,
               throwOnError: false,
             });
@@ -66,7 +68,7 @@ export const MathRenderer = ({
         })
         .replace(/\$([^$\n]+?)\$/g, (_, math) => {
           try {
-            return window.katex.renderToString(math.trim(), {
+            return katexInstance.renderToString(math.trim(), {
               displayMode: false,
               throwOnError: false,
             });

@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan for replacing the racing game with a Pixel-Perfect Flappy SAT Bird engine (original physics, forgiving AABB hitboxes, scrolling neon base, and SAT Energy Gate power-ups) and rebuilding the Academic Hall of Fame connected directly to real storageService academic telemetry.",
+  "updatedAt":  "2026-10-30T02:15:53.393415016Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

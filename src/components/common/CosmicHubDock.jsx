@@ -705,10 +705,11 @@ export default function CosmicHubDock({ currentUser }) {
       </AnimatePresence>
 
       {/* THANH DOCK ĐIỀU KHIỂN CHÍNH */}
-      <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-950/80 backdrop-blur-xl border border-white/15 shadow-[0_10px_35px_rgba(0,0,0,0.5)]">
+      <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/10 shadow-2xl">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           type="button"
           onClick={() => setActivePanel(activePanel === 'radio' ? null : 'radio')}
           className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
@@ -718,7 +719,7 @@ export default function CosmicHubDock({ currentUser }) {
               ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30'
               : 'text-slate-300 hover:text-white hover:bg-white/10'
           }`}
-          title="Trạm phát thanh Lofi Vũ trụ"
+          title={'Trạm phát thanh Lofi Vũ trụ'.normalize('NFC')}
         >
           <Radio className={`w-4 h-4 ${isPlaying ? 'animate-pulse' : ''}`} />
           <span className="hidden sm:inline">Cosmic FM</span>
@@ -734,6 +735,7 @@ export default function CosmicHubDock({ currentUser }) {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           type="button"
           onClick={() => setActivePanel(activePanel === 'lounge' ? null : 'lounge')}
           className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
@@ -741,7 +743,7 @@ export default function CosmicHubDock({ currentUser }) {
               ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
               : 'text-slate-300 hover:text-white hover:bg-white/10'
           }`}
-          title="Phòng tự học thời gian thực"
+          title={'Phòng tự học thời gian thực'.normalize('NFC')}
         >
           <div className="relative">
             <Users className="w-4 h-4" />
@@ -753,6 +755,7 @@ export default function CosmicHubDock({ currentUser }) {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           type="button"
           onClick={() => setActivePanel(activePanel === 'idcard' ? null : 'idcard')}
           className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
@@ -760,7 +763,7 @@ export default function CosmicHubDock({ currentUser }) {
               ? 'bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md shadow-amber-500/30'
               : 'text-slate-300 hover:text-white hover:bg-white/10'
           }`}
-          title="Thẻ căn cước Phi hành gia Hologram 3D"
+          title={'Thẻ căn cước Phi hành gia Hologram 3D'.normalize('NFC')}
         >
           <CreditCard className="w-4 h-4" />
           <span className="hidden sm:inline">3D Holo ID</span>

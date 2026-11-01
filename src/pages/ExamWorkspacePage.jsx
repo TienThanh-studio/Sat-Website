@@ -28,6 +28,7 @@ import DesmosModal from '../components/exam/DesmosModal';
 import ReferenceModal from '../components/exam/ReferenceModal';
 import ScoreReportModal from '../components/exam/ScoreReportModal';
 import AiTutorModal from '../components/exam/AiTutorModal';
+import { usePacingTracker } from '../hooks/usePacingTracker';
 import { questionService } from '../services/questionService';
 import { storageService } from '../services/storageService';
 import * as satIrtScoring from '../services/satIrtScoring';
@@ -38,16 +39,26 @@ const HIGHLIGHT_COLORS = [
   { id: 'pink', label: 'Hồng', hex: '#fbcfe8' },
 ];
 
+const QUICK_ERROR_TAGS = [
+  { id: 'careless', label: 'Đọc ẩu / Thiếu NOT'.normalize('NFC') },
+  { id: 'vocab_trap', label: 'Bẫy từ vựng'.normalize('NFC') },
+  { id: 'algebra_sign', label: 'Lỗi tính toán/Dấu'.normalize('NFC') },
+  { id: 'time_pressure', label: 'Áp lực thời gian'.normalize('NFC') },
+];
+
 export default function ExamWorkspacePage({
   config,
   activeCategory,
   examConfig,
+  sessionConfig,
+  currentExam,
   onExit,
   onFinishExam,
   onComplete,
 }) {
   const resolvedSource = useMemo(() => {
-    const direct = config || activeCategory || examConfig;
+    const direct =
+      config || activeCategory || examConfig || sessionConfig || currentExam;
     if (
       direct &&
       Array.isArray(direct.questions) &&
@@ -96,7 +107,7 @@ export default function ExamWorkspacePage({
     }
 
     return questionService.getCategories()[0];
-  }, [config, activeCategory, examConfig]);
+  }, [config, activeCategory, examConfig, sessionConfig, currentExam]);
 
   const isMultiModuleExam = Boolean(
     resolvedSource?.isFull4ModuleExam &&
@@ -119,9 +130,23 @@ export default function ExamWorkspacePage({
         ? activeModuleObj.questions || []
         : resolvedSource?.questions || [];
 
-    // Đảm bảo mọi câu hỏi (kể cả khi đọc lại từ sessionStorage) đều được gạch chân từ cần hỏi và chuẩn hóa NFC
-    return rawList.map((q, idx) =>
-      questionService.normalizeQuestionItem
+    // Đảm bảo mọi câu hỏi (kể cả khi đọc lại từ sessionStorage hoặc MistakeRecord) đều được chuẩn hóa NFC
+    return rawList.map((rawItem, idx) => {
+      const q =
+        rawItem &&
+        typeof rawItem.question === 'object' &&
+        rawItem.question !== null
+          ? {
+              ...rawItem,
+              ...rawItem.question,
+              question:
+                rawItem.question.question ||
+                rawItem.questionText ||
+                rawItem.question.prompt ||
+                '',
+            }
+          : rawItem;
+      return questionService.normalizeQuestionItem
         ? questionService.normalizeQuestionItem(
             q,
             q?.domain || resolvedSource?.domain || 'Reading & Writing',
@@ -129,8 +154,8 @@ export default function ExamWorkspacePage({
             idx,
             q?.section || resolvedSource?.section || 'Reading & Writing'
           )
-        : q
-    );
+        : q;
+    });
   }, [isMultiModuleExam, activeModuleObj, resolvedSource]);
 
   const [inAppFilter, setInAppFilter] = useState('all');
@@ -162,6 +187,7 @@ export default function ExamWorkspacePage({
   const [flaggedMap, setFlaggedMap] = useState({});
   const [eliminatedMap, setEliminatedMap] = useState({});
   const [annotationsMap, setAnnotationsMap] = useState({});
+  const [mistakeTagsMap, setMistakeTagsMap] = useState({});
   const [selectionPopup, setSelectionPopup] = useState(null);
 
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
@@ -178,8 +204,47 @@ export default function ExamWorkspacePage({
 
   const questionTimesRef = useRef({});
   const passageContainerRef = useRef(null);
+  const examSessionKey = useMemo(
+    () =>
+      String(
+        resolvedSource?.id ||
+          resolvedSource?.categoryId ||
+          resolvedSource?.title ||
+          'default_sat_session'
+      ),
+    [resolvedSource]
+  );
 
+  // Khôi phục tiến độ làm bài từ sessionStorage nếu thí sinh bấm F5 giữa chừng
   useEffect(() => {
+    try {
+      const rawSaved = sessionStorage.getItem('sat_workspace_live_progress_v1');
+      if (rawSaved) {
+        const parsed = JSON.parse(rawSaved);
+        if (parsed && parsed.sessionKey === examSessionKey && !parsed.completed) {
+          setCurrentModuleIdx(Number(parsed.currentModuleIdx) || 0);
+          setIsBreakScreenOpen(Boolean(parsed.isBreakScreenOpen));
+          setBreakRemainingSeconds(Number(parsed.breakRemainingSeconds) || 600);
+          setCurrentIdx(Number(parsed.currentIdx) || 0);
+          setUserAnswers(parsed.userAnswers || {});
+          setCheckedMap(parsed.checkedMap || {});
+          setFlaggedMap(parsed.flaggedMap || {});
+          setEliminatedMap(parsed.eliminatedMap || {});
+          setAnnotationsMap(parsed.annotationsMap || {});
+          setMistakeTagsMap(parsed.mistakeTagsMap || {});
+          setIsReviewPageOpen(Boolean(parsed.isReviewPageOpen));
+          setElapsedSeconds(Number(parsed.elapsedSeconds) || 0);
+          if (typeof parsed.moduleRemainingSeconds === 'number') {
+            setModuleRemainingSeconds(parsed.moduleRemainingSeconds);
+          }
+          questionTimesRef.current = parsed.questionTimes || {};
+          return;
+        }
+      }
+    } catch {
+      // ignore sessionStorage error
+    }
+
     setCurrentModuleIdx(0);
     setIsBreakScreenOpen(false);
     setCurrentIdx(0);
@@ -188,12 +253,61 @@ export default function ExamWorkspacePage({
     setFlaggedMap({});
     setEliminatedMap({});
     setAnnotationsMap({});
+    setMistakeTagsMap({});
     setIsReviewPageOpen(false);
     setElapsedSeconds(0);
+    questionTimesRef.current = {};
     if (resolvedSource?.modules?.[0]?.durationSeconds) {
       setModuleRemainingSeconds(resolvedSource.modules[0].durationSeconds);
     }
-  }, [resolvedSource]);
+  }, [examSessionKey, resolvedSource]);
+
+  // Tự động đồng bộ tiến độ từng câu trả lời và bộ đếm thời gian vào sessionStorage
+  useEffect(() => {
+    if (scoreReport) return;
+    try {
+      const snapshot = {
+        sessionKey: examSessionKey,
+        currentModuleIdx,
+        isBreakScreenOpen,
+        breakRemainingSeconds,
+        currentIdx,
+        userAnswers,
+        checkedMap,
+        flaggedMap,
+        eliminatedMap,
+        annotationsMap,
+        mistakeTagsMap,
+        isReviewPageOpen,
+        elapsedSeconds,
+        moduleRemainingSeconds,
+        questionTimes: questionTimesRef.current,
+        updatedAt: Date.now(),
+      };
+      sessionStorage.setItem(
+        'sat_workspace_live_progress_v1',
+        JSON.stringify(snapshot)
+      );
+    } catch {
+      // ignore quota error
+    }
+  }, [
+    examSessionKey,
+    currentModuleIdx,
+    isBreakScreenOpen,
+    breakRemainingSeconds,
+    currentIdx,
+    userAnswers,
+    checkedMap,
+    flaggedMap,
+    eliminatedMap,
+    annotationsMap,
+    mistakeTagsMap,
+    isReviewPageOpen,
+    elapsedSeconds,
+    moduleRemainingSeconds,
+    scoreReport,
+  ]);
 
   useEffect(() => {
     if (scoreReport) return;
@@ -222,6 +336,8 @@ export default function ExamWorkspacePage({
         const qKey = currentQ?.id || `m${currentModuleIdx}_q${currentIdx}`;
         questionTimesRef.current[qKey] =
           (questionTimesRef.current[qKey] || 0) + 1;
+        questionTimesRef.current[currentIdx] =
+          (questionTimesRef.current[currentIdx] || 0) + 1;
       }
 
       if (isMultiModuleExam) {
@@ -274,6 +390,37 @@ export default function ExamWorkspacePage({
       secStr.includes('data')
     );
   }, [currentQ, resolvedSource, activeModuleObj]);
+
+  const {
+    timeOnCurrentQuestion,
+    isOvertimeWarning,
+    pacingStatus,
+    questionTimes: pacingQuestionTimes,
+    getPacingSummary,
+  } = usePacingTracker({
+    currentIndex: currentIdx,
+    isExamRunning: !scoreReport && !isBreakScreenOpen && !isReviewPageOpen,
+    section: isMathSection ? 'Math' : 'Reading & Writing',
+  });
+
+  const currentQuestionSeconds = Math.max(
+    questionTimesRef.current[currentIdx] || 0,
+    timeOnCurrentQuestion || 0
+  );
+  const isRwOvertime = !isMathSection && currentQuestionSeconds > 85;
+  const isMathOvertime = isMathSection && currentQuestionSeconds > 105;
+  const hasOvertimeAlert =
+    isRwOvertime || isMathOvertime || Boolean(isOvertimeWarning);
+  const overtimeTimerBorderClass = isMathOvertime
+    ? 'border-2 border-rose-500 text-rose-500 animate-pulse px-2.5 py-0.5 rounded-lg'
+    : isRwOvertime
+    ? 'border-2 border-amber-500 text-amber-500 animate-pulse px-2.5 py-0.5 rounded-lg'
+    : '';
+  const overtimeTooltipText = (
+    isMathSection
+      ? 'Bạn đã dừng quá 105s, hãy cân nhắc đánh dấu Review (M) và chuyển câu!'
+      : 'Bạn đã dừng quá 85s, hãy cân nhắc đánh dấu Review (M) và chuyển câu!'
+  ).normalize('NFC');
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -426,15 +573,35 @@ export default function ExamWorkspacePage({
     storageService.markSingleQuestionCompleted(qId);
     setCompletedSet(storageService.getCompletedSet());
 
+    const spentSecs =
+      questionTimesRef.current[currentIdx] || timeOnCurrentQuestion || 0;
     const isRight =
       String(selectedAnswer).trim().toUpperCase() ===
       String(currentQ.correctAnswer).trim().toUpperCase();
     if (!isRight) {
-      storageService.addMistake({
-        ...currentQ,
-        userAnswer: selectedAnswer,
-      });
+      const currentTag = mistakeTagsMap[qId] || currentQ?.errorTag || null;
+      storageService.addMistake(
+        {
+          ...currentQ,
+          userAnswer: selectedAnswer,
+        },
+        currentTag,
+        spentSecs
+      );
+    } else {
+      storageService.recordMistakeAttempt(qId, true, spentSecs);
     }
+  };
+
+  const handleSelectQuickErrorTag = (tagId) => {
+    setMistakeTagsMap((prev) => ({
+      ...prev,
+      [qId]: tagId,
+    }));
+    storageService.updateMistakeTag(tagId ? qId : qId, tagId, {
+      ...currentQ,
+      userAnswer: selectedAnswer,
+    });
   };
 
   const handleAdvanceNextModule = () => {
@@ -562,6 +729,12 @@ export default function ExamWorkspacePage({
       }
     }
 
+    const pacingSummary = typeof getPacingSummary === 'function' ? getPacingSummary() : null;
+    const finalQuestionTimes = {
+      ...questionTimesRef.current,
+      ...(pacingQuestionTimes || {}),
+    };
+
     const report = {
       id: `rep_${Date.now()}`,
       section: resolvedSource?.title || 'Digital SAT Practice',
@@ -572,9 +745,17 @@ export default function ExamWorkspacePage({
       module2Path:
         scaledScore >= (isMultiModuleExam ? 1250 : 600) ? 'Hard' : 'Standard',
       domainPerformance,
-      questionTimes: questionTimesRef.current,
+      questionTimes: finalQuestionTimes,
+      pacingSummary,
+      isMistakeDrill: Boolean(resolvedSource?.isMistakeDrill),
       questions: detailedQuestions,
     };
+
+    try {
+      sessionStorage.removeItem('sat_workspace_live_progress_v1');
+    } catch {
+      // ignore
+    }
 
     storageService.saveExamResult(report);
     setScoreReport(report);
@@ -791,6 +972,14 @@ export default function ExamWorkspacePage({
                 Module {currentModuleIdx + 1}/4
               </span>
             )}
+            {isMultiModuleExam && currentModuleIdx > 0 && (
+              <span
+                className="hidden lg:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-700 text-[10px] font-mono font-bold shrink-0"
+                title={'Chuẩn College Board Bluebook: Không thể quay lại Module trước sau khi đã chuyển Module'.normalize('NFC')}
+              >
+                {'🔒 Module trước đã khóa'.normalize('NFC')}
+              </span>
+            )}
             {!isMultiModuleExam && isAlreadyCompletedBefore && (
               <span className="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-600 border border-emerald-500/30 shrink-0">
                 <CheckCircle2 className="w-3 h-3" /> Đã làm
@@ -812,11 +1001,14 @@ export default function ExamWorkspacePage({
           </button>
         </div>
 
-        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center group">
           {showTimer ? (
             <div
-              className={`text-base sm:text-lg font-bold font-mono tracking-wider leading-none ${
-                isMultiModuleExam && moduleRemainingSeconds < 300
+              title={hasOvertimeAlert ? overtimeTooltipText : undefined}
+              className={`text-base sm:text-lg font-bold font-mono tracking-wider leading-none transition-all ${
+                hasOvertimeAlert
+                  ? overtimeTimerBorderClass
+                  : isMultiModuleExam && moduleRemainingSeconds < 300
                   ? 'text-red-600 animate-pulse'
                   : ''
               }`}
@@ -829,6 +1021,11 @@ export default function ExamWorkspacePage({
             <div className="flex items-center gap-1 text-xs font-semibold py-0.5">
               <Clock className="w-3.5 h-3.5" />
               <span>Hidden</span>
+            </div>
+          )}
+          {hasOvertimeAlert && showTimer && (
+            <div className="hidden group-hover:block absolute top-full mt-1 z-50 w-64 px-2.5 py-1.5 rounded-lg bg-slate-900 text-amber-300 border border-amber-500/40 text-[10px] font-sans font-semibold text-center shadow-xl pointer-events-none">
+              {overtimeTooltipText}
             </div>
           )}
           <button
@@ -1196,6 +1393,16 @@ export default function ExamWorkspacePage({
                       {currentQ.difficulty}
                     </span>
                   )}
+
+                  {/* Cảnh báo nhịp độ OVERTIME_WARNING (>85s RW / >105s Math) */}
+                  {isOvertimeWarning && (
+                    <span
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-500/20 border border-amber-500/40 text-amber-600 text-[10px] font-mono font-extrabold animate-pulse"
+                      title="Nhịp độ làm bài câu này đã vượt ngưỡng chuẩn (>85s Reading & Writing / >105s Math). Hãy cân nhắc Mark for Review và chuyển câu!"
+                    >
+                      <span>⚠️ {isMathSection ? '>105s' : '>85s'} Chậm</span>
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -1320,7 +1527,7 @@ export default function ExamWorkspacePage({
               {/* Hộp giải thích dùng font-sans rõ nét cho tiếng Việt */}
               {isChecked && (
                 <div
-                  className={`p-4 rounded-xl border-2 space-y-2 ${
+                  className={`p-4 rounded-xl border-2 space-y-3 ${
                     isCurrentCorrect
                       ? bluebookLightMode
                         ? 'bg-emerald-50 border-emerald-500 text-slate-900'
@@ -1330,24 +1537,65 @@ export default function ExamWorkspacePage({
                       : 'bg-rose-950/50 border-rose-500/60 text-slate-100'
                   }`}
                 >
-                  <div className="flex items-center gap-2 text-xs font-extrabold uppercase">
-                    {isCurrentCorrect ? (
-                      <>
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        <span className="text-emerald-700">
-                          Chính xác! (Đã ghi nhận vào danh sách Đã làm)
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <XCircle className="w-4 h-4 text-rose-600" />
-                        <span className="text-rose-700">
-                          Chưa chính xác • Đáp án đúng:{' '}
-                          {currentQ.correctAnswer}
-                        </span>
-                      </>
-                    )}
+                  <div className="flex items-center justify-between gap-2 text-xs font-extrabold uppercase">
+                    <div className="flex items-center gap-2">
+                      {isCurrentCorrect ? (
+                        <>
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                          <span className="text-emerald-700">
+                            {'Chính xác! (Đã ghi nhận vào danh sách Đã làm & 2-Strike Mastery)'.normalize('NFC')}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="w-4 h-4 text-rose-600" />
+                          <span className="text-rose-700">
+                            {'Chưa chính xác • Đáp án đúng: '.normalize('NFC')}
+                            {currentQ.correctAnswer}
+                          </span>
+                        </>
+                      )}
+                    </div>
                   </div>
+
+                  {/* Hàng 4 nút gắn nhãn lỗi nhanh khi trả lời sai */}
+                  {!isCurrentCorrect && (
+                    <div className="pt-2 border-t border-rose-400/30 space-y-1.5 font-sans">
+                      <div className="flex items-center justify-between text-[11px] font-bold">
+                        <span className={bluebookLightMode ? 'text-rose-800' : 'text-rose-200'}>
+                          {'🏷️ Gắn nhãn nguyên nhân sai (lưu vào Sổ tay 2-Strike):'.normalize('NFC')}
+                        </span>
+                        {(mistakeTagsMap[qId] || currentQ?.errorTag) && (
+                          <span className="text-[10px] font-mono text-emerald-600 font-extrabold">
+                            {'✓ Đã lưu nhãn lỗi'.normalize('NFC')}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        {QUICK_ERROR_TAGS.map((tag) => {
+                          const activeTag =
+                            (mistakeTagsMap[qId] || currentQ?.errorTag) === tag.id;
+                          return (
+                            <button
+                              key={tag.id}
+                              type="button"
+                              onClick={() => handleSelectQuickErrorTag(tag.id)}
+                              className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition cursor-pointer ${
+                                activeTag
+                                  ? 'bg-rose-600 text-white border-rose-700 shadow-sm'
+                                  : bluebookLightMode
+                                  ? 'bg-white/90 text-rose-900 border-rose-300 hover:bg-rose-100'
+                                  : 'bg-slate-900/90 text-rose-200 border-rose-500/40 hover:bg-rose-900/40'
+                              }`}
+                            >
+                              [{tag.label}]
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                   <div className="text-sm font-sans leading-relaxed pt-2 border-t border-slate-400/30">
                     <MathRenderer text={currentQ.explanation} />
                   </div>

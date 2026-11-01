@@ -584,10 +584,11 @@ export function CosmicHubDock({ currentUser }) {
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           type="button"
           onClick={() => setIsDockExpanded(true)}
-          title="Mở Trạm Âm Nhạc Cosmic FM & Thẻ Thông Hành"
-          className={`w-11 h-11 rounded-full flex items-center justify-center shadow-lg border transition cursor-pointer ${
+          title={'Mở Trạm Âm Nhạc Cosmic FM & Thẻ Thông Hành'.normalize('NFC')}
+          className={`w-11 h-11 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md border transition cursor-pointer ${
             isPlaying
               ? 'bg-cyan-500 text-slate-950 border-cyan-300 shadow-cyan-500/40'
               : 'bg-slate-900/85 hover:bg-slate-800 text-cyan-300 border-cyan-400/35 shadow-black/60'
@@ -596,11 +597,14 @@ export function CosmicHubDock({ currentUser }) {
           <Radio className={`w-5 h-5 ${isPlaying ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
         </motion.button>
       ) : (
-        <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-950/90 backdrop-blur-xl border border-white/20 shadow-2xl">
-          <button
+        <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/10 shadow-2xl">
+          <motion.button
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 24 }}
             type="button"
             onClick={() => setActivePanel(activePanel === 'radio' ? null : 'radio')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
               activePanel === 'radio'
                 ? 'bg-cyan-500 text-slate-950'
                 : isPlaying
@@ -610,20 +614,23 @@ export function CosmicHubDock({ currentUser }) {
           >
             <Radio className="w-3.5 h-3.5" />
             <span>Cosmic FM</span>
-          </button>
+          </motion.button>
 
-          <button
+          <motion.button
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 24 }}
             type="button"
             onClick={() => setActivePanel(activePanel === 'idcard' ? null : 'idcard')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
               activePanel === 'idcard'
                 ? 'bg-amber-400 text-slate-950'
                 : 'text-slate-300 hover:text-white hover:bg-white/10'
             }`}
           >
             <CreditCard className="w-3.5 h-3.5" />
-            <span>Thẻ Thông Hành</span>
-          </button>
+            <span>{'Thẻ Thông Hành'.normalize('NFC')}</span>
+          </motion.button>
 
           <button
             type="button"
@@ -631,8 +638,8 @@ export function CosmicHubDock({ currentUser }) {
               setActivePanel(null);
               setIsDockExpanded(false);
             }}
-            title="Thu nhỏ thành nút tròn"
-            className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition cursor-pointer"
+            title={'Thu nhỏ thành nút tròn'.normalize('NFC')}
+            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition cursor-pointer"
           >
             <X className="w-3.5 h-3.5" />
           </button>

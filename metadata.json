@@ -1,0 +1,8 @@
+{
+  "name": "SAT Exam Platform",
+  "description": "Comprehensive Digital SAT Exam Platform with realistic mock tests, pacing analysis, math renderer, and question banks.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -7,22 +7,22 @@ export default function ReferenceModal({ isOpen, onClose }) {
   return (
     <div 
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs select-none"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/65 backdrop-blur-md select-none"
     >
       <div 
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full max-w-4xl rounded-2xl border border-slate-300 shadow-2xl flex flex-col overflow-hidden animate-fadeIn text-black font-serif"
+        className="bg-white/95 backdrop-blur-md w-full max-w-4xl rounded-3xl border border-white/10 ring-1 ring-slate-300 shadow-2xl flex flex-col overflow-hidden animate-fadeIn text-black font-serif"
       >
         {/* Header tinh giản */}
-        <div className="px-5 py-2.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between shrink-0">
-          <span className="font-sans font-bold text-xs tracking-wide text-slate-700 uppercase">
-            SAT Math Reference Sheet
+        <div className="px-5 py-3 bg-slate-900 text-white border-b border-white/10 flex items-center justify-between shrink-0">
+          <span className="font-sans font-bold text-xs tracking-wide text-cyan-300 uppercase">
+            SAT Math Reference Sheet • College Board Bluebook
           </span>
           <button
             type="button"
             onClick={onClose}
-            className="p-1 hover:bg-slate-200 text-slate-400 hover:text-black rounded-lg transition"
-            title="Đóng"
+            className="p-1.5 hover:bg-white/10 text-slate-300 hover:text-white rounded-xl transition cursor-pointer"
+            title={'Đóng'.normalize('NFC')}
           >
             <X className="w-4 h-4" />
           </button>

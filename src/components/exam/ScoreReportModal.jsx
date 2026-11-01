@@ -19,6 +19,7 @@ import {
   Download,
 } from 'lucide-react';
 import MathRenderer from '../common/MathRenderer';
+import PacingAnalysisCard from './PacingAnalysisCard';
 
 export default function ScoreReportModal({
   isOpen,
@@ -735,6 +736,15 @@ export default function ScoreReportModal({
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* PHÂN TÍCH NHỊP ĐỘ LÀM BÀI (PACING ANALYSIS) */}
+            <div className="bg-slate-900/85 p-2 rounded-3xl border border-white/10 overflow-hidden">
+              <PacingAnalysisCard
+                questionTimes={reportData.questionTimes}
+                questions={questions}
+                section={reportData.section}
+              />
             </div>
           </div>
         )}

@@ -1,11 +1,56 @@
 // src/services/adaptiveEngine.js
+/**
+ * Digital SAT Adaptive 2PL / 3PL IRT Scoring Engine & Routing Logic
+ * Tuân thủ chuẩn mực khảo thí College Board cho bài thi Digital SAT thích ứng 2 chặng:
+ * - Reading & Writing: 27 câu/Module. Cắt ngưỡng M1: >= 15 câu đúng -> M2 Hard (trần 800); < 15 -> M2 Easy (trần 600 - 620).
+ * - Math: 22 câu/Module. Cắt ngưỡng M1: >= 14 câu đúng -> M2 Hard; < 14 -> M2 Easy.
+ */
+
+// 1. Ngưỡng phân nhánh (Routing Cutoffs) chuẩn College Board
+export const ROUTING_RULES = Object.freeze({
+  'Reading & Writing': Object.freeze({
+    totalQuestions: 27,
+    threshold: 15, // >= 15 câu đúng -> Hard Module 2
+    easyCap: 600, // Điểm tối đa khi rơi vào nhánh Easy
+    hardFloor: 420, // Điểm cơ sở nhánh Hard
+  }),
+  Math: Object.freeze({
+    totalQuestions: 22,
+    threshold: 14, // >= 14 câu đúng -> Hard Module 2
+    easyCap: 620,
+    hardFloor: 440,
+  }),
+});
+
+/**
+ * Xác định phân nhánh Module 2 (Hard vs Easy) dựa trên số câu đúng ở Module 1
+ */
+export function routeNextModule({ section = 'Reading & Writing', m1CorrectCount = 0, m1TotalQuestions = null }) {
+  const isMath = String(section).toLowerCase().includes('math');
+  const rule = isMath ? ROUTING_RULES.Math : ROUTING_RULES['Reading & Writing'];
+  const total = m1TotalQuestions || rule.totalQuestions;
+
+  // Tính tỷ lệ đúng hoặc so sánh theo ngưỡng chuẩn
+  const isHard =
+    total === rule.totalQuestions
+      ? m1CorrectCount >= rule.threshold
+      : m1CorrectCount / Math.max(1, total) >= (rule.threshold / rule.totalQuestions);
+
+  return {
+    path: isHard ? 'Hard' : 'Easy',
+    isHard,
+    threshold: rule.threshold,
+    correctCount: m1CorrectCount,
+    totalQuestions: total,
+    ceilingScore: isHard ? 800 : rule.easyCap,
+  };
+}
 
 /**
  * Chuẩn hóa đáp án để so sánh chính xác cả trắc nghiệm (A, B, C, D)
  * lẫn câu điền khuyết Toán (SPR / Grid-in: hỗ trợ phân số như 292/3, số thập phân, số âm)
  */
 export function isAnswerCorrect(userAns, question) {
-  // Hỗ trợ tự động đảo tham số nếu nơi gọi truyền (question, userAns)
   let actualUserAns = userAns;
   let actualQuestion = question;
   if (
@@ -26,8 +71,13 @@ export function isAnswerCorrect(userAns, question) {
     return false;
   }
 
-  const cleanUser = String(actualUserAns).trim().toUpperCase().replace(/\s+/g, '');
+  const cleanUser = String(actualUserAns)
+    .normalize('NFC')
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, '');
   const cleanCorrect = String(actualQuestion.correctAnswer ?? '')
+    .normalize('NFC')
     .trim()
     .toUpperCase()
     .replace(/\s+/g, '');
@@ -62,75 +112,69 @@ export function isAnswerCorrect(userAns, question) {
 }
 
 /**
- * Suy luận tham số IRT 3PL (a: độ phân loại, b: độ khó, c: xác suất đoán mò) cho từng câu hỏi
+ * Tham số IRT 2PL rút gọn cho từng câu hỏi dựa theo độ khó:
+ * - Easy:   b ≈ -1.2, a ≈ 1.2
+ * - Medium: b ≈  0.0, a ≈ 1.3
+ * - Hard:   b ≈ +1.5, a ≈ 1.45
  */
-export function getQuestionIrtParams(question, index = 0, total = 27) {
+export function getQuestion2PLParams(question, index = 0, total = 27) {
   const diffRaw = String(question?.difficulty || '').toLowerCase();
-  const posRatio = total > 1 ? index / (total - 1) : 0.5;
-
-  // 1. Tham số độ khó b (-2.0 đến +2.0)
   let b = 0.0;
+  let a = 1.3;
+
   if (typeof question?.irtB === 'number') {
     b = question.irtB;
   } else if (diffRaw === 'easy' || diffRaw === 'dễ') {
-    b = -1.15 + posRatio * 0.35;
+    b = -1.2;
+    a = 1.2;
   } else if (diffRaw === 'hard' || diffRaw === 'khó') {
-    b = 0.95 + posRatio * 0.75;
+    b = 1.5;
+    a = 1.45;
   } else {
-    // Medium hoặc tự động phân tầng theo thứ tự câu trong đề
-    b = -0.6 + posRatio * 1.4;
+    // Medium
+    b = 0.0;
+    a = 1.3;
   }
 
-  // 2. Tham số độ phân biệt a (0.8 đến 1.8)
-  const a =
-    typeof question?.irtA === 'number'
-      ? question.irtA
-      : diffRaw === 'hard'
-      ? 1.45
-      : diffRaw === 'easy'
-      ? 1.15
-      : 1.3;
+  // Điều chỉnh nhẹ theo vị trí câu trong đề (câu cuối module thường thách thức hơn)
+  if (total > 1) {
+    const posOffset = ((index / (total - 1)) - 0.5) * 0.3;
+    b += posOffset;
+  }
 
-  // 3. Tham số đoán mò c (Grid-in không thể đoán mò nên c = 0; Trắc nghiệm 4 đáp án c = 0.22)
-  const isGridIn = Boolean(
-    question?.isGridIn ||
-      !question?.options ||
-      Object.keys(question?.options || {}).length === 0
-  );
-  const c = isGridIn ? 0.0 : 0.22;
-
-  return { a, b, c, isGridIn };
+  return { a, b, isGridIn: Boolean(question?.isGridIn) };
 }
 
 /**
- * Hàm xác suất trả lời đúng theo mô hình 3PL IRT
+ * Hàm xác suất trả lời đúng theo mô hình 2PL IRT:
+ * P(theta) = 1 / (1 + exp(-a * (theta - b)))
  */
-function prob3PL(theta, a, b, c) {
+export function prob2PL(theta, a, b) {
   const z = a * (theta - b);
-  const logistic = 1 / (1 + Math.exp(-z));
-  return c + (1 - c) * logistic;
+  return 1 / (1 + Math.exp(-z));
 }
 
 /**
- * Ước lượng năng lực thí sinh Theta (-3.5 đến +3.5) bằng phương pháp Bayesian EAP / MLE
+ * Ước lượng năng lực thí sinh Theta (-3.5 đến +3.5) theo mô hình 2PL IRT
+ * sử dụng phương pháp tối ưu hóa hàm Log-Likelihood với Gaussian Prior
  */
-export function estimateTheta3PL(evaluatedItems) {
+export function estimateTheta2PL(evaluatedItems = []) {
   if (!Array.isArray(evaluatedItems) || evaluatedItems.length === 0) {
-    return { theta: 0, se: 1.0, carelessMistakes: 0, hardSolved: 0 };
+    return { theta: 0.0, se: 0.8, carelessMistakes: 0, hardSolved: 0 };
   }
 
-  // Quét lưới mịn từ -3.5 đến +3.5 (701 điểm) kết hợp Prior phân phối chuẩn nhẹ N(0, 2.2)
   let bestTheta = 0;
   let maxLogLikelihood = -Infinity;
 
+  // Quét lưới từ -3.50 đến +3.50 với bước nhảy 0.01 (701 điểm)
   for (let step = -350; step <= 350; step++) {
     const theta = step / 100;
-    // Prior nhẹ để tránh theta vọt ra vô cùng khi đúng 100% hoặc sai 100%
+    // Gaussian Prior N(0, 2.5^2) để ổn định khi đúng hết hoặc sai hết
     let logL = -(theta * theta) / (2 * 2.5 * 2.5);
 
     for (let i = 0; i < evaluatedItems.length; i++) {
       const item = evaluatedItems[i];
-      const p = Math.min(0.9999, Math.max(0.0001, prob3PL(theta, item.a, item.b, item.c)));
+      const p = Math.min(0.9999, Math.max(0.0001, prob2PL(theta, item.a, item.b)));
       if (item.isCorrect) {
         logL += Math.log(p);
       } else {
@@ -144,27 +188,25 @@ export function estimateTheta3PL(evaluatedItems) {
     }
   }
 
-  // Tính Sai số chuẩn (Standard Error of Estimation - SE) từ hàm thông tin Fisher I(theta)
+  // Tính sai số chuẩn SE và thống kê bẫy
   let fisherInfo = 1 / (2.5 * 2.5);
   let carelessMistakes = 0;
   let hardSolved = 0;
 
   evaluatedItems.forEach((item) => {
-    const p = prob3PL(bestTheta, item.a, item.b, item.c);
+    const p = prob2PL(bestTheta, item.a, item.b);
     const q = 1 - p;
-    const num = Math.pow(item.a, 2) * Math.pow(p - item.c, 2) * q;
-    const den = Math.pow(1 - item.c, 2) * Math.max(0.0001, p);
-    fisherInfo += num / den;
+    fisherInfo += Math.pow(item.a, 2) * p * q;
 
-    if (!item.isCorrect && item.b < -0.35) {
-      carelessMistakes += 1; // Sai câu dễ (bị phạt nặng hơn trong IRT)
+    if (!item.isCorrect && item.b <= -0.8) {
+      carelessMistakes += 1; // Sai câu dễ (sảy chân)
     }
-    if (item.isCorrect && item.b >= 0.75) {
+    if (item.isCorrect && item.b >= 1.0) {
       hardSolved += 1;
     }
   });
 
-  const se = Number((1 / Math.sqrt(Math.max(0.1, fisherInfo))).toFixed(2));
+  const se = Number((1 / Math.sqrt(Math.max(0.08, fisherInfo))).toFixed(2));
 
   return {
     theta: Number(bestTheta.toFixed(2)),
@@ -175,93 +217,102 @@ export function estimateTheta3PL(evaluatedItems) {
 }
 
 /**
- * Tính điểm Scaled Score chuẩn College Board (200 - 800) dựa trên mô hình IRT 3PL
+ * Tính Scaled Score (200 - 800) thích ứng chuẩn College Board kết hợp phân nhánh Module 2
  */
 export function calculateSatScaledScore(sessionState) {
-  const m1Questions = sessionState?.module1?.questions || [];
-  const m1Answers = sessionState?.module1?.answers || {};
-  const m2Questions = sessionState?.module2?.questions || [];
-  const m2Answers = sessionState?.module2?.answers || {};
+  const isMath = String(sessionState?.section || '').toLowerCase().includes('math');
+  const rule = isMath ? ROUTING_RULES.Math : ROUTING_RULES['Reading & Writing'];
+
+  const m1Questions = sessionState?.module1?.questions || sessionState?.questions?.slice(0, rule.totalQuestions) || [];
+  const m1Answers = sessionState?.module1?.answers || sessionState?.answers || {};
+  const m2Questions = sessionState?.module2?.questions || sessionState?.questions?.slice(rule.totalQuestions) || [];
+  const m2Answers = sessionState?.module2?.answers || sessionState?.answers || {};
 
   const allEvaluated = [];
+  let m1Correct = 0;
 
   m1Questions.forEach((q, idx) => {
-    const { a, b, c, isGridIn } = getQuestionIrtParams(q, idx, m1Questions.length);
-    const correct =
+    const { a, b } = getQuestion2PLParams(q, idx, m1Questions.length);
+    const isCorrect =
       typeof q.isCorrect === 'boolean'
         ? q.isCorrect
         : isAnswerCorrect(m1Answers[idx] ?? m1Answers[q.id], q);
-    allEvaluated.push({ a, b, c, isGridIn, isCorrect: correct, module: 1 });
+
+    if (isCorrect) m1Correct += 1;
+    allEvaluated.push({ a, b, isCorrect, module: 1 });
   });
 
+  // Tự động suy ra routing path nếu chưa có
+  const routing = routeNextModule({
+    section: sessionState?.section,
+    m1CorrectCount: m1Correct,
+    m1TotalQuestions: m1Questions.length,
+  });
+  const module2Path = sessionState?.module2?.path || routing.path;
+
   m2Questions.forEach((q, idx) => {
-    const { a, b, c, isGridIn } = getQuestionIrtParams(q, idx, m2Questions.length);
-    // Nếu ở nhánh Hard, độ khó b cộng thêm 0.45
-    const pathBonus = sessionState?.module2?.path === 'Easy' ? -0.45 : 0.45;
-    const correct =
+    const { a, b } = getQuestion2PLParams(q, idx, m2Questions.length);
+    // Nhánh Hard: độ khó tăng +0.45; Nhánh Easy: độ khó giảm -0.45
+    const pathShift = module2Path === 'Easy' ? -0.45 : 0.45;
+    const isCorrect =
       typeof q.isCorrect === 'boolean'
         ? q.isCorrect
         : isAnswerCorrect(m2Answers[idx] ?? m2Answers[q.id], q);
-    allEvaluated.push({
-      a,
-      b: b + pathBonus,
-      c,
-      isGridIn,
-      isCorrect: correct,
-      module: 2,
-    });
+
+    allEvaluated.push({ a, b: b + pathShift, isCorrect, module: 2 });
   });
 
   const totalCount = Math.max(1, allEvaluated.length);
   const correctCount = allEvaluated.filter((x) => x.isCorrect).length;
-  const rawAccuracy = correctCount / totalCount;
+  const rawRatio = correctCount / totalCount;
 
-  const { theta, se, carelessMistakes, hardSolved } = estimateTheta3PL(allEvaluated);
+  const { theta, se, carelessMistakes, hardSolved } = estimateTheta2PL(allEvaluated);
 
-  // Quy đổi kết hợp giữa Theta IRT và tỷ lệ đúng thực tế + phạt sảy chân câu dễ
-  const normalizedTheta = (theta + 3.2) / 6.4; // 0.0 -> 1.0
-  const blendedRatio = rawAccuracy * 0.68 + Math.min(1, Math.max(0, normalizedTheta)) * 0.32;
+  // Chuyển đổi Theta [-3.2, +3.2] thành Score 200 - 800
+  const normalizedTheta = (theta + 3.2) / 6.4;
+  const blendedRatio = rawRatio * 0.65 + Math.min(1, Math.max(0, normalizedTheta)) * 0.35;
+  const carelessPenalty = carelessMistakes * 10;
 
-  // Phạt IRT khi sai câu dễ (mỗi câu dễ sai bị trừ nặng hơn câu khó khoảng 10-15 điểm)
-  const carelessPenalty = carelessMistakes * 8;
+  let rawScaled = 200 + blendedRatio * 600 - carelessPenalty + hardSolved * 5;
 
-  let rawScaled = 200 + blendedRatio * 600 - carelessPenalty + hardSolved * 4;
-
-  // Nếu làm đúng tuyệt đối 100% thì đạt 800 tròn; nếu trống toàn bộ thì 200
   if (correctCount === totalCount && totalCount > 0) {
     rawScaled = 800;
   } else if (correctCount === 0) {
     rawScaled = 200;
   } else {
-    // Nếu rơi vào nhánh Module 2 Easy thì chặn trần ở 620 chuẩn quy chế
-    if (sessionState?.module2?.path === 'Easy' && m2Questions.length > 0) {
-      rawScaled = Math.min(620, rawScaled);
+    // Áp dụng trần điểm nếu ở nhánh Easy (trần tối đa 600 cho RW, 620 cho Math)
+    if (module2Path === 'Easy' && m2Questions.length > 0) {
+      rawScaled = Math.min(rule.easyCap, rawScaled);
     }
     rawScaled = Math.min(790, Math.max(200, rawScaled));
   }
 
   const scaledScore = Math.round(rawScaled / 10) * 10;
 
-  // Tính phân vị Percentile toàn cầu
-  let percentile = 50;
-  if (scaledScore >= 770) percentile = 99;
-  else if (scaledScore >= 730) percentile = 96;
-  else if (scaledScore >= 680) percentile = 90;
-  else if (scaledScore >= 620) percentile = 78;
-  else if (scaledScore >= 550) percentile = 60;
-
   return {
     scaledScore,
     rawCorrect: correctCount,
     totalQuestions: totalCount,
-    accuracy: Math.round(rawAccuracy * 100),
+    module2Path,
+    m1Correct,
+    m1Total: m1Questions.length,
+    accuracy: Math.round(rawRatio * 100),
     irtMetrics: {
       theta,
       se,
       carelessMistakes,
       hardSolved,
-      percentile,
       confidenceBand: `${Math.max(200, scaledScore - 20)} – ${Math.min(800, scaledScore + 20)}`,
     },
   };
 }
+
+export default {
+  ROUTING_RULES,
+  routeNextModule,
+  isAnswerCorrect,
+  getQuestion2PLParams,
+  prob2PL,
+  estimateTheta2PL,
+  calculateSatScaledScore,
+};

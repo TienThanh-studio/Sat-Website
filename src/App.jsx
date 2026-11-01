@@ -204,7 +204,10 @@ export default function App() {
 
             {/* 2. HÀNH TRÌNH & BẢNG VÀNG */}
             {currentNormalizedTab === 'mission-log' && (
-              <MissionLogPage currentUser={currentUser} />
+              <MissionLogPage
+                currentUser={currentUser}
+                onStartExam={handleStartExam}
+              />
             )}
 
             {/* 3. PHÒNG HỌC TẬP & ĐUA XE 3D */}
@@ -334,17 +337,26 @@ export default function App() {
                         onClick={() =>
                           handleStartExam({
                             id: 'mistake_review_session',
-                            title: 'Ôn tập Sổ tay câu sai',
+                            title: '🔥 Bài Thi Luyện Câu Sai (2-Strike Drill)'.normalize('NFC'),
                             section: 'Reading & Writing',
                             mode: 'practice',
                             isExam: false,
-                            questions: mistakesList,
+                            isMistakeDrill: true,
+                            questions: mistakesList.map((m) =>
+                              m && typeof m.question === 'object' && m.question !== null
+                                ? { ...m, ...m.question, question: m.question.question || m.questionText || '' }
+                                : m
+                            ),
                           })
                         }
-                        className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-extrabold text-xs flex items-center gap-2 shadow-lg cursor-pointer transition"
+                        className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-500 via-orange-500 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-white font-extrabold text-xs flex items-center gap-2 shadow-lg cursor-pointer transition"
                       >
                         <Play className="w-4 h-4 fill-current" />
-                        <span>Làm lại toàn bộ {mistakesList.length} câu sai</span>
+                        <span>
+                          {'🔥 Khởi Tạo Bài Thi Luyện Câu Sai ('.normalize('NFC')}
+                          {mistakesList.length}
+                          {' câu)'.normalize('NFC')}
+                        </span>
                       </button>
                     )}
                   </div>
@@ -358,64 +370,90 @@ export default function App() {
                     </div>
                   ) : (
                     <div className="space-y-4">
-                      {mistakesList.map((item, idx) => (
-                        <div
-                          key={`${item.id}_${idx}`}
-                          className="p-6 rounded-3xl bg-slate-900/85 border border-rose-500/25 space-y-4"
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 font-mono text-xs font-bold">
-                              Câu sai #{idx + 1} • {item.domain || 'SAT Question'}
-                            </span>
-                            <button
-                              type="button"
-                              onClick={() => {
-                                const next = storageService.removeMistake(item.id);
-                                setMistakesList(next);
-                              }}
-                              className="p-2 rounded-xl bg-white/5 hover:bg-rose-500/20 text-slate-400 hover:text-rose-300 transition cursor-pointer"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </button>
+                      {mistakesList.map((item, idx) => {
+                        const qObj =
+                          item && typeof item.question === 'object' && item.question !== null
+                            ? item.question
+                            : item;
+                        const qStem =
+                          typeof item.question === 'string'
+                            ? item.question
+                            : item.questionText || qObj?.question || '';
+                        const strikeCount = Number(item.strikeCount || 0);
+                        return (
+                          <div
+                            key={`${item.id}_${idx}`}
+                            className="p-6 rounded-3xl bg-slate-900/85 border border-rose-500/25 space-y-4"
+                          >
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 font-mono text-xs font-bold">
+                                  Câu sai #{idx + 1} • {qObj?.domain || item.domain || 'SAT Question'}
+                                </span>
+                                <span
+                                  className={`px-2.5 py-1 rounded-lg font-mono text-[11px] font-bold border ${
+                                    strikeCount >= 2
+                                      ? 'bg-emerald-500/20 border-emerald-400/40 text-emerald-300'
+                                      : strikeCount === 1
+                                      ? 'bg-amber-500/20 border-amber-400/40 text-amber-300'
+                                      : 'bg-slate-800 border-white/10 text-slate-300'
+                                  }`}
+                                >
+                                  2-Strike: {strikeCount}/2
+                                </span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  const next = storageService.removeMistake(item.id);
+                                  setMistakesList(next);
+                                }}
+                                className="p-2 rounded-xl bg-white/5 hover:bg-rose-500/20 text-slate-400 hover:text-rose-300 transition cursor-pointer"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            </div>
+
+                            {(qObj?.prompt || qObj?.passage || item.prompt || item.passage) && (
+                              <div className="text-sm text-slate-200 leading-relaxed font-serif bg-slate-950/60 p-4 rounded-2xl border border-white/10">
+                                <MathRenderer
+                                  text={qObj?.prompt || qObj?.passage || item.prompt || item.passage}
+                                />
+                              </div>
+                            )}
+
+                            {qStem && (
+                              <div className="text-sm font-bold text-white">
+                                <MathRenderer text={qStem} />
+                              </div>
+                            )}
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                              <div className="p-3 rounded-xl bg-rose-950/50 border border-rose-500/30 text-rose-200">
+                                <span className="font-mono uppercase text-[10px] text-rose-400 block">
+                                  Đáp án bạn đã chọn:
+                                </span>
+                                <strong>{item.userAnswer || qObj?.userAnswer || 'Bỏ trống'}</strong>
+                              </div>
+                              <div className="p-3 rounded-xl bg-emerald-950/50 border border-emerald-500/30 text-emerald-200">
+                                <span className="font-mono uppercase text-[10px] text-emerald-400 block">
+                                  Đáp án chuẩn College Board:
+                                </span>
+                                <strong>{item.correctAnswer || qObj?.correctAnswer}</strong>
+                              </div>
+                            </div>
+
+                            {(qObj?.explanation || item.explanation) && (
+                              <div className="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/25 text-xs text-slate-200 leading-relaxed">
+                                <strong className="text-cyan-300 block mb-1 uppercase font-mono text-[10px]">
+                                  Giải thích chi tiết:
+                                </strong>
+                                <MathRenderer text={qObj?.explanation || item.explanation} />
+                              </div>
+                            )}
                           </div>
-
-                          {(item.prompt || item.passage) && (
-                            <div className="text-sm text-slate-200 leading-relaxed font-serif bg-slate-950/60 p-4 rounded-2xl border border-white/10">
-                              <MathRenderer text={item.prompt || item.passage} />
-                            </div>
-                          )}
-
-                          {item.question && (
-                            <div className="text-sm font-bold text-white">
-                              <MathRenderer text={item.question} />
-                            </div>
-                          )}
-
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                            <div className="p-3 rounded-xl bg-rose-950/50 border border-rose-500/30 text-rose-200">
-                              <span className="font-mono uppercase text-[10px] text-rose-400 block">
-                                Đáp án bạn đã chọn:
-                              </span>
-                              <strong>{item.userAnswer || 'Bỏ trống'}</strong>
-                            </div>
-                            <div className="p-3 rounded-xl bg-emerald-950/50 border border-emerald-500/30 text-emerald-200">
-                              <span className="font-mono uppercase text-[10px] text-emerald-400 block">
-                                Đáp án chuẩn College Board:
-                              </span>
-                              <strong>{item.correctAnswer}</strong>
-                            </div>
-                          </div>
-
-                          {item.explanation && (
-                            <div className="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/25 text-xs text-slate-200 leading-relaxed">
-                              <strong className="text-cyan-300 block mb-1 uppercase font-mono text-[10px]">
-                                Giải thích chi tiết:
-                              </strong>
-                              <MathRenderer text={item.explanation} />
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   )}
                 </div>

@@ -1,5 +1,6 @@
 // src/components/layout/Sidebar.jsx
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import {
   Home,
   BookOpen,
@@ -21,6 +22,7 @@ import {
   Users,
   Compass,
 } from 'lucide-react';
+import { storageService } from '../../services/storageService';
 
 export default function Sidebar(props) {
   const {
@@ -85,8 +87,13 @@ export default function Sidebar(props) {
 
   useEffect(() => {
     try {
-      const mistakes = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
-      setMistakeCount(Array.isArray(mistakes) ? mistakes.length : 0);
+      const unmastered = storageService.getUnmasteredMistakes();
+      if (Array.isArray(unmastered) && unmastered.length > 0) {
+        setMistakeCount(unmastered.length);
+      } else {
+        const legacy = JSON.parse(localStorage.getItem('sat_mistakes') || '[]');
+        setMistakeCount(Array.isArray(legacy) ? legacy.length : 0);
+      }
     } catch {
       setMistakeCount(0);
     }
@@ -121,7 +128,7 @@ export default function Sidebar(props) {
       id: 'study-room',
       aliases: ['study-room', 'lounge', 'coworking'],
       label: 'Phòng học tập',
-      sub: 'Co-working & 5P Race',
+      sub: 'Flappy SAT & Hall of Fame',
       icon: Users,
       badge: '18 Online',
       badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-400/40',
@@ -276,14 +283,17 @@ export default function Sidebar(props) {
             const isActive = item.aliases.includes(activeKey);
 
             return (
-              <button
+              <motion.button
                 key={item.id}
                 type="button"
+                whileHover={{ x: isCollapsed ? 0 : 3 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 320, damping: 24 }}
                 onClick={() => handleNavigate(item)}
-                title={isCollapsed ? `${item.label} (${item.sub})` : ''}
+                title={isCollapsed ? `${item.label} (${item.sub})`.normalize('NFC') : ''}
                 className={`w-full ${
                   isCollapsed ? 'p-2.5 justify-center' : 'px-3 py-2.5 justify-between'
-                } rounded-2xl flex items-center transition-all duration-150 cursor-pointer group relative ${
+                } rounded-2xl flex items-center transition-colors duration-150 cursor-pointer group relative ${
                   isActive
                     ? 'bg-gradient-to-r from-indigo-600/30 via-cyan-500/15 to-transparent text-white border border-cyan-400/40 shadow-[0_0_20px_rgba(56,189,248,0.15)]'
                     : 'text-slate-400 hover:text-slate-100 hover:bg-white/[0.04] border border-transparent'
@@ -310,7 +320,7 @@ export default function Sidebar(props) {
                   {!isCollapsed && (
                     <div className="text-left truncate">
                       <div className={`text-xs font-bold leading-tight ${isActive ? 'text-white' : 'text-slate-200'}`}>
-                        {item.label}
+                        {item.label.normalize('NFC')}
                       </div>
                       <div className="text-[10px] text-slate-500 font-mono truncate">{item.sub}</div>
                     </div>
@@ -322,7 +332,7 @@ export default function Sidebar(props) {
                     {item.badge}
                   </span>
                 )}
-              </button>
+              </motion.button>
             );
           })}
         </div>

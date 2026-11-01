@@ -1,21 +1,26 @@
+// src/hooks/usePacingTracker.js
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**
- * Ngưỡng nhịp độ theo từng section (đơn vị: giây).
- * - standard: mức chuẩn để so sánh
- * - warning : vượt mức này mà chưa qua câu mới -> cảnh báo / coi là câu "chậm"
+ * Ngưỡng nhịp độ theo từng section chuẩn Digital SAT (đơn vị: giây).
+ * - standard: mức trung bình danh định
+ * - warning : ngưỡng dừng quá lâu -> Cảnh báo OVERTIME_WARNING
+ *   + Reading & Writing: Dừng > 85 giây/câu -> OVERTIME_WARNING
+ *   + Math: Dừng > 105 giây/câu -> OVERTIME_WARNING
  */
 export const PACING_CONFIG = Object.freeze({
-  'Reading & Writing': Object.freeze({ standard: 75, warning: 90 }),
-  Math: Object.freeze({ standard: 95, warning: 120 }),
+  'Reading & Writing': Object.freeze({ standard: 71, warning: 85 }),
+  Math: Object.freeze({ standard: 95, warning: 105 }),
 });
 
-/** Dưới ngưỡng này (giây) được xem là làm quá vội. */
+/** Dưới ngưỡng này (giây) được xem là làm quá vội (Rushing). */
 export const FAST_QUESTION_THRESHOLD = 20;
 
-/** Trả về cấu hình ngưỡng cho section; giá trị lạ sẽ rơi về Reading & Writing. */
-export const getPacingConfig = (section) =>
-  section === 'Math' ? PACING_CONFIG.Math : PACING_CONFIG['Reading & Writing'];
+/** Trả về cấu hình ngưỡng cho section; giá trị khác sẽ rơi về Reading & Writing. */
+export const getPacingConfig = (section) => {
+  const isMath = String(section || '').toLowerCase().includes('math');
+  return isMath ? PACING_CONFIG.Math : PACING_CONFIG['Reading & Writing'];
+};
 
 const isValidIndex = (value) =>
   typeof value === 'number' && Number.isFinite(value) && value >= 0;
@@ -28,7 +33,7 @@ const nowMs = () =>
 const TICK_INTERVAL_MS = 250;
 
 /**
- * Theo dõi thời gian thí sinh dừng ở từng câu hỏi.
+ * Hook theo dõi nhịp độ làm bài và phát hiện quá thời gian (Pacing Tracker)
  */
 export const usePacingTracker = ({ currentIndex, isExamRunning, section } = {}) => {
   const totalsMsRef = useRef({});
@@ -113,29 +118,44 @@ export const usePacingTracker = ({ currentIndex, isExamRunning, section } = {}) 
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, [sync]);
 
-  const { warning } = getPacingConfig(section);
+  const { warning, standard } = getPacingConfig(section);
   const timeOnCurrentQuestion = snapshot.visitSec;
-  const isTimeWarning = Boolean(isExamRunning) && timeOnCurrentQuestion > warning;
+  const isOvertimeWarning = Boolean(isExamRunning) && timeOnCurrentQuestion > warning;
+  const isTimeWarning = isOvertimeWarning; // Tương thích ngược
+
+  const pacingStatus = isOvertimeWarning
+    ? 'OVERTIME_WARNING'
+    : timeOnCurrentQuestion < FAST_QUESTION_THRESHOLD
+    ? 'RUSHING'
+    : 'ON_PACE';
 
   const getPacingSummary = useCallback(() => {
     const config = getPacingConfig(section);
-    const entries = Object.entries(buildTimes())
+    const times = buildTimes();
+    const entries = Object.entries(times)
       .map(([key, seconds]) => [Number(key), Number(seconds)])
       .filter(([index, seconds]) => Number.isFinite(index) && Number.isFinite(seconds))
       .sort((a, b) => a[0] - b[0]);
     const totalTime = entries.reduce((sum, [, seconds]) => sum + seconds, 0);
     const questionCount = entries.length;
+
+    const slowQuestions = entries.filter(([, s]) => s > config.warning).map(([i]) => i);
+    const fastQuestions = entries.filter(([, s]) => s < FAST_QUESTION_THRESHOLD).map(([i]) => i);
+
     return {
       avgTimePerQuestion: questionCount > 0 ? Math.round((totalTime / questionCount) * 10) / 10 : 0,
       totalTime,
       questionCount,
-      slowQuestions: entries.filter(([, s]) => s > config.warning).map(([i]) => i),
-      fastQuestions: entries.filter(([, s]) => s < FAST_QUESTION_THRESHOLD).map(([i]) => i),
+      slowQuestions,
+      overtimeQuestions: slowQuestions,
+      fastQuestions,
       thresholds: {
         standard: config.standard,
         warning: config.warning,
         fast: FAST_QUESTION_THRESHOLD,
       },
+      hasOvertimeWarning: slowQuestions.length > 0,
+      questionTimes: times,
     };
   }, [section, buildTimes]);
 
@@ -150,6 +170,8 @@ export const usePacingTracker = ({ currentIndex, isExamRunning, section } = {}) 
   return {
     timeOnCurrentQuestion,
     isTimeWarning,
+    isOvertimeWarning,
+    pacingStatus,
     questionTimes: snapshot.times,
     getPacingSummary,
     resetPacing,

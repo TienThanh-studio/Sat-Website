@@ -1,26 +1,29 @@
 // src/pages/MissionLogPage.jsx
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Compass,
   Trophy,
   Award,
   Sparkles,
   Flame,
-  Star,
   CheckCircle2,
   Lock,
-  ChevronRight,
-  TrendingUp,
-  ShieldCheck,
   Zap,
   Globe2,
   Rocket,
   Crown,
   History,
+  Tag,
+  Trash2,
+  Target,
+  Filter,
+  AlertTriangle,
+  Play,
+  Bookmark,
 } from 'lucide-react';
-import { storageService } from '../services/storageService';
+import { storageService, ERROR_TAGS } from '../services/storageService';
 import { authService } from '../services/authService';
+import MathRenderer from '../components/common/MathRenderer';
 
 // Cấu trúc 4 chòm sao kỹ năng tương ứng 4 Domain lớn của SAT
 const CONSTELLATIONS = [
@@ -99,12 +102,40 @@ const LEADERBOARD_USERS = [
   { rank: 5, name: 'Đức Duy', score: 1510, tag: 'Space Navigator', avatar: 'Đ', streak: '12 ngày', isMe: false },
 ];
 
-export default function MissionLogPage({ currentUser }) {
-  const [activeSubTab, setActiveSubTab] = useState('skill_tree'); // 'skill_tree' | 'mission_log' | 'hall_of_fame'
-  const user = currentUser || authService.getCurrentUser() || { name: 'Phan Tiến Thành', targetScore: 1580 };
+const FILTER_OPTIONS = [
+  { id: 'all', label: 'Tất cả'.normalize('NFC') },
+  { id: 'careless', label: 'Đọc lướt / Miss NOT'.normalize('NFC') },
+  { id: 'vocab_trap', label: 'Bẫy từ vựng'.normalize('NFC') },
+  { id: 'algebra_sign', label: 'Sai công thức đại số'.normalize('NFC') },
+  { id: 'time_pressure', label: 'Áp lực thời gian'.normalize('NFC') },
+  { id: 'concept_gap', label: 'Hổng kiến thức'.normalize('NFC') },
+];
+
+export default function MissionLogPage({
+  currentUser,
+  onStartExam,
+  initialSubTab = 'mistake_drill',
+}) {
+  const [activeSubTab, setActiveSubTab] = useState(initialSubTab); // 'mistake_drill' | 'skill_tree' | 'mission_log' | 'hall_of_fame'
+  const [mistakes, setMistakes] = useState([]);
+  const [selectedTagFilter, setSelectedTagFilter] = useState('all');
+  const [showMastered, setShowMastered] = useState(false);
+
+  const user =
+    currentUser ||
+    authService.getCurrentUser() || {
+      name: 'Phan Tiến Thành',
+      targetScore: 1580,
+    };
+
+  useEffect(() => {
+    setMistakes(storageService.getMistakes ? storageService.getMistakes() : []);
+  }, []);
 
   const stats = useMemo(() => {
-    return storageService.getDashboardStats ? storageService.getDashboardStats() : { highestScore: 1580, totalTests: 12, overallAccuracy: 92 };
+    return storageService.getDashboardStats
+      ? storageService.getDashboardStats()
+      : { highestScore: 1580, totalTests: 12, overallAccuracy: 92 };
   }, []);
 
   const history = useMemo(() => {
@@ -114,46 +145,164 @@ export default function MissionLogPage({ currentUser }) {
   const highestScore = stats?.highestScore || user.targetScore || 1580;
   const overallAcc = stats?.overallAccuracy || 92;
 
+  // Lọc danh sách câu sai theo nhãn & trạng thái 2-Strike
+  const unmasteredMistakes = useMemo(
+    () => mistakes.filter((m) => !m.mastered && (m.strikeCount || 0) < 2),
+    [mistakes]
+  );
+
+  const filteredMistakes = useMemo(() => {
+    const basePool = showMastered ? mistakes : unmasteredMistakes;
+    if (selectedTagFilter === 'all') return basePool;
+    return basePool.filter((m) => m.errorTag === selectedTagFilter);
+  }, [mistakes, unmasteredMistakes, selectedTagFilter, showMastered]);
+
+  // Khởi tạo phiên thi Luyện Câu Sai (2-Strike Mastery Drill)
+  const handleLaunchMistakeDrill = (customList = null) => {
+    const targetPool =
+      Array.isArray(customList) && customList.length > 0
+        ? customList
+        : filteredMistakes.length > 0
+        ? filteredMistakes
+        : unmasteredMistakes;
+
+    if (!targetPool || targetPool.length === 0) return;
+
+    const drillQuestions = targetPool.map((m) => ({
+      ...(m.question || m),
+      id: m.id,
+      errorTag: m.errorTag || null,
+      strikeCount: m.strikeCount || 0,
+    }));
+
+    const drillSession = {
+      id: `mistake_drill_${Date.now()}`,
+      title: `🔥 Phòng Luyện Diệt Câu Sai (${drillQuestions.length} câu)`.normalize('NFC'),
+      section: 'Reading & Writing',
+      domain: '2-Strike Mastery Drill',
+      isMistakeDrill: true,
+      isExam: false,
+      questions: drillQuestions,
+    };
+
+    try {
+      sessionStorage.setItem('sat_active_exam_payload', JSON.stringify(drillSession));
+    } catch {
+      // ignore
+    }
+
+    if (typeof onStartExam === 'function') {
+      onStartExam(drillSession);
+    }
+  };
+
+  const handleTagSelect = (questionId, tagId) => {
+    const nextList = storageService.updateMistakeTag(questionId, tagId);
+    setMistakes(nextList);
+  };
+
+  const handleCompleteSecondDayStrike = (questionId) => {
+    storageService.recordMistakeAttempt(questionId, true, 45, null, true);
+    setMistakes(storageService.getMistakes());
+  };
+
+  const handleRemoveMistake = (questionId, isMastered) => {
+    if (!isMastered) return;
+    const nextList = storageService.removeMistake(questionId);
+    setMistakes(nextList);
+  };
+
   // Tính cấp bậc Phi hành gia dựa trên điểm số thực tế
   const currentRank = useMemo(() => {
-    if (highestScore >= 1550) return { title: 'GRAND ADMIRAL (Đại Đô Đốc)', badge: 'from-amber-400 via-orange-500 to-rose-500', minScore: 1550, icon: Crown };
-    if (highestScore >= 1400) return { title: 'STAR COMMANDER (Chỉ Huy)', badge: 'from-cyan-400 via-indigo-500 to-purple-600', minScore: 1400, icon: Award };
-    if (highestScore >= 1150) return { title: 'SPACE NAVIGATOR (Hoa Tiêu)', badge: 'from-emerald-400 to-teal-600', minScore: 1150, icon: Compass };
-    return { title: 'SPACE CADET (Học Viên Vũ Trụ)', badge: 'from-slate-500 to-slate-700', minScore: 400, icon: Rocket };
+    if (highestScore >= 1550)
+      return {
+        title: 'GRAND ADMIRAL (Đại Đô Đốc)',
+        badge: 'from-amber-400 via-orange-500 to-rose-500',
+        minScore: 1550,
+        icon: Crown,
+      };
+    if (highestScore >= 1400)
+      return {
+        title: 'STAR COMMANDER (Chỉ Huy)',
+        badge: 'from-cyan-400 via-indigo-500 to-purple-600',
+        minScore: 1400,
+        icon: Award,
+      };
+    if (highestScore >= 1150)
+      return {
+        title: 'SPACE NAVIGATOR (Hoa Tiêu)',
+        badge: 'from-emerald-400 to-teal-600',
+        minScore: 1150,
+        icon: Compass,
+      };
+    return {
+      title: 'SPACE CADET (Học Viên Vũ Trụ)',
+      badge: 'from-slate-500 to-slate-700',
+      minScore: 400,
+      icon: Rocket,
+    };
   }, [highestScore]);
 
   return (
     <div className="min-h-full bg-[#060913] text-slate-100 p-6 lg:p-8 space-y-8 select-none font-sans relative overflow-hidden">
-      {/* HEADER HÀNH TRÌNH KHÁM PHÁ */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-indigo-500/20 pb-5">
+      {/* HEADER HÀNH TRÌNH KHÁM PHÁ & SỔ TAY DIỆT CÂU SAI */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-indigo-500/20 pb-5">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 text-[10px] font-mono font-bold uppercase tracking-widest mb-2">
-            <Sparkles className="w-3 h-3" /> GALACTIC PROGRESSION SYSTEM
+            <Sparkles className="w-3 h-3" /> GALACTIC PROGRESSION & 2-STRIKE MASTERY
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Hành Trình Khám Phá & Bảng Vàng Vũ Trụ
+            Phòng Luyện Diệt Câu Sai & Hành Trình Vũ Trụ
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Mở khóa chòm sao kỹ năng, theo dõi tiến độ bay qua các hành tinh và vinh danh trên Bảng Vàng Liên Sao.
+            Quy tắc 2-Strike Mastery: Trả lời đúng liên tiếp 2 lần để làm chủ hoàn toàn câu hỏi và xóa khỏi sổ lỗi.
           </p>
         </div>
 
-        {/* Thẻ Cấp bậc hiện tại của người dùng */}
-        <div className="flex items-center gap-3 bg-slate-900/90 border border-white/10 p-3 rounded-2xl shadow-lg">
-          <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${currentRank.badge} flex items-center justify-center text-slate-950 font-black shadow-md shrink-0`}>
-            <currentRank.icon className="w-6 h-6" />
-          </div>
-          <div>
-            <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest block">CẤP BẬC HIỆN TẠI</span>
-            <div className="text-xs sm:text-sm font-extrabold text-white truncate max-w-[200px]">{currentRank.title}</div>
-            <span className="text-[10px] font-mono text-cyan-300 font-bold">KỶ LỤC: {highestScore} / 1600</span>
+        <div className="flex flex-wrap items-center gap-3">
+          {/* NÚT NỔI BẬT: KHỞI TẠO BÀI THI LUYỆN CÂU SAI */}
+          <button
+            type="button"
+            disabled={unmasteredMistakes.length === 0 && mistakes.length === 0}
+            onClick={() => handleLaunchMistakeDrill()}
+            className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-rose-600 hover:from-amber-300 hover:via-orange-400 hover:to-rose-500 disabled:opacity-40 disabled:cursor-not-allowed text-slate-950 font-black text-xs sm:text-sm flex items-center gap-2 shadow-[0_0_25px_rgba(245,158,11,0.35)] transition cursor-pointer"
+          >
+            <Flame className="w-4 h-4 fill-slate-950" />
+            <span>
+              🔥 Khởi Tạo Bài Thi Luyện Câu Sai ({filteredMistakes.length || unmasteredMistakes.length} câu)
+            </span>
+          </button>
+
+          {/* Thẻ Cấp bậc hiện tại của người dùng */}
+          <div className="flex items-center gap-3 bg-slate-900/90 border border-white/10 p-2.5 rounded-2xl shadow-lg">
+            <div
+              className={`w-10 h-10 rounded-xl bg-gradient-to-br ${currentRank.badge} flex items-center justify-center text-slate-950 font-black shadow-md shrink-0`}
+            >
+              <currentRank.icon className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block">
+                CẤP BẬC HIỆN TẠI
+              </span>
+              <div className="text-xs font-extrabold text-white truncate max-w-[170px]">
+                {currentRank.title}
+              </div>
+              <span className="text-[10px] font-mono text-cyan-300 font-bold">
+                KỶ LỤC: {highestScore} / 1600
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* CHUYỂN ĐỔI 3 TAB CHỨC NĂNG */}
-      <div className="flex p-1 rounded-2xl bg-slate-950/80 border border-white/10 w-fit">
+      {/* CHUYỂN ĐỔI 4 TAB CHỨC NĂNG */}
+      <div className="flex flex-wrap p-1 rounded-2xl bg-slate-950/80 border border-white/10 w-fit gap-1">
         {[
+          {
+            id: 'mistake_drill',
+            label: `Phòng Luyện Câu Sai (${unmasteredMistakes.length})`,
+            icon: Target,
+          },
           { id: 'skill_tree', label: 'Cây Kỹ Năng Chòm Sao', icon: Sparkles },
           { id: 'mission_log', label: 'Quỹ Đạo Bay (Mission Log)', icon: Globe2 },
           { id: 'hall_of_fame', label: 'Bảng Vàng Vinh Danh (Top 5)', icon: Trophy },
@@ -177,6 +326,254 @@ export default function MissionLogPage({ currentUser }) {
           );
         })}
       </div>
+
+      {/* ===================================================================== */}
+      {/* PHẦN 0: PHÒNG LUYỆN DIỆT CÂU SAI & GẮN NHÃN LỖI (2-STRIKE DRILL) */}
+      {/* ===================================================================== */}
+      {activeSubTab === 'mistake_drill' && (
+        <div className="space-y-6">
+          {/* Thanh Bộ Lọc Nhãn Lỗi */}
+          <div className="p-4 sm:p-5 rounded-3xl bg-slate-900/90 border border-white/10 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-300">
+                <Filter className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Lọc câu sai theo nguyên nhân gốc rễ (Error Tagging):</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {FILTER_OPTIONS.map((opt) => {
+                  const isSelected = selectedTagFilter === opt.id;
+                  const count =
+                    opt.id === 'all'
+                      ? (showMastered ? mistakes : unmasteredMistakes).length
+                      : (showMastered ? mistakes : unmasteredMistakes).filter(
+                          (m) => m.errorTag === opt.id
+                        ).length;
+
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      onClick={() => setSelectedTagFilter(opt.id)}
+                      className={`px-3.5 py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer flex items-center gap-1.5 ${
+                        isSelected
+                          ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-sm'
+                          : 'bg-slate-950/70 text-slate-300 border-white/10 hover:border-cyan-400/40'
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      <span
+                        className={`px-1.5 py-0.2 rounded-md font-mono text-[10px] ${
+                          isSelected ? 'bg-slate-950/20 text-slate-950' : 'bg-white/10 text-cyan-300'
+                        }`}
+                      >
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 self-end lg:self-center">
+              <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={showMastered}
+                  onChange={(e) => setShowMastered(e.target.checked)}
+                  className="rounded border-slate-600 text-cyan-500 focus:ring-cyan-500"
+                />
+                <span>Hiện cả câu đã Mastered (2/2)</span>
+              </label>
+            </div>
+          </div>
+
+          {/* Danh sách Thẻ Câu Sai */}
+          {filteredMistakes.length === 0 ? (
+            <div className="p-12 rounded-3xl bg-slate-900/80 border border-indigo-500/20 text-center space-y-3">
+              <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
+              <h3 className="text-base font-extrabold text-white">
+                {selectedTagFilter === 'all'
+                  ? 'Tuyệt vời! Bạn không có câu sai nào tồn đọng chưa làm chủ.'
+                  : 'Không có câu sai nào thuộc nhóm nhãn lỗi này.'}
+              </h3>
+              <p className="text-xs text-slate-400 max-w-md mx-auto">
+                Khi bạn trả lời sai trong các đề thi hoặc bấm Check trong lúc luyện tập, câu hỏi sẽ tự động được đưa vào đây kèm theo dõi tiến độ 2-Strike.
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {filteredMistakes.map((item, idx) => {
+                const strike = Math.min(2, Number(item.strikeCount) || 0);
+                const isMastered = Boolean(item.mastered || strike >= 2);
+                const qData = item.question || item;
+
+                return (
+                  <div
+                    key={`${item.id}_${idx}`}
+                    className={`p-5 sm:p-6 rounded-3xl border space-y-4 transition ${
+                      isMastered
+                        ? 'bg-emerald-950/20 border-emerald-500/40'
+                        : 'bg-slate-900/85 border-rose-500/30 hover:border-cyan-400/40'
+                    }`}
+                  >
+                    {/* Dòng Header của Thẻ Câu Sai */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-3">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="px-3 py-1 rounded-lg bg-rose-500/20 border border-rose-400/30 text-rose-300 font-mono text-xs font-extrabold">
+                          Câu sai #{idx + 1} • {qData.domain || 'Digital SAT'}
+                        </span>
+
+                        {/* 2-Strike Mastery Progress Badge (2 lần ở 2 ngày khác nhau) */}
+                        <div
+                          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg font-mono text-xs font-bold border ${
+                            isMastered
+                              ? 'bg-emerald-500/20 border-emerald-400/40 text-emerald-300'
+                              : strike === 1
+                              ? 'bg-amber-500/20 border-amber-400/40 text-amber-300'
+                              : 'bg-slate-950 border-white/15 text-slate-400'
+                          }`}
+                        >
+                          <span>2-Strike (2 ngày):</span>
+                          <div className="flex items-center gap-1">
+                            {[1, 2].map((step) => (
+                              <span
+                                key={step}
+                                className={`w-2.5 h-2.5 rounded-full ${
+                                  strike >= step ? 'bg-emerald-400 shadow-[0_0_8px_#34d399]' : 'bg-slate-700'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <span>({strike}/2)</span>
+                          {isMastered ? (
+                            <span className="ml-1 text-emerald-300">✓ MASTERED</span>
+                          ) : strike === 1 ? (
+                            <span className="ml-1 text-[10px] text-amber-200">
+                              • Ngày 1: {item.lastCorrectDate || 'Hôm nay'} (Chờ Ngày 2)
+                            </span>
+                          ) : null}
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => handleLaunchMistakeDrill([item])}
+                          className="px-3 py-1.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500 text-cyan-300 hover:text-slate-950 border border-cyan-400/30 text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer"
+                        >
+                          <Play className="w-3.5 h-3.5 fill-current" />
+                          <span>{'Luyện lại câu này'.normalize('NFC')}</span>
+                        </button>
+
+                        {strike === 1 && !isMastered && (
+                          <button
+                            type="button"
+                            onClick={() => handleCompleteSecondDayStrike(item.id)}
+                            className="px-2.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-400/40 text-[11px] font-bold transition cursor-pointer"
+                            title={'Xác nhận đã giải đúng lần 2 ở ngày tiếp theo để đạt Mastered 2/2'.normalize('NFC')}
+                          >
+                            {'✓ Xác nhận Strike 2 (Ngày 2)'.normalize('NFC')}
+                          </button>
+                        )}
+
+                        <button
+                          type="button"
+                          disabled={!isMastered}
+                          onClick={() => handleRemoveMistake(item.id, isMastered)}
+                          className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition ${
+                            isMastered
+                              ? 'bg-emerald-500/20 hover:bg-rose-500/25 text-emerald-300 hover:text-rose-200 border border-emerald-400/40 cursor-pointer'
+                              : 'bg-white/[0.03] text-slate-500 border border-white/5 opacity-60 cursor-not-allowed'
+                          }`}
+                          title={
+                            isMastered
+                              ? 'Đã đạt 2-Strike ở 2 ngày khác nhau • Bấm để gỡ khỏi Sổ tay lỗi'.normalize('NFC')
+                              : 'Chưa thể gỡ: Cần giải đúng câu này 2 lần ở 2 ngày khác nhau (2-Strike Mastery)'.normalize('NFC')
+                          }
+                        >
+                          {isMastered ? (
+                            <>
+                              <Trash2 className="w-3.5 h-3.5" />
+                              <span>{'Gỡ khỏi sổ lỗi'.normalize('NFC')}</span>
+                            </>
+                          ) : (
+                            <>
+                              <Lock className="w-3.5 h-3.5" />
+                              <span>{'Khóa gỡ ({strike}/2)'.replace('{strike}', String(strike)).normalize('NFC')}</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Chọn nhanh Nhãn Lý Do Sai (Quick Error Tagging) */}
+                    <div className="flex flex-wrap items-center gap-2 bg-slate-950/70 p-3 rounded-2xl border border-white/10">
+                      <span className="text-[11px] font-mono font-bold text-slate-400 flex items-center gap-1 mr-1">
+                        <Tag className="w-3.5 h-3.5 text-amber-400" />
+                        <span>Gắn nhãn lý do sai:</span>
+                      </span>
+                      {ERROR_TAGS.map((tag) => {
+                        const isSelected = item.errorTag === tag.id;
+                        return (
+                          <button
+                            key={tag.id}
+                            type="button"
+                            onClick={() => handleTagSelect(item.id, tag.id)}
+                            className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition cursor-pointer ${
+                              isSelected
+                                ? `${tag.badgeClass} ring-2 ring-cyan-400/60 scale-105`
+                                : 'bg-slate-900 text-slate-400 border-white/10 hover:text-white hover:border-white/25'
+                            }`}
+                          >
+                            {isSelected ? `✓ ${tag.label}` : tag.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Nội dung câu hỏi */}
+                    {(qData.prompt || qData.passage) && (
+                      <div className="text-sm text-slate-200 leading-relaxed font-serif bg-slate-950/60 p-4 rounded-2xl border border-white/10 select-text">
+                        <MathRenderer text={qData.prompt || qData.passage} />
+                      </div>
+                    )}
+
+                    {qData.question && (
+                      <div className="text-sm font-bold text-white font-serif select-text">
+                        <MathRenderer text={qData.question} />
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 rounded-xl bg-rose-950/50 border border-rose-500/30 text-rose-200">
+                        <span className="font-mono uppercase text-[10px] text-rose-400 block">
+                          Đáp án sai gần nhất:
+                        </span>
+                        <strong>{qData.userAnswer || item.userAnswer || 'Bỏ trống'}</strong>
+                      </div>
+                      <div className="p-3 rounded-xl bg-emerald-950/50 border border-emerald-500/30 text-emerald-200">
+                        <span className="font-mono uppercase text-[10px] text-emerald-400 block">
+                          Đáp án chuẩn College Board:
+                        </span>
+                        <strong>{qData.correctAnswer || item.correctAnswer}</strong>
+                      </div>
+                    </div>
+
+                    {qData.explanation && (
+                      <div className="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/25 text-xs text-slate-200 leading-relaxed select-text">
+                        <strong className="text-cyan-300 block mb-1 uppercase font-mono text-[10px]">
+                          Giải thích chi tiết:
+                        </strong>
+                        <MathRenderer text={qData.explanation} />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ===================================================================== */}
       {/* PHẦN 1: CÂY KỸ NĂNG CHÒM SAO (COSMIC SKILL TREE) */}
@@ -206,7 +603,10 @@ export default function MissionLogPage({ currentUser }) {
 
                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                   <div>
-                    <h3 className="text-base font-extrabold text-white tracking-wide" style={{ color: constellation.accent }}>
+                    <h3
+                      className="text-base font-extrabold text-white tracking-wide"
+                      style={{ color: constellation.accent }}
+                    >
                       {constellation.title}
                     </h3>
                     <p className="text-[11px] text-slate-400 mt-0.5">{constellation.subtitle}</p>
@@ -216,13 +616,12 @@ export default function MissionLogPage({ currentUser }) {
 
                 {/* Sơ đồ cây sao liên kết dọc */}
                 <div className="space-y-3 relative pl-4">
-                  {/* Đường nối lượng tử dọc */}
                   <div
                     className="absolute left-7 top-4 bottom-4 w-0.5 rounded-full"
                     style={{ backgroundColor: constellation.accent, opacity: 0.3 }}
                   />
 
-                  {constellation.stars.map((star, idx) => {
+                  {constellation.stars.map((star) => {
                     const isUnlocked = overallAcc >= star.reqAcc;
 
                     return (
@@ -289,7 +688,6 @@ export default function MissionLogPage({ currentUser }) {
               </span>
             </div>
 
-            {/* Trục quỹ đạo các hành tinh */}
             <div className="relative pl-6 space-y-6">
               <div className="absolute left-2.5 top-3 bottom-3 w-0.5 bg-gradient-to-b from-cyan-400 via-indigo-500 to-slate-800" />
 
@@ -298,7 +696,6 @@ export default function MissionLogPage({ currentUser }) {
 
                 return (
                   <div key={m.score} className="relative flex items-start gap-4">
-                    {/* Chấm quỹ đạo phát sáng */}
                     <div
                       className={`w-6 h-6 rounded-full -ml-[31px] flex items-center justify-center border-2 shrink-0 ${
                         reached
@@ -337,7 +734,6 @@ export default function MissionLogPage({ currentUser }) {
             </div>
           </div>
 
-          {/* Lịch sử nhật ký các lần làm bài gần đây */}
           <div className="p-6 rounded-3xl bg-slate-900/85 border border-white/10 space-y-4">
             <div className="flex items-center gap-2 border-b border-white/10 pb-3">
               <History className="w-4 h-4 text-cyan-400" />
@@ -358,10 +754,10 @@ export default function MissionLogPage({ currentUser }) {
                     className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between text-xs"
                   >
                     <div>
-                      <div className="font-extrabold text-white">{rec.title || 'Digital SAT Exam'}</div>
+                      <div className="font-extrabold text-white">{rec.title || rec.section || 'Digital SAT Exam'}</div>
                       <div className="text-[10px] text-slate-400 font-mono">
                         {rec.completedAt ? new Date(rec.completedAt).toLocaleDateString('vi-VN') : 'Gần đây'} •{' '}
-                        {rec.correctCount}/{rec.totalQuestions} câu đúng ({rec.accuracy}%)
+                        {rec.correctCount}/{rec.totalQuestions} câu đúng
                       </div>
                     </div>
                     <div className="font-mono text-base font-black text-cyan-300">{rec.scaledScore}</div>
@@ -389,9 +785,7 @@ export default function MissionLogPage({ currentUser }) {
               </p>
             </div>
 
-            {/* Bục Top 1 - 2 - 3 */}
             <div className="grid grid-cols-3 gap-3 max-w-lg mx-auto items-end pt-4">
-              {/* TOP 2 */}
               <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-700 text-center space-y-2 order-1">
                 <span className="text-2xl">🥈</span>
                 <div className="font-bold text-xs text-white truncate">{LEADERBOARD_USERS[1].name}</div>
@@ -399,7 +793,6 @@ export default function MissionLogPage({ currentUser }) {
                 <span className="text-[9px] font-mono text-slate-500 block">HẠNG 2</span>
               </div>
 
-              {/* TOP 1 (Cao nhất) */}
               <div className="p-5 rounded-2xl bg-gradient-to-b from-amber-400/20 via-slate-900 to-slate-950 border border-amber-400/50 text-center space-y-2.5 order-2 shadow-[0_0_30px_rgba(251,191,36,0.25)]">
                 <span className="text-4xl">👑</span>
                 <div className="font-black text-sm text-amber-300 truncate">{LEADERBOARD_USERS[0].name}</div>
@@ -407,7 +800,6 @@ export default function MissionLogPage({ currentUser }) {
                 <span className="text-[10px] font-mono font-bold text-amber-300 block">TOP 1 QUÁN QUÂN</span>
               </div>
 
-              {/* TOP 3 */}
               <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-700 text-center space-y-2 order-3">
                 <span className="text-2xl">🥉</span>
                 <div className="font-bold text-xs text-white truncate">{LEADERBOARD_USERS[2].name}</div>
@@ -416,7 +808,6 @@ export default function MissionLogPage({ currentUser }) {
               </div>
             </div>
 
-            {/* Danh sách bảng xếp hạng đầy đủ */}
             <div className="space-y-2.5 pt-4">
               {LEADERBOARD_USERS.map((usr) => (
                 <div

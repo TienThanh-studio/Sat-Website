@@ -277,6 +277,15 @@ function buildTwoTierVocabCatalog(rawLegacy) {
   };
 }
 
+function getNormalizedPosCategory(posRaw) {
+  const p = String(posRaw || '').toLowerCase().trim();
+  if (p.startsWith('v')) return 'verb';
+  if (p.startsWith('adj')) return 'adj';
+  if (p.startsWith('adv')) return 'adv';
+  if (p.startsWith('n')) return 'noun';
+  return 'other';
+}
+
 function computeNextSrsState(prevRecord, quality) {
   const now = Date.now();
   const prevReps = prevRecord?.reps || 0;
@@ -289,31 +298,35 @@ function computeNextSrsState(prevRecord, quality) {
   let status = 'learning';
 
   if (quality === 1) {
+    // Quên (Again): lặp lại sau 10 phút
     reps = 0;
     intervalDays = 0;
     ease = Math.max(1.3, ease - 0.2);
     nextReviewAt = now + 10 * 60 * 1000;
     status = 'learning';
   } else if (quality === 2) {
+    // Khó (Hard): ôn lại sau 1 ngày (hoặc hệ số 1.2x theo SM-2)
     reps = prevReps + 1;
     intervalDays =
-      prevInterval === 0 ? 1 : Math.max(1, Math.round(prevInterval * 1.2));
+      prevInterval <= 1 ? 1 : Math.max(1, Math.round(prevInterval * 1.2));
     ease = Math.max(1.3, ease - 0.15);
     nextReviewAt = now + intervalDays * 86400 * 1000;
     status = 'learning';
   } else if (quality === 3) {
+    // Nhớ (Good): ôn lại sau 3 ngày (lần đầu) hoặc nhân hệ số Ease SM-2
     reps = prevReps + 1;
-    if (reps === 1) intervalDays = 1;
-    else if (reps === 2) intervalDays = 3;
-    else intervalDays = Math.round(prevInterval * ease);
+    if (reps === 1) intervalDays = 3;
+    else if (reps === 2) intervalDays = 6;
+    else intervalDays = Math.max(3, Math.round(prevInterval * ease));
 
     nextReviewAt = now + intervalDays * 86400 * 1000;
     status = intervalDays >= 7 ? 'mastered' : 'review';
   } else if (quality === 4) {
+    // Thuộc lòng (Easy): ôn lại sau 7 ngày (lần đầu) hoặc nhân Ease * 1.3
     reps = prevReps + 1;
-    if (reps === 1) intervalDays = 4;
-    else if (reps === 2) intervalDays = 7;
-    else intervalDays = Math.round(prevInterval * ease * 1.3);
+    if (reps === 1) intervalDays = 7;
+    else if (reps === 2) intervalDays = 14;
+    else intervalDays = Math.max(7, Math.round(prevInterval * ease * 1.3));
 
     ease = Math.min(3.0, ease + 0.15);
     nextReviewAt = now + intervalDays * 86400 * 1000;
@@ -516,8 +529,22 @@ export default function VocabularyPage() {
     const target = allWords.find((w) => w.id === currentQuizTargetId);
     if (!target) return null;
 
-    const distractors = allWords
-      .filter((w) => w.id !== target.id && w.meaning)
+    // Ưu tiên chọn các phương án gây nhiễu (distractors) cùng từ loại (verb với verb, adj với adj, noun với noun) chuẩn đề thi thật College Board
+    const targetPosCat = getNormalizedPosCategory(target.partOfSpeech);
+    const samePosCandidates = allWords.filter(
+      (w) =>
+        w.id !== target.id &&
+        w.meaning &&
+        getNormalizedPosCategory(w.partOfSpeech) === targetPosCat
+    );
+    const fallbackCandidates = allWords.filter(
+      (w) => w.id !== target.id && w.meaning
+    );
+
+    const distractorSource =
+      samePosCandidates.length >= 3 ? samePosCandidates : fallbackCandidates;
+
+    const distractors = [...distractorSource]
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
 
@@ -1029,10 +1056,10 @@ export default function VocabularyPage() {
               className="py-2.5 px-3 rounded-2xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-200 flex flex-col items-center gap-0.5 cursor-pointer transition"
             >
               <span className="text-xs font-black uppercase">
-                3. Nhớ (Good)
+                {'3. Nhớ (Good)'.normalize('NFC')}
               </span>
               <span className="text-[10px] font-mono text-cyan-300">
-                Kiểm tra sau 3–5 ngày
+                {'Kiểm tra sau 3 ngày'.normalize('NFC')}
               </span>
             </button>
 
@@ -1042,10 +1069,10 @@ export default function VocabularyPage() {
               className="py-2.5 px-3 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-200 flex flex-col items-center gap-0.5 cursor-pointer transition"
             >
               <span className="text-xs font-black uppercase">
-                4. Thuộc lòng (Easy)
+                {'4. Thuộc lòng (Easy)'.normalize('NFC')}
               </span>
               <span className="text-[10px] font-mono text-emerald-300">
-                Kiểm tra sau 7–14+ ngày
+                {'Kiểm tra sau 7 ngày'.normalize('NFC')}
               </span>
             </button>
           </div>
